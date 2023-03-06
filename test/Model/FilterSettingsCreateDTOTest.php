@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Docstudio\Client;
 
 /**
  * FilterSettingsCreateDTOTest Class Doc Comment

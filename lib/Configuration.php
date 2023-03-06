@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client;
+namespace Docstudio\Client;
 
 /**
  * Configuration Class Doc Comment
