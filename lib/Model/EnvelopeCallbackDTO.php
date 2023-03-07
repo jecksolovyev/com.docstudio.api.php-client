@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeCallbackDTO Class Doc Comment
  *
  * @category Class
  * @description Envelope callback dto
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class EnvelopeCallbackDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-'filter' => '\Swagger\Client\Model\CallbackEnvelopeFilterDTO',
+'filter' => '\Docstudio\ClientModel\CallbackEnvelopeFilterDTO',
 'url' => 'string',
 'retries' => 'int',
 'timeout' => 'int',
@@ -281,7 +281,7 @@ self::AUTH_TYPE_BASIC,        ];
     /**
      * Gets filter
      *
-     * @return \Swagger\Client\Model\CallbackEnvelopeFilterDTO
+     * @return \Docstudio\ClientModel\CallbackEnvelopeFilterDTO
      */
     public function getFilter()
     {
@@ -291,7 +291,7 @@ self::AUTH_TYPE_BASIC,        ];
     /**
      * Sets filter
      *
-     * @param \Swagger\Client\Model\CallbackEnvelopeFilterDTO $filter filter
+     * @param \Docstudio\ClientModel\CallbackEnvelopeFilterDTO $filter filter
      *
      * @return $this
      */

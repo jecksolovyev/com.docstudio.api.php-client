@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * UserAuthorizationDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class UserAuthorizationDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'roles' => '\Swagger\Client\Model\RoleShortDTO[]',
+        'roles' => '\Docstudio\ClientModel\RoleShortDTO[]',
 'permissions' => 'int[]'    ];
 
     /**
@@ -205,7 +205,7 @@ class UserAuthorizationDTO implements ModelInterface, ArrayAccess
     /**
      * Gets roles
      *
-     * @return \Swagger\Client\Model\RoleShortDTO[]
+     * @return \Docstudio\ClientModel\RoleShortDTO[]
      */
     public function getRoles()
     {
@@ -215,7 +215,7 @@ class UserAuthorizationDTO implements ModelInterface, ArrayAccess
     /**
      * Sets roles
      *
-     * @param \Swagger\Client\Model\RoleShortDTO[] $roles roles
+     * @param \Docstudio\ClientModel\RoleShortDTO[] $roles roles
      *
      * @return $this
      */

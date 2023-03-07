@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * DocumentCommentsDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class DocumentCommentsDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'document_id' => 'string',
-'active' => '\Swagger\Client\Model\CommentThreadDTO[]',
-'resolved' => '\Swagger\Client\Model\CommentThreadDTO[]'    ];
+'active' => '\Docstudio\ClientModel\CommentThreadDTO[]',
+'resolved' => '\Docstudio\ClientModel\CommentThreadDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -235,7 +235,7 @@ class DocumentCommentsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets active
      *
-     * @return \Swagger\Client\Model\CommentThreadDTO[]
+     * @return \Docstudio\ClientModel\CommentThreadDTO[]
      */
     public function getActive()
     {
@@ -245,7 +245,7 @@ class DocumentCommentsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets active
      *
-     * @param \Swagger\Client\Model\CommentThreadDTO[] $active Active comment threads
+     * @param \Docstudio\ClientModel\CommentThreadDTO[] $active Active comment threads
      *
      * @return $this
      */
@@ -259,7 +259,7 @@ class DocumentCommentsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets resolved
      *
-     * @return \Swagger\Client\Model\CommentThreadDTO[]
+     * @return \Docstudio\ClientModel\CommentThreadDTO[]
      */
     public function getResolved()
     {
@@ -269,7 +269,7 @@ class DocumentCommentsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets resolved
      *
-     * @param \Swagger\Client\Model\CommentThreadDTO[] $resolved Resolved comment threads
+     * @param \Docstudio\ClientModel\CommentThreadDTO[] $resolved Resolved comment threads
      *
      * @return $this
      */

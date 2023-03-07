@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * CounterInfoDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class CounterInfoDTO implements ModelInterface, ArrayAccess
 'overdraft_fee' => 'int',
 'display_name' => 'string',
 'order' => 'int',
-'modifiers' => '\Swagger\Client\Model\ModifierInfoDTO[]'    ];
+'modifiers' => '\Docstudio\ClientModel\ModifierInfoDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -379,7 +379,7 @@ class CounterInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets modifiers
      *
-     * @return \Swagger\Client\Model\ModifierInfoDTO[]
+     * @return \Docstudio\ClientModel\ModifierInfoDTO[]
      */
     public function getModifiers()
     {
@@ -389,7 +389,7 @@ class CounterInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets modifiers
      *
-     * @param \Swagger\Client\Model\ModifierInfoDTO[] $modifiers modifiers
+     * @param \Docstudio\ClientModel\ModifierInfoDTO[] $modifiers modifiers
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * ContactControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,12 +91,12 @@ class ContactControllerApi
      *
      * Save a contact in DB
      *
-     * @param  \Swagger\Client\Model\ContactDTO $body body (required)
+     * @param  \Docstudio\ClientModel\ContactDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ContactResponseDTO
+     * @return \Docstudio\ClientModel\ContactResponseDTO
      */
     public function createContact($body, $mailbox)
     {
@@ -109,16 +109,16 @@ class ContactControllerApi
      *
      * Save a contact in DB
      *
-     * @param  \Swagger\Client\Model\ContactDTO $body (required)
+     * @param  \Docstudio\ClientModel\ContactDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ContactResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\ContactResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createContactWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\ContactResponseDTO';
+        $returnType = '\Docstudio\ClientModel\ContactResponseDTO';
         $request = $this->createContactRequest($body, $mailbox);
 
         try {
@@ -170,7 +170,7 @@ class ContactControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ContactResponseDTO',
+                        '\Docstudio\ClientModel\ContactResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class ContactControllerApi
      *
      * Save a contact in DB
      *
-     * @param  \Swagger\Client\Model\ContactDTO $body (required)
+     * @param  \Docstudio\ClientModel\ContactDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class ContactControllerApi
      *
      * Save a contact in DB
      *
-     * @param  \Swagger\Client\Model\ContactDTO $body (required)
+     * @param  \Docstudio\ClientModel\ContactDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class ContactControllerApi
      */
     public function createContactAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\ContactResponseDTO';
+        $returnType = '\Docstudio\ClientModel\ContactResponseDTO';
         $request = $this->createContactRequest($body, $mailbox);
 
         return $this->client
@@ -257,7 +257,7 @@ class ContactControllerApi
     /**
      * Create request for operation 'createContact'
      *
-     * @param  \Swagger\Client\Model\ContactDTO $body (required)
+     * @param  \Docstudio\ClientModel\ContactDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -370,7 +370,7 @@ class ContactControllerApi
      * @param  string $uuid Contact UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -387,7 +387,7 @@ class ContactControllerApi
      * @param  string $uuid Contact UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -616,9 +616,9 @@ class ContactControllerApi
      * @param  int $offset Offset, how much TemplateInfo to skip (optional, default to 0)
      * @param  int $limit Limit, how much TemplateInfo to retrieve (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTOContactResponseDTO
+     * @return \Docstudio\ClientModel\PageDTOContactResponseDTO
      */
     public function searchOrList($mailbox, $keyword = null, $offset = '0', $limit = '25')
     {
@@ -636,13 +636,13 @@ class ContactControllerApi
      * @param  int $offset Offset, how much TemplateInfo to skip (optional, default to 0)
      * @param  int $limit Limit, how much TemplateInfo to retrieve (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTOContactResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTOContactResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchOrListWithHttpInfo($mailbox, $keyword = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOContactResponseDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOContactResponseDTO';
         $request = $this->searchOrListRequest($mailbox, $keyword, $offset, $limit);
 
         try {
@@ -694,7 +694,7 @@ class ContactControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTOContactResponseDTO',
+                        '\Docstudio\ClientModel\PageDTOContactResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -742,7 +742,7 @@ class ContactControllerApi
      */
     public function searchOrListAsyncWithHttpInfo($mailbox, $keyword = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOContactResponseDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOContactResponseDTO';
         $request = $this->searchOrListRequest($mailbox, $keyword, $offset, $limit);
 
         return $this->client
@@ -900,13 +900,13 @@ class ContactControllerApi
      *
      * Update the contact in DB
      *
-     * @param  \Swagger\Client\Model\ContactDTO $body body (required)
+     * @param  \Docstudio\ClientModel\ContactDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Contact UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ContactResponseDTO
+     * @return \Docstudio\ClientModel\ContactResponseDTO
      */
     public function updateContact($body, $mailbox, $uuid)
     {
@@ -919,17 +919,17 @@ class ContactControllerApi
      *
      * Update the contact in DB
      *
-     * @param  \Swagger\Client\Model\ContactDTO $body (required)
+     * @param  \Docstudio\ClientModel\ContactDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Contact UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ContactResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\ContactResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateContactWithHttpInfo($body, $mailbox, $uuid)
     {
-        $returnType = '\Swagger\Client\Model\ContactResponseDTO';
+        $returnType = '\Docstudio\ClientModel\ContactResponseDTO';
         $request = $this->updateContactRequest($body, $mailbox, $uuid);
 
         try {
@@ -981,7 +981,7 @@ class ContactControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ContactResponseDTO',
+                        '\Docstudio\ClientModel\ContactResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class ContactControllerApi
      *
      * Update the contact in DB
      *
-     * @param  \Swagger\Client\Model\ContactDTO $body (required)
+     * @param  \Docstudio\ClientModel\ContactDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Contact UUID (required)
      *
@@ -1018,7 +1018,7 @@ class ContactControllerApi
      *
      * Update the contact in DB
      *
-     * @param  \Swagger\Client\Model\ContactDTO $body (required)
+     * @param  \Docstudio\ClientModel\ContactDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Contact UUID (required)
      *
@@ -1027,7 +1027,7 @@ class ContactControllerApi
      */
     public function updateContactAsyncWithHttpInfo($body, $mailbox, $uuid)
     {
-        $returnType = '\Swagger\Client\Model\ContactResponseDTO';
+        $returnType = '\Docstudio\ClientModel\ContactResponseDTO';
         $request = $this->updateContactRequest($body, $mailbox, $uuid);
 
         return $this->client
@@ -1070,7 +1070,7 @@ class ContactControllerApi
     /**
      * Create request for operation 'updateContact'
      *
-     * @param  \Swagger\Client\Model\ContactDTO $body (required)
+     * @param  \Docstudio\ClientModel\ContactDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Contact UUID (required)
      *

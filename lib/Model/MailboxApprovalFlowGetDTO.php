@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * MailboxApprovalFlowGetDTO Class Doc Comment
  *
  * @category Class
  * @description Data records
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,10 +58,10 @@ class MailboxApprovalFlowGetDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'shared_for_account' => 'bool',
-'shared_for_mailboxes' => '\Swagger\Client\Model\MailboxNameUuidDTO[]',
+'shared_for_mailboxes' => '\Docstudio\ClientModel\MailboxNameUuidDTO[]',
 'name' => 'string',
 'flow_type' => 'string',
-'approvers' => '\Swagger\Client\Model\EnvelopeApproverGetDTO[]',
+'approvers' => '\Docstudio\ClientModel\EnvelopeApproverGetDTO[]',
 'uuid' => 'string'    ];
 
     /**
@@ -284,7 +284,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Gets shared_for_mailboxes
      *
-     * @return \Swagger\Client\Model\MailboxNameUuidDTO[]
+     * @return \Docstudio\ClientModel\MailboxNameUuidDTO[]
      */
     public function getSharedForMailboxes()
     {
@@ -294,7 +294,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Sets shared_for_mailboxes
      *
-     * @param \Swagger\Client\Model\MailboxNameUuidDTO[] $shared_for_mailboxes shared_for_mailboxes
+     * @param \Docstudio\ClientModel\MailboxNameUuidDTO[] $shared_for_mailboxes shared_for_mailboxes
      *
      * @return $this
      */
@@ -365,7 +365,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Gets approvers
      *
-     * @return \Swagger\Client\Model\EnvelopeApproverGetDTO[]
+     * @return \Docstudio\ClientModel\EnvelopeApproverGetDTO[]
      */
     public function getApprovers()
     {
@@ -375,7 +375,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Sets approvers
      *
-     * @param \Swagger\Client\Model\EnvelopeApproverGetDTO[] $approvers approvers
+     * @param \Docstudio\ClientModel\EnvelopeApproverGetDTO[] $approvers approvers
      *
      * @return $this
      */

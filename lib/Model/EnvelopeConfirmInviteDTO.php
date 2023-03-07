@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeConfirmInviteDTO Class Doc Comment
  *
  * @category Class
  * @description Confirmed invitations
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class EnvelopeConfirmInviteDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'code' => 'string',
-'roles' => '\Swagger\Client\Model\EnvelopeConfirmInviteRoleDTO[]'    ];
+'roles' => '\Docstudio\ClientModel\EnvelopeConfirmInviteRoleDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -236,7 +236,7 @@ class EnvelopeConfirmInviteDTO implements ModelInterface, ArrayAccess
     /**
      * Gets roles
      *
-     * @return \Swagger\Client\Model\EnvelopeConfirmInviteRoleDTO[]
+     * @return \Docstudio\ClientModel\EnvelopeConfirmInviteRoleDTO[]
      */
     public function getRoles()
     {
@@ -246,7 +246,7 @@ class EnvelopeConfirmInviteDTO implements ModelInterface, ArrayAccess
     /**
      * Sets roles
      *
-     * @param \Swagger\Client\Model\EnvelopeConfirmInviteRoleDTO[] $roles Confirmed mailboxes to roles
+     * @param \Docstudio\ClientModel\EnvelopeConfirmInviteRoleDTO[] $roles Confirmed mailboxes to roles
      *
      * @return $this
      */

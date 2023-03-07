@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * ProfileDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -70,7 +70,7 @@ class ProfileDTO implements ModelInterface, ArrayAccess
 'phone' => 'string',
 'display_exact_date' => 'bool',
 'signature' => 'string',
-'accounts' => '\Swagger\Client\Model\User2AccountWithMailboxesDTO[]'    ];
+'accounts' => '\Docstudio\ClientModel\User2AccountWithMailboxesDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -655,7 +655,7 @@ self::STATUS_DELETED,        ];
     /**
      * Gets accounts
      *
-     * @return \Swagger\Client\Model\User2AccountWithMailboxesDTO[]
+     * @return \Docstudio\ClientModel\User2AccountWithMailboxesDTO[]
      */
     public function getAccounts()
     {
@@ -665,7 +665,7 @@ self::STATUS_DELETED,        ];
     /**
      * Sets accounts
      *
-     * @param \Swagger\Client\Model\User2AccountWithMailboxesDTO[] $accounts User accounts belongs to
+     * @param \Docstudio\ClientModel\User2AccountWithMailboxesDTO[] $accounts User accounts belongs to
      *
      * @return $this
      */

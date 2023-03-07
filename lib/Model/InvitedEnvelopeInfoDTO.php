@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * InvitedEnvelopeInfoDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,11 +60,11 @@ class InvitedEnvelopeInfoDTO implements ModelInterface, ArrayAccess
 'subject' => 'string',
 'expire_after' => '\DateTime',
 'created_at' => '\DateTime',
-'sender' => '\Swagger\Client\Model\EnvelopeSenderDTO',
+'sender' => '\Docstudio\ClientModel\EnvelopeSenderDTO',
 'template_name' => 'string',
 'total' => 'int',
 'completed' => 'int',
-'flow' => '\Swagger\Client\Model\EnvelopeFlowInfoDTO[]'    ];
+'flow' => '\Docstudio\ClientModel\EnvelopeFlowInfoDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -343,7 +343,7 @@ class InvitedEnvelopeInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets sender
      *
-     * @return \Swagger\Client\Model\EnvelopeSenderDTO
+     * @return \Docstudio\ClientModel\EnvelopeSenderDTO
      */
     public function getSender()
     {
@@ -353,7 +353,7 @@ class InvitedEnvelopeInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets sender
      *
-     * @param \Swagger\Client\Model\EnvelopeSenderDTO $sender sender
+     * @param \Docstudio\ClientModel\EnvelopeSenderDTO $sender sender
      *
      * @return $this
      */
@@ -439,7 +439,7 @@ class InvitedEnvelopeInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets flow
      *
-     * @return \Swagger\Client\Model\EnvelopeFlowInfoDTO[]
+     * @return \Docstudio\ClientModel\EnvelopeFlowInfoDTO[]
      */
     public function getFlow()
     {
@@ -449,7 +449,7 @@ class InvitedEnvelopeInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets flow
      *
-     * @param \Swagger\Client\Model\EnvelopeFlowInfoDTO[] $flow Detailed information about every role
+     * @param \Docstudio\ClientModel\EnvelopeFlowInfoDTO[] $flow Detailed information about every role
      *
      * @return $this
      */

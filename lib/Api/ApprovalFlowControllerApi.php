@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * ApprovalFlowControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,12 +91,12 @@ class ApprovalFlowControllerApi
      *
      * Create approval flow
      *
-     * @param  \Swagger\Client\Model\MailboxApprovalFlowDTO $body body (required)
+     * @param  \Docstudio\ClientModel\MailboxApprovalFlowDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SingleUuidDTO
+     * @return \Docstudio\ClientModel\SingleUuidDTO
      */
     public function createApprovalFlow($body, $mailbox)
     {
@@ -109,16 +109,16 @@ class ApprovalFlowControllerApi
      *
      * Create approval flow
      *
-     * @param  \Swagger\Client\Model\MailboxApprovalFlowDTO $body (required)
+     * @param  \Docstudio\ClientModel\MailboxApprovalFlowDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createApprovalFlowWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
         $request = $this->createApprovalFlowRequest($body, $mailbox);
 
         try {
@@ -170,7 +170,7 @@ class ApprovalFlowControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SingleUuidDTO',
+                        '\Docstudio\ClientModel\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class ApprovalFlowControllerApi
      *
      * Create approval flow
      *
-     * @param  \Swagger\Client\Model\MailboxApprovalFlowDTO $body (required)
+     * @param  \Docstudio\ClientModel\MailboxApprovalFlowDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class ApprovalFlowControllerApi
      *
      * Create approval flow
      *
-     * @param  \Swagger\Client\Model\MailboxApprovalFlowDTO $body (required)
+     * @param  \Docstudio\ClientModel\MailboxApprovalFlowDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class ApprovalFlowControllerApi
      */
     public function createApprovalFlowAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
         $request = $this->createApprovalFlowRequest($body, $mailbox);
 
         return $this->client
@@ -257,7 +257,7 @@ class ApprovalFlowControllerApi
     /**
      * Create request for operation 'createApprovalFlow'
      *
-     * @param  \Swagger\Client\Model\MailboxApprovalFlowDTO $body (required)
+     * @param  \Docstudio\ClientModel\MailboxApprovalFlowDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -370,7 +370,7 @@ class ApprovalFlowControllerApi
      * @param  string[] $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -387,7 +387,7 @@ class ApprovalFlowControllerApi
      * @param  string[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -609,9 +609,9 @@ class ApprovalFlowControllerApi
      * @param  string $flow_uuid UUID of the approval flow (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MailboxApprovalFlowGetDTO
+     * @return \Docstudio\ClientModel\MailboxApprovalFlowGetDTO
      */
     public function retrieve($flow_uuid, $mailbox)
     {
@@ -627,13 +627,13 @@ class ApprovalFlowControllerApi
      * @param  string $flow_uuid UUID of the approval flow (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\MailboxApprovalFlowGetDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\MailboxApprovalFlowGetDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveWithHttpInfo($flow_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\MailboxApprovalFlowGetDTO';
+        $returnType = '\Docstudio\ClientModel\MailboxApprovalFlowGetDTO';
         $request = $this->retrieveRequest($flow_uuid, $mailbox);
 
         try {
@@ -685,7 +685,7 @@ class ApprovalFlowControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MailboxApprovalFlowGetDTO',
+                        '\Docstudio\ClientModel\MailboxApprovalFlowGetDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -729,7 +729,7 @@ class ApprovalFlowControllerApi
      */
     public function retrieveAsyncWithHttpInfo($flow_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\MailboxApprovalFlowGetDTO';
+        $returnType = '\Docstudio\ClientModel\MailboxApprovalFlowGetDTO';
         $request = $this->retrieveRequest($flow_uuid, $mailbox);
 
         return $this->client
@@ -892,9 +892,9 @@ class ApprovalFlowControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTOMailboxApprovalFlowGetDTO
+     * @return \Docstudio\ClientModel\PageDTOMailboxApprovalFlowGetDTO
      */
     public function search($mailbox, $keyword = null, $offset = '0', $limit = '25')
     {
@@ -912,13 +912,13 @@ class ApprovalFlowControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTOMailboxApprovalFlowGetDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTOMailboxApprovalFlowGetDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchWithHttpInfo($mailbox, $keyword = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOMailboxApprovalFlowGetDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOMailboxApprovalFlowGetDTO';
         $request = $this->searchRequest($mailbox, $keyword, $offset, $limit);
 
         try {
@@ -970,7 +970,7 @@ class ApprovalFlowControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTOMailboxApprovalFlowGetDTO',
+                        '\Docstudio\ClientModel\PageDTOMailboxApprovalFlowGetDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1018,7 +1018,7 @@ class ApprovalFlowControllerApi
      */
     public function searchAsyncWithHttpInfo($mailbox, $keyword = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOMailboxApprovalFlowGetDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOMailboxApprovalFlowGetDTO';
         $request = $this->searchRequest($mailbox, $keyword, $offset, $limit);
 
         return $this->client
@@ -1176,11 +1176,11 @@ class ApprovalFlowControllerApi
      *
      * Update approval flow
      *
-     * @param  \Swagger\Client\Model\MailboxApprovalFlowDTO $body body (required)
+     * @param  \Docstudio\ClientModel\MailboxApprovalFlowDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $flow_uuid UUID of the approval flow (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1194,11 +1194,11 @@ class ApprovalFlowControllerApi
      *
      * Update approval flow
      *
-     * @param  \Swagger\Client\Model\MailboxApprovalFlowDTO $body (required)
+     * @param  \Docstudio\ClientModel\MailboxApprovalFlowDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $flow_uuid UUID of the approval flow (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1249,7 +1249,7 @@ class ApprovalFlowControllerApi
      *
      * Update approval flow
      *
-     * @param  \Swagger\Client\Model\MailboxApprovalFlowDTO $body (required)
+     * @param  \Docstudio\ClientModel\MailboxApprovalFlowDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $flow_uuid UUID of the approval flow (required)
      *
@@ -1271,7 +1271,7 @@ class ApprovalFlowControllerApi
      *
      * Update approval flow
      *
-     * @param  \Swagger\Client\Model\MailboxApprovalFlowDTO $body (required)
+     * @param  \Docstudio\ClientModel\MailboxApprovalFlowDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $flow_uuid UUID of the approval flow (required)
      *
@@ -1309,7 +1309,7 @@ class ApprovalFlowControllerApi
     /**
      * Create request for operation 'updateApprovalFlow'
      *
-     * @param  \Swagger\Client\Model\MailboxApprovalFlowDTO $body (required)
+     * @param  \Docstudio\ClientModel\MailboxApprovalFlowDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $flow_uuid UUID of the approval flow (required)
      *

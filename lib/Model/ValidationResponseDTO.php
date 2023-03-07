@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * ValidationResponseDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class ValidationResponseDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'errors' => '\Swagger\Client\Model\EnvelopeValidationError[]'    ];
+        'errors' => '\Docstudio\ClientModel\EnvelopeValidationError[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -199,7 +199,7 @@ class ValidationResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return \Swagger\Client\Model\EnvelopeValidationError[]
+     * @return \Docstudio\ClientModel\EnvelopeValidationError[]
      */
     public function getErrors()
     {
@@ -209,7 +209,7 @@ class ValidationResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param \Swagger\Client\Model\EnvelopeValidationError[] $errors errors
+     * @param \Docstudio\ClientModel\EnvelopeValidationError[] $errors errors
      *
      * @return $this
      */

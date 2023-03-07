@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * MiscControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -90,9 +90,9 @@ class MiscControllerApi
      * Operation appSettings
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SettingsDTO
+     * @return \Docstudio\ClientModel\SettingsDTO
      */
     public function appSettings()
     {
@@ -104,13 +104,13 @@ class MiscControllerApi
      * Operation appSettingsWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SettingsDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\SettingsDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function appSettingsWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\SettingsDTO';
+        $returnType = '\Docstudio\ClientModel\SettingsDTO';
         $request = $this->appSettingsRequest();
 
         try {
@@ -162,7 +162,7 @@ class MiscControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SettingsDTO',
+                        '\Docstudio\ClientModel\SettingsDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -202,7 +202,7 @@ class MiscControllerApi
      */
     public function appSettingsAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\SettingsDTO';
+        $returnType = '\Docstudio\ClientModel\SettingsDTO';
         $request = $this->appSettingsRequest();
 
         return $this->client
@@ -334,13 +334,13 @@ class MiscControllerApi
      *
      * Audit log
      *
-     * @param  \Swagger\Client\Model\SearchActivityLogDTO $body body (required)
+     * @param  \Docstudio\ClientModel\SearchActivityLogDTO $body body (required)
      * @param  int $offset Offset, how many records to skip (optional, default to 0)
      * @param  int $limit Limit, how many records to retrieve (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTOActivityLogRecordDTO
+     * @return \Docstudio\ClientModel\PageDTOActivityLogRecordDTO
      */
     public function auditLog($body, $offset = '0', $limit = '25')
     {
@@ -353,17 +353,17 @@ class MiscControllerApi
      *
      * Audit log
      *
-     * @param  \Swagger\Client\Model\SearchActivityLogDTO $body (required)
+     * @param  \Docstudio\ClientModel\SearchActivityLogDTO $body (required)
      * @param  int $offset Offset, how many records to skip (optional, default to 0)
      * @param  int $limit Limit, how many records to retrieve (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTOActivityLogRecordDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTOActivityLogRecordDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function auditLogWithHttpInfo($body, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOActivityLogRecordDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOActivityLogRecordDTO';
         $request = $this->auditLogRequest($body, $offset, $limit);
 
         try {
@@ -415,7 +415,7 @@ class MiscControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTOActivityLogRecordDTO',
+                        '\Docstudio\ClientModel\PageDTOActivityLogRecordDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -430,7 +430,7 @@ class MiscControllerApi
      *
      * Audit log
      *
-     * @param  \Swagger\Client\Model\SearchActivityLogDTO $body (required)
+     * @param  \Docstudio\ClientModel\SearchActivityLogDTO $body (required)
      * @param  int $offset Offset, how many records to skip (optional, default to 0)
      * @param  int $limit Limit, how many records to retrieve (optional, default to 25)
      *
@@ -452,7 +452,7 @@ class MiscControllerApi
      *
      * Audit log
      *
-     * @param  \Swagger\Client\Model\SearchActivityLogDTO $body (required)
+     * @param  \Docstudio\ClientModel\SearchActivityLogDTO $body (required)
      * @param  int $offset Offset, how many records to skip (optional, default to 0)
      * @param  int $limit Limit, how many records to retrieve (optional, default to 25)
      *
@@ -461,7 +461,7 @@ class MiscControllerApi
      */
     public function auditLogAsyncWithHttpInfo($body, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOActivityLogRecordDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOActivityLogRecordDTO';
         $request = $this->auditLogRequest($body, $offset, $limit);
 
         return $this->client
@@ -504,7 +504,7 @@ class MiscControllerApi
     /**
      * Create request for operation 'auditLog'
      *
-     * @param  \Swagger\Client\Model\SearchActivityLogDTO $body (required)
+     * @param  \Docstudio\ClientModel\SearchActivityLogDTO $body (required)
      * @param  int $offset Offset, how many records to skip (optional, default to 0)
      * @param  int $limit Limit, how many records to retrieve (optional, default to 25)
      *
@@ -613,9 +613,9 @@ class MiscControllerApi
      *
      * Calculate excel formulas for documents
      *
-     * @param  \Swagger\Client\Model\DocFormulaRequestDTO[] $body body (required)
+     * @param  \Docstudio\ClientModel\DocFormulaRequestDTO[] $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return map[string,map[string,object]]
      */
@@ -630,9 +630,9 @@ class MiscControllerApi
      *
      * Calculate excel formulas for documents
      *
-     * @param  \Swagger\Client\Model\DocFormulaRequestDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\DocFormulaRequestDTO[] $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of map[string,map[string,object]], HTTP status code, HTTP response headers (array of strings)
      */
@@ -705,7 +705,7 @@ class MiscControllerApi
      *
      * Calculate excel formulas for documents
      *
-     * @param  \Swagger\Client\Model\DocFormulaRequestDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\DocFormulaRequestDTO[] $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -725,7 +725,7 @@ class MiscControllerApi
      *
      * Calculate excel formulas for documents
      *
-     * @param  \Swagger\Client\Model\DocFormulaRequestDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\DocFormulaRequestDTO[] $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -775,7 +775,7 @@ class MiscControllerApi
     /**
      * Create request for operation 'calculateFormula'
      *
-     * @param  \Swagger\Client\Model\DocFormulaRequestDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\DocFormulaRequestDTO[] $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -874,9 +874,9 @@ class MiscControllerApi
      *
      * Request audit report
      *
-     * @param  \Swagger\Client\Model\SearchActivityLogDTO $body body (required)
+     * @param  \Docstudio\ClientModel\SearchActivityLogDTO $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -890,9 +890,9 @@ class MiscControllerApi
      *
      * Request audit report
      *
-     * @param  \Swagger\Client\Model\SearchActivityLogDTO $body (required)
+     * @param  \Docstudio\ClientModel\SearchActivityLogDTO $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -943,7 +943,7 @@ class MiscControllerApi
      *
      * Request audit report
      *
-     * @param  \Swagger\Client\Model\SearchActivityLogDTO $body (required)
+     * @param  \Docstudio\ClientModel\SearchActivityLogDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -963,7 +963,7 @@ class MiscControllerApi
      *
      * Request audit report
      *
-     * @param  \Swagger\Client\Model\SearchActivityLogDTO $body (required)
+     * @param  \Docstudio\ClientModel\SearchActivityLogDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -999,7 +999,7 @@ class MiscControllerApi
     /**
      * Create request for operation 'createAuditReport'
      *
-     * @param  \Swagger\Client\Model\SearchActivityLogDTO $body (required)
+     * @param  \Docstudio\ClientModel\SearchActivityLogDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1097,9 +1097,9 @@ class MiscControllerApi
      * Operation detectCountry
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DetectedCountryDTO
+     * @return \Docstudio\ClientModel\DetectedCountryDTO
      */
     public function detectCountry()
     {
@@ -1111,13 +1111,13 @@ class MiscControllerApi
      * Operation detectCountryWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DetectedCountryDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\DetectedCountryDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function detectCountryWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\DetectedCountryDTO';
+        $returnType = '\Docstudio\ClientModel\DetectedCountryDTO';
         $request = $this->detectCountryRequest();
 
         try {
@@ -1169,7 +1169,7 @@ class MiscControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DetectedCountryDTO',
+                        '\Docstudio\ClientModel\DetectedCountryDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1209,7 +1209,7 @@ class MiscControllerApi
      */
     public function detectCountryAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\DetectedCountryDTO';
+        $returnType = '\Docstudio\ClientModel\DetectedCountryDTO';
         $request = $this->detectCountryRequest();
 
         return $this->client
@@ -1343,9 +1343,9 @@ class MiscControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StatDTO
+     * @return \Docstudio\ClientModel\StatDTO
      */
     public function recalculateMailboxStat($mailbox)
     {
@@ -1360,13 +1360,13 @@ class MiscControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StatDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\StatDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function recalculateMailboxStatWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\StatDTO';
+        $returnType = '\Docstudio\ClientModel\StatDTO';
         $request = $this->recalculateMailboxStatRequest($mailbox);
 
         try {
@@ -1418,7 +1418,7 @@ class MiscControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StatDTO',
+                        '\Docstudio\ClientModel\StatDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1460,7 +1460,7 @@ class MiscControllerApi
      */
     public function recalculateMailboxStatAsyncWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\StatDTO';
+        $returnType = '\Docstudio\ClientModel\StatDTO';
         $request = $this->recalculateMailboxStatRequest($mailbox);
 
         return $this->client

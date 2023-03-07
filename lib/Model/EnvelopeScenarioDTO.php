@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeScenarioDTO Class Doc Comment
  *
  * @category Class
  * @description Scenario
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class EnvelopeScenarioDTO implements ModelInterface, ArrayAccess
         'uuid' => 'string',
 'name' => 'string',
 'description' => 'string',
-'next_steps' => '\Swagger\Client\Model\ScenarioShortStepDTO[]'    ];
+'next_steps' => '\Docstudio\ClientModel\ScenarioShortStepDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -290,7 +290,7 @@ class EnvelopeScenarioDTO implements ModelInterface, ArrayAccess
     /**
      * Gets next_steps
      *
-     * @return \Swagger\Client\Model\ScenarioShortStepDTO[]
+     * @return \Docstudio\ClientModel\ScenarioShortStepDTO[]
      */
     public function getNextSteps()
     {
@@ -300,7 +300,7 @@ class EnvelopeScenarioDTO implements ModelInterface, ArrayAccess
     /**
      * Sets next_steps
      *
-     * @param \Swagger\Client\Model\ScenarioShortStepDTO[] $next_steps Scenario next steps
+     * @param \Docstudio\ClientModel\ScenarioShortStepDTO[] $next_steps Scenario next steps
      *
      * @return $this
      */

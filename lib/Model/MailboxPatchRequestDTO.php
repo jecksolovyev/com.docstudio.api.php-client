@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * MailboxPatchRequestDTO Class Doc Comment
  *
  * @category Class
  * @description Mailbox update data
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class MailboxPatchRequestDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'name' => 'string',
 'archived' => 'bool',
-'aliases' => '\Swagger\Client\Model\AliasNameDTO[]',
+'aliases' => '\Docstudio\ClientModel\AliasNameDTO[]',
 'hide_name_for_accounts' => 'bool'    ];
 
     /**
@@ -266,7 +266,7 @@ class MailboxPatchRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Gets aliases
      *
-     * @return \Swagger\Client\Model\AliasNameDTO[]
+     * @return \Docstudio\ClientModel\AliasNameDTO[]
      */
     public function getAliases()
     {
@@ -276,7 +276,7 @@ class MailboxPatchRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Sets aliases
      *
-     * @param \Swagger\Client\Model\AliasNameDTO[] $aliases Mailbox aliases
+     * @param \Docstudio\ClientModel\AliasNameDTO[] $aliases Mailbox aliases
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * AttachmentRestriction Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,10 +59,10 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
         'max_size' => 'int',
 'total_max_size' => 'int',
 'file_name_length' => 'int',
-'document' => '\Swagger\Client\Model\AttachmentFileAllowance',
-'file' => '\Swagger\Client\Model\AttachmentFileAllowance',
-'image' => '\Swagger\Client\Model\AttachmentFileAllowance',
-'archive' => '\Swagger\Client\Model\AttachmentFileAllowance'    ];
+'document' => '\Docstudio\ClientModel\AttachmentFileAllowance',
+'file' => '\Docstudio\ClientModel\AttachmentFileAllowance',
+'image' => '\Docstudio\ClientModel\AttachmentFileAllowance',
+'archive' => '\Docstudio\ClientModel\AttachmentFileAllowance'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -307,7 +307,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets document
      *
-     * @return \Swagger\Client\Model\AttachmentFileAllowance
+     * @return \Docstudio\ClientModel\AttachmentFileAllowance
      */
     public function getDocument()
     {
@@ -317,7 +317,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets document
      *
-     * @param \Swagger\Client\Model\AttachmentFileAllowance $document document
+     * @param \Docstudio\ClientModel\AttachmentFileAllowance $document document
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets file
      *
-     * @return \Swagger\Client\Model\AttachmentFileAllowance
+     * @return \Docstudio\ClientModel\AttachmentFileAllowance
      */
     public function getFile()
     {
@@ -341,7 +341,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets file
      *
-     * @param \Swagger\Client\Model\AttachmentFileAllowance $file file
+     * @param \Docstudio\ClientModel\AttachmentFileAllowance $file file
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets image
      *
-     * @return \Swagger\Client\Model\AttachmentFileAllowance
+     * @return \Docstudio\ClientModel\AttachmentFileAllowance
      */
     public function getImage()
     {
@@ -365,7 +365,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets image
      *
-     * @param \Swagger\Client\Model\AttachmentFileAllowance $image image
+     * @param \Docstudio\ClientModel\AttachmentFileAllowance $image image
      *
      * @return $this
      */
@@ -379,7 +379,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets archive
      *
-     * @return \Swagger\Client\Model\AttachmentFileAllowance
+     * @return \Docstudio\ClientModel\AttachmentFileAllowance
      */
     public function getArchive()
     {
@@ -389,7 +389,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets archive
      *
-     * @param \Swagger\Client\Model\AttachmentFileAllowance $archive archive
+     * @param \Docstudio\ClientModel\AttachmentFileAllowance $archive archive
      *
      * @return $this
      */

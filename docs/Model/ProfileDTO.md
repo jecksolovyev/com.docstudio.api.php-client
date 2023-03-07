@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **phone** | **string** | User phone | [optional] 
 **display_exact_date** | **bool** | Display exact date instead of relative | [optional] 
 **signature** | **string** | Saved eInk signature | [optional] 
-**accounts** | [**\Swagger\Client\Model\User2AccountWithMailboxesDTO[]**](User2AccountWithMailboxesDTO.md) | User accounts belongs to | [optional] 
+**accounts** | [**\Docstudio\ClientModel\User2AccountWithMailboxesDTO[]**](User2AccountWithMailboxesDTO.md) | User accounts belongs to | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

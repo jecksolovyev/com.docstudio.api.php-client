@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * AccountDomainControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,11 +94,11 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      * @param  string $action Action (required)
-     * @param  \Swagger\Client\Model\ChangeDomainStatusDTO $body body (optional)
+     * @param  \Docstudio\ClientModel\ChangeDomainStatusDTO $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountDomainDTO
+     * @return \Docstudio\ClientModel\AccountDomainDTO
      */
     public function actionAccountDomain($account_uuid, $domain_uuid, $action, $body = null)
     {
@@ -114,15 +114,15 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      * @param  string $action Action (required)
-     * @param  \Swagger\Client\Model\ChangeDomainStatusDTO $body (optional)
+     * @param  \Docstudio\ClientModel\ChangeDomainStatusDTO $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountDomainDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AccountDomainDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function actionAccountDomainWithHttpInfo($account_uuid, $domain_uuid, $action, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountDomainDTO';
+        $returnType = '\Docstudio\ClientModel\AccountDomainDTO';
         $request = $this->actionAccountDomainRequest($account_uuid, $domain_uuid, $action, $body);
 
         try {
@@ -174,7 +174,7 @@ class AccountDomainControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountDomainDTO',
+                        '\Docstudio\ClientModel\AccountDomainDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -192,7 +192,7 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      * @param  string $action Action (required)
-     * @param  \Swagger\Client\Model\ChangeDomainStatusDTO $body (optional)
+     * @param  \Docstudio\ClientModel\ChangeDomainStatusDTO $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -215,14 +215,14 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      * @param  string $action Action (required)
-     * @param  \Swagger\Client\Model\ChangeDomainStatusDTO $body (optional)
+     * @param  \Docstudio\ClientModel\ChangeDomainStatusDTO $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function actionAccountDomainAsyncWithHttpInfo($account_uuid, $domain_uuid, $action, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountDomainDTO';
+        $returnType = '\Docstudio\ClientModel\AccountDomainDTO';
         $request = $this->actionAccountDomainRequest($account_uuid, $domain_uuid, $action, $body);
 
         return $this->client
@@ -268,7 +268,7 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      * @param  string $action Action (required)
-     * @param  \Swagger\Client\Model\ChangeDomainStatusDTO $body (optional)
+     * @param  \Docstudio\ClientModel\ChangeDomainStatusDTO $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -403,12 +403,12 @@ class AccountDomainControllerApi
      *
      * Create account domain
      *
-     * @param  \Swagger\Client\Model\AccountDomainCreateDTO $body body (required)
+     * @param  \Docstudio\ClientModel\AccountDomainCreateDTO $body body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountDomainDTO
+     * @return \Docstudio\ClientModel\AccountDomainDTO
      */
     public function createAccountDomain($body, $account_uuid)
     {
@@ -421,16 +421,16 @@ class AccountDomainControllerApi
      *
      * Create account domain
      *
-     * @param  \Swagger\Client\Model\AccountDomainCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountDomainCreateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountDomainDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AccountDomainDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAccountDomainWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountDomainDTO';
+        $returnType = '\Docstudio\ClientModel\AccountDomainDTO';
         $request = $this->createAccountDomainRequest($body, $account_uuid);
 
         try {
@@ -482,7 +482,7 @@ class AccountDomainControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountDomainDTO',
+                        '\Docstudio\ClientModel\AccountDomainDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -497,7 +497,7 @@ class AccountDomainControllerApi
      *
      * Create account domain
      *
-     * @param  \Swagger\Client\Model\AccountDomainCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountDomainCreateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -518,7 +518,7 @@ class AccountDomainControllerApi
      *
      * Create account domain
      *
-     * @param  \Swagger\Client\Model\AccountDomainCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountDomainCreateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -526,7 +526,7 @@ class AccountDomainControllerApi
      */
     public function createAccountDomainAsyncWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountDomainDTO';
+        $returnType = '\Docstudio\ClientModel\AccountDomainDTO';
         $request = $this->createAccountDomainRequest($body, $account_uuid);
 
         return $this->client
@@ -569,7 +569,7 @@ class AccountDomainControllerApi
     /**
      * Create request for operation 'createAccountDomain'
      *
-     * @param  \Swagger\Client\Model\AccountDomainCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountDomainCreateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -683,12 +683,12 @@ class AccountDomainControllerApi
      *
      * Create account SSO Identity Provider
      *
-     * @param  \Swagger\Client\Model\AccountSsoIdProviderUpdateDTO $body body (required)
+     * @param  \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO $body body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountSsoIdProviderDTO
+     * @return \Docstudio\ClientModel\AccountSsoIdProviderDTO
      */
     public function createAccountSsoIdp($body, $account_uuid)
     {
@@ -701,16 +701,16 @@ class AccountDomainControllerApi
      *
      * Create account SSO Identity Provider
      *
-     * @param  \Swagger\Client\Model\AccountSsoIdProviderUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountSsoIdProviderDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AccountSsoIdProviderDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAccountSsoIdpWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountSsoIdProviderDTO';
+        $returnType = '\Docstudio\ClientModel\AccountSsoIdProviderDTO';
         $request = $this->createAccountSsoIdpRequest($body, $account_uuid);
 
         try {
@@ -762,7 +762,7 @@ class AccountDomainControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountSsoIdProviderDTO',
+                        '\Docstudio\ClientModel\AccountSsoIdProviderDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -777,7 +777,7 @@ class AccountDomainControllerApi
      *
      * Create account SSO Identity Provider
      *
-     * @param  \Swagger\Client\Model\AccountSsoIdProviderUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -798,7 +798,7 @@ class AccountDomainControllerApi
      *
      * Create account SSO Identity Provider
      *
-     * @param  \Swagger\Client\Model\AccountSsoIdProviderUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -806,7 +806,7 @@ class AccountDomainControllerApi
      */
     public function createAccountSsoIdpAsyncWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountSsoIdProviderDTO';
+        $returnType = '\Docstudio\ClientModel\AccountSsoIdProviderDTO';
         $request = $this->createAccountSsoIdpRequest($body, $account_uuid);
 
         return $this->client
@@ -849,7 +849,7 @@ class AccountDomainControllerApi
     /**
      * Create request for operation 'createAccountSsoIdp'
      *
-     * @param  \Swagger\Client\Model\AccountSsoIdProviderUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -966,7 +966,7 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -983,7 +983,7 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1214,7 +1214,7 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $idp_uuid IdP UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1231,7 +1231,7 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $idp_uuid IdP UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1462,9 +1462,9 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountDomainDTO
+     * @return \Docstudio\ClientModel\AccountDomainDTO
      */
     public function getAccountDomain($account_uuid, $domain_uuid)
     {
@@ -1480,13 +1480,13 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountDomainDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AccountDomainDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountDomainWithHttpInfo($account_uuid, $domain_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountDomainDTO';
+        $returnType = '\Docstudio\ClientModel\AccountDomainDTO';
         $request = $this->getAccountDomainRequest($account_uuid, $domain_uuid);
 
         try {
@@ -1538,7 +1538,7 @@ class AccountDomainControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountDomainDTO',
+                        '\Docstudio\ClientModel\AccountDomainDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1582,7 +1582,7 @@ class AccountDomainControllerApi
      */
     public function getAccountDomainAsyncWithHttpInfo($account_uuid, $domain_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountDomainDTO';
+        $returnType = '\Docstudio\ClientModel\AccountDomainDTO';
         $request = $this->getAccountDomainRequest($account_uuid, $domain_uuid);
 
         return $this->client
@@ -1750,9 +1750,9 @@ class AccountDomainControllerApi
      * @param  string $keyword Domain name or part of name (optional)
      * @param  string $status Domain status (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTOAccountDomainDTO
+     * @return \Docstudio\ClientModel\PageDTOAccountDomainDTO
      */
     public function getAccountDomains($account_uuid, $offset = '0', $limit = '25', $keyword = null, $status = null)
     {
@@ -1771,13 +1771,13 @@ class AccountDomainControllerApi
      * @param  string $keyword Domain name or part of name (optional)
      * @param  string $status Domain status (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTOAccountDomainDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTOAccountDomainDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountDomainsWithHttpInfo($account_uuid, $offset = '0', $limit = '25', $keyword = null, $status = null)
     {
-        $returnType = '\Swagger\Client\Model\PageDTOAccountDomainDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOAccountDomainDTO';
         $request = $this->getAccountDomainsRequest($account_uuid, $offset, $limit, $keyword, $status);
 
         try {
@@ -1829,7 +1829,7 @@ class AccountDomainControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTOAccountDomainDTO',
+                        '\Docstudio\ClientModel\PageDTOAccountDomainDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1879,7 +1879,7 @@ class AccountDomainControllerApi
      */
     public function getAccountDomainsAsyncWithHttpInfo($account_uuid, $offset = '0', $limit = '25', $keyword = null, $status = null)
     {
-        $returnType = '\Swagger\Client\Model\PageDTOAccountDomainDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOAccountDomainDTO';
         $request = $this->getAccountDomainsRequest($account_uuid, $offset, $limit, $keyword, $status);
 
         return $this->client
@@ -2049,9 +2049,9 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $idp_uuid IdP UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountSsoIdProviderDTO
+     * @return \Docstudio\ClientModel\AccountSsoIdProviderDTO
      */
     public function getAccountIdp($account_uuid, $idp_uuid)
     {
@@ -2067,13 +2067,13 @@ class AccountDomainControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $idp_uuid IdP UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountSsoIdProviderDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AccountSsoIdProviderDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountIdpWithHttpInfo($account_uuid, $idp_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountSsoIdProviderDTO';
+        $returnType = '\Docstudio\ClientModel\AccountSsoIdProviderDTO';
         $request = $this->getAccountIdpRequest($account_uuid, $idp_uuid);
 
         try {
@@ -2125,7 +2125,7 @@ class AccountDomainControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountSsoIdProviderDTO',
+                        '\Docstudio\ClientModel\AccountSsoIdProviderDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2169,7 +2169,7 @@ class AccountDomainControllerApi
      */
     public function getAccountIdpAsyncWithHttpInfo($account_uuid, $idp_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountSsoIdProviderDTO';
+        $returnType = '\Docstudio\ClientModel\AccountSsoIdProviderDTO';
         $request = $this->getAccountIdpRequest($account_uuid, $idp_uuid);
 
         return $this->client
@@ -2333,9 +2333,9 @@ class AccountDomainControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountSsoIdProviderShortDTO[]
+     * @return \Docstudio\ClientModel\AccountSsoIdProviderShortDTO[]
      */
     public function getAllAccountIdps($account_uuid)
     {
@@ -2350,13 +2350,13 @@ class AccountDomainControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountSsoIdProviderShortDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AccountSsoIdProviderShortDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllAccountIdpsWithHttpInfo($account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountSsoIdProviderShortDTO[]';
+        $returnType = '\Docstudio\ClientModel\AccountSsoIdProviderShortDTO[]';
         $request = $this->getAllAccountIdpsRequest($account_uuid);
 
         try {
@@ -2408,7 +2408,7 @@ class AccountDomainControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountSsoIdProviderShortDTO[]',
+                        '\Docstudio\ClientModel\AccountSsoIdProviderShortDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2450,7 +2450,7 @@ class AccountDomainControllerApi
      */
     public function getAllAccountIdpsAsyncWithHttpInfo($account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountSsoIdProviderShortDTO[]';
+        $returnType = '\Docstudio\ClientModel\AccountSsoIdProviderShortDTO[]';
         $request = $this->getAllAccountIdpsRequest($account_uuid);
 
         return $this->client
@@ -2597,13 +2597,13 @@ class AccountDomainControllerApi
      *
      * Update account domain
      *
-     * @param  \Swagger\Client\Model\AccountDomainUpdateDTO $body body (required)
+     * @param  \Docstudio\ClientModel\AccountDomainUpdateDTO $body body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountDomainDTO
+     * @return \Docstudio\ClientModel\AccountDomainDTO
      */
     public function updateAccountDomain($body, $account_uuid, $domain_uuid)
     {
@@ -2616,17 +2616,17 @@ class AccountDomainControllerApi
      *
      * Update account domain
      *
-     * @param  \Swagger\Client\Model\AccountDomainUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountDomainUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountDomainDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AccountDomainDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAccountDomainWithHttpInfo($body, $account_uuid, $domain_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountDomainDTO';
+        $returnType = '\Docstudio\ClientModel\AccountDomainDTO';
         $request = $this->updateAccountDomainRequest($body, $account_uuid, $domain_uuid);
 
         try {
@@ -2678,7 +2678,7 @@ class AccountDomainControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountDomainDTO',
+                        '\Docstudio\ClientModel\AccountDomainDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2693,7 +2693,7 @@ class AccountDomainControllerApi
      *
      * Update account domain
      *
-     * @param  \Swagger\Client\Model\AccountDomainUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountDomainUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      *
@@ -2715,7 +2715,7 @@ class AccountDomainControllerApi
      *
      * Update account domain
      *
-     * @param  \Swagger\Client\Model\AccountDomainUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountDomainUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      *
@@ -2724,7 +2724,7 @@ class AccountDomainControllerApi
      */
     public function updateAccountDomainAsyncWithHttpInfo($body, $account_uuid, $domain_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountDomainDTO';
+        $returnType = '\Docstudio\ClientModel\AccountDomainDTO';
         $request = $this->updateAccountDomainRequest($body, $account_uuid, $domain_uuid);
 
         return $this->client
@@ -2767,7 +2767,7 @@ class AccountDomainControllerApi
     /**
      * Create request for operation 'updateAccountDomain'
      *
-     * @param  \Swagger\Client\Model\AccountDomainUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountDomainUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $domain_uuid Domain UUID (required)
      *
@@ -2896,13 +2896,13 @@ class AccountDomainControllerApi
      *
      * Update account SSO Identity Provider
      *
-     * @param  \Swagger\Client\Model\AccountSsoIdProviderUpdateDTO $body body (required)
+     * @param  \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO $body body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $idp_uuid IdP UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountSsoIdProviderDTO
+     * @return \Docstudio\ClientModel\AccountSsoIdProviderDTO
      */
     public function updateAccountSsoIdp($body, $account_uuid, $idp_uuid)
     {
@@ -2915,17 +2915,17 @@ class AccountDomainControllerApi
      *
      * Update account SSO Identity Provider
      *
-     * @param  \Swagger\Client\Model\AccountSsoIdProviderUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $idp_uuid IdP UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountSsoIdProviderDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AccountSsoIdProviderDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAccountSsoIdpWithHttpInfo($body, $account_uuid, $idp_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountSsoIdProviderDTO';
+        $returnType = '\Docstudio\ClientModel\AccountSsoIdProviderDTO';
         $request = $this->updateAccountSsoIdpRequest($body, $account_uuid, $idp_uuid);
 
         try {
@@ -2977,7 +2977,7 @@ class AccountDomainControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountSsoIdProviderDTO',
+                        '\Docstudio\ClientModel\AccountSsoIdProviderDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2992,7 +2992,7 @@ class AccountDomainControllerApi
      *
      * Update account SSO Identity Provider
      *
-     * @param  \Swagger\Client\Model\AccountSsoIdProviderUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $idp_uuid IdP UUID (required)
      *
@@ -3014,7 +3014,7 @@ class AccountDomainControllerApi
      *
      * Update account SSO Identity Provider
      *
-     * @param  \Swagger\Client\Model\AccountSsoIdProviderUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $idp_uuid IdP UUID (required)
      *
@@ -3023,7 +3023,7 @@ class AccountDomainControllerApi
      */
     public function updateAccountSsoIdpAsyncWithHttpInfo($body, $account_uuid, $idp_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountSsoIdProviderDTO';
+        $returnType = '\Docstudio\ClientModel\AccountSsoIdProviderDTO';
         $request = $this->updateAccountSsoIdpRequest($body, $account_uuid, $idp_uuid);
 
         return $this->client
@@ -3066,7 +3066,7 @@ class AccountDomainControllerApi
     /**
      * Create request for operation 'updateAccountSsoIdp'
      *
-     * @param  \Swagger\Client\Model\AccountSsoIdProviderUpdateDTO $body (required)
+     * @param  \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $idp_uuid IdP UUID (required)
      *

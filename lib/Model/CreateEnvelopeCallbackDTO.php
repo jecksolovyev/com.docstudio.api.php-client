@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * CreateEnvelopeCallbackDTO Class Doc Comment
  *
  * @category Class
  * @description Create envelope callback dto
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class CreateEnvelopeCallbackDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'filter' => '\Swagger\Client\Model\CallbackEnvelopeFilterDTO',
+        'filter' => '\Docstudio\ClientModel\CallbackEnvelopeFilterDTO',
 'url' => 'string',
 'retries' => 'int',
 'timeout' => 'int',
@@ -248,7 +248,7 @@ class CreateEnvelopeCallbackDTO implements ModelInterface, ArrayAccess
     /**
      * Gets filter
      *
-     * @return \Swagger\Client\Model\CallbackEnvelopeFilterDTO
+     * @return \Docstudio\ClientModel\CallbackEnvelopeFilterDTO
      */
     public function getFilter()
     {
@@ -258,7 +258,7 @@ class CreateEnvelopeCallbackDTO implements ModelInterface, ArrayAccess
     /**
      * Sets filter
      *
-     * @param \Swagger\Client\Model\CallbackEnvelopeFilterDTO $filter filter
+     * @param \Docstudio\ClientModel\CallbackEnvelopeFilterDTO $filter filter
      *
      * @return $this
      */

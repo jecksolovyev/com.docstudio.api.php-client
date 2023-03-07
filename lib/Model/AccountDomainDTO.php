@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * AccountDomainDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,13 +59,13 @@ class AccountDomainDTO implements ModelInterface, ArrayAccess
         'uuid' => 'string',
 'account_uuid' => 'string',
 'domain' => 'string',
-'verify_info' => '\Swagger\Client\Model\AccountDomainVerifyInfo',
+'verify_info' => '\Docstudio\ClientModel\AccountDomainVerifyInfo',
 'verify_method' => 'string',
 'status' => 'string',
 'verification_date' => '\DateTime',
 'create_date' => '\DateTime',
 'last_check_date' => '\DateTime',
-'sso_id_provider' => '\Swagger\Client\Model\AccountSsoIdProviderShortDTO'    ];
+'sso_id_provider' => '\Docstudio\ClientModel\AccountSsoIdProviderShortDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -371,7 +371,7 @@ self::STATUS_VERIFIED,        ];
     /**
      * Gets verify_info
      *
-     * @return \Swagger\Client\Model\AccountDomainVerifyInfo
+     * @return \Docstudio\ClientModel\AccountDomainVerifyInfo
      */
     public function getVerifyInfo()
     {
@@ -381,7 +381,7 @@ self::STATUS_VERIFIED,        ];
     /**
      * Sets verify_info
      *
-     * @param \Swagger\Client\Model\AccountDomainVerifyInfo $verify_info verify_info
+     * @param \Docstudio\ClientModel\AccountDomainVerifyInfo $verify_info verify_info
      *
      * @return $this
      */
@@ -533,7 +533,7 @@ self::STATUS_VERIFIED,        ];
     /**
      * Gets sso_id_provider
      *
-     * @return \Swagger\Client\Model\AccountSsoIdProviderShortDTO
+     * @return \Docstudio\ClientModel\AccountSsoIdProviderShortDTO
      */
     public function getSsoIdProvider()
     {
@@ -543,7 +543,7 @@ self::STATUS_VERIFIED,        ];
     /**
      * Sets sso_id_provider
      *
-     * @param \Swagger\Client\Model\AccountSsoIdProviderShortDTO $sso_id_provider sso_id_provider
+     * @param \Docstudio\ClientModel\AccountSsoIdProviderShortDTO $sso_id_provider sso_id_provider
      *
      * @return $this
      */

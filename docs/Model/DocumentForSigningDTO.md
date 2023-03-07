@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **binary_file_name** | **string** | Binary file name | [optional] 
 **binary_file** | **string** | Binary file for signing | [optional] 
 **binary_hash** | **string** | Binary file hash for signing | [optional] 
-**signatures** | [**\Swagger\Client\Model\RequiredSignatureDTO[]**](RequiredSignatureDTO.md) | Signatures | [optional] 
+**signatures** | [**\Docstudio\ClientModel\RequiredSignatureDTO[]**](RequiredSignatureDTO.md) | Signatures | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

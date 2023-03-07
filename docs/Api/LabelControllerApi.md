@@ -1,4 +1,4 @@
-# Swagger\Client\LabelControllerApi
+# Docstudio\Client\LabelControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -21,17 +21,17 @@ Assign label to envelopes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\LabelControllerApi(
+$apiInstance = new Docstudio\Client\Api\LabelControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\LabelAssociationDTO(); // \Swagger\Client\Model\LabelAssociationDTO | 
+$body = new \Docstudio\ClientModel\LabelAssociationDTO(); // \Docstudio\ClientModel\LabelAssociationDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -46,7 +46,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\LabelAssociationDTO**](../Model/LabelAssociationDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\LabelAssociationDTO**](../Model/LabelAssociationDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -65,7 +65,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createLabel**
-> \Swagger\Client\Model\LabelDTO createLabel($body, $mailbox)
+> \Docstudio\ClientModel\LabelDTO createLabel($body, $mailbox)
 
 Save label to DB
 
@@ -74,17 +74,17 @@ Save label to DB
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\LabelControllerApi(
+$apiInstance = new Docstudio\Client\Api\LabelControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\LabelDTO(); // \Swagger\Client\Model\LabelDTO | 
+$body = new \Docstudio\ClientModel\LabelDTO(); // \Docstudio\ClientModel\LabelDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -100,12 +100,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\LabelDTO**](../Model/LabelDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\LabelDTO**](../Model/LabelDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\LabelDTO**](../Model/LabelDTO.md)
+[**\Docstudio\ClientModel\LabelDTO**](../Model/LabelDTO.md)
 
 ### Authorization
 
@@ -128,17 +128,17 @@ Unassign label from envelopes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\LabelControllerApi(
+$apiInstance = new Docstudio\Client\Api\LabelControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\LabelAssociationDTO(); // \Swagger\Client\Model\LabelAssociationDTO | 
+$body = new \Docstudio\ClientModel\LabelAssociationDTO(); // \Docstudio\ClientModel\LabelAssociationDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -153,7 +153,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\LabelAssociationDTO**](../Model/LabelAssociationDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\LabelAssociationDTO**](../Model/LabelAssociationDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -181,11 +181,11 @@ Delete label
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\LabelControllerApi(
+$apiInstance = new Docstudio\Client\Api\LabelControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -225,7 +225,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAll**
-> \Swagger\Client\Model\LabelDTO[] getAll($mailbox)
+> \Docstudio\ClientModel\LabelDTO[] getAll($mailbox)
 
 Retrieve all labels for mailbox for authorized user
 
@@ -234,11 +234,11 @@ Retrieve all labels for mailbox for authorized user
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\LabelControllerApi(
+$apiInstance = new Docstudio\Client\Api\LabelControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LabelDTO[]**](../Model/LabelDTO.md)
+[**\Docstudio\ClientModel\LabelDTO[]**](../Model/LabelDTO.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateLabel**
-> \Swagger\Client\Model\LabelDTO updateLabel($body, $mailbox, $uuid)
+> \Docstudio\ClientModel\LabelDTO updateLabel($body, $mailbox, $uuid)
 
 Update label
 
@@ -286,17 +286,17 @@ Update label
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\LabelControllerApi(
+$apiInstance = new Docstudio\Client\Api\LabelControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\LabelDTO(); // \Swagger\Client\Model\LabelDTO | 
+$body = new \Docstudio\ClientModel\LabelDTO(); // \Docstudio\ClientModel\LabelDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of label to update
 
@@ -313,13 +313,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\LabelDTO**](../Model/LabelDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\LabelDTO**](../Model/LabelDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **uuid** | [**string**](../Model/.md)| UUID of label to update |
 
 ### Return type
 
-[**\Swagger\Client\Model\LabelDTO**](../Model/LabelDTO.md)
+[**\Docstudio\ClientModel\LabelDTO**](../Model/LabelDTO.md)
 
 ### Authorization
 

@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **invitation_code** | **string** | Invitation code, if acceptable | [optional] 
 **chain_uuid** | **string** | Envelope chain UUID | [optional] 
 **chained_by_me** | **bool** | Envelope chained by requested user | [optional] 
-**extra_fields** | [**\Swagger\Client\Model\EnvelopeExtraFieldDTO[]**](EnvelopeExtraFieldDTO.md) | Data for extra columns | [optional] 
+**extra_fields** | [**\Docstudio\ClientModel\EnvelopeExtraFieldDTO[]**](EnvelopeExtraFieldDTO.md) | Data for extra columns | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeApprovalRequestDTO Class Doc Comment
  *
  * @category Class
  * @description Fill only flow UUID or list of approvers
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class EnvelopeApprovalRequestDTO implements ModelInterface, ArrayAccess
         'uuids' => 'string[]',
 'urgent' => 'bool',
 'flow_uuid' => 'string',
-'approvers' => '\Swagger\Client\Model\EnvelopeApproverDTO[]'    ];
+'approvers' => '\Docstudio\ClientModel\EnvelopeApproverDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -293,7 +293,7 @@ class EnvelopeApprovalRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Gets approvers
      *
-     * @return \Swagger\Client\Model\EnvelopeApproverDTO[]
+     * @return \Docstudio\ClientModel\EnvelopeApproverDTO[]
      */
     public function getApprovers()
     {
@@ -303,7 +303,7 @@ class EnvelopeApprovalRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Sets approvers
      *
-     * @param \Swagger\Client\Model\EnvelopeApproverDTO[] $approvers Set of approvers (Flow UUID must not be set)
+     * @param \Docstudio\ClientModel\EnvelopeApproverDTO[] $approvers Set of approvers (Flow UUID must not be set)
      *
      * @return $this
      */

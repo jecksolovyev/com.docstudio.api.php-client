@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvPostDTO Class Doc Comment
  *
  * @category Class
  * @description Envelope to send
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class EnvPostDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'uuid' => 'string',
 'data' => 'string',
-'stamps' => '\Swagger\Client\Model\DocStampDTO[]'    ];
+'stamps' => '\Docstudio\ClientModel\DocStampDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -260,7 +260,7 @@ class EnvPostDTO implements ModelInterface, ArrayAccess
     /**
      * Gets stamps
      *
-     * @return \Swagger\Client\Model\DocStampDTO[]
+     * @return \Docstudio\ClientModel\DocStampDTO[]
      */
     public function getStamps()
     {
@@ -270,7 +270,7 @@ class EnvPostDTO implements ModelInterface, ArrayAccess
     /**
      * Sets stamps
      *
-     * @param \Swagger\Client\Model\DocStampDTO[] $stamps Stamps for external documents
+     * @param \Docstudio\ClientModel\DocStampDTO[] $stamps Stamps for external documents
      *
      * @return $this
      */

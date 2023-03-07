@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeApprovalHistoryDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class EnvelopeApprovalHistoryDTO implements ModelInterface, ArrayAccess
 'urgent' => 'bool',
 'completed' => 'bool',
 'mailbox_uuid' => 'string',
-'approvers' => '\Swagger\Client\Model\ApproverDetailsDTO[]'    ];
+'approvers' => '\Docstudio\ClientModel\ApproverDetailsDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -319,7 +319,7 @@ class EnvelopeApprovalHistoryDTO implements ModelInterface, ArrayAccess
     /**
      * Gets approvers
      *
-     * @return \Swagger\Client\Model\ApproverDetailsDTO[]
+     * @return \Docstudio\ClientModel\ApproverDetailsDTO[]
      */
     public function getApprovers()
     {
@@ -329,7 +329,7 @@ class EnvelopeApprovalHistoryDTO implements ModelInterface, ArrayAccess
     /**
      * Sets approvers
      *
-     * @param \Swagger\Client\Model\ApproverDetailsDTO[] $approvers approvers
+     * @param \Docstudio\ClientModel\ApproverDetailsDTO[] $approvers approvers
      *
      * @return $this
      */

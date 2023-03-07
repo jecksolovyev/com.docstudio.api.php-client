@@ -1,4 +1,4 @@
-# Swagger\Client\AuditTrailControllerApi
+# Docstudio\Client\AuditTrailControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -17,11 +17,11 @@ Download audit trail pdf for envelope
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AuditTrailControllerApi(
+$apiInstance = new Docstudio\Client\Api\AuditTrailControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAuditTrailByEnvelope**
-> \Swagger\Client\Model\AuditTrailDTO[] getAuditTrailByEnvelope($uuid, $mailbox)
+> \Docstudio\ClientModel\AuditTrailDTO[] getAuditTrailByEnvelope($uuid, $mailbox)
 
 
 
@@ -71,11 +71,11 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AuditTrailControllerApi(
+$apiInstance = new Docstudio\Client\Api\AuditTrailControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AuditTrailDTO[]**](../Model/AuditTrailDTO.md)
+[**\Docstudio\ClientModel\AuditTrailDTO[]**](../Model/AuditTrailDTO.md)
 
 ### Authorization
 

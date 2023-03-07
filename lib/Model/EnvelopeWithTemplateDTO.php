@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeWithTemplateDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,9 +56,9 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'envelope' => '\Swagger\Client\Model\EnvGetDTO',
-'template' => '\Swagger\Client\Model\FullTemplateResponseDTO',
-'scenario' => '\Swagger\Client\Model\EnvelopeScenarioDTO'    ];
+        'envelope' => '\Docstudio\ClientModel\EnvGetDTO',
+'template' => '\Docstudio\ClientModel\FullTemplateResponseDTO',
+'scenario' => '\Docstudio\ClientModel\EnvelopeScenarioDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -211,7 +211,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Gets envelope
      *
-     * @return \Swagger\Client\Model\EnvGetDTO
+     * @return \Docstudio\ClientModel\EnvGetDTO
      */
     public function getEnvelope()
     {
@@ -221,7 +221,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Sets envelope
      *
-     * @param \Swagger\Client\Model\EnvGetDTO $envelope envelope
+     * @param \Docstudio\ClientModel\EnvGetDTO $envelope envelope
      *
      * @return $this
      */
@@ -235,7 +235,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Gets template
      *
-     * @return \Swagger\Client\Model\FullTemplateResponseDTO
+     * @return \Docstudio\ClientModel\FullTemplateResponseDTO
      */
     public function getTemplate()
     {
@@ -245,7 +245,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Sets template
      *
-     * @param \Swagger\Client\Model\FullTemplateResponseDTO $template template
+     * @param \Docstudio\ClientModel\FullTemplateResponseDTO $template template
      *
      * @return $this
      */
@@ -259,7 +259,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Gets scenario
      *
-     * @return \Swagger\Client\Model\EnvelopeScenarioDTO
+     * @return \Docstudio\ClientModel\EnvelopeScenarioDTO
      */
     public function getScenario()
     {
@@ -269,7 +269,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Sets scenario
      *
-     * @param \Swagger\Client\Model\EnvelopeScenarioDTO $scenario scenario
+     * @param \Docstudio\ClientModel\EnvelopeScenarioDTO $scenario scenario
      *
      * @return $this
      */

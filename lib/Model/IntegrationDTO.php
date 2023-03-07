@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * IntegrationDTO Class Doc Comment
  *
  * @category Class
  * @description Integration info
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,8 +60,8 @@ class IntegrationDTO implements ModelInterface, ArrayAccess
         'mailbox_uuid' => 'string',
 'active' => 'bool',
 'protocol' => 'string',
-'protocol_settings' => '\Swagger\Client\Model\IntegrationProtocolSettingsDTO',
-'default_rule' => '\Swagger\Client\Model\IntegrationDefaultRuleDTO'    ];
+'protocol_settings' => '\Docstudio\ClientModel\IntegrationProtocolSettingsDTO',
+'default_rule' => '\Docstudio\ClientModel\IntegrationDefaultRuleDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -343,7 +343,7 @@ self::PROTOCOL_AS2,        ];
     /**
      * Gets protocol_settings
      *
-     * @return \Swagger\Client\Model\IntegrationProtocolSettingsDTO
+     * @return \Docstudio\ClientModel\IntegrationProtocolSettingsDTO
      */
     public function getProtocolSettings()
     {
@@ -353,7 +353,7 @@ self::PROTOCOL_AS2,        ];
     /**
      * Sets protocol_settings
      *
-     * @param \Swagger\Client\Model\IntegrationProtocolSettingsDTO $protocol_settings protocol_settings
+     * @param \Docstudio\ClientModel\IntegrationProtocolSettingsDTO $protocol_settings protocol_settings
      *
      * @return $this
      */
@@ -367,7 +367,7 @@ self::PROTOCOL_AS2,        ];
     /**
      * Gets default_rule
      *
-     * @return \Swagger\Client\Model\IntegrationDefaultRuleDTO
+     * @return \Docstudio\ClientModel\IntegrationDefaultRuleDTO
      */
     public function getDefaultRule()
     {
@@ -377,7 +377,7 @@ self::PROTOCOL_AS2,        ];
     /**
      * Sets default_rule
      *
-     * @param \Swagger\Client\Model\IntegrationDefaultRuleDTO $default_rule default_rule
+     * @param \Docstudio\ClientModel\IntegrationDefaultRuleDTO $default_rule default_rule
      *
      * @return $this
      */

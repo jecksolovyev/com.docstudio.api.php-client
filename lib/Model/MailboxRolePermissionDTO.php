@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * MailboxRolePermissionDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class MailboxRolePermissionDTO implements ModelInterface, ArrayAccess
 'name' => 'string',
 'permissions' => 'int[]',
 'system' => 'bool',
-'roles' => '\Swagger\Client\Model\RoleGetDTO[]'    ];
+'roles' => '\Docstudio\ClientModel\RoleGetDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -319,7 +319,7 @@ class MailboxRolePermissionDTO implements ModelInterface, ArrayAccess
     /**
      * Gets roles
      *
-     * @return \Swagger\Client\Model\RoleGetDTO[]
+     * @return \Docstudio\ClientModel\RoleGetDTO[]
      */
     public function getRoles()
     {
@@ -329,7 +329,7 @@ class MailboxRolePermissionDTO implements ModelInterface, ArrayAccess
     /**
      * Sets roles
      *
-     * @param \Swagger\Client\Model\RoleGetDTO[] $roles roles
+     * @param \Docstudio\ClientModel\RoleGetDTO[] $roles roles
      *
      * @return $this
      */

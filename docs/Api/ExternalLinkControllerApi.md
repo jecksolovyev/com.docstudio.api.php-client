@@ -1,4 +1,4 @@
-# Swagger\Client\ExternalLinkControllerApi
+# Docstudio\Client\ExternalLinkControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**updateExternalLink**](ExternalLinkControllerApi.md#updateexternallink) | **PUT** /api/v1/account/{accountUuid}/external-link/{linkUuid} | Update external link
 
 # **createExternalLink**
-> \Swagger\Client\Model\ExternalLinkResponseDTO createExternalLink($body, $account_uuid)
+> \Docstudio\ClientModel\ExternalLinkResponseDTO createExternalLink($body, $account_uuid)
 
 Create external link
 
@@ -20,17 +20,17 @@ Create external link
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ExternalLinkControllerApi(
+$apiInstance = new Docstudio\Client\Api\ExternalLinkControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ExternalLinkRequestDTO(); // \Swagger\Client\Model\ExternalLinkRequestDTO | 
+$body = new \Docstudio\ClientModel\ExternalLinkRequestDTO(); // \Docstudio\ClientModel\ExternalLinkRequestDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 
 try {
@@ -46,12 +46,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ExternalLinkRequestDTO**](../Model/ExternalLinkRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\ExternalLinkRequestDTO**](../Model/ExternalLinkRequestDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\ExternalLinkResponseDTO**](../Model/ExternalLinkResponseDTO.md)
+[**\Docstudio\ClientModel\ExternalLinkResponseDTO**](../Model/ExternalLinkResponseDTO.md)
 
 ### Authorization
 
@@ -74,11 +74,11 @@ Delete external link
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ExternalLinkControllerApi(
+$apiInstance = new Docstudio\Client\Api\ExternalLinkControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccountExternalLinks**
-> \Swagger\Client\Model\ExternalLinkResponseDTO[] getAccountExternalLinks($account_uuid)
+> \Docstudio\ClientModel\ExternalLinkResponseDTO[] getAccountExternalLinks($account_uuid)
 
 Get account external links
 
@@ -127,11 +127,11 @@ Get account external links
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ExternalLinkControllerApi(
+$apiInstance = new Docstudio\Client\Api\ExternalLinkControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ExternalLinkResponseDTO[]**](../Model/ExternalLinkResponseDTO.md)
+[**\Docstudio\ClientModel\ExternalLinkResponseDTO[]**](../Model/ExternalLinkResponseDTO.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMailboxList**
-> \Swagger\Client\Model\ExternalLinkShortResponseDTO[] getMailboxList($mailbox)
+> \Docstudio\ClientModel\ExternalLinkShortResponseDTO[] getMailboxList($mailbox)
 
 Get mailbox visible link list
 
@@ -179,11 +179,11 @@ Get mailbox visible link list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ExternalLinkControllerApi(
+$apiInstance = new Docstudio\Client\Api\ExternalLinkControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ExternalLinkShortResponseDTO[]**](../Model/ExternalLinkShortResponseDTO.md)
+[**\Docstudio\ClientModel\ExternalLinkShortResponseDTO[]**](../Model/ExternalLinkShortResponseDTO.md)
 
 ### Authorization
 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateExternalLink**
-> \Swagger\Client\Model\ExternalLinkResponseDTO updateExternalLink($body, $account_uuid, $link_uuid)
+> \Docstudio\ClientModel\ExternalLinkResponseDTO updateExternalLink($body, $account_uuid, $link_uuid)
 
 Update external link
 
@@ -231,17 +231,17 @@ Update external link
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\ExternalLinkControllerApi(
+$apiInstance = new Docstudio\Client\Api\ExternalLinkControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ExternalLinkRequestDTO(); // \Swagger\Client\Model\ExternalLinkRequestDTO | 
+$body = new \Docstudio\ClientModel\ExternalLinkRequestDTO(); // \Docstudio\ClientModel\ExternalLinkRequestDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 $link_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Link UUID
 
@@ -258,13 +258,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ExternalLinkRequestDTO**](../Model/ExternalLinkRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\ExternalLinkRequestDTO**](../Model/ExternalLinkRequestDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
  **link_uuid** | [**string**](../Model/.md)| Link UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\ExternalLinkResponseDTO**](../Model/ExternalLinkResponseDTO.md)
+[**\Docstudio\ClientModel\ExternalLinkResponseDTO**](../Model/ExternalLinkResponseDTO.md)
 
 ### Authorization
 

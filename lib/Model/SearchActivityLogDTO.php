@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * SearchActivityLogDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,12 +58,12 @@ class SearchActivityLogDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'account_uuid' => 'string',
 'mailbox_uuid' => 'string',
-'action' => '\Swagger\Client\Model\ActivityLogAction',
+'action' => '\Docstudio\ClientModel\ActivityLogAction',
 'object_name' => 'string',
-'object_type' => '\Swagger\Client\Model\ActivityLogObjectType',
+'object_type' => '\Docstudio\ClientModel\ActivityLogObjectType',
 'object_id' => 'string',
 'operator_id' => 'string',
-'source' => '\Swagger\Client\Model\OperationSource',
+'source' => '\Docstudio\ClientModel\OperationSource',
 'ip' => 'string',
 'error_code' => 'int',
 'date_from' => '\DateTime',
@@ -316,7 +316,7 @@ class SearchActivityLogDTO implements ModelInterface, ArrayAccess
     /**
      * Gets action
      *
-     * @return \Swagger\Client\Model\ActivityLogAction
+     * @return \Docstudio\ClientModel\ActivityLogAction
      */
     public function getAction()
     {
@@ -326,7 +326,7 @@ class SearchActivityLogDTO implements ModelInterface, ArrayAccess
     /**
      * Sets action
      *
-     * @param \Swagger\Client\Model\ActivityLogAction $action action
+     * @param \Docstudio\ClientModel\ActivityLogAction $action action
      *
      * @return $this
      */
@@ -364,7 +364,7 @@ class SearchActivityLogDTO implements ModelInterface, ArrayAccess
     /**
      * Gets object_type
      *
-     * @return \Swagger\Client\Model\ActivityLogObjectType
+     * @return \Docstudio\ClientModel\ActivityLogObjectType
      */
     public function getObjectType()
     {
@@ -374,7 +374,7 @@ class SearchActivityLogDTO implements ModelInterface, ArrayAccess
     /**
      * Sets object_type
      *
-     * @param \Swagger\Client\Model\ActivityLogObjectType $object_type object_type
+     * @param \Docstudio\ClientModel\ActivityLogObjectType $object_type object_type
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class SearchActivityLogDTO implements ModelInterface, ArrayAccess
     /**
      * Gets source
      *
-     * @return \Swagger\Client\Model\OperationSource
+     * @return \Docstudio\ClientModel\OperationSource
      */
     public function getSource()
     {
@@ -446,7 +446,7 @@ class SearchActivityLogDTO implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param \Swagger\Client\Model\OperationSource $source source
+     * @param \Docstudio\ClientModel\OperationSource $source source
      *
      * @return $this
      */

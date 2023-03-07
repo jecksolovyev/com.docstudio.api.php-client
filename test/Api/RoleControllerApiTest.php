@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,15 +27,15 @@
 
 namespace Docstudio\Client;
 
-use Swagger\Client\Configuration;
-use Swagger\Client\ApiException;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * RoleControllerApiTest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

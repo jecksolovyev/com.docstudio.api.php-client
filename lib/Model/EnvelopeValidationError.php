@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeValidationError Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class EnvelopeValidationError implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'document_id' => 'string',
 'field_name' => 'string',
-'table_details' => '\Swagger\Client\Model\TableDetails',
+'table_details' => '\Docstudio\ClientModel\TableDetails',
 'error_code' => 'string',
 'code' => 'int'    ];
 
@@ -271,7 +271,7 @@ class EnvelopeValidationError implements ModelInterface, ArrayAccess
     /**
      * Gets table_details
      *
-     * @return \Swagger\Client\Model\TableDetails
+     * @return \Docstudio\ClientModel\TableDetails
      */
     public function getTableDetails()
     {
@@ -281,7 +281,7 @@ class EnvelopeValidationError implements ModelInterface, ArrayAccess
     /**
      * Sets table_details
      *
-     * @param \Swagger\Client\Model\TableDetails $table_details table_details
+     * @param \Docstudio\ClientModel\TableDetails $table_details table_details
      *
      * @return $this
      */

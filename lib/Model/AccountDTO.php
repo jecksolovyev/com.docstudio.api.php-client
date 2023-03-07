@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * AccountDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,8 +61,8 @@ class AccountDTO implements ModelInterface, ArrayAccess
 'inn' => 'string',
 'created_at' => '\DateTime',
 'modified_at' => '\DateTime',
-'mailboxes' => '\Swagger\Client\Model\MailboxSimpleDTO[]',
-'users' => '\Swagger\Client\Model\AccountUserDTO[]',
+'mailboxes' => '\Docstudio\ClientModel\MailboxSimpleDTO[]',
+'users' => '\Docstudio\ClientModel\AccountUserDTO[]',
 'logo' => 'string',
 'brand' => 'string',
 'currency' => 'string',
@@ -388,7 +388,7 @@ class AccountDTO implements ModelInterface, ArrayAccess
     /**
      * Gets mailboxes
      *
-     * @return \Swagger\Client\Model\MailboxSimpleDTO[]
+     * @return \Docstudio\ClientModel\MailboxSimpleDTO[]
      */
     public function getMailboxes()
     {
@@ -398,7 +398,7 @@ class AccountDTO implements ModelInterface, ArrayAccess
     /**
      * Sets mailboxes
      *
-     * @param \Swagger\Client\Model\MailboxSimpleDTO[] $mailboxes mailboxes
+     * @param \Docstudio\ClientModel\MailboxSimpleDTO[] $mailboxes mailboxes
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class AccountDTO implements ModelInterface, ArrayAccess
     /**
      * Gets users
      *
-     * @return \Swagger\Client\Model\AccountUserDTO[]
+     * @return \Docstudio\ClientModel\AccountUserDTO[]
      */
     public function getUsers()
     {
@@ -422,7 +422,7 @@ class AccountDTO implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \Swagger\Client\Model\AccountUserDTO[] $users users
+     * @param \Docstudio\ClientModel\AccountUserDTO[] $users users
      *
      * @return $this
      */

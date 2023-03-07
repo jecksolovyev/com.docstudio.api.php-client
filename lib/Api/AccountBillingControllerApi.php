@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * AccountBillingControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -90,10 +90,10 @@ class AccountBillingControllerApi
      * Operation checkEventAbility
      *
      * @param  string $account_uuid account_uuid (required)
-     * @param  \Swagger\Client\Model\BillingEventType $type type (required)
+     * @param  \Docstudio\ClientModel\BillingEventType $type type (required)
      * @param  string $action action (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -106,10 +106,10 @@ class AccountBillingControllerApi
      * Operation checkEventAbilityWithHttpInfo
      *
      * @param  string $account_uuid (required)
-     * @param  \Swagger\Client\Model\BillingEventType $type (required)
+     * @param  \Docstudio\ClientModel\BillingEventType $type (required)
      * @param  string $action (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -161,7 +161,7 @@ class AccountBillingControllerApi
      * 
      *
      * @param  string $account_uuid (required)
-     * @param  \Swagger\Client\Model\BillingEventType $type (required)
+     * @param  \Docstudio\ClientModel\BillingEventType $type (required)
      * @param  string $action (required)
      *
      * @throws \InvalidArgumentException
@@ -183,7 +183,7 @@ class AccountBillingControllerApi
      * 
      *
      * @param  string $account_uuid (required)
-     * @param  \Swagger\Client\Model\BillingEventType $type (required)
+     * @param  \Docstudio\ClientModel\BillingEventType $type (required)
      * @param  string $action (required)
      *
      * @throws \InvalidArgumentException
@@ -221,7 +221,7 @@ class AccountBillingControllerApi
      * Create request for operation 'checkEventAbility'
      *
      * @param  string $account_uuid (required)
-     * @param  \Swagger\Client\Model\BillingEventType $type (required)
+     * @param  \Docstudio\ClientModel\BillingEventType $type (required)
      * @param  string $action (required)
      *
      * @throws \InvalidArgumentException
@@ -356,7 +356,7 @@ class AccountBillingControllerApi
      * @param  string $invoice_id Invoice id (required)
      * @param  string $details Include details (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -373,7 +373,7 @@ class AccountBillingControllerApi
      * @param  string $invoice_id Invoice id (required)
      * @param  string $details Include details (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -644,9 +644,9 @@ class AccountBillingControllerApi
      *
      * @param  string $account_uuid account_uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountBillingInfoDTO
+     * @return \Docstudio\ClientModel\AccountBillingInfoDTO
      */
     public function getAccount($account_uuid)
     {
@@ -659,13 +659,13 @@ class AccountBillingControllerApi
      *
      * @param  string $account_uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountBillingInfoDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AccountBillingInfoDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountWithHttpInfo($account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountBillingInfoDTO';
+        $returnType = '\Docstudio\ClientModel\AccountBillingInfoDTO';
         $request = $this->getAccountRequest($account_uuid);
 
         try {
@@ -717,7 +717,7 @@ class AccountBillingControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountBillingInfoDTO',
+                        '\Docstudio\ClientModel\AccountBillingInfoDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -759,7 +759,7 @@ class AccountBillingControllerApi
      */
     public function getAccountAsyncWithHttpInfo($account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\AccountBillingInfoDTO';
+        $returnType = '\Docstudio\ClientModel\AccountBillingInfoDTO';
         $request = $this->getAccountRequest($account_uuid);
 
         return $this->client
@@ -907,9 +907,9 @@ class AccountBillingControllerApi
      * @param  string $account_uuid account_uuid (required)
      * @param  string $invoice_id invoice_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\BillingInvoiceStatusDTO
+     * @return \Docstudio\ClientModel\BillingInvoiceStatusDTO
      */
     public function getInvoiceStatus($account_uuid, $invoice_id)
     {
@@ -923,13 +923,13 @@ class AccountBillingControllerApi
      * @param  string $account_uuid (required)
      * @param  string $invoice_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\BillingInvoiceStatusDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\BillingInvoiceStatusDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInvoiceStatusWithHttpInfo($account_uuid, $invoice_id)
     {
-        $returnType = '\Swagger\Client\Model\BillingInvoiceStatusDTO';
+        $returnType = '\Docstudio\ClientModel\BillingInvoiceStatusDTO';
         $request = $this->getInvoiceStatusRequest($account_uuid, $invoice_id);
 
         try {
@@ -981,7 +981,7 @@ class AccountBillingControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\BillingInvoiceStatusDTO',
+                        '\Docstudio\ClientModel\BillingInvoiceStatusDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1025,7 +1025,7 @@ class AccountBillingControllerApi
      */
     public function getInvoiceStatusAsyncWithHttpInfo($account_uuid, $invoice_id)
     {
-        $returnType = '\Swagger\Client\Model\BillingInvoiceStatusDTO';
+        $returnType = '\Docstudio\ClientModel\BillingInvoiceStatusDTO';
         $request = $this->getInvoiceStatusRequest($account_uuid, $invoice_id);
 
         return $this->client
@@ -1189,9 +1189,9 @@ class AccountBillingControllerApi
      * @param  int $offset Offset, how many records to skip (optional, default to 0)
      * @param  int $limit Limit, how many records to retrieve (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTOObject
+     * @return \Docstudio\ClientModel\PageDTOObject
      */
     public function getInvoices($account_uuid, $offset = '0', $limit = '25')
     {
@@ -1206,13 +1206,13 @@ class AccountBillingControllerApi
      * @param  int $offset Offset, how many records to skip (optional, default to 0)
      * @param  int $limit Limit, how many records to retrieve (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTOObject, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTOObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInvoicesWithHttpInfo($account_uuid, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOObject';
+        $returnType = '\Docstudio\ClientModel\PageDTOObject';
         $request = $this->getInvoicesRequest($account_uuid, $offset, $limit);
 
         try {
@@ -1264,7 +1264,7 @@ class AccountBillingControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTOObject',
+                        '\Docstudio\ClientModel\PageDTOObject',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1310,7 +1310,7 @@ class AccountBillingControllerApi
      */
     public function getInvoicesAsyncWithHttpInfo($account_uuid, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOObject';
+        $returnType = '\Docstudio\ClientModel\PageDTOObject';
         $request = $this->getInvoicesRequest($account_uuid, $offset, $limit);
 
         return $this->client
@@ -1467,9 +1467,9 @@ class AccountBillingControllerApi
      *
      * @param  string $account_uuid account_uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DetailedTariffInfoDTO[]
+     * @return \Docstudio\ClientModel\DetailedTariffInfoDTO[]
      */
     public function getTariffs($account_uuid)
     {
@@ -1482,13 +1482,13 @@ class AccountBillingControllerApi
      *
      * @param  string $account_uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DetailedTariffInfoDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\DetailedTariffInfoDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getTariffsWithHttpInfo($account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\DetailedTariffInfoDTO[]';
+        $returnType = '\Docstudio\ClientModel\DetailedTariffInfoDTO[]';
         $request = $this->getTariffsRequest($account_uuid);
 
         try {
@@ -1540,7 +1540,7 @@ class AccountBillingControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DetailedTariffInfoDTO[]',
+                        '\Docstudio\ClientModel\DetailedTariffInfoDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1582,7 +1582,7 @@ class AccountBillingControllerApi
      */
     public function getTariffsAsyncWithHttpInfo($account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\DetailedTariffInfoDTO[]';
+        $returnType = '\Docstudio\ClientModel\DetailedTariffInfoDTO[]';
         $request = $this->getTariffsRequest($account_uuid);
 
         return $this->client
@@ -1727,12 +1727,12 @@ class AccountBillingControllerApi
     /**
      * Operation makeInvoicePayment
      *
-     * @param  \Swagger\Client\Model\BillingPaymentDTO $body body (required)
+     * @param  \Docstudio\ClientModel\BillingPaymentDTO $body body (required)
      * @param  string $account_uuid account_uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\BillingRedirectDTO
+     * @return \Docstudio\ClientModel\BillingRedirectDTO
      */
     public function makeInvoicePayment($body, $account_uuid)
     {
@@ -1743,16 +1743,16 @@ class AccountBillingControllerApi
     /**
      * Operation makeInvoicePaymentWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\BillingPaymentDTO $body (required)
+     * @param  \Docstudio\ClientModel\BillingPaymentDTO $body (required)
      * @param  string $account_uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\BillingRedirectDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\BillingRedirectDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function makeInvoicePaymentWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\BillingRedirectDTO';
+        $returnType = '\Docstudio\ClientModel\BillingRedirectDTO';
         $request = $this->makeInvoicePaymentRequest($body, $account_uuid);
 
         try {
@@ -1804,7 +1804,7 @@ class AccountBillingControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\BillingRedirectDTO',
+                        '\Docstudio\ClientModel\BillingRedirectDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1819,7 +1819,7 @@ class AccountBillingControllerApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\BillingPaymentDTO $body (required)
+     * @param  \Docstudio\ClientModel\BillingPaymentDTO $body (required)
      * @param  string $account_uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -1840,7 +1840,7 @@ class AccountBillingControllerApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\BillingPaymentDTO $body (required)
+     * @param  \Docstudio\ClientModel\BillingPaymentDTO $body (required)
      * @param  string $account_uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -1848,7 +1848,7 @@ class AccountBillingControllerApi
      */
     public function makeInvoicePaymentAsyncWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\BillingRedirectDTO';
+        $returnType = '\Docstudio\ClientModel\BillingRedirectDTO';
         $request = $this->makeInvoicePaymentRequest($body, $account_uuid);
 
         return $this->client
@@ -1891,7 +1891,7 @@ class AccountBillingControllerApi
     /**
      * Create request for operation 'makeInvoicePayment'
      *
-     * @param  \Swagger\Client\Model\BillingPaymentDTO $body (required)
+     * @param  \Docstudio\ClientModel\BillingPaymentDTO $body (required)
      * @param  string $account_uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -2003,10 +2003,10 @@ class AccountBillingControllerApi
     /**
      * Operation replaceAccountTariff
      *
-     * @param  \Swagger\Client\Model\ReplaceAccountTariffDTO $body body (required)
+     * @param  \Docstudio\ClientModel\ReplaceAccountTariffDTO $body body (required)
      * @param  string $account_uuid account_uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2018,10 +2018,10 @@ class AccountBillingControllerApi
     /**
      * Operation replaceAccountTariffWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\ReplaceAccountTariffDTO $body (required)
+     * @param  \Docstudio\ClientModel\ReplaceAccountTariffDTO $body (required)
      * @param  string $account_uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2072,7 +2072,7 @@ class AccountBillingControllerApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\ReplaceAccountTariffDTO $body (required)
+     * @param  \Docstudio\ClientModel\ReplaceAccountTariffDTO $body (required)
      * @param  string $account_uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -2093,7 +2093,7 @@ class AccountBillingControllerApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\ReplaceAccountTariffDTO $body (required)
+     * @param  \Docstudio\ClientModel\ReplaceAccountTariffDTO $body (required)
      * @param  string $account_uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -2130,7 +2130,7 @@ class AccountBillingControllerApi
     /**
      * Create request for operation 'replaceAccountTariff'
      *
-     * @param  \Swagger\Client\Model\ReplaceAccountTariffDTO $body (required)
+     * @param  \Docstudio\ClientModel\ReplaceAccountTariffDTO $body (required)
      * @param  string $account_uuid (required)
      *
      * @throws \InvalidArgumentException

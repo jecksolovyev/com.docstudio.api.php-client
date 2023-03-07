@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * SearchEnvelopesDTO Class Doc Comment
  *
  * @category Class
  * @description Search parameters
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -72,7 +72,7 @@ class SearchEnvelopesDTO implements ModelInterface, ArrayAccess
 'recipient' => 'string[]',
 'sort_field' => 'string',
 'sort' => 'string',
-'search_fields' => '\Swagger\Client\Model\SearchFieldValueDTO[]'    ];
+'search_fields' => '\Docstudio\ClientModel\SearchFieldValueDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -736,7 +736,7 @@ self::SORT_ASC,        ];
     /**
      * Gets search_fields
      *
-     * @return \Swagger\Client\Model\SearchFieldValueDTO[]
+     * @return \Docstudio\ClientModel\SearchFieldValueDTO[]
      */
     public function getSearchFields()
     {
@@ -746,7 +746,7 @@ self::SORT_ASC,        ];
     /**
      * Sets search_fields
      *
-     * @param \Swagger\Client\Model\SearchFieldValueDTO[] $search_fields search_fields
+     * @param \Docstudio\ClientModel\SearchFieldValueDTO[] $search_fields search_fields
      *
      * @return $this
      */

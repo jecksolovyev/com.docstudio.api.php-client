@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * CommentThreadDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,9 +60,9 @@ class CommentThreadDTO implements ModelInterface, ArrayAccess
 'mailbox_name' => 'string',
 'thread_uuid' => 'string',
 'xpath' => 'string',
-'messages' => '\Swagger\Client\Model\CommentMessageDTO[]',
+'messages' => '\Docstudio\ClientModel\CommentMessageDTO[]',
 'access_type' => 'string',
-'shared_to' => '\Swagger\Client\Model\NameUuidDTO[]'    ];
+'shared_to' => '\Docstudio\ClientModel\NameUuidDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -358,7 +358,7 @@ self::ACCESS_TYPE_SHARED,        ];
     /**
      * Gets messages
      *
-     * @return \Swagger\Client\Model\CommentMessageDTO[]
+     * @return \Docstudio\ClientModel\CommentMessageDTO[]
      */
     public function getMessages()
     {
@@ -368,7 +368,7 @@ self::ACCESS_TYPE_SHARED,        ];
     /**
      * Sets messages
      *
-     * @param \Swagger\Client\Model\CommentMessageDTO[] $messages All messages in the thread
+     * @param \Docstudio\ClientModel\CommentMessageDTO[] $messages All messages in the thread
      *
      * @return $this
      */
@@ -415,7 +415,7 @@ self::ACCESS_TYPE_SHARED,        ];
     /**
      * Gets shared_to
      *
-     * @return \Swagger\Client\Model\NameUuidDTO[]
+     * @return \Docstudio\ClientModel\NameUuidDTO[]
      */
     public function getSharedTo()
     {
@@ -425,7 +425,7 @@ self::ACCESS_TYPE_SHARED,        ];
     /**
      * Sets shared_to
      *
-     * @param \Swagger\Client\Model\NameUuidDTO[] $shared_to shared_to
+     * @param \Docstudio\ClientModel\NameUuidDTO[] $shared_to shared_to
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * DetailedTariffInfoDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,8 +60,8 @@ class DetailedTariffInfoDTO implements ModelInterface, ArrayAccess
 'name' => 'string',
 'tariff_price' => 'int',
 'display_name' => 'string',
-'attributes' => '\Swagger\Client\Model\AttributeInfoDTO[]',
-'counters' => '\Swagger\Client\Model\CounterInfoDTO[]'    ];
+'attributes' => '\Docstudio\ClientModel\AttributeInfoDTO[]',
+'counters' => '\Docstudio\ClientModel\CounterInfoDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -325,7 +325,7 @@ class DetailedTariffInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets attributes
      *
-     * @return \Swagger\Client\Model\AttributeInfoDTO[]
+     * @return \Docstudio\ClientModel\AttributeInfoDTO[]
      */
     public function getAttributes()
     {
@@ -335,7 +335,7 @@ class DetailedTariffInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets attributes
      *
-     * @param \Swagger\Client\Model\AttributeInfoDTO[] $attributes attributes
+     * @param \Docstudio\ClientModel\AttributeInfoDTO[] $attributes attributes
      *
      * @return $this
      */
@@ -349,7 +349,7 @@ class DetailedTariffInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets counters
      *
-     * @return \Swagger\Client\Model\CounterInfoDTO[]
+     * @return \Docstudio\ClientModel\CounterInfoDTO[]
      */
     public function getCounters()
     {
@@ -359,7 +359,7 @@ class DetailedTariffInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets counters
      *
-     * @param \Swagger\Client\Model\CounterInfoDTO[] $counters counters
+     * @param \Docstudio\ClientModel\CounterInfoDTO[] $counters counters
      *
      * @return $this
      */

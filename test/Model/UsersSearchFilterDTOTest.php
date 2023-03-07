@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,7 +33,7 @@ namespace Docstudio\Client;
  *
  * @category    Class
  * @description UsersSearchFilterDTO
- * @package     Swagger\Client
+ * @package     Docstudio\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * InvitationPostDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class InvitationPostDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account' => '\Swagger\Client\Model\PermissionsWithUuidDTO',
-'mailboxes' => '\Swagger\Client\Model\PermissionsWithUuidDTO[]',
+        'account' => '\Docstudio\ClientModel\PermissionsWithUuidDTO',
+'mailboxes' => '\Docstudio\ClientModel\PermissionsWithUuidDTO[]',
 'nickname' => 'string',
 'email' => 'string'    ];
 
@@ -220,7 +220,7 @@ class InvitationPostDTO implements ModelInterface, ArrayAccess
     /**
      * Gets account
      *
-     * @return \Swagger\Client\Model\PermissionsWithUuidDTO
+     * @return \Docstudio\ClientModel\PermissionsWithUuidDTO
      */
     public function getAccount()
     {
@@ -230,7 +230,7 @@ class InvitationPostDTO implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param \Swagger\Client\Model\PermissionsWithUuidDTO $account account
+     * @param \Docstudio\ClientModel\PermissionsWithUuidDTO $account account
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class InvitationPostDTO implements ModelInterface, ArrayAccess
     /**
      * Gets mailboxes
      *
-     * @return \Swagger\Client\Model\PermissionsWithUuidDTO[]
+     * @return \Docstudio\ClientModel\PermissionsWithUuidDTO[]
      */
     public function getMailboxes()
     {
@@ -254,7 +254,7 @@ class InvitationPostDTO implements ModelInterface, ArrayAccess
     /**
      * Sets mailboxes
      *
-     * @param \Swagger\Client\Model\PermissionsWithUuidDTO[] $mailboxes Mailboxes roles and permissions
+     * @param \Docstudio\ClientModel\PermissionsWithUuidDTO[] $mailboxes Mailboxes roles and permissions
      *
      * @return $this
      */

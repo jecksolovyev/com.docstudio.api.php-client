@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **ip** | **string** |  | [optional] 
 **browser** | **string** |  | [optional] 
 **os** | **string** |  | [optional] 
-**geolocation** | [**\Swagger\Client\Model\GeolocationInfoDTO**](GeolocationInfoDTO.md) |  | [optional] 
+**geolocation** | [**\Docstudio\ClientModel\GeolocationInfoDTO**](GeolocationInfoDTO.md) |  | [optional] 
 **description** | **string** |  | [optional] 
 **latitude** | **float** |  | [optional] 
 **longitude** | **float** |  | [optional] 

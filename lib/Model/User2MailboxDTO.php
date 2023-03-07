@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * User2MailboxDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,8 +61,8 @@ class User2MailboxDTO implements ModelInterface, ArrayAccess
 'name' => 'string',
 'account_uuid' => 'string',
 'account_name' => 'string',
-'authorization' => '\Swagger\Client\Model\UserAuthorizationDTO',
-'roles' => '\Swagger\Client\Model\RoleShortDTO[]'    ];
+'authorization' => '\Docstudio\ClientModel\UserAuthorizationDTO',
+'roles' => '\Docstudio\ClientModel\RoleShortDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -358,7 +358,7 @@ class User2MailboxDTO implements ModelInterface, ArrayAccess
     /**
      * Gets authorization
      *
-     * @return \Swagger\Client\Model\UserAuthorizationDTO
+     * @return \Docstudio\ClientModel\UserAuthorizationDTO
      */
     public function getAuthorization()
     {
@@ -368,7 +368,7 @@ class User2MailboxDTO implements ModelInterface, ArrayAccess
     /**
      * Sets authorization
      *
-     * @param \Swagger\Client\Model\UserAuthorizationDTO $authorization authorization
+     * @param \Docstudio\ClientModel\UserAuthorizationDTO $authorization authorization
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class User2MailboxDTO implements ModelInterface, ArrayAccess
     /**
      * Gets roles
      *
-     * @return \Swagger\Client\Model\RoleShortDTO[]
+     * @return \Docstudio\ClientModel\RoleShortDTO[]
      */
     public function getRoles()
     {
@@ -392,7 +392,7 @@ class User2MailboxDTO implements ModelInterface, ArrayAccess
     /**
      * Sets roles
      *
-     * @param \Swagger\Client\Model\RoleShortDTO[] $roles roles
+     * @param \Docstudio\ClientModel\RoleShortDTO[] $roles roles
      *
      * @return $this
      */

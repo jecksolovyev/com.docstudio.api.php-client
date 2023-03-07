@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * RegistrationControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class RegistrationControllerApi
      *
      * @param  string $email Email of user (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PasswordPolicy
+     * @return \Docstudio\ClientModel\PasswordPolicy
      */
     public function getUserPasswordPolicy($email)
     {
@@ -110,13 +110,13 @@ class RegistrationControllerApi
      *
      * @param  string $email Email of user (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PasswordPolicy, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PasswordPolicy, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserPasswordPolicyWithHttpInfo($email)
     {
-        $returnType = '\Swagger\Client\Model\PasswordPolicy';
+        $returnType = '\Docstudio\ClientModel\PasswordPolicy';
         $request = $this->getUserPasswordPolicyRequest($email);
 
         try {
@@ -168,7 +168,7 @@ class RegistrationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PasswordPolicy',
+                        '\Docstudio\ClientModel\PasswordPolicy',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class RegistrationControllerApi
      */
     public function getUserPasswordPolicyAsyncWithHttpInfo($email)
     {
-        $returnType = '\Swagger\Client\Model\PasswordPolicy';
+        $returnType = '\Docstudio\ClientModel\PasswordPolicy';
         $request = $this->getUserPasswordPolicyRequest($email);
 
         return $this->client
@@ -349,13 +349,13 @@ class RegistrationControllerApi
      *
      * Register a user with validation code
      *
-     * @param  \Swagger\Client\Model\UserCreateDTO $body body (required)
+     * @param  \Docstudio\ClientModel\UserCreateDTO $body body (required)
      * @param  string $code Validation code (required)
      * @param  string $code_type Type of code (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LoginResponseDTO
+     * @return \Docstudio\ClientModel\LoginResponseDTO
      */
     public function register($body, $code, $code_type = null)
     {
@@ -368,17 +368,17 @@ class RegistrationControllerApi
      *
      * Register a user with validation code
      *
-     * @param  \Swagger\Client\Model\UserCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\UserCreateDTO $body (required)
      * @param  string $code Validation code (required)
      * @param  string $code_type Type of code (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LoginResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\LoginResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function registerWithHttpInfo($body, $code, $code_type = null)
     {
-        $returnType = '\Swagger\Client\Model\LoginResponseDTO';
+        $returnType = '\Docstudio\ClientModel\LoginResponseDTO';
         $request = $this->registerRequest($body, $code, $code_type);
 
         try {
@@ -430,7 +430,7 @@ class RegistrationControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LoginResponseDTO',
+                        '\Docstudio\ClientModel\LoginResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -445,7 +445,7 @@ class RegistrationControllerApi
      *
      * Register a user with validation code
      *
-     * @param  \Swagger\Client\Model\UserCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\UserCreateDTO $body (required)
      * @param  string $code Validation code (required)
      * @param  string $code_type Type of code (optional)
      *
@@ -467,7 +467,7 @@ class RegistrationControllerApi
      *
      * Register a user with validation code
      *
-     * @param  \Swagger\Client\Model\UserCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\UserCreateDTO $body (required)
      * @param  string $code Validation code (required)
      * @param  string $code_type Type of code (optional)
      *
@@ -476,7 +476,7 @@ class RegistrationControllerApi
      */
     public function registerAsyncWithHttpInfo($body, $code, $code_type = null)
     {
-        $returnType = '\Swagger\Client\Model\LoginResponseDTO';
+        $returnType = '\Docstudio\ClientModel\LoginResponseDTO';
         $request = $this->registerRequest($body, $code, $code_type);
 
         return $this->client
@@ -519,7 +519,7 @@ class RegistrationControllerApi
     /**
      * Create request for operation 'register'
      *
-     * @param  \Swagger\Client\Model\UserCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\UserCreateDTO $body (required)
      * @param  string $code Validation code (required)
      * @param  string $code_type Type of code (optional)
      *
@@ -630,9 +630,9 @@ class RegistrationControllerApi
      *
      * Renew user's password
      *
-     * @param  \Swagger\Client\Model\RenewPasswordDTO $body body (required)
+     * @param  \Docstudio\ClientModel\RenewPasswordDTO $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -646,9 +646,9 @@ class RegistrationControllerApi
      *
      * Renew user's password
      *
-     * @param  \Swagger\Client\Model\RenewPasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\RenewPasswordDTO $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -699,7 +699,7 @@ class RegistrationControllerApi
      *
      * Renew user's password
      *
-     * @param  \Swagger\Client\Model\RenewPasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\RenewPasswordDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -719,7 +719,7 @@ class RegistrationControllerApi
      *
      * Renew user's password
      *
-     * @param  \Swagger\Client\Model\RenewPasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\RenewPasswordDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -755,7 +755,7 @@ class RegistrationControllerApi
     /**
      * Create request for operation 'renewPassword'
      *
-     * @param  \Swagger\Client\Model\RenewPasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\RenewPasswordDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -850,9 +850,9 @@ class RegistrationControllerApi
      *
      * Send email validation code
      *
-     * @param  \Swagger\Client\Model\RequestValCodeDTO $body body (required)
+     * @param  \Docstudio\ClientModel\RequestValCodeDTO $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -867,9 +867,9 @@ class RegistrationControllerApi
      *
      * Send email validation code
      *
-     * @param  \Swagger\Client\Model\RequestValCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\RequestValCodeDTO $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -942,7 +942,7 @@ class RegistrationControllerApi
      *
      * Send email validation code
      *
-     * @param  \Swagger\Client\Model\RequestValCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\RequestValCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -962,7 +962,7 @@ class RegistrationControllerApi
      *
      * Send email validation code
      *
-     * @param  \Swagger\Client\Model\RequestValCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\RequestValCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1012,7 +1012,7 @@ class RegistrationControllerApi
     /**
      * Create request for operation 'requestResendValidationCode'
      *
-     * @param  \Swagger\Client\Model\RequestValCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\RequestValCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1107,9 +1107,9 @@ class RegistrationControllerApi
      *
      * Request password reset
      *
-     * @param  \Swagger\Client\Model\RequestValCodeDTO $body body (required)
+     * @param  \Docstudio\ClientModel\RequestValCodeDTO $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1124,9 +1124,9 @@ class RegistrationControllerApi
      *
      * Request password reset
      *
-     * @param  \Swagger\Client\Model\RequestValCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\RequestValCodeDTO $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1199,7 +1199,7 @@ class RegistrationControllerApi
      *
      * Request password reset
      *
-     * @param  \Swagger\Client\Model\RequestValCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\RequestValCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1219,7 +1219,7 @@ class RegistrationControllerApi
      *
      * Request password reset
      *
-     * @param  \Swagger\Client\Model\RequestValCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\RequestValCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1269,7 +1269,7 @@ class RegistrationControllerApi
     /**
      * Create request for operation 'requestResetPassword'
      *
-     * @param  \Swagger\Client\Model\RequestValCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\RequestValCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1364,9 +1364,9 @@ class RegistrationControllerApi
      *
      * Reset password
      *
-     * @param  \Swagger\Client\Model\ResetPasswordDTO $body body (required)
+     * @param  \Docstudio\ClientModel\ResetPasswordDTO $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1380,9 +1380,9 @@ class RegistrationControllerApi
      *
      * Reset password
      *
-     * @param  \Swagger\Client\Model\ResetPasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\ResetPasswordDTO $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1433,7 +1433,7 @@ class RegistrationControllerApi
      *
      * Reset password
      *
-     * @param  \Swagger\Client\Model\ResetPasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\ResetPasswordDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1453,7 +1453,7 @@ class RegistrationControllerApi
      *
      * Reset password
      *
-     * @param  \Swagger\Client\Model\ResetPasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\ResetPasswordDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1489,7 +1489,7 @@ class RegistrationControllerApi
     /**
      * Create request for operation 'resetPassword'
      *
-     * @param  \Swagger\Client\Model\ResetPasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\ResetPasswordDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1587,7 +1587,7 @@ class RegistrationControllerApi
      * @param  string $code Validation code from email (required)
      * @param  string $type Verification type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1604,7 +1604,7 @@ class RegistrationControllerApi
      * @param  string $code Validation code from email (required)
      * @param  string $type Verification type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

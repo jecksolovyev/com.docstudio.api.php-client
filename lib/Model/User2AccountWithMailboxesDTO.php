@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * User2AccountWithMailboxesDTO Class Doc Comment
  *
  * @category Class
  * @description User accounts belongs to
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class User2AccountWithMailboxesDTO implements ModelInterface, ArrayAccess
 'name' => 'string',
 'system' => 'bool',
 'permissions' => 'int[]',
-'mailboxes' => '\Swagger\Client\Model\MailboxProfileDTO[]'    ];
+'mailboxes' => '\Docstudio\ClientModel\MailboxProfileDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -320,7 +320,7 @@ class User2AccountWithMailboxesDTO implements ModelInterface, ArrayAccess
     /**
      * Gets mailboxes
      *
-     * @return \Swagger\Client\Model\MailboxProfileDTO[]
+     * @return \Docstudio\ClientModel\MailboxProfileDTO[]
      */
     public function getMailboxes()
     {
@@ -330,7 +330,7 @@ class User2AccountWithMailboxesDTO implements ModelInterface, ArrayAccess
     /**
      * Sets mailboxes
      *
-     * @param \Swagger\Client\Model\MailboxProfileDTO[] $mailboxes Mailboxes linked to this account
+     * @param \Docstudio\ClientModel\MailboxProfileDTO[] $mailboxes Mailboxes linked to this account
      *
      * @return $this
      */

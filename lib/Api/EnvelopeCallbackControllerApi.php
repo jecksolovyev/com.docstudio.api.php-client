@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopeCallbackControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,12 +91,12 @@ class EnvelopeCallbackControllerApi
      *
      * Add new callback
      *
-     * @param  \Swagger\Client\Model\CreateEnvelopeCallbackDTO $body body (required)
+     * @param  \Docstudio\ClientModel\CreateEnvelopeCallbackDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\EnvelopeCallbackDTO
+     * @return \Docstudio\ClientModel\EnvelopeCallbackDTO
      */
     public function createCallback($body, $mailbox)
     {
@@ -109,16 +109,16 @@ class EnvelopeCallbackControllerApi
      *
      * Add new callback
      *
-     * @param  \Swagger\Client\Model\CreateEnvelopeCallbackDTO $body (required)
+     * @param  \Docstudio\ClientModel\CreateEnvelopeCallbackDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\EnvelopeCallbackDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\EnvelopeCallbackDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCallbackWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\EnvelopeCallbackDTO';
+        $returnType = '\Docstudio\ClientModel\EnvelopeCallbackDTO';
         $request = $this->createCallbackRequest($body, $mailbox);
 
         try {
@@ -170,7 +170,7 @@ class EnvelopeCallbackControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\EnvelopeCallbackDTO',
+                        '\Docstudio\ClientModel\EnvelopeCallbackDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class EnvelopeCallbackControllerApi
      *
      * Add new callback
      *
-     * @param  \Swagger\Client\Model\CreateEnvelopeCallbackDTO $body (required)
+     * @param  \Docstudio\ClientModel\CreateEnvelopeCallbackDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class EnvelopeCallbackControllerApi
      *
      * Add new callback
      *
-     * @param  \Swagger\Client\Model\CreateEnvelopeCallbackDTO $body (required)
+     * @param  \Docstudio\ClientModel\CreateEnvelopeCallbackDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class EnvelopeCallbackControllerApi
      */
     public function createCallbackAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\EnvelopeCallbackDTO';
+        $returnType = '\Docstudio\ClientModel\EnvelopeCallbackDTO';
         $request = $this->createCallbackRequest($body, $mailbox);
 
         return $this->client
@@ -257,7 +257,7 @@ class EnvelopeCallbackControllerApi
     /**
      * Create request for operation 'createCallback'
      *
-     * @param  \Swagger\Client\Model\CreateEnvelopeCallbackDTO $body (required)
+     * @param  \Docstudio\ClientModel\CreateEnvelopeCallbackDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -369,9 +369,9 @@ class EnvelopeCallbackControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\EnvelopeCallbackDTO[]
+     * @return \Docstudio\ClientModel\EnvelopeCallbackDTO[]
      */
     public function listCallbacks($mailbox)
     {
@@ -386,13 +386,13 @@ class EnvelopeCallbackControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\EnvelopeCallbackDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\EnvelopeCallbackDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function listCallbacksWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\EnvelopeCallbackDTO[]';
+        $returnType = '\Docstudio\ClientModel\EnvelopeCallbackDTO[]';
         $request = $this->listCallbacksRequest($mailbox);
 
         try {
@@ -444,7 +444,7 @@ class EnvelopeCallbackControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\EnvelopeCallbackDTO[]',
+                        '\Docstudio\ClientModel\EnvelopeCallbackDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -486,7 +486,7 @@ class EnvelopeCallbackControllerApi
      */
     public function listCallbacksAsyncWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\EnvelopeCallbackDTO[]';
+        $returnType = '\Docstudio\ClientModel\EnvelopeCallbackDTO[]';
         $request = $this->listCallbacksRequest($mailbox);
 
         return $this->client
@@ -632,7 +632,7 @@ class EnvelopeCallbackControllerApi
      * @param  string $callback_uuid Callback id (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -649,7 +649,7 @@ class EnvelopeCallbackControllerApi
      * @param  string $callback_uuid Callback id (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * DocumentForSigningDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class DocumentForSigningDTO implements ModelInterface, ArrayAccess
 'binary_file_name' => 'string',
 'binary_file' => 'string',
 'binary_hash' => 'string',
-'signatures' => '\Swagger\Client\Model\RequiredSignatureDTO[]'    ];
+'signatures' => '\Docstudio\ClientModel\RequiredSignatureDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -409,7 +409,7 @@ class DocumentForSigningDTO implements ModelInterface, ArrayAccess
     /**
      * Gets signatures
      *
-     * @return \Swagger\Client\Model\RequiredSignatureDTO[]
+     * @return \Docstudio\ClientModel\RequiredSignatureDTO[]
      */
     public function getSignatures()
     {
@@ -419,7 +419,7 @@ class DocumentForSigningDTO implements ModelInterface, ArrayAccess
     /**
      * Sets signatures
      *
-     * @param \Swagger\Client\Model\RequiredSignatureDTO[] $signatures Signatures
+     * @param \Docstudio\ClientModel\RequiredSignatureDTO[] $signatures Signatures
      *
      * @return $this
      */

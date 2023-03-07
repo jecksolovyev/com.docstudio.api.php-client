@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * PageDTODictionaryResponseDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class PageDTODictionaryResponseDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Swagger\Client\Model\DictionaryResponseDTO[]'    ];
+'data' => '\Docstudio\ClientModel\DictionaryResponseDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTODictionaryResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Swagger\Client\Model\DictionaryResponseDTO[]
+     * @return \Docstudio\ClientModel\DictionaryResponseDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTODictionaryResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\DictionaryResponseDTO[] $data Data records
+     * @param \Docstudio\ClientModel\DictionaryResponseDTO[] $data Data records
      *
      * @return $this
      */

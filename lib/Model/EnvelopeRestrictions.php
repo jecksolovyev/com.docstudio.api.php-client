@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeRestrictions Class Doc Comment
  *
  * @category Class
  * @description Envelope Restrictions
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,9 +57,9 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'field' => '\Swagger\Client\Model\FieldRestriction',
-'attachment' => '\Swagger\Client\Model\AttachmentRestriction',
-'search_field' => '\Swagger\Client\Model\SearchFieldRestriction'    ];
+        'field' => '\Docstudio\ClientModel\FieldRestriction',
+'attachment' => '\Docstudio\ClientModel\AttachmentRestriction',
+'search_field' => '\Docstudio\ClientModel\SearchFieldRestriction'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -212,7 +212,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Gets field
      *
-     * @return \Swagger\Client\Model\FieldRestriction
+     * @return \Docstudio\ClientModel\FieldRestriction
      */
     public function getField()
     {
@@ -222,7 +222,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Sets field
      *
-     * @param \Swagger\Client\Model\FieldRestriction $field field
+     * @param \Docstudio\ClientModel\FieldRestriction $field field
      *
      * @return $this
      */
@@ -236,7 +236,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Gets attachment
      *
-     * @return \Swagger\Client\Model\AttachmentRestriction
+     * @return \Docstudio\ClientModel\AttachmentRestriction
      */
     public function getAttachment()
     {
@@ -246,7 +246,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Sets attachment
      *
-     * @param \Swagger\Client\Model\AttachmentRestriction $attachment attachment
+     * @param \Docstudio\ClientModel\AttachmentRestriction $attachment attachment
      *
      * @return $this
      */
@@ -260,7 +260,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Gets search_field
      *
-     * @return \Swagger\Client\Model\SearchFieldRestriction
+     * @return \Docstudio\ClientModel\SearchFieldRestriction
      */
     public function getSearchField()
     {
@@ -270,7 +270,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Sets search_field
      *
-     * @param \Swagger\Client\Model\SearchFieldRestriction $search_field search_field
+     * @param \Docstudio\ClientModel\SearchFieldRestriction $search_field search_field
      *
      * @return $this
      */

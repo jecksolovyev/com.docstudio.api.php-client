@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * FieldRestriction Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class FieldRestriction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'einksign' => '\Swagger\Client\Model\EinkSignRestriction'    ];
+        'einksign' => '\Docstudio\ClientModel\EinkSignRestriction'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -199,7 +199,7 @@ class FieldRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets einksign
      *
-     * @return \Swagger\Client\Model\EinkSignRestriction
+     * @return \Docstudio\ClientModel\EinkSignRestriction
      */
     public function getEinksign()
     {
@@ -209,7 +209,7 @@ class FieldRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets einksign
      *
-     * @param \Swagger\Client\Model\EinkSignRestriction $einksign einksign
+     * @param \Docstudio\ClientModel\EinkSignRestriction $einksign einksign
      *
      * @return $this
      */

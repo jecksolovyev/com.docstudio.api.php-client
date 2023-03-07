@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * DictionaryCheckResponseDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class DictionaryCheckResponseDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'result' => 'int',
 'message' => 'string',
-'http_status' => '\Swagger\Client\Model\DictionaryCheckResponseDTO'    ];
+'http_status' => '\Docstudio\ClientModel\DictionaryCheckResponseDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -265,7 +265,7 @@ class DictionaryCheckResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Gets http_status
      *
-     * @return \Swagger\Client\Model\DictionaryCheckResponseDTO
+     * @return \Docstudio\ClientModel\DictionaryCheckResponseDTO
      */
     public function getHttpStatus()
     {
@@ -275,7 +275,7 @@ class DictionaryCheckResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Sets http_status
      *
-     * @param \Swagger\Client\Model\DictionaryCheckResponseDTO $http_status http_status
+     * @param \Docstudio\ClientModel\DictionaryCheckResponseDTO $http_status http_status
      *
      * @return $this
      */

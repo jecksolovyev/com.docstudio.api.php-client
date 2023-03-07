@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * ValidationControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class ValidationControllerApi
      *
      * @param  string $code code (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GetEnvelopeInviteInfoDTO
+     * @return \Docstudio\ClientModel\GetEnvelopeInviteInfoDTO
      */
     public function getEnvelopeInvite($code)
     {
@@ -110,13 +110,13 @@ class ValidationControllerApi
      *
      * @param  string $code (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GetEnvelopeInviteInfoDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\GetEnvelopeInviteInfoDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEnvelopeInviteWithHttpInfo($code)
     {
-        $returnType = '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO';
+        $returnType = '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO';
         $request = $this->getEnvelopeInviteRequest($code);
 
         try {
@@ -168,7 +168,7 @@ class ValidationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO',
+                        '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class ValidationControllerApi
      */
     public function getEnvelopeInviteAsyncWithHttpInfo($code)
     {
-        $returnType = '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO';
+        $returnType = '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO';
         $request = $this->getEnvelopeInviteRequest($code);
 
         return $this->client
@@ -355,9 +355,9 @@ class ValidationControllerApi
      *
      * @param  string $code code (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GetEnvelopeInviteInfoDTO
+     * @return \Docstudio\ClientModel\GetEnvelopeInviteInfoDTO
      */
     public function getEnvelopeInviteNotRegistered($code)
     {
@@ -372,13 +372,13 @@ class ValidationControllerApi
      *
      * @param  string $code (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GetEnvelopeInviteInfoDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\GetEnvelopeInviteInfoDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEnvelopeInviteNotRegisteredWithHttpInfo($code)
     {
-        $returnType = '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO';
+        $returnType = '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO';
         $request = $this->getEnvelopeInviteNotRegisteredRequest($code);
 
         try {
@@ -430,7 +430,7 @@ class ValidationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO',
+                        '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -472,7 +472,7 @@ class ValidationControllerApi
      */
     public function getEnvelopeInviteNotRegisteredAsyncWithHttpInfo($code)
     {
-        $returnType = '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO';
+        $returnType = '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO';
         $request = $this->getEnvelopeInviteNotRegisteredRequest($code);
 
         return $this->client

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * TemplateControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,7 +94,7 @@ class TemplateControllerApi
      * @param  string $uuid Template UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class TemplateControllerApi
      * @param  string $uuid Template UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -338,9 +338,9 @@ class TemplateControllerApi
      * @param  string $uuid Template UUID to clone (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FullTemplateResponseDTO
+     * @return \Docstudio\ClientModel\FullTemplateResponseDTO
      */
     public function callClone($uuid, $mailbox)
     {
@@ -356,13 +356,13 @@ class TemplateControllerApi
      * @param  string $uuid Template UUID to clone (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FullTemplateResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\FullTemplateResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function callCloneWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\FullTemplateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\FullTemplateResponseDTO';
         $request = $this->callCloneRequest($uuid, $mailbox);
 
         try {
@@ -414,7 +414,7 @@ class TemplateControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FullTemplateResponseDTO',
+                        '\Docstudio\ClientModel\FullTemplateResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -458,7 +458,7 @@ class TemplateControllerApi
      */
     public function callCloneAsyncWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\FullTemplateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\FullTemplateResponseDTO';
         $request = $this->callCloneRequest($uuid, $mailbox);
 
         return $this->client
@@ -619,7 +619,7 @@ class TemplateControllerApi
      * @param  string $uuid UUID of template to retrieve (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -636,7 +636,7 @@ class TemplateControllerApi
      * @param  string $uuid UUID of template to retrieve (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -860,12 +860,12 @@ class TemplateControllerApi
      *
      * Create new template
      *
-     * @param  \Swagger\Client\Model\TemplateCreateDTO $body body (required)
+     * @param  \Docstudio\ClientModel\TemplateCreateDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FullTemplateResponseDTO
+     * @return \Docstudio\ClientModel\FullTemplateResponseDTO
      */
     public function create($body, $mailbox)
     {
@@ -878,16 +878,16 @@ class TemplateControllerApi
      *
      * Create new template
      *
-     * @param  \Swagger\Client\Model\TemplateCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\TemplateCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FullTemplateResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\FullTemplateResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\FullTemplateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\FullTemplateResponseDTO';
         $request = $this->createRequest($body, $mailbox);
 
         try {
@@ -939,7 +939,7 @@ class TemplateControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FullTemplateResponseDTO',
+                        '\Docstudio\ClientModel\FullTemplateResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -954,7 +954,7 @@ class TemplateControllerApi
      *
      * Create new template
      *
-     * @param  \Swagger\Client\Model\TemplateCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\TemplateCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -975,7 +975,7 @@ class TemplateControllerApi
      *
      * Create new template
      *
-     * @param  \Swagger\Client\Model\TemplateCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\TemplateCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -983,7 +983,7 @@ class TemplateControllerApi
      */
     public function createAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\FullTemplateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\FullTemplateResponseDTO';
         $request = $this->createRequest($body, $mailbox);
 
         return $this->client
@@ -1026,7 +1026,7 @@ class TemplateControllerApi
     /**
      * Create request for operation 'create'
      *
-     * @param  \Swagger\Client\Model\TemplateCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\TemplateCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -1139,7 +1139,7 @@ class TemplateControllerApi
      * @param  string $uuid UUID of template (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1156,7 +1156,7 @@ class TemplateControllerApi
      * @param  string $uuid UUID of template (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1385,7 +1385,7 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string[]
      */
@@ -1405,7 +1405,7 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string[], HTTP status code, HTTP response headers (array of strings)
      */
@@ -1687,9 +1687,9 @@ class TemplateControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RecentlyUsedTemplateResponseDTO[]
+     * @return \Docstudio\ClientModel\RecentlyUsedTemplateResponseDTO[]
      */
     public function getRecentlyUsedTemplates($mailbox)
     {
@@ -1704,13 +1704,13 @@ class TemplateControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RecentlyUsedTemplateResponseDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\RecentlyUsedTemplateResponseDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getRecentlyUsedTemplatesWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\RecentlyUsedTemplateResponseDTO[]';
+        $returnType = '\Docstudio\ClientModel\RecentlyUsedTemplateResponseDTO[]';
         $request = $this->getRecentlyUsedTemplatesRequest($mailbox);
 
         try {
@@ -1762,7 +1762,7 @@ class TemplateControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RecentlyUsedTemplateResponseDTO[]',
+                        '\Docstudio\ClientModel\RecentlyUsedTemplateResponseDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1804,7 +1804,7 @@ class TemplateControllerApi
      */
     public function getRecentlyUsedTemplatesAsyncWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\RecentlyUsedTemplateResponseDTO[]';
+        $returnType = '\Docstudio\ClientModel\RecentlyUsedTemplateResponseDTO[]';
         $request = $this->getRecentlyUsedTemplatesRequest($mailbox);
 
         return $this->client
@@ -1948,9 +1948,9 @@ class TemplateControllerApi
      * Get up to 4 recommended templates
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RecommendedTemplateResponseDTO[]
+     * @return \Docstudio\ClientModel\RecommendedTemplateResponseDTO[]
      */
     public function getRecommendedTemplates()
     {
@@ -1964,13 +1964,13 @@ class TemplateControllerApi
      * Get up to 4 recommended templates
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RecommendedTemplateResponseDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\RecommendedTemplateResponseDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getRecommendedTemplatesWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\RecommendedTemplateResponseDTO[]';
+        $returnType = '\Docstudio\ClientModel\RecommendedTemplateResponseDTO[]';
         $request = $this->getRecommendedTemplatesRequest();
 
         try {
@@ -2022,7 +2022,7 @@ class TemplateControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RecommendedTemplateResponseDTO[]',
+                        '\Docstudio\ClientModel\RecommendedTemplateResponseDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2062,7 +2062,7 @@ class TemplateControllerApi
      */
     public function getRecommendedTemplatesAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\RecommendedTemplateResponseDTO[]';
+        $returnType = '\Docstudio\ClientModel\RecommendedTemplateResponseDTO[]';
         $request = $this->getRecommendedTemplatesRequest();
 
         return $this->client
@@ -2198,9 +2198,9 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  bool $generate Code has to be re-generated if exists (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SharedCodeDTO
+     * @return \Docstudio\ClientModel\SharedCodeDTO
      */
     public function getShareCode($uuid, $mailbox, $generate = null)
     {
@@ -2217,13 +2217,13 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  bool $generate Code has to be re-generated if exists (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SharedCodeDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\SharedCodeDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getShareCodeWithHttpInfo($uuid, $mailbox, $generate = null)
     {
-        $returnType = '\Swagger\Client\Model\SharedCodeDTO';
+        $returnType = '\Docstudio\ClientModel\SharedCodeDTO';
         $request = $this->getShareCodeRequest($uuid, $mailbox, $generate);
 
         try {
@@ -2275,7 +2275,7 @@ class TemplateControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SharedCodeDTO',
+                        '\Docstudio\ClientModel\SharedCodeDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2321,7 +2321,7 @@ class TemplateControllerApi
      */
     public function getShareCodeAsyncWithHttpInfo($uuid, $mailbox, $generate = null)
     {
-        $returnType = '\Swagger\Client\Model\SharedCodeDTO';
+        $returnType = '\Docstudio\ClientModel\SharedCodeDTO';
         $request = $this->getShareCodeRequest($uuid, $mailbox, $generate);
 
         return $this->client
@@ -2486,9 +2486,9 @@ class TemplateControllerApi
      *
      * @param  string $code Share code of template (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FullTemplateResponseDTO
+     * @return \Docstudio\ClientModel\FullTemplateResponseDTO
      */
     public function getTemplateByShareCode($code)
     {
@@ -2503,13 +2503,13 @@ class TemplateControllerApi
      *
      * @param  string $code Share code of template (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FullTemplateResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\FullTemplateResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTemplateByShareCodeWithHttpInfo($code)
     {
-        $returnType = '\Swagger\Client\Model\FullTemplateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\FullTemplateResponseDTO';
         $request = $this->getTemplateByShareCodeRequest($code);
 
         try {
@@ -2561,7 +2561,7 @@ class TemplateControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FullTemplateResponseDTO',
+                        '\Docstudio\ClientModel\FullTemplateResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2603,7 +2603,7 @@ class TemplateControllerApi
      */
     public function getTemplateByShareCodeAsyncWithHttpInfo($code)
     {
-        $returnType = '\Swagger\Client\Model\FullTemplateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\FullTemplateResponseDTO';
         $request = $this->getTemplateByShareCodeRequest($code);
 
         return $this->client
@@ -2754,9 +2754,9 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $template_version UUID of version (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FullTemplateResponseDTO
+     * @return \Docstudio\ClientModel\FullTemplateResponseDTO
      */
     public function getTemplateByUuid($uuid, $mailbox, $template_version = null)
     {
@@ -2773,13 +2773,13 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $template_version UUID of version (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FullTemplateResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\FullTemplateResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTemplateByUuidWithHttpInfo($uuid, $mailbox, $template_version = null)
     {
-        $returnType = '\Swagger\Client\Model\FullTemplateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\FullTemplateResponseDTO';
         $request = $this->getTemplateByUuidRequest($uuid, $mailbox, $template_version);
 
         try {
@@ -2831,7 +2831,7 @@ class TemplateControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FullTemplateResponseDTO',
+                        '\Docstudio\ClientModel\FullTemplateResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2877,7 +2877,7 @@ class TemplateControllerApi
      */
     public function getTemplateByUuidAsyncWithHttpInfo($uuid, $mailbox, $template_version = null)
     {
-        $returnType = '\Swagger\Client\Model\FullTemplateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\FullTemplateResponseDTO';
         $request = $this->getTemplateByUuidRequest($uuid, $mailbox, $template_version);
 
         return $this->client
@@ -3046,9 +3046,9 @@ class TemplateControllerApi
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      * @param  string $version_uuid UUID of version, only this one will be returned (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTODataMap
+     * @return \Docstudio\ClientModel\PageDTODataMap
      */
     public function getTemplateVersionsByUuid($uuid, $mailbox, $offset = '0', $limit = '25', $version_uuid = null)
     {
@@ -3067,13 +3067,13 @@ class TemplateControllerApi
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      * @param  string $version_uuid UUID of version, only this one will be returned (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTODataMap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTODataMap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTemplateVersionsByUuidWithHttpInfo($uuid, $mailbox, $offset = '0', $limit = '25', $version_uuid = null)
     {
-        $returnType = '\Swagger\Client\Model\PageDTODataMap';
+        $returnType = '\Docstudio\ClientModel\PageDTODataMap';
         $request = $this->getTemplateVersionsByUuidRequest($uuid, $mailbox, $offset, $limit, $version_uuid);
 
         try {
@@ -3125,7 +3125,7 @@ class TemplateControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTODataMap',
+                        '\Docstudio\ClientModel\PageDTODataMap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3175,7 +3175,7 @@ class TemplateControllerApi
      */
     public function getTemplateVersionsByUuidAsyncWithHttpInfo($uuid, $mailbox, $offset = '0', $limit = '25', $version_uuid = null)
     {
-        $returnType = '\Swagger\Client\Model\PageDTODataMap';
+        $returnType = '\Docstudio\ClientModel\PageDTODataMap';
         $request = $this->getTemplateVersionsByUuidRequest($uuid, $mailbox, $offset, $limit, $version_uuid);
 
         return $this->client
@@ -3356,9 +3356,9 @@ class TemplateControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTOSearchTemplateDTO
+     * @return \Docstudio\ClientModel\PageDTOSearchTemplateDTO
      */
     public function searchTemplates($mailbox, $level = 'pub', $keyword = null, $category = null, $extended = 'false', $offset = '0', $limit = '25')
     {
@@ -3379,13 +3379,13 @@ class TemplateControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTOSearchTemplateDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTOSearchTemplateDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchTemplatesWithHttpInfo($mailbox, $level = 'pub', $keyword = null, $category = null, $extended = 'false', $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOSearchTemplateDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOSearchTemplateDTO';
         $request = $this->searchTemplatesRequest($mailbox, $level, $keyword, $category, $extended, $offset, $limit);
 
         try {
@@ -3437,7 +3437,7 @@ class TemplateControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTOSearchTemplateDTO',
+                        '\Docstudio\ClientModel\PageDTOSearchTemplateDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3491,7 +3491,7 @@ class TemplateControllerApi
      */
     public function searchTemplatesAsyncWithHttpInfo($mailbox, $level = 'pub', $keyword = null, $category = null, $extended = 'false', $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOSearchTemplateDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOSearchTemplateDTO';
         $request = $this->searchTemplatesRequest($mailbox, $level, $keyword, $category, $extended, $offset, $limit);
 
         return $this->client
@@ -3664,13 +3664,13 @@ class TemplateControllerApi
      *
      * Update template in DB. Category in template could be null.
      *
-     * @param  \Swagger\Client\Model\TemplateCreateDTO $body body (required)
+     * @param  \Docstudio\ClientModel\TemplateCreateDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Template uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FullTemplateResponseDTO
+     * @return \Docstudio\ClientModel\FullTemplateResponseDTO
      */
     public function update($body, $mailbox, $uuid)
     {
@@ -3683,17 +3683,17 @@ class TemplateControllerApi
      *
      * Update template in DB. Category in template could be null.
      *
-     * @param  \Swagger\Client\Model\TemplateCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\TemplateCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Template uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FullTemplateResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\FullTemplateResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWithHttpInfo($body, $mailbox, $uuid)
     {
-        $returnType = '\Swagger\Client\Model\FullTemplateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\FullTemplateResponseDTO';
         $request = $this->updateRequest($body, $mailbox, $uuid);
 
         try {
@@ -3745,7 +3745,7 @@ class TemplateControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FullTemplateResponseDTO',
+                        '\Docstudio\ClientModel\FullTemplateResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3760,7 +3760,7 @@ class TemplateControllerApi
      *
      * Update template in DB. Category in template could be null.
      *
-     * @param  \Swagger\Client\Model\TemplateCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\TemplateCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Template uuid (required)
      *
@@ -3782,7 +3782,7 @@ class TemplateControllerApi
      *
      * Update template in DB. Category in template could be null.
      *
-     * @param  \Swagger\Client\Model\TemplateCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\TemplateCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Template uuid (required)
      *
@@ -3791,7 +3791,7 @@ class TemplateControllerApi
      */
     public function updateAsyncWithHttpInfo($body, $mailbox, $uuid)
     {
-        $returnType = '\Swagger\Client\Model\FullTemplateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\FullTemplateResponseDTO';
         $request = $this->updateRequest($body, $mailbox, $uuid);
 
         return $this->client
@@ -3834,7 +3834,7 @@ class TemplateControllerApi
     /**
      * Create request for operation 'update'
      *
-     * @param  \Swagger\Client\Model\TemplateCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\TemplateCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Template uuid (required)
      *
@@ -3963,7 +3963,7 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Template UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3981,7 +3981,7 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Template UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4221,7 +4221,7 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Template UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4239,7 +4239,7 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid Template UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4478,9 +4478,9 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $file file (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\UploadedImageDTO
+     * @return \Docstudio\ClientModel\UploadedImageDTO
      */
     public function uploadImage($mailbox, $file = null)
     {
@@ -4496,13 +4496,13 @@ class TemplateControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $file (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\UploadedImageDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\UploadedImageDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadImageWithHttpInfo($mailbox, $file = null)
     {
-        $returnType = '\Swagger\Client\Model\UploadedImageDTO';
+        $returnType = '\Docstudio\ClientModel\UploadedImageDTO';
         $request = $this->uploadImageRequest($mailbox, $file);
 
         try {
@@ -4554,7 +4554,7 @@ class TemplateControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\UploadedImageDTO',
+                        '\Docstudio\ClientModel\UploadedImageDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4598,7 +4598,7 @@ class TemplateControllerApi
      */
     public function uploadImageAsyncWithHttpInfo($mailbox, $file = null)
     {
-        $returnType = '\Swagger\Client\Model\UploadedImageDTO';
+        $returnType = '\Docstudio\ClientModel\UploadedImageDTO';
         $request = $this->uploadImageRequest($mailbox, $file);
 
         return $this->client
@@ -4751,9 +4751,9 @@ class TemplateControllerApi
      * @param  string $template_uuid UUID of template (optional)
      * @param  string $version_uuid Version of template (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TemplateValidateResponseDTO
+     * @return \Docstudio\ClientModel\TemplateValidateResponseDTO
      */
     public function validateTemplate($mailbox, $template_uuid = null, $version_uuid = null)
     {
@@ -4770,13 +4770,13 @@ class TemplateControllerApi
      * @param  string $template_uuid UUID of template (optional)
      * @param  string $version_uuid Version of template (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TemplateValidateResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\TemplateValidateResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function validateTemplateWithHttpInfo($mailbox, $template_uuid = null, $version_uuid = null)
     {
-        $returnType = '\Swagger\Client\Model\TemplateValidateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\TemplateValidateResponseDTO';
         $request = $this->validateTemplateRequest($mailbox, $template_uuid, $version_uuid);
 
         try {
@@ -4828,7 +4828,7 @@ class TemplateControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TemplateValidateResponseDTO',
+                        '\Docstudio\ClientModel\TemplateValidateResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4874,7 +4874,7 @@ class TemplateControllerApi
      */
     public function validateTemplateAsyncWithHttpInfo($mailbox, $template_uuid = null, $version_uuid = null)
     {
-        $returnType = '\Swagger\Client\Model\TemplateValidateResponseDTO';
+        $returnType = '\Docstudio\ClientModel\TemplateValidateResponseDTO';
         $request = $this->validateTemplateRequest($mailbox, $template_uuid, $version_uuid);
 
         return $this->client

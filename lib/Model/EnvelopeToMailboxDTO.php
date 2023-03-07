@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeToMailboxDTO Class Doc Comment
  *
  * @category Class
  * @description Data records
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -78,7 +78,7 @@ class EnvelopeToMailboxDTO implements ModelInterface, ArrayAccess
 'invitation_code' => 'string',
 'chain_uuid' => 'string',
 'chained_by_me' => 'bool',
-'extra_fields' => '\Swagger\Client\Model\EnvelopeExtraFieldDTO[]'    ];
+'extra_fields' => '\Docstudio\ClientModel\EnvelopeExtraFieldDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -870,7 +870,7 @@ self::STATUS_ON_APPROVAL,        ];
     /**
      * Gets extra_fields
      *
-     * @return \Swagger\Client\Model\EnvelopeExtraFieldDTO[]
+     * @return \Docstudio\ClientModel\EnvelopeExtraFieldDTO[]
      */
     public function getExtraFields()
     {
@@ -880,7 +880,7 @@ self::STATUS_ON_APPROVAL,        ];
     /**
      * Sets extra_fields
      *
-     * @param \Swagger\Client\Model\EnvelopeExtraFieldDTO[] $extra_fields Data for extra columns
+     * @param \Docstudio\ClientModel\EnvelopeExtraFieldDTO[] $extra_fields Data for extra columns
      *
      * @return $this
      */

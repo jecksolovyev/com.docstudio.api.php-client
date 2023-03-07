@@ -1,4 +1,4 @@
-# Swagger\Client\EnvelopeControllerApi
+# Docstudio\Client\EnvelopeControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -62,11 +62,11 @@ Accept user's pending invitations
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,11 +115,11 @@ Add envelopes into chain
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -170,17 +170,17 @@ Archive envelopes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\BulkEnvelopeActionDTO(); // \Swagger\Client\Model\BulkEnvelopeActionDTO | 
+$body = new \Docstudio\ClientModel\BulkEnvelopeActionDTO(); // \Docstudio\ClientModel\BulkEnvelopeActionDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $flag = true; // bool | 
 
@@ -196,7 +196,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\BulkEnvelopeActionDTO**](../Model/BulkEnvelopeActionDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\BulkEnvelopeActionDTO**](../Model/BulkEnvelopeActionDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **flag** | **bool**|  |
 
@@ -225,11 +225,11 @@ Cancel envelope approval
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -280,17 +280,17 @@ Cancel envelope delegation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\EnvCancelDelegationDTO(); // \Swagger\Client\Model\EnvCancelDelegationDTO | 
+$body = new \Docstudio\ClientModel\EnvCancelDelegationDTO(); // \Docstudio\ClientModel\EnvCancelDelegationDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -305,7 +305,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvCancelDelegationDTO**](../Model/EnvCancelDelegationDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvCancelDelegationDTO**](../Model/EnvCancelDelegationDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -333,17 +333,17 @@ Cancel envelopes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\EnvCancellationRequestDTO(); // \Swagger\Client\Model\EnvCancellationRequestDTO | 
+$body = new \Docstudio\ClientModel\EnvCancellationRequestDTO(); // \Docstudio\ClientModel\EnvCancellationRequestDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -358,7 +358,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvCancellationRequestDTO**](../Model/EnvCancellationRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvCancellationRequestDTO**](../Model/EnvCancellationRequestDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -377,7 +377,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **check**
-> \Swagger\Client\Model\ValidationResponseDTO check($body, $mailbox)
+> \Docstudio\ClientModel\ValidationResponseDTO check($body, $mailbox)
 
 Check an envelope
 
@@ -386,17 +386,17 @@ Check an envelope
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\EnvDTO(); // \Swagger\Client\Model\EnvDTO | 
+$body = new \Docstudio\ClientModel\EnvDTO(); // \Docstudio\ClientModel\EnvDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -412,12 +412,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvDTO**](../Model/EnvDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvDTO**](../Model/EnvDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\ValidationResponseDTO**](../Model/ValidationResponseDTO.md)
+[**\Docstudio\ClientModel\ValidationResponseDTO**](../Model/ValidationResponseDTO.md)
 
 ### Authorization
 
@@ -440,11 +440,11 @@ Check user has pending invitations
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -478,7 +478,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **cloneAttachment**
-> \Swagger\Client\Model\UploadedAttachmentDTO cloneAttachment($attachment_uuid, $mailbox)
+> \Docstudio\ClientModel\UploadedAttachmentDTO cloneAttachment($attachment_uuid, $mailbox)
 
 Clone an existing attachment
 
@@ -487,11 +487,11 @@ Clone an existing attachment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -518,7 +518,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UploadedAttachmentDTO**](../Model/UploadedAttachmentDTO.md)
+[**\Docstudio\ClientModel\UploadedAttachmentDTO**](../Model/UploadedAttachmentDTO.md)
 
 ### Authorization
 
@@ -541,17 +541,17 @@ Accept/confirm invitations
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\EnvelopeConfirmInviteDTO(); // \Swagger\Client\Model\EnvelopeConfirmInviteDTO | 
+$body = new \Docstudio\ClientModel\EnvelopeConfirmInviteDTO(); // \Docstudio\ClientModel\EnvelopeConfirmInviteDTO | 
 
 try {
     $apiInstance->confirmInvite($body);
@@ -565,7 +565,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvelopeConfirmInviteDTO**](../Model/EnvelopeConfirmInviteDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvelopeConfirmInviteDTO**](../Model/EnvelopeConfirmInviteDTO.md)|  |
 
 ### Return type
 
@@ -583,7 +583,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **continueScenarioStep**
-> \Swagger\Client\Model\SingleUuidDTO[] continueScenarioStep($envelope_uuid, $step_id, $mailbox)
+> \Docstudio\ClientModel\SingleUuidDTO[] continueScenarioStep($envelope_uuid, $step_id, $mailbox)
 
 Continue scenario flow with step
 
@@ -592,11 +592,11 @@ Continue scenario flow with step
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -625,7 +625,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -648,11 +648,11 @@ Convert attachment to PDF
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -693,7 +693,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createAttachment**
-> \Swagger\Client\Model\UploadedAttachmentDTO createAttachment($mailbox, $file, $validate, $type)
+> \Docstudio\ClientModel\UploadedAttachmentDTO createAttachment($mailbox, $file, $validate, $type)
 
 Create/upload new attachment
 
@@ -702,11 +702,11 @@ Create/upload new attachment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -737,7 +737,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UploadedAttachmentDTO**](../Model/UploadedAttachmentDTO.md)
+[**\Docstudio\ClientModel\UploadedAttachmentDTO**](../Model/UploadedAttachmentDTO.md)
 
 ### Authorization
 
@@ -751,7 +751,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createEnvelope**
-> \Swagger\Client\Model\SingleUuidDTO createEnvelope($body, $mailbox)
+> \Docstudio\ClientModel\SingleUuidDTO createEnvelope($body, $mailbox)
 
 Create draft envelope
 
@@ -760,17 +760,17 @@ Create draft envelope
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\EnvPostDTO(); // \Swagger\Client\Model\EnvPostDTO | 
+$body = new \Docstudio\ClientModel\EnvPostDTO(); // \Docstudio\ClientModel\EnvPostDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -786,12 +786,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvPostDTO**](../Model/EnvPostDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvPostDTO**](../Model/EnvPostDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -805,7 +805,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createEnvelopeComment**
-> \Swagger\Client\Model\CommentThreadDTO createEnvelopeComment($body, $mailbox, $envelope_uuid)
+> \Docstudio\ClientModel\CommentThreadDTO createEnvelopeComment($body, $mailbox, $envelope_uuid)
 
 Create envelope comment thread
 
@@ -814,17 +814,17 @@ Create envelope comment thread
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\CommentPostDTO(); // \Swagger\Client\Model\CommentPostDTO | 
+$body = new \Docstudio\ClientModel\CommentPostDTO(); // \Docstudio\ClientModel\CommentPostDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $envelope_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Envelope UUID
 
@@ -841,13 +841,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CommentPostDTO**](../Model/CommentPostDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\CommentPostDTO**](../Model/CommentPostDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **envelope_uuid** | [**string**](../Model/.md)| Envelope UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\CommentThreadDTO**](../Model/CommentThreadDTO.md)
+[**\Docstudio\ClientModel\CommentThreadDTO**](../Model/CommentThreadDTO.md)
 
 ### Authorization
 
@@ -870,17 +870,17 @@ Delegate envelopes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\EnvDelegationDTO(); // \Swagger\Client\Model\EnvDelegationDTO | 
+$body = new \Docstudio\ClientModel\EnvDelegationDTO(); // \Docstudio\ClientModel\EnvDelegationDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -895,7 +895,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvDelegationDTO**](../Model/EnvDelegationDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvDelegationDTO**](../Model/EnvDelegationDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -923,17 +923,17 @@ Delete draft envelopes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\BulkEnvelopeActionDTO(); // \Swagger\Client\Model\BulkEnvelopeActionDTO | 
+$body = new \Docstudio\ClientModel\BulkEnvelopeActionDTO(); // \Docstudio\ClientModel\BulkEnvelopeActionDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -948,7 +948,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\BulkEnvelopeActionDTO**](../Model/BulkEnvelopeActionDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\BulkEnvelopeActionDTO**](../Model/BulkEnvelopeActionDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -967,7 +967,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteEnvelopeComment**
-> \Swagger\Client\Model\CommentThreadDTO deleteEnvelopeComment($envelope_uuid, $thread_uuid, $mailbox, $message_id)
+> \Docstudio\ClientModel\CommentThreadDTO deleteEnvelopeComment($envelope_uuid, $thread_uuid, $mailbox, $message_id)
 
 Delete envelope comment in thread or the whole thread
 
@@ -976,11 +976,11 @@ Delete envelope comment in thread or the whole thread
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1011,7 +1011,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CommentThreadDTO**](../Model/CommentThreadDTO.md)
+[**\Docstudio\ClientModel\CommentThreadDTO**](../Model/CommentThreadDTO.md)
 
 ### Authorization
 
@@ -1034,11 +1034,11 @@ Download envelope attachment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1090,17 +1090,17 @@ Approve or Reject envelope
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ApprovalStatusDTO(); // \Swagger\Client\Model\ApprovalStatusDTO | 
+$body = new \Docstudio\ClientModel\ApprovalStatusDTO(); // \Docstudio\ClientModel\ApprovalStatusDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $envelope_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Envelope to approve
 $flow_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Flow to approve
@@ -1117,7 +1117,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ApprovalStatusDTO**](../Model/ApprovalStatusDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\ApprovalStatusDTO**](../Model/ApprovalStatusDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **envelope_uuid** | [**string**](../Model/.md)| Envelope to approve |
  **flow_uuid** | [**string**](../Model/.md)| Flow to approve |
@@ -1138,7 +1138,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **envelopeApprovalHistory**
-> \Swagger\Client\Model\EnvelopeApprovalHistoryDTO[] envelopeApprovalHistory($envelope_uuid, $mailbox)
+> \Docstudio\ClientModel\EnvelopeApprovalHistoryDTO[] envelopeApprovalHistory($envelope_uuid, $mailbox)
 
 Get approval history
 
@@ -1147,11 +1147,11 @@ Get approval history
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1178,7 +1178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\EnvelopeApprovalHistoryDTO[]**](../Model/EnvelopeApprovalHistoryDTO.md)
+[**\Docstudio\ClientModel\EnvelopeApprovalHistoryDTO[]**](../Model/EnvelopeApprovalHistoryDTO.md)
 
 ### Authorization
 
@@ -1201,17 +1201,17 @@ Fill envelope
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\EnvPostDTO(); // \Swagger\Client\Model\EnvPostDTO | 
+$body = new \Docstudio\ClientModel\EnvPostDTO(); // \Docstudio\ClientModel\EnvPostDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -1226,7 +1226,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvPostDTO**](../Model/EnvPostDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvPostDTO**](../Model/EnvPostDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -1245,7 +1245,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getActiveRoles**
-> \Swagger\Client\Model\SingleUuidDTO[] getActiveRoles($uuid, $mailbox)
+> \Docstudio\ClientModel\SingleUuidDTO[] getActiveRoles($uuid, $mailbox)
 
 Get active roles by Envelope UUID
 
@@ -1254,11 +1254,11 @@ Get active roles by Envelope UUID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1285,7 +1285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -1299,7 +1299,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getApprovalFlow**
-> \Swagger\Client\Model\EnvelopeApprovalHistoryDTO getApprovalFlow($envelope_uuid, $flow_uuid, $mailbox)
+> \Docstudio\ClientModel\EnvelopeApprovalHistoryDTO getApprovalFlow($envelope_uuid, $flow_uuid, $mailbox)
 
 Get envelope approval
 
@@ -1308,11 +1308,11 @@ Get envelope approval
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1341,7 +1341,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\EnvelopeApprovalHistoryDTO**](../Model/EnvelopeApprovalHistoryDTO.md)
+[**\Docstudio\ClientModel\EnvelopeApprovalHistoryDTO**](../Model/EnvelopeApprovalHistoryDTO.md)
 
 ### Authorization
 
@@ -1355,7 +1355,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getChainEnvelopes**
-> \Swagger\Client\Model\ChainEnvelopeDTO[] getChainEnvelopes($chain_uuid, $mailbox)
+> \Docstudio\ClientModel\ChainEnvelopeDTO[] getChainEnvelopes($chain_uuid, $mailbox)
 
 Get chain envelopes list
 
@@ -1364,11 +1364,11 @@ Get chain envelopes list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1395,7 +1395,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ChainEnvelopeDTO[]**](../Model/ChainEnvelopeDTO.md)
+[**\Docstudio\ClientModel\ChainEnvelopeDTO[]**](../Model/ChainEnvelopeDTO.md)
 
 ### Authorization
 
@@ -1418,11 +1418,11 @@ Get document PDF for printing
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1465,7 +1465,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDocumentsForSign**
-> \Swagger\Client\Model\DocumentForSigningDTO[] getDocumentsForSign($body, $mailbox, $envelope_uuid)
+> \Docstudio\ClientModel\DocumentForSigningDTO[] getDocumentsForSign($body, $mailbox, $envelope_uuid)
 
 PDFs and XMLs for signing
 
@@ -1474,17 +1474,17 @@ PDFs and XMLs for signing
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\DocumentsForSignRequestDTO(); // \Swagger\Client\Model\DocumentsForSignRequestDTO | 
+$body = new \Docstudio\ClientModel\DocumentsForSignRequestDTO(); // \Docstudio\ClientModel\DocumentsForSignRequestDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $envelope_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Envelope UUID
 
@@ -1501,13 +1501,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\DocumentsForSignRequestDTO**](../Model/DocumentsForSignRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\DocumentsForSignRequestDTO**](../Model/DocumentsForSignRequestDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **envelope_uuid** | [**string**](../Model/.md)| Envelope UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\DocumentForSigningDTO[]**](../Model/DocumentForSigningDTO.md)
+[**\Docstudio\ClientModel\DocumentForSigningDTO[]**](../Model/DocumentForSigningDTO.md)
 
 ### Authorization
 
@@ -1521,7 +1521,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEnvelopeByUuid**
-> \Swagger\Client\Model\EnvelopeWithTemplateDTO getEnvelopeByUuid($uuid, $mailbox)
+> \Docstudio\ClientModel\EnvelopeWithTemplateDTO getEnvelopeByUuid($uuid, $mailbox)
 
 Retrieve envelope by UUID
 
@@ -1530,11 +1530,11 @@ Retrieve envelope by UUID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1561,7 +1561,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\EnvelopeWithTemplateDTO**](../Model/EnvelopeWithTemplateDTO.md)
+[**\Docstudio\ClientModel\EnvelopeWithTemplateDTO**](../Model/EnvelopeWithTemplateDTO.md)
 
 ### Authorization
 
@@ -1575,7 +1575,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEnvelopeComments**
-> \Swagger\Client\Model\DocumentCommentsDTO[] getEnvelopeComments($envelope_uuid, $mailbox)
+> \Docstudio\ClientModel\DocumentCommentsDTO[] getEnvelopeComments($envelope_uuid, $mailbox)
 
 Get envelope comments for each document
 
@@ -1584,11 +1584,11 @@ Get envelope comments for each document
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1615,7 +1615,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DocumentCommentsDTO[]**](../Model/DocumentCommentsDTO.md)
+[**\Docstudio\ClientModel\DocumentCommentsDTO[]**](../Model/DocumentCommentsDTO.md)
 
 ### Authorization
 
@@ -1629,7 +1629,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEnvelopeInviteAuthorized**
-> \Swagger\Client\Model\InvitedEnvelopeInfoDTO getEnvelopeInviteAuthorized($code)
+> \Docstudio\ClientModel\InvitedEnvelopeInfoDTO getEnvelopeInviteAuthorized($code)
 
 Get information about envelope by the invitation code (by already registered user)
 
@@ -1638,11 +1638,11 @@ Get information about envelope by the invitation code (by already registered use
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1667,7 +1667,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InvitedEnvelopeInfoDTO**](../Model/InvitedEnvelopeInfoDTO.md)
+[**\Docstudio\ClientModel\InvitedEnvelopeInfoDTO**](../Model/InvitedEnvelopeInfoDTO.md)
 
 ### Authorization
 
@@ -1681,7 +1681,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getEnvelopeInviteUnauthorized**
-> \Swagger\Client\Model\InvitedEnvelopeInfoDTO getEnvelopeInviteUnauthorized($code)
+> \Docstudio\ClientModel\InvitedEnvelopeInfoDTO getEnvelopeInviteUnauthorized($code)
 
 Get information about envelope by the invitation code (by unauthenticated user)
 
@@ -1690,7 +1690,7 @@ Get information about envelope by the invitation code (by unauthenticated user)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1714,7 +1714,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InvitedEnvelopeInfoDTO**](../Model/InvitedEnvelopeInfoDTO.md)
+[**\Docstudio\ClientModel\InvitedEnvelopeInfoDTO**](../Model/InvitedEnvelopeInfoDTO.md)
 
 ### Authorization
 
@@ -1737,11 +1737,11 @@ Get shared zip archive
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1789,11 +1789,11 @@ Get envelope or document zip archive
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1838,7 +1838,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserPendingInvitations**
-> \Swagger\Client\Model\PageDTOEnvelopeToMailboxDTO getUserPendingInvitations($offset, $limit)
+> \Docstudio\ClientModel\PageDTOEnvelopeToMailboxDTO getUserPendingInvitations($offset, $limit)
 
 Get user's pending invitations
 
@@ -1847,11 +1847,11 @@ Get user's pending invitations
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1878,7 +1878,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PageDTOEnvelopeToMailboxDTO**](../Model/PageDTOEnvelopeToMailboxDTO.md)
+[**\Docstudio\ClientModel\PageDTOEnvelopeToMailboxDTO**](../Model/PageDTOEnvelopeToMailboxDTO.md)
 
 ### Authorization
 
@@ -1892,7 +1892,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **mergeEnvelopesIntoChain**
-> \Swagger\Client\Model\SingleUuidDTO mergeEnvelopesIntoChain($body, $mailbox)
+> \Docstudio\ClientModel\SingleUuidDTO mergeEnvelopesIntoChain($body, $mailbox)
 
 Merge envelopes into chain
 
@@ -1901,11 +1901,11 @@ Merge envelopes into chain
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1932,7 +1932,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -1946,7 +1946,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **quickSendExternalDocuments**
-> \Swagger\Client\Model\SingleUuidDTO quickSendExternalDocuments($files, $data, $mailbox)
+> \Docstudio\ClientModel\SingleUuidDTO quickSendExternalDocuments($files, $data, $mailbox)
 
 Quick send envelope with external documents only
 
@@ -1955,18 +1955,18 @@ Quick send envelope with external documents only
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $files = array("files_example"); // string[] | 
-$data = new \Swagger\Client\Model\QuickSendDTO(); // \Swagger\Client\Model\QuickSendDTO | 
+$data = new \Docstudio\ClientModel\QuickSendDTO(); // \Docstudio\ClientModel\QuickSendDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -1983,12 +1983,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**string[]**](../Model/string.md)|  |
- **data** | [**\Swagger\Client\Model\QuickSendDTO**](../Model/.md)|  |
+ **data** | [**\Docstudio\ClientModel\QuickSendDTO**](../Model/.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -2011,11 +2011,11 @@ Remove envelope from chain
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2064,17 +2064,17 @@ Resend notifications for active roles
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ReportEnvelopeRequestDTO(); // \Swagger\Client\Model\ReportEnvelopeRequestDTO | 
+$body = new \Docstudio\ClientModel\ReportEnvelopeRequestDTO(); // \Docstudio\ClientModel\ReportEnvelopeRequestDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -2089,7 +2089,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ReportEnvelopeRequestDTO**](../Model/ReportEnvelopeRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\ReportEnvelopeRequestDTO**](../Model/ReportEnvelopeRequestDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -2117,17 +2117,17 @@ Set Resolved Flag for comment thread
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ResolveCommentThreadDTO(); // \Swagger\Client\Model\ResolveCommentThreadDTO | 
+$body = new \Docstudio\ClientModel\ResolveCommentThreadDTO(); // \Docstudio\ClientModel\ResolveCommentThreadDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $envelope_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Envelope UUID
 
@@ -2143,7 +2143,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ResolveCommentThreadDTO**](../Model/ResolveCommentThreadDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\ResolveCommentThreadDTO**](../Model/ResolveCommentThreadDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **envelope_uuid** | [**string**](../Model/.md)| Envelope UUID |
 
@@ -2163,7 +2163,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **send**
-> \Swagger\Client\Model\SingleUuidDTO send($body, $mailbox)
+> \Docstudio\ClientModel\SingleUuidDTO send($body, $mailbox)
 
 Send envelope
 
@@ -2172,17 +2172,17 @@ Send envelope
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\EnvPostDTO(); // \Swagger\Client\Model\EnvPostDTO | 
+$body = new \Docstudio\ClientModel\EnvPostDTO(); // \Docstudio\ClientModel\EnvPostDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -2198,12 +2198,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvPostDTO**](../Model/EnvPostDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvPostDTO**](../Model/EnvPostDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -2217,7 +2217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **sendByTemplateCode**
-> \Swagger\Client\Model\SingleUuidDTO sendByTemplateCode($body)
+> \Docstudio\ClientModel\SingleUuidDTO sendByTemplateCode($body)
 
 Send envelope by template code
 
@@ -2226,12 +2226,12 @@ Send envelope by template code
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\SendEnvByCodeDTO(); // \Swagger\Client\Model\SendEnvByCodeDTO | 
+$body = new \Docstudio\ClientModel\SendEnvByCodeDTO(); // \Docstudio\ClientModel\SendEnvByCodeDTO | 
 
 try {
     $result = $apiInstance->sendByTemplateCode($body);
@@ -2246,11 +2246,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\SendEnvByCodeDTO**](../Model/SendEnvByCodeDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\SendEnvByCodeDTO**](../Model/SendEnvByCodeDTO.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -2273,17 +2273,17 @@ Send envelope for approval
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\EnvelopeApprovalRequestDTO(); // \Swagger\Client\Model\EnvelopeApprovalRequestDTO | 
+$body = new \Docstudio\ClientModel\EnvelopeApprovalRequestDTO(); // \Docstudio\ClientModel\EnvelopeApprovalRequestDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -2298,7 +2298,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvelopeApprovalRequestDTO**](../Model/EnvelopeApprovalRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvelopeApprovalRequestDTO**](../Model/EnvelopeApprovalRequestDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -2326,17 +2326,17 @@ Share envelopes by email
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\EnvelopeSharedArchiveRequestDTO(); // \Swagger\Client\Model\EnvelopeSharedArchiveRequestDTO | 
+$body = new \Docstudio\ClientModel\EnvelopeSharedArchiveRequestDTO(); // \Docstudio\ClientModel\EnvelopeSharedArchiveRequestDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -2351,7 +2351,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvelopeSharedArchiveRequestDTO**](../Model/EnvelopeSharedArchiveRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvelopeSharedArchiveRequestDTO**](../Model/EnvelopeSharedArchiveRequestDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -2379,17 +2379,17 @@ Sign envelope documents
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \Swagger\Client\Model\EnvelopeDocumentSignaturesDTO()); // \Swagger\Client\Model\EnvelopeDocumentSignaturesDTO[] | 
+$body = array(new \Docstudio\ClientModel\EnvelopeDocumentSignaturesDTO()); // \Docstudio\ClientModel\EnvelopeDocumentSignaturesDTO[] | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $envelope_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Envelope to update
 
@@ -2405,7 +2405,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvelopeDocumentSignaturesDTO[]**](../Model/EnvelopeDocumentSignaturesDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvelopeDocumentSignaturesDTO[]**](../Model/EnvelopeDocumentSignaturesDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **envelope_uuid** | [**string**](../Model/.md)| Envelope to update |
 
@@ -2434,17 +2434,17 @@ Update draft envelope
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\EnvPostDTO(); // \Swagger\Client\Model\EnvPostDTO | 
+$body = new \Docstudio\ClientModel\EnvPostDTO(); // \Docstudio\ClientModel\EnvPostDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -2459,7 +2459,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\EnvPostDTO**](../Model/EnvPostDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\EnvPostDTO**](../Model/EnvPostDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -2478,7 +2478,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateEnvelopeComment**
-> \Swagger\Client\Model\CommentThreadDTO updateEnvelopeComment($body, $mailbox, $envelope_uuid)
+> \Docstudio\ClientModel\CommentThreadDTO updateEnvelopeComment($body, $mailbox, $envelope_uuid)
 
 Add/Update envelope comment in thread
 
@@ -2487,17 +2487,17 @@ Add/Update envelope comment in thread
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\CommentPutDTO(); // \Swagger\Client\Model\CommentPutDTO | 
+$body = new \Docstudio\ClientModel\CommentPutDTO(); // \Docstudio\ClientModel\CommentPutDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $envelope_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Envelope UUID
 
@@ -2514,13 +2514,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CommentPutDTO**](../Model/CommentPutDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\CommentPutDTO**](../Model/CommentPutDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **envelope_uuid** | [**string**](../Model/.md)| Envelope UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\CommentThreadDTO**](../Model/CommentThreadDTO.md)
+[**\Docstudio\ClientModel\CommentThreadDTO**](../Model/CommentThreadDTO.md)
 
 ### Authorization
 
@@ -2534,7 +2534,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateEnvelopeCommentAccess**
-> \Swagger\Client\Model\CommentThreadDTO updateEnvelopeCommentAccess($body, $mailbox, $envelope_uuid)
+> \Docstudio\ClientModel\CommentThreadDTO updateEnvelopeCommentAccess($body, $mailbox, $envelope_uuid)
 
 Update envelope comment thread access level
 
@@ -2543,17 +2543,17 @@ Update envelope comment thread access level
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\EnvelopeControllerApi(
+$apiInstance = new Docstudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\CommentAccessDTO(); // \Swagger\Client\Model\CommentAccessDTO | 
+$body = new \Docstudio\ClientModel\CommentAccessDTO(); // \Docstudio\ClientModel\CommentAccessDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $envelope_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Envelope UUID
 
@@ -2570,13 +2570,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CommentAccessDTO**](../Model/CommentAccessDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\CommentAccessDTO**](../Model/CommentAccessDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **envelope_uuid** | [**string**](../Model/.md)| Envelope UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\CommentThreadDTO**](../Model/CommentThreadDTO.md)
+[**\Docstudio\ClientModel\CommentThreadDTO**](../Model/CommentThreadDTO.md)
 
 ### Authorization
 

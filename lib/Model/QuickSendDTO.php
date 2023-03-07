@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * QuickSendDTO Class Doc Comment
  *
  * @category Class
  * @description Send QuickSendDTO in BLOB format
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class QuickSendDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'subject' => 'string',
 'message' => 'string',
-'recipients' => '\Swagger\Client\Model\QuickSendRecipientDTO[]'    ];
+'recipients' => '\Docstudio\ClientModel\QuickSendRecipientDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -266,7 +266,7 @@ class QuickSendDTO implements ModelInterface, ArrayAccess
     /**
      * Gets recipients
      *
-     * @return \Swagger\Client\Model\QuickSendRecipientDTO[]
+     * @return \Docstudio\ClientModel\QuickSendRecipientDTO[]
      */
     public function getRecipients()
     {
@@ -276,7 +276,7 @@ class QuickSendDTO implements ModelInterface, ArrayAccess
     /**
      * Sets recipients
      *
-     * @param \Swagger\Client\Model\QuickSendRecipientDTO[] $recipients recipients
+     * @param \Docstudio\ClientModel\QuickSendRecipientDTO[] $recipients recipients
      *
      * @return $this
      */

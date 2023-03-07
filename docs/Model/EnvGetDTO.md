@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **chained_by_me** | **bool** | Envelope chained by requested user | [optional] 
 **approval_flow_uuid** | **string** | Approval flow UUID | [optional] 
 **status** | **string** | Calculated status for mailbox | [optional] 
-**sender** | [**\Swagger\Client\Model\EnvelopeSenderDTO**](EnvelopeSenderDTO.md) |  | [optional] 
+**sender** | [**\Docstudio\ClientModel\EnvelopeSenderDTO**](EnvelopeSenderDTO.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

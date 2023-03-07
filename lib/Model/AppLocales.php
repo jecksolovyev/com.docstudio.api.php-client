@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * AppLocales Class Doc Comment
  *
  * @category Class
  * @description Supported locales
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class AppLocales implements ModelInterface, ArrayAccess
         'default_as_language' => 'bool',
 'default_country' => 'string',
 'timezone' => 'string',
-'supported' => '\Swagger\Client\Model\LocaleItemDTO[]',
+'supported' => '\Docstudio\ClientModel\LocaleItemDTO[]',
 'default_locale' => 'string'    ];
 
     /**
@@ -296,7 +296,7 @@ class AppLocales implements ModelInterface, ArrayAccess
     /**
      * Gets supported
      *
-     * @return \Swagger\Client\Model\LocaleItemDTO[]
+     * @return \Docstudio\ClientModel\LocaleItemDTO[]
      */
     public function getSupported()
     {
@@ -306,7 +306,7 @@ class AppLocales implements ModelInterface, ArrayAccess
     /**
      * Sets supported
      *
-     * @param \Swagger\Client\Model\LocaleItemDTO[] $supported supported
+     * @param \Docstudio\ClientModel\LocaleItemDTO[] $supported supported
      *
      * @return $this
      */

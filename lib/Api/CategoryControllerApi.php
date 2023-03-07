@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * CategoryControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,12 +91,12 @@ class CategoryControllerApi
      *
      * Save a category in DB
      *
-     * @param  \Swagger\Client\Model\CategoryDTO $body body (required)
+     * @param  \Docstudio\ClientModel\CategoryDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CategoryDTO
+     * @return \Docstudio\ClientModel\CategoryDTO
      */
     public function createCategory($body, $mailbox)
     {
@@ -109,16 +109,16 @@ class CategoryControllerApi
      *
      * Save a category in DB
      *
-     * @param  \Swagger\Client\Model\CategoryDTO $body (required)
+     * @param  \Docstudio\ClientModel\CategoryDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CategoryDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\CategoryDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCategoryWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\CategoryDTO';
+        $returnType = '\Docstudio\ClientModel\CategoryDTO';
         $request = $this->createCategoryRequest($body, $mailbox);
 
         try {
@@ -170,7 +170,7 @@ class CategoryControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CategoryDTO',
+                        '\Docstudio\ClientModel\CategoryDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class CategoryControllerApi
      *
      * Save a category in DB
      *
-     * @param  \Swagger\Client\Model\CategoryDTO $body (required)
+     * @param  \Docstudio\ClientModel\CategoryDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class CategoryControllerApi
      *
      * Save a category in DB
      *
-     * @param  \Swagger\Client\Model\CategoryDTO $body (required)
+     * @param  \Docstudio\ClientModel\CategoryDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class CategoryControllerApi
      */
     public function createCategoryAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\CategoryDTO';
+        $returnType = '\Docstudio\ClientModel\CategoryDTO';
         $request = $this->createCategoryRequest($body, $mailbox);
 
         return $this->client
@@ -257,7 +257,7 @@ class CategoryControllerApi
     /**
      * Create request for operation 'createCategory'
      *
-     * @param  \Swagger\Client\Model\CategoryDTO $body (required)
+     * @param  \Docstudio\ClientModel\CategoryDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -371,7 +371,7 @@ class CategoryControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $move_to Optional id of category to move all subordinated (if any) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -389,7 +389,7 @@ class CategoryControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $move_to Optional id of category to move all subordinated (if any) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -623,9 +623,9 @@ class CategoryControllerApi
      * @param  string $access Type of level to retrieve categories by (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CategoryDTO[]
+     * @return \Docstudio\ClientModel\CategoryDTO[]
      */
     public function getAllByType($access, $mailbox)
     {
@@ -641,13 +641,13 @@ class CategoryControllerApi
      * @param  string $access Type of level to retrieve categories by (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CategoryDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\CategoryDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllByTypeWithHttpInfo($access, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\CategoryDTO[]';
+        $returnType = '\Docstudio\ClientModel\CategoryDTO[]';
         $request = $this->getAllByTypeRequest($access, $mailbox);
 
         try {
@@ -699,7 +699,7 @@ class CategoryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CategoryDTO[]',
+                        '\Docstudio\ClientModel\CategoryDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -743,7 +743,7 @@ class CategoryControllerApi
      */
     public function getAllByTypeAsyncWithHttpInfo($access, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\CategoryDTO[]';
+        $returnType = '\Docstudio\ClientModel\CategoryDTO[]';
         $request = $this->getAllByTypeRequest($access, $mailbox);
 
         return $this->client
@@ -901,13 +901,13 @@ class CategoryControllerApi
      *
      * Update the category in DB
      *
-     * @param  \Swagger\Client\Model\CategoryDTO $body body (required)
+     * @param  \Docstudio\ClientModel\CategoryDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $id Category Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CategoryDTO
+     * @return \Docstudio\ClientModel\CategoryDTO
      */
     public function updateCategory($body, $mailbox, $id)
     {
@@ -920,17 +920,17 @@ class CategoryControllerApi
      *
      * Update the category in DB
      *
-     * @param  \Swagger\Client\Model\CategoryDTO $body (required)
+     * @param  \Docstudio\ClientModel\CategoryDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $id Category Id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CategoryDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\CategoryDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCategoryWithHttpInfo($body, $mailbox, $id)
     {
-        $returnType = '\Swagger\Client\Model\CategoryDTO';
+        $returnType = '\Docstudio\ClientModel\CategoryDTO';
         $request = $this->updateCategoryRequest($body, $mailbox, $id);
 
         try {
@@ -982,7 +982,7 @@ class CategoryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CategoryDTO',
+                        '\Docstudio\ClientModel\CategoryDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -997,7 +997,7 @@ class CategoryControllerApi
      *
      * Update the category in DB
      *
-     * @param  \Swagger\Client\Model\CategoryDTO $body (required)
+     * @param  \Docstudio\ClientModel\CategoryDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $id Category Id (required)
      *
@@ -1019,7 +1019,7 @@ class CategoryControllerApi
      *
      * Update the category in DB
      *
-     * @param  \Swagger\Client\Model\CategoryDTO $body (required)
+     * @param  \Docstudio\ClientModel\CategoryDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $id Category Id (required)
      *
@@ -1028,7 +1028,7 @@ class CategoryControllerApi
      */
     public function updateCategoryAsyncWithHttpInfo($body, $mailbox, $id)
     {
-        $returnType = '\Swagger\Client\Model\CategoryDTO';
+        $returnType = '\Docstudio\ClientModel\CategoryDTO';
         $request = $this->updateCategoryRequest($body, $mailbox, $id);
 
         return $this->client
@@ -1071,7 +1071,7 @@ class CategoryControllerApi
     /**
      * Create request for operation 'updateCategory'
      *
-     * @param  \Swagger\Client\Model\CategoryDTO $body (required)
+     * @param  \Docstudio\ClientModel\CategoryDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $id Category Id (required)
      *

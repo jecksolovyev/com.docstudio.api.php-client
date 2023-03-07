@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeDocumentSignaturesDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class EnvelopeDocumentSignaturesDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'document_id' => 'string',
 'signature_name' => 'string',
-'signatures' => '\Swagger\Client\Model\EnvelopeDocumentSignatureDTO[]'    ];
+'signatures' => '\Docstudio\ClientModel\EnvelopeDocumentSignatureDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -268,7 +268,7 @@ class EnvelopeDocumentSignaturesDTO implements ModelInterface, ArrayAccess
     /**
      * Gets signatures
      *
-     * @return \Swagger\Client\Model\EnvelopeDocumentSignatureDTO[]
+     * @return \Docstudio\ClientModel\EnvelopeDocumentSignatureDTO[]
      */
     public function getSignatures()
     {
@@ -278,7 +278,7 @@ class EnvelopeDocumentSignaturesDTO implements ModelInterface, ArrayAccess
     /**
      * Sets signatures
      *
-     * @param \Swagger\Client\Model\EnvelopeDocumentSignatureDTO[] $signatures Document signatures
+     * @param \Docstudio\ClientModel\EnvelopeDocumentSignatureDTO[] $signatures Document signatures
      *
      * @return $this
      */

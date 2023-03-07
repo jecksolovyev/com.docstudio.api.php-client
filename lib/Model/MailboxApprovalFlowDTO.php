@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * MailboxApprovalFlowDTO Class Doc Comment
  *
  * @category Class
  * @description Flow to create
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class MailboxApprovalFlowDTO implements ModelInterface, ArrayAccess
 'shared_for_mailboxes' => 'string[]',
 'name' => 'string',
 'flow_type' => 'string',
-'approvers' => '\Swagger\Client\Model\EnvelopeApproverDTO[]'    ];
+'approvers' => '\Docstudio\ClientModel\EnvelopeApproverDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -359,7 +359,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Gets approvers
      *
-     * @return \Swagger\Client\Model\EnvelopeApproverDTO[]
+     * @return \Docstudio\ClientModel\EnvelopeApproverDTO[]
      */
     public function getApprovers()
     {
@@ -369,7 +369,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Sets approvers
      *
-     * @param \Swagger\Client\Model\EnvelopeApproverDTO[] $approvers approvers
+     * @param \Docstudio\ClientModel\EnvelopeApproverDTO[] $approvers approvers
      *
      * @return $this
      */

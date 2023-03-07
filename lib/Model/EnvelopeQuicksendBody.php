@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeQuicksendBody Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class EnvelopeQuicksendBody implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'files' => 'string[]',
-'data' => '\Swagger\Client\Model\QuickSendDTO'    ];
+'data' => '\Docstudio\ClientModel\QuickSendDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -235,7 +235,7 @@ class EnvelopeQuicksendBody implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Swagger\Client\Model\QuickSendDTO
+     * @return \Docstudio\ClientModel\QuickSendDTO
      */
     public function getData()
     {
@@ -245,7 +245,7 @@ class EnvelopeQuicksendBody implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\QuickSendDTO $data data
+     * @param \Docstudio\ClientModel\QuickSendDTO $data data
      *
      * @return $this
      */

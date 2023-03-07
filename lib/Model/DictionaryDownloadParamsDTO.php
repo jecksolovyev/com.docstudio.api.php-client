@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * DictionaryDownloadParamsDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class DictionaryDownloadParamsDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'format' => 'string',
-'filters' => '\Swagger\Client\Model\DictionaryFiltersRequestDTO'    ];
+'filters' => '\Docstudio\ClientModel\DictionaryFiltersRequestDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -267,7 +267,7 @@ self::FORMAT_XLSX,        ];
     /**
      * Gets filters
      *
-     * @return \Swagger\Client\Model\DictionaryFiltersRequestDTO
+     * @return \Docstudio\ClientModel\DictionaryFiltersRequestDTO
      */
     public function getFilters()
     {
@@ -277,7 +277,7 @@ self::FORMAT_XLSX,        ];
     /**
      * Sets filters
      *
-     * @param \Swagger\Client\Model\DictionaryFiltersRequestDTO $filters filters
+     * @param \Docstudio\ClientModel\DictionaryFiltersRequestDTO $filters filters
      *
      * @return $this
      */

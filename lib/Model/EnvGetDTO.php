@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvGetDTO Class Doc Comment
  *
  * @category Class
  * @description Envelope
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -67,7 +67,7 @@ class EnvGetDTO implements ModelInterface, ArrayAccess
 'chained_by_me' => 'bool',
 'approval_flow_uuid' => 'string',
 'status' => 'string',
-'sender' => '\Swagger\Client\Model\EnvelopeSenderDTO'    ];
+'sender' => '\Docstudio\ClientModel\EnvelopeSenderDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -540,7 +540,7 @@ self::STATUS_ON_APPROVAL,        ];
     /**
      * Gets sender
      *
-     * @return \Swagger\Client\Model\EnvelopeSenderDTO
+     * @return \Docstudio\ClientModel\EnvelopeSenderDTO
      */
     public function getSender()
     {
@@ -550,7 +550,7 @@ self::STATUS_ON_APPROVAL,        ];
     /**
      * Sets sender
      *
-     * @param \Swagger\Client\Model\EnvelopeSenderDTO $sender sender
+     * @param \Docstudio\ClientModel\EnvelopeSenderDTO $sender sender
      *
      * @return $this
      */

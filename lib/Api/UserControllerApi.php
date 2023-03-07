@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * UserControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class UserControllerApi
      *
      * @param  string $invite_code Invite code (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class UserControllerApi
      *
      * @param  string $invite_code Invite code (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -320,9 +320,9 @@ class UserControllerApi
      *
      * Update user's password
      *
-     * @param  \Swagger\Client\Model\UpdatePasswordDTO $body body (required)
+     * @param  \Docstudio\ClientModel\UpdatePasswordDTO $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -336,9 +336,9 @@ class UserControllerApi
      *
      * Update user's password
      *
-     * @param  \Swagger\Client\Model\UpdatePasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\UpdatePasswordDTO $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -389,7 +389,7 @@ class UserControllerApi
      *
      * Update user's password
      *
-     * @param  \Swagger\Client\Model\UpdatePasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\UpdatePasswordDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -409,7 +409,7 @@ class UserControllerApi
      *
      * Update user's password
      *
-     * @param  \Swagger\Client\Model\UpdatePasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\UpdatePasswordDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -445,7 +445,7 @@ class UserControllerApi
     /**
      * Create request for operation 'changePassword'
      *
-     * @param  \Swagger\Client\Model\UpdatePasswordDTO $body (required)
+     * @param  \Docstudio\ClientModel\UpdatePasswordDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -546,7 +546,7 @@ class UserControllerApi
      *
      * @param  string $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -562,7 +562,7 @@ class UserControllerApi
      *
      * @param  string $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -762,11 +762,11 @@ class UserControllerApi
      *
      * Create invitation to join account or mailbox with defined permissions.
      *
-     * @param  \Swagger\Client\Model\InvitationPostDTO $body body (required)
+     * @param  \Docstudio\ClientModel\InvitationPostDTO $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SingleUuidDTO
+     * @return \Docstudio\ClientModel\SingleUuidDTO
      */
     public function createInvitation($body)
     {
@@ -779,15 +779,15 @@ class UserControllerApi
      *
      * Create invitation to join account or mailbox with defined permissions.
      *
-     * @param  \Swagger\Client\Model\InvitationPostDTO $body (required)
+     * @param  \Docstudio\ClientModel\InvitationPostDTO $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createInvitationWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
         $request = $this->createInvitationRequest($body);
 
         try {
@@ -839,7 +839,7 @@ class UserControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SingleUuidDTO',
+                        '\Docstudio\ClientModel\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -854,7 +854,7 @@ class UserControllerApi
      *
      * Create invitation to join account or mailbox with defined permissions.
      *
-     * @param  \Swagger\Client\Model\InvitationPostDTO $body (required)
+     * @param  \Docstudio\ClientModel\InvitationPostDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -874,14 +874,14 @@ class UserControllerApi
      *
      * Create invitation to join account or mailbox with defined permissions.
      *
-     * @param  \Swagger\Client\Model\InvitationPostDTO $body (required)
+     * @param  \Docstudio\ClientModel\InvitationPostDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createInvitationAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
         $request = $this->createInvitationRequest($body);
 
         return $this->client
@@ -924,7 +924,7 @@ class UserControllerApi
     /**
      * Create request for operation 'createInvitation'
      *
-     * @param  \Swagger\Client\Model\InvitationPostDTO $body (required)
+     * @param  \Docstudio\ClientModel\InvitationPostDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1025,7 +1025,7 @@ class UserControllerApi
      *
      * @param  string $invite_code Invite code (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1041,7 +1041,7 @@ class UserControllerApi
      *
      * @param  string $invite_code Invite code (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1255,7 +1255,7 @@ class UserControllerApi
      * @param  string $check_message Proof message (required)
      * @param  bool $leave_existing Leave existing account and mailbox. In this case mailbox and account should have other owners, otherwise error will be returned. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1272,7 +1272,7 @@ class UserControllerApi
      * @param  string $check_message Proof message (required)
      * @param  bool $leave_existing Leave existing account and mailbox. In this case mailbox and account should have other owners, otherwise error will be returned. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1495,9 +1495,9 @@ class UserControllerApi
      * @param  string $keyword keyword (required)
      * @param  string $exclude exclude (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\UserDTO[]
+     * @return \Docstudio\ClientModel\UserDTO[]
      */
     public function findUser($keyword, $exclude = null)
     {
@@ -1513,13 +1513,13 @@ class UserControllerApi
      * @param  string $keyword (required)
      * @param  string $exclude (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\UserDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\UserDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function findUserWithHttpInfo($keyword, $exclude = null)
     {
-        $returnType = '\Swagger\Client\Model\UserDTO[]';
+        $returnType = '\Docstudio\ClientModel\UserDTO[]';
         $request = $this->findUserRequest($keyword, $exclude);
 
         try {
@@ -1571,7 +1571,7 @@ class UserControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\UserDTO[]',
+                        '\Docstudio\ClientModel\UserDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1615,7 +1615,7 @@ class UserControllerApi
      */
     public function findUserAsyncWithHttpInfo($keyword, $exclude = null)
     {
-        $returnType = '\Swagger\Client\Model\UserDTO[]';
+        $returnType = '\Docstudio\ClientModel\UserDTO[]';
         $request = $this->findUserRequest($keyword, $exclude);
 
         return $this->client
@@ -1766,7 +1766,7 @@ class UserControllerApi
      * @param  string $user_uuid user_uuid (required)
      * @param  bool $initials Get default avatar (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1784,7 +1784,7 @@ class UserControllerApi
      * @param  string $user_uuid (required)
      * @param  bool $initials Get default avatar (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2041,9 +2041,9 @@ class UserControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTOUserInvitationDTO
+     * @return \Docstudio\ClientModel\PageDTOUserInvitationDTO
      */
     public function getInvites($offset = '0', $limit = '25')
     {
@@ -2059,13 +2059,13 @@ class UserControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTOUserInvitationDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTOUserInvitationDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInvitesWithHttpInfo($offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOUserInvitationDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOUserInvitationDTO';
         $request = $this->getInvitesRequest($offset, $limit);
 
         try {
@@ -2117,7 +2117,7 @@ class UserControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTOUserInvitationDTO',
+                        '\Docstudio\ClientModel\PageDTOUserInvitationDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2161,7 +2161,7 @@ class UserControllerApi
      */
     public function getInvitesAsyncWithHttpInfo($offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOUserInvitationDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOUserInvitationDTO';
         $request = $this->getInvitesRequest($offset, $limit);
 
         return $this->client
@@ -2305,9 +2305,9 @@ class UserControllerApi
      *
      * @param  string[] $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return map[string,\Swagger\Client\Model\UserInfoDTO]
+     * @return map[string,\Docstudio\ClientModel\UserInfoDTO]
      */
     public function getMailboxesInfo($body)
     {
@@ -2322,13 +2322,13 @@ class UserControllerApi
      *
      * @param  string[] $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of map[string,\Swagger\Client\Model\UserInfoDTO], HTTP status code, HTTP response headers (array of strings)
+     * @return array of map[string,\Docstudio\ClientModel\UserInfoDTO], HTTP status code, HTTP response headers (array of strings)
      */
     public function getMailboxesInfoWithHttpInfo($body)
     {
-        $returnType = 'map[string,\Swagger\Client\Model\UserInfoDTO]';
+        $returnType = 'map[string,\Docstudio\ClientModel\UserInfoDTO]';
         $request = $this->getMailboxesInfoRequest($body);
 
         try {
@@ -2380,7 +2380,7 @@ class UserControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'map[string,\Swagger\Client\Model\UserInfoDTO]',
+                        'map[string,\Docstudio\ClientModel\UserInfoDTO]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2422,7 +2422,7 @@ class UserControllerApi
      */
     public function getMailboxesInfoAsyncWithHttpInfo($body)
     {
-        $returnType = 'map[string,\Swagger\Client\Model\UserInfoDTO]';
+        $returnType = 'map[string,\Docstudio\ClientModel\UserInfoDTO]';
         $request = $this->getMailboxesInfoRequest($body);
 
         return $this->client
@@ -2565,9 +2565,9 @@ class UserControllerApi
      * Retrieve user profile
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ProfileDTO
+     * @return \Docstudio\ClientModel\ProfileDTO
      */
     public function getProfile()
     {
@@ -2581,13 +2581,13 @@ class UserControllerApi
      * Retrieve user profile
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ProfileDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\ProfileDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProfileWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ProfileDTO';
+        $returnType = '\Docstudio\ClientModel\ProfileDTO';
         $request = $this->getProfileRequest();
 
         try {
@@ -2639,7 +2639,7 @@ class UserControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ProfileDTO',
+                        '\Docstudio\ClientModel\ProfileDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2679,7 +2679,7 @@ class UserControllerApi
      */
     public function getProfileAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ProfileDTO';
+        $returnType = '\Docstudio\ClientModel\ProfileDTO';
         $request = $this->getProfileRequest();
 
         return $this->client
@@ -2811,10 +2811,10 @@ class UserControllerApi
      *
      * Update invitation by userUuid.
      *
-     * @param  \Swagger\Client\Model\InvitationPutDTO $body body (required)
+     * @param  \Docstudio\ClientModel\InvitationPutDTO $body body (required)
      * @param  string $uuid uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2828,10 +2828,10 @@ class UserControllerApi
      *
      * Update invitation by userUuid.
      *
-     * @param  \Swagger\Client\Model\InvitationPutDTO $body (required)
+     * @param  \Docstudio\ClientModel\InvitationPutDTO $body (required)
      * @param  string $uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2882,7 +2882,7 @@ class UserControllerApi
      *
      * Update invitation by userUuid.
      *
-     * @param  \Swagger\Client\Model\InvitationPutDTO $body (required)
+     * @param  \Docstudio\ClientModel\InvitationPutDTO $body (required)
      * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -2903,7 +2903,7 @@ class UserControllerApi
      *
      * Update invitation by userUuid.
      *
-     * @param  \Swagger\Client\Model\InvitationPutDTO $body (required)
+     * @param  \Docstudio\ClientModel\InvitationPutDTO $body (required)
      * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -2940,7 +2940,7 @@ class UserControllerApi
     /**
      * Create request for operation 'updateInvitation'
      *
-     * @param  \Swagger\Client\Model\InvitationPutDTO $body (required)
+     * @param  \Docstudio\ClientModel\InvitationPutDTO $body (required)
      * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -3054,11 +3054,11 @@ class UserControllerApi
      *
      * Update user's profile
      *
-     * @param  \Swagger\Client\Model\UpdateProfileDTO $body body (required)
+     * @param  \Docstudio\ClientModel\UpdateProfileDTO $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ProfileDTO
+     * @return \Docstudio\ClientModel\ProfileDTO
      */
     public function updateProfile($body)
     {
@@ -3071,15 +3071,15 @@ class UserControllerApi
      *
      * Update user's profile
      *
-     * @param  \Swagger\Client\Model\UpdateProfileDTO $body (required)
+     * @param  \Docstudio\ClientModel\UpdateProfileDTO $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ProfileDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\ProfileDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProfileWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\ProfileDTO';
+        $returnType = '\Docstudio\ClientModel\ProfileDTO';
         $request = $this->updateProfileRequest($body);
 
         try {
@@ -3131,7 +3131,7 @@ class UserControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ProfileDTO',
+                        '\Docstudio\ClientModel\ProfileDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3146,7 +3146,7 @@ class UserControllerApi
      *
      * Update user's profile
      *
-     * @param  \Swagger\Client\Model\UpdateProfileDTO $body (required)
+     * @param  \Docstudio\ClientModel\UpdateProfileDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3166,14 +3166,14 @@ class UserControllerApi
      *
      * Update user's profile
      *
-     * @param  \Swagger\Client\Model\UpdateProfileDTO $body (required)
+     * @param  \Docstudio\ClientModel\UpdateProfileDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function updateProfileAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\ProfileDTO';
+        $returnType = '\Docstudio\ClientModel\ProfileDTO';
         $request = $this->updateProfileRequest($body);
 
         return $this->client
@@ -3216,7 +3216,7 @@ class UserControllerApi
     /**
      * Create request for operation 'updateProfile'
      *
-     * @param  \Swagger\Client\Model\UpdateProfileDTO $body (required)
+     * @param  \Docstudio\ClientModel\UpdateProfileDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

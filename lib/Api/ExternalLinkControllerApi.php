@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * ExternalLinkControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,12 +91,12 @@ class ExternalLinkControllerApi
      *
      * Create external link
      *
-     * @param  \Swagger\Client\Model\ExternalLinkRequestDTO $body body (required)
+     * @param  \Docstudio\ClientModel\ExternalLinkRequestDTO $body body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ExternalLinkResponseDTO
+     * @return \Docstudio\ClientModel\ExternalLinkResponseDTO
      */
     public function createExternalLink($body, $account_uuid)
     {
@@ -109,16 +109,16 @@ class ExternalLinkControllerApi
      *
      * Create external link
      *
-     * @param  \Swagger\Client\Model\ExternalLinkRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\ExternalLinkRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ExternalLinkResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\ExternalLinkResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createExternalLinkWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\ExternalLinkResponseDTO';
+        $returnType = '\Docstudio\ClientModel\ExternalLinkResponseDTO';
         $request = $this->createExternalLinkRequest($body, $account_uuid);
 
         try {
@@ -170,7 +170,7 @@ class ExternalLinkControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ExternalLinkResponseDTO',
+                        '\Docstudio\ClientModel\ExternalLinkResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class ExternalLinkControllerApi
      *
      * Create external link
      *
-     * @param  \Swagger\Client\Model\ExternalLinkRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\ExternalLinkRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class ExternalLinkControllerApi
      *
      * Create external link
      *
-     * @param  \Swagger\Client\Model\ExternalLinkRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\ExternalLinkRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class ExternalLinkControllerApi
      */
     public function createExternalLinkAsyncWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\ExternalLinkResponseDTO';
+        $returnType = '\Docstudio\ClientModel\ExternalLinkResponseDTO';
         $request = $this->createExternalLinkRequest($body, $account_uuid);
 
         return $this->client
@@ -257,7 +257,7 @@ class ExternalLinkControllerApi
     /**
      * Create request for operation 'createExternalLink'
      *
-     * @param  \Swagger\Client\Model\ExternalLinkRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\ExternalLinkRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -374,7 +374,7 @@ class ExternalLinkControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $link_uuid Link UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -391,7 +391,7 @@ class ExternalLinkControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $link_uuid Link UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -621,9 +621,9 @@ class ExternalLinkControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ExternalLinkResponseDTO[]
+     * @return \Docstudio\ClientModel\ExternalLinkResponseDTO[]
      */
     public function getAccountExternalLinks($account_uuid)
     {
@@ -638,13 +638,13 @@ class ExternalLinkControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ExternalLinkResponseDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\ExternalLinkResponseDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountExternalLinksWithHttpInfo($account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\ExternalLinkResponseDTO[]';
+        $returnType = '\Docstudio\ClientModel\ExternalLinkResponseDTO[]';
         $request = $this->getAccountExternalLinksRequest($account_uuid);
 
         try {
@@ -696,7 +696,7 @@ class ExternalLinkControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ExternalLinkResponseDTO[]',
+                        '\Docstudio\ClientModel\ExternalLinkResponseDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -738,7 +738,7 @@ class ExternalLinkControllerApi
      */
     public function getAccountExternalLinksAsyncWithHttpInfo($account_uuid)
     {
-        $returnType = '\Swagger\Client\Model\ExternalLinkResponseDTO[]';
+        $returnType = '\Docstudio\ClientModel\ExternalLinkResponseDTO[]';
         $request = $this->getAccountExternalLinksRequest($account_uuid);
 
         return $this->client
@@ -887,9 +887,9 @@ class ExternalLinkControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ExternalLinkShortResponseDTO[]
+     * @return \Docstudio\ClientModel\ExternalLinkShortResponseDTO[]
      */
     public function getMailboxList($mailbox)
     {
@@ -904,13 +904,13 @@ class ExternalLinkControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ExternalLinkShortResponseDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\ExternalLinkShortResponseDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getMailboxListWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\ExternalLinkShortResponseDTO[]';
+        $returnType = '\Docstudio\ClientModel\ExternalLinkShortResponseDTO[]';
         $request = $this->getMailboxListRequest($mailbox);
 
         try {
@@ -962,7 +962,7 @@ class ExternalLinkControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ExternalLinkShortResponseDTO[]',
+                        '\Docstudio\ClientModel\ExternalLinkShortResponseDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1004,7 +1004,7 @@ class ExternalLinkControllerApi
      */
     public function getMailboxListAsyncWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\ExternalLinkShortResponseDTO[]';
+        $returnType = '\Docstudio\ClientModel\ExternalLinkShortResponseDTO[]';
         $request = $this->getMailboxListRequest($mailbox);
 
         return $this->client
@@ -1147,13 +1147,13 @@ class ExternalLinkControllerApi
      *
      * Update external link
      *
-     * @param  \Swagger\Client\Model\ExternalLinkRequestDTO $body body (required)
+     * @param  \Docstudio\ClientModel\ExternalLinkRequestDTO $body body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $link_uuid Link UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ExternalLinkResponseDTO
+     * @return \Docstudio\ClientModel\ExternalLinkResponseDTO
      */
     public function updateExternalLink($body, $account_uuid, $link_uuid)
     {
@@ -1166,17 +1166,17 @@ class ExternalLinkControllerApi
      *
      * Update external link
      *
-     * @param  \Swagger\Client\Model\ExternalLinkRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\ExternalLinkRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $link_uuid Link UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ExternalLinkResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\ExternalLinkResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateExternalLinkWithHttpInfo($body, $account_uuid, $link_uuid)
     {
-        $returnType = '\Swagger\Client\Model\ExternalLinkResponseDTO';
+        $returnType = '\Docstudio\ClientModel\ExternalLinkResponseDTO';
         $request = $this->updateExternalLinkRequest($body, $account_uuid, $link_uuid);
 
         try {
@@ -1228,7 +1228,7 @@ class ExternalLinkControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ExternalLinkResponseDTO',
+                        '\Docstudio\ClientModel\ExternalLinkResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1243,7 +1243,7 @@ class ExternalLinkControllerApi
      *
      * Update external link
      *
-     * @param  \Swagger\Client\Model\ExternalLinkRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\ExternalLinkRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $link_uuid Link UUID (required)
      *
@@ -1265,7 +1265,7 @@ class ExternalLinkControllerApi
      *
      * Update external link
      *
-     * @param  \Swagger\Client\Model\ExternalLinkRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\ExternalLinkRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $link_uuid Link UUID (required)
      *
@@ -1274,7 +1274,7 @@ class ExternalLinkControllerApi
      */
     public function updateExternalLinkAsyncWithHttpInfo($body, $account_uuid, $link_uuid)
     {
-        $returnType = '\Swagger\Client\Model\ExternalLinkResponseDTO';
+        $returnType = '\Docstudio\ClientModel\ExternalLinkResponseDTO';
         $request = $this->updateExternalLinkRequest($body, $account_uuid, $link_uuid);
 
         return $this->client
@@ -1317,7 +1317,7 @@ class ExternalLinkControllerApi
     /**
      * Create request for operation 'updateExternalLink'
      *
-     * @param  \Swagger\Client\Model\ExternalLinkRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\ExternalLinkRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  string $link_uuid Link UUID (required)
      *

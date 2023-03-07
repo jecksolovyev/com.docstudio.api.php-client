@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * DictionaryControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,7 +94,7 @@ class DictionaryControllerApi
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class DictionaryControllerApi
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -339,9 +339,9 @@ class DictionaryControllerApi
      * @param  string $column_uuid Column UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DictionaryCheckResponseDTO
+     * @return \Docstudio\ClientModel\DictionaryCheckResponseDTO
      */
     public function checkColumnValues($dictionary_uuid, $column_uuid, $mailbox)
     {
@@ -358,13 +358,13 @@ class DictionaryControllerApi
      * @param  string $column_uuid Column UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DictionaryCheckResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\DictionaryCheckResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function checkColumnValuesWithHttpInfo($dictionary_uuid, $column_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryCheckResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryCheckResponseDTO';
         $request = $this->checkColumnValuesRequest($dictionary_uuid, $column_uuid, $mailbox);
 
         try {
@@ -416,7 +416,7 @@ class DictionaryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DictionaryCheckResponseDTO',
+                        '\Docstudio\ClientModel\DictionaryCheckResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -462,7 +462,7 @@ class DictionaryControllerApi
      */
     public function checkColumnValuesAsyncWithHttpInfo($dictionary_uuid, $column_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryCheckResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryCheckResponseDTO';
         $request = $this->checkColumnValuesRequest($dictionary_uuid, $column_uuid, $mailbox);
 
         return $this->client
@@ -638,9 +638,9 @@ class DictionaryControllerApi
      * @param  string $dictionary_uuid UUID of dictionary (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DictionaryCheckResponseDTO
+     * @return \Docstudio\ClientModel\DictionaryCheckResponseDTO
      */
     public function checkDictionary($dictionary_uuid, $mailbox)
     {
@@ -656,13 +656,13 @@ class DictionaryControllerApi
      * @param  string $dictionary_uuid UUID of dictionary (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DictionaryCheckResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\DictionaryCheckResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function checkDictionaryWithHttpInfo($dictionary_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryCheckResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryCheckResponseDTO';
         $request = $this->checkDictionaryRequest($dictionary_uuid, $mailbox);
 
         try {
@@ -714,7 +714,7 @@ class DictionaryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DictionaryCheckResponseDTO',
+                        '\Docstudio\ClientModel\DictionaryCheckResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -758,7 +758,7 @@ class DictionaryControllerApi
      */
     public function checkDictionaryAsyncWithHttpInfo($dictionary_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryCheckResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryCheckResponseDTO';
         $request = $this->checkDictionaryRequest($dictionary_uuid, $mailbox);
 
         return $this->client
@@ -916,13 +916,13 @@ class DictionaryControllerApi
      *
      * Create dictionary column
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnRequestDTO $body body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnRequestDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SingleUuidDTO
+     * @return \Docstudio\ClientModel\SingleUuidDTO
      */
     public function createColumn($body, $mailbox, $dictionary_uuid)
     {
@@ -935,17 +935,17 @@ class DictionaryControllerApi
      *
      * Create dictionary column
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createColumnWithHttpInfo($body, $mailbox, $dictionary_uuid)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
         $request = $this->createColumnRequest($body, $mailbox, $dictionary_uuid);
 
         try {
@@ -997,7 +997,7 @@ class DictionaryControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SingleUuidDTO',
+                        '\Docstudio\ClientModel\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1012,7 +1012,7 @@ class DictionaryControllerApi
      *
      * Create dictionary column
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
@@ -1034,7 +1034,7 @@ class DictionaryControllerApi
      *
      * Create dictionary column
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
@@ -1043,7 +1043,7 @@ class DictionaryControllerApi
      */
     public function createColumnAsyncWithHttpInfo($body, $mailbox, $dictionary_uuid)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
         $request = $this->createColumnRequest($body, $mailbox, $dictionary_uuid);
 
         return $this->client
@@ -1086,7 +1086,7 @@ class DictionaryControllerApi
     /**
      * Create request for operation 'createColumn'
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
@@ -1213,9 +1213,9 @@ class DictionaryControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SingleUuidDTO
+     * @return \Docstudio\ClientModel\SingleUuidDTO
      */
     public function createDictionary($mailbox)
     {
@@ -1230,13 +1230,13 @@ class DictionaryControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDictionaryWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
         $request = $this->createDictionaryRequest($mailbox);
 
         try {
@@ -1288,7 +1288,7 @@ class DictionaryControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SingleUuidDTO',
+                        '\Docstudio\ClientModel\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1330,7 +1330,7 @@ class DictionaryControllerApi
      */
     public function createDictionaryAsyncWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
         $request = $this->createDictionaryRequest($mailbox);
 
         return $this->client
@@ -1473,13 +1473,13 @@ class DictionaryControllerApi
      *
      * Create record(s)
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnValueRequestDTO[][] $body body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[][] $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CreateRecordsResponseDTO
+     * @return \Docstudio\ClientModel\CreateRecordsResponseDTO
      */
     public function createRecord($body, $mailbox, $dictionary_uuid)
     {
@@ -1492,17 +1492,17 @@ class DictionaryControllerApi
      *
      * Create record(s)
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnValueRequestDTO[][] $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[][] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CreateRecordsResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\CreateRecordsResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRecordWithHttpInfo($body, $mailbox, $dictionary_uuid)
     {
-        $returnType = '\Swagger\Client\Model\CreateRecordsResponseDTO';
+        $returnType = '\Docstudio\ClientModel\CreateRecordsResponseDTO';
         $request = $this->createRecordRequest($body, $mailbox, $dictionary_uuid);
 
         try {
@@ -1554,7 +1554,7 @@ class DictionaryControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CreateRecordsResponseDTO',
+                        '\Docstudio\ClientModel\CreateRecordsResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1569,7 +1569,7 @@ class DictionaryControllerApi
      *
      * Create record(s)
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnValueRequestDTO[][] $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[][] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
@@ -1591,7 +1591,7 @@ class DictionaryControllerApi
      *
      * Create record(s)
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnValueRequestDTO[][] $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[][] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
@@ -1600,7 +1600,7 @@ class DictionaryControllerApi
      */
     public function createRecordAsyncWithHttpInfo($body, $mailbox, $dictionary_uuid)
     {
-        $returnType = '\Swagger\Client\Model\CreateRecordsResponseDTO';
+        $returnType = '\Docstudio\ClientModel\CreateRecordsResponseDTO';
         $request = $this->createRecordRequest($body, $mailbox, $dictionary_uuid);
 
         return $this->client
@@ -1643,7 +1643,7 @@ class DictionaryControllerApi
     /**
      * Create request for operation 'createRecord'
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnValueRequestDTO[][] $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[][] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
@@ -1772,9 +1772,9 @@ class DictionaryControllerApi
      * @param  string $column_uuid Column UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SingleUuidDTO
+     * @return \Docstudio\ClientModel\SingleUuidDTO
      */
     public function deleteColumnDictionary($dictionary_uuid, $column_uuid, $mailbox)
     {
@@ -1791,13 +1791,13 @@ class DictionaryControllerApi
      * @param  string $column_uuid Column UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteColumnDictionaryWithHttpInfo($dictionary_uuid, $column_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
         $request = $this->deleteColumnDictionaryRequest($dictionary_uuid, $column_uuid, $mailbox);
 
         try {
@@ -1849,7 +1849,7 @@ class DictionaryControllerApi
                 case 204:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SingleUuidDTO',
+                        '\Docstudio\ClientModel\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1895,7 +1895,7 @@ class DictionaryControllerApi
      */
     public function deleteColumnDictionaryAsyncWithHttpInfo($dictionary_uuid, $column_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
         $request = $this->deleteColumnDictionaryRequest($dictionary_uuid, $column_uuid, $mailbox);
 
         return $this->client
@@ -2068,13 +2068,13 @@ class DictionaryControllerApi
      *
      * Delete record(s). Will return deleted records UUID(s)
      *
-     * @param  \Swagger\Client\Model\SingleUuidDTO[] $body body (required)
+     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SingleUuidDTO[]
+     * @return \Docstudio\ClientModel\SingleUuidDTO[]
      */
     public function deleteRecords($body, $mailbox, $dictionary_uuid)
     {
@@ -2087,17 +2087,17 @@ class DictionaryControllerApi
      *
      * Delete record(s). Will return deleted records UUID(s)
      *
-     * @param  \Swagger\Client\Model\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SingleUuidDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\SingleUuidDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteRecordsWithHttpInfo($body, $mailbox, $dictionary_uuid)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO[]';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO[]';
         $request = $this->deleteRecordsRequest($body, $mailbox, $dictionary_uuid);
 
         try {
@@ -2149,7 +2149,7 @@ class DictionaryControllerApi
                 case 204:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SingleUuidDTO[]',
+                        '\Docstudio\ClientModel\SingleUuidDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2164,7 +2164,7 @@ class DictionaryControllerApi
      *
      * Delete record(s). Will return deleted records UUID(s)
      *
-     * @param  \Swagger\Client\Model\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
@@ -2186,7 +2186,7 @@ class DictionaryControllerApi
      *
      * Delete record(s). Will return deleted records UUID(s)
      *
-     * @param  \Swagger\Client\Model\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
@@ -2195,7 +2195,7 @@ class DictionaryControllerApi
      */
     public function deleteRecordsAsyncWithHttpInfo($body, $mailbox, $dictionary_uuid)
     {
-        $returnType = '\Swagger\Client\Model\SingleUuidDTO[]';
+        $returnType = '\Docstudio\ClientModel\SingleUuidDTO[]';
         $request = $this->deleteRecordsRequest($body, $mailbox, $dictionary_uuid);
 
         return $this->client
@@ -2238,7 +2238,7 @@ class DictionaryControllerApi
     /**
      * Create request for operation 'deleteRecords'
      *
-     * @param  \Swagger\Client\Model\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      *
@@ -2363,13 +2363,13 @@ class DictionaryControllerApi
      *
      * Download the dictionary
      *
-     * @param  \Swagger\Client\Model\DictionaryDownloadParamsDTO $body body (required)
+     * @param  \Docstudio\ClientModel\DictionaryDownloadParamsDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ExportTaskStatusDTO
+     * @return \Docstudio\ClientModel\ExportTaskStatusDTO
      */
     public function download($body, $mailbox, $dictionary_uuid)
     {
@@ -2382,17 +2382,17 @@ class DictionaryControllerApi
      *
      * Download the dictionary
      *
-     * @param  \Swagger\Client\Model\DictionaryDownloadParamsDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryDownloadParamsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ExportTaskStatusDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\ExportTaskStatusDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function downloadWithHttpInfo($body, $mailbox, $dictionary_uuid)
     {
-        $returnType = '\Swagger\Client\Model\ExportTaskStatusDTO';
+        $returnType = '\Docstudio\ClientModel\ExportTaskStatusDTO';
         $request = $this->downloadRequest($body, $mailbox, $dictionary_uuid);
 
         try {
@@ -2444,7 +2444,7 @@ class DictionaryControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ExportTaskStatusDTO',
+                        '\Docstudio\ClientModel\ExportTaskStatusDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2459,7 +2459,7 @@ class DictionaryControllerApi
      *
      * Download the dictionary
      *
-     * @param  \Swagger\Client\Model\DictionaryDownloadParamsDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryDownloadParamsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      *
@@ -2481,7 +2481,7 @@ class DictionaryControllerApi
      *
      * Download the dictionary
      *
-     * @param  \Swagger\Client\Model\DictionaryDownloadParamsDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryDownloadParamsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      *
@@ -2490,7 +2490,7 @@ class DictionaryControllerApi
      */
     public function downloadAsyncWithHttpInfo($body, $mailbox, $dictionary_uuid)
     {
-        $returnType = '\Swagger\Client\Model\ExportTaskStatusDTO';
+        $returnType = '\Docstudio\ClientModel\ExportTaskStatusDTO';
         $request = $this->downloadRequest($body, $mailbox, $dictionary_uuid);
 
         return $this->client
@@ -2533,7 +2533,7 @@ class DictionaryControllerApi
     /**
      * Create request for operation 'download'
      *
-     * @param  \Swagger\Client\Model\DictionaryDownloadParamsDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryDownloadParamsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      *
@@ -2662,9 +2662,9 @@ class DictionaryControllerApi
      * @param  string $task_uuid UUID of task (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ExportTaskStatusDTO
+     * @return \Docstudio\ClientModel\ExportTaskStatusDTO
      */
     public function downloadStatus($dictionary_uuid, $task_uuid, $mailbox)
     {
@@ -2681,13 +2681,13 @@ class DictionaryControllerApi
      * @param  string $task_uuid UUID of task (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ExportTaskStatusDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\ExportTaskStatusDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function downloadStatusWithHttpInfo($dictionary_uuid, $task_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\ExportTaskStatusDTO';
+        $returnType = '\Docstudio\ClientModel\ExportTaskStatusDTO';
         $request = $this->downloadStatusRequest($dictionary_uuid, $task_uuid, $mailbox);
 
         try {
@@ -2739,7 +2739,7 @@ class DictionaryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ExportTaskStatusDTO',
+                        '\Docstudio\ClientModel\ExportTaskStatusDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2785,7 +2785,7 @@ class DictionaryControllerApi
      */
     public function downloadStatusAsyncWithHttpInfo($dictionary_uuid, $task_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\ExportTaskStatusDTO';
+        $returnType = '\Docstudio\ClientModel\ExportTaskStatusDTO';
         $request = $this->downloadStatusRequest($dictionary_uuid, $task_uuid, $mailbox);
 
         return $this->client
@@ -2963,9 +2963,9 @@ class DictionaryControllerApi
      * @param  string $column_uuid Column UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DictionaryColumnValueResponseDTO
+     * @return \Docstudio\ClientModel\DictionaryColumnValueResponseDTO
      */
     public function getColumnValue($dictionary_uuid, $record_uuid, $column_uuid, $mailbox)
     {
@@ -2983,13 +2983,13 @@ class DictionaryControllerApi
      * @param  string $column_uuid Column UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DictionaryColumnValueResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\DictionaryColumnValueResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getColumnValueWithHttpInfo($dictionary_uuid, $record_uuid, $column_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryColumnValueResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryColumnValueResponseDTO';
         $request = $this->getColumnValueRequest($dictionary_uuid, $record_uuid, $column_uuid, $mailbox);
 
         try {
@@ -3041,7 +3041,7 @@ class DictionaryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DictionaryColumnValueResponseDTO',
+                        '\Docstudio\ClientModel\DictionaryColumnValueResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3089,7 +3089,7 @@ class DictionaryControllerApi
      */
     public function getColumnValueAsyncWithHttpInfo($dictionary_uuid, $record_uuid, $column_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryColumnValueResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryColumnValueResponseDTO';
         $request = $this->getColumnValueRequest($dictionary_uuid, $record_uuid, $column_uuid, $mailbox);
 
         return $this->client
@@ -3284,9 +3284,9 @@ class DictionaryControllerApi
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      * @param  string $keyword Keyword to search by (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTODictionaryColumnValueResponseDTO
+     * @return \Docstudio\ClientModel\PageDTODictionaryColumnValueResponseDTO
      */
     public function getColumnValues($dictionary_uuid, $column_uuid, $mailbox, $offset = '0', $limit = '25', $keyword = null)
     {
@@ -3306,13 +3306,13 @@ class DictionaryControllerApi
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      * @param  string $keyword Keyword to search by (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTODictionaryColumnValueResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTODictionaryColumnValueResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getColumnValuesWithHttpInfo($dictionary_uuid, $column_uuid, $mailbox, $offset = '0', $limit = '25', $keyword = null)
     {
-        $returnType = '\Swagger\Client\Model\PageDTODictionaryColumnValueResponseDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTODictionaryColumnValueResponseDTO';
         $request = $this->getColumnValuesRequest($dictionary_uuid, $column_uuid, $mailbox, $offset, $limit, $keyword);
 
         try {
@@ -3364,7 +3364,7 @@ class DictionaryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTODictionaryColumnValueResponseDTO',
+                        '\Docstudio\ClientModel\PageDTODictionaryColumnValueResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3416,7 +3416,7 @@ class DictionaryControllerApi
      */
     public function getColumnValuesAsyncWithHttpInfo($dictionary_uuid, $column_uuid, $mailbox, $offset = '0', $limit = '25', $keyword = null)
     {
-        $returnType = '\Swagger\Client\Model\PageDTODictionaryColumnValueResponseDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTODictionaryColumnValueResponseDTO';
         $request = $this->getColumnValuesRequest($dictionary_uuid, $column_uuid, $mailbox, $offset, $limit, $keyword);
 
         return $this->client
@@ -3608,9 +3608,9 @@ class DictionaryControllerApi
      * @param  string $record_uuid Record UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DictionaryRecordValuesResponseDTO
+     * @return \Docstudio\ClientModel\DictionaryRecordValuesResponseDTO
      */
     public function getDictionaryRecord($dictionary_uuid, $record_uuid, $mailbox)
     {
@@ -3627,13 +3627,13 @@ class DictionaryControllerApi
      * @param  string $record_uuid Record UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DictionaryRecordValuesResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\DictionaryRecordValuesResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDictionaryRecordWithHttpInfo($dictionary_uuid, $record_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryRecordValuesResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryRecordValuesResponseDTO';
         $request = $this->getDictionaryRecordRequest($dictionary_uuid, $record_uuid, $mailbox);
 
         try {
@@ -3685,7 +3685,7 @@ class DictionaryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DictionaryRecordValuesResponseDTO',
+                        '\Docstudio\ClientModel\DictionaryRecordValuesResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3731,7 +3731,7 @@ class DictionaryControllerApi
      */
     public function getDictionaryRecordAsyncWithHttpInfo($dictionary_uuid, $record_uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryRecordValuesResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryRecordValuesResponseDTO';
         $request = $this->getDictionaryRecordRequest($dictionary_uuid, $record_uuid, $mailbox);
 
         return $this->client
@@ -3904,15 +3904,15 @@ class DictionaryControllerApi
      *
      * Get dictionary records
      *
-     * @param  \Swagger\Client\Model\DictionaryFiltersRequestDTO $body body (required)
+     * @param  \Docstudio\ClientModel\DictionaryFiltersRequestDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTODictionaryRecordValuesResponseDTO
+     * @return \Docstudio\ClientModel\PageDTODictionaryRecordValuesResponseDTO
      */
     public function getDictionaryRecords($body, $mailbox, $dictionary_uuid, $offset = '0', $limit = '25')
     {
@@ -3925,19 +3925,19 @@ class DictionaryControllerApi
      *
      * Get dictionary records
      *
-     * @param  \Swagger\Client\Model\DictionaryFiltersRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryFiltersRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTODictionaryRecordValuesResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTODictionaryRecordValuesResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDictionaryRecordsWithHttpInfo($body, $mailbox, $dictionary_uuid, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTODictionaryRecordValuesResponseDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTODictionaryRecordValuesResponseDTO';
         $request = $this->getDictionaryRecordsRequest($body, $mailbox, $dictionary_uuid, $offset, $limit);
 
         try {
@@ -3989,7 +3989,7 @@ class DictionaryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTODictionaryRecordValuesResponseDTO',
+                        '\Docstudio\ClientModel\PageDTODictionaryRecordValuesResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4004,7 +4004,7 @@ class DictionaryControllerApi
      *
      * Get dictionary records
      *
-     * @param  \Swagger\Client\Model\DictionaryFiltersRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryFiltersRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      * @param  int $offset Offset records (optional, default to 0)
@@ -4028,7 +4028,7 @@ class DictionaryControllerApi
      *
      * Get dictionary records
      *
-     * @param  \Swagger\Client\Model\DictionaryFiltersRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryFiltersRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      * @param  int $offset Offset records (optional, default to 0)
@@ -4039,7 +4039,7 @@ class DictionaryControllerApi
      */
     public function getDictionaryRecordsAsyncWithHttpInfo($body, $mailbox, $dictionary_uuid, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTODictionaryRecordValuesResponseDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTODictionaryRecordValuesResponseDTO';
         $request = $this->getDictionaryRecordsRequest($body, $mailbox, $dictionary_uuid, $offset, $limit);
 
         return $this->client
@@ -4082,7 +4082,7 @@ class DictionaryControllerApi
     /**
      * Create request for operation 'getDictionaryRecords'
      *
-     * @param  \Swagger\Client\Model\DictionaryFiltersRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryFiltersRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      * @param  int $offset Offset records (optional, default to 0)
@@ -4217,13 +4217,13 @@ class DictionaryControllerApi
      *
      * Update dictionary
      *
-     * @param  \Swagger\Client\Model\DictionaryRequestDTO $body body (required)
+     * @param  \Docstudio\ClientModel\DictionaryRequestDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DictionaryResponseDTO
+     * @return \Docstudio\ClientModel\DictionaryResponseDTO
      */
     public function patchDictionary($body, $mailbox, $dictionary_uuid)
     {
@@ -4236,17 +4236,17 @@ class DictionaryControllerApi
      *
      * Update dictionary
      *
-     * @param  \Swagger\Client\Model\DictionaryRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DictionaryResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\DictionaryResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchDictionaryWithHttpInfo($body, $mailbox, $dictionary_uuid)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryResponseDTO';
         $request = $this->patchDictionaryRequest($body, $mailbox, $dictionary_uuid);
 
         try {
@@ -4298,7 +4298,7 @@ class DictionaryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DictionaryResponseDTO',
+                        '\Docstudio\ClientModel\DictionaryResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4313,7 +4313,7 @@ class DictionaryControllerApi
      *
      * Update dictionary
      *
-     * @param  \Swagger\Client\Model\DictionaryRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      *
@@ -4335,7 +4335,7 @@ class DictionaryControllerApi
      *
      * Update dictionary
      *
-     * @param  \Swagger\Client\Model\DictionaryRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      *
@@ -4344,7 +4344,7 @@ class DictionaryControllerApi
      */
     public function patchDictionaryAsyncWithHttpInfo($body, $mailbox, $dictionary_uuid)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryResponseDTO';
         $request = $this->patchDictionaryRequest($body, $mailbox, $dictionary_uuid);
 
         return $this->client
@@ -4387,7 +4387,7 @@ class DictionaryControllerApi
     /**
      * Create request for operation 'patchDictionary'
      *
-     * @param  \Swagger\Client\Model\DictionaryRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid UUID of dictionary (required)
      *
@@ -4512,12 +4512,12 @@ class DictionaryControllerApi
      *
      * Update record column values
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnValueRequestDTO[] $body body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[] $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $record_uuid Record UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4531,12 +4531,12 @@ class DictionaryControllerApi
      *
      * Update record column values
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnValueRequestDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $record_uuid Record UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4587,7 +4587,7 @@ class DictionaryControllerApi
      *
      * Update record column values
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnValueRequestDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $record_uuid Record UUID (required)
@@ -4610,7 +4610,7 @@ class DictionaryControllerApi
      *
      * Update record column values
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnValueRequestDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $record_uuid Record UUID (required)
@@ -4649,7 +4649,7 @@ class DictionaryControllerApi
     /**
      * Create request for operation 'patchRecord'
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnValueRequestDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $record_uuid Record UUID (required)
@@ -4794,9 +4794,9 @@ class DictionaryControllerApi
      * @param  bool $with_columns Add columns description to each dictionary (optional, default to false)
      * @param  bool $with_records_count Add records count value to each dictionary (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DictionaryResponseDTO
+     * @return \Docstudio\ClientModel\DictionaryResponseDTO
      */
     public function readDictionary($dictionary_uuid, $mailbox, $with_columns = 'false', $with_records_count = 'false')
     {
@@ -4814,13 +4814,13 @@ class DictionaryControllerApi
      * @param  bool $with_columns Add columns description to each dictionary (optional, default to false)
      * @param  bool $with_records_count Add records count value to each dictionary (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DictionaryResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\DictionaryResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function readDictionaryWithHttpInfo($dictionary_uuid, $mailbox, $with_columns = 'false', $with_records_count = 'false')
     {
-        $returnType = '\Swagger\Client\Model\DictionaryResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryResponseDTO';
         $request = $this->readDictionaryRequest($dictionary_uuid, $mailbox, $with_columns, $with_records_count);
 
         try {
@@ -4872,7 +4872,7 @@ class DictionaryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DictionaryResponseDTO',
+                        '\Docstudio\ClientModel\DictionaryResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4920,7 +4920,7 @@ class DictionaryControllerApi
      */
     public function readDictionaryAsyncWithHttpInfo($dictionary_uuid, $mailbox, $with_columns = 'false', $with_records_count = 'false')
     {
-        $returnType = '\Swagger\Client\Model\DictionaryResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryResponseDTO';
         $request = $this->readDictionaryRequest($dictionary_uuid, $mailbox, $with_columns, $with_records_count);
 
         return $this->client
@@ -5095,9 +5095,9 @@ class DictionaryControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTODictionaryResponseDTO
+     * @return \Docstudio\ClientModel\PageDTODictionaryResponseDTO
      */
     public function searchDictionaries($mailbox, $level = 'pub', $keyword = null, $with_columns = 'false', $offset = '0', $limit = '25')
     {
@@ -5117,13 +5117,13 @@ class DictionaryControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTODictionaryResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTODictionaryResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchDictionariesWithHttpInfo($mailbox, $level = 'pub', $keyword = null, $with_columns = 'false', $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTODictionaryResponseDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTODictionaryResponseDTO';
         $request = $this->searchDictionariesRequest($mailbox, $level, $keyword, $with_columns, $offset, $limit);
 
         try {
@@ -5175,7 +5175,7 @@ class DictionaryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTODictionaryResponseDTO',
+                        '\Docstudio\ClientModel\PageDTODictionaryResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5227,7 +5227,7 @@ class DictionaryControllerApi
      */
     public function searchDictionariesAsyncWithHttpInfo($mailbox, $level = 'pub', $keyword = null, $with_columns = 'false', $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTODictionaryResponseDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTODictionaryResponseDTO';
         $request = $this->searchDictionariesRequest($mailbox, $level, $keyword, $with_columns, $offset, $limit);
 
         return $this->client
@@ -5395,14 +5395,14 @@ class DictionaryControllerApi
      *
      * Update dictionary column
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnRequestDTO $body body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnRequestDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $column_uuid Column UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\DictionaryColumnResponseDTO
+     * @return \Docstudio\ClientModel\DictionaryColumnResponseDTO
      */
     public function updateColumnDictionary($body, $mailbox, $dictionary_uuid, $column_uuid)
     {
@@ -5415,18 +5415,18 @@ class DictionaryControllerApi
      *
      * Update dictionary column
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $column_uuid Column UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\DictionaryColumnResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\DictionaryColumnResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateColumnDictionaryWithHttpInfo($body, $mailbox, $dictionary_uuid, $column_uuid)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryColumnResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryColumnResponseDTO';
         $request = $this->updateColumnDictionaryRequest($body, $mailbox, $dictionary_uuid, $column_uuid);
 
         try {
@@ -5478,7 +5478,7 @@ class DictionaryControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\DictionaryColumnResponseDTO',
+                        '\Docstudio\ClientModel\DictionaryColumnResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5493,7 +5493,7 @@ class DictionaryControllerApi
      *
      * Update dictionary column
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $column_uuid Column UUID (required)
@@ -5516,7 +5516,7 @@ class DictionaryControllerApi
      *
      * Update dictionary column
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $column_uuid Column UUID (required)
@@ -5526,7 +5526,7 @@ class DictionaryControllerApi
      */
     public function updateColumnDictionaryAsyncWithHttpInfo($body, $mailbox, $dictionary_uuid, $column_uuid)
     {
-        $returnType = '\Swagger\Client\Model\DictionaryColumnResponseDTO';
+        $returnType = '\Docstudio\ClientModel\DictionaryColumnResponseDTO';
         $request = $this->updateColumnDictionaryRequest($body, $mailbox, $dictionary_uuid, $column_uuid);
 
         return $this->client
@@ -5569,7 +5569,7 @@ class DictionaryControllerApi
     /**
      * Create request for operation 'updateColumnDictionary'
      *
-     * @param  \Swagger\Client\Model\DictionaryColumnRequestDTO $body (required)
+     * @param  \Docstudio\ClientModel\DictionaryColumnRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $dictionary_uuid Dictionary UUID (required)
      * @param  string $column_uuid Column UUID (required)

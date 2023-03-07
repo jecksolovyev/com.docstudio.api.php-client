@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * AccountPermissionsDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,9 +56,9 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account' => '\Swagger\Client\Model\PermissionsWithUuidDTO',
-'mailboxes' => '\Swagger\Client\Model\PermissionsWithUuidDTO[]',
-'user' => '\Swagger\Client\Model\UserDTO'    ];
+        'account' => '\Docstudio\ClientModel\PermissionsWithUuidDTO',
+'mailboxes' => '\Docstudio\ClientModel\PermissionsWithUuidDTO[]',
+'user' => '\Docstudio\ClientModel\UserDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -214,7 +214,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets account
      *
-     * @return \Swagger\Client\Model\PermissionsWithUuidDTO
+     * @return \Docstudio\ClientModel\PermissionsWithUuidDTO
      */
     public function getAccount()
     {
@@ -224,7 +224,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param \Swagger\Client\Model\PermissionsWithUuidDTO $account account
+     * @param \Docstudio\ClientModel\PermissionsWithUuidDTO $account account
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets mailboxes
      *
-     * @return \Swagger\Client\Model\PermissionsWithUuidDTO[]
+     * @return \Docstudio\ClientModel\PermissionsWithUuidDTO[]
      */
     public function getMailboxes()
     {
@@ -248,7 +248,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets mailboxes
      *
-     * @param \Swagger\Client\Model\PermissionsWithUuidDTO[] $mailboxes Mailboxes roles and permissions
+     * @param \Docstudio\ClientModel\PermissionsWithUuidDTO[] $mailboxes Mailboxes roles and permissions
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets user
      *
-     * @return \Swagger\Client\Model\UserDTO
+     * @return \Docstudio\ClientModel\UserDTO
      */
     public function getUser()
     {
@@ -272,7 +272,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets user
      *
-     * @param \Swagger\Client\Model\UserDTO $user user
+     * @param \Docstudio\ClientModel\UserDTO $user user
      *
      * @return $this
      */

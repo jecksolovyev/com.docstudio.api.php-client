@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * ScenarioStepDTO Class Doc Comment
  *
  * @category Class
  * @description Scenario steps
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,8 +59,8 @@ class ScenarioStepDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
 'name' => 'string',
-'source' => '\Swagger\Client\Model\ScenarioStepTemplateInfoDTO',
-'destination' => '\Swagger\Client\Model\ScenarioStepTemplateInfoDTO',
+'source' => '\Docstudio\ClientModel\ScenarioStepTemplateInfoDTO',
+'destination' => '\Docstudio\ClientModel\ScenarioStepTemplateInfoDTO',
 'xslt' => 'string',
 'condition' => 'string',
 'send_after_creation' => 'bool'    ];
@@ -296,7 +296,7 @@ class ScenarioStepDTO implements ModelInterface, ArrayAccess
     /**
      * Gets source
      *
-     * @return \Swagger\Client\Model\ScenarioStepTemplateInfoDTO
+     * @return \Docstudio\ClientModel\ScenarioStepTemplateInfoDTO
      */
     public function getSource()
     {
@@ -306,7 +306,7 @@ class ScenarioStepDTO implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param \Swagger\Client\Model\ScenarioStepTemplateInfoDTO $source source
+     * @param \Docstudio\ClientModel\ScenarioStepTemplateInfoDTO $source source
      *
      * @return $this
      */
@@ -320,7 +320,7 @@ class ScenarioStepDTO implements ModelInterface, ArrayAccess
     /**
      * Gets destination
      *
-     * @return \Swagger\Client\Model\ScenarioStepTemplateInfoDTO
+     * @return \Docstudio\ClientModel\ScenarioStepTemplateInfoDTO
      */
     public function getDestination()
     {
@@ -330,7 +330,7 @@ class ScenarioStepDTO implements ModelInterface, ArrayAccess
     /**
      * Sets destination
      *
-     * @param \Swagger\Client\Model\ScenarioStepTemplateInfoDTO $destination destination
+     * @param \Docstudio\ClientModel\ScenarioStepTemplateInfoDTO $destination destination
      *
      * @return $this
      */

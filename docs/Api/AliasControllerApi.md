@@ -1,4 +1,4 @@
-# Swagger\Client\AliasControllerApi
+# Docstudio\Client\AliasControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**getAllByMailbox**](AliasControllerApi.md#getallbymailbox) | **GET** /api/v1/alias/mailbox | Get aliases by mailbox
 
 # **createAlias**
-> \Swagger\Client\Model\AliasDTO createAlias($body, $mailbox)
+> \Docstudio\ClientModel\AliasDTO createAlias($body, $mailbox)
 
 Save alias to mailbox
 
@@ -18,17 +18,17 @@ Save alias to mailbox
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AliasControllerApi(
+$apiInstance = new Docstudio\Client\Api\AliasControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\AliasDTO(); // \Swagger\Client\Model\AliasDTO | 
+$body = new \Docstudio\ClientModel\AliasDTO(); // \Docstudio\ClientModel\AliasDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -44,12 +44,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\AliasDTO**](../Model/AliasDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\AliasDTO**](../Model/AliasDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\AliasDTO**](../Model/AliasDTO.md)
+[**\Docstudio\ClientModel\AliasDTO**](../Model/AliasDTO.md)
 
 ### Authorization
 
@@ -72,11 +72,11 @@ Delete alias
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AliasControllerApi(
+$apiInstance = new Docstudio\Client\Api\AliasControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -116,7 +116,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAllByMailbox**
-> \Swagger\Client\Model\AliasDTO[] getAllByMailbox($mailbox)
+> \Docstudio\ClientModel\AliasDTO[] getAllByMailbox($mailbox)
 
 Get aliases by mailbox
 
@@ -125,11 +125,11 @@ Get aliases by mailbox
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AliasControllerApi(
+$apiInstance = new Docstudio\Client\Api\AliasControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AliasDTO[]**](../Model/AliasDTO.md)
+[**\Docstudio\ClientModel\AliasDTO[]**](../Model/AliasDTO.md)
 
 ### Authorization
 

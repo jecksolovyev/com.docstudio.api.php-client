@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * TemplateRestriction Class Doc Comment
  *
  * @category Class
  * @description Template Restrictions
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,11 +57,11 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'image' => '\Swagger\Client\Model\ImageRestriction',
-'logo' => '\Swagger\Client\Model\LogoImageRestriction',
+        'image' => '\Docstudio\ClientModel\ImageRestriction',
+'logo' => '\Docstudio\ClientModel\LogoImageRestriction',
 'expire_after_days' => 'int',
 'notify_in_days' => 'int',
-'supported_page_sizes' => '\Swagger\Client\Model\DocumentPageSizeDTO[]'    ];
+'supported_page_sizes' => '\Docstudio\ClientModel\DocumentPageSizeDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -224,7 +224,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets image
      *
-     * @return \Swagger\Client\Model\ImageRestriction
+     * @return \Docstudio\ClientModel\ImageRestriction
      */
     public function getImage()
     {
@@ -234,7 +234,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets image
      *
-     * @param \Swagger\Client\Model\ImageRestriction $image image
+     * @param \Docstudio\ClientModel\ImageRestriction $image image
      *
      * @return $this
      */
@@ -248,7 +248,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets logo
      *
-     * @return \Swagger\Client\Model\LogoImageRestriction
+     * @return \Docstudio\ClientModel\LogoImageRestriction
      */
     public function getLogo()
     {
@@ -258,7 +258,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets logo
      *
-     * @param \Swagger\Client\Model\LogoImageRestriction $logo logo
+     * @param \Docstudio\ClientModel\LogoImageRestriction $logo logo
      *
      * @return $this
      */
@@ -320,7 +320,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets supported_page_sizes
      *
-     * @return \Swagger\Client\Model\DocumentPageSizeDTO[]
+     * @return \Docstudio\ClientModel\DocumentPageSizeDTO[]
      */
     public function getSupportedPageSizes()
     {
@@ -330,7 +330,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets supported_page_sizes
      *
-     * @param \Swagger\Client\Model\DocumentPageSizeDTO[] $supported_page_sizes supported_page_sizes
+     * @param \Docstudio\ClientModel\DocumentPageSizeDTO[] $supported_page_sizes supported_page_sizes
      *
      * @return $this
      */

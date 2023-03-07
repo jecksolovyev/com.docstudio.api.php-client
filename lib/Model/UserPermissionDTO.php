@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * UserPermissionDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class UserPermissionDTO implements ModelInterface, ArrayAccess
 'created_at' => '\DateTime',
 'status' => 'string',
 'corporate_user' => 'bool',
-'authorizations' => '\Swagger\Client\Model\UserAuthorizationDTO'    ];
+'authorizations' => '\Docstudio\ClientModel\UserAuthorizationDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -445,7 +445,7 @@ self::STATUS_DELETED,        ];
     /**
      * Gets authorizations
      *
-     * @return \Swagger\Client\Model\UserAuthorizationDTO
+     * @return \Docstudio\ClientModel\UserAuthorizationDTO
      */
     public function getAuthorizations()
     {
@@ -455,7 +455,7 @@ self::STATUS_DELETED,        ];
     /**
      * Sets authorizations
      *
-     * @param \Swagger\Client\Model\UserAuthorizationDTO $authorizations authorizations
+     * @param \Docstudio\ClientModel\UserAuthorizationDTO $authorizations authorizations
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * DictionaryResponseDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,7 +64,7 @@ class DictionaryResponseDTO implements ModelInterface, ArrayAccess
 'created_at' => '\DateTime',
 'editable' => 'bool',
 'records_count' => 'int',
-'columns' => '\Swagger\Client\Model\DictionaryColumnResponseDTO[]',
+'columns' => '\Docstudio\ClientModel\DictionaryColumnResponseDTO[]',
 'status' => 'string'    ];
 
     /**
@@ -523,7 +523,7 @@ self::STATUS_AVAILABLE,        ];
     /**
      * Gets columns
      *
-     * @return \Swagger\Client\Model\DictionaryColumnResponseDTO[]
+     * @return \Docstudio\ClientModel\DictionaryColumnResponseDTO[]
      */
     public function getColumns()
     {
@@ -533,7 +533,7 @@ self::STATUS_AVAILABLE,        ];
     /**
      * Sets columns
      *
-     * @param \Swagger\Client\Model\DictionaryColumnResponseDTO[] $columns columns
+     * @param \Docstudio\ClientModel\DictionaryColumnResponseDTO[] $columns columns
      *
      * @return $this
      */

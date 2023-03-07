@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * AuthenticationControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,11 +91,11 @@ class AuthenticationControllerApi
      *
      * Login with email/password
      *
-     * @param  \Swagger\Client\Model\LoginDTO $body body (required)
+     * @param  \Docstudio\ClientModel\LoginDTO $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LoginResponseDTO
+     * @return \Docstudio\ClientModel\LoginResponseDTO
      */
     public function login($body)
     {
@@ -108,15 +108,15 @@ class AuthenticationControllerApi
      *
      * Login with email/password
      *
-     * @param  \Swagger\Client\Model\LoginDTO $body (required)
+     * @param  \Docstudio\ClientModel\LoginDTO $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LoginResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\LoginResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function loginWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\LoginResponseDTO';
+        $returnType = '\Docstudio\ClientModel\LoginResponseDTO';
         $request = $this->loginRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class AuthenticationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LoginResponseDTO',
+                        '\Docstudio\ClientModel\LoginResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -183,7 +183,7 @@ class AuthenticationControllerApi
      *
      * Login with email/password
      *
-     * @param  \Swagger\Client\Model\LoginDTO $body (required)
+     * @param  \Docstudio\ClientModel\LoginDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -203,14 +203,14 @@ class AuthenticationControllerApi
      *
      * Login with email/password
      *
-     * @param  \Swagger\Client\Model\LoginDTO $body (required)
+     * @param  \Docstudio\ClientModel\LoginDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function loginAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\LoginResponseDTO';
+        $returnType = '\Docstudio\ClientModel\LoginResponseDTO';
         $request = $this->loginRequest($body);
 
         return $this->client
@@ -253,7 +253,7 @@ class AuthenticationControllerApi
     /**
      * Create request for operation 'login'
      *
-     * @param  \Swagger\Client\Model\LoginDTO $body (required)
+     * @param  \Docstudio\ClientModel\LoginDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -348,11 +348,11 @@ class AuthenticationControllerApi
      *
      * Login with the code from email (for non-existing user)
      *
-     * @param  \Swagger\Client\Model\UserCreateByCodeDTO $body body (required)
+     * @param  \Docstudio\ClientModel\UserCreateByCodeDTO $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LoginEnvelopeResponseDTO
+     * @return \Docstudio\ClientModel\LoginEnvelopeResponseDTO
      */
     public function loginByCode($body)
     {
@@ -365,15 +365,15 @@ class AuthenticationControllerApi
      *
      * Login with the code from email (for non-existing user)
      *
-     * @param  \Swagger\Client\Model\UserCreateByCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\UserCreateByCodeDTO $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LoginEnvelopeResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\LoginEnvelopeResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function loginByCodeWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\LoginEnvelopeResponseDTO';
+        $returnType = '\Docstudio\ClientModel\LoginEnvelopeResponseDTO';
         $request = $this->loginByCodeRequest($body);
 
         try {
@@ -425,7 +425,7 @@ class AuthenticationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LoginEnvelopeResponseDTO',
+                        '\Docstudio\ClientModel\LoginEnvelopeResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -440,7 +440,7 @@ class AuthenticationControllerApi
      *
      * Login with the code from email (for non-existing user)
      *
-     * @param  \Swagger\Client\Model\UserCreateByCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\UserCreateByCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -460,14 +460,14 @@ class AuthenticationControllerApi
      *
      * Login with the code from email (for non-existing user)
      *
-     * @param  \Swagger\Client\Model\UserCreateByCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\UserCreateByCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function loginByCodeAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\LoginEnvelopeResponseDTO';
+        $returnType = '\Docstudio\ClientModel\LoginEnvelopeResponseDTO';
         $request = $this->loginByCodeRequest($body);
 
         return $this->client
@@ -510,7 +510,7 @@ class AuthenticationControllerApi
     /**
      * Create request for operation 'loginByCode'
      *
-     * @param  \Swagger\Client\Model\UserCreateByCodeDTO $body (required)
+     * @param  \Docstudio\ClientModel\UserCreateByCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -606,7 +606,7 @@ class AuthenticationControllerApi
      * Logout
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -621,7 +621,7 @@ class AuthenticationControllerApi
      * Logout
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -817,9 +817,9 @@ class AuthenticationControllerApi
      *
      * @param  string $the_invitation_code the_invitation_code (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LoginCheckResponseDTO
+     * @return \Docstudio\ClientModel\LoginCheckResponseDTO
      */
     public function userExistsByCode($the_invitation_code)
     {
@@ -834,13 +834,13 @@ class AuthenticationControllerApi
      *
      * @param  string $the_invitation_code (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LoginCheckResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\LoginCheckResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function userExistsByCodeWithHttpInfo($the_invitation_code)
     {
-        $returnType = '\Swagger\Client\Model\LoginCheckResponseDTO';
+        $returnType = '\Docstudio\ClientModel\LoginCheckResponseDTO';
         $request = $this->userExistsByCodeRequest($the_invitation_code);
 
         try {
@@ -892,7 +892,7 @@ class AuthenticationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LoginCheckResponseDTO',
+                        '\Docstudio\ClientModel\LoginCheckResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -934,7 +934,7 @@ class AuthenticationControllerApi
      */
     public function userExistsByCodeAsyncWithHttpInfo($the_invitation_code)
     {
-        $returnType = '\Swagger\Client\Model\LoginCheckResponseDTO';
+        $returnType = '\Docstudio\ClientModel\LoginCheckResponseDTO';
         $request = $this->userExistsByCodeRequest($the_invitation_code);
 
         return $this->client

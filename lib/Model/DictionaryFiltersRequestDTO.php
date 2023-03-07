@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * DictionaryFiltersRequestDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class DictionaryFiltersRequestDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'filters' => '\Swagger\Client\Model\FilterDTO[]'    ];
+        'filters' => '\Docstudio\ClientModel\FilterDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -199,7 +199,7 @@ class DictionaryFiltersRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Gets filters
      *
-     * @return \Swagger\Client\Model\FilterDTO[]
+     * @return \Docstudio\ClientModel\FilterDTO[]
      */
     public function getFilters()
     {
@@ -209,7 +209,7 @@ class DictionaryFiltersRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \Swagger\Client\Model\FilterDTO[] $filters filters
+     * @param \Docstudio\ClientModel\FilterDTO[] $filters filters
      *
      * @return $this
      */

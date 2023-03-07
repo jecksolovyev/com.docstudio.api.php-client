@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * ReportUsersRequestDTO Class Doc Comment
  *
  * @category Class
  * @description uuids or search parameters have to specified separately
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class ReportUsersRequestDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'uuids' => 'string[]',
-'search_params' => '\Swagger\Client\Model\UsersSearchFilterDTO'    ];
+'search_params' => '\Docstudio\ClientModel\UsersSearchFilterDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -230,7 +230,7 @@ class ReportUsersRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Gets search_params
      *
-     * @return \Swagger\Client\Model\UsersSearchFilterDTO
+     * @return \Docstudio\ClientModel\UsersSearchFilterDTO
      */
     public function getSearchParams()
     {
@@ -240,7 +240,7 @@ class ReportUsersRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Sets search_params
      *
-     * @param \Swagger\Client\Model\UsersSearchFilterDTO $search_params search_params
+     * @param \Docstudio\ClientModel\UsersSearchFilterDTO $search_params search_params
      *
      * @return $this
      */

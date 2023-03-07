@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * AccountPoliciesDTO Class Doc Comment
  *
  * @category Class
  * @description Policies map
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class AccountPoliciesDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'password_policy' => '\Swagger\Client\Model\PasswordPolicy',
-'session_policy' => '\Swagger\Client\Model\SessionPolicy'    ];
+        'password_policy' => '\Docstudio\ClientModel\PasswordPolicy',
+'session_policy' => '\Docstudio\ClientModel\SessionPolicy'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -206,7 +206,7 @@ class AccountPoliciesDTO implements ModelInterface, ArrayAccess
     /**
      * Gets password_policy
      *
-     * @return \Swagger\Client\Model\PasswordPolicy
+     * @return \Docstudio\ClientModel\PasswordPolicy
      */
     public function getPasswordPolicy()
     {
@@ -216,7 +216,7 @@ class AccountPoliciesDTO implements ModelInterface, ArrayAccess
     /**
      * Sets password_policy
      *
-     * @param \Swagger\Client\Model\PasswordPolicy $password_policy password_policy
+     * @param \Docstudio\ClientModel\PasswordPolicy $password_policy password_policy
      *
      * @return $this
      */
@@ -230,7 +230,7 @@ class AccountPoliciesDTO implements ModelInterface, ArrayAccess
     /**
      * Gets session_policy
      *
-     * @return \Swagger\Client\Model\SessionPolicy
+     * @return \Docstudio\ClientModel\SessionPolicy
      */
     public function getSessionPolicy()
     {
@@ -240,7 +240,7 @@ class AccountPoliciesDTO implements ModelInterface, ArrayAccess
     /**
      * Sets session_policy
      *
-     * @param \Swagger\Client\Model\SessionPolicy $session_policy session_policy
+     * @param \Docstudio\ClientModel\SessionPolicy $session_policy session_policy
      *
      * @return $this
      */

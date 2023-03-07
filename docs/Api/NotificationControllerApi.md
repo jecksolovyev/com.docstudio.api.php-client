@@ -1,4 +1,4 @@
-# Swagger\Client\NotificationControllerApi
+# Docstudio\Client\NotificationControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -22,11 +22,11 @@ Get account related notification preferences
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\NotificationControllerApi(
+$apiInstance = new Docstudio\Client\Api\NotificationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -70,11 +70,11 @@ Get mailbox related notification preferences
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\NotificationControllerApi(
+$apiInstance = new Docstudio\Client\Api\NotificationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUnreadNotifications**
-> \Swagger\Client\Model\PageDTOUserNotificationResponseDTO getUnreadNotifications($offset, $limit)
+> \Docstudio\ClientModel\PageDTOUserNotificationResponseDTO getUnreadNotifications($offset, $limit)
 
 Get unread notifications
 
@@ -122,11 +122,11 @@ Get unread notifications
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\NotificationControllerApi(
+$apiInstance = new Docstudio\Client\Api\NotificationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PageDTOUserNotificationResponseDTO**](../Model/PageDTOUserNotificationResponseDTO.md)
+[**\Docstudio\ClientModel\PageDTOUserNotificationResponseDTO**](../Model/PageDTOUserNotificationResponseDTO.md)
 
 ### Authorization
 
@@ -176,11 +176,11 @@ Mark notifications as read
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\NotificationControllerApi(
+$apiInstance = new Docstudio\Client\Api\NotificationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -223,17 +223,17 @@ Mark notifications as read
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\NotificationControllerApi(
+$apiInstance = new Docstudio\Client\Api\NotificationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \Swagger\Client\Model\SingleUuidDTO()); // \Swagger\Client\Model\SingleUuidDTO[] | 
+$body = array(new \Docstudio\ClientModel\SingleUuidDTO()); // \Docstudio\ClientModel\SingleUuidDTO[] | 
 
 try {
     $apiInstance->markNotificationRead($body);
@@ -247,7 +247,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  |
 
 ### Return type
 
@@ -274,17 +274,17 @@ Save account related notification preferences
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\NotificationControllerApi(
+$apiInstance = new Docstudio\Client\Api\NotificationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\map(); // map[string,int[]] | 
+$body = new \Docstudio\ClientModel\map(); // map[string,int[]] | 
 
 try {
     $apiInstance->saveAccountPreferences($body);
@@ -325,17 +325,17 @@ Save mailbox related notification preferences
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\NotificationControllerApi(
+$apiInstance = new Docstudio\Client\Api\NotificationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\map(); // map[string,int[]] | 
+$body = new \Docstudio\ClientModel\map(); // map[string,int[]] | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 
 try {

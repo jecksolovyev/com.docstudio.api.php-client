@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * SettingsDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,20 +59,20 @@ class SettingsDTO implements ModelInterface, ArrayAccess
         'build_version' => 'string',
 'application_name' => 'string',
 'theme' => 'string',
-'links' => '\Swagger\Client\Model\AppLinks',
-'locales' => '\Swagger\Client\Model\AppLocales',
+'links' => '\Docstudio\ClientModel\AppLinks',
+'locales' => '\Docstudio\ClientModel\AppLocales',
 'test_mode' => 'bool',
-'envelope' => '\Swagger\Client\Model\EnvelopeRestrictions',
-'template' => '\Swagger\Client\Model\TemplateRestriction',
-'user' => '\Swagger\Client\Model\UserProperties',
-'page_scripts' => '\Swagger\Client\Model\AppPageScripts',
-'chunk_upload' => '\Swagger\Client\Model\ChunkUploadProps',
-'crypto' => '\Swagger\Client\Model\CryptoProperties',
-'logos_properties' => '\Swagger\Client\Model\LogosProperties',
-'email_properties' => '\Swagger\Client\Model\EmailProperties',
-'billing' => '\Swagger\Client\Model\BillingProperties',
-'sso' => '\Swagger\Client\Model\SsoProperties',
-'geolocation' => '\Swagger\Client\Model\GeolocationProperties',
+'envelope' => '\Docstudio\ClientModel\EnvelopeRestrictions',
+'template' => '\Docstudio\ClientModel\TemplateRestriction',
+'user' => '\Docstudio\ClientModel\UserProperties',
+'page_scripts' => '\Docstudio\ClientModel\AppPageScripts',
+'chunk_upload' => '\Docstudio\ClientModel\ChunkUploadProps',
+'crypto' => '\Docstudio\ClientModel\CryptoProperties',
+'logos_properties' => '\Docstudio\ClientModel\LogosProperties',
+'email_properties' => '\Docstudio\ClientModel\EmailProperties',
+'billing' => '\Docstudio\ClientModel\BillingProperties',
+'sso' => '\Docstudio\ClientModel\SsoProperties',
+'geolocation' => '\Docstudio\ClientModel\GeolocationProperties',
 'google_maps_api_key' => 'string'    ];
 
     /**
@@ -373,7 +373,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets links
      *
-     * @return \Swagger\Client\Model\AppLinks
+     * @return \Docstudio\ClientModel\AppLinks
      */
     public function getLinks()
     {
@@ -383,7 +383,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets links
      *
-     * @param \Swagger\Client\Model\AppLinks $links links
+     * @param \Docstudio\ClientModel\AppLinks $links links
      *
      * @return $this
      */
@@ -397,7 +397,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets locales
      *
-     * @return \Swagger\Client\Model\AppLocales
+     * @return \Docstudio\ClientModel\AppLocales
      */
     public function getLocales()
     {
@@ -407,7 +407,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets locales
      *
-     * @param \Swagger\Client\Model\AppLocales $locales locales
+     * @param \Docstudio\ClientModel\AppLocales $locales locales
      *
      * @return $this
      */
@@ -445,7 +445,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets envelope
      *
-     * @return \Swagger\Client\Model\EnvelopeRestrictions
+     * @return \Docstudio\ClientModel\EnvelopeRestrictions
      */
     public function getEnvelope()
     {
@@ -455,7 +455,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets envelope
      *
-     * @param \Swagger\Client\Model\EnvelopeRestrictions $envelope envelope
+     * @param \Docstudio\ClientModel\EnvelopeRestrictions $envelope envelope
      *
      * @return $this
      */
@@ -469,7 +469,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets template
      *
-     * @return \Swagger\Client\Model\TemplateRestriction
+     * @return \Docstudio\ClientModel\TemplateRestriction
      */
     public function getTemplate()
     {
@@ -479,7 +479,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets template
      *
-     * @param \Swagger\Client\Model\TemplateRestriction $template template
+     * @param \Docstudio\ClientModel\TemplateRestriction $template template
      *
      * @return $this
      */
@@ -493,7 +493,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets user
      *
-     * @return \Swagger\Client\Model\UserProperties
+     * @return \Docstudio\ClientModel\UserProperties
      */
     public function getUser()
     {
@@ -503,7 +503,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets user
      *
-     * @param \Swagger\Client\Model\UserProperties $user user
+     * @param \Docstudio\ClientModel\UserProperties $user user
      *
      * @return $this
      */
@@ -517,7 +517,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets page_scripts
      *
-     * @return \Swagger\Client\Model\AppPageScripts
+     * @return \Docstudio\ClientModel\AppPageScripts
      */
     public function getPageScripts()
     {
@@ -527,7 +527,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets page_scripts
      *
-     * @param \Swagger\Client\Model\AppPageScripts $page_scripts page_scripts
+     * @param \Docstudio\ClientModel\AppPageScripts $page_scripts page_scripts
      *
      * @return $this
      */
@@ -541,7 +541,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets chunk_upload
      *
-     * @return \Swagger\Client\Model\ChunkUploadProps
+     * @return \Docstudio\ClientModel\ChunkUploadProps
      */
     public function getChunkUpload()
     {
@@ -551,7 +551,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets chunk_upload
      *
-     * @param \Swagger\Client\Model\ChunkUploadProps $chunk_upload chunk_upload
+     * @param \Docstudio\ClientModel\ChunkUploadProps $chunk_upload chunk_upload
      *
      * @return $this
      */
@@ -565,7 +565,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets crypto
      *
-     * @return \Swagger\Client\Model\CryptoProperties
+     * @return \Docstudio\ClientModel\CryptoProperties
      */
     public function getCrypto()
     {
@@ -575,7 +575,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets crypto
      *
-     * @param \Swagger\Client\Model\CryptoProperties $crypto crypto
+     * @param \Docstudio\ClientModel\CryptoProperties $crypto crypto
      *
      * @return $this
      */
@@ -589,7 +589,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets logos_properties
      *
-     * @return \Swagger\Client\Model\LogosProperties
+     * @return \Docstudio\ClientModel\LogosProperties
      */
     public function getLogosProperties()
     {
@@ -599,7 +599,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets logos_properties
      *
-     * @param \Swagger\Client\Model\LogosProperties $logos_properties logos_properties
+     * @param \Docstudio\ClientModel\LogosProperties $logos_properties logos_properties
      *
      * @return $this
      */
@@ -613,7 +613,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets email_properties
      *
-     * @return \Swagger\Client\Model\EmailProperties
+     * @return \Docstudio\ClientModel\EmailProperties
      */
     public function getEmailProperties()
     {
@@ -623,7 +623,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets email_properties
      *
-     * @param \Swagger\Client\Model\EmailProperties $email_properties email_properties
+     * @param \Docstudio\ClientModel\EmailProperties $email_properties email_properties
      *
      * @return $this
      */
@@ -637,7 +637,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets billing
      *
-     * @return \Swagger\Client\Model\BillingProperties
+     * @return \Docstudio\ClientModel\BillingProperties
      */
     public function getBilling()
     {
@@ -647,7 +647,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets billing
      *
-     * @param \Swagger\Client\Model\BillingProperties $billing billing
+     * @param \Docstudio\ClientModel\BillingProperties $billing billing
      *
      * @return $this
      */
@@ -661,7 +661,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets sso
      *
-     * @return \Swagger\Client\Model\SsoProperties
+     * @return \Docstudio\ClientModel\SsoProperties
      */
     public function getSso()
     {
@@ -671,7 +671,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets sso
      *
-     * @param \Swagger\Client\Model\SsoProperties $sso sso
+     * @param \Docstudio\ClientModel\SsoProperties $sso sso
      *
      * @return $this
      */
@@ -685,7 +685,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets geolocation
      *
-     * @return \Swagger\Client\Model\GeolocationProperties
+     * @return \Docstudio\ClientModel\GeolocationProperties
      */
     public function getGeolocation()
     {
@@ -695,7 +695,7 @@ class SettingsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets geolocation
      *
-     * @param \Swagger\Client\Model\GeolocationProperties $geolocation geolocation
+     * @param \Docstudio\ClientModel\GeolocationProperties $geolocation geolocation
      *
      * @return $this
      */

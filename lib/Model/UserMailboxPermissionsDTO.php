@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * UserMailboxPermissionsDTO Class Doc Comment
  *
  * @category Class
  * @description Data records
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class UserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => '\Swagger\Client\Model\UserPermissionDTO',
-'mailboxes' => '\Swagger\Client\Model\MailboxRolePermissionDTO[]'    ];
+        'user' => '\Docstudio\ClientModel\UserPermissionDTO',
+'mailboxes' => '\Docstudio\ClientModel\MailboxRolePermissionDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -206,7 +206,7 @@ class UserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets user
      *
-     * @return \Swagger\Client\Model\UserPermissionDTO
+     * @return \Docstudio\ClientModel\UserPermissionDTO
      */
     public function getUser()
     {
@@ -216,7 +216,7 @@ class UserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets user
      *
-     * @param \Swagger\Client\Model\UserPermissionDTO $user user
+     * @param \Docstudio\ClientModel\UserPermissionDTO $user user
      *
      * @return $this
      */
@@ -230,7 +230,7 @@ class UserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets mailboxes
      *
-     * @return \Swagger\Client\Model\MailboxRolePermissionDTO[]
+     * @return \Docstudio\ClientModel\MailboxRolePermissionDTO[]
      */
     public function getMailboxes()
     {
@@ -240,7 +240,7 @@ class UserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets mailboxes
      *
-     * @param \Swagger\Client\Model\MailboxRolePermissionDTO[] $mailboxes mailboxes
+     * @param \Docstudio\ClientModel\MailboxRolePermissionDTO[] $mailboxes mailboxes
      *
      * @return $this
      */

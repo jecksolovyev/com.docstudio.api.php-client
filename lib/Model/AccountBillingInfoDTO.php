@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * AccountBillingInfoDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,11 +56,11 @@ class AccountBillingInfoDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'tariffs' => '\Swagger\Client\Model\AccountBillingTariffInfoDTO[]',
+        'tariffs' => '\Docstudio\ClientModel\AccountBillingTariffInfoDTO[]',
 'balance' => 'int',
 'currency' => 'string',
-'counters' => '\Swagger\Client\Model\AccountBillingCounterValueDTO[]',
-'events' => '\Swagger\Client\Model\AccountBillingEventDTO[]'    ];
+'counters' => '\Docstudio\ClientModel\AccountBillingCounterValueDTO[]',
+'events' => '\Docstudio\ClientModel\AccountBillingEventDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -223,7 +223,7 @@ class AccountBillingInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets tariffs
      *
-     * @return \Swagger\Client\Model\AccountBillingTariffInfoDTO[]
+     * @return \Docstudio\ClientModel\AccountBillingTariffInfoDTO[]
      */
     public function getTariffs()
     {
@@ -233,7 +233,7 @@ class AccountBillingInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets tariffs
      *
-     * @param \Swagger\Client\Model\AccountBillingTariffInfoDTO[] $tariffs Tariffs
+     * @param \Docstudio\ClientModel\AccountBillingTariffInfoDTO[] $tariffs Tariffs
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class AccountBillingInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets counters
      *
-     * @return \Swagger\Client\Model\AccountBillingCounterValueDTO[]
+     * @return \Docstudio\ClientModel\AccountBillingCounterValueDTO[]
      */
     public function getCounters()
     {
@@ -305,7 +305,7 @@ class AccountBillingInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets counters
      *
-     * @param \Swagger\Client\Model\AccountBillingCounterValueDTO[] $counters Counters
+     * @param \Docstudio\ClientModel\AccountBillingCounterValueDTO[] $counters Counters
      *
      * @return $this
      */
@@ -319,7 +319,7 @@ class AccountBillingInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets events
      *
-     * @return \Swagger\Client\Model\AccountBillingEventDTO[]
+     * @return \Docstudio\ClientModel\AccountBillingEventDTO[]
      */
     public function getEvents()
     {
@@ -329,7 +329,7 @@ class AccountBillingInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets events
      *
-     * @param \Swagger\Client\Model\AccountBillingEventDTO[] $events Events
+     * @param \Docstudio\ClientModel\AccountBillingEventDTO[] $events Events
      *
      * @return $this
      */

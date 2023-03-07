@@ -1,4 +1,4 @@
-# Swagger\Client\TemplateControllerApi
+# Docstudio\Client\TemplateControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -33,11 +33,11 @@ Make template archived
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,7 +77,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **callClone**
-> \Swagger\Client\Model\FullTemplateResponseDTO callClone($uuid, $mailbox)
+> \Docstudio\ClientModel\FullTemplateResponseDTO callClone($uuid, $mailbox)
 
 Clone template
 
@@ -86,11 +86,11 @@ Clone template
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
+[**\Docstudio\ClientModel\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
 
 ### Authorization
 
@@ -140,11 +140,11 @@ Check template exists by UUID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -184,7 +184,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **create**
-> \Swagger\Client\Model\FullTemplateResponseDTO create($body, $mailbox)
+> \Docstudio\ClientModel\FullTemplateResponseDTO create($body, $mailbox)
 
 Create new template
 
@@ -193,17 +193,17 @@ Create new template
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\TemplateCreateDTO(); // \Swagger\Client\Model\TemplateCreateDTO | 
+$body = new \Docstudio\ClientModel\TemplateCreateDTO(); // \Docstudio\ClientModel\TemplateCreateDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -219,12 +219,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\TemplateCreateDTO**](../Model/TemplateCreateDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\TemplateCreateDTO**](../Model/TemplateCreateDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
+[**\Docstudio\ClientModel\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
 
 ### Authorization
 
@@ -247,11 +247,11 @@ Delete share code for template
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -300,11 +300,11 @@ Download template image
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecentlyUsedTemplates**
-> \Swagger\Client\Model\RecentlyUsedTemplateResponseDTO[] getRecentlyUsedTemplates($mailbox)
+> \Docstudio\ClientModel\RecentlyUsedTemplateResponseDTO[] getRecentlyUsedTemplates($mailbox)
 
 Get up to 10 recently used templates
 
@@ -358,11 +358,11 @@ Get up to 10 recently used templates
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RecentlyUsedTemplateResponseDTO[]**](../Model/RecentlyUsedTemplateResponseDTO.md)
+[**\Docstudio\ClientModel\RecentlyUsedTemplateResponseDTO[]**](../Model/RecentlyUsedTemplateResponseDTO.md)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRecommendedTemplates**
-> \Swagger\Client\Model\RecommendedTemplateResponseDTO[] getRecommendedTemplates()
+> \Docstudio\ClientModel\RecommendedTemplateResponseDTO[] getRecommendedTemplates()
 
 Get up to 4 recommended templates
 
@@ -410,11 +410,11 @@ Get up to 4 recommended templates
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -435,7 +435,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\RecommendedTemplateResponseDTO[]**](../Model/RecommendedTemplateResponseDTO.md)
+[**\Docstudio\ClientModel\RecommendedTemplateResponseDTO[]**](../Model/RecommendedTemplateResponseDTO.md)
 
 ### Authorization
 
@@ -449,7 +449,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getShareCode**
-> \Swagger\Client\Model\SharedCodeDTO getShareCode($uuid, $mailbox, $generate)
+> \Docstudio\ClientModel\SharedCodeDTO getShareCode($uuid, $mailbox, $generate)
 
 Retrieve share code for template
 
@@ -458,11 +458,11 @@ Retrieve share code for template
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -491,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SharedCodeDTO**](../Model/SharedCodeDTO.md)
+[**\Docstudio\ClientModel\SharedCodeDTO**](../Model/SharedCodeDTO.md)
 
 ### Authorization
 
@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTemplateByShareCode**
-> \Swagger\Client\Model\FullTemplateResponseDTO getTemplateByShareCode($code)
+> \Docstudio\ClientModel\FullTemplateResponseDTO getTemplateByShareCode($code)
 
 Retrieve template by share code
 
@@ -514,11 +514,11 @@ Retrieve template by share code
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -543,7 +543,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
+[**\Docstudio\ClientModel\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
 
 ### Authorization
 
@@ -557,7 +557,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTemplateByUuid**
-> \Swagger\Client\Model\FullTemplateResponseDTO getTemplateByUuid($uuid, $mailbox, $template_version)
+> \Docstudio\ClientModel\FullTemplateResponseDTO getTemplateByUuid($uuid, $mailbox, $template_version)
 
 Retrieve template by UUID
 
@@ -566,11 +566,11 @@ Retrieve template by UUID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -599,7 +599,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
+[**\Docstudio\ClientModel\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
 
 ### Authorization
 
@@ -613,7 +613,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTemplateVersionsByUuid**
-> \Swagger\Client\Model\PageDTODataMap getTemplateVersionsByUuid($uuid, $mailbox, $offset, $limit, $version_uuid)
+> \Docstudio\ClientModel\PageDTODataMap getTemplateVersionsByUuid($uuid, $mailbox, $offset, $limit, $version_uuid)
 
 Retrieve template versions by UUID
 
@@ -622,11 +622,11 @@ Retrieve template versions by UUID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -659,7 +659,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PageDTODataMap**](../Model/PageDTODataMap.md)
+[**\Docstudio\ClientModel\PageDTODataMap**](../Model/PageDTODataMap.md)
 
 ### Authorization
 
@@ -673,7 +673,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchTemplates**
-> \Swagger\Client\Model\PageDTOSearchTemplateDTO searchTemplates($mailbox, $level, $keyword, $category, $extended, $offset, $limit)
+> \Docstudio\ClientModel\PageDTOSearchTemplateDTO searchTemplates($mailbox, $level, $keyword, $category, $extended, $offset, $limit)
 
 Get paged templates list
 
@@ -682,11 +682,11 @@ Get paged templates list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -723,7 +723,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PageDTOSearchTemplateDTO**](../Model/PageDTOSearchTemplateDTO.md)
+[**\Docstudio\ClientModel\PageDTOSearchTemplateDTO**](../Model/PageDTOSearchTemplateDTO.md)
 
 ### Authorization
 
@@ -737,7 +737,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **update**
-> \Swagger\Client\Model\FullTemplateResponseDTO update($body, $mailbox, $uuid)
+> \Docstudio\ClientModel\FullTemplateResponseDTO update($body, $mailbox, $uuid)
 
 Update template in DB. Category in template could be null.
 
@@ -746,17 +746,17 @@ Update template in DB. Category in template could be null.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\TemplateCreateDTO(); // \Swagger\Client\Model\TemplateCreateDTO | 
+$body = new \Docstudio\ClientModel\TemplateCreateDTO(); // \Docstudio\ClientModel\TemplateCreateDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Template uuid
 
@@ -773,13 +773,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\TemplateCreateDTO**](../Model/TemplateCreateDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\TemplateCreateDTO**](../Model/TemplateCreateDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **uuid** | [**string**](../Model/.md)| Template uuid |
 
 ### Return type
 
-[**\Swagger\Client\Model\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
+[**\Docstudio\ClientModel\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
 
 ### Authorization
 
@@ -802,11 +802,11 @@ Update categories in template.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -857,11 +857,11 @@ Update name in template.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -903,7 +903,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uploadImage**
-> \Swagger\Client\Model\UploadedImageDTO uploadImage($mailbox, $file)
+> \Docstudio\ClientModel\UploadedImageDTO uploadImage($mailbox, $file)
 
 Upload new image
 
@@ -912,11 +912,11 @@ Upload new image
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -943,7 +943,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UploadedImageDTO**](../Model/UploadedImageDTO.md)
+[**\Docstudio\ClientModel\UploadedImageDTO**](../Model/UploadedImageDTO.md)
 
 ### Authorization
 
@@ -957,7 +957,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **validateTemplate**
-> \Swagger\Client\Model\TemplateValidateResponseDTO validateTemplate($mailbox, $template_uuid, $version_uuid)
+> \Docstudio\ClientModel\TemplateValidateResponseDTO validateTemplate($mailbox, $template_uuid, $version_uuid)
 
 Validate template by UUID or version
 
@@ -966,11 +966,11 @@ Validate template by UUID or version
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TemplateControllerApi(
+$apiInstance = new Docstudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -999,7 +999,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TemplateValidateResponseDTO**](../Model/TemplateValidateResponseDTO.md)
+[**\Docstudio\ClientModel\TemplateValidateResponseDTO**](../Model/TemplateValidateResponseDTO.md)
 
 ### Authorization
 

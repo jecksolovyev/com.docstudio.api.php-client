@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * MailboxSimpleDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class MailboxSimpleDTO implements ModelInterface, ArrayAccess
         'name' => 'string',
 'created_at' => '\DateTime',
 'uuid' => 'string',
-'user_permissions' => '\Swagger\Client\Model\UserPermissionDTO[]'    ];
+'user_permissions' => '\Docstudio\ClientModel\UserPermissionDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class MailboxSimpleDTO implements ModelInterface, ArrayAccess
     /**
      * Gets user_permissions
      *
-     * @return \Swagger\Client\Model\UserPermissionDTO[]
+     * @return \Docstudio\ClientModel\UserPermissionDTO[]
      */
     public function getUserPermissions()
     {
@@ -299,7 +299,7 @@ class MailboxSimpleDTO implements ModelInterface, ArrayAccess
     /**
      * Sets user_permissions
      *
-     * @param \Swagger\Client\Model\UserPermissionDTO[] $user_permissions user_permissions
+     * @param \Docstudio\ClientModel\UserPermissionDTO[] $user_permissions user_permissions
      *
      * @return $this
      */

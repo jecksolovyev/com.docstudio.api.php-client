@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * NotificationControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,7 +92,7 @@ class NotificationControllerApi
      * Get account related notification preferences
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return map[string,int[]]
      */
@@ -108,7 +108,7 @@ class NotificationControllerApi
      * Get account related notification preferences
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of map[string,int[]], HTTP status code, HTTP response headers (array of strings)
      */
@@ -340,7 +340,7 @@ class NotificationControllerApi
      *
      * @param  string $mailbox mailbox (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return map[string,int[]]
      */
@@ -357,7 +357,7 @@ class NotificationControllerApi
      *
      * @param  string $mailbox (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of map[string,int[]], HTTP status code, HTTP response headers (array of strings)
      */
@@ -597,9 +597,9 @@ class NotificationControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTOUserNotificationResponseDTO
+     * @return \Docstudio\ClientModel\PageDTOUserNotificationResponseDTO
      */
     public function getUnreadNotifications($offset = '0', $limit = '25')
     {
@@ -615,13 +615,13 @@ class NotificationControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTOUserNotificationResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTOUserNotificationResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUnreadNotificationsWithHttpInfo($offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOUserNotificationResponseDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOUserNotificationResponseDTO';
         $request = $this->getUnreadNotificationsRequest($offset, $limit);
 
         try {
@@ -673,7 +673,7 @@ class NotificationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTOUserNotificationResponseDTO',
+                        '\Docstudio\ClientModel\PageDTOUserNotificationResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -717,7 +717,7 @@ class NotificationControllerApi
      */
     public function getUnreadNotificationsAsyncWithHttpInfo($offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTOUserNotificationResponseDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTOUserNotificationResponseDTO';
         $request = $this->getUnreadNotificationsRequest($offset, $limit);
 
         return $this->client
@@ -860,7 +860,7 @@ class NotificationControllerApi
      * Mark notifications as read
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -875,7 +875,7 @@ class NotificationControllerApi
      * Mark notifications as read
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1069,9 +1069,9 @@ class NotificationControllerApi
      *
      * Mark notifications as read
      *
-     * @param  \Swagger\Client\Model\SingleUuidDTO[] $body body (required)
+     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1085,9 +1085,9 @@ class NotificationControllerApi
      *
      * Mark notifications as read
      *
-     * @param  \Swagger\Client\Model\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1138,7 +1138,7 @@ class NotificationControllerApi
      *
      * Mark notifications as read
      *
-     * @param  \Swagger\Client\Model\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1158,7 +1158,7 @@ class NotificationControllerApi
      *
      * Mark notifications as read
      *
-     * @param  \Swagger\Client\Model\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1194,7 +1194,7 @@ class NotificationControllerApi
     /**
      * Create request for operation 'markNotificationRead'
      *
-     * @param  \Swagger\Client\Model\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1295,7 +1295,7 @@ class NotificationControllerApi
      *
      * @param  map[string,int[]] $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1311,7 +1311,7 @@ class NotificationControllerApi
      *
      * @param  map[string,int[]] $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1520,7 +1520,7 @@ class NotificationControllerApi
      * @param  map[string,int[]] $body body (required)
      * @param  string $mailbox mailbox (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1537,7 +1537,7 @@ class NotificationControllerApi
      * @param  map[string,int[]] $body (required)
      * @param  string $mailbox (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **created_at** | [**\DateTime**](\DateTime.md) | User creation date | [optional] 
 **status** | **string** | Current status of user | [optional] 
 **corporate_user** | **bool** | Is user corporate | [optional] 
-**authorizations** | [**\Swagger\Client\Model\UserAuthorizationDTO**](UserAuthorizationDTO.md) |  | [optional] 
+**authorizations** | [**\Docstudio\ClientModel\UserAuthorizationDTO**](UserAuthorizationDTO.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

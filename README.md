@@ -57,14 +57,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Swagger\Client\Api\AccountBillingControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
-$type = new \Swagger\Client\Model\BillingEventType(); // \Swagger\Client\Model\BillingEventType | 
+$type = new \Docstudio\ClientModel\BillingEventType(); // \Docstudio\ClientModel\BillingEventType | 
 $action = "action_example"; // string | 
 
 try {
@@ -74,7 +74,7 @@ try {
 }
 
 
-$apiInstance = new Swagger\Client\Api\AccountBillingControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -92,7 +92,7 @@ try {
 }
 
 
-$apiInstance = new Swagger\Client\Api\AccountBillingControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -108,7 +108,7 @@ try {
 }
 
 
-$apiInstance = new Swagger\Client\Api\AccountBillingControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -125,7 +125,7 @@ try {
 }
 
 
-$apiInstance = new Swagger\Client\Api\AccountBillingControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -143,7 +143,7 @@ try {
 }
 
 
-$apiInstance = new Swagger\Client\Api\AccountBillingControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -159,13 +159,13 @@ try {
 }
 
 
-$apiInstance = new Swagger\Client\Api\AccountBillingControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\BillingPaymentDTO(); // \Swagger\Client\Model\BillingPaymentDTO | 
+$body = new \Docstudio\ClientModel\BillingPaymentDTO(); // \Docstudio\ClientModel\BillingPaymentDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 
 try {
@@ -176,13 +176,13 @@ try {
 }
 
 
-$apiInstance = new Swagger\Client\Api\AccountBillingControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ReplaceAccountTariffDTO(); // \Swagger\Client\Model\ReplaceAccountTariffDTO | 
+$body = new \Docstudio\ClientModel\ReplaceAccountTariffDTO(); // \Docstudio\ClientModel\ReplaceAccountTariffDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 
 try {

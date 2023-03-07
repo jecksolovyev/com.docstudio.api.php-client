@@ -1,4 +1,4 @@
-# Swagger\Client\DictionaryControllerApi
+# Docstudio\Client\DictionaryControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -34,11 +34,11 @@ Archive dictionary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -78,7 +78,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **checkColumnValues**
-> \Swagger\Client\Model\DictionaryCheckResponseDTO checkColumnValues($dictionary_uuid, $column_uuid, $mailbox)
+> \Docstudio\ClientModel\DictionaryCheckResponseDTO checkColumnValues($dictionary_uuid, $column_uuid, $mailbox)
 
 Check dictionary column. Check access, existence, etc.
 
@@ -87,11 +87,11 @@ Check dictionary column. Check access, existence, etc.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DictionaryCheckResponseDTO**](../Model/DictionaryCheckResponseDTO.md)
+[**\Docstudio\ClientModel\DictionaryCheckResponseDTO**](../Model/DictionaryCheckResponseDTO.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **checkDictionary**
-> \Swagger\Client\Model\DictionaryCheckResponseDTO checkDictionary($dictionary_uuid, $mailbox)
+> \Docstudio\ClientModel\DictionaryCheckResponseDTO checkDictionary($dictionary_uuid, $mailbox)
 
 Check dictionary. Check access, existence, etc.
 
@@ -143,11 +143,11 @@ Check dictionary. Check access, existence, etc.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DictionaryCheckResponseDTO**](../Model/DictionaryCheckResponseDTO.md)
+[**\Docstudio\ClientModel\DictionaryCheckResponseDTO**](../Model/DictionaryCheckResponseDTO.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createColumn**
-> \Swagger\Client\Model\SingleUuidDTO createColumn($body, $mailbox, $dictionary_uuid)
+> \Docstudio\ClientModel\SingleUuidDTO createColumn($body, $mailbox, $dictionary_uuid)
 
 Create dictionary column
 
@@ -197,17 +197,17 @@ Create dictionary column
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\DictionaryColumnRequestDTO(); // \Swagger\Client\Model\DictionaryColumnRequestDTO | 
+$body = new \Docstudio\ClientModel\DictionaryColumnRequestDTO(); // \Docstudio\ClientModel\DictionaryColumnRequestDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
 
@@ -224,13 +224,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\DictionaryColumnRequestDTO**](../Model/DictionaryColumnRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\DictionaryColumnRequestDTO**](../Model/DictionaryColumnRequestDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createDictionary**
-> \Swagger\Client\Model\SingleUuidDTO createDictionary($mailbox)
+> \Docstudio\ClientModel\SingleUuidDTO createDictionary($mailbox)
 
 Create empty dictionary
 
@@ -253,11 +253,11 @@ Create empty dictionary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createRecord**
-> \Swagger\Client\Model\CreateRecordsResponseDTO createRecord($body, $mailbox, $dictionary_uuid)
+> \Docstudio\ClientModel\CreateRecordsResponseDTO createRecord($body, $mailbox, $dictionary_uuid)
 
 Create record(s)
 
@@ -305,17 +305,17 @@ Create record(s)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \Swagger\Client\Model\array()); // \Swagger\Client\Model\DictionaryColumnValueRequestDTO[][] | 
+$body = array(new \Docstudio\ClientModel\array()); // \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[][] | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
 
@@ -332,13 +332,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\DictionaryColumnValueRequestDTO[][]**](../Model/array.md)|  |
+ **body** | [**\Docstudio\ClientModel\DictionaryColumnValueRequestDTO[][]**](../Model/array.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\CreateRecordsResponseDTO**](../Model/CreateRecordsResponseDTO.md)
+[**\Docstudio\ClientModel\CreateRecordsResponseDTO**](../Model/CreateRecordsResponseDTO.md)
 
 ### Authorization
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteColumnDictionary**
-> \Swagger\Client\Model\SingleUuidDTO deleteColumnDictionary($dictionary_uuid, $column_uuid, $mailbox)
+> \Docstudio\ClientModel\SingleUuidDTO deleteColumnDictionary($dictionary_uuid, $column_uuid, $mailbox)
 
 Delete column. Will return deleted column UUID
 
@@ -361,11 +361,11 @@ Delete column. Will return deleted column UUID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteRecords**
-> \Swagger\Client\Model\SingleUuidDTO[] deleteRecords($body, $mailbox, $dictionary_uuid)
+> \Docstudio\ClientModel\SingleUuidDTO[] deleteRecords($body, $mailbox, $dictionary_uuid)
 
 Delete record(s). Will return deleted records UUID(s)
 
@@ -417,17 +417,17 @@ Delete record(s). Will return deleted records UUID(s)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \Swagger\Client\Model\SingleUuidDTO()); // \Swagger\Client\Model\SingleUuidDTO[] | 
+$body = array(new \Docstudio\ClientModel\SingleUuidDTO()); // \Docstudio\ClientModel\SingleUuidDTO[] | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
 
@@ -444,13 +444,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -464,7 +464,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **download**
-> \Swagger\Client\Model\ExportTaskStatusDTO download($body, $mailbox, $dictionary_uuid)
+> \Docstudio\ClientModel\ExportTaskStatusDTO download($body, $mailbox, $dictionary_uuid)
 
 Download the dictionary
 
@@ -473,17 +473,17 @@ Download the dictionary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\DictionaryDownloadParamsDTO(); // \Swagger\Client\Model\DictionaryDownloadParamsDTO | 
+$body = new \Docstudio\ClientModel\DictionaryDownloadParamsDTO(); // \Docstudio\ClientModel\DictionaryDownloadParamsDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of dictionary
 
@@ -500,13 +500,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\DictionaryDownloadParamsDTO**](../Model/DictionaryDownloadParamsDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\DictionaryDownloadParamsDTO**](../Model/DictionaryDownloadParamsDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **dictionary_uuid** | [**string**](../Model/.md)| UUID of dictionary |
 
 ### Return type
 
-[**\Swagger\Client\Model\ExportTaskStatusDTO**](../Model/ExportTaskStatusDTO.md)
+[**\Docstudio\ClientModel\ExportTaskStatusDTO**](../Model/ExportTaskStatusDTO.md)
 
 ### Authorization
 
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **downloadStatus**
-> \Swagger\Client\Model\ExportTaskStatusDTO downloadStatus($dictionary_uuid, $task_uuid, $mailbox)
+> \Docstudio\ClientModel\ExportTaskStatusDTO downloadStatus($dictionary_uuid, $task_uuid, $mailbox)
 
 Download the dictionary
 
@@ -529,11 +529,11 @@ Download the dictionary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -562,7 +562,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ExportTaskStatusDTO**](../Model/ExportTaskStatusDTO.md)
+[**\Docstudio\ClientModel\ExportTaskStatusDTO**](../Model/ExportTaskStatusDTO.md)
 
 ### Authorization
 
@@ -576,7 +576,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getColumnValue**
-> \Swagger\Client\Model\DictionaryColumnValueResponseDTO getColumnValue($dictionary_uuid, $record_uuid, $column_uuid, $mailbox)
+> \Docstudio\ClientModel\DictionaryColumnValueResponseDTO getColumnValue($dictionary_uuid, $record_uuid, $column_uuid, $mailbox)
 
 Retrieve column value for specific record
 
@@ -585,11 +585,11 @@ Retrieve column value for specific record
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -620,7 +620,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DictionaryColumnValueResponseDTO**](../Model/DictionaryColumnValueResponseDTO.md)
+[**\Docstudio\ClientModel\DictionaryColumnValueResponseDTO**](../Model/DictionaryColumnValueResponseDTO.md)
 
 ### Authorization
 
@@ -634,7 +634,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getColumnValues**
-> \Swagger\Client\Model\PageDTODictionaryColumnValueResponseDTO getColumnValues($dictionary_uuid, $column_uuid, $mailbox, $offset, $limit, $keyword)
+> \Docstudio\ClientModel\PageDTODictionaryColumnValueResponseDTO getColumnValues($dictionary_uuid, $column_uuid, $mailbox, $offset, $limit, $keyword)
 
 Retrieve column values from dictionary
 
@@ -643,11 +643,11 @@ Retrieve column values from dictionary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -682,7 +682,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PageDTODictionaryColumnValueResponseDTO**](../Model/PageDTODictionaryColumnValueResponseDTO.md)
+[**\Docstudio\ClientModel\PageDTODictionaryColumnValueResponseDTO**](../Model/PageDTODictionaryColumnValueResponseDTO.md)
 
 ### Authorization
 
@@ -696,7 +696,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDictionaryRecord**
-> \Swagger\Client\Model\DictionaryRecordValuesResponseDTO getDictionaryRecord($dictionary_uuid, $record_uuid, $mailbox)
+> \Docstudio\ClientModel\DictionaryRecordValuesResponseDTO getDictionaryRecord($dictionary_uuid, $record_uuid, $mailbox)
 
 Retrieve record
 
@@ -705,11 +705,11 @@ Retrieve record
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -738,7 +738,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DictionaryRecordValuesResponseDTO**](../Model/DictionaryRecordValuesResponseDTO.md)
+[**\Docstudio\ClientModel\DictionaryRecordValuesResponseDTO**](../Model/DictionaryRecordValuesResponseDTO.md)
 
 ### Authorization
 
@@ -752,7 +752,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDictionaryRecords**
-> \Swagger\Client\Model\PageDTODictionaryRecordValuesResponseDTO getDictionaryRecords($body, $mailbox, $dictionary_uuid, $offset, $limit)
+> \Docstudio\ClientModel\PageDTODictionaryRecordValuesResponseDTO getDictionaryRecords($body, $mailbox, $dictionary_uuid, $offset, $limit)
 
 Get dictionary records
 
@@ -761,17 +761,17 @@ Get dictionary records
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\DictionaryFiltersRequestDTO(); // \Swagger\Client\Model\DictionaryFiltersRequestDTO | 
+$body = new \Docstudio\ClientModel\DictionaryFiltersRequestDTO(); // \Docstudio\ClientModel\DictionaryFiltersRequestDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of dictionary
 $offset = 0; // int | Offset records
@@ -790,7 +790,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\DictionaryFiltersRequestDTO**](../Model/DictionaryFiltersRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\DictionaryFiltersRequestDTO**](../Model/DictionaryFiltersRequestDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **dictionary_uuid** | [**string**](../Model/.md)| UUID of dictionary |
  **offset** | **int**| Offset records | [optional] [default to 0]
@@ -798,7 +798,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PageDTODictionaryRecordValuesResponseDTO**](../Model/PageDTODictionaryRecordValuesResponseDTO.md)
+[**\Docstudio\ClientModel\PageDTODictionaryRecordValuesResponseDTO**](../Model/PageDTODictionaryRecordValuesResponseDTO.md)
 
 ### Authorization
 
@@ -812,7 +812,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchDictionary**
-> \Swagger\Client\Model\DictionaryResponseDTO patchDictionary($body, $mailbox, $dictionary_uuid)
+> \Docstudio\ClientModel\DictionaryResponseDTO patchDictionary($body, $mailbox, $dictionary_uuid)
 
 Update dictionary
 
@@ -821,17 +821,17 @@ Update dictionary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\DictionaryRequestDTO(); // \Swagger\Client\Model\DictionaryRequestDTO | 
+$body = new \Docstudio\ClientModel\DictionaryRequestDTO(); // \Docstudio\ClientModel\DictionaryRequestDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of dictionary
 
@@ -848,13 +848,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\DictionaryRequestDTO**](../Model/DictionaryRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\DictionaryRequestDTO**](../Model/DictionaryRequestDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **dictionary_uuid** | [**string**](../Model/.md)| UUID of dictionary |
 
 ### Return type
 
-[**\Swagger\Client\Model\DictionaryResponseDTO**](../Model/DictionaryResponseDTO.md)
+[**\Docstudio\ClientModel\DictionaryResponseDTO**](../Model/DictionaryResponseDTO.md)
 
 ### Authorization
 
@@ -877,17 +877,17 @@ Update record column values
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \Swagger\Client\Model\DictionaryColumnValueRequestDTO()); // \Swagger\Client\Model\DictionaryColumnValueRequestDTO[] | 
+$body = array(new \Docstudio\ClientModel\DictionaryColumnValueRequestDTO()); // \Docstudio\ClientModel\DictionaryColumnValueRequestDTO[] | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
 $record_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Record UUID
@@ -904,7 +904,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\DictionaryColumnValueRequestDTO[]**](../Model/DictionaryColumnValueRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\DictionaryColumnValueRequestDTO[]**](../Model/DictionaryColumnValueRequestDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
  **record_uuid** | [**string**](../Model/.md)| Record UUID |
@@ -925,7 +925,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readDictionary**
-> \Swagger\Client\Model\DictionaryResponseDTO readDictionary($dictionary_uuid, $mailbox, $with_columns, $with_records_count)
+> \Docstudio\ClientModel\DictionaryResponseDTO readDictionary($dictionary_uuid, $mailbox, $with_columns, $with_records_count)
 
 Read/get dictionary
 
@@ -934,11 +934,11 @@ Read/get dictionary
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -969,7 +969,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\DictionaryResponseDTO**](../Model/DictionaryResponseDTO.md)
+[**\Docstudio\ClientModel\DictionaryResponseDTO**](../Model/DictionaryResponseDTO.md)
 
 ### Authorization
 
@@ -983,7 +983,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchDictionaries**
-> \Swagger\Client\Model\PageDTODictionaryResponseDTO searchDictionaries($mailbox, $level, $keyword, $with_columns, $offset, $limit)
+> \Docstudio\ClientModel\PageDTODictionaryResponseDTO searchDictionaries($mailbox, $level, $keyword, $with_columns, $offset, $limit)
 
 Get paged dictionary list
 
@@ -992,11 +992,11 @@ Get paged dictionary list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1031,7 +1031,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PageDTODictionaryResponseDTO**](../Model/PageDTODictionaryResponseDTO.md)
+[**\Docstudio\ClientModel\PageDTODictionaryResponseDTO**](../Model/PageDTODictionaryResponseDTO.md)
 
 ### Authorization
 
@@ -1045,7 +1045,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateColumnDictionary**
-> \Swagger\Client\Model\DictionaryColumnResponseDTO updateColumnDictionary($body, $mailbox, $dictionary_uuid, $column_uuid)
+> \Docstudio\ClientModel\DictionaryColumnResponseDTO updateColumnDictionary($body, $mailbox, $dictionary_uuid, $column_uuid)
 
 Update dictionary column
 
@@ -1054,17 +1054,17 @@ Update dictionary column
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\DictionaryControllerApi(
+$apiInstance = new Docstudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\DictionaryColumnRequestDTO(); // \Swagger\Client\Model\DictionaryColumnRequestDTO | 
+$body = new \Docstudio\ClientModel\DictionaryColumnRequestDTO(); // \Docstudio\ClientModel\DictionaryColumnRequestDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
 $column_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Column UUID
@@ -1082,14 +1082,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\DictionaryColumnRequestDTO**](../Model/DictionaryColumnRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\DictionaryColumnRequestDTO**](../Model/DictionaryColumnRequestDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
  **column_uuid** | [**string**](../Model/.md)| Column UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\DictionaryColumnResponseDTO**](../Model/DictionaryColumnResponseDTO.md)
+[**\Docstudio\ClientModel\DictionaryColumnResponseDTO**](../Model/DictionaryColumnResponseDTO.md)
 
 ### Authorization
 

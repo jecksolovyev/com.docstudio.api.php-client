@@ -1,4 +1,4 @@
-# Swagger\Client\FilterSettingsControllerApi
+# Docstudio\Client\FilterSettingsControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**updateFilterSettings**](FilterSettingsControllerApi.md#updatefiltersettings) | **PUT** /api/v1/filterSettings/{uuid} | Update FilterSettings for mailbox
 
 # **createFilterSettings**
-> \Swagger\Client\Model\SingleUuidDTO createFilterSettings($body, $mailbox)
+> \Docstudio\ClientModel\SingleUuidDTO createFilterSettings($body, $mailbox)
 
 Create FilterSettings for mailbox
 
@@ -20,17 +20,17 @@ Create FilterSettings for mailbox
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\FilterSettingsControllerApi(
+$apiInstance = new Docstudio\Client\Api\FilterSettingsControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\FilterSettingsCreateDTO(); // \Swagger\Client\Model\FilterSettingsCreateDTO | 
+$body = new \Docstudio\ClientModel\FilterSettingsCreateDTO(); // \Docstudio\ClientModel\FilterSettingsCreateDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -46,12 +46,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\FilterSettingsCreateDTO**](../Model/FilterSettingsCreateDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\FilterSettingsCreateDTO**](../Model/FilterSettingsCreateDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -74,11 +74,11 @@ Delete FilterSettings
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\FilterSettingsControllerApi(
+$apiInstance = new Docstudio\Client\Api\FilterSettingsControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAllFilterSettings**
-> \Swagger\Client\Model\FilterSettingsDTO[] getAllFilterSettings($mailbox)
+> \Docstudio\ClientModel\FilterSettingsDTO[] getAllFilterSettings($mailbox)
 
 Read all by mailbox
 
@@ -127,11 +127,11 @@ Read all by mailbox
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\FilterSettingsControllerApi(
+$apiInstance = new Docstudio\Client\Api\FilterSettingsControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FilterSettingsDTO[]**](../Model/FilterSettingsDTO.md)
+[**\Docstudio\ClientModel\FilterSettingsDTO[]**](../Model/FilterSettingsDTO.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getByUuid**
-> \Swagger\Client\Model\FilterSettingsDTO getByUuid($uuid, $mailbox)
+> \Docstudio\ClientModel\FilterSettingsDTO getByUuid($uuid, $mailbox)
 
 Get by UUID
 
@@ -179,11 +179,11 @@ Get by UUID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\FilterSettingsControllerApi(
+$apiInstance = new Docstudio\Client\Api\FilterSettingsControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FilterSettingsDTO**](../Model/FilterSettingsDTO.md)
+[**\Docstudio\ClientModel\FilterSettingsDTO**](../Model/FilterSettingsDTO.md)
 
 ### Authorization
 
@@ -233,17 +233,17 @@ Update FilterSettings for mailbox
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\FilterSettingsControllerApi(
+$apiInstance = new Docstudio\Client\Api\FilterSettingsControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\FilterSettingsDTO(); // \Swagger\Client\Model\FilterSettingsDTO | 
+$body = new \Docstudio\ClientModel\FilterSettingsDTO(); // \Docstudio\ClientModel\FilterSettingsDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 
@@ -259,7 +259,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\FilterSettingsDTO**](../Model/FilterSettingsDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\FilterSettingsDTO**](../Model/FilterSettingsDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **uuid** | [**string**](../Model/.md)|  |
 

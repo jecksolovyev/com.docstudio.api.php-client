@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * SsoProperties Class Doc Comment
  *
  * @category Class
  * @description SSO properties
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class SsoProperties implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'only_sso_login' => 'bool',
-'saml' => '\Swagger\Client\Model\SamlSsoProps'    ];
+'saml' => '\Docstudio\ClientModel\SamlSsoProps'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -230,7 +230,7 @@ class SsoProperties implements ModelInterface, ArrayAccess
     /**
      * Gets saml
      *
-     * @return \Swagger\Client\Model\SamlSsoProps
+     * @return \Docstudio\ClientModel\SamlSsoProps
      */
     public function getSaml()
     {
@@ -240,7 +240,7 @@ class SsoProperties implements ModelInterface, ArrayAccess
     /**
      * Sets saml
      *
-     * @param \Swagger\Client\Model\SamlSsoProps $saml saml
+     * @param \Docstudio\ClientModel\SamlSsoProps $saml saml
      *
      * @return $this
      */

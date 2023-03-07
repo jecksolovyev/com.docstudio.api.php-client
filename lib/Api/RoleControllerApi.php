@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * RoleControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,11 +91,11 @@ class RoleControllerApi
      *
      * Create a role
      *
-     * @param  \Swagger\Client\Model\RoleCreateDTO $body body (required)
+     * @param  \Docstudio\ClientModel\RoleCreateDTO $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RoleGetDTO
+     * @return \Docstudio\ClientModel\RoleGetDTO
      */
     public function createRole($body)
     {
@@ -108,15 +108,15 @@ class RoleControllerApi
      *
      * Create a role
      *
-     * @param  \Swagger\Client\Model\RoleCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\RoleCreateDTO $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RoleGetDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\RoleGetDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRoleWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\RoleGetDTO';
+        $returnType = '\Docstudio\ClientModel\RoleGetDTO';
         $request = $this->createRoleRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class RoleControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RoleGetDTO',
+                        '\Docstudio\ClientModel\RoleGetDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -183,7 +183,7 @@ class RoleControllerApi
      *
      * Create a role
      *
-     * @param  \Swagger\Client\Model\RoleCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\RoleCreateDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -203,14 +203,14 @@ class RoleControllerApi
      *
      * Create a role
      *
-     * @param  \Swagger\Client\Model\RoleCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\RoleCreateDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createRoleAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\RoleGetDTO';
+        $returnType = '\Docstudio\ClientModel\RoleGetDTO';
         $request = $this->createRoleRequest($body);
 
         return $this->client
@@ -253,7 +253,7 @@ class RoleControllerApi
     /**
      * Create request for operation 'createRole'
      *
-     * @param  \Swagger\Client\Model\RoleCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\RoleCreateDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -352,7 +352,7 @@ class RoleControllerApi
      *
      * @param  string $uuid uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -366,7 +366,7 @@ class RoleControllerApi
      *
      * @param  string $uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -579,9 +579,9 @@ class RoleControllerApi
      *
      * @param  string $uuid uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RoleGetDTO
+     * @return \Docstudio\ClientModel\RoleGetDTO
      */
     public function read($uuid)
     {
@@ -596,13 +596,13 @@ class RoleControllerApi
      *
      * @param  string $uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RoleGetDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\RoleGetDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function readWithHttpInfo($uuid)
     {
-        $returnType = '\Swagger\Client\Model\RoleGetDTO';
+        $returnType = '\Docstudio\ClientModel\RoleGetDTO';
         $request = $this->readRequest($uuid);
 
         try {
@@ -654,7 +654,7 @@ class RoleControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RoleGetDTO',
+                        '\Docstudio\ClientModel\RoleGetDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -696,7 +696,7 @@ class RoleControllerApi
      */
     public function readAsyncWithHttpInfo($uuid)
     {
-        $returnType = '\Swagger\Client\Model\RoleGetDTO';
+        $returnType = '\Docstudio\ClientModel\RoleGetDTO';
         $request = $this->readRequest($uuid);
 
         return $this->client
@@ -846,9 +846,9 @@ class RoleControllerApi
      * @param  int $offset Offset, how much roles to skip (optional, default to 0)
      * @param  int $limit Limit, how much roles to retrieve (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTORoleGetDTO
+     * @return \Docstudio\ClientModel\PageDTORoleGetDTO
      */
     public function readAll($offset = '0', $limit = '25')
     {
@@ -864,13 +864,13 @@ class RoleControllerApi
      * @param  int $offset Offset, how much roles to skip (optional, default to 0)
      * @param  int $limit Limit, how much roles to retrieve (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTORoleGetDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTORoleGetDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function readAllWithHttpInfo($offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTORoleGetDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTORoleGetDTO';
         $request = $this->readAllRequest($offset, $limit);
 
         try {
@@ -922,7 +922,7 @@ class RoleControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTORoleGetDTO',
+                        '\Docstudio\ClientModel\PageDTORoleGetDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -966,7 +966,7 @@ class RoleControllerApi
      */
     public function readAllAsyncWithHttpInfo($offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTORoleGetDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTORoleGetDTO';
         $request = $this->readAllRequest($offset, $limit);
 
         return $this->client
@@ -1115,9 +1115,9 @@ class RoleControllerApi
      * @param  int $offset Offset, how much roles to skip (optional, default to 0)
      * @param  int $limit Limit, how much roles to retrieve (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PageDTORoleGetDTO
+     * @return \Docstudio\ClientModel\PageDTORoleGetDTO
      */
     public function readAllWithAccount($uuid, $type = null, $name = null, $permissions = null, $offset = '0', $limit = '25')
     {
@@ -1137,13 +1137,13 @@ class RoleControllerApi
      * @param  int $offset Offset, how much roles to skip (optional, default to 0)
      * @param  int $limit Limit, how much roles to retrieve (optional, default to 25)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PageDTORoleGetDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\PageDTORoleGetDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function readAllWithAccountWithHttpInfo($uuid, $type = null, $name = null, $permissions = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTORoleGetDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTORoleGetDTO';
         $request = $this->readAllWithAccountRequest($uuid, $type, $name, $permissions, $offset, $limit);
 
         try {
@@ -1195,7 +1195,7 @@ class RoleControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PageDTORoleGetDTO',
+                        '\Docstudio\ClientModel\PageDTORoleGetDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1247,7 +1247,7 @@ class RoleControllerApi
      */
     public function readAllWithAccountAsyncWithHttpInfo($uuid, $type = null, $name = null, $permissions = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Swagger\Client\Model\PageDTORoleGetDTO';
+        $returnType = '\Docstudio\ClientModel\PageDTORoleGetDTO';
         $request = $this->readAllWithAccountRequest($uuid, $type, $name, $permissions, $offset, $limit);
 
         return $this->client
@@ -1422,12 +1422,12 @@ class RoleControllerApi
      *
      * Update role, allow to change name and permissions
      *
-     * @param  \Swagger\Client\Model\RoleCreateDTO $body body (required)
+     * @param  \Docstudio\ClientModel\RoleCreateDTO $body body (required)
      * @param  string $uuid uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RoleGetDTO
+     * @return \Docstudio\ClientModel\RoleGetDTO
      */
     public function updateRole($body, $uuid)
     {
@@ -1440,16 +1440,16 @@ class RoleControllerApi
      *
      * Update role, allow to change name and permissions
      *
-     * @param  \Swagger\Client\Model\RoleCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\RoleCreateDTO $body (required)
      * @param  string $uuid (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RoleGetDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\RoleGetDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateRoleWithHttpInfo($body, $uuid)
     {
-        $returnType = '\Swagger\Client\Model\RoleGetDTO';
+        $returnType = '\Docstudio\ClientModel\RoleGetDTO';
         $request = $this->updateRoleRequest($body, $uuid);
 
         try {
@@ -1501,7 +1501,7 @@ class RoleControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RoleGetDTO',
+                        '\Docstudio\ClientModel\RoleGetDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1516,7 +1516,7 @@ class RoleControllerApi
      *
      * Update role, allow to change name and permissions
      *
-     * @param  \Swagger\Client\Model\RoleCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\RoleCreateDTO $body (required)
      * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -1537,7 +1537,7 @@ class RoleControllerApi
      *
      * Update role, allow to change name and permissions
      *
-     * @param  \Swagger\Client\Model\RoleCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\RoleCreateDTO $body (required)
      * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -1545,7 +1545,7 @@ class RoleControllerApi
      */
     public function updateRoleAsyncWithHttpInfo($body, $uuid)
     {
-        $returnType = '\Swagger\Client\Model\RoleGetDTO';
+        $returnType = '\Docstudio\ClientModel\RoleGetDTO';
         $request = $this->updateRoleRequest($body, $uuid);
 
         return $this->client
@@ -1588,7 +1588,7 @@ class RoleControllerApi
     /**
      * Create request for operation 'updateRole'
      *
-     * @param  \Swagger\Client\Model\RoleCreateDTO $body (required)
+     * @param  \Docstudio\ClientModel\RoleCreateDTO $body (required)
      * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException

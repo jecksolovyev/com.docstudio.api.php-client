@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * AuditTrailDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,7 +66,7 @@ class AuditTrailDTO implements ModelInterface, ArrayAccess
 'ip' => 'string',
 'browser' => 'string',
 'os' => 'string',
-'geolocation' => '\Swagger\Client\Model\GeolocationInfoDTO',
+'geolocation' => '\Docstudio\ClientModel\GeolocationInfoDTO',
 'description' => 'string',
 'latitude' => 'float',
 'longitude' => 'float'    ];
@@ -575,7 +575,7 @@ self::OPERATION_DOC_STAMP,        ];
     /**
      * Gets geolocation
      *
-     * @return \Swagger\Client\Model\GeolocationInfoDTO
+     * @return \Docstudio\ClientModel\GeolocationInfoDTO
      */
     public function getGeolocation()
     {
@@ -585,7 +585,7 @@ self::OPERATION_DOC_STAMP,        ];
     /**
      * Sets geolocation
      *
-     * @param \Swagger\Client\Model\GeolocationInfoDTO $geolocation geolocation
+     * @param \Docstudio\ClientModel\GeolocationInfoDTO $geolocation geolocation
      *
      * @return $this
      */

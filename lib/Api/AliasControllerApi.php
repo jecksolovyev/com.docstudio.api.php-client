@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * AliasControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,12 +91,12 @@ class AliasControllerApi
      *
      * Save alias to mailbox
      *
-     * @param  \Swagger\Client\Model\AliasDTO $body body (required)
+     * @param  \Docstudio\ClientModel\AliasDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AliasDTO
+     * @return \Docstudio\ClientModel\AliasDTO
      */
     public function createAlias($body, $mailbox)
     {
@@ -109,16 +109,16 @@ class AliasControllerApi
      *
      * Save alias to mailbox
      *
-     * @param  \Swagger\Client\Model\AliasDTO $body (required)
+     * @param  \Docstudio\ClientModel\AliasDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AliasDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AliasDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAliasWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\AliasDTO';
+        $returnType = '\Docstudio\ClientModel\AliasDTO';
         $request = $this->createAliasRequest($body, $mailbox);
 
         try {
@@ -170,7 +170,7 @@ class AliasControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AliasDTO',
+                        '\Docstudio\ClientModel\AliasDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class AliasControllerApi
      *
      * Save alias to mailbox
      *
-     * @param  \Swagger\Client\Model\AliasDTO $body (required)
+     * @param  \Docstudio\ClientModel\AliasDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class AliasControllerApi
      *
      * Save alias to mailbox
      *
-     * @param  \Swagger\Client\Model\AliasDTO $body (required)
+     * @param  \Docstudio\ClientModel\AliasDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class AliasControllerApi
      */
     public function createAliasAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\AliasDTO';
+        $returnType = '\Docstudio\ClientModel\AliasDTO';
         $request = $this->createAliasRequest($body, $mailbox);
 
         return $this->client
@@ -257,7 +257,7 @@ class AliasControllerApi
     /**
      * Create request for operation 'createAlias'
      *
-     * @param  \Swagger\Client\Model\AliasDTO $body (required)
+     * @param  \Docstudio\ClientModel\AliasDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -370,7 +370,7 @@ class AliasControllerApi
      * @param  string $name name (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -387,7 +387,7 @@ class AliasControllerApi
      * @param  string $name (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -609,9 +609,9 @@ class AliasControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AliasDTO[]
+     * @return \Docstudio\ClientModel\AliasDTO[]
      */
     public function getAllByMailbox($mailbox)
     {
@@ -626,13 +626,13 @@ class AliasControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AliasDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AliasDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllByMailboxWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\AliasDTO[]';
+        $returnType = '\Docstudio\ClientModel\AliasDTO[]';
         $request = $this->getAllByMailboxRequest($mailbox);
 
         try {
@@ -684,7 +684,7 @@ class AliasControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AliasDTO[]',
+                        '\Docstudio\ClientModel\AliasDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -726,7 +726,7 @@ class AliasControllerApi
      */
     public function getAllByMailboxAsyncWithHttpInfo($mailbox)
     {
-        $returnType = '\Swagger\Client\Model\AliasDTO[]';
+        $returnType = '\Docstudio\ClientModel\AliasDTO[]';
         $request = $this->getAllByMailboxRequest($mailbox);
 
         return $this->client

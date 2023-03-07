@@ -1,4 +1,4 @@
-# Swagger\Client\AccountControllerApi
+# Docstudio\Client\AccountControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -39,17 +39,17 @@ Add crypto configs
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \Swagger\Client\Model\CryptoConfigDTO()); // \Swagger\Client\Model\CryptoConfigDTO[] | 
+$body = array(new \Docstudio\ClientModel\CryptoConfigDTO()); // \Docstudio\ClientModel\CryptoConfigDTO[] | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 
 try {
@@ -64,7 +64,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CryptoConfigDTO[]**](../Model/CryptoConfigDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\CryptoConfigDTO[]**](../Model/CryptoConfigDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
 
 ### Return type
@@ -92,17 +92,17 @@ Block/Unblock corporate users
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \Swagger\Client\Model\SingleUuidDTO()); // \Swagger\Client\Model\SingleUuidDTO[] | 
+$body = array(new \Docstudio\ClientModel\SingleUuidDTO()); // \Docstudio\ClientModel\SingleUuidDTO[] | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 $flag = true; // bool | Block/Unblock flag
 
@@ -118,7 +118,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
  **flag** | **bool**| Block/Unblock flag |
 
@@ -138,7 +138,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createAccount**
-> \Swagger\Client\Model\User2AccountWithMailboxesDTO createAccount($body, $code, $code_type)
+> \Docstudio\ClientModel\User2AccountWithMailboxesDTO createAccount($body, $code, $code_type)
 
 Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es).
 
@@ -147,17 +147,17 @@ Create account and mailbox(es) under this account. User will be assigned with de
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\AccountCreateDTO(); // \Swagger\Client\Model\AccountCreateDTO | 
+$body = new \Docstudio\ClientModel\AccountCreateDTO(); // \Docstudio\ClientModel\AccountCreateDTO | 
 $code = "code_example"; // string | Invitation code from email
 $code_type = "code_type_example"; // string | Type of code
 
@@ -174,13 +174,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\AccountCreateDTO**](../Model/AccountCreateDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\AccountCreateDTO**](../Model/AccountCreateDTO.md)|  |
  **code** | **string**| Invitation code from email | [optional]
  **code_type** | **string**| Type of code | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\User2AccountWithMailboxesDTO**](../Model/User2AccountWithMailboxesDTO.md)
+[**\Docstudio\ClientModel\User2AccountWithMailboxesDTO**](../Model/User2AccountWithMailboxesDTO.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCorporateUser**
-> \Swagger\Client\Model\UserDTO createCorporateUser($body, $account_uuid)
+> \Docstudio\ClientModel\UserDTO createCorporateUser($body, $account_uuid)
 
 Create corporate user
 
@@ -203,17 +203,17 @@ Create corporate user
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\CorporateUserCreateDTO(); // \Swagger\Client\Model\CorporateUserCreateDTO | 
+$body = new \Docstudio\ClientModel\CorporateUserCreateDTO(); // \Docstudio\ClientModel\CorporateUserCreateDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 
 try {
@@ -229,12 +229,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CorporateUserCreateDTO**](../Model/CorporateUserCreateDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\CorporateUserCreateDTO**](../Model/CorporateUserCreateDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\UserDTO**](../Model/UserDTO.md)
+[**\Docstudio\ClientModel\UserDTO**](../Model/UserDTO.md)
 
 ### Authorization
 
@@ -257,11 +257,11 @@ Mass create corporate users
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -310,11 +310,11 @@ Delete account
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -363,17 +363,17 @@ Delete corporate users
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \Swagger\Client\Model\SingleUuidDTO()); // \Swagger\Client\Model\SingleUuidDTO[] | 
+$body = array(new \Docstudio\ClientModel\SingleUuidDTO()); // \Docstudio\ClientModel\SingleUuidDTO[] | 
 $check_message = "check_message_example"; // string | Proof message
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 
@@ -389,7 +389,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  |
  **check_message** | **string**| Proof message |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
 
@@ -418,11 +418,11 @@ Delete crypto configs
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -462,7 +462,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccountBillingAddress**
-> \Swagger\Client\Model\AccountAddressDTO getAccountBillingAddress($account_uuid)
+> \Docstudio\ClientModel\AccountAddressDTO getAccountBillingAddress($account_uuid)
 
 Get account billing address
 
@@ -471,11 +471,11 @@ Get account billing address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -500,7 +500,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccountAddressDTO**](../Model/AccountAddressDTO.md)
+[**\Docstudio\ClientModel\AccountAddressDTO**](../Model/AccountAddressDTO.md)
 
 ### Authorization
 
@@ -523,11 +523,11 @@ Retrieve account brand logo
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -568,7 +568,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccountDetails**
-> \Swagger\Client\Model\AccountDTO getAccountDetails($uuid, $with_users)
+> \Docstudio\ClientModel\AccountDTO getAccountDetails($uuid, $with_users)
 
 
 
@@ -577,11 +577,11 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccountDTO**](../Model/AccountDTO.md)
+[**\Docstudio\ClientModel\AccountDTO**](../Model/AccountDTO.md)
 
 ### Authorization
 
@@ -631,11 +631,11 @@ Retrieve account logo
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -685,11 +685,11 @@ Get account users import file example
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -728,7 +728,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCryptoConfigs**
-> \Swagger\Client\Model\CryptoConfigDTO[] getCryptoConfigs($account_uuid)
+> \Docstudio\ClientModel\CryptoConfigDTO[] getCryptoConfigs($account_uuid)
 
 Get crypto configs
 
@@ -737,11 +737,11 @@ Get crypto configs
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -766,7 +766,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CryptoConfigDTO[]**](../Model/CryptoConfigDTO.md)
+[**\Docstudio\ClientModel\CryptoConfigDTO[]**](../Model/CryptoConfigDTO.md)
 
 ### Authorization
 
@@ -780,7 +780,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMailbox**
-> \Swagger\Client\Model\MailboxAccountSimpleDTO getMailbox($uuid)
+> \Docstudio\ClientModel\MailboxAccountSimpleDTO getMailbox($uuid)
 
 Users and their permissions by mailbox
 
@@ -789,11 +789,11 @@ Users and their permissions by mailbox
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -818,7 +818,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\MailboxAccountSimpleDTO**](../Model/MailboxAccountSimpleDTO.md)
+[**\Docstudio\ClientModel\MailboxAccountSimpleDTO**](../Model/MailboxAccountSimpleDTO.md)
 
 ### Authorization
 
@@ -832,7 +832,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserPolicies**
-> \Swagger\Client\Model\AccountPoliciesDTO getUserPolicies($account_uuid)
+> \Docstudio\ClientModel\AccountPoliciesDTO getUserPolicies($account_uuid)
 
 Get user password/session policies
 
@@ -841,11 +841,11 @@ Get user password/session policies
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -870,7 +870,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccountPoliciesDTO**](../Model/AccountPoliciesDTO.md)
+[**\Docstudio\ClientModel\AccountPoliciesDTO**](../Model/AccountPoliciesDTO.md)
 
 ### Authorization
 
@@ -884,7 +884,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsersPermissions**
-> \Swagger\Client\Model\PageDTOUserMailboxPermissionsDTO getUsersPermissions($body, $account_uuid, $offset, $limit)
+> \Docstudio\ClientModel\PageDTOUserMailboxPermissionsDTO getUsersPermissions($body, $account_uuid, $offset, $limit)
 
 Get users with permissions per account and mailboxes
 
@@ -893,17 +893,17 @@ Get users with permissions per account and mailboxes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\UsersSearchFilterDTO(); // \Swagger\Client\Model\UsersSearchFilterDTO | 
+$body = new \Docstudio\ClientModel\UsersSearchFilterDTO(); // \Docstudio\ClientModel\UsersSearchFilterDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of Account
 $offset = 0; // int | Offset, how much envelopes to skip
 $limit = 25; // int | Limit, how much envelopes to retrieve
@@ -921,14 +921,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\UsersSearchFilterDTO**](../Model/UsersSearchFilterDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\UsersSearchFilterDTO**](../Model/UsersSearchFilterDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| UUID of Account |
  **offset** | **int**| Offset, how much envelopes to skip | [optional] [default to 0]
  **limit** | **int**| Limit, how much envelopes to retrieve | [optional] [default to 25]
 
 ### Return type
 
-[**\Swagger\Client\Model\PageDTOUserMailboxPermissionsDTO**](../Model/PageDTOUserMailboxPermissionsDTO.md)
+[**\Docstudio\ClientModel\PageDTOUserMailboxPermissionsDTO**](../Model/PageDTOUserMailboxPermissionsDTO.md)
 
 ### Authorization
 
@@ -951,17 +951,17 @@ Generate account mailboxes report
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ReportMailboxesRequestDTO(); // \Swagger\Client\Model\ReportMailboxesRequestDTO | 
+$body = new \Docstudio\ClientModel\ReportMailboxesRequestDTO(); // \Docstudio\ClientModel\ReportMailboxesRequestDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 
 try {
@@ -976,7 +976,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ReportMailboxesRequestDTO**](../Model/ReportMailboxesRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\ReportMailboxesRequestDTO**](../Model/ReportMailboxesRequestDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
 
 ### Return type
@@ -1004,11 +1004,11 @@ Resend corporate user welcome message
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1057,17 +1057,17 @@ Save user password/session policies
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\AccountPoliciesDTO(); // \Swagger\Client\Model\AccountPoliciesDTO | 
+$body = new \Docstudio\ClientModel\AccountPoliciesDTO(); // \Docstudio\ClientModel\AccountPoliciesDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 
 try {
@@ -1082,7 +1082,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\AccountPoliciesDTO**](../Model/AccountPoliciesDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\AccountPoliciesDTO**](../Model/AccountPoliciesDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
 
 ### Return type
@@ -1101,7 +1101,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchMailboxesAccount**
-> \Swagger\Client\Model\PageDTOAccountMailboxInfoDTO searchMailboxesAccount($account_uuid, $keyword, $offset, $limit)
+> \Docstudio\ClientModel\PageDTOAccountMailboxInfoDTO searchMailboxesAccount($account_uuid, $keyword, $offset, $limit)
 
 Get paged account mailboxes list
 
@@ -1110,11 +1110,11 @@ Get paged account mailboxes list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1145,7 +1145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PageDTOAccountMailboxInfoDTO**](../Model/PageDTOAccountMailboxInfoDTO.md)
+[**\Docstudio\ClientModel\PageDTOAccountMailboxInfoDTO**](../Model/PageDTOAccountMailboxInfoDTO.md)
 
 ### Authorization
 
@@ -1159,7 +1159,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAccountBillingAddress**
-> \Swagger\Client\Model\AccountAddressDTO updateAccountBillingAddress($body, $account_uuid)
+> \Docstudio\ClientModel\AccountAddressDTO updateAccountBillingAddress($body, $account_uuid)
 
 Create/update account billing address
 
@@ -1168,17 +1168,17 @@ Create/update account billing address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\AccountAddressDTO(); // \Swagger\Client\Model\AccountAddressDTO | 
+$body = new \Docstudio\ClientModel\AccountAddressDTO(); // \Docstudio\ClientModel\AccountAddressDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 
 try {
@@ -1194,12 +1194,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\AccountAddressDTO**](../Model/AccountAddressDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\AccountAddressDTO**](../Model/AccountAddressDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
 
 ### Return type
 
-[**\Swagger\Client\Model\AccountAddressDTO**](../Model/AccountAddressDTO.md)
+[**\Docstudio\ClientModel\AccountAddressDTO**](../Model/AccountAddressDTO.md)
 
 ### Authorization
 
@@ -1213,7 +1213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAccountDetails**
-> \Swagger\Client\Model\AccountDTO updateAccountDetails($body, $uuid)
+> \Docstudio\ClientModel\AccountDTO updateAccountDetails($body, $uuid)
 
 
 
@@ -1222,17 +1222,17 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\AccountDTO(); // \Swagger\Client\Model\AccountDTO | 
+$body = new \Docstudio\ClientModel\AccountDTO(); // \Docstudio\ClientModel\AccountDTO | 
 $uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 
 try {
@@ -1248,12 +1248,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\AccountDTO**](../Model/AccountDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\AccountDTO**](../Model/AccountDTO.md)|  |
  **uuid** | [**string**](../Model/.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\AccountDTO**](../Model/AccountDTO.md)
+[**\Docstudio\ClientModel\AccountDTO**](../Model/AccountDTO.md)
 
 ### Authorization
 
@@ -1276,17 +1276,17 @@ Generate account users report
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\AccountControllerApi(
+$apiInstance = new Docstudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ReportUsersRequestDTO(); // \Swagger\Client\Model\ReportUsersRequestDTO | 
+$body = new \Docstudio\ClientModel\ReportUsersRequestDTO(); // \Docstudio\ClientModel\ReportUsersRequestDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of Account
 
 try {
@@ -1301,7 +1301,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ReportUsersRequestDTO**](../Model/ReportUsersRequestDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\ReportUsersRequestDTO**](../Model/ReportUsersRequestDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| UUID of Account |
 
 ### Return type

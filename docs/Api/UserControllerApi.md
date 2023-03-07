@@ -1,4 +1,4 @@
-# Swagger\Client\UserControllerApi
+# Docstudio\Client\UserControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -28,11 +28,11 @@ Accept invite
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -79,17 +79,17 @@ Update user's password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\UpdatePasswordDTO(); // \Swagger\Client\Model\UpdatePasswordDTO | 
+$body = new \Docstudio\ClientModel\UpdatePasswordDTO(); // \Docstudio\ClientModel\UpdatePasswordDTO | 
 
 try {
     $apiInstance->changePassword($body);
@@ -103,7 +103,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\UpdatePasswordDTO**](../Model/UpdatePasswordDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\UpdatePasswordDTO**](../Model/UpdatePasswordDTO.md)|  |
 
 ### Return type
 
@@ -130,11 +130,11 @@ Update user's eink signature in base64 format
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -172,7 +172,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createInvitation**
-> \Swagger\Client\Model\SingleUuidDTO createInvitation($body)
+> \Docstudio\ClientModel\SingleUuidDTO createInvitation($body)
 
 Create invitation to join account or mailbox with defined permissions.
 
@@ -181,17 +181,17 @@ Create invitation to join account or mailbox with defined permissions.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\InvitationPostDTO(); // \Swagger\Client\Model\InvitationPostDTO | 
+$body = new \Docstudio\ClientModel\InvitationPostDTO(); // \Docstudio\ClientModel\InvitationPostDTO | 
 
 try {
     $result = $apiInstance->createInvitation($body);
@@ -206,11 +206,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\InvitationPostDTO**](../Model/InvitationPostDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\InvitationPostDTO**](../Model/InvitationPostDTO.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -233,11 +233,11 @@ Decline invite
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -284,11 +284,11 @@ Delete user himself
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -328,7 +328,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **findUser**
-> \Swagger\Client\Model\UserDTO[] findUser($keyword, $exclude)
+> \Docstudio\ClientModel\UserDTO[] findUser($keyword, $exclude)
 
 Find user
 
@@ -337,11 +337,11 @@ Find user
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UserDTO[]**](../Model/UserDTO.md)
+[**\Docstudio\ClientModel\UserDTO[]**](../Model/UserDTO.md)
 
 ### Authorization
 
@@ -391,11 +391,11 @@ Retrieve user avatar
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInvites**
-> \Swagger\Client\Model\PageDTOUserInvitationDTO getInvites($offset, $limit)
+> \Docstudio\ClientModel\PageDTOUserInvitationDTO getInvites($offset, $limit)
 
 Get paged invites list
 
@@ -445,11 +445,11 @@ Get paged invites list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -476,7 +476,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PageDTOUserInvitationDTO**](../Model/PageDTOUserInvitationDTO.md)
+[**\Docstudio\ClientModel\PageDTOUserInvitationDTO**](../Model/PageDTOUserInvitationDTO.md)
 
 ### Authorization
 
@@ -490,7 +490,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMailboxesInfo**
-> map[string,\Swagger\Client\Model\UserInfoDTO] getMailboxesInfo($body)
+> map[string,\Docstudio\ClientModel\UserInfoDTO] getMailboxesInfo($body)
 
 Retrieve users info
 
@@ -499,11 +499,11 @@ Retrieve users info
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -528,7 +528,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**map[string,\Swagger\Client\Model\UserInfoDTO]**](../Model/UserInfoDTO.md)
+[**map[string,\Docstudio\ClientModel\UserInfoDTO]**](../Model/UserInfoDTO.md)
 
 ### Authorization
 
@@ -542,7 +542,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProfile**
-> \Swagger\Client\Model\ProfileDTO getProfile()
+> \Docstudio\ClientModel\ProfileDTO getProfile()
 
 Retrieve user profile
 
@@ -551,11 +551,11 @@ Retrieve user profile
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -576,7 +576,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ProfileDTO**](../Model/ProfileDTO.md)
+[**\Docstudio\ClientModel\ProfileDTO**](../Model/ProfileDTO.md)
 
 ### Authorization
 
@@ -599,17 +599,17 @@ Update invitation by userUuid.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\InvitationPutDTO(); // \Swagger\Client\Model\InvitationPutDTO | 
+$body = new \Docstudio\ClientModel\InvitationPutDTO(); // \Docstudio\ClientModel\InvitationPutDTO | 
 $uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 
 try {
@@ -624,7 +624,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\InvitationPutDTO**](../Model/InvitationPutDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\InvitationPutDTO**](../Model/InvitationPutDTO.md)|  |
  **uuid** | [**string**](../Model/.md)|  |
 
 ### Return type
@@ -643,7 +643,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateProfile**
-> \Swagger\Client\Model\ProfileDTO updateProfile($body)
+> \Docstudio\ClientModel\ProfileDTO updateProfile($body)
 
 Update user's profile
 
@@ -652,17 +652,17 @@ Update user's profile
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserControllerApi(
+$apiInstance = new Docstudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\UpdateProfileDTO(); // \Swagger\Client\Model\UpdateProfileDTO | 
+$body = new \Docstudio\ClientModel\UpdateProfileDTO(); // \Docstudio\ClientModel\UpdateProfileDTO | 
 
 try {
     $result = $apiInstance->updateProfile($body);
@@ -677,11 +677,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\UpdateProfileDTO**](../Model/UpdateProfileDTO.md)|  |
+ **body** | [**\Docstudio\ClientModel\UpdateProfileDTO**](../Model/UpdateProfileDTO.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ProfileDTO**](../Model/ProfileDTO.md)
+[**\Docstudio\ClientModel\ProfileDTO**](../Model/ProfileDTO.md)
 
 ### Authorization
 

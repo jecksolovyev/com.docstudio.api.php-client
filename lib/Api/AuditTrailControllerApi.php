@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Docstudio\Client\ApiException;
+use Docstudio\Client\Configuration;
+use Docstudio\Client\HeaderSelector;
+use Docstudio\Client\ObjectSerializer;
 
 /**
  * AuditTrailControllerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,7 +94,7 @@ class AuditTrailControllerApi
      * @param  string $uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -112,7 +112,7 @@ class AuditTrailControllerApi
      * @param  string $uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -373,9 +373,9 @@ class AuditTrailControllerApi
      * @param  string $uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AuditTrailDTO[]
+     * @return \Docstudio\ClientModel\AuditTrailDTO[]
      */
     public function getAuditTrailByEnvelope($uuid, $mailbox)
     {
@@ -389,13 +389,13 @@ class AuditTrailControllerApi
      * @param  string $uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Docstudio\ClientApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AuditTrailDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\ClientModel\AuditTrailDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuditTrailByEnvelopeWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\AuditTrailDTO[]';
+        $returnType = '\Docstudio\ClientModel\AuditTrailDTO[]';
         $request = $this->getAuditTrailByEnvelopeRequest($uuid, $mailbox);
 
         try {
@@ -447,7 +447,7 @@ class AuditTrailControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AuditTrailDTO[]',
+                        '\Docstudio\ClientModel\AuditTrailDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -491,7 +491,7 @@ class AuditTrailControllerApi
      */
     public function getAuditTrailByEnvelopeAsyncWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Swagger\Client\Model\AuditTrailDTO[]';
+        $returnType = '\Docstudio\ClientModel\AuditTrailDTO[]';
         $request = $this->getAuditTrailByEnvelopeRequest($uuid, $mailbox);
 
         return $this->client

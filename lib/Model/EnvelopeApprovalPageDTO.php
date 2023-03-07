@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * EnvelopeApprovalPageDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,9 +59,9 @@ class EnvelopeApprovalPageDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Swagger\Client\Model\EnvApprovalSearchResultDTO[]',
-'initiators' => '\Swagger\Client\Model\EnvelopeSenderDTO[]',
-'templates' => '\Swagger\Client\Model\EnvelopeTemplateInfoDTO[]'    ];
+'data' => '\Docstudio\ClientModel\EnvApprovalSearchResultDTO[]',
+'initiators' => '\Docstudio\ClientModel\EnvelopeSenderDTO[]',
+'templates' => '\Docstudio\ClientModel\EnvelopeTemplateInfoDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -301,7 +301,7 @@ class EnvelopeApprovalPageDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Swagger\Client\Model\EnvApprovalSearchResultDTO[]
+     * @return \Docstudio\ClientModel\EnvApprovalSearchResultDTO[]
      */
     public function getData()
     {
@@ -311,7 +311,7 @@ class EnvelopeApprovalPageDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\EnvApprovalSearchResultDTO[] $data Data records
+     * @param \Docstudio\ClientModel\EnvApprovalSearchResultDTO[] $data Data records
      *
      * @return $this
      */
@@ -325,7 +325,7 @@ class EnvelopeApprovalPageDTO implements ModelInterface, ArrayAccess
     /**
      * Gets initiators
      *
-     * @return \Swagger\Client\Model\EnvelopeSenderDTO[]
+     * @return \Docstudio\ClientModel\EnvelopeSenderDTO[]
      */
     public function getInitiators()
     {
@@ -335,7 +335,7 @@ class EnvelopeApprovalPageDTO implements ModelInterface, ArrayAccess
     /**
      * Sets initiators
      *
-     * @param \Swagger\Client\Model\EnvelopeSenderDTO[] $initiators Approval initiators
+     * @param \Docstudio\ClientModel\EnvelopeSenderDTO[] $initiators Approval initiators
      *
      * @return $this
      */
@@ -349,7 +349,7 @@ class EnvelopeApprovalPageDTO implements ModelInterface, ArrayAccess
     /**
      * Gets templates
      *
-     * @return \Swagger\Client\Model\EnvelopeTemplateInfoDTO[]
+     * @return \Docstudio\ClientModel\EnvelopeTemplateInfoDTO[]
      */
     public function getTemplates()
     {
@@ -359,7 +359,7 @@ class EnvelopeApprovalPageDTO implements ModelInterface, ArrayAccess
     /**
      * Sets templates
      *
-     * @param \Swagger\Client\Model\EnvelopeTemplateInfoDTO[] $templates Templates
+     * @param \Docstudio\ClientModel\EnvelopeTemplateInfoDTO[] $templates Templates
      *
      * @return $this
      */

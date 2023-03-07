@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,13 +29,13 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * ScenarioDTO Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class ScenarioDTO implements ModelInterface, ArrayAccess
 'description' => 'string',
 'mailbox_uuid' => 'string',
 'access' => 'string',
-'steps' => '\Swagger\Client\Model\ScenarioStepDTO[]',
+'steps' => '\Docstudio\ClientModel\ScenarioStepDTO[]',
 'add_to_chain' => 'bool'    ];
 
     /**
@@ -403,7 +403,7 @@ self::ACCESS_SHARED,        ];
     /**
      * Gets steps
      *
-     * @return \Swagger\Client\Model\ScenarioStepDTO[]
+     * @return \Docstudio\ClientModel\ScenarioStepDTO[]
      */
     public function getSteps()
     {
@@ -413,7 +413,7 @@ self::ACCESS_SHARED,        ];
     /**
      * Sets steps
      *
-     * @param \Swagger\Client\Model\ScenarioStepDTO[] $steps Scenario steps
+     * @param \Docstudio\ClientModel\ScenarioStepDTO[] $steps Scenario steps
      *
      * @return $this
      */

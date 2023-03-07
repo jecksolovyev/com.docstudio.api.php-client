@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -29,14 +29,14 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Docstudio\ClientObjectSerializer;
 
 /**
  * ScenarioShortStepDTO Class Doc Comment
  *
  * @category Class
  * @description Scenario steps
- * @package  Swagger\Client
+ * @package  Docstudio\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,8 +59,8 @@ class ScenarioShortStepDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
 'name' => 'string',
-'source' => '\Swagger\Client\Model\ScenarioShortStepTemplateInfoDTO',
-'destination' => '\Swagger\Client\Model\ScenarioShortStepTemplateInfoDTO',
+'source' => '\Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO',
+'destination' => '\Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO',
 'send_after_creation' => 'bool'    ];
 
     /**
@@ -278,7 +278,7 @@ class ScenarioShortStepDTO implements ModelInterface, ArrayAccess
     /**
      * Gets source
      *
-     * @return \Swagger\Client\Model\ScenarioShortStepTemplateInfoDTO
+     * @return \Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO
      */
     public function getSource()
     {
@@ -288,7 +288,7 @@ class ScenarioShortStepDTO implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param \Swagger\Client\Model\ScenarioShortStepTemplateInfoDTO $source source
+     * @param \Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO $source source
      *
      * @return $this
      */
@@ -302,7 +302,7 @@ class ScenarioShortStepDTO implements ModelInterface, ArrayAccess
     /**
      * Gets destination
      *
-     * @return \Swagger\Client\Model\ScenarioShortStepTemplateInfoDTO
+     * @return \Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO
      */
     public function getDestination()
     {
@@ -312,7 +312,7 @@ class ScenarioShortStepDTO implements ModelInterface, ArrayAccess
     /**
      * Sets destination
      *
-     * @param \Swagger\Client\Model\ScenarioShortStepTemplateInfoDTO $destination destination
+     * @param \Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO $destination destination
      *
      * @return $this
      */

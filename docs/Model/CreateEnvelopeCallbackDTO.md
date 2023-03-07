@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**filter** | [**\Swagger\Client\Model\CallbackEnvelopeFilterDTO**](CallbackEnvelopeFilterDTO.md) |  | 
+**filter** | [**\Docstudio\ClientModel\CallbackEnvelopeFilterDTO**](CallbackEnvelopeFilterDTO.md) |  | 
 **url** | **string** | Callback url | 
 **retries** | **int** | Retries count, 0 &lt; X &lt;&#x3D; 10 | 
 **timeout** | **int** | Request timeout (ms), 100 &lt; X &lt; 60000 | 

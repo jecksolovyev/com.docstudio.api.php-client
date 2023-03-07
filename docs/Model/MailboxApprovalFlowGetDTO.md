@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **shared_for_account** | **bool** |  | [optional] 
-**shared_for_mailboxes** | [**\Swagger\Client\Model\MailboxNameUuidDTO[]**](MailboxNameUuidDTO.md) |  | [optional] 
+**shared_for_mailboxes** | [**\Docstudio\ClientModel\MailboxNameUuidDTO[]**](MailboxNameUuidDTO.md) |  | [optional] 
 **name** | **string** |  | 
 **flow_type** | **string** |  | 
-**approvers** | [**\Swagger\Client\Model\EnvelopeApproverGetDTO[]**](EnvelopeApproverGetDTO.md) |  | 
+**approvers** | [**\Docstudio\ClientModel\EnvelopeApproverGetDTO[]**](EnvelopeApproverGetDTO.md) |  | 
 **uuid** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
