@@ -91,12 +91,12 @@ class AliasControllerApi
      *
      * Save alias to mailbox
      *
-     * @param  \Docstudio\ClientModel\AliasDTO $body body (required)
+     * @param  \Docstudio\Client\Model\AliasDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\AliasDTO
+     * @return \Docstudio\Client\Model\AliasDTO
      */
     public function createAlias($body, $mailbox)
     {
@@ -109,16 +109,16 @@ class AliasControllerApi
      *
      * Save alias to mailbox
      *
-     * @param  \Docstudio\ClientModel\AliasDTO $body (required)
+     * @param  \Docstudio\Client\Model\AliasDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\AliasDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\AliasDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAliasWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\AliasDTO';
+        $returnType = '\Swagger\Client\Model\AliasDTO';
         $request = $this->createAliasRequest($body, $mailbox);
 
         try {
@@ -170,7 +170,7 @@ class AliasControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\AliasDTO',
+                        '\Swagger\Client\Model\AliasDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class AliasControllerApi
      *
      * Save alias to mailbox
      *
-     * @param  \Docstudio\ClientModel\AliasDTO $body (required)
+     * @param  \Docstudio\Client\Model\AliasDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class AliasControllerApi
      *
      * Save alias to mailbox
      *
-     * @param  \Docstudio\ClientModel\AliasDTO $body (required)
+     * @param  \Docstudio\Client\Model\AliasDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class AliasControllerApi
      */
     public function createAliasAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\AliasDTO';
+        $returnType = '\Swagger\Client\Model\AliasDTO';
         $request = $this->createAliasRequest($body, $mailbox);
 
         return $this->client
@@ -257,7 +257,7 @@ class AliasControllerApi
     /**
      * Create request for operation 'createAlias'
      *
-     * @param  \Docstudio\ClientModel\AliasDTO $body (required)
+     * @param  \Docstudio\Client\Model\AliasDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -370,7 +370,7 @@ class AliasControllerApi
      * @param  string $name name (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -387,7 +387,7 @@ class AliasControllerApi
      * @param  string $name (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -609,9 +609,9 @@ class AliasControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\AliasDTO[]
+     * @return \Docstudio\Client\Model\AliasDTO[]
      */
     public function getAllByMailbox($mailbox)
     {
@@ -626,13 +626,13 @@ class AliasControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\AliasDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\AliasDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllByMailboxWithHttpInfo($mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\AliasDTO[]';
+        $returnType = '\Swagger\Client\Model\AliasDTO[]';
         $request = $this->getAllByMailboxRequest($mailbox);
 
         try {
@@ -684,7 +684,7 @@ class AliasControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\AliasDTO[]',
+                        '\Swagger\Client\Model\AliasDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -726,7 +726,7 @@ class AliasControllerApi
      */
     public function getAllByMailboxAsyncWithHttpInfo($mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\AliasDTO[]';
+        $returnType = '\Swagger\Client\Model\AliasDTO[]';
         $request = $this->getAllByMailboxRequest($mailbox);
 
         return $this->client

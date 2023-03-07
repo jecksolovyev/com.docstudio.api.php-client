@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * ScenarioStepDTO Class Doc Comment
@@ -59,8 +59,8 @@ class ScenarioStepDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
 'name' => 'string',
-'source' => '\Docstudio\ClientModel\ScenarioStepTemplateInfoDTO',
-'destination' => '\Docstudio\ClientModel\ScenarioStepTemplateInfoDTO',
+'source' => '\Swagger\Client\Model\ScenarioStepTemplateInfoDTO',
+'destination' => '\Swagger\Client\Model\ScenarioStepTemplateInfoDTO',
 'xslt' => 'string',
 'condition' => 'string',
 'send_after_creation' => 'bool'    ];
@@ -296,7 +296,7 @@ class ScenarioStepDTO implements ModelInterface, ArrayAccess
     /**
      * Gets source
      *
-     * @return \Docstudio\ClientModel\ScenarioStepTemplateInfoDTO
+     * @return \Docstudio\Client\Model\ScenarioStepTemplateInfoDTO
      */
     public function getSource()
     {
@@ -306,7 +306,7 @@ class ScenarioStepDTO implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param \Docstudio\ClientModel\ScenarioStepTemplateInfoDTO $source source
+     * @param \Docstudio\Client\Model\ScenarioStepTemplateInfoDTO $source source
      *
      * @return $this
      */
@@ -320,7 +320,7 @@ class ScenarioStepDTO implements ModelInterface, ArrayAccess
     /**
      * Gets destination
      *
-     * @return \Docstudio\ClientModel\ScenarioStepTemplateInfoDTO
+     * @return \Docstudio\Client\Model\ScenarioStepTemplateInfoDTO
      */
     public function getDestination()
     {
@@ -330,7 +330,7 @@ class ScenarioStepDTO implements ModelInterface, ArrayAccess
     /**
      * Sets destination
      *
-     * @param \Docstudio\ClientModel\ScenarioStepTemplateInfoDTO $destination destination
+     * @param \Docstudio\Client\Model\ScenarioStepTemplateInfoDTO $destination destination
      *
      * @return $this
      */

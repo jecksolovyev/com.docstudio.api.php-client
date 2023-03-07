@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * ScenarioDTO Class Doc Comment
@@ -61,7 +61,7 @@ class ScenarioDTO implements ModelInterface, ArrayAccess
 'description' => 'string',
 'mailbox_uuid' => 'string',
 'access' => 'string',
-'steps' => '\Docstudio\ClientModel\ScenarioStepDTO[]',
+'steps' => '\Swagger\Client\Model\ScenarioStepDTO[]',
 'add_to_chain' => 'bool'    ];
 
     /**
@@ -403,7 +403,7 @@ self::ACCESS_SHARED,        ];
     /**
      * Gets steps
      *
-     * @return \Docstudio\ClientModel\ScenarioStepDTO[]
+     * @return \Docstudio\Client\Model\ScenarioStepDTO[]
      */
     public function getSteps()
     {
@@ -413,7 +413,7 @@ self::ACCESS_SHARED,        ];
     /**
      * Sets steps
      *
-     * @param \Docstudio\ClientModel\ScenarioStepDTO[] $steps Scenario steps
+     * @param \Docstudio\Client\Model\ScenarioStepDTO[] $steps Scenario steps
      *
      * @return $this
      */

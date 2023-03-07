@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * MailboxUpdateRequestDTO Class Doc Comment
@@ -59,7 +59,7 @@ class MailboxUpdateRequestDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'name' => 'string',
 'archived' => 'bool',
-'aliases' => '\Docstudio\ClientModel\AliasNameDTO[]',
+'aliases' => '\Swagger\Client\Model\AliasNameDTO[]',
 'hide_name_for_accounts' => 'bool'    ];
 
     /**
@@ -278,7 +278,7 @@ class MailboxUpdateRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Gets aliases
      *
-     * @return \Docstudio\ClientModel\AliasNameDTO[]
+     * @return \Docstudio\Client\Model\AliasNameDTO[]
      */
     public function getAliases()
     {
@@ -288,7 +288,7 @@ class MailboxUpdateRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Sets aliases
      *
-     * @param \Docstudio\ClientModel\AliasNameDTO[] $aliases aliases
+     * @param \Docstudio\Client\Model\AliasNameDTO[] $aliases aliases
      *
      * @return $this
      */

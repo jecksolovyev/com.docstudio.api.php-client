@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * User2AccountWithMailboxesDTO Class Doc Comment
@@ -61,7 +61,7 @@ class User2AccountWithMailboxesDTO implements ModelInterface, ArrayAccess
 'name' => 'string',
 'system' => 'bool',
 'permissions' => 'int[]',
-'mailboxes' => '\Docstudio\ClientModel\MailboxProfileDTO[]'    ];
+'mailboxes' => '\Swagger\Client\Model\MailboxProfileDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -320,7 +320,7 @@ class User2AccountWithMailboxesDTO implements ModelInterface, ArrayAccess
     /**
      * Gets mailboxes
      *
-     * @return \Docstudio\ClientModel\MailboxProfileDTO[]
+     * @return \Docstudio\Client\Model\MailboxProfileDTO[]
      */
     public function getMailboxes()
     {
@@ -330,7 +330,7 @@ class User2AccountWithMailboxesDTO implements ModelInterface, ArrayAccess
     /**
      * Sets mailboxes
      *
-     * @param \Docstudio\ClientModel\MailboxProfileDTO[] $mailboxes Mailboxes linked to this account
+     * @param \Docstudio\Client\Model\MailboxProfileDTO[] $mailboxes Mailboxes linked to this account
      *
      * @return $this
      */

@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * DictionaryResponseDTO Class Doc Comment
@@ -64,7 +64,7 @@ class DictionaryResponseDTO implements ModelInterface, ArrayAccess
 'created_at' => '\DateTime',
 'editable' => 'bool',
 'records_count' => 'int',
-'columns' => '\Docstudio\ClientModel\DictionaryColumnResponseDTO[]',
+'columns' => '\Swagger\Client\Model\DictionaryColumnResponseDTO[]',
 'status' => 'string'    ];
 
     /**
@@ -523,7 +523,7 @@ self::STATUS_AVAILABLE,        ];
     /**
      * Gets columns
      *
-     * @return \Docstudio\ClientModel\DictionaryColumnResponseDTO[]
+     * @return \Docstudio\Client\Model\DictionaryColumnResponseDTO[]
      */
     public function getColumns()
     {
@@ -533,7 +533,7 @@ self::STATUS_AVAILABLE,        ];
     /**
      * Sets columns
      *
-     * @param \Docstudio\ClientModel\DictionaryColumnResponseDTO[] $columns columns
+     * @param \Docstudio\Client\Model\DictionaryColumnResponseDTO[] $columns columns
      *
      * @return $this
      */

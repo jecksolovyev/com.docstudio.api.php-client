@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopeToMailboxDTO Class Doc Comment
@@ -78,7 +78,7 @@ class EnvelopeToMailboxDTO implements ModelInterface, ArrayAccess
 'invitation_code' => 'string',
 'chain_uuid' => 'string',
 'chained_by_me' => 'bool',
-'extra_fields' => '\Docstudio\ClientModel\EnvelopeExtraFieldDTO[]'    ];
+'extra_fields' => '\Swagger\Client\Model\EnvelopeExtraFieldDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -870,7 +870,7 @@ self::STATUS_ON_APPROVAL,        ];
     /**
      * Gets extra_fields
      *
-     * @return \Docstudio\ClientModel\EnvelopeExtraFieldDTO[]
+     * @return \Docstudio\Client\Model\EnvelopeExtraFieldDTO[]
      */
     public function getExtraFields()
     {
@@ -880,7 +880,7 @@ self::STATUS_ON_APPROVAL,        ];
     /**
      * Sets extra_fields
      *
-     * @param \Docstudio\ClientModel\EnvelopeExtraFieldDTO[] $extra_fields Data for extra columns
+     * @param \Docstudio\Client\Model\EnvelopeExtraFieldDTO[] $extra_fields Data for extra columns
      *
      * @return $this
      */

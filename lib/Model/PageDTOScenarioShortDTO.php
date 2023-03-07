@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTOScenarioShortDTO Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTOScenarioShortDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\ScenarioShortDTO[]'    ];
+'data' => '\Swagger\Client\Model\ScenarioShortDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTOScenarioShortDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\ScenarioShortDTO[]
+     * @return \Docstudio\Client\Model\ScenarioShortDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTOScenarioShortDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\ScenarioShortDTO[] $data Data records
+     * @param \Docstudio\Client\Model\ScenarioShortDTO[] $data Data records
      *
      * @return $this
      */

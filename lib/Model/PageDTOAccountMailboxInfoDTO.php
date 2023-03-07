@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTOAccountMailboxInfoDTO Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTOAccountMailboxInfoDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\AccountMailboxInfoDTO[]'    ];
+'data' => '\Swagger\Client\Model\AccountMailboxInfoDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTOAccountMailboxInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\AccountMailboxInfoDTO[]
+     * @return \Docstudio\Client\Model\AccountMailboxInfoDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTOAccountMailboxInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\AccountMailboxInfoDTO[] $data Data records
+     * @param \Docstudio\Client\Model\AccountMailboxInfoDTO[] $data Data records
      *
      * @return $this
      */

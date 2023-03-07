@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * UserPermissionDTO Class Doc Comment
@@ -63,7 +63,7 @@ class UserPermissionDTO implements ModelInterface, ArrayAccess
 'created_at' => '\DateTime',
 'status' => 'string',
 'corporate_user' => 'bool',
-'authorizations' => '\Docstudio\ClientModel\UserAuthorizationDTO'    ];
+'authorizations' => '\Swagger\Client\Model\UserAuthorizationDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -445,7 +445,7 @@ self::STATUS_DELETED,        ];
     /**
      * Gets authorizations
      *
-     * @return \Docstudio\ClientModel\UserAuthorizationDTO
+     * @return \Docstudio\Client\Model\UserAuthorizationDTO
      */
     public function getAuthorizations()
     {
@@ -455,7 +455,7 @@ self::STATUS_DELETED,        ];
     /**
      * Sets authorizations
      *
-     * @param \Docstudio\ClientModel\UserAuthorizationDTO $authorizations authorizations
+     * @param \Docstudio\Client\Model\UserAuthorizationDTO $authorizations authorizations
      *
      * @return $this
      */

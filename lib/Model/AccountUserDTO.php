@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * AccountUserDTO Class Doc Comment
@@ -60,7 +60,7 @@ class AccountUserDTO implements ModelInterface, ArrayAccess
 'first_name' => 'string',
 'last_name' => 'string',
 'permissions' => 'int[]',
-'roles' => '\Docstudio\ClientModel\RoleShortDTO[]'    ];
+'roles' => '\Swagger\Client\Model\RoleShortDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -319,7 +319,7 @@ class AccountUserDTO implements ModelInterface, ArrayAccess
     /**
      * Gets roles
      *
-     * @return \Docstudio\ClientModel\RoleShortDTO[]
+     * @return \Docstudio\Client\Model\RoleShortDTO[]
      */
     public function getRoles()
     {
@@ -329,7 +329,7 @@ class AccountUserDTO implements ModelInterface, ArrayAccess
     /**
      * Sets roles
      *
-     * @param \Docstudio\ClientModel\RoleShortDTO[] $roles roles
+     * @param \Docstudio\Client\Model\RoleShortDTO[] $roles roles
      *
      * @return $this
      */

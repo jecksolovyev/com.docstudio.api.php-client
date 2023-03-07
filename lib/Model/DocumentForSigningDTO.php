@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * DocumentForSigningDTO Class Doc Comment
@@ -63,7 +63,7 @@ class DocumentForSigningDTO implements ModelInterface, ArrayAccess
 'binary_file_name' => 'string',
 'binary_file' => 'string',
 'binary_hash' => 'string',
-'signatures' => '\Docstudio\ClientModel\RequiredSignatureDTO[]'    ];
+'signatures' => '\Swagger\Client\Model\RequiredSignatureDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -409,7 +409,7 @@ class DocumentForSigningDTO implements ModelInterface, ArrayAccess
     /**
      * Gets signatures
      *
-     * @return \Docstudio\ClientModel\RequiredSignatureDTO[]
+     * @return \Docstudio\Client\Model\RequiredSignatureDTO[]
      */
     public function getSignatures()
     {
@@ -419,7 +419,7 @@ class DocumentForSigningDTO implements ModelInterface, ArrayAccess
     /**
      * Sets signatures
      *
-     * @param \Docstudio\ClientModel\RequiredSignatureDTO[] $signatures Signatures
+     * @param \Docstudio\Client\Model\RequiredSignatureDTO[] $signatures Signatures
      *
      * @return $this
      */

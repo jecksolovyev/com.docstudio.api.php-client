@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvPostDTO Class Doc Comment
@@ -59,7 +59,7 @@ class EnvPostDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'uuid' => 'string',
 'data' => 'string',
-'stamps' => '\Docstudio\ClientModel\DocStampDTO[]'    ];
+'stamps' => '\Swagger\Client\Model\DocStampDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -260,7 +260,7 @@ class EnvPostDTO implements ModelInterface, ArrayAccess
     /**
      * Gets stamps
      *
-     * @return \Docstudio\ClientModel\DocStampDTO[]
+     * @return \Docstudio\Client\Model\DocStampDTO[]
      */
     public function getStamps()
     {
@@ -270,7 +270,7 @@ class EnvPostDTO implements ModelInterface, ArrayAccess
     /**
      * Sets stamps
      *
-     * @param \Docstudio\ClientModel\DocStampDTO[] $stamps Stamps for external documents
+     * @param \Docstudio\Client\Model\DocStampDTO[] $stamps Stamps for external documents
      *
      * @return $this
      */

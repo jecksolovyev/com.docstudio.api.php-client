@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * AccountPermissionsDTO Class Doc Comment
@@ -56,9 +56,9 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account' => '\Docstudio\ClientModel\PermissionsWithUuidDTO',
-'mailboxes' => '\Docstudio\ClientModel\PermissionsWithUuidDTO[]',
-'user' => '\Docstudio\ClientModel\UserDTO'    ];
+        'account' => '\Swagger\Client\Model\PermissionsWithUuidDTO',
+'mailboxes' => '\Swagger\Client\Model\PermissionsWithUuidDTO[]',
+'user' => '\Swagger\Client\Model\UserDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -214,7 +214,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets account
      *
-     * @return \Docstudio\ClientModel\PermissionsWithUuidDTO
+     * @return \Docstudio\Client\Model\PermissionsWithUuidDTO
      */
     public function getAccount()
     {
@@ -224,7 +224,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param \Docstudio\ClientModel\PermissionsWithUuidDTO $account account
+     * @param \Docstudio\Client\Model\PermissionsWithUuidDTO $account account
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets mailboxes
      *
-     * @return \Docstudio\ClientModel\PermissionsWithUuidDTO[]
+     * @return \Docstudio\Client\Model\PermissionsWithUuidDTO[]
      */
     public function getMailboxes()
     {
@@ -248,7 +248,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets mailboxes
      *
-     * @param \Docstudio\ClientModel\PermissionsWithUuidDTO[] $mailboxes Mailboxes roles and permissions
+     * @param \Docstudio\Client\Model\PermissionsWithUuidDTO[] $mailboxes Mailboxes roles and permissions
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets user
      *
-     * @return \Docstudio\ClientModel\UserDTO
+     * @return \Docstudio\Client\Model\UserDTO
      */
     public function getUser()
     {
@@ -272,7 +272,7 @@ class AccountPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets user
      *
-     * @param \Docstudio\ClientModel\UserDTO $user user
+     * @param \Docstudio\Client\Model\UserDTO $user user
      *
      * @return $this
      */

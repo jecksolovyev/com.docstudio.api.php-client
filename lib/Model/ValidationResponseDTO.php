@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * ValidationResponseDTO Class Doc Comment
@@ -56,7 +56,7 @@ class ValidationResponseDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'errors' => '\Docstudio\ClientModel\EnvelopeValidationError[]'    ];
+        'errors' => '\Swagger\Client\Model\EnvelopeValidationError[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -199,7 +199,7 @@ class ValidationResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return \Docstudio\ClientModel\EnvelopeValidationError[]
+     * @return \Docstudio\Client\Model\EnvelopeValidationError[]
      */
     public function getErrors()
     {
@@ -209,7 +209,7 @@ class ValidationResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param \Docstudio\ClientModel\EnvelopeValidationError[] $errors errors
+     * @param \Docstudio\Client\Model\EnvelopeValidationError[] $errors errors
      *
      * @return $this
      */

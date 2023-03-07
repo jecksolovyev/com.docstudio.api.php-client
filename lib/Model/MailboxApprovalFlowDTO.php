@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * MailboxApprovalFlowDTO Class Doc Comment
@@ -61,7 +61,7 @@ class MailboxApprovalFlowDTO implements ModelInterface, ArrayAccess
 'shared_for_mailboxes' => 'string[]',
 'name' => 'string',
 'flow_type' => 'string',
-'approvers' => '\Docstudio\ClientModel\EnvelopeApproverDTO[]'    ];
+'approvers' => '\Swagger\Client\Model\EnvelopeApproverDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -359,7 +359,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Gets approvers
      *
-     * @return \Docstudio\ClientModel\EnvelopeApproverDTO[]
+     * @return \Docstudio\Client\Model\EnvelopeApproverDTO[]
      */
     public function getApprovers()
     {
@@ -369,7 +369,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Sets approvers
      *
-     * @param \Docstudio\ClientModel\EnvelopeApproverDTO[] $approvers approvers
+     * @param \Docstudio\Client\Model\EnvelopeApproverDTO[] $approvers approvers
      *
      * @return $this
      */

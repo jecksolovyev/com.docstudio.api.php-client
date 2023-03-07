@@ -27,7 +27,7 @@
  */
 
 namespace Docstudio\Client\Model;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * ActivityLogObjectType Class Doc Comment

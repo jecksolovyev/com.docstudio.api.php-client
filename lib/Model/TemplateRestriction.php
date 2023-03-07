@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * TemplateRestriction Class Doc Comment
@@ -57,11 +57,11 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'image' => '\Docstudio\ClientModel\ImageRestriction',
-'logo' => '\Docstudio\ClientModel\LogoImageRestriction',
+        'image' => '\Swagger\Client\Model\ImageRestriction',
+'logo' => '\Swagger\Client\Model\LogoImageRestriction',
 'expire_after_days' => 'int',
 'notify_in_days' => 'int',
-'supported_page_sizes' => '\Docstudio\ClientModel\DocumentPageSizeDTO[]'    ];
+'supported_page_sizes' => '\Swagger\Client\Model\DocumentPageSizeDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -224,7 +224,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets image
      *
-     * @return \Docstudio\ClientModel\ImageRestriction
+     * @return \Docstudio\Client\Model\ImageRestriction
      */
     public function getImage()
     {
@@ -234,7 +234,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets image
      *
-     * @param \Docstudio\ClientModel\ImageRestriction $image image
+     * @param \Docstudio\Client\Model\ImageRestriction $image image
      *
      * @return $this
      */
@@ -248,7 +248,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets logo
      *
-     * @return \Docstudio\ClientModel\LogoImageRestriction
+     * @return \Docstudio\Client\Model\LogoImageRestriction
      */
     public function getLogo()
     {
@@ -258,7 +258,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets logo
      *
-     * @param \Docstudio\ClientModel\LogoImageRestriction $logo logo
+     * @param \Docstudio\Client\Model\LogoImageRestriction $logo logo
      *
      * @return $this
      */
@@ -320,7 +320,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets supported_page_sizes
      *
-     * @return \Docstudio\ClientModel\DocumentPageSizeDTO[]
+     * @return \Docstudio\Client\Model\DocumentPageSizeDTO[]
      */
     public function getSupportedPageSizes()
     {
@@ -330,7 +330,7 @@ class TemplateRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets supported_page_sizes
      *
-     * @param \Docstudio\ClientModel\DocumentPageSizeDTO[] $supported_page_sizes supported_page_sizes
+     * @param \Docstudio\Client\Model\DocumentPageSizeDTO[] $supported_page_sizes supported_page_sizes
      *
      * @return $this
      */

@@ -90,7 +90,7 @@ class IntegrationTestControllerApi
      * Operation clearContext
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -103,7 +103,7 @@ class IntegrationTestControllerApi
      * Operation clearContextWithHttpInfo
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * DictionaryFiltersRequestDTO Class Doc Comment
@@ -56,7 +56,7 @@ class DictionaryFiltersRequestDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'filters' => '\Docstudio\ClientModel\FilterDTO[]'    ];
+        'filters' => '\Swagger\Client\Model\FilterDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -199,7 +199,7 @@ class DictionaryFiltersRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Gets filters
      *
-     * @return \Docstudio\ClientModel\FilterDTO[]
+     * @return \Docstudio\Client\Model\FilterDTO[]
      */
     public function getFilters()
     {
@@ -209,7 +209,7 @@ class DictionaryFiltersRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \Docstudio\ClientModel\FilterDTO[] $filters filters
+     * @param \Docstudio\Client\Model\FilterDTO[] $filters filters
      *
      * @return $this
      */

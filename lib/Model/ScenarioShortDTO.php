@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * ScenarioShortDTO Class Doc Comment
@@ -61,7 +61,7 @@ class ScenarioShortDTO implements ModelInterface, ArrayAccess
 'name' => 'string',
 'description' => 'string',
 'access' => 'string',
-'steps' => '\Docstudio\ClientModel\ScenarioShortStepDTO[]',
+'steps' => '\Swagger\Client\Model\ScenarioShortStepDTO[]',
 'editable' => 'bool',
 'created_at' => '\DateTime',
 'updated_at' => '\DateTime'    ];
@@ -374,7 +374,7 @@ self::ACCESS_SHARED,        ];
     /**
      * Gets steps
      *
-     * @return \Docstudio\ClientModel\ScenarioShortStepDTO[]
+     * @return \Docstudio\Client\Model\ScenarioShortStepDTO[]
      */
     public function getSteps()
     {
@@ -384,7 +384,7 @@ self::ACCESS_SHARED,        ];
     /**
      * Sets steps
      *
-     * @param \Docstudio\ClientModel\ScenarioShortStepDTO[] $steps Scenario steps
+     * @param \Docstudio\Client\Model\ScenarioShortStepDTO[] $steps Scenario steps
      *
      * @return $this
      */

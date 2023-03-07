@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * MailboxApprovalFlowGetDTO Class Doc Comment
@@ -58,10 +58,10 @@ class MailboxApprovalFlowGetDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'shared_for_account' => 'bool',
-'shared_for_mailboxes' => '\Docstudio\ClientModel\MailboxNameUuidDTO[]',
+'shared_for_mailboxes' => '\Swagger\Client\Model\MailboxNameUuidDTO[]',
 'name' => 'string',
 'flow_type' => 'string',
-'approvers' => '\Docstudio\ClientModel\EnvelopeApproverGetDTO[]',
+'approvers' => '\Swagger\Client\Model\EnvelopeApproverGetDTO[]',
 'uuid' => 'string'    ];
 
     /**
@@ -284,7 +284,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Gets shared_for_mailboxes
      *
-     * @return \Docstudio\ClientModel\MailboxNameUuidDTO[]
+     * @return \Docstudio\Client\Model\MailboxNameUuidDTO[]
      */
     public function getSharedForMailboxes()
     {
@@ -294,7 +294,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Sets shared_for_mailboxes
      *
-     * @param \Docstudio\ClientModel\MailboxNameUuidDTO[] $shared_for_mailboxes shared_for_mailboxes
+     * @param \Docstudio\Client\Model\MailboxNameUuidDTO[] $shared_for_mailboxes shared_for_mailboxes
      *
      * @return $this
      */
@@ -365,7 +365,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Gets approvers
      *
-     * @return \Docstudio\ClientModel\EnvelopeApproverGetDTO[]
+     * @return \Docstudio\Client\Model\EnvelopeApproverGetDTO[]
      */
     public function getApprovers()
     {
@@ -375,7 +375,7 @@ self::FLOW_TYPE_MANUAL,        ];
     /**
      * Sets approvers
      *
-     * @param \Docstudio\ClientModel\EnvelopeApproverGetDTO[] $approvers approvers
+     * @param \Docstudio\Client\Model\EnvelopeApproverGetDTO[] $approvers approvers
      *
      * @return $this
      */

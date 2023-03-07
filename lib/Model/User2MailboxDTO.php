@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * User2MailboxDTO Class Doc Comment
@@ -61,8 +61,8 @@ class User2MailboxDTO implements ModelInterface, ArrayAccess
 'name' => 'string',
 'account_uuid' => 'string',
 'account_name' => 'string',
-'authorization' => '\Docstudio\ClientModel\UserAuthorizationDTO',
-'roles' => '\Docstudio\ClientModel\RoleShortDTO[]'    ];
+'authorization' => '\Swagger\Client\Model\UserAuthorizationDTO',
+'roles' => '\Swagger\Client\Model\RoleShortDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -358,7 +358,7 @@ class User2MailboxDTO implements ModelInterface, ArrayAccess
     /**
      * Gets authorization
      *
-     * @return \Docstudio\ClientModel\UserAuthorizationDTO
+     * @return \Docstudio\Client\Model\UserAuthorizationDTO
      */
     public function getAuthorization()
     {
@@ -368,7 +368,7 @@ class User2MailboxDTO implements ModelInterface, ArrayAccess
     /**
      * Sets authorization
      *
-     * @param \Docstudio\ClientModel\UserAuthorizationDTO $authorization authorization
+     * @param \Docstudio\Client\Model\UserAuthorizationDTO $authorization authorization
      *
      * @return $this
      */
@@ -382,7 +382,7 @@ class User2MailboxDTO implements ModelInterface, ArrayAccess
     /**
      * Gets roles
      *
-     * @return \Docstudio\ClientModel\RoleShortDTO[]
+     * @return \Docstudio\Client\Model\RoleShortDTO[]
      */
     public function getRoles()
     {
@@ -392,7 +392,7 @@ class User2MailboxDTO implements ModelInterface, ArrayAccess
     /**
      * Sets roles
      *
-     * @param \Docstudio\ClientModel\RoleShortDTO[] $roles roles
+     * @param \Docstudio\Client\Model\RoleShortDTO[] $roles roles
      *
      * @return $this
      */

@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * AccountPoliciesDTO Class Doc Comment
@@ -57,8 +57,8 @@ class AccountPoliciesDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'password_policy' => '\Docstudio\ClientModel\PasswordPolicy',
-'session_policy' => '\Docstudio\ClientModel\SessionPolicy'    ];
+        'password_policy' => '\Swagger\Client\Model\PasswordPolicy',
+'session_policy' => '\Swagger\Client\Model\SessionPolicy'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -206,7 +206,7 @@ class AccountPoliciesDTO implements ModelInterface, ArrayAccess
     /**
      * Gets password_policy
      *
-     * @return \Docstudio\ClientModel\PasswordPolicy
+     * @return \Docstudio\Client\Model\PasswordPolicy
      */
     public function getPasswordPolicy()
     {
@@ -216,7 +216,7 @@ class AccountPoliciesDTO implements ModelInterface, ArrayAccess
     /**
      * Sets password_policy
      *
-     * @param \Docstudio\ClientModel\PasswordPolicy $password_policy password_policy
+     * @param \Docstudio\Client\Model\PasswordPolicy $password_policy password_policy
      *
      * @return $this
      */
@@ -230,7 +230,7 @@ class AccountPoliciesDTO implements ModelInterface, ArrayAccess
     /**
      * Gets session_policy
      *
-     * @return \Docstudio\ClientModel\SessionPolicy
+     * @return \Docstudio\Client\Model\SessionPolicy
      */
     public function getSessionPolicy()
     {
@@ -240,7 +240,7 @@ class AccountPoliciesDTO implements ModelInterface, ArrayAccess
     /**
      * Sets session_policy
      *
-     * @param \Docstudio\ClientModel\SessionPolicy $session_policy session_policy
+     * @param \Docstudio\Client\Model\SessionPolicy $session_policy session_policy
      *
      * @return $this
      */

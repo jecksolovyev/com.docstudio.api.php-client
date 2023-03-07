@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * ProfileDTO Class Doc Comment
@@ -70,7 +70,7 @@ class ProfileDTO implements ModelInterface, ArrayAccess
 'phone' => 'string',
 'display_exact_date' => 'bool',
 'signature' => 'string',
-'accounts' => '\Docstudio\ClientModel\User2AccountWithMailboxesDTO[]'    ];
+'accounts' => '\Swagger\Client\Model\User2AccountWithMailboxesDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -655,7 +655,7 @@ self::STATUS_DELETED,        ];
     /**
      * Gets accounts
      *
-     * @return \Docstudio\ClientModel\User2AccountWithMailboxesDTO[]
+     * @return \Docstudio\Client\Model\User2AccountWithMailboxesDTO[]
      */
     public function getAccounts()
     {
@@ -665,7 +665,7 @@ self::STATUS_DELETED,        ];
     /**
      * Sets accounts
      *
-     * @param \Docstudio\ClientModel\User2AccountWithMailboxesDTO[] $accounts User accounts belongs to
+     * @param \Docstudio\Client\Model\User2AccountWithMailboxesDTO[] $accounts User accounts belongs to
      *
      * @return $this
      */

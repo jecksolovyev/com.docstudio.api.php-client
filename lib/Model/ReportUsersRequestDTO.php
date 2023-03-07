@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * ReportUsersRequestDTO Class Doc Comment
@@ -58,7 +58,7 @@ class ReportUsersRequestDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'uuids' => 'string[]',
-'search_params' => '\Docstudio\ClientModel\UsersSearchFilterDTO'    ];
+'search_params' => '\Swagger\Client\Model\UsersSearchFilterDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -230,7 +230,7 @@ class ReportUsersRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Gets search_params
      *
-     * @return \Docstudio\ClientModel\UsersSearchFilterDTO
+     * @return \Docstudio\Client\Model\UsersSearchFilterDTO
      */
     public function getSearchParams()
     {
@@ -240,7 +240,7 @@ class ReportUsersRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Sets search_params
      *
-     * @param \Docstudio\ClientModel\UsersSearchFilterDTO $search_params search_params
+     * @param \Docstudio\Client\Model\UsersSearchFilterDTO $search_params search_params
      *
      * @return $this
      */

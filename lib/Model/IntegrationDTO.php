@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * IntegrationDTO Class Doc Comment
@@ -60,8 +60,8 @@ class IntegrationDTO implements ModelInterface, ArrayAccess
         'mailbox_uuid' => 'string',
 'active' => 'bool',
 'protocol' => 'string',
-'protocol_settings' => '\Docstudio\ClientModel\IntegrationProtocolSettingsDTO',
-'default_rule' => '\Docstudio\ClientModel\IntegrationDefaultRuleDTO'    ];
+'protocol_settings' => '\Swagger\Client\Model\IntegrationProtocolSettingsDTO',
+'default_rule' => '\Swagger\Client\Model\IntegrationDefaultRuleDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -343,7 +343,7 @@ self::PROTOCOL_AS2,        ];
     /**
      * Gets protocol_settings
      *
-     * @return \Docstudio\ClientModel\IntegrationProtocolSettingsDTO
+     * @return \Docstudio\Client\Model\IntegrationProtocolSettingsDTO
      */
     public function getProtocolSettings()
     {
@@ -353,7 +353,7 @@ self::PROTOCOL_AS2,        ];
     /**
      * Sets protocol_settings
      *
-     * @param \Docstudio\ClientModel\IntegrationProtocolSettingsDTO $protocol_settings protocol_settings
+     * @param \Docstudio\Client\Model\IntegrationProtocolSettingsDTO $protocol_settings protocol_settings
      *
      * @return $this
      */
@@ -367,7 +367,7 @@ self::PROTOCOL_AS2,        ];
     /**
      * Gets default_rule
      *
-     * @return \Docstudio\ClientModel\IntegrationDefaultRuleDTO
+     * @return \Docstudio\Client\Model\IntegrationDefaultRuleDTO
      */
     public function getDefaultRule()
     {
@@ -377,7 +377,7 @@ self::PROTOCOL_AS2,        ];
     /**
      * Sets default_rule
      *
-     * @param \Docstudio\ClientModel\IntegrationDefaultRuleDTO $default_rule default_rule
+     * @param \Docstudio\Client\Model\IntegrationDefaultRuleDTO $default_rule default_rule
      *
      * @return $this
      */

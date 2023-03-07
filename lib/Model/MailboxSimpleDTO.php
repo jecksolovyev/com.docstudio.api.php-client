@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * MailboxSimpleDTO Class Doc Comment
@@ -59,7 +59,7 @@ class MailboxSimpleDTO implements ModelInterface, ArrayAccess
         'name' => 'string',
 'created_at' => '\DateTime',
 'uuid' => 'string',
-'user_permissions' => '\Docstudio\ClientModel\UserPermissionDTO[]'    ];
+'user_permissions' => '\Swagger\Client\Model\UserPermissionDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class MailboxSimpleDTO implements ModelInterface, ArrayAccess
     /**
      * Gets user_permissions
      *
-     * @return \Docstudio\ClientModel\UserPermissionDTO[]
+     * @return \Docstudio\Client\Model\UserPermissionDTO[]
      */
     public function getUserPermissions()
     {
@@ -299,7 +299,7 @@ class MailboxSimpleDTO implements ModelInterface, ArrayAccess
     /**
      * Sets user_permissions
      *
-     * @param \Docstudio\ClientModel\UserPermissionDTO[] $user_permissions user_permissions
+     * @param \Docstudio\Client\Model\UserPermissionDTO[] $user_permissions user_permissions
      *
      * @return $this
      */

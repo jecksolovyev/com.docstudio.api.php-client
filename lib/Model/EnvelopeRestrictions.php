@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopeRestrictions Class Doc Comment
@@ -57,9 +57,9 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'field' => '\Docstudio\ClientModel\FieldRestriction',
-'attachment' => '\Docstudio\ClientModel\AttachmentRestriction',
-'search_field' => '\Docstudio\ClientModel\SearchFieldRestriction'    ];
+        'field' => '\Swagger\Client\Model\FieldRestriction',
+'attachment' => '\Swagger\Client\Model\AttachmentRestriction',
+'search_field' => '\Swagger\Client\Model\SearchFieldRestriction'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -212,7 +212,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Gets field
      *
-     * @return \Docstudio\ClientModel\FieldRestriction
+     * @return \Docstudio\Client\Model\FieldRestriction
      */
     public function getField()
     {
@@ -222,7 +222,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Sets field
      *
-     * @param \Docstudio\ClientModel\FieldRestriction $field field
+     * @param \Docstudio\Client\Model\FieldRestriction $field field
      *
      * @return $this
      */
@@ -236,7 +236,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Gets attachment
      *
-     * @return \Docstudio\ClientModel\AttachmentRestriction
+     * @return \Docstudio\Client\Model\AttachmentRestriction
      */
     public function getAttachment()
     {
@@ -246,7 +246,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Sets attachment
      *
-     * @param \Docstudio\ClientModel\AttachmentRestriction $attachment attachment
+     * @param \Docstudio\Client\Model\AttachmentRestriction $attachment attachment
      *
      * @return $this
      */
@@ -260,7 +260,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Gets search_field
      *
-     * @return \Docstudio\ClientModel\SearchFieldRestriction
+     * @return \Docstudio\Client\Model\SearchFieldRestriction
      */
     public function getSearchField()
     {
@@ -270,7 +270,7 @@ class EnvelopeRestrictions implements ModelInterface, ArrayAccess
     /**
      * Sets search_field
      *
-     * @param \Docstudio\ClientModel\SearchFieldRestriction $search_field search_field
+     * @param \Docstudio\Client\Model\SearchFieldRestriction $search_field search_field
      *
      * @return $this
      */

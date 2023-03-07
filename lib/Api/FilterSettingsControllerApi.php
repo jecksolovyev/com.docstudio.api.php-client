@@ -91,12 +91,12 @@ class FilterSettingsControllerApi
      *
      * Create FilterSettings for mailbox
      *
-     * @param  \Docstudio\ClientModel\FilterSettingsCreateDTO $body body (required)
+     * @param  \Docstudio\Client\Model\FilterSettingsCreateDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SingleUuidDTO
+     * @return \Docstudio\Client\Model\SingleUuidDTO
      */
     public function createFilterSettings($body, $mailbox)
     {
@@ -109,16 +109,16 @@ class FilterSettingsControllerApi
      *
      * Create FilterSettings for mailbox
      *
-     * @param  \Docstudio\ClientModel\FilterSettingsCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\FilterSettingsCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFilterSettingsWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->createFilterSettingsRequest($body, $mailbox);
 
         try {
@@ -170,7 +170,7 @@ class FilterSettingsControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SingleUuidDTO',
+                        '\Swagger\Client\Model\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class FilterSettingsControllerApi
      *
      * Create FilterSettings for mailbox
      *
-     * @param  \Docstudio\ClientModel\FilterSettingsCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\FilterSettingsCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class FilterSettingsControllerApi
      *
      * Create FilterSettings for mailbox
      *
-     * @param  \Docstudio\ClientModel\FilterSettingsCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\FilterSettingsCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class FilterSettingsControllerApi
      */
     public function createFilterSettingsAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->createFilterSettingsRequest($body, $mailbox);
 
         return $this->client
@@ -257,7 +257,7 @@ class FilterSettingsControllerApi
     /**
      * Create request for operation 'createFilterSettings'
      *
-     * @param  \Docstudio\ClientModel\FilterSettingsCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\FilterSettingsCreateDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -370,7 +370,7 @@ class FilterSettingsControllerApi
      * @param  string $uuid uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -387,7 +387,7 @@ class FilterSettingsControllerApi
      * @param  string $uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -613,9 +613,9 @@ class FilterSettingsControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\FilterSettingsDTO[]
+     * @return \Docstudio\Client\Model\FilterSettingsDTO[]
      */
     public function getAllFilterSettings($mailbox)
     {
@@ -630,13 +630,13 @@ class FilterSettingsControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\FilterSettingsDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\FilterSettingsDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllFilterSettingsWithHttpInfo($mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\FilterSettingsDTO[]';
+        $returnType = '\Swagger\Client\Model\FilterSettingsDTO[]';
         $request = $this->getAllFilterSettingsRequest($mailbox);
 
         try {
@@ -688,7 +688,7 @@ class FilterSettingsControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\FilterSettingsDTO[]',
+                        '\Swagger\Client\Model\FilterSettingsDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -730,7 +730,7 @@ class FilterSettingsControllerApi
      */
     public function getAllFilterSettingsAsyncWithHttpInfo($mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\FilterSettingsDTO[]';
+        $returnType = '\Swagger\Client\Model\FilterSettingsDTO[]';
         $request = $this->getAllFilterSettingsRequest($mailbox);
 
         return $this->client
@@ -876,9 +876,9 @@ class FilterSettingsControllerApi
      * @param  string $uuid uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\FilterSettingsDTO
+     * @return \Docstudio\Client\Model\FilterSettingsDTO
      */
     public function getByUuid($uuid, $mailbox)
     {
@@ -894,13 +894,13 @@ class FilterSettingsControllerApi
      * @param  string $uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\FilterSettingsDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\FilterSettingsDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getByUuidWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\FilterSettingsDTO';
+        $returnType = '\Swagger\Client\Model\FilterSettingsDTO';
         $request = $this->getByUuidRequest($uuid, $mailbox);
 
         try {
@@ -952,7 +952,7 @@ class FilterSettingsControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\FilterSettingsDTO',
+                        '\Swagger\Client\Model\FilterSettingsDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class FilterSettingsControllerApi
      */
     public function getByUuidAsyncWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\FilterSettingsDTO';
+        $returnType = '\Swagger\Client\Model\FilterSettingsDTO';
         $request = $this->getByUuidRequest($uuid, $mailbox);
 
         return $this->client
@@ -1154,11 +1154,11 @@ class FilterSettingsControllerApi
      *
      * Update FilterSettings for mailbox
      *
-     * @param  \Docstudio\ClientModel\FilterSettingsDTO $body body (required)
+     * @param  \Docstudio\Client\Model\FilterSettingsDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1172,11 +1172,11 @@ class FilterSettingsControllerApi
      *
      * Update FilterSettings for mailbox
      *
-     * @param  \Docstudio\ClientModel\FilterSettingsDTO $body (required)
+     * @param  \Docstudio\Client\Model\FilterSettingsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1227,7 +1227,7 @@ class FilterSettingsControllerApi
      *
      * Update FilterSettings for mailbox
      *
-     * @param  \Docstudio\ClientModel\FilterSettingsDTO $body (required)
+     * @param  \Docstudio\Client\Model\FilterSettingsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid (required)
      *
@@ -1249,7 +1249,7 @@ class FilterSettingsControllerApi
      *
      * Update FilterSettings for mailbox
      *
-     * @param  \Docstudio\ClientModel\FilterSettingsDTO $body (required)
+     * @param  \Docstudio\Client\Model\FilterSettingsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid (required)
      *
@@ -1287,7 +1287,7 @@ class FilterSettingsControllerApi
     /**
      * Create request for operation 'updateFilterSettings'
      *
-     * @param  \Docstudio\ClientModel\FilterSettingsDTO $body (required)
+     * @param  \Docstudio\Client\Model\FilterSettingsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid (required)
      *

@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * UserAuthorizationDTO Class Doc Comment
@@ -56,7 +56,7 @@ class UserAuthorizationDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'roles' => '\Docstudio\ClientModel\RoleShortDTO[]',
+        'roles' => '\Swagger\Client\Model\RoleShortDTO[]',
 'permissions' => 'int[]'    ];
 
     /**
@@ -205,7 +205,7 @@ class UserAuthorizationDTO implements ModelInterface, ArrayAccess
     /**
      * Gets roles
      *
-     * @return \Docstudio\ClientModel\RoleShortDTO[]
+     * @return \Docstudio\Client\Model\RoleShortDTO[]
      */
     public function getRoles()
     {
@@ -215,7 +215,7 @@ class UserAuthorizationDTO implements ModelInterface, ArrayAccess
     /**
      * Sets roles
      *
-     * @param \Docstudio\ClientModel\RoleShortDTO[] $roles roles
+     * @param \Docstudio\Client\Model\RoleShortDTO[] $roles roles
      *
      * @return $this
      */

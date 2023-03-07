@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTOAccountDomainDTO Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTOAccountDomainDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\AccountDomainDTO[]'    ];
+'data' => '\Swagger\Client\Model\AccountDomainDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTOAccountDomainDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\AccountDomainDTO[]
+     * @return \Docstudio\Client\Model\AccountDomainDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTOAccountDomainDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\AccountDomainDTO[] $data Data records
+     * @param \Docstudio\Client\Model\AccountDomainDTO[] $data Data records
      *
      * @return $this
      */

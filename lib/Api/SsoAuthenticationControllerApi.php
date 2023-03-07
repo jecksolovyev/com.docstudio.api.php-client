@@ -93,9 +93,9 @@ class SsoAuthenticationControllerApi
      *
      * @param  string $domain domain (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SsoEntityDTO
+     * @return \Docstudio\Client\Model\SsoEntityDTO
      */
     public function idpByDomain($domain)
     {
@@ -110,13 +110,13 @@ class SsoAuthenticationControllerApi
      *
      * @param  string $domain (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SsoEntityDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SsoEntityDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function idpByDomainWithHttpInfo($domain)
     {
-        $returnType = '\Docstudio\ClientModel\SsoEntityDTO';
+        $returnType = '\Swagger\Client\Model\SsoEntityDTO';
         $request = $this->idpByDomainRequest($domain);
 
         try {
@@ -168,7 +168,7 @@ class SsoAuthenticationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SsoEntityDTO',
+                        '\Swagger\Client\Model\SsoEntityDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class SsoAuthenticationControllerApi
      */
     public function idpByDomainAsyncWithHttpInfo($domain)
     {
-        $returnType = '\Docstudio\ClientModel\SsoEntityDTO';
+        $returnType = '\Swagger\Client\Model\SsoEntityDTO';
         $request = $this->idpByDomainRequest($domain);
 
         return $this->client
@@ -351,7 +351,7 @@ class SsoAuthenticationControllerApi
      *
      * @param  string $idp idp (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -367,7 +367,7 @@ class SsoAuthenticationControllerApi
      *
      * @param  string $idp (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -571,9 +571,9 @@ class SsoAuthenticationControllerApi
      * Login with SSO, token is in response
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\LoginResponseDTO
+     * @return \Docstudio\Client\Model\LoginResponseDTO
      */
     public function loginPostSso()
     {
@@ -587,13 +587,13 @@ class SsoAuthenticationControllerApi
      * Login with SSO, token is in response
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\LoginResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\LoginResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function loginPostSsoWithHttpInfo()
     {
-        $returnType = '\Docstudio\ClientModel\LoginResponseDTO';
+        $returnType = '\Swagger\Client\Model\LoginResponseDTO';
         $request = $this->loginPostSsoRequest();
 
         try {
@@ -645,7 +645,7 @@ class SsoAuthenticationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\LoginResponseDTO',
+                        '\Swagger\Client\Model\LoginResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -685,7 +685,7 @@ class SsoAuthenticationControllerApi
      */
     public function loginPostSsoAsyncWithHttpInfo()
     {
-        $returnType = '\Docstudio\ClientModel\LoginResponseDTO';
+        $returnType = '\Swagger\Client\Model\LoginResponseDTO';
         $request = $this->loginPostSsoRequest();
 
         return $this->client
@@ -814,7 +814,7 @@ class SsoAuthenticationControllerApi
      * Logout
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -829,7 +829,7 @@ class SsoAuthenticationControllerApi
      * Logout
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

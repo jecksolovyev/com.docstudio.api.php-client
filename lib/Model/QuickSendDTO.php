@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * QuickSendDTO Class Doc Comment
@@ -59,7 +59,7 @@ class QuickSendDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'subject' => 'string',
 'message' => 'string',
-'recipients' => '\Docstudio\ClientModel\QuickSendRecipientDTO[]'    ];
+'recipients' => '\Swagger\Client\Model\QuickSendRecipientDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -266,7 +266,7 @@ class QuickSendDTO implements ModelInterface, ArrayAccess
     /**
      * Gets recipients
      *
-     * @return \Docstudio\ClientModel\QuickSendRecipientDTO[]
+     * @return \Docstudio\Client\Model\QuickSendRecipientDTO[]
      */
     public function getRecipients()
     {
@@ -276,7 +276,7 @@ class QuickSendDTO implements ModelInterface, ArrayAccess
     /**
      * Sets recipients
      *
-     * @param \Docstudio\ClientModel\QuickSendRecipientDTO[] $recipients recipients
+     * @param \Docstudio\Client\Model\QuickSendRecipientDTO[] $recipients recipients
      *
      * @return $this
      */

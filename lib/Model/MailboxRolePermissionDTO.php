@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * MailboxRolePermissionDTO Class Doc Comment
@@ -60,7 +60,7 @@ class MailboxRolePermissionDTO implements ModelInterface, ArrayAccess
 'name' => 'string',
 'permissions' => 'int[]',
 'system' => 'bool',
-'roles' => '\Docstudio\ClientModel\RoleGetDTO[]'    ];
+'roles' => '\Swagger\Client\Model\RoleGetDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -319,7 +319,7 @@ class MailboxRolePermissionDTO implements ModelInterface, ArrayAccess
     /**
      * Gets roles
      *
-     * @return \Docstudio\ClientModel\RoleGetDTO[]
+     * @return \Docstudio\Client\Model\RoleGetDTO[]
      */
     public function getRoles()
     {
@@ -329,7 +329,7 @@ class MailboxRolePermissionDTO implements ModelInterface, ArrayAccess
     /**
      * Sets roles
      *
-     * @param \Docstudio\ClientModel\RoleGetDTO[] $roles roles
+     * @param \Docstudio\Client\Model\RoleGetDTO[] $roles roles
      *
      * @return $this
      */

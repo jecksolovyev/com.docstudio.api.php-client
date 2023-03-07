@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTOUserInvitationDTO Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTOUserInvitationDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\UserInvitationDTO[]'    ];
+'data' => '\Swagger\Client\Model\UserInvitationDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTOUserInvitationDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\UserInvitationDTO[]
+     * @return \Docstudio\Client\Model\UserInvitationDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTOUserInvitationDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\UserInvitationDTO[] $data Data records
+     * @param \Docstudio\Client\Model\UserInvitationDTO[] $data Data records
      *
      * @return $this
      */

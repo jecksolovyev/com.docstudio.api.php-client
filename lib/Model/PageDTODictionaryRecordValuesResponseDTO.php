@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTODictionaryRecordValuesResponseDTO Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTODictionaryRecordValuesResponseDTO implements ModelInterface, ArrayA
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\DictionaryRecordValuesResponseDTO[]'    ];
+'data' => '\Swagger\Client\Model\DictionaryRecordValuesResponseDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTODictionaryRecordValuesResponseDTO implements ModelInterface, ArrayA
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\DictionaryRecordValuesResponseDTO[]
+     * @return \Docstudio\Client\Model\DictionaryRecordValuesResponseDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTODictionaryRecordValuesResponseDTO implements ModelInterface, ArrayA
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\DictionaryRecordValuesResponseDTO[] $data Data records
+     * @param \Docstudio\Client\Model\DictionaryRecordValuesResponseDTO[] $data Data records
      *
      * @return $this
      */

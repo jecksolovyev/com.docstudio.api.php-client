@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * SsoProperties Class Doc Comment
@@ -58,7 +58,7 @@ class SsoProperties implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'only_sso_login' => 'bool',
-'saml' => '\Docstudio\ClientModel\SamlSsoProps'    ];
+'saml' => '\Swagger\Client\Model\SamlSsoProps'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -230,7 +230,7 @@ class SsoProperties implements ModelInterface, ArrayAccess
     /**
      * Gets saml
      *
-     * @return \Docstudio\ClientModel\SamlSsoProps
+     * @return \Docstudio\Client\Model\SamlSsoProps
      */
     public function getSaml()
     {
@@ -240,7 +240,7 @@ class SsoProperties implements ModelInterface, ArrayAccess
     /**
      * Sets saml
      *
-     * @param \Docstudio\ClientModel\SamlSsoProps $saml saml
+     * @param \Docstudio\Client\Model\SamlSsoProps $saml saml
      *
      * @return $this
      */

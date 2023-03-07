@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * UserInvitationDTO Class Doc Comment
@@ -61,7 +61,7 @@ class UserInvitationDTO implements ModelInterface, ArrayAccess
 'name' => 'string',
 'system' => 'bool',
 'permissions' => 'int[]',
-'mailboxes' => '\Docstudio\ClientModel\MailboxProfileDTO[]',
+'mailboxes' => '\Swagger\Client\Model\MailboxProfileDTO[]',
 'code' => 'string'    ];
 
     /**
@@ -326,7 +326,7 @@ class UserInvitationDTO implements ModelInterface, ArrayAccess
     /**
      * Gets mailboxes
      *
-     * @return \Docstudio\ClientModel\MailboxProfileDTO[]
+     * @return \Docstudio\Client\Model\MailboxProfileDTO[]
      */
     public function getMailboxes()
     {
@@ -336,7 +336,7 @@ class UserInvitationDTO implements ModelInterface, ArrayAccess
     /**
      * Sets mailboxes
      *
-     * @param \Docstudio\ClientModel\MailboxProfileDTO[] $mailboxes Mailboxes linked to this account
+     * @param \Docstudio\Client\Model\MailboxProfileDTO[] $mailboxes Mailboxes linked to this account
      *
      * @return $this
      */

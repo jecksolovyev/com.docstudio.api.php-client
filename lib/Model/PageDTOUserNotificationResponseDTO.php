@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTOUserNotificationResponseDTO Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTOUserNotificationResponseDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\UserNotificationResponseDTO[]'    ];
+'data' => '\Swagger\Client\Model\UserNotificationResponseDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTOUserNotificationResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\UserNotificationResponseDTO[]
+     * @return \Docstudio\Client\Model\UserNotificationResponseDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTOUserNotificationResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\UserNotificationResponseDTO[] $data Data records
+     * @param \Docstudio\Client\Model\UserNotificationResponseDTO[] $data Data records
      *
      * @return $this
      */

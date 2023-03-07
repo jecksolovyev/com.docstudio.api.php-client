@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopeQuicksendBody Class Doc Comment
@@ -57,7 +57,7 @@ class EnvelopeQuicksendBody implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'files' => 'string[]',
-'data' => '\Docstudio\ClientModel\QuickSendDTO'    ];
+'data' => '\Swagger\Client\Model\QuickSendDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -235,7 +235,7 @@ class EnvelopeQuicksendBody implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\QuickSendDTO
+     * @return \Docstudio\Client\Model\QuickSendDTO
      */
     public function getData()
     {
@@ -245,7 +245,7 @@ class EnvelopeQuicksendBody implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\QuickSendDTO $data data
+     * @param \Docstudio\Client\Model\QuickSendDTO $data data
      *
      * @return $this
      */

@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTODataMap Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTODataMap implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\DataMap[]'    ];
+'data' => '\Swagger\Client\Model\DataMap[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTODataMap implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\DataMap[]
+     * @return \Docstudio\Client\Model\DataMap[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTODataMap implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\DataMap[] $data Data records
+     * @param \Docstudio\Client\Model\DataMap[] $data Data records
      *
      * @return $this
      */

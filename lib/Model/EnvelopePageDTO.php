@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopePageDTO Class Doc Comment
@@ -59,13 +59,13 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\EnvelopeToMailboxDTO[]',
-'search_fields' => '\Docstudio\ClientModel\EnvelopeSearchField[]',
-'columns' => '\Docstudio\ClientModel\EnvelopeViewColumn[]',
-'senders' => '\Docstudio\ClientModel\EnvelopeSenderDTO[]',
-'templates' => '\Docstudio\ClientModel\EnvelopeTemplateInfoDTO[]',
-'senders_info' => '\Docstudio\ClientModel\EnvelopePageDTO',
-'templates_info' => '\Docstudio\ClientModel\EnvelopePageDTO'    ];
+'data' => '\Swagger\Client\Model\EnvelopeToMailboxDTO[]',
+'search_fields' => '\Swagger\Client\Model\EnvelopeSearchField[]',
+'columns' => '\Swagger\Client\Model\EnvelopeViewColumn[]',
+'senders' => '\Swagger\Client\Model\EnvelopeSenderDTO[]',
+'templates' => '\Swagger\Client\Model\EnvelopeTemplateInfoDTO[]',
+'senders_info' => '\Swagger\Client\Model\EnvelopePageDTO',
+'templates_info' => '\Swagger\Client\Model\EnvelopePageDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -325,7 +325,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\EnvelopeToMailboxDTO[]
+     * @return \Docstudio\Client\Model\EnvelopeToMailboxDTO[]
      */
     public function getData()
     {
@@ -335,7 +335,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\EnvelopeToMailboxDTO[] $data Data records
+     * @param \Docstudio\Client\Model\EnvelopeToMailboxDTO[] $data Data records
      *
      * @return $this
      */
@@ -349,7 +349,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Gets search_fields
      *
-     * @return \Docstudio\ClientModel\EnvelopeSearchField[]
+     * @return \Docstudio\Client\Model\EnvelopeSearchField[]
      */
     public function getSearchFields()
     {
@@ -359,7 +359,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Sets search_fields
      *
-     * @param \Docstudio\ClientModel\EnvelopeSearchField[] $search_fields Search fields
+     * @param \Docstudio\Client\Model\EnvelopeSearchField[] $search_fields Search fields
      *
      * @return $this
      */
@@ -373,7 +373,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Gets columns
      *
-     * @return \Docstudio\ClientModel\EnvelopeViewColumn[]
+     * @return \Docstudio\Client\Model\EnvelopeViewColumn[]
      */
     public function getColumns()
     {
@@ -383,7 +383,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Sets columns
      *
-     * @param \Docstudio\ClientModel\EnvelopeViewColumn[] $columns Saved columns to display
+     * @param \Docstudio\Client\Model\EnvelopeViewColumn[] $columns Saved columns to display
      *
      * @return $this
      */
@@ -397,7 +397,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Gets senders
      *
-     * @return \Docstudio\ClientModel\EnvelopeSenderDTO[]
+     * @return \Docstudio\Client\Model\EnvelopeSenderDTO[]
      */
     public function getSenders()
     {
@@ -407,7 +407,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Sets senders
      *
-     * @param \Docstudio\ClientModel\EnvelopeSenderDTO[] $senders Senders
+     * @param \Docstudio\Client\Model\EnvelopeSenderDTO[] $senders Senders
      *
      * @return $this
      */
@@ -421,7 +421,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Gets templates
      *
-     * @return \Docstudio\ClientModel\EnvelopeTemplateInfoDTO[]
+     * @return \Docstudio\Client\Model\EnvelopeTemplateInfoDTO[]
      */
     public function getTemplates()
     {
@@ -431,7 +431,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Sets templates
      *
-     * @param \Docstudio\ClientModel\EnvelopeTemplateInfoDTO[] $templates Templates
+     * @param \Docstudio\Client\Model\EnvelopeTemplateInfoDTO[] $templates Templates
      *
      * @return $this
      */
@@ -445,7 +445,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Gets senders_info
      *
-     * @return \Docstudio\ClientModel\EnvelopePageDTO
+     * @return \Docstudio\Client\Model\EnvelopePageDTO
      */
     public function getSendersInfo()
     {
@@ -455,7 +455,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Sets senders_info
      *
-     * @param \Docstudio\ClientModel\EnvelopePageDTO $senders_info senders_info
+     * @param \Docstudio\Client\Model\EnvelopePageDTO $senders_info senders_info
      *
      * @return $this
      */
@@ -469,7 +469,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Gets templates_info
      *
-     * @return \Docstudio\ClientModel\EnvelopePageDTO
+     * @return \Docstudio\Client\Model\EnvelopePageDTO
      */
     public function getTemplatesInfo()
     {
@@ -479,7 +479,7 @@ class EnvelopePageDTO implements ModelInterface, ArrayAccess
     /**
      * Sets templates_info
      *
-     * @param \Docstudio\ClientModel\EnvelopePageDTO $templates_info templates_info
+     * @param \Docstudio\Client\Model\EnvelopePageDTO $templates_info templates_info
      *
      * @return $this
      */

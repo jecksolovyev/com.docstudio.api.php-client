@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTOUserMailboxPermissionsDTO Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTOUserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\UserMailboxPermissionsDTO[]'    ];
+'data' => '\Swagger\Client\Model\UserMailboxPermissionsDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTOUserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\UserMailboxPermissionsDTO[]
+     * @return \Docstudio\Client\Model\UserMailboxPermissionsDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTOUserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\UserMailboxPermissionsDTO[] $data Data records
+     * @param \Docstudio\Client\Model\UserMailboxPermissionsDTO[] $data Data records
      *
      * @return $this
      */

@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * CommentThreadDTO Class Doc Comment
@@ -60,9 +60,9 @@ class CommentThreadDTO implements ModelInterface, ArrayAccess
 'mailbox_name' => 'string',
 'thread_uuid' => 'string',
 'xpath' => 'string',
-'messages' => '\Docstudio\ClientModel\CommentMessageDTO[]',
+'messages' => '\Swagger\Client\Model\CommentMessageDTO[]',
 'access_type' => 'string',
-'shared_to' => '\Docstudio\ClientModel\NameUuidDTO[]'    ];
+'shared_to' => '\Swagger\Client\Model\NameUuidDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -358,7 +358,7 @@ self::ACCESS_TYPE_SHARED,        ];
     /**
      * Gets messages
      *
-     * @return \Docstudio\ClientModel\CommentMessageDTO[]
+     * @return \Docstudio\Client\Model\CommentMessageDTO[]
      */
     public function getMessages()
     {
@@ -368,7 +368,7 @@ self::ACCESS_TYPE_SHARED,        ];
     /**
      * Sets messages
      *
-     * @param \Docstudio\ClientModel\CommentMessageDTO[] $messages All messages in the thread
+     * @param \Docstudio\Client\Model\CommentMessageDTO[] $messages All messages in the thread
      *
      * @return $this
      */
@@ -415,7 +415,7 @@ self::ACCESS_TYPE_SHARED,        ];
     /**
      * Gets shared_to
      *
-     * @return \Docstudio\ClientModel\NameUuidDTO[]
+     * @return \Docstudio\Client\Model\NameUuidDTO[]
      */
     public function getSharedTo()
     {
@@ -425,7 +425,7 @@ self::ACCESS_TYPE_SHARED,        ];
     /**
      * Sets shared_to
      *
-     * @param \Docstudio\ClientModel\NameUuidDTO[] $shared_to shared_to
+     * @param \Docstudio\Client\Model\NameUuidDTO[] $shared_to shared_to
      *
      * @return $this
      */

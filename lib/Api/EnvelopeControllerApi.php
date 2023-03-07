@@ -94,7 +94,7 @@ class EnvelopeControllerApi
      * @param  string[] $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class EnvelopeControllerApi
      * @param  string[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -334,7 +334,7 @@ class EnvelopeControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $chain_uuid Chain UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -352,7 +352,7 @@ class EnvelopeControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $chain_uuid Chain UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -588,11 +588,11 @@ class EnvelopeControllerApi
      *
      * Archive envelopes
      *
-     * @param  \Docstudio\ClientModel\BulkEnvelopeActionDTO $body body (required)
+     * @param  \Docstudio\Client\Model\BulkEnvelopeActionDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  bool $flag flag (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -606,11 +606,11 @@ class EnvelopeControllerApi
      *
      * Archive envelopes
      *
-     * @param  \Docstudio\ClientModel\BulkEnvelopeActionDTO $body (required)
+     * @param  \Docstudio\Client\Model\BulkEnvelopeActionDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  bool $flag (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -661,7 +661,7 @@ class EnvelopeControllerApi
      *
      * Archive envelopes
      *
-     * @param  \Docstudio\ClientModel\BulkEnvelopeActionDTO $body (required)
+     * @param  \Docstudio\Client\Model\BulkEnvelopeActionDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  bool $flag (required)
      *
@@ -683,7 +683,7 @@ class EnvelopeControllerApi
      *
      * Archive envelopes
      *
-     * @param  \Docstudio\ClientModel\BulkEnvelopeActionDTO $body (required)
+     * @param  \Docstudio\Client\Model\BulkEnvelopeActionDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  bool $flag (required)
      *
@@ -721,7 +721,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'archive'
      *
-     * @param  \Docstudio\ClientModel\BulkEnvelopeActionDTO $body (required)
+     * @param  \Docstudio\Client\Model\BulkEnvelopeActionDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  bool $flag (required)
      *
@@ -850,7 +850,7 @@ class EnvelopeControllerApi
      * @param  string $flow_uuid Flow to approve (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -868,7 +868,7 @@ class EnvelopeControllerApi
      * @param  string $flow_uuid Flow to approve (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1109,10 +1109,10 @@ class EnvelopeControllerApi
      *
      * Cancel envelope delegation
      *
-     * @param  \Docstudio\ClientModel\EnvCancelDelegationDTO $body body (required)
+     * @param  \Docstudio\Client\Model\EnvCancelDelegationDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1126,10 +1126,10 @@ class EnvelopeControllerApi
      *
      * Cancel envelope delegation
      *
-     * @param  \Docstudio\ClientModel\EnvCancelDelegationDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvCancelDelegationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1180,7 +1180,7 @@ class EnvelopeControllerApi
      *
      * Cancel envelope delegation
      *
-     * @param  \Docstudio\ClientModel\EnvCancelDelegationDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvCancelDelegationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -1201,7 +1201,7 @@ class EnvelopeControllerApi
      *
      * Cancel envelope delegation
      *
-     * @param  \Docstudio\ClientModel\EnvCancelDelegationDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvCancelDelegationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -1238,7 +1238,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'cancelEnvelopeDelegation'
      *
-     * @param  \Docstudio\ClientModel\EnvCancelDelegationDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvCancelDelegationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -1348,10 +1348,10 @@ class EnvelopeControllerApi
      *
      * Cancel envelopes
      *
-     * @param  \Docstudio\ClientModel\EnvCancellationRequestDTO $body body (required)
+     * @param  \Docstudio\Client\Model\EnvCancellationRequestDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1365,10 +1365,10 @@ class EnvelopeControllerApi
      *
      * Cancel envelopes
      *
-     * @param  \Docstudio\ClientModel\EnvCancellationRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvCancellationRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1419,7 +1419,7 @@ class EnvelopeControllerApi
      *
      * Cancel envelopes
      *
-     * @param  \Docstudio\ClientModel\EnvCancellationRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvCancellationRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -1440,7 +1440,7 @@ class EnvelopeControllerApi
      *
      * Cancel envelopes
      *
-     * @param  \Docstudio\ClientModel\EnvCancellationRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvCancellationRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -1477,7 +1477,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'cancelEnvelopes'
      *
-     * @param  \Docstudio\ClientModel\EnvCancellationRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvCancellationRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -1587,12 +1587,12 @@ class EnvelopeControllerApi
      *
      * Check an envelope
      *
-     * @param  \Docstudio\ClientModel\EnvDTO $body body (required)
+     * @param  \Docstudio\Client\Model\EnvDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\ValidationResponseDTO
+     * @return \Docstudio\Client\Model\ValidationResponseDTO
      */
     public function check($body, $mailbox)
     {
@@ -1605,16 +1605,16 @@ class EnvelopeControllerApi
      *
      * Check an envelope
      *
-     * @param  \Docstudio\ClientModel\EnvDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\ValidationResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\ValidationResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function checkWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\ValidationResponseDTO';
+        $returnType = '\Swagger\Client\Model\ValidationResponseDTO';
         $request = $this->checkRequest($body, $mailbox);
 
         try {
@@ -1666,7 +1666,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\ValidationResponseDTO',
+                        '\Swagger\Client\Model\ValidationResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1681,7 +1681,7 @@ class EnvelopeControllerApi
      *
      * Check an envelope
      *
-     * @param  \Docstudio\ClientModel\EnvDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -1702,7 +1702,7 @@ class EnvelopeControllerApi
      *
      * Check an envelope
      *
-     * @param  \Docstudio\ClientModel\EnvDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -1710,7 +1710,7 @@ class EnvelopeControllerApi
      */
     public function checkAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\ValidationResponseDTO';
+        $returnType = '\Swagger\Client\Model\ValidationResponseDTO';
         $request = $this->checkRequest($body, $mailbox);
 
         return $this->client
@@ -1753,7 +1753,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'check'
      *
-     * @param  \Docstudio\ClientModel\EnvDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -1864,7 +1864,7 @@ class EnvelopeControllerApi
      * Check user has pending invitations
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1879,7 +1879,7 @@ class EnvelopeControllerApi
      * Check user has pending invitations
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2076,9 +2076,9 @@ class EnvelopeControllerApi
      * @param  string $attachment_uuid attachment_uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\UploadedAttachmentDTO
+     * @return \Docstudio\Client\Model\UploadedAttachmentDTO
      */
     public function cloneAttachment($attachment_uuid, $mailbox)
     {
@@ -2094,13 +2094,13 @@ class EnvelopeControllerApi
      * @param  string $attachment_uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\UploadedAttachmentDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\UploadedAttachmentDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function cloneAttachmentWithHttpInfo($attachment_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\UploadedAttachmentDTO';
+        $returnType = '\Swagger\Client\Model\UploadedAttachmentDTO';
         $request = $this->cloneAttachmentRequest($attachment_uuid, $mailbox);
 
         try {
@@ -2152,7 +2152,7 @@ class EnvelopeControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\UploadedAttachmentDTO',
+                        '\Swagger\Client\Model\UploadedAttachmentDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2196,7 +2196,7 @@ class EnvelopeControllerApi
      */
     public function cloneAttachmentAsyncWithHttpInfo($attachment_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\UploadedAttachmentDTO';
+        $returnType = '\Swagger\Client\Model\UploadedAttachmentDTO';
         $request = $this->cloneAttachmentRequest($attachment_uuid, $mailbox);
 
         return $this->client
@@ -2350,9 +2350,9 @@ class EnvelopeControllerApi
      *
      * Accept/confirm invitations
      *
-     * @param  \Docstudio\ClientModel\EnvelopeConfirmInviteDTO $body body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeConfirmInviteDTO $body body (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2366,9 +2366,9 @@ class EnvelopeControllerApi
      *
      * Accept/confirm invitations
      *
-     * @param  \Docstudio\ClientModel\EnvelopeConfirmInviteDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeConfirmInviteDTO $body (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2419,7 +2419,7 @@ class EnvelopeControllerApi
      *
      * Accept/confirm invitations
      *
-     * @param  \Docstudio\ClientModel\EnvelopeConfirmInviteDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeConfirmInviteDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2439,7 +2439,7 @@ class EnvelopeControllerApi
      *
      * Accept/confirm invitations
      *
-     * @param  \Docstudio\ClientModel\EnvelopeConfirmInviteDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeConfirmInviteDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2475,7 +2475,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'confirmInvite'
      *
-     * @param  \Docstudio\ClientModel\EnvelopeConfirmInviteDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeConfirmInviteDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2578,9 +2578,9 @@ class EnvelopeControllerApi
      * @param  string $step_id Step id (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SingleUuidDTO[]
+     * @return \Docstudio\Client\Model\SingleUuidDTO[]
      */
     public function continueScenarioStep($envelope_uuid, $step_id, $mailbox)
     {
@@ -2597,13 +2597,13 @@ class EnvelopeControllerApi
      * @param  string $step_id Step id (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SingleUuidDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SingleUuidDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function continueScenarioStepWithHttpInfo($envelope_uuid, $step_id, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO[]';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO[]';
         $request = $this->continueScenarioStepRequest($envelope_uuid, $step_id, $mailbox);
 
         try {
@@ -2655,7 +2655,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SingleUuidDTO[]',
+                        '\Swagger\Client\Model\SingleUuidDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2701,7 +2701,7 @@ class EnvelopeControllerApi
      */
     public function continueScenarioStepAsyncWithHttpInfo($envelope_uuid, $step_id, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO[]';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO[]';
         $request = $this->continueScenarioStepRequest($envelope_uuid, $step_id, $mailbox);
 
         return $this->client
@@ -2877,7 +2877,7 @@ class EnvelopeControllerApi
      * @param  string $attachment_uuid Attachment UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -2895,7 +2895,7 @@ class EnvelopeControllerApi
      * @param  string $attachment_uuid Attachment UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3160,9 +3160,9 @@ class EnvelopeControllerApi
      * @param  string $validate validate (optional)
      * @param  string $type type (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\UploadedAttachmentDTO
+     * @return \Docstudio\Client\Model\UploadedAttachmentDTO
      */
     public function createAttachment($mailbox, $file = null, $validate = null, $type = null)
     {
@@ -3180,13 +3180,13 @@ class EnvelopeControllerApi
      * @param  string $validate (optional)
      * @param  string $type (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\UploadedAttachmentDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\UploadedAttachmentDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAttachmentWithHttpInfo($mailbox, $file = null, $validate = null, $type = null)
     {
-        $returnType = '\Docstudio\ClientModel\UploadedAttachmentDTO';
+        $returnType = '\Swagger\Client\Model\UploadedAttachmentDTO';
         $request = $this->createAttachmentRequest($mailbox, $file, $validate, $type);
 
         try {
@@ -3238,7 +3238,7 @@ class EnvelopeControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\UploadedAttachmentDTO',
+                        '\Swagger\Client\Model\UploadedAttachmentDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3286,7 +3286,7 @@ class EnvelopeControllerApi
      */
     public function createAttachmentAsyncWithHttpInfo($mailbox, $file = null, $validate = null, $type = null)
     {
-        $returnType = '\Docstudio\ClientModel\UploadedAttachmentDTO';
+        $returnType = '\Swagger\Client\Model\UploadedAttachmentDTO';
         $request = $this->createAttachmentRequest($mailbox, $file, $validate, $type);
 
         return $this->client
@@ -3445,12 +3445,12 @@ class EnvelopeControllerApi
      *
      * Create draft envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SingleUuidDTO
+     * @return \Docstudio\Client\Model\SingleUuidDTO
      */
     public function createEnvelope($body, $mailbox)
     {
@@ -3463,16 +3463,16 @@ class EnvelopeControllerApi
      *
      * Create draft envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createEnvelopeWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->createEnvelopeRequest($body, $mailbox);
 
         try {
@@ -3524,7 +3524,7 @@ class EnvelopeControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SingleUuidDTO',
+                        '\Swagger\Client\Model\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3539,7 +3539,7 @@ class EnvelopeControllerApi
      *
      * Create draft envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -3560,7 +3560,7 @@ class EnvelopeControllerApi
      *
      * Create draft envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -3568,7 +3568,7 @@ class EnvelopeControllerApi
      */
     public function createEnvelopeAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->createEnvelopeRequest($body, $mailbox);
 
         return $this->client
@@ -3611,7 +3611,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'createEnvelope'
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -3721,13 +3721,13 @@ class EnvelopeControllerApi
      *
      * Create envelope comment thread
      *
-     * @param  \Docstudio\ClientModel\CommentPostDTO $body body (required)
+     * @param  \Docstudio\Client\Model\CommentPostDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\CommentThreadDTO
+     * @return \Docstudio\Client\Model\CommentThreadDTO
      */
     public function createEnvelopeComment($body, $mailbox, $envelope_uuid)
     {
@@ -3740,17 +3740,17 @@ class EnvelopeControllerApi
      *
      * Create envelope comment thread
      *
-     * @param  \Docstudio\ClientModel\CommentPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\CommentThreadDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\CommentThreadDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createEnvelopeCommentWithHttpInfo($body, $mailbox, $envelope_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\CommentThreadDTO';
+        $returnType = '\Swagger\Client\Model\CommentThreadDTO';
         $request = $this->createEnvelopeCommentRequest($body, $mailbox, $envelope_uuid);
 
         try {
@@ -3802,7 +3802,7 @@ class EnvelopeControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\CommentThreadDTO',
+                        '\Swagger\Client\Model\CommentThreadDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3817,7 +3817,7 @@ class EnvelopeControllerApi
      *
      * Create envelope comment thread
      *
-     * @param  \Docstudio\ClientModel\CommentPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -3839,7 +3839,7 @@ class EnvelopeControllerApi
      *
      * Create envelope comment thread
      *
-     * @param  \Docstudio\ClientModel\CommentPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -3848,7 +3848,7 @@ class EnvelopeControllerApi
      */
     public function createEnvelopeCommentAsyncWithHttpInfo($body, $mailbox, $envelope_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\CommentThreadDTO';
+        $returnType = '\Swagger\Client\Model\CommentThreadDTO';
         $request = $this->createEnvelopeCommentRequest($body, $mailbox, $envelope_uuid);
 
         return $this->client
@@ -3891,7 +3891,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'createEnvelopeComment'
      *
-     * @param  \Docstudio\ClientModel\CommentPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -4016,10 +4016,10 @@ class EnvelopeControllerApi
      *
      * Delegate envelopes
      *
-     * @param  \Docstudio\ClientModel\EnvDelegationDTO $body body (required)
+     * @param  \Docstudio\Client\Model\EnvDelegationDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4033,10 +4033,10 @@ class EnvelopeControllerApi
      *
      * Delegate envelopes
      *
-     * @param  \Docstudio\ClientModel\EnvDelegationDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvDelegationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4087,7 +4087,7 @@ class EnvelopeControllerApi
      *
      * Delegate envelopes
      *
-     * @param  \Docstudio\ClientModel\EnvDelegationDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvDelegationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -4108,7 +4108,7 @@ class EnvelopeControllerApi
      *
      * Delegate envelopes
      *
-     * @param  \Docstudio\ClientModel\EnvDelegationDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvDelegationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -4145,7 +4145,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'delegateEnvelopes'
      *
-     * @param  \Docstudio\ClientModel\EnvDelegationDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvDelegationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -4255,10 +4255,10 @@ class EnvelopeControllerApi
      *
      * Delete draft envelopes
      *
-     * @param  \Docstudio\ClientModel\BulkEnvelopeActionDTO $body body (required)
+     * @param  \Docstudio\Client\Model\BulkEnvelopeActionDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4272,10 +4272,10 @@ class EnvelopeControllerApi
      *
      * Delete draft envelopes
      *
-     * @param  \Docstudio\ClientModel\BulkEnvelopeActionDTO $body (required)
+     * @param  \Docstudio\Client\Model\BulkEnvelopeActionDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4326,7 +4326,7 @@ class EnvelopeControllerApi
      *
      * Delete draft envelopes
      *
-     * @param  \Docstudio\ClientModel\BulkEnvelopeActionDTO $body (required)
+     * @param  \Docstudio\Client\Model\BulkEnvelopeActionDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -4347,7 +4347,7 @@ class EnvelopeControllerApi
      *
      * Delete draft envelopes
      *
-     * @param  \Docstudio\ClientModel\BulkEnvelopeActionDTO $body (required)
+     * @param  \Docstudio\Client\Model\BulkEnvelopeActionDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -4384,7 +4384,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'deleteDrafts'
      *
-     * @param  \Docstudio\ClientModel\BulkEnvelopeActionDTO $body (required)
+     * @param  \Docstudio\Client\Model\BulkEnvelopeActionDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -4499,9 +4499,9 @@ class EnvelopeControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $message_id Message ID (optional) (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\CommentThreadDTO
+     * @return \Docstudio\Client\Model\CommentThreadDTO
      */
     public function deleteEnvelopeComment($envelope_uuid, $thread_uuid, $mailbox, $message_id = null)
     {
@@ -4519,13 +4519,13 @@ class EnvelopeControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $message_id Message ID (optional) (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\CommentThreadDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\CommentThreadDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteEnvelopeCommentWithHttpInfo($envelope_uuid, $thread_uuid, $mailbox, $message_id = null)
     {
-        $returnType = '\Docstudio\ClientModel\CommentThreadDTO';
+        $returnType = '\Swagger\Client\Model\CommentThreadDTO';
         $request = $this->deleteEnvelopeCommentRequest($envelope_uuid, $thread_uuid, $mailbox, $message_id);
 
         try {
@@ -4577,7 +4577,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\CommentThreadDTO',
+                        '\Swagger\Client\Model\CommentThreadDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4625,7 +4625,7 @@ class EnvelopeControllerApi
      */
     public function deleteEnvelopeCommentAsyncWithHttpInfo($envelope_uuid, $thread_uuid, $mailbox, $message_id = null)
     {
-        $returnType = '\Docstudio\ClientModel\CommentThreadDTO';
+        $returnType = '\Swagger\Client\Model\CommentThreadDTO';
         $request = $this->deleteEnvelopeCommentRequest($envelope_uuid, $thread_uuid, $mailbox, $message_id);
 
         return $this->client
@@ -4803,7 +4803,7 @@ class EnvelopeControllerApi
      * @param  string $attachment_uuid Attachment UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -4822,7 +4822,7 @@ class EnvelopeControllerApi
      * @param  string $attachment_uuid Attachment UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5095,12 +5095,12 @@ class EnvelopeControllerApi
      *
      * Approve or Reject envelope
      *
-     * @param  \Docstudio\ClientModel\ApprovalStatusDTO $body body (required)
+     * @param  \Docstudio\Client\Model\ApprovalStatusDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope to approve (required)
      * @param  string $flow_uuid Flow to approve (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5114,12 +5114,12 @@ class EnvelopeControllerApi
      *
      * Approve or Reject envelope
      *
-     * @param  \Docstudio\ClientModel\ApprovalStatusDTO $body (required)
+     * @param  \Docstudio\Client\Model\ApprovalStatusDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope to approve (required)
      * @param  string $flow_uuid Flow to approve (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5170,7 +5170,7 @@ class EnvelopeControllerApi
      *
      * Approve or Reject envelope
      *
-     * @param  \Docstudio\ClientModel\ApprovalStatusDTO $body (required)
+     * @param  \Docstudio\Client\Model\ApprovalStatusDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope to approve (required)
      * @param  string $flow_uuid Flow to approve (required)
@@ -5193,7 +5193,7 @@ class EnvelopeControllerApi
      *
      * Approve or Reject envelope
      *
-     * @param  \Docstudio\ClientModel\ApprovalStatusDTO $body (required)
+     * @param  \Docstudio\Client\Model\ApprovalStatusDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope to approve (required)
      * @param  string $flow_uuid Flow to approve (required)
@@ -5232,7 +5232,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'envelopeApproval'
      *
-     * @param  \Docstudio\ClientModel\ApprovalStatusDTO $body (required)
+     * @param  \Docstudio\Client\Model\ApprovalStatusDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope to approve (required)
      * @param  string $flow_uuid Flow to approve (required)
@@ -5375,9 +5375,9 @@ class EnvelopeControllerApi
      * @param  string $envelope_uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\EnvelopeApprovalHistoryDTO[]
+     * @return \Docstudio\Client\Model\EnvelopeApprovalHistoryDTO[]
      */
     public function envelopeApprovalHistory($envelope_uuid, $mailbox)
     {
@@ -5393,13 +5393,13 @@ class EnvelopeControllerApi
      * @param  string $envelope_uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\EnvelopeApprovalHistoryDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\EnvelopeApprovalHistoryDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function envelopeApprovalHistoryWithHttpInfo($envelope_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopeApprovalHistoryDTO[]';
+        $returnType = '\Swagger\Client\Model\EnvelopeApprovalHistoryDTO[]';
         $request = $this->envelopeApprovalHistoryRequest($envelope_uuid, $mailbox);
 
         try {
@@ -5451,7 +5451,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\EnvelopeApprovalHistoryDTO[]',
+                        '\Swagger\Client\Model\EnvelopeApprovalHistoryDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5495,7 +5495,7 @@ class EnvelopeControllerApi
      */
     public function envelopeApprovalHistoryAsyncWithHttpInfo($envelope_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopeApprovalHistoryDTO[]';
+        $returnType = '\Swagger\Client\Model\EnvelopeApprovalHistoryDTO[]';
         $request = $this->envelopeApprovalHistoryRequest($envelope_uuid, $mailbox);
 
         return $this->client
@@ -5653,10 +5653,10 @@ class EnvelopeControllerApi
      *
      * Fill envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5670,10 +5670,10 @@ class EnvelopeControllerApi
      *
      * Fill envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5724,7 +5724,7 @@ class EnvelopeControllerApi
      *
      * Fill envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -5745,7 +5745,7 @@ class EnvelopeControllerApi
      *
      * Fill envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -5782,7 +5782,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'fill'
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -5895,9 +5895,9 @@ class EnvelopeControllerApi
      * @param  string $uuid UUID of envelope to get active roles from (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SingleUuidDTO[]
+     * @return \Docstudio\Client\Model\SingleUuidDTO[]
      */
     public function getActiveRoles($uuid, $mailbox)
     {
@@ -5913,13 +5913,13 @@ class EnvelopeControllerApi
      * @param  string $uuid UUID of envelope to get active roles from (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SingleUuidDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SingleUuidDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getActiveRolesWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO[]';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO[]';
         $request = $this->getActiveRolesRequest($uuid, $mailbox);
 
         try {
@@ -5971,7 +5971,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SingleUuidDTO[]',
+                        '\Swagger\Client\Model\SingleUuidDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6015,7 +6015,7 @@ class EnvelopeControllerApi
      */
     public function getActiveRolesAsyncWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO[]';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO[]';
         $request = $this->getActiveRolesRequest($uuid, $mailbox);
 
         return $this->client
@@ -6177,9 +6177,9 @@ class EnvelopeControllerApi
      * @param  string $flow_uuid Flow to approve (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\EnvelopeApprovalHistoryDTO
+     * @return \Docstudio\Client\Model\EnvelopeApprovalHistoryDTO
      */
     public function getApprovalFlow($envelope_uuid, $flow_uuid, $mailbox)
     {
@@ -6196,13 +6196,13 @@ class EnvelopeControllerApi
      * @param  string $flow_uuid Flow to approve (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\EnvelopeApprovalHistoryDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\EnvelopeApprovalHistoryDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getApprovalFlowWithHttpInfo($envelope_uuid, $flow_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopeApprovalHistoryDTO';
+        $returnType = '\Swagger\Client\Model\EnvelopeApprovalHistoryDTO';
         $request = $this->getApprovalFlowRequest($envelope_uuid, $flow_uuid, $mailbox);
 
         try {
@@ -6254,7 +6254,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\EnvelopeApprovalHistoryDTO',
+                        '\Swagger\Client\Model\EnvelopeApprovalHistoryDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6300,7 +6300,7 @@ class EnvelopeControllerApi
      */
     public function getApprovalFlowAsyncWithHttpInfo($envelope_uuid, $flow_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopeApprovalHistoryDTO';
+        $returnType = '\Swagger\Client\Model\EnvelopeApprovalHistoryDTO';
         $request = $this->getApprovalFlowRequest($envelope_uuid, $flow_uuid, $mailbox);
 
         return $this->client
@@ -6476,9 +6476,9 @@ class EnvelopeControllerApi
      * @param  string $chain_uuid Chain UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\ChainEnvelopeDTO[]
+     * @return \Docstudio\Client\Model\ChainEnvelopeDTO[]
      */
     public function getChainEnvelopes($chain_uuid, $mailbox)
     {
@@ -6494,13 +6494,13 @@ class EnvelopeControllerApi
      * @param  string $chain_uuid Chain UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\ChainEnvelopeDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\ChainEnvelopeDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getChainEnvelopesWithHttpInfo($chain_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\ChainEnvelopeDTO[]';
+        $returnType = '\Swagger\Client\Model\ChainEnvelopeDTO[]';
         $request = $this->getChainEnvelopesRequest($chain_uuid, $mailbox);
 
         try {
@@ -6552,7 +6552,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\ChainEnvelopeDTO[]',
+                        '\Swagger\Client\Model\ChainEnvelopeDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6596,7 +6596,7 @@ class EnvelopeControllerApi
      */
     public function getChainEnvelopesAsyncWithHttpInfo($chain_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\ChainEnvelopeDTO[]';
+        $returnType = '\Swagger\Client\Model\ChainEnvelopeDTO[]';
         $request = $this->getChainEnvelopesRequest($chain_uuid, $mailbox);
 
         return $this->client
@@ -6758,7 +6758,7 @@ class EnvelopeControllerApi
      * @param  string $document_id Document id (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -6777,7 +6777,7 @@ class EnvelopeControllerApi
      * @param  string $document_id Document id (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7050,13 +7050,13 @@ class EnvelopeControllerApi
      *
      * PDFs and XMLs for signing
      *
-     * @param  \Docstudio\ClientModel\DocumentsForSignRequestDTO $body body (required)
+     * @param  \Docstudio\Client\Model\DocumentsForSignRequestDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\DocumentForSigningDTO[]
+     * @return \Docstudio\Client\Model\DocumentForSigningDTO[]
      */
     public function getDocumentsForSign($body, $mailbox, $envelope_uuid)
     {
@@ -7069,17 +7069,17 @@ class EnvelopeControllerApi
      *
      * PDFs and XMLs for signing
      *
-     * @param  \Docstudio\ClientModel\DocumentsForSignRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\DocumentsForSignRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\DocumentForSigningDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\DocumentForSigningDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getDocumentsForSignWithHttpInfo($body, $mailbox, $envelope_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\DocumentForSigningDTO[]';
+        $returnType = '\Swagger\Client\Model\DocumentForSigningDTO[]';
         $request = $this->getDocumentsForSignRequest($body, $mailbox, $envelope_uuid);
 
         try {
@@ -7131,7 +7131,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\DocumentForSigningDTO[]',
+                        '\Swagger\Client\Model\DocumentForSigningDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7146,7 +7146,7 @@ class EnvelopeControllerApi
      *
      * PDFs and XMLs for signing
      *
-     * @param  \Docstudio\ClientModel\DocumentsForSignRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\DocumentsForSignRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -7168,7 +7168,7 @@ class EnvelopeControllerApi
      *
      * PDFs and XMLs for signing
      *
-     * @param  \Docstudio\ClientModel\DocumentsForSignRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\DocumentsForSignRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -7177,7 +7177,7 @@ class EnvelopeControllerApi
      */
     public function getDocumentsForSignAsyncWithHttpInfo($body, $mailbox, $envelope_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\DocumentForSigningDTO[]';
+        $returnType = '\Swagger\Client\Model\DocumentForSigningDTO[]';
         $request = $this->getDocumentsForSignRequest($body, $mailbox, $envelope_uuid);
 
         return $this->client
@@ -7220,7 +7220,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'getDocumentsForSign'
      *
-     * @param  \Docstudio\ClientModel\DocumentsForSignRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\DocumentsForSignRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -7348,9 +7348,9 @@ class EnvelopeControllerApi
      * @param  string $uuid UUID of envelope to retrieve (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\EnvelopeWithTemplateDTO
+     * @return \Docstudio\Client\Model\EnvelopeWithTemplateDTO
      */
     public function getEnvelopeByUuid($uuid, $mailbox)
     {
@@ -7366,13 +7366,13 @@ class EnvelopeControllerApi
      * @param  string $uuid UUID of envelope to retrieve (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\EnvelopeWithTemplateDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\EnvelopeWithTemplateDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEnvelopeByUuidWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopeWithTemplateDTO';
+        $returnType = '\Swagger\Client\Model\EnvelopeWithTemplateDTO';
         $request = $this->getEnvelopeByUuidRequest($uuid, $mailbox);
 
         try {
@@ -7424,7 +7424,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\EnvelopeWithTemplateDTO',
+                        '\Swagger\Client\Model\EnvelopeWithTemplateDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7468,7 +7468,7 @@ class EnvelopeControllerApi
      */
     public function getEnvelopeByUuidAsyncWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopeWithTemplateDTO';
+        $returnType = '\Swagger\Client\Model\EnvelopeWithTemplateDTO';
         $request = $this->getEnvelopeByUuidRequest($uuid, $mailbox);
 
         return $this->client
@@ -7629,9 +7629,9 @@ class EnvelopeControllerApi
      * @param  string $envelope_uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\DocumentCommentsDTO[]
+     * @return \Docstudio\Client\Model\DocumentCommentsDTO[]
      */
     public function getEnvelopeComments($envelope_uuid, $mailbox)
     {
@@ -7647,13 +7647,13 @@ class EnvelopeControllerApi
      * @param  string $envelope_uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\DocumentCommentsDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\DocumentCommentsDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getEnvelopeCommentsWithHttpInfo($envelope_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\DocumentCommentsDTO[]';
+        $returnType = '\Swagger\Client\Model\DocumentCommentsDTO[]';
         $request = $this->getEnvelopeCommentsRequest($envelope_uuid, $mailbox);
 
         try {
@@ -7705,7 +7705,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\DocumentCommentsDTO[]',
+                        '\Swagger\Client\Model\DocumentCommentsDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7749,7 +7749,7 @@ class EnvelopeControllerApi
      */
     public function getEnvelopeCommentsAsyncWithHttpInfo($envelope_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\DocumentCommentsDTO[]';
+        $returnType = '\Swagger\Client\Model\DocumentCommentsDTO[]';
         $request = $this->getEnvelopeCommentsRequest($envelope_uuid, $mailbox);
 
         return $this->client
@@ -7909,9 +7909,9 @@ class EnvelopeControllerApi
      *
      * @param  string $code Invitation code from email (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\InvitedEnvelopeInfoDTO
+     * @return \Docstudio\Client\Model\InvitedEnvelopeInfoDTO
      */
     public function getEnvelopeInviteAuthorized($code)
     {
@@ -7926,13 +7926,13 @@ class EnvelopeControllerApi
      *
      * @param  string $code Invitation code from email (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\InvitedEnvelopeInfoDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\InvitedEnvelopeInfoDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEnvelopeInviteAuthorizedWithHttpInfo($code)
     {
-        $returnType = '\Docstudio\ClientModel\InvitedEnvelopeInfoDTO';
+        $returnType = '\Swagger\Client\Model\InvitedEnvelopeInfoDTO';
         $request = $this->getEnvelopeInviteAuthorizedRequest($code);
 
         try {
@@ -7984,7 +7984,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\InvitedEnvelopeInfoDTO',
+                        '\Swagger\Client\Model\InvitedEnvelopeInfoDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8026,7 +8026,7 @@ class EnvelopeControllerApi
      */
     public function getEnvelopeInviteAuthorizedAsyncWithHttpInfo($code)
     {
-        $returnType = '\Docstudio\ClientModel\InvitedEnvelopeInfoDTO';
+        $returnType = '\Swagger\Client\Model\InvitedEnvelopeInfoDTO';
         $request = $this->getEnvelopeInviteAuthorizedRequest($code);
 
         return $this->client
@@ -8171,9 +8171,9 @@ class EnvelopeControllerApi
      *
      * @param  string $code Invitation code from email (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\InvitedEnvelopeInfoDTO
+     * @return \Docstudio\Client\Model\InvitedEnvelopeInfoDTO
      */
     public function getEnvelopeInviteUnauthorized($code)
     {
@@ -8188,13 +8188,13 @@ class EnvelopeControllerApi
      *
      * @param  string $code Invitation code from email (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\InvitedEnvelopeInfoDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\InvitedEnvelopeInfoDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEnvelopeInviteUnauthorizedWithHttpInfo($code)
     {
-        $returnType = '\Docstudio\ClientModel\InvitedEnvelopeInfoDTO';
+        $returnType = '\Swagger\Client\Model\InvitedEnvelopeInfoDTO';
         $request = $this->getEnvelopeInviteUnauthorizedRequest($code);
 
         try {
@@ -8246,7 +8246,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\InvitedEnvelopeInfoDTO',
+                        '\Swagger\Client\Model\InvitedEnvelopeInfoDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8288,7 +8288,7 @@ class EnvelopeControllerApi
      */
     public function getEnvelopeInviteUnauthorizedAsyncWithHttpInfo($code)
     {
-        $returnType = '\Docstudio\ClientModel\InvitedEnvelopeInfoDTO';
+        $returnType = '\Swagger\Client\Model\InvitedEnvelopeInfoDTO';
         $request = $this->getEnvelopeInviteUnauthorizedRequest($code);
 
         return $this->client
@@ -8429,7 +8429,7 @@ class EnvelopeControllerApi
      *
      * @param  string $code Code for downloading (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -8446,7 +8446,7 @@ class EnvelopeControllerApi
      *
      * @param  string $code Code for downloading (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8694,7 +8694,7 @@ class EnvelopeControllerApi
      * @param  string $document_id Document id (optional)
      * @param  string $exclude_files Mask to exclude some files. c - for signature/processing Certificate, p - for Printable version, a - for Audit trail (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -8714,7 +8714,7 @@ class EnvelopeControllerApi
      * @param  string $document_id Document id (optional)
      * @param  string $exclude_files Mask to exclude some files. c - for signature/processing Certificate, p - for Printable version, a - for Audit trail (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8991,9 +8991,9 @@ class EnvelopeControllerApi
      * @param  int $offset Offset, how much envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how much envelopes to retrieve (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\PageDTOEnvelopeToMailboxDTO
+     * @return \Docstudio\Client\Model\PageDTOEnvelopeToMailboxDTO
      */
     public function getUserPendingInvitations($offset = '0', $limit = '25')
     {
@@ -9009,13 +9009,13 @@ class EnvelopeControllerApi
      * @param  int $offset Offset, how much envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how much envelopes to retrieve (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\PageDTOEnvelopeToMailboxDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\PageDTOEnvelopeToMailboxDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserPendingInvitationsWithHttpInfo($offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOEnvelopeToMailboxDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOEnvelopeToMailboxDTO';
         $request = $this->getUserPendingInvitationsRequest($offset, $limit);
 
         try {
@@ -9067,7 +9067,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\PageDTOEnvelopeToMailboxDTO',
+                        '\Swagger\Client\Model\PageDTOEnvelopeToMailboxDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9111,7 +9111,7 @@ class EnvelopeControllerApi
      */
     public function getUserPendingInvitationsAsyncWithHttpInfo($offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOEnvelopeToMailboxDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOEnvelopeToMailboxDTO';
         $request = $this->getUserPendingInvitationsRequest($offset, $limit);
 
         return $this->client
@@ -9256,9 +9256,9 @@ class EnvelopeControllerApi
      * @param  string[] $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SingleUuidDTO
+     * @return \Docstudio\Client\Model\SingleUuidDTO
      */
     public function mergeEnvelopesIntoChain($body, $mailbox)
     {
@@ -9274,13 +9274,13 @@ class EnvelopeControllerApi
      * @param  string[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function mergeEnvelopesIntoChainWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->mergeEnvelopesIntoChainRequest($body, $mailbox);
 
         try {
@@ -9332,7 +9332,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SingleUuidDTO',
+                        '\Swagger\Client\Model\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9376,7 +9376,7 @@ class EnvelopeControllerApi
      */
     public function mergeEnvelopesIntoChainAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->mergeEnvelopesIntoChainRequest($body, $mailbox);
 
         return $this->client
@@ -9530,12 +9530,12 @@ class EnvelopeControllerApi
      * Quick send envelope with external documents only
      *
      * @param  string[] $files files (required)
-     * @param  \Docstudio\ClientModel\QuickSendDTO $data data (required)
+     * @param  \Docstudio\Client\Model\QuickSendDTO $data data (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SingleUuidDTO
+     * @return \Docstudio\Client\Model\SingleUuidDTO
      */
     public function quickSendExternalDocuments($files, $data, $mailbox)
     {
@@ -9549,16 +9549,16 @@ class EnvelopeControllerApi
      * Quick send envelope with external documents only
      *
      * @param  string[] $files (required)
-     * @param  \Docstudio\ClientModel\QuickSendDTO $data (required)
+     * @param  \Docstudio\Client\Model\QuickSendDTO $data (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function quickSendExternalDocumentsWithHttpInfo($files, $data, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->quickSendExternalDocumentsRequest($files, $data, $mailbox);
 
         try {
@@ -9610,7 +9610,7 @@ class EnvelopeControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SingleUuidDTO',
+                        '\Swagger\Client\Model\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9626,7 +9626,7 @@ class EnvelopeControllerApi
      * Quick send envelope with external documents only
      *
      * @param  string[] $files (required)
-     * @param  \Docstudio\ClientModel\QuickSendDTO $data (required)
+     * @param  \Docstudio\Client\Model\QuickSendDTO $data (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -9648,7 +9648,7 @@ class EnvelopeControllerApi
      * Quick send envelope with external documents only
      *
      * @param  string[] $files (required)
-     * @param  \Docstudio\ClientModel\QuickSendDTO $data (required)
+     * @param  \Docstudio\Client\Model\QuickSendDTO $data (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -9656,7 +9656,7 @@ class EnvelopeControllerApi
      */
     public function quickSendExternalDocumentsAsyncWithHttpInfo($files, $data, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->quickSendExternalDocumentsRequest($files, $data, $mailbox);
 
         return $this->client
@@ -9700,7 +9700,7 @@ class EnvelopeControllerApi
      * Create request for operation 'quickSendExternalDocuments'
      *
      * @param  string[] $files (required)
-     * @param  \Docstudio\ClientModel\QuickSendDTO $data (required)
+     * @param  \Docstudio\Client\Model\QuickSendDTO $data (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -9824,7 +9824,7 @@ class EnvelopeControllerApi
      * @param  string $envelope_uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -9841,7 +9841,7 @@ class EnvelopeControllerApi
      * @param  string $envelope_uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10065,10 +10065,10 @@ class EnvelopeControllerApi
      *
      * Resend notifications for active roles
      *
-     * @param  \Docstudio\ClientModel\ReportEnvelopeRequestDTO $body body (required)
+     * @param  \Docstudio\Client\Model\ReportEnvelopeRequestDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10082,10 +10082,10 @@ class EnvelopeControllerApi
      *
      * Resend notifications for active roles
      *
-     * @param  \Docstudio\ClientModel\ReportEnvelopeRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportEnvelopeRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10136,7 +10136,7 @@ class EnvelopeControllerApi
      *
      * Resend notifications for active roles
      *
-     * @param  \Docstudio\ClientModel\ReportEnvelopeRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportEnvelopeRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -10157,7 +10157,7 @@ class EnvelopeControllerApi
      *
      * Resend notifications for active roles
      *
-     * @param  \Docstudio\ClientModel\ReportEnvelopeRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportEnvelopeRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -10194,7 +10194,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'resendNotifications'
      *
-     * @param  \Docstudio\ClientModel\ReportEnvelopeRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportEnvelopeRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -10304,11 +10304,11 @@ class EnvelopeControllerApi
      *
      * Set Resolved Flag for comment thread
      *
-     * @param  \Docstudio\ClientModel\ResolveCommentThreadDTO $body body (required)
+     * @param  \Docstudio\Client\Model\ResolveCommentThreadDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10322,11 +10322,11 @@ class EnvelopeControllerApi
      *
      * Set Resolved Flag for comment thread
      *
-     * @param  \Docstudio\ClientModel\ResolveCommentThreadDTO $body (required)
+     * @param  \Docstudio\Client\Model\ResolveCommentThreadDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10377,7 +10377,7 @@ class EnvelopeControllerApi
      *
      * Set Resolved Flag for comment thread
      *
-     * @param  \Docstudio\ClientModel\ResolveCommentThreadDTO $body (required)
+     * @param  \Docstudio\Client\Model\ResolveCommentThreadDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -10399,7 +10399,7 @@ class EnvelopeControllerApi
      *
      * Set Resolved Flag for comment thread
      *
-     * @param  \Docstudio\ClientModel\ResolveCommentThreadDTO $body (required)
+     * @param  \Docstudio\Client\Model\ResolveCommentThreadDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -10437,7 +10437,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'resolvedEnvelopeComment'
      *
-     * @param  \Docstudio\ClientModel\ResolveCommentThreadDTO $body (required)
+     * @param  \Docstudio\Client\Model\ResolveCommentThreadDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -10562,12 +10562,12 @@ class EnvelopeControllerApi
      *
      * Send envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SingleUuidDTO
+     * @return \Docstudio\Client\Model\SingleUuidDTO
      */
     public function send($body, $mailbox)
     {
@@ -10580,16 +10580,16 @@ class EnvelopeControllerApi
      *
      * Send envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->sendRequest($body, $mailbox);
 
         try {
@@ -10641,7 +10641,7 @@ class EnvelopeControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SingleUuidDTO',
+                        '\Swagger\Client\Model\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10656,7 +10656,7 @@ class EnvelopeControllerApi
      *
      * Send envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -10677,7 +10677,7 @@ class EnvelopeControllerApi
      *
      * Send envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -10685,7 +10685,7 @@ class EnvelopeControllerApi
      */
     public function sendAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->sendRequest($body, $mailbox);
 
         return $this->client
@@ -10728,7 +10728,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'send'
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -10838,11 +10838,11 @@ class EnvelopeControllerApi
      *
      * Send envelope by template code
      *
-     * @param  \Docstudio\ClientModel\SendEnvByCodeDTO $body body (required)
+     * @param  \Docstudio\Client\Model\SendEnvByCodeDTO $body body (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SingleUuidDTO
+     * @return \Docstudio\Client\Model\SingleUuidDTO
      */
     public function sendByTemplateCode($body)
     {
@@ -10855,15 +10855,15 @@ class EnvelopeControllerApi
      *
      * Send envelope by template code
      *
-     * @param  \Docstudio\ClientModel\SendEnvByCodeDTO $body (required)
+     * @param  \Docstudio\Client\Model\SendEnvByCodeDTO $body (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendByTemplateCodeWithHttpInfo($body)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->sendByTemplateCodeRequest($body);
 
         try {
@@ -10915,7 +10915,7 @@ class EnvelopeControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SingleUuidDTO',
+                        '\Swagger\Client\Model\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10930,7 +10930,7 @@ class EnvelopeControllerApi
      *
      * Send envelope by template code
      *
-     * @param  \Docstudio\ClientModel\SendEnvByCodeDTO $body (required)
+     * @param  \Docstudio\Client\Model\SendEnvByCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10950,14 +10950,14 @@ class EnvelopeControllerApi
      *
      * Send envelope by template code
      *
-     * @param  \Docstudio\ClientModel\SendEnvByCodeDTO $body (required)
+     * @param  \Docstudio\Client\Model\SendEnvByCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function sendByTemplateCodeAsyncWithHttpInfo($body)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->sendByTemplateCodeRequest($body);
 
         return $this->client
@@ -11000,7 +11000,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'sendByTemplateCode'
      *
-     * @param  \Docstudio\ClientModel\SendEnvByCodeDTO $body (required)
+     * @param  \Docstudio\Client\Model\SendEnvByCodeDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -11095,10 +11095,10 @@ class EnvelopeControllerApi
      *
      * Send envelope for approval
      *
-     * @param  \Docstudio\ClientModel\EnvelopeApprovalRequestDTO $body body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeApprovalRequestDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11112,10 +11112,10 @@ class EnvelopeControllerApi
      *
      * Send envelope for approval
      *
-     * @param  \Docstudio\ClientModel\EnvelopeApprovalRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeApprovalRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11166,7 +11166,7 @@ class EnvelopeControllerApi
      *
      * Send envelope for approval
      *
-     * @param  \Docstudio\ClientModel\EnvelopeApprovalRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeApprovalRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -11187,7 +11187,7 @@ class EnvelopeControllerApi
      *
      * Send envelope for approval
      *
-     * @param  \Docstudio\ClientModel\EnvelopeApprovalRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeApprovalRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -11224,7 +11224,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'sendForApproval'
      *
-     * @param  \Docstudio\ClientModel\EnvelopeApprovalRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeApprovalRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -11334,10 +11334,10 @@ class EnvelopeControllerApi
      *
      * Share envelopes by email
      *
-     * @param  \Docstudio\ClientModel\EnvelopeSharedArchiveRequestDTO $body body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeSharedArchiveRequestDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11351,10 +11351,10 @@ class EnvelopeControllerApi
      *
      * Share envelopes by email
      *
-     * @param  \Docstudio\ClientModel\EnvelopeSharedArchiveRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeSharedArchiveRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11405,7 +11405,7 @@ class EnvelopeControllerApi
      *
      * Share envelopes by email
      *
-     * @param  \Docstudio\ClientModel\EnvelopeSharedArchiveRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeSharedArchiveRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -11426,7 +11426,7 @@ class EnvelopeControllerApi
      *
      * Share envelopes by email
      *
-     * @param  \Docstudio\ClientModel\EnvelopeSharedArchiveRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeSharedArchiveRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -11463,7 +11463,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'shareEnvelopesByEmail'
      *
-     * @param  \Docstudio\ClientModel\EnvelopeSharedArchiveRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeSharedArchiveRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -11573,11 +11573,11 @@ class EnvelopeControllerApi
      *
      * Sign envelope documents
      *
-     * @param  \Docstudio\ClientModel\EnvelopeDocumentSignaturesDTO[] $body body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeDocumentSignaturesDTO[] $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope to update (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11591,11 +11591,11 @@ class EnvelopeControllerApi
      *
      * Sign envelope documents
      *
-     * @param  \Docstudio\ClientModel\EnvelopeDocumentSignaturesDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeDocumentSignaturesDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope to update (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11646,7 +11646,7 @@ class EnvelopeControllerApi
      *
      * Sign envelope documents
      *
-     * @param  \Docstudio\ClientModel\EnvelopeDocumentSignaturesDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeDocumentSignaturesDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope to update (required)
      *
@@ -11668,7 +11668,7 @@ class EnvelopeControllerApi
      *
      * Sign envelope documents
      *
-     * @param  \Docstudio\ClientModel\EnvelopeDocumentSignaturesDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeDocumentSignaturesDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope to update (required)
      *
@@ -11706,7 +11706,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'sign'
      *
-     * @param  \Docstudio\ClientModel\EnvelopeDocumentSignaturesDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\EnvelopeDocumentSignaturesDTO[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope to update (required)
      *
@@ -11831,10 +11831,10 @@ class EnvelopeControllerApi
      *
      * Update draft envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11848,10 +11848,10 @@ class EnvelopeControllerApi
      *
      * Update draft envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11902,7 +11902,7 @@ class EnvelopeControllerApi
      *
      * Update draft envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -11923,7 +11923,7 @@ class EnvelopeControllerApi
      *
      * Update draft envelope
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -11960,7 +11960,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'updateEnvelope'
      *
-     * @param  \Docstudio\ClientModel\EnvPostDTO $body (required)
+     * @param  \Docstudio\Client\Model\EnvPostDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -12070,13 +12070,13 @@ class EnvelopeControllerApi
      *
      * Add/Update envelope comment in thread
      *
-     * @param  \Docstudio\ClientModel\CommentPutDTO $body body (required)
+     * @param  \Docstudio\Client\Model\CommentPutDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\CommentThreadDTO
+     * @return \Docstudio\Client\Model\CommentThreadDTO
      */
     public function updateEnvelopeComment($body, $mailbox, $envelope_uuid)
     {
@@ -12089,17 +12089,17 @@ class EnvelopeControllerApi
      *
      * Add/Update envelope comment in thread
      *
-     * @param  \Docstudio\ClientModel\CommentPutDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentPutDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\CommentThreadDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\CommentThreadDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateEnvelopeCommentWithHttpInfo($body, $mailbox, $envelope_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\CommentThreadDTO';
+        $returnType = '\Swagger\Client\Model\CommentThreadDTO';
         $request = $this->updateEnvelopeCommentRequest($body, $mailbox, $envelope_uuid);
 
         try {
@@ -12151,7 +12151,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\CommentThreadDTO',
+                        '\Swagger\Client\Model\CommentThreadDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12166,7 +12166,7 @@ class EnvelopeControllerApi
      *
      * Add/Update envelope comment in thread
      *
-     * @param  \Docstudio\ClientModel\CommentPutDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentPutDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -12188,7 +12188,7 @@ class EnvelopeControllerApi
      *
      * Add/Update envelope comment in thread
      *
-     * @param  \Docstudio\ClientModel\CommentPutDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentPutDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -12197,7 +12197,7 @@ class EnvelopeControllerApi
      */
     public function updateEnvelopeCommentAsyncWithHttpInfo($body, $mailbox, $envelope_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\CommentThreadDTO';
+        $returnType = '\Swagger\Client\Model\CommentThreadDTO';
         $request = $this->updateEnvelopeCommentRequest($body, $mailbox, $envelope_uuid);
 
         return $this->client
@@ -12240,7 +12240,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'updateEnvelopeComment'
      *
-     * @param  \Docstudio\ClientModel\CommentPutDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentPutDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -12365,13 +12365,13 @@ class EnvelopeControllerApi
      *
      * Update envelope comment thread access level
      *
-     * @param  \Docstudio\ClientModel\CommentAccessDTO $body body (required)
+     * @param  \Docstudio\Client\Model\CommentAccessDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\CommentThreadDTO
+     * @return \Docstudio\Client\Model\CommentThreadDTO
      */
     public function updateEnvelopeCommentAccess($body, $mailbox, $envelope_uuid)
     {
@@ -12384,17 +12384,17 @@ class EnvelopeControllerApi
      *
      * Update envelope comment thread access level
      *
-     * @param  \Docstudio\ClientModel\CommentAccessDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentAccessDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\CommentThreadDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\CommentThreadDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateEnvelopeCommentAccessWithHttpInfo($body, $mailbox, $envelope_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\CommentThreadDTO';
+        $returnType = '\Swagger\Client\Model\CommentThreadDTO';
         $request = $this->updateEnvelopeCommentAccessRequest($body, $mailbox, $envelope_uuid);
 
         try {
@@ -12446,7 +12446,7 @@ class EnvelopeControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\CommentThreadDTO',
+                        '\Swagger\Client\Model\CommentThreadDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12461,7 +12461,7 @@ class EnvelopeControllerApi
      *
      * Update envelope comment thread access level
      *
-     * @param  \Docstudio\ClientModel\CommentAccessDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentAccessDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -12483,7 +12483,7 @@ class EnvelopeControllerApi
      *
      * Update envelope comment thread access level
      *
-     * @param  \Docstudio\ClientModel\CommentAccessDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentAccessDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *
@@ -12492,7 +12492,7 @@ class EnvelopeControllerApi
      */
     public function updateEnvelopeCommentAccessAsyncWithHttpInfo($body, $mailbox, $envelope_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\CommentThreadDTO';
+        $returnType = '\Swagger\Client\Model\CommentThreadDTO';
         $request = $this->updateEnvelopeCommentAccessRequest($body, $mailbox, $envelope_uuid);
 
         return $this->client
@@ -12535,7 +12535,7 @@ class EnvelopeControllerApi
     /**
      * Create request for operation 'updateEnvelopeCommentAccess'
      *
-     * @param  \Docstudio\ClientModel\CommentAccessDTO $body (required)
+     * @param  \Docstudio\Client\Model\CommentAccessDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $envelope_uuid Envelope UUID (required)
      *

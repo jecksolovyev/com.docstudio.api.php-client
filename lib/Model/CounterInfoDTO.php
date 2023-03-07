@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * CounterInfoDTO Class Doc Comment
@@ -62,7 +62,7 @@ class CounterInfoDTO implements ModelInterface, ArrayAccess
 'overdraft_fee' => 'int',
 'display_name' => 'string',
 'order' => 'int',
-'modifiers' => '\Docstudio\ClientModel\ModifierInfoDTO[]'    ];
+'modifiers' => '\Swagger\Client\Model\ModifierInfoDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -379,7 +379,7 @@ class CounterInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets modifiers
      *
-     * @return \Docstudio\ClientModel\ModifierInfoDTO[]
+     * @return \Docstudio\Client\Model\ModifierInfoDTO[]
      */
     public function getModifiers()
     {
@@ -389,7 +389,7 @@ class CounterInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets modifiers
      *
-     * @param \Docstudio\ClientModel\ModifierInfoDTO[] $modifiers modifiers
+     * @param \Docstudio\Client\Model\ModifierInfoDTO[] $modifiers modifiers
      *
      * @return $this
      */

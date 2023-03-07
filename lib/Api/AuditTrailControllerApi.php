@@ -94,7 +94,7 @@ class AuditTrailControllerApi
      * @param  string $uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -112,7 +112,7 @@ class AuditTrailControllerApi
      * @param  string $uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -373,9 +373,9 @@ class AuditTrailControllerApi
      * @param  string $uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\AuditTrailDTO[]
+     * @return \Docstudio\Client\Model\AuditTrailDTO[]
      */
     public function getAuditTrailByEnvelope($uuid, $mailbox)
     {
@@ -389,13 +389,13 @@ class AuditTrailControllerApi
      * @param  string $uuid Envelope UUID (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\AuditTrailDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\AuditTrailDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuditTrailByEnvelopeWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\AuditTrailDTO[]';
+        $returnType = '\Swagger\Client\Model\AuditTrailDTO[]';
         $request = $this->getAuditTrailByEnvelopeRequest($uuid, $mailbox);
 
         try {
@@ -447,7 +447,7 @@ class AuditTrailControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\AuditTrailDTO[]',
+                        '\Swagger\Client\Model\AuditTrailDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -491,7 +491,7 @@ class AuditTrailControllerApi
      */
     public function getAuditTrailByEnvelopeAsyncWithHttpInfo($uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\AuditTrailDTO[]';
+        $returnType = '\Swagger\Client\Model\AuditTrailDTO[]';
         $request = $this->getAuditTrailByEnvelopeRequest($uuid, $mailbox);
 
         return $this->client

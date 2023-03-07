@@ -91,10 +91,10 @@ class LabelControllerApi
      *
      * Assign label to envelopes
      *
-     * @param  \Docstudio\ClientModel\LabelAssociationDTO $body body (required)
+     * @param  \Docstudio\Client\Model\LabelAssociationDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -108,10 +108,10 @@ class LabelControllerApi
      *
      * Assign label to envelopes
      *
-     * @param  \Docstudio\ClientModel\LabelAssociationDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelAssociationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -162,7 +162,7 @@ class LabelControllerApi
      *
      * Assign label to envelopes
      *
-     * @param  \Docstudio\ClientModel\LabelAssociationDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelAssociationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -183,7 +183,7 @@ class LabelControllerApi
      *
      * Assign label to envelopes
      *
-     * @param  \Docstudio\ClientModel\LabelAssociationDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelAssociationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -220,7 +220,7 @@ class LabelControllerApi
     /**
      * Create request for operation 'assignments'
      *
-     * @param  \Docstudio\ClientModel\LabelAssociationDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelAssociationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -330,12 +330,12 @@ class LabelControllerApi
      *
      * Save label to DB
      *
-     * @param  \Docstudio\ClientModel\LabelDTO $body body (required)
+     * @param  \Docstudio\Client\Model\LabelDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\LabelDTO
+     * @return \Docstudio\Client\Model\LabelDTO
      */
     public function createLabel($body, $mailbox)
     {
@@ -348,16 +348,16 @@ class LabelControllerApi
      *
      * Save label to DB
      *
-     * @param  \Docstudio\ClientModel\LabelDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\LabelDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\LabelDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createLabelWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\LabelDTO';
+        $returnType = '\Swagger\Client\Model\LabelDTO';
         $request = $this->createLabelRequest($body, $mailbox);
 
         try {
@@ -409,7 +409,7 @@ class LabelControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\LabelDTO',
+                        '\Swagger\Client\Model\LabelDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -424,7 +424,7 @@ class LabelControllerApi
      *
      * Save label to DB
      *
-     * @param  \Docstudio\ClientModel\LabelDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -445,7 +445,7 @@ class LabelControllerApi
      *
      * Save label to DB
      *
-     * @param  \Docstudio\ClientModel\LabelDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -453,7 +453,7 @@ class LabelControllerApi
      */
     public function createLabelAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\LabelDTO';
+        $returnType = '\Swagger\Client\Model\LabelDTO';
         $request = $this->createLabelRequest($body, $mailbox);
 
         return $this->client
@@ -496,7 +496,7 @@ class LabelControllerApi
     /**
      * Create request for operation 'createLabel'
      *
-     * @param  \Docstudio\ClientModel\LabelDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -606,10 +606,10 @@ class LabelControllerApi
      *
      * Unassign label from envelopes
      *
-     * @param  \Docstudio\ClientModel\LabelAssociationDTO $body body (required)
+     * @param  \Docstudio\Client\Model\LabelAssociationDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -623,10 +623,10 @@ class LabelControllerApi
      *
      * Unassign label from envelopes
      *
-     * @param  \Docstudio\ClientModel\LabelAssociationDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelAssociationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -677,7 +677,7 @@ class LabelControllerApi
      *
      * Unassign label from envelopes
      *
-     * @param  \Docstudio\ClientModel\LabelAssociationDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelAssociationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -698,7 +698,7 @@ class LabelControllerApi
      *
      * Unassign label from envelopes
      *
-     * @param  \Docstudio\ClientModel\LabelAssociationDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelAssociationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -735,7 +735,7 @@ class LabelControllerApi
     /**
      * Create request for operation 'deAssignments'
      *
-     * @param  \Docstudio\ClientModel\LabelAssociationDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelAssociationDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -848,7 +848,7 @@ class LabelControllerApi
      * @param  string $uuid UUID of label to delete (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -865,7 +865,7 @@ class LabelControllerApi
      * @param  string $uuid UUID of label to delete (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1091,9 +1091,9 @@ class LabelControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\LabelDTO[]
+     * @return \Docstudio\Client\Model\LabelDTO[]
      */
     public function getAll($mailbox)
     {
@@ -1108,13 +1108,13 @@ class LabelControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\LabelDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\LabelDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllWithHttpInfo($mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\LabelDTO[]';
+        $returnType = '\Swagger\Client\Model\LabelDTO[]';
         $request = $this->getAllRequest($mailbox);
 
         try {
@@ -1166,7 +1166,7 @@ class LabelControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\LabelDTO[]',
+                        '\Swagger\Client\Model\LabelDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1208,7 +1208,7 @@ class LabelControllerApi
      */
     public function getAllAsyncWithHttpInfo($mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\LabelDTO[]';
+        $returnType = '\Swagger\Client\Model\LabelDTO[]';
         $request = $this->getAllRequest($mailbox);
 
         return $this->client
@@ -1351,13 +1351,13 @@ class LabelControllerApi
      *
      * Update label
      *
-     * @param  \Docstudio\ClientModel\LabelDTO $body body (required)
+     * @param  \Docstudio\Client\Model\LabelDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid UUID of label to update (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\LabelDTO
+     * @return \Docstudio\Client\Model\LabelDTO
      */
     public function updateLabel($body, $mailbox, $uuid)
     {
@@ -1370,17 +1370,17 @@ class LabelControllerApi
      *
      * Update label
      *
-     * @param  \Docstudio\ClientModel\LabelDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid UUID of label to update (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\LabelDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\LabelDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateLabelWithHttpInfo($body, $mailbox, $uuid)
     {
-        $returnType = '\Docstudio\ClientModel\LabelDTO';
+        $returnType = '\Swagger\Client\Model\LabelDTO';
         $request = $this->updateLabelRequest($body, $mailbox, $uuid);
 
         try {
@@ -1432,7 +1432,7 @@ class LabelControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\LabelDTO',
+                        '\Swagger\Client\Model\LabelDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1447,7 +1447,7 @@ class LabelControllerApi
      *
      * Update label
      *
-     * @param  \Docstudio\ClientModel\LabelDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid UUID of label to update (required)
      *
@@ -1469,7 +1469,7 @@ class LabelControllerApi
      *
      * Update label
      *
-     * @param  \Docstudio\ClientModel\LabelDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid UUID of label to update (required)
      *
@@ -1478,7 +1478,7 @@ class LabelControllerApi
      */
     public function updateLabelAsyncWithHttpInfo($body, $mailbox, $uuid)
     {
-        $returnType = '\Docstudio\ClientModel\LabelDTO';
+        $returnType = '\Swagger\Client\Model\LabelDTO';
         $request = $this->updateLabelRequest($body, $mailbox, $uuid);
 
         return $this->client
@@ -1521,7 +1521,7 @@ class LabelControllerApi
     /**
      * Create request for operation 'updateLabel'
      *
-     * @param  \Docstudio\ClientModel\LabelDTO $body (required)
+     * @param  \Docstudio\Client\Model\LabelDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid UUID of label to update (required)
      *

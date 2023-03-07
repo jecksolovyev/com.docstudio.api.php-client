@@ -91,14 +91,14 @@ class MailboxControllerApi
      *
      * Create mailbox
      *
-     * @param  \Docstudio\ClientModel\MailboxCreateDTO $body body (required)
+     * @param  \Docstudio\Client\Model\MailboxCreateDTO $body body (required)
      * @param  string $uuid UUID of account for which to create a mailbox (required)
      * @param  string $code Invitation code from email (optional)
      * @param  string $code_type Type of code (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\User2MailboxDTO
+     * @return \Docstudio\Client\Model\User2MailboxDTO
      */
     public function createMailbox($body, $uuid, $code = null, $code_type = null)
     {
@@ -111,18 +111,18 @@ class MailboxControllerApi
      *
      * Create mailbox
      *
-     * @param  \Docstudio\ClientModel\MailboxCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxCreateDTO $body (required)
      * @param  string $uuid UUID of account for which to create a mailbox (required)
      * @param  string $code Invitation code from email (optional)
      * @param  string $code_type Type of code (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\User2MailboxDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\User2MailboxDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createMailboxWithHttpInfo($body, $uuid, $code = null, $code_type = null)
     {
-        $returnType = '\Docstudio\ClientModel\User2MailboxDTO';
+        $returnType = '\Swagger\Client\Model\User2MailboxDTO';
         $request = $this->createMailboxRequest($body, $uuid, $code, $code_type);
 
         try {
@@ -174,7 +174,7 @@ class MailboxControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\User2MailboxDTO',
+                        '\Swagger\Client\Model\User2MailboxDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -189,7 +189,7 @@ class MailboxControllerApi
      *
      * Create mailbox
      *
-     * @param  \Docstudio\ClientModel\MailboxCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxCreateDTO $body (required)
      * @param  string $uuid UUID of account for which to create a mailbox (required)
      * @param  string $code Invitation code from email (optional)
      * @param  string $code_type Type of code (optional)
@@ -212,7 +212,7 @@ class MailboxControllerApi
      *
      * Create mailbox
      *
-     * @param  \Docstudio\ClientModel\MailboxCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxCreateDTO $body (required)
      * @param  string $uuid UUID of account for which to create a mailbox (required)
      * @param  string $code Invitation code from email (optional)
      * @param  string $code_type Type of code (optional)
@@ -222,7 +222,7 @@ class MailboxControllerApi
      */
     public function createMailboxAsyncWithHttpInfo($body, $uuid, $code = null, $code_type = null)
     {
-        $returnType = '\Docstudio\ClientModel\User2MailboxDTO';
+        $returnType = '\Swagger\Client\Model\User2MailboxDTO';
         $request = $this->createMailboxRequest($body, $uuid, $code, $code_type);
 
         return $this->client
@@ -265,7 +265,7 @@ class MailboxControllerApi
     /**
      * Create request for operation 'createMailbox'
      *
-     * @param  \Docstudio\ClientModel\MailboxCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxCreateDTO $body (required)
      * @param  string $uuid UUID of account for which to create a mailbox (required)
      * @param  string $code Invitation code from email (optional)
      * @param  string $code_type Type of code (optional)
@@ -392,7 +392,7 @@ class MailboxControllerApi
      * @param  string $check_message Proof message (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -409,7 +409,7 @@ class MailboxControllerApi
      * @param  string $check_message Proof message (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -631,7 +631,7 @@ class MailboxControllerApi
      *
      * @param  string $mailbox_uuid Mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -647,7 +647,7 @@ class MailboxControllerApi
      *
      * @param  string $mailbox_uuid Mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -860,7 +860,7 @@ class MailboxControllerApi
      *
      * @param  string $mailbox_uuid mailbox_uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -877,7 +877,7 @@ class MailboxControllerApi
      *
      * @param  string $mailbox_uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1130,9 +1130,9 @@ class MailboxControllerApi
      * @param  int $offset Offset, how much records to skip (optional, default to 0)
      * @param  int $limit Limit, how much records to retrieve, max is 1000 (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\PageDTOActivityLogRecordDTO
+     * @return \Docstudio\Client\Model\PageDTOActivityLogRecordDTO
      */
     public function getActivityLog($mailbox, $from = null, $to = null, $offset = '0', $limit = '25')
     {
@@ -1151,13 +1151,13 @@ class MailboxControllerApi
      * @param  int $offset Offset, how much records to skip (optional, default to 0)
      * @param  int $limit Limit, how much records to retrieve, max is 1000 (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\PageDTOActivityLogRecordDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\PageDTOActivityLogRecordDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getActivityLogWithHttpInfo($mailbox, $from = null, $to = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOActivityLogRecordDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOActivityLogRecordDTO';
         $request = $this->getActivityLogRequest($mailbox, $from, $to, $offset, $limit);
 
         try {
@@ -1209,7 +1209,7 @@ class MailboxControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\PageDTOActivityLogRecordDTO',
+                        '\Swagger\Client\Model\PageDTOActivityLogRecordDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1259,7 +1259,7 @@ class MailboxControllerApi
      */
     public function getActivityLogAsyncWithHttpInfo($mailbox, $from = null, $to = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOActivityLogRecordDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOActivityLogRecordDTO';
         $request = $this->getActivityLogRequest($mailbox, $from, $to, $offset, $limit);
 
         return $this->client
@@ -1423,9 +1423,9 @@ class MailboxControllerApi
      * Retrieve user's mailboxes list
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\User2MailboxDTO[]
+     * @return \Docstudio\Client\Model\User2MailboxDTO[]
      */
     public function getAllForUser()
     {
@@ -1439,13 +1439,13 @@ class MailboxControllerApi
      * Retrieve user's mailboxes list
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\User2MailboxDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\User2MailboxDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllForUserWithHttpInfo()
     {
-        $returnType = '\Docstudio\ClientModel\User2MailboxDTO[]';
+        $returnType = '\Swagger\Client\Model\User2MailboxDTO[]';
         $request = $this->getAllForUserRequest();
 
         try {
@@ -1497,7 +1497,7 @@ class MailboxControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\User2MailboxDTO[]',
+                        '\Swagger\Client\Model\User2MailboxDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1537,7 +1537,7 @@ class MailboxControllerApi
      */
     public function getAllForUserAsyncWithHttpInfo()
     {
-        $returnType = '\Docstudio\ClientModel\User2MailboxDTO[]';
+        $returnType = '\Swagger\Client\Model\User2MailboxDTO[]';
         $request = $this->getAllForUserRequest();
 
         return $this->client
@@ -1671,9 +1671,9 @@ class MailboxControllerApi
      *
      * @param  string $uuid UUID of account for which to create a mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\MailboxNameUuidDTO[]
+     * @return \Docstudio\Client\Model\MailboxNameUuidDTO[]
      */
     public function getMailboxesByAccount($uuid)
     {
@@ -1688,13 +1688,13 @@ class MailboxControllerApi
      *
      * @param  string $uuid UUID of account for which to create a mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\MailboxNameUuidDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\MailboxNameUuidDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getMailboxesByAccountWithHttpInfo($uuid)
     {
-        $returnType = '\Docstudio\ClientModel\MailboxNameUuidDTO[]';
+        $returnType = '\Swagger\Client\Model\MailboxNameUuidDTO[]';
         $request = $this->getMailboxesByAccountRequest($uuid);
 
         try {
@@ -1746,7 +1746,7 @@ class MailboxControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\MailboxNameUuidDTO[]',
+                        '\Swagger\Client\Model\MailboxNameUuidDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1788,7 +1788,7 @@ class MailboxControllerApi
      */
     public function getMailboxesByAccountAsyncWithHttpInfo($uuid)
     {
-        $returnType = '\Docstudio\ClientModel\MailboxNameUuidDTO[]';
+        $returnType = '\Swagger\Client\Model\MailboxNameUuidDTO[]';
         $request = $this->getMailboxesByAccountRequest($uuid);
 
         return $this->client
@@ -1939,9 +1939,9 @@ class MailboxControllerApi
      * @param  bool $account_name Including account name (optional, default to false)
      * @param  bool $account_itn Including account ITN (optional, default to false)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return map[string,\Docstudio\ClientModel\MailboxInfoDTO]
+     * @return map[string,\Swagger\Client\Model\MailboxInfoDTO]
      */
     public function getMailboxesInfoMailbox($body, $account_name = 'false', $account_itn = 'false')
     {
@@ -1958,13 +1958,13 @@ class MailboxControllerApi
      * @param  bool $account_name Including account name (optional, default to false)
      * @param  bool $account_itn Including account ITN (optional, default to false)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of map[string,\Docstudio\ClientModel\MailboxInfoDTO], HTTP status code, HTTP response headers (array of strings)
+     * @return array of map[string,\Swagger\Client\Model\MailboxInfoDTO], HTTP status code, HTTP response headers (array of strings)
      */
     public function getMailboxesInfoMailboxWithHttpInfo($body, $account_name = 'false', $account_itn = 'false')
     {
-        $returnType = 'map[string,\Docstudio\ClientModel\MailboxInfoDTO]';
+        $returnType = 'map[string,\Swagger\Client\Model\MailboxInfoDTO]';
         $request = $this->getMailboxesInfoMailboxRequest($body, $account_name, $account_itn);
 
         try {
@@ -2016,7 +2016,7 @@ class MailboxControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'map[string,\Docstudio\ClientModel\MailboxInfoDTO]',
+                        'map[string,\Swagger\Client\Model\MailboxInfoDTO]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2062,7 +2062,7 @@ class MailboxControllerApi
      */
     public function getMailboxesInfoMailboxAsyncWithHttpInfo($body, $account_name = 'false', $account_itn = 'false')
     {
-        $returnType = 'map[string,\Docstudio\ClientModel\MailboxInfoDTO]';
+        $returnType = 'map[string,\Swagger\Client\Model\MailboxInfoDTO]';
         $request = $this->getMailboxesInfoMailboxRequest($body, $account_name, $account_itn);
 
         return $this->client
@@ -2216,9 +2216,9 @@ class MailboxControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\StatDTO
+     * @return \Docstudio\Client\Model\StatDTO
      */
     public function getStat($mailbox)
     {
@@ -2233,13 +2233,13 @@ class MailboxControllerApi
      *
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\StatDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\StatDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStatWithHttpInfo($mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\StatDTO';
+        $returnType = '\Swagger\Client\Model\StatDTO';
         $request = $this->getStatRequest($mailbox);
 
         try {
@@ -2291,7 +2291,7 @@ class MailboxControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\StatDTO',
+                        '\Swagger\Client\Model\StatDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2333,7 +2333,7 @@ class MailboxControllerApi
      */
     public function getStatAsyncWithHttpInfo($mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\StatDTO';
+        $returnType = '\Swagger\Client\Model\StatDTO';
         $request = $this->getStatRequest($mailbox);
 
         return $this->client
@@ -2481,9 +2481,9 @@ class MailboxControllerApi
      * @param  int $offset Offset, how much envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how much envelopes to retrieve (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\PageDTOUsedTemplateDTO
+     * @return \Docstudio\Client\Model\PageDTOUsedTemplateDTO
      */
     public function getUsedTemplates($mailbox, $name = null, $offset = '0', $limit = '25')
     {
@@ -2501,13 +2501,13 @@ class MailboxControllerApi
      * @param  int $offset Offset, how much envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how much envelopes to retrieve (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\PageDTOUsedTemplateDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\PageDTOUsedTemplateDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUsedTemplatesWithHttpInfo($mailbox, $name = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOUsedTemplateDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOUsedTemplateDTO';
         $request = $this->getUsedTemplatesRequest($mailbox, $name, $offset, $limit);
 
         try {
@@ -2559,7 +2559,7 @@ class MailboxControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\PageDTOUsedTemplateDTO',
+                        '\Swagger\Client\Model\PageDTOUsedTemplateDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2607,7 +2607,7 @@ class MailboxControllerApi
      */
     public function getUsedTemplatesAsyncWithHttpInfo($mailbox, $name = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOUsedTemplateDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOUsedTemplateDTO';
         $request = $this->getUsedTemplatesRequest($mailbox, $name, $offset, $limit);
 
         return $this->client
@@ -2765,12 +2765,12 @@ class MailboxControllerApi
      *
      * Patch mailbox, return patched mailbox w/o users count
      *
-     * @param  \Docstudio\ClientModel\MailboxPatchRequestDTO $body body (required)
+     * @param  \Docstudio\Client\Model\MailboxPatchRequestDTO $body body (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\AccountMailboxInfoDTO
+     * @return \Docstudio\Client\Model\AccountMailboxInfoDTO
      */
     public function patchMailbox($body, $mailbox_uuid)
     {
@@ -2783,16 +2783,16 @@ class MailboxControllerApi
      *
      * Patch mailbox, return patched mailbox w/o users count
      *
-     * @param  \Docstudio\ClientModel\MailboxPatchRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxPatchRequestDTO $body (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\AccountMailboxInfoDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\AccountMailboxInfoDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchMailboxWithHttpInfo($body, $mailbox_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountMailboxInfoDTO';
+        $returnType = '\Swagger\Client\Model\AccountMailboxInfoDTO';
         $request = $this->patchMailboxRequest($body, $mailbox_uuid);
 
         try {
@@ -2844,7 +2844,7 @@ class MailboxControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\AccountMailboxInfoDTO',
+                        '\Swagger\Client\Model\AccountMailboxInfoDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2859,7 +2859,7 @@ class MailboxControllerApi
      *
      * Patch mailbox, return patched mailbox w/o users count
      *
-     * @param  \Docstudio\ClientModel\MailboxPatchRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxPatchRequestDTO $body (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
      * @throws \InvalidArgumentException
@@ -2880,7 +2880,7 @@ class MailboxControllerApi
      *
      * Patch mailbox, return patched mailbox w/o users count
      *
-     * @param  \Docstudio\ClientModel\MailboxPatchRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxPatchRequestDTO $body (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
      * @throws \InvalidArgumentException
@@ -2888,7 +2888,7 @@ class MailboxControllerApi
      */
     public function patchMailboxAsyncWithHttpInfo($body, $mailbox_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountMailboxInfoDTO';
+        $returnType = '\Swagger\Client\Model\AccountMailboxInfoDTO';
         $request = $this->patchMailboxRequest($body, $mailbox_uuid);
 
         return $this->client
@@ -2931,7 +2931,7 @@ class MailboxControllerApi
     /**
      * Create request for operation 'patchMailbox'
      *
-     * @param  \Docstudio\ClientModel\MailboxPatchRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxPatchRequestDTO $body (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
      * @throws \InvalidArgumentException
@@ -3048,9 +3048,9 @@ class MailboxControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $q String to search by alias, contact, user email, mailbox name or UUID (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\MailboxSearchResultDTO[]
+     * @return \Docstudio\Client\Model\MailboxSearchResultDTO[]
      */
     public function searchMailboxes($mailbox, $q = null)
     {
@@ -3066,13 +3066,13 @@ class MailboxControllerApi
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $q String to search by alias, contact, user email, mailbox name or UUID (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\MailboxSearchResultDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\MailboxSearchResultDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function searchMailboxesWithHttpInfo($mailbox, $q = null)
     {
-        $returnType = '\Docstudio\ClientModel\MailboxSearchResultDTO[]';
+        $returnType = '\Swagger\Client\Model\MailboxSearchResultDTO[]';
         $request = $this->searchMailboxesRequest($mailbox, $q);
 
         try {
@@ -3124,7 +3124,7 @@ class MailboxControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\MailboxSearchResultDTO[]',
+                        '\Swagger\Client\Model\MailboxSearchResultDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3168,7 +3168,7 @@ class MailboxControllerApi
      */
     public function searchMailboxesAsyncWithHttpInfo($mailbox, $q = null)
     {
-        $returnType = '\Docstudio\ClientModel\MailboxSearchResultDTO[]';
+        $returnType = '\Swagger\Client\Model\MailboxSearchResultDTO[]';
         $request = $this->searchMailboxesRequest($mailbox, $q);
 
         return $this->client
@@ -3316,12 +3316,12 @@ class MailboxControllerApi
      *
      * Update mailbox
      *
-     * @param  \Docstudio\ClientModel\MailboxUpdateRequestDTO $body body (required)
+     * @param  \Docstudio\Client\Model\MailboxUpdateRequestDTO $body body (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\AccountMailboxInfoDTO
+     * @return \Docstudio\Client\Model\AccountMailboxInfoDTO
      */
     public function updateMailbox($body, $mailbox_uuid)
     {
@@ -3334,16 +3334,16 @@ class MailboxControllerApi
      *
      * Update mailbox
      *
-     * @param  \Docstudio\ClientModel\MailboxUpdateRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxUpdateRequestDTO $body (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\AccountMailboxInfoDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\AccountMailboxInfoDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateMailboxWithHttpInfo($body, $mailbox_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountMailboxInfoDTO';
+        $returnType = '\Swagger\Client\Model\AccountMailboxInfoDTO';
         $request = $this->updateMailboxRequest($body, $mailbox_uuid);
 
         try {
@@ -3395,7 +3395,7 @@ class MailboxControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\AccountMailboxInfoDTO',
+                        '\Swagger\Client\Model\AccountMailboxInfoDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3410,7 +3410,7 @@ class MailboxControllerApi
      *
      * Update mailbox
      *
-     * @param  \Docstudio\ClientModel\MailboxUpdateRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxUpdateRequestDTO $body (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
      * @throws \InvalidArgumentException
@@ -3431,7 +3431,7 @@ class MailboxControllerApi
      *
      * Update mailbox
      *
-     * @param  \Docstudio\ClientModel\MailboxUpdateRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxUpdateRequestDTO $body (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
      * @throws \InvalidArgumentException
@@ -3439,7 +3439,7 @@ class MailboxControllerApi
      */
     public function updateMailboxAsyncWithHttpInfo($body, $mailbox_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountMailboxInfoDTO';
+        $returnType = '\Swagger\Client\Model\AccountMailboxInfoDTO';
         $request = $this->updateMailboxRequest($body, $mailbox_uuid);
 
         return $this->client
@@ -3482,7 +3482,7 @@ class MailboxControllerApi
     /**
      * Create request for operation 'updateMailbox'
      *
-     * @param  \Docstudio\ClientModel\MailboxUpdateRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\MailboxUpdateRequestDTO $body (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
      * @throws \InvalidArgumentException

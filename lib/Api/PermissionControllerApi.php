@@ -94,7 +94,7 @@ class PermissionControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $user_uuid User UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class PermissionControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $user_uuid User UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -342,7 +342,7 @@ class PermissionControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $user_uuid User UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -359,7 +359,7 @@ class PermissionControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $user_uuid User UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

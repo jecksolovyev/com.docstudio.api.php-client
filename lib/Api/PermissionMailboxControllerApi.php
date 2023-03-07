@@ -94,7 +94,7 @@ class PermissionMailboxControllerApi
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class PermissionMailboxControllerApi
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -343,7 +343,7 @@ class PermissionMailboxControllerApi
      * @param  string $mailbox_uuid UUID of mailbox (required)
      * @param  int $permission_id Permission Id (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -361,7 +361,7 @@ class PermissionMailboxControllerApi
      * @param  string $mailbox_uuid UUID of mailbox (required)
      * @param  int $permission_id Permission Id (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -610,7 +610,7 @@ class PermissionMailboxControllerApi
      * @param  string $mailbox_uuid UUID of mailbox (required)
      * @param  string $role_uuid UUID of role (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -628,7 +628,7 @@ class PermissionMailboxControllerApi
      * @param  string $mailbox_uuid UUID of mailbox (required)
      * @param  string $role_uuid UUID of role (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -873,11 +873,11 @@ class PermissionMailboxControllerApi
      *
      * Add exact permissions/roles leaving existing as is. Ignore if already present.
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -891,11 +891,11 @@ class PermissionMailboxControllerApi
      *
      * Add exact permissions/roles leaving existing as is. Ignore if already present.
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -946,7 +946,7 @@ class PermissionMailboxControllerApi
      *
      * Add exact permissions/roles leaving existing as is. Ignore if already present.
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
@@ -968,7 +968,7 @@ class PermissionMailboxControllerApi
      *
      * Add exact permissions/roles leaving existing as is. Ignore if already present.
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
@@ -1006,7 +1006,7 @@ class PermissionMailboxControllerApi
     /**
      * Create request for operation 'patchMbPermissions'
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
@@ -1135,11 +1135,11 @@ class PermissionMailboxControllerApi
      *
      * Replace all permissions for selected user-to-mailbox relation
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1153,11 +1153,11 @@ class PermissionMailboxControllerApi
      *
      * Replace all permissions for selected user-to-mailbox relation
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1208,7 +1208,7 @@ class PermissionMailboxControllerApi
      *
      * Replace all permissions for selected user-to-mailbox relation
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
@@ -1230,7 +1230,7 @@ class PermissionMailboxControllerApi
      *
      * Replace all permissions for selected user-to-mailbox relation
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *
@@ -1268,7 +1268,7 @@ class PermissionMailboxControllerApi
     /**
      * Create request for operation 'replaceAllPermissions'
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $mailbox_uuid UUID of mailbox (required)
      *

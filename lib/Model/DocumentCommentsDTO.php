@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * DocumentCommentsDTO Class Doc Comment
@@ -57,8 +57,8 @@ class DocumentCommentsDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'document_id' => 'string',
-'active' => '\Docstudio\ClientModel\CommentThreadDTO[]',
-'resolved' => '\Docstudio\ClientModel\CommentThreadDTO[]'    ];
+'active' => '\Swagger\Client\Model\CommentThreadDTO[]',
+'resolved' => '\Swagger\Client\Model\CommentThreadDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -235,7 +235,7 @@ class DocumentCommentsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets active
      *
-     * @return \Docstudio\ClientModel\CommentThreadDTO[]
+     * @return \Docstudio\Client\Model\CommentThreadDTO[]
      */
     public function getActive()
     {
@@ -245,7 +245,7 @@ class DocumentCommentsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets active
      *
-     * @param \Docstudio\ClientModel\CommentThreadDTO[] $active Active comment threads
+     * @param \Docstudio\Client\Model\CommentThreadDTO[] $active Active comment threads
      *
      * @return $this
      */
@@ -259,7 +259,7 @@ class DocumentCommentsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets resolved
      *
-     * @return \Docstudio\ClientModel\CommentThreadDTO[]
+     * @return \Docstudio\Client\Model\CommentThreadDTO[]
      */
     public function getResolved()
     {
@@ -269,7 +269,7 @@ class DocumentCommentsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets resolved
      *
-     * @param \Docstudio\ClientModel\CommentThreadDTO[] $resolved Resolved comment threads
+     * @param \Docstudio\Client\Model\CommentThreadDTO[] $resolved Resolved comment threads
      *
      * @return $this
      */

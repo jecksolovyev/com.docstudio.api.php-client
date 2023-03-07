@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * AttachmentRestriction Class Doc Comment
@@ -59,10 +59,10 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
         'max_size' => 'int',
 'total_max_size' => 'int',
 'file_name_length' => 'int',
-'document' => '\Docstudio\ClientModel\AttachmentFileAllowance',
-'file' => '\Docstudio\ClientModel\AttachmentFileAllowance',
-'image' => '\Docstudio\ClientModel\AttachmentFileAllowance',
-'archive' => '\Docstudio\ClientModel\AttachmentFileAllowance'    ];
+'document' => '\Swagger\Client\Model\AttachmentFileAllowance',
+'file' => '\Swagger\Client\Model\AttachmentFileAllowance',
+'image' => '\Swagger\Client\Model\AttachmentFileAllowance',
+'archive' => '\Swagger\Client\Model\AttachmentFileAllowance'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -307,7 +307,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets document
      *
-     * @return \Docstudio\ClientModel\AttachmentFileAllowance
+     * @return \Docstudio\Client\Model\AttachmentFileAllowance
      */
     public function getDocument()
     {
@@ -317,7 +317,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets document
      *
-     * @param \Docstudio\ClientModel\AttachmentFileAllowance $document document
+     * @param \Docstudio\Client\Model\AttachmentFileAllowance $document document
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets file
      *
-     * @return \Docstudio\ClientModel\AttachmentFileAllowance
+     * @return \Docstudio\Client\Model\AttachmentFileAllowance
      */
     public function getFile()
     {
@@ -341,7 +341,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets file
      *
-     * @param \Docstudio\ClientModel\AttachmentFileAllowance $file file
+     * @param \Docstudio\Client\Model\AttachmentFileAllowance $file file
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets image
      *
-     * @return \Docstudio\ClientModel\AttachmentFileAllowance
+     * @return \Docstudio\Client\Model\AttachmentFileAllowance
      */
     public function getImage()
     {
@@ -365,7 +365,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets image
      *
-     * @param \Docstudio\ClientModel\AttachmentFileAllowance $image image
+     * @param \Docstudio\Client\Model\AttachmentFileAllowance $image image
      *
      * @return $this
      */
@@ -379,7 +379,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets archive
      *
-     * @return \Docstudio\ClientModel\AttachmentFileAllowance
+     * @return \Docstudio\Client\Model\AttachmentFileAllowance
      */
     public function getArchive()
     {
@@ -389,7 +389,7 @@ class AttachmentRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets archive
      *
-     * @param \Docstudio\ClientModel\AttachmentFileAllowance $archive archive
+     * @param \Docstudio\Client\Model\AttachmentFileAllowance $archive archive
      *
      * @return $this
      */

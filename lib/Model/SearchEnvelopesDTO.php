@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * SearchEnvelopesDTO Class Doc Comment
@@ -72,7 +72,7 @@ class SearchEnvelopesDTO implements ModelInterface, ArrayAccess
 'recipient' => 'string[]',
 'sort_field' => 'string',
 'sort' => 'string',
-'search_fields' => '\Docstudio\ClientModel\SearchFieldValueDTO[]'    ];
+'search_fields' => '\Swagger\Client\Model\SearchFieldValueDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -736,7 +736,7 @@ self::SORT_ASC,        ];
     /**
      * Gets search_fields
      *
-     * @return \Docstudio\ClientModel\SearchFieldValueDTO[]
+     * @return \Docstudio\Client\Model\SearchFieldValueDTO[]
      */
     public function getSearchFields()
     {
@@ -746,7 +746,7 @@ self::SORT_ASC,        ];
     /**
      * Sets search_fields
      *
-     * @param \Docstudio\ClientModel\SearchFieldValueDTO[] $search_fields search_fields
+     * @param \Docstudio\Client\Model\SearchFieldValueDTO[] $search_fields search_fields
      *
      * @return $this
      */

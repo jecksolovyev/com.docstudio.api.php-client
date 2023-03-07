@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * DetailedTariffInfoDTO Class Doc Comment
@@ -60,8 +60,8 @@ class DetailedTariffInfoDTO implements ModelInterface, ArrayAccess
 'name' => 'string',
 'tariff_price' => 'int',
 'display_name' => 'string',
-'attributes' => '\Docstudio\ClientModel\AttributeInfoDTO[]',
-'counters' => '\Docstudio\ClientModel\CounterInfoDTO[]'    ];
+'attributes' => '\Swagger\Client\Model\AttributeInfoDTO[]',
+'counters' => '\Swagger\Client\Model\CounterInfoDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -325,7 +325,7 @@ class DetailedTariffInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets attributes
      *
-     * @return \Docstudio\ClientModel\AttributeInfoDTO[]
+     * @return \Docstudio\Client\Model\AttributeInfoDTO[]
      */
     public function getAttributes()
     {
@@ -335,7 +335,7 @@ class DetailedTariffInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets attributes
      *
-     * @param \Docstudio\ClientModel\AttributeInfoDTO[] $attributes attributes
+     * @param \Docstudio\Client\Model\AttributeInfoDTO[] $attributes attributes
      *
      * @return $this
      */
@@ -349,7 +349,7 @@ class DetailedTariffInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets counters
      *
-     * @return \Docstudio\ClientModel\CounterInfoDTO[]
+     * @return \Docstudio\Client\Model\CounterInfoDTO[]
      */
     public function getCounters()
     {
@@ -359,7 +359,7 @@ class DetailedTariffInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets counters
      *
-     * @param \Docstudio\ClientModel\CounterInfoDTO[] $counters counters
+     * @param \Docstudio\Client\Model\CounterInfoDTO[] $counters counters
      *
      * @return $this
      */

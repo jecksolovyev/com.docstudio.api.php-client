@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * DictionaryCheckResponseDTO Class Doc Comment
@@ -58,7 +58,7 @@ class DictionaryCheckResponseDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'result' => 'int',
 'message' => 'string',
-'http_status' => '\Docstudio\ClientModel\DictionaryCheckResponseDTO'    ];
+'http_status' => '\Swagger\Client\Model\DictionaryCheckResponseDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -265,7 +265,7 @@ class DictionaryCheckResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Gets http_status
      *
-     * @return \Docstudio\ClientModel\DictionaryCheckResponseDTO
+     * @return \Docstudio\Client\Model\DictionaryCheckResponseDTO
      */
     public function getHttpStatus()
     {
@@ -275,7 +275,7 @@ class DictionaryCheckResponseDTO implements ModelInterface, ArrayAccess
     /**
      * Sets http_status
      *
-     * @param \Docstudio\ClientModel\DictionaryCheckResponseDTO $http_status http_status
+     * @param \Docstudio\Client\Model\DictionaryCheckResponseDTO $http_status http_status
      *
      * @return $this
      */

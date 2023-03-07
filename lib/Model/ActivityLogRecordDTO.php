@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * ActivityLogRecordDTO Class Doc Comment
@@ -59,14 +59,14 @@ class ActivityLogRecordDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'mailbox_uuid' => 'string',
 'mailbox_name' => 'string',
-'action' => '\Docstudio\ClientModel\ActivityLogAction',
+'action' => '\Swagger\Client\Model\ActivityLogAction',
 'object_name' => 'string',
-'object_type' => '\Docstudio\ClientModel\ActivityLogObjectType',
+'object_type' => '\Swagger\Client\Model\ActivityLogObjectType',
 'object_id' => 'string',
 'operator_id' => 'string',
 'operator_name' => 'string',
 'timestamp' => '\DateTime',
-'source' => '\Docstudio\ClientModel\OperationSource',
+'source' => '\Swagger\Client\Model\OperationSource',
 'ip' => 'string',
 'browser' => 'string',
 'os' => 'string',
@@ -326,7 +326,7 @@ class ActivityLogRecordDTO implements ModelInterface, ArrayAccess
     /**
      * Gets action
      *
-     * @return \Docstudio\ClientModel\ActivityLogAction
+     * @return \Docstudio\Client\Model\ActivityLogAction
      */
     public function getAction()
     {
@@ -336,7 +336,7 @@ class ActivityLogRecordDTO implements ModelInterface, ArrayAccess
     /**
      * Sets action
      *
-     * @param \Docstudio\ClientModel\ActivityLogAction $action action
+     * @param \Docstudio\Client\Model\ActivityLogAction $action action
      *
      * @return $this
      */
@@ -374,7 +374,7 @@ class ActivityLogRecordDTO implements ModelInterface, ArrayAccess
     /**
      * Gets object_type
      *
-     * @return \Docstudio\ClientModel\ActivityLogObjectType
+     * @return \Docstudio\Client\Model\ActivityLogObjectType
      */
     public function getObjectType()
     {
@@ -384,7 +384,7 @@ class ActivityLogRecordDTO implements ModelInterface, ArrayAccess
     /**
      * Sets object_type
      *
-     * @param \Docstudio\ClientModel\ActivityLogObjectType $object_type object_type
+     * @param \Docstudio\Client\Model\ActivityLogObjectType $object_type object_type
      *
      * @return $this
      */
@@ -494,7 +494,7 @@ class ActivityLogRecordDTO implements ModelInterface, ArrayAccess
     /**
      * Gets source
      *
-     * @return \Docstudio\ClientModel\OperationSource
+     * @return \Docstudio\Client\Model\OperationSource
      */
     public function getSource()
     {
@@ -504,7 +504,7 @@ class ActivityLogRecordDTO implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param \Docstudio\ClientModel\OperationSource $source source
+     * @param \Docstudio\Client\Model\OperationSource $source source
      *
      * @return $this
      */

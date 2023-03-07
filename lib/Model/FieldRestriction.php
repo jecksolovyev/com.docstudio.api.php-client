@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * FieldRestriction Class Doc Comment
@@ -56,7 +56,7 @@ class FieldRestriction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'einksign' => '\Docstudio\ClientModel\EinkSignRestriction'    ];
+        'einksign' => '\Swagger\Client\Model\EinkSignRestriction'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -199,7 +199,7 @@ class FieldRestriction implements ModelInterface, ArrayAccess
     /**
      * Gets einksign
      *
-     * @return \Docstudio\ClientModel\EinkSignRestriction
+     * @return \Docstudio\Client\Model\EinkSignRestriction
      */
     public function getEinksign()
     {
@@ -209,7 +209,7 @@ class FieldRestriction implements ModelInterface, ArrayAccess
     /**
      * Sets einksign
      *
-     * @param \Docstudio\ClientModel\EinkSignRestriction $einksign einksign
+     * @param \Docstudio\Client\Model\EinkSignRestriction $einksign einksign
      *
      * @return $this
      */

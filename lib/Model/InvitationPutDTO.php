@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * InvitationPutDTO Class Doc Comment
@@ -56,8 +56,8 @@ class InvitationPutDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'account' => '\Docstudio\ClientModel\PermissionsWithUuidDTO',
-'mailboxes' => '\Docstudio\ClientModel\PermissionsWithUuidDTO[]',
+        'account' => '\Swagger\Client\Model\PermissionsWithUuidDTO',
+'mailboxes' => '\Swagger\Client\Model\PermissionsWithUuidDTO[]',
 'nickname' => 'string'    ];
 
     /**
@@ -214,7 +214,7 @@ class InvitationPutDTO implements ModelInterface, ArrayAccess
     /**
      * Gets account
      *
-     * @return \Docstudio\ClientModel\PermissionsWithUuidDTO
+     * @return \Docstudio\Client\Model\PermissionsWithUuidDTO
      */
     public function getAccount()
     {
@@ -224,7 +224,7 @@ class InvitationPutDTO implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param \Docstudio\ClientModel\PermissionsWithUuidDTO $account account
+     * @param \Docstudio\Client\Model\PermissionsWithUuidDTO $account account
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class InvitationPutDTO implements ModelInterface, ArrayAccess
     /**
      * Gets mailboxes
      *
-     * @return \Docstudio\ClientModel\PermissionsWithUuidDTO[]
+     * @return \Docstudio\Client\Model\PermissionsWithUuidDTO[]
      */
     public function getMailboxes()
     {
@@ -248,7 +248,7 @@ class InvitationPutDTO implements ModelInterface, ArrayAccess
     /**
      * Sets mailboxes
      *
-     * @param \Docstudio\ClientModel\PermissionsWithUuidDTO[] $mailboxes Mailboxes roles and permissions
+     * @param \Docstudio\Client\Model\PermissionsWithUuidDTO[] $mailboxes Mailboxes roles and permissions
      *
      * @return $this
      */

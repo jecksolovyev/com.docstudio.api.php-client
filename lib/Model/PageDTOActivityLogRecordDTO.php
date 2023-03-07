@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTOActivityLogRecordDTO Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTOActivityLogRecordDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\ActivityLogRecordDTO[]'    ];
+'data' => '\Swagger\Client\Model\ActivityLogRecordDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTOActivityLogRecordDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\ActivityLogRecordDTO[]
+     * @return \Docstudio\Client\Model\ActivityLogRecordDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTOActivityLogRecordDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\ActivityLogRecordDTO[] $data Data records
+     * @param \Docstudio\Client\Model\ActivityLogRecordDTO[] $data Data records
      *
      * @return $this
      */

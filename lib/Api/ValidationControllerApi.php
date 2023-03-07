@@ -93,9 +93,9 @@ class ValidationControllerApi
      *
      * @param  string $code code (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\GetEnvelopeInviteInfoDTO
+     * @return \Docstudio\Client\Model\GetEnvelopeInviteInfoDTO
      */
     public function getEnvelopeInvite($code)
     {
@@ -110,13 +110,13 @@ class ValidationControllerApi
      *
      * @param  string $code (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\GetEnvelopeInviteInfoDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\GetEnvelopeInviteInfoDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEnvelopeInviteWithHttpInfo($code)
     {
-        $returnType = '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO';
+        $returnType = '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO';
         $request = $this->getEnvelopeInviteRequest($code);
 
         try {
@@ -168,7 +168,7 @@ class ValidationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO',
+                        '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class ValidationControllerApi
      */
     public function getEnvelopeInviteAsyncWithHttpInfo($code)
     {
-        $returnType = '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO';
+        $returnType = '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO';
         $request = $this->getEnvelopeInviteRequest($code);
 
         return $this->client
@@ -355,9 +355,9 @@ class ValidationControllerApi
      *
      * @param  string $code code (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\GetEnvelopeInviteInfoDTO
+     * @return \Docstudio\Client\Model\GetEnvelopeInviteInfoDTO
      */
     public function getEnvelopeInviteNotRegistered($code)
     {
@@ -372,13 +372,13 @@ class ValidationControllerApi
      *
      * @param  string $code (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\GetEnvelopeInviteInfoDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\GetEnvelopeInviteInfoDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEnvelopeInviteNotRegisteredWithHttpInfo($code)
     {
-        $returnType = '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO';
+        $returnType = '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO';
         $request = $this->getEnvelopeInviteNotRegisteredRequest($code);
 
         try {
@@ -430,7 +430,7 @@ class ValidationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO',
+                        '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -472,7 +472,7 @@ class ValidationControllerApi
      */
     public function getEnvelopeInviteNotRegisteredAsyncWithHttpInfo($code)
     {
-        $returnType = '\Docstudio\ClientModel\GetEnvelopeInviteInfoDTO';
+        $returnType = '\Swagger\Client\Model\GetEnvelopeInviteInfoDTO';
         $request = $this->getEnvelopeInviteNotRegisteredRequest($code);
 
         return $this->client

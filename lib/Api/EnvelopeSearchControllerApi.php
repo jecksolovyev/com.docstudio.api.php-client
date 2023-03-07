@@ -91,12 +91,12 @@ class EnvelopeSearchControllerApi
      *
      * Add a new column to display
      *
-     * @param  \Docstudio\ClientModel\NewEnvColumnDTO $body body (required)
+     * @param  \Docstudio\Client\Model\NewEnvColumnDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SingleUuidDTO
+     * @return \Docstudio\Client\Model\SingleUuidDTO
      */
     public function addNewColumn($body, $mailbox)
     {
@@ -109,16 +109,16 @@ class EnvelopeSearchControllerApi
      *
      * Add a new column to display
      *
-     * @param  \Docstudio\ClientModel\NewEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\NewEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function addNewColumnWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->addNewColumnRequest($body, $mailbox);
 
         try {
@@ -170,7 +170,7 @@ class EnvelopeSearchControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SingleUuidDTO',
+                        '\Swagger\Client\Model\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -185,7 +185,7 @@ class EnvelopeSearchControllerApi
      *
      * Add a new column to display
      *
-     * @param  \Docstudio\ClientModel\NewEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\NewEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -206,7 +206,7 @@ class EnvelopeSearchControllerApi
      *
      * Add a new column to display
      *
-     * @param  \Docstudio\ClientModel\NewEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\NewEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -214,7 +214,7 @@ class EnvelopeSearchControllerApi
      */
     public function addNewColumnAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->addNewColumnRequest($body, $mailbox);
 
         return $this->client
@@ -257,7 +257,7 @@ class EnvelopeSearchControllerApi
     /**
      * Create request for operation 'addNewColumn'
      *
-     * @param  \Docstudio\ClientModel\NewEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\NewEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -367,10 +367,10 @@ class EnvelopeSearchControllerApi
      *
      * Request envelopes report
      *
-     * @param  \Docstudio\ClientModel\ReportEnvelopeRequestDTO $body body (required)
+     * @param  \Docstudio\Client\Model\ReportEnvelopeRequestDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -384,10 +384,10 @@ class EnvelopeSearchControllerApi
      *
      * Request envelopes report
      *
-     * @param  \Docstudio\ClientModel\ReportEnvelopeRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportEnvelopeRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -438,7 +438,7 @@ class EnvelopeSearchControllerApi
      *
      * Request envelopes report
      *
-     * @param  \Docstudio\ClientModel\ReportEnvelopeRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportEnvelopeRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -459,7 +459,7 @@ class EnvelopeSearchControllerApi
      *
      * Request envelopes report
      *
-     * @param  \Docstudio\ClientModel\ReportEnvelopeRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportEnvelopeRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -496,7 +496,7 @@ class EnvelopeSearchControllerApi
     /**
      * Create request for operation 'createReport'
      *
-     * @param  \Docstudio\ClientModel\ReportEnvelopeRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportEnvelopeRequestDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -606,10 +606,10 @@ class EnvelopeSearchControllerApi
      *
      * Delete columns from displaying
      *
-     * @param  \Docstudio\ClientModel\DeleteEnvColumnDTO $body body (required)
+     * @param  \Docstudio\Client\Model\DeleteEnvColumnDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -623,10 +623,10 @@ class EnvelopeSearchControllerApi
      *
      * Delete columns from displaying
      *
-     * @param  \Docstudio\ClientModel\DeleteEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\DeleteEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -677,7 +677,7 @@ class EnvelopeSearchControllerApi
      *
      * Delete columns from displaying
      *
-     * @param  \Docstudio\ClientModel\DeleteEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\DeleteEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -698,7 +698,7 @@ class EnvelopeSearchControllerApi
      *
      * Delete columns from displaying
      *
-     * @param  \Docstudio\ClientModel\DeleteEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\DeleteEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -735,7 +735,7 @@ class EnvelopeSearchControllerApi
     /**
      * Create request for operation 'deleteColumn'
      *
-     * @param  \Docstudio\ClientModel\DeleteEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\DeleteEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -845,13 +845,13 @@ class EnvelopeSearchControllerApi
      *
      * Get search fields
      *
-     * @param  \Docstudio\ClientModel\SearchEnvelopesDTO $body body (required)
+     * @param  \Docstudio\Client\Model\SearchEnvelopesDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $name Field name term (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\EnvelopeSearchField[]
+     * @return \Docstudio\Client\Model\EnvelopeSearchField[]
      */
     public function getSearchFields($body, $mailbox, $name)
     {
@@ -864,17 +864,17 @@ class EnvelopeSearchControllerApi
      *
      * Get search fields
      *
-     * @param  \Docstudio\ClientModel\SearchEnvelopesDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchEnvelopesDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $name Field name term (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\EnvelopeSearchField[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\EnvelopeSearchField[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSearchFieldsWithHttpInfo($body, $mailbox, $name)
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopeSearchField[]';
+        $returnType = '\Swagger\Client\Model\EnvelopeSearchField[]';
         $request = $this->getSearchFieldsRequest($body, $mailbox, $name);
 
         try {
@@ -926,7 +926,7 @@ class EnvelopeSearchControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\EnvelopeSearchField[]',
+                        '\Swagger\Client\Model\EnvelopeSearchField[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -941,7 +941,7 @@ class EnvelopeSearchControllerApi
      *
      * Get search fields
      *
-     * @param  \Docstudio\ClientModel\SearchEnvelopesDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchEnvelopesDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $name Field name term (required)
      *
@@ -963,7 +963,7 @@ class EnvelopeSearchControllerApi
      *
      * Get search fields
      *
-     * @param  \Docstudio\ClientModel\SearchEnvelopesDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchEnvelopesDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $name Field name term (required)
      *
@@ -972,7 +972,7 @@ class EnvelopeSearchControllerApi
      */
     public function getSearchFieldsAsyncWithHttpInfo($body, $mailbox, $name)
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopeSearchField[]';
+        $returnType = '\Swagger\Client\Model\EnvelopeSearchField[]';
         $request = $this->getSearchFieldsRequest($body, $mailbox, $name);
 
         return $this->client
@@ -1015,7 +1015,7 @@ class EnvelopeSearchControllerApi
     /**
      * Create request for operation 'getSearchFields'
      *
-     * @param  \Docstudio\ClientModel\SearchEnvelopesDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchEnvelopesDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $name Field name term (required)
      *
@@ -1139,9 +1139,9 @@ class EnvelopeSearchControllerApi
      * @param  string[] $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\TemplateRolesDTO
+     * @return \Docstudio\Client\Model\TemplateRolesDTO
      */
     public function getTemplateRoles($body, $mailbox)
     {
@@ -1157,13 +1157,13 @@ class EnvelopeSearchControllerApi
      * @param  string[] $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\TemplateRolesDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\TemplateRolesDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTemplateRolesWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\TemplateRolesDTO';
+        $returnType = '\Swagger\Client\Model\TemplateRolesDTO';
         $request = $this->getTemplateRolesRequest($body, $mailbox);
 
         try {
@@ -1215,7 +1215,7 @@ class EnvelopeSearchControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\TemplateRolesDTO',
+                        '\Swagger\Client\Model\TemplateRolesDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1259,7 +1259,7 @@ class EnvelopeSearchControllerApi
      */
     public function getTemplateRolesAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\TemplateRolesDTO';
+        $returnType = '\Swagger\Client\Model\TemplateRolesDTO';
         $request = $this->getTemplateRolesRequest($body, $mailbox);
 
         return $this->client
@@ -1412,15 +1412,15 @@ class EnvelopeSearchControllerApi
      *
      * Search envelopes
      *
-     * @param  \Docstudio\ClientModel\SearchEnvelopesDTO $body body (required)
+     * @param  \Docstudio\Client\Model\SearchEnvelopesDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $offset Offset, how many envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how many envelopes to retrieve (optional, default to 25)
      * @param  bool $uuid_only Retrieve only UUID of envelope (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\EnvelopePageDTO
+     * @return \Docstudio\Client\Model\EnvelopePageDTO
      */
     public function searchEnvelopes($body, $mailbox, $offset = '0', $limit = '25', $uuid_only = null)
     {
@@ -1433,19 +1433,19 @@ class EnvelopeSearchControllerApi
      *
      * Search envelopes
      *
-     * @param  \Docstudio\ClientModel\SearchEnvelopesDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchEnvelopesDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $offset Offset, how many envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how many envelopes to retrieve (optional, default to 25)
      * @param  bool $uuid_only Retrieve only UUID of envelope (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\EnvelopePageDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\EnvelopePageDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchEnvelopesWithHttpInfo($body, $mailbox, $offset = '0', $limit = '25', $uuid_only = null)
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopePageDTO';
+        $returnType = '\Swagger\Client\Model\EnvelopePageDTO';
         $request = $this->searchEnvelopesRequest($body, $mailbox, $offset, $limit, $uuid_only);
 
         try {
@@ -1497,7 +1497,7 @@ class EnvelopeSearchControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\EnvelopePageDTO',
+                        '\Swagger\Client\Model\EnvelopePageDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1512,7 +1512,7 @@ class EnvelopeSearchControllerApi
      *
      * Search envelopes
      *
-     * @param  \Docstudio\ClientModel\SearchEnvelopesDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchEnvelopesDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $offset Offset, how many envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how many envelopes to retrieve (optional, default to 25)
@@ -1536,7 +1536,7 @@ class EnvelopeSearchControllerApi
      *
      * Search envelopes
      *
-     * @param  \Docstudio\ClientModel\SearchEnvelopesDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchEnvelopesDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $offset Offset, how many envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how many envelopes to retrieve (optional, default to 25)
@@ -1547,7 +1547,7 @@ class EnvelopeSearchControllerApi
      */
     public function searchEnvelopesAsyncWithHttpInfo($body, $mailbox, $offset = '0', $limit = '25', $uuid_only = null)
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopePageDTO';
+        $returnType = '\Swagger\Client\Model\EnvelopePageDTO';
         $request = $this->searchEnvelopesRequest($body, $mailbox, $offset, $limit, $uuid_only);
 
         return $this->client
@@ -1590,7 +1590,7 @@ class EnvelopeSearchControllerApi
     /**
      * Create request for operation 'searchEnvelopes'
      *
-     * @param  \Docstudio\ClientModel\SearchEnvelopesDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchEnvelopesDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $offset Offset, how many envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how many envelopes to retrieve (optional, default to 25)
@@ -1715,14 +1715,14 @@ class EnvelopeSearchControllerApi
      *
      * Search envelopes for approval
      *
-     * @param  \Docstudio\ClientModel\SearchApprovalsDTO $body body (required)
+     * @param  \Docstudio\Client\Model\SearchApprovalsDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $offset Offset, how many envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how many envelopes to retrieve (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\EnvelopeApprovalPageDTO
+     * @return \Docstudio\Client\Model\EnvelopeApprovalPageDTO
      */
     public function searchEnvelopesForApproval($body, $mailbox, $offset = '0', $limit = '25')
     {
@@ -1735,18 +1735,18 @@ class EnvelopeSearchControllerApi
      *
      * Search envelopes for approval
      *
-     * @param  \Docstudio\ClientModel\SearchApprovalsDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchApprovalsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $offset Offset, how many envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how many envelopes to retrieve (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\EnvelopeApprovalPageDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\EnvelopeApprovalPageDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchEnvelopesForApprovalWithHttpInfo($body, $mailbox, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopeApprovalPageDTO';
+        $returnType = '\Swagger\Client\Model\EnvelopeApprovalPageDTO';
         $request = $this->searchEnvelopesForApprovalRequest($body, $mailbox, $offset, $limit);
 
         try {
@@ -1798,7 +1798,7 @@ class EnvelopeSearchControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\EnvelopeApprovalPageDTO',
+                        '\Swagger\Client\Model\EnvelopeApprovalPageDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1813,7 +1813,7 @@ class EnvelopeSearchControllerApi
      *
      * Search envelopes for approval
      *
-     * @param  \Docstudio\ClientModel\SearchApprovalsDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchApprovalsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $offset Offset, how many envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how many envelopes to retrieve (optional, default to 25)
@@ -1836,7 +1836,7 @@ class EnvelopeSearchControllerApi
      *
      * Search envelopes for approval
      *
-     * @param  \Docstudio\ClientModel\SearchApprovalsDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchApprovalsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $offset Offset, how many envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how many envelopes to retrieve (optional, default to 25)
@@ -1846,7 +1846,7 @@ class EnvelopeSearchControllerApi
      */
     public function searchEnvelopesForApprovalAsyncWithHttpInfo($body, $mailbox, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\EnvelopeApprovalPageDTO';
+        $returnType = '\Swagger\Client\Model\EnvelopeApprovalPageDTO';
         $request = $this->searchEnvelopesForApprovalRequest($body, $mailbox, $offset, $limit);
 
         return $this->client
@@ -1889,7 +1889,7 @@ class EnvelopeSearchControllerApi
     /**
      * Create request for operation 'searchEnvelopesForApproval'
      *
-     * @param  \Docstudio\ClientModel\SearchApprovalsDTO $body (required)
+     * @param  \Docstudio\Client\Model\SearchApprovalsDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  int $offset Offset, how many envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how many envelopes to retrieve (optional, default to 25)
@@ -2009,11 +2009,11 @@ class EnvelopeSearchControllerApi
      *
      * Update column to display
      *
-     * @param  \Docstudio\ClientModel\UpdateEnvColumnDTO $body body (required)
+     * @param  \Docstudio\Client\Model\UpdateEnvColumnDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2027,11 +2027,11 @@ class EnvelopeSearchControllerApi
      *
      * Update column to display
      *
-     * @param  \Docstudio\ClientModel\UpdateEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\UpdateEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2082,7 +2082,7 @@ class EnvelopeSearchControllerApi
      *
      * Update column to display
      *
-     * @param  \Docstudio\ClientModel\UpdateEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\UpdateEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid (required)
      *
@@ -2104,7 +2104,7 @@ class EnvelopeSearchControllerApi
      *
      * Update column to display
      *
-     * @param  \Docstudio\ClientModel\UpdateEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\UpdateEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid (required)
      *
@@ -2142,7 +2142,7 @@ class EnvelopeSearchControllerApi
     /**
      * Create request for operation 'updateColumn'
      *
-     * @param  \Docstudio\ClientModel\UpdateEnvColumnDTO $body (required)
+     * @param  \Docstudio\Client\Model\UpdateEnvColumnDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $uuid (required)
      *

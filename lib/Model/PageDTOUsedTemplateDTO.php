@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTOUsedTemplateDTO Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTOUsedTemplateDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\UsedTemplateDTO[]'    ];
+'data' => '\Swagger\Client\Model\UsedTemplateDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTOUsedTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\UsedTemplateDTO[]
+     * @return \Docstudio\Client\Model\UsedTemplateDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTOUsedTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\UsedTemplateDTO[] $data Data records
+     * @param \Docstudio\Client\Model\UsedTemplateDTO[] $data Data records
      *
      * @return $this
      */

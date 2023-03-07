@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTOMailboxApprovalFlowGetDTO Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTOMailboxApprovalFlowGetDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\MailboxApprovalFlowGetDTO[]'    ];
+'data' => '\Swagger\Client\Model\MailboxApprovalFlowGetDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTOMailboxApprovalFlowGetDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\MailboxApprovalFlowGetDTO[]
+     * @return \Docstudio\Client\Model\MailboxApprovalFlowGetDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTOMailboxApprovalFlowGetDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\MailboxApprovalFlowGetDTO[] $data Data records
+     * @param \Docstudio\Client\Model\MailboxApprovalFlowGetDTO[] $data Data records
      *
      * @return $this
      */

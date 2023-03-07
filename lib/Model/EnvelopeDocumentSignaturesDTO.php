@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopeDocumentSignaturesDTO Class Doc Comment
@@ -58,7 +58,7 @@ class EnvelopeDocumentSignaturesDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'document_id' => 'string',
 'signature_name' => 'string',
-'signatures' => '\Docstudio\ClientModel\EnvelopeDocumentSignatureDTO[]'    ];
+'signatures' => '\Swagger\Client\Model\EnvelopeDocumentSignatureDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -268,7 +268,7 @@ class EnvelopeDocumentSignaturesDTO implements ModelInterface, ArrayAccess
     /**
      * Gets signatures
      *
-     * @return \Docstudio\ClientModel\EnvelopeDocumentSignatureDTO[]
+     * @return \Docstudio\Client\Model\EnvelopeDocumentSignatureDTO[]
      */
     public function getSignatures()
     {
@@ -278,7 +278,7 @@ class EnvelopeDocumentSignaturesDTO implements ModelInterface, ArrayAccess
     /**
      * Sets signatures
      *
-     * @param \Docstudio\ClientModel\EnvelopeDocumentSignatureDTO[] $signatures Document signatures
+     * @param \Docstudio\Client\Model\EnvelopeDocumentSignatureDTO[] $signatures Document signatures
      *
      * @return $this
      */

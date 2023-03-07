@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * PageDTORoleGetDTO Class Doc Comment
@@ -59,7 +59,7 @@ class PageDTORoleGetDTO implements ModelInterface, ArrayAccess
         'total_elements' => 'int',
 'size_requested' => 'int',
 'number_of_elements' => 'int',
-'data' => '\Docstudio\ClientModel\RoleGetDTO[]'    ];
+'data' => '\Swagger\Client\Model\RoleGetDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -289,7 +289,7 @@ class PageDTORoleGetDTO implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Docstudio\ClientModel\RoleGetDTO[]
+     * @return \Docstudio\Client\Model\RoleGetDTO[]
      */
     public function getData()
     {
@@ -299,7 +299,7 @@ class PageDTORoleGetDTO implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Docstudio\ClientModel\RoleGetDTO[] $data Data records
+     * @param \Docstudio\Client\Model\RoleGetDTO[] $data Data records
      *
      * @return $this
      */

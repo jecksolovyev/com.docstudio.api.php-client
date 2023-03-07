@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopeValidationError Class Doc Comment
@@ -58,7 +58,7 @@ class EnvelopeValidationError implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'document_id' => 'string',
 'field_name' => 'string',
-'table_details' => '\Docstudio\ClientModel\TableDetails',
+'table_details' => '\Swagger\Client\Model\TableDetails',
 'error_code' => 'string',
 'code' => 'int'    ];
 
@@ -271,7 +271,7 @@ class EnvelopeValidationError implements ModelInterface, ArrayAccess
     /**
      * Gets table_details
      *
-     * @return \Docstudio\ClientModel\TableDetails
+     * @return \Docstudio\Client\Model\TableDetails
      */
     public function getTableDetails()
     {
@@ -281,7 +281,7 @@ class EnvelopeValidationError implements ModelInterface, ArrayAccess
     /**
      * Sets table_details
      *
-     * @param \Docstudio\ClientModel\TableDetails $table_details table_details
+     * @param \Docstudio\Client\Model\TableDetails $table_details table_details
      *
      * @return $this
      */

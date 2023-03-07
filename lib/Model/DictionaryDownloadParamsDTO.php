@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * DictionaryDownloadParamsDTO Class Doc Comment
@@ -57,7 +57,7 @@ class DictionaryDownloadParamsDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'format' => 'string',
-'filters' => '\Docstudio\ClientModel\DictionaryFiltersRequestDTO'    ];
+'filters' => '\Swagger\Client\Model\DictionaryFiltersRequestDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -267,7 +267,7 @@ self::FORMAT_XLSX,        ];
     /**
      * Gets filters
      *
-     * @return \Docstudio\ClientModel\DictionaryFiltersRequestDTO
+     * @return \Docstudio\Client\Model\DictionaryFiltersRequestDTO
      */
     public function getFilters()
     {
@@ -277,7 +277,7 @@ self::FORMAT_XLSX,        ];
     /**
      * Sets filters
      *
-     * @param \Docstudio\ClientModel\DictionaryFiltersRequestDTO $filters filters
+     * @param \Docstudio\Client\Model\DictionaryFiltersRequestDTO $filters filters
      *
      * @return $this
      */

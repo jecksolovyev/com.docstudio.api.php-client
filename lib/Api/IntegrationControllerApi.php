@@ -93,9 +93,9 @@ class IntegrationControllerApi
      *
      * @param  string $filename filename, for type detection (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
-     * @param  \Docstudio\ClientModel\IntegrationConvertbinaryBody $body body (optional)
+     * @param  \Docstudio\Client\Model\IntegrationConvertbinaryBody $body body (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -112,9 +112,9 @@ class IntegrationControllerApi
      *
      * @param  string $filename filename, for type detection (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
-     * @param  \Docstudio\ClientModel\IntegrationConvertbinaryBody $body (optional)
+     * @param  \Docstudio\Client\Model\IntegrationConvertbinaryBody $body (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -189,7 +189,7 @@ class IntegrationControllerApi
      *
      * @param  string $filename filename, for type detection (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
-     * @param  \Docstudio\ClientModel\IntegrationConvertbinaryBody $body (optional)
+     * @param  \Docstudio\Client\Model\IntegrationConvertbinaryBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -211,7 +211,7 @@ class IntegrationControllerApi
      *
      * @param  string $filename filename, for type detection (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
-     * @param  \Docstudio\ClientModel\IntegrationConvertbinaryBody $body (optional)
+     * @param  \Docstudio\Client\Model\IntegrationConvertbinaryBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -263,7 +263,7 @@ class IntegrationControllerApi
      *
      * @param  string $filename filename, for type detection (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
-     * @param  \Docstudio\ClientModel\IntegrationConvertbinaryBody $body (optional)
+     * @param  \Docstudio\Client\Model\IntegrationConvertbinaryBody $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -376,12 +376,12 @@ class IntegrationControllerApi
      *
      * Create Mailbox integration rule
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleDTO $body body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleDTO $body body (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\IntegrationRuleDTO
+     * @return \Docstudio\Client\Model\IntegrationRuleDTO
      */
     public function createMailboxIntegrationRule($body, $mailbox_uuid)
     {
@@ -394,16 +394,16 @@ class IntegrationControllerApi
      *
      * Create Mailbox integration rule
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleDTO $body (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\IntegrationRuleDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\IntegrationRuleDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createMailboxIntegrationRuleWithHttpInfo($body, $mailbox_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationRuleDTO';
+        $returnType = '\Swagger\Client\Model\IntegrationRuleDTO';
         $request = $this->createMailboxIntegrationRuleRequest($body, $mailbox_uuid);
 
         try {
@@ -455,7 +455,7 @@ class IntegrationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\IntegrationRuleDTO',
+                        '\Swagger\Client\Model\IntegrationRuleDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -470,7 +470,7 @@ class IntegrationControllerApi
      *
      * Create Mailbox integration rule
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleDTO $body (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -491,7 +491,7 @@ class IntegrationControllerApi
      *
      * Create Mailbox integration rule
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleDTO $body (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -499,7 +499,7 @@ class IntegrationControllerApi
      */
     public function createMailboxIntegrationRuleAsyncWithHttpInfo($body, $mailbox_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationRuleDTO';
+        $returnType = '\Swagger\Client\Model\IntegrationRuleDTO';
         $request = $this->createMailboxIntegrationRuleRequest($body, $mailbox_uuid);
 
         return $this->client
@@ -542,7 +542,7 @@ class IntegrationControllerApi
     /**
      * Create request for operation 'createMailboxIntegrationRule'
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleDTO $body (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -658,7 +658,7 @@ class IntegrationControllerApi
      *
      * @param  string $integration_rule_uuid UUID of integration rule (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -674,7 +674,7 @@ class IntegrationControllerApi
      *
      * @param  string $integration_rule_uuid UUID of integration rule (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -885,11 +885,11 @@ class IntegrationControllerApi
      *
      * Execute conversion map and generate file name (if pattern rule defined)
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleRequestDTO $body body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleRequestDTO $body body (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\IntegrationRuleResponseDTO
+     * @return \Docstudio\Client\Model\IntegrationRuleResponseDTO
      */
     public function execute($body)
     {
@@ -902,15 +902,15 @@ class IntegrationControllerApi
      *
      * Execute conversion map and generate file name (if pattern rule defined)
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleRequestDTO $body (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\IntegrationRuleResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\IntegrationRuleResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function executeWithHttpInfo($body)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationRuleResponseDTO';
+        $returnType = '\Swagger\Client\Model\IntegrationRuleResponseDTO';
         $request = $this->executeRequest($body);
 
         try {
@@ -962,7 +962,7 @@ class IntegrationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\IntegrationRuleResponseDTO',
+                        '\Swagger\Client\Model\IntegrationRuleResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -977,7 +977,7 @@ class IntegrationControllerApi
      *
      * Execute conversion map and generate file name (if pattern rule defined)
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleRequestDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -997,14 +997,14 @@ class IntegrationControllerApi
      *
      * Execute conversion map and generate file name (if pattern rule defined)
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleRequestDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function executeAsyncWithHttpInfo($body)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationRuleResponseDTO';
+        $returnType = '\Swagger\Client\Model\IntegrationRuleResponseDTO';
         $request = $this->executeRequest($body);
 
         return $this->client
@@ -1047,7 +1047,7 @@ class IntegrationControllerApi
     /**
      * Create request for operation 'execute'
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleRequestDTO $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1150,9 +1150,9 @@ class IntegrationControllerApi
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $version_uuid Template version UUID (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\DataMap
+     * @return \Docstudio\Client\Model\DataMap
      */
     public function generate($template_uuid, $mailbox_uuid, $version_uuid = null)
     {
@@ -1169,13 +1169,13 @@ class IntegrationControllerApi
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $version_uuid Template version UUID (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\DataMap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\DataMap, HTTP status code, HTTP response headers (array of strings)
      */
     public function generateWithHttpInfo($template_uuid, $mailbox_uuid, $version_uuid = null)
     {
-        $returnType = '\Docstudio\ClientModel\DataMap';
+        $returnType = '\Swagger\Client\Model\DataMap';
         $request = $this->generateRequest($template_uuid, $mailbox_uuid, $version_uuid);
 
         try {
@@ -1227,7 +1227,7 @@ class IntegrationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\DataMap',
+                        '\Swagger\Client\Model\DataMap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1273,7 +1273,7 @@ class IntegrationControllerApi
      */
     public function generateAsyncWithHttpInfo($template_uuid, $mailbox_uuid, $version_uuid = null)
     {
-        $returnType = '\Docstudio\ClientModel\DataMap';
+        $returnType = '\Swagger\Client\Model\DataMap';
         $request = $this->generateRequest($template_uuid, $mailbox_uuid, $version_uuid);
 
         return $this->client
@@ -1442,9 +1442,9 @@ class IntegrationControllerApi
      *
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\IntegrationDTO
+     * @return \Docstudio\Client\Model\IntegrationDTO
      */
     public function getMailboxIntegration($mailbox_uuid)
     {
@@ -1459,13 +1459,13 @@ class IntegrationControllerApi
      *
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\IntegrationDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\IntegrationDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMailboxIntegrationWithHttpInfo($mailbox_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationDTO';
+        $returnType = '\Swagger\Client\Model\IntegrationDTO';
         $request = $this->getMailboxIntegrationRequest($mailbox_uuid);
 
         try {
@@ -1517,7 +1517,7 @@ class IntegrationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\IntegrationDTO',
+                        '\Swagger\Client\Model\IntegrationDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1559,7 +1559,7 @@ class IntegrationControllerApi
      */
     public function getMailboxIntegrationAsyncWithHttpInfo($mailbox_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationDTO';
+        $returnType = '\Swagger\Client\Model\IntegrationDTO';
         $request = $this->getMailboxIntegrationRequest($mailbox_uuid);
 
         return $this->client
@@ -1708,9 +1708,9 @@ class IntegrationControllerApi
      *
      * @param  string $integration_rule_uuid UUID of integration rule (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\IntegrationRuleDTO
+     * @return \Docstudio\Client\Model\IntegrationRuleDTO
      */
     public function getMailboxIntegrationRule($integration_rule_uuid)
     {
@@ -1725,13 +1725,13 @@ class IntegrationControllerApi
      *
      * @param  string $integration_rule_uuid UUID of integration rule (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\IntegrationRuleDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\IntegrationRuleDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMailboxIntegrationRuleWithHttpInfo($integration_rule_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationRuleDTO';
+        $returnType = '\Swagger\Client\Model\IntegrationRuleDTO';
         $request = $this->getMailboxIntegrationRuleRequest($integration_rule_uuid);
 
         try {
@@ -1783,7 +1783,7 @@ class IntegrationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\IntegrationRuleDTO',
+                        '\Swagger\Client\Model\IntegrationRuleDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1825,7 +1825,7 @@ class IntegrationControllerApi
      */
     public function getMailboxIntegrationRuleAsyncWithHttpInfo($integration_rule_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationRuleDTO';
+        $returnType = '\Swagger\Client\Model\IntegrationRuleDTO';
         $request = $this->getMailboxIntegrationRuleRequest($integration_rule_uuid);
 
         return $this->client
@@ -1974,9 +1974,9 @@ class IntegrationControllerApi
      *
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\IntegrationRuleDTO[]
+     * @return \Docstudio\Client\Model\IntegrationRuleDTO[]
      */
     public function getMailboxIntegrationRules($mailbox_uuid)
     {
@@ -1991,13 +1991,13 @@ class IntegrationControllerApi
      *
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\IntegrationRuleDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\IntegrationRuleDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getMailboxIntegrationRulesWithHttpInfo($mailbox_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationRuleDTO[]';
+        $returnType = '\Swagger\Client\Model\IntegrationRuleDTO[]';
         $request = $this->getMailboxIntegrationRulesRequest($mailbox_uuid);
 
         try {
@@ -2049,7 +2049,7 @@ class IntegrationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\IntegrationRuleDTO[]',
+                        '\Swagger\Client\Model\IntegrationRuleDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2091,7 +2091,7 @@ class IntegrationControllerApi
      */
     public function getMailboxIntegrationRulesAsyncWithHttpInfo($mailbox_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationRuleDTO[]';
+        $returnType = '\Swagger\Client\Model\IntegrationRuleDTO[]';
         $request = $this->getMailboxIntegrationRulesRequest($mailbox_uuid);
 
         return $this->client
@@ -2240,7 +2240,7 @@ class IntegrationControllerApi
      *
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2257,7 +2257,7 @@ class IntegrationControllerApi
      *
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2504,10 +2504,10 @@ class IntegrationControllerApi
      *
      * Create/update Mailbox integration
      *
-     * @param  \Docstudio\ClientModel\IntegrationDTO $body body (required)
+     * @param  \Docstudio\Client\Model\IntegrationDTO $body body (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2521,10 +2521,10 @@ class IntegrationControllerApi
      *
      * Create/update Mailbox integration
      *
-     * @param  \Docstudio\ClientModel\IntegrationDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationDTO $body (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2575,7 +2575,7 @@ class IntegrationControllerApi
      *
      * Create/update Mailbox integration
      *
-     * @param  \Docstudio\ClientModel\IntegrationDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationDTO $body (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -2596,7 +2596,7 @@ class IntegrationControllerApi
      *
      * Create/update Mailbox integration
      *
-     * @param  \Docstudio\ClientModel\IntegrationDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationDTO $body (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -2633,7 +2633,7 @@ class IntegrationControllerApi
     /**
      * Create request for operation 'saveMailboxIntegration'
      *
-     * @param  \Docstudio\ClientModel\IntegrationDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationDTO $body (required)
      * @param  string $mailbox_uuid Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -2747,12 +2747,12 @@ class IntegrationControllerApi
      *
      * Update Mailbox integration rule
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleDTO $body body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleDTO $body body (required)
      * @param  string $integration_rule_uuid UUID of integration rule (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\IntegrationRuleDTO
+     * @return \Docstudio\Client\Model\IntegrationRuleDTO
      */
     public function updateMailboxIntegrationRule($body, $integration_rule_uuid)
     {
@@ -2765,16 +2765,16 @@ class IntegrationControllerApi
      *
      * Update Mailbox integration rule
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleDTO $body (required)
      * @param  string $integration_rule_uuid UUID of integration rule (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\IntegrationRuleDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\IntegrationRuleDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateMailboxIntegrationRuleWithHttpInfo($body, $integration_rule_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationRuleDTO';
+        $returnType = '\Swagger\Client\Model\IntegrationRuleDTO';
         $request = $this->updateMailboxIntegrationRuleRequest($body, $integration_rule_uuid);
 
         try {
@@ -2826,7 +2826,7 @@ class IntegrationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\IntegrationRuleDTO',
+                        '\Swagger\Client\Model\IntegrationRuleDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2841,7 +2841,7 @@ class IntegrationControllerApi
      *
      * Update Mailbox integration rule
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleDTO $body (required)
      * @param  string $integration_rule_uuid UUID of integration rule (required)
      *
      * @throws \InvalidArgumentException
@@ -2862,7 +2862,7 @@ class IntegrationControllerApi
      *
      * Update Mailbox integration rule
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleDTO $body (required)
      * @param  string $integration_rule_uuid UUID of integration rule (required)
      *
      * @throws \InvalidArgumentException
@@ -2870,7 +2870,7 @@ class IntegrationControllerApi
      */
     public function updateMailboxIntegrationRuleAsyncWithHttpInfo($body, $integration_rule_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\IntegrationRuleDTO';
+        $returnType = '\Swagger\Client\Model\IntegrationRuleDTO';
         $request = $this->updateMailboxIntegrationRuleRequest($body, $integration_rule_uuid);
 
         return $this->client
@@ -2913,7 +2913,7 @@ class IntegrationControllerApi
     /**
      * Create request for operation 'updateMailboxIntegrationRule'
      *
-     * @param  \Docstudio\ClientModel\IntegrationRuleDTO $body (required)
+     * @param  \Docstudio\Client\Model\IntegrationRuleDTO $body (required)
      * @param  string $integration_rule_uuid UUID of integration rule (required)
      *
      * @throws \InvalidArgumentException

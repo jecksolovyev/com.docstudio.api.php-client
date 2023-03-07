@@ -94,7 +94,7 @@ class PermissionAccountControllerApi
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -111,7 +111,7 @@ class PermissionAccountControllerApi
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -343,7 +343,7 @@ class PermissionAccountControllerApi
      * @param  string $account_uuid UUID of account (required)
      * @param  int $permission_id Permission Id (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -361,7 +361,7 @@ class PermissionAccountControllerApi
      * @param  string $account_uuid UUID of account (required)
      * @param  int $permission_id Permission Id (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -610,7 +610,7 @@ class PermissionAccountControllerApi
      * @param  string $account_uuid UUID of account (required)
      * @param  string $role_uuid UUID of role (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -628,7 +628,7 @@ class PermissionAccountControllerApi
      * @param  string $account_uuid UUID of account (required)
      * @param  string $role_uuid UUID of role (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -876,9 +876,9 @@ class PermissionAccountControllerApi
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\AccountPermissionsDTO
+     * @return \Docstudio\Client\Model\AccountPermissionsDTO
      */
     public function getUserAccountPermissions($user_uuid, $account_uuid)
     {
@@ -894,13 +894,13 @@ class PermissionAccountControllerApi
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\AccountPermissionsDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\AccountPermissionsDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserAccountPermissionsWithHttpInfo($user_uuid, $account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountPermissionsDTO';
+        $returnType = '\Swagger\Client\Model\AccountPermissionsDTO';
         $request = $this->getUserAccountPermissionsRequest($user_uuid, $account_uuid);
 
         try {
@@ -952,7 +952,7 @@ class PermissionAccountControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\AccountPermissionsDTO',
+                        '\Swagger\Client\Model\AccountPermissionsDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class PermissionAccountControllerApi
      */
     public function getUserAccountPermissionsAsyncWithHttpInfo($user_uuid, $account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountPermissionsDTO';
+        $returnType = '\Swagger\Client\Model\AccountPermissionsDTO';
         $request = $this->getUserAccountPermissionsRequest($user_uuid, $account_uuid);
 
         return $this->client
@@ -1158,11 +1158,11 @@ class PermissionAccountControllerApi
      *
      * Add exact permission for selected user-to-account relation. Add if absent or ignore if already present.
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1176,11 +1176,11 @@ class PermissionAccountControllerApi
      *
      * Add exact permission for selected user-to-account relation. Add if absent or ignore if already present.
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1231,7 +1231,7 @@ class PermissionAccountControllerApi
      *
      * Add exact permission for selected user-to-account relation. Add if absent or ignore if already present.
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
@@ -1253,7 +1253,7 @@ class PermissionAccountControllerApi
      *
      * Add exact permission for selected user-to-account relation. Add if absent or ignore if already present.
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
@@ -1291,7 +1291,7 @@ class PermissionAccountControllerApi
     /**
      * Create request for operation 'patchMbPermissionsPermissionAccount'
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
@@ -1420,11 +1420,11 @@ class PermissionAccountControllerApi
      *
      * Replace all permissions for selected user-to-account relation
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1438,11 +1438,11 @@ class PermissionAccountControllerApi
      *
      * Replace all permissions for selected user-to-account relation
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1493,7 +1493,7 @@ class PermissionAccountControllerApi
      *
      * Replace all permissions for selected user-to-account relation
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
@@ -1515,7 +1515,7 @@ class PermissionAccountControllerApi
      *
      * Replace all permissions for selected user-to-account relation
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
@@ -1553,7 +1553,7 @@ class PermissionAccountControllerApi
     /**
      * Create request for operation 'replaceAllPermissionsPermissionAccount'
      *
-     * @param  \Docstudio\ClientModel\PermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\PermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
@@ -1682,11 +1682,11 @@ class PermissionAccountControllerApi
      *
      * Write user permissions
      *
-     * @param  \Docstudio\ClientModel\BasePermissionsDTO $body body (required)
+     * @param  \Docstudio\Client\Model\BasePermissionsDTO $body body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1700,11 +1700,11 @@ class PermissionAccountControllerApi
      *
      * Write user permissions
      *
-     * @param  \Docstudio\ClientModel\BasePermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\BasePermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1755,7 +1755,7 @@ class PermissionAccountControllerApi
      *
      * Write user permissions
      *
-     * @param  \Docstudio\ClientModel\BasePermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\BasePermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
@@ -1777,7 +1777,7 @@ class PermissionAccountControllerApi
      *
      * Write user permissions
      *
-     * @param  \Docstudio\ClientModel\BasePermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\BasePermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *
@@ -1815,7 +1815,7 @@ class PermissionAccountControllerApi
     /**
      * Create request for operation 'setUserAccountPermissions'
      *
-     * @param  \Docstudio\ClientModel\BasePermissionsDTO $body (required)
+     * @param  \Docstudio\Client\Model\BasePermissionsDTO $body (required)
      * @param  string $user_uuid UUID of User (required)
      * @param  string $account_uuid UUID of account (required)
      *

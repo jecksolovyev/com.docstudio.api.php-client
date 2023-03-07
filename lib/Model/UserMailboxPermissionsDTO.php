@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * UserMailboxPermissionsDTO Class Doc Comment
@@ -57,8 +57,8 @@ class UserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => '\Docstudio\ClientModel\UserPermissionDTO',
-'mailboxes' => '\Docstudio\ClientModel\MailboxRolePermissionDTO[]'    ];
+        'user' => '\Swagger\Client\Model\UserPermissionDTO',
+'mailboxes' => '\Swagger\Client\Model\MailboxRolePermissionDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -206,7 +206,7 @@ class UserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets user
      *
-     * @return \Docstudio\ClientModel\UserPermissionDTO
+     * @return \Docstudio\Client\Model\UserPermissionDTO
      */
     public function getUser()
     {
@@ -216,7 +216,7 @@ class UserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets user
      *
-     * @param \Docstudio\ClientModel\UserPermissionDTO $user user
+     * @param \Docstudio\Client\Model\UserPermissionDTO $user user
      *
      * @return $this
      */
@@ -230,7 +230,7 @@ class UserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Gets mailboxes
      *
-     * @return \Docstudio\ClientModel\MailboxRolePermissionDTO[]
+     * @return \Docstudio\Client\Model\MailboxRolePermissionDTO[]
      */
     public function getMailboxes()
     {
@@ -240,7 +240,7 @@ class UserMailboxPermissionsDTO implements ModelInterface, ArrayAccess
     /**
      * Sets mailboxes
      *
-     * @param \Docstudio\ClientModel\MailboxRolePermissionDTO[] $mailboxes mailboxes
+     * @param \Docstudio\Client\Model\MailboxRolePermissionDTO[] $mailboxes mailboxes
      *
      * @return $this
      */

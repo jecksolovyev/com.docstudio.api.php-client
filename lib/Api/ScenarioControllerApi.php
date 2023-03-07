@@ -94,9 +94,9 @@ class ScenarioControllerApi
      * @param  string $scenario_uuid Scenario uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\ScenarioDTO
+     * @return \Docstudio\Client\Model\ScenarioDTO
      */
     public function cloneScenario($scenario_uuid, $mailbox)
     {
@@ -112,13 +112,13 @@ class ScenarioControllerApi
      * @param  string $scenario_uuid Scenario uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\ScenarioDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\ScenarioDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function cloneScenarioWithHttpInfo($scenario_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\ScenarioDTO';
+        $returnType = '\Swagger\Client\Model\ScenarioDTO';
         $request = $this->cloneScenarioRequest($scenario_uuid, $mailbox);
 
         try {
@@ -170,7 +170,7 @@ class ScenarioControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\ScenarioDTO',
+                        '\Swagger\Client\Model\ScenarioDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class ScenarioControllerApi
      */
     public function cloneScenarioAsyncWithHttpInfo($scenario_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\ScenarioDTO';
+        $returnType = '\Swagger\Client\Model\ScenarioDTO';
         $request = $this->cloneScenarioRequest($scenario_uuid, $mailbox);
 
         return $this->client
@@ -372,12 +372,12 @@ class ScenarioControllerApi
      *
      * Create new scenario
      *
-     * @param  \Docstudio\ClientModel\ScenarioDTO $body body (required)
+     * @param  \Docstudio\Client\Model\ScenarioDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\ScenarioDTO
+     * @return \Docstudio\Client\Model\ScenarioDTO
      */
     public function createNewScenario($body, $mailbox)
     {
@@ -390,16 +390,16 @@ class ScenarioControllerApi
      *
      * Create new scenario
      *
-     * @param  \Docstudio\ClientModel\ScenarioDTO $body (required)
+     * @param  \Docstudio\Client\Model\ScenarioDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\ScenarioDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\ScenarioDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createNewScenarioWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\ScenarioDTO';
+        $returnType = '\Swagger\Client\Model\ScenarioDTO';
         $request = $this->createNewScenarioRequest($body, $mailbox);
 
         try {
@@ -451,7 +451,7 @@ class ScenarioControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\ScenarioDTO',
+                        '\Swagger\Client\Model\ScenarioDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -466,7 +466,7 @@ class ScenarioControllerApi
      *
      * Create new scenario
      *
-     * @param  \Docstudio\ClientModel\ScenarioDTO $body (required)
+     * @param  \Docstudio\Client\Model\ScenarioDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -487,7 +487,7 @@ class ScenarioControllerApi
      *
      * Create new scenario
      *
-     * @param  \Docstudio\ClientModel\ScenarioDTO $body (required)
+     * @param  \Docstudio\Client\Model\ScenarioDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -495,7 +495,7 @@ class ScenarioControllerApi
      */
     public function createNewScenarioAsyncWithHttpInfo($body, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\ScenarioDTO';
+        $returnType = '\Swagger\Client\Model\ScenarioDTO';
         $request = $this->createNewScenarioRequest($body, $mailbox);
 
         return $this->client
@@ -538,7 +538,7 @@ class ScenarioControllerApi
     /**
      * Create request for operation 'createNewScenario'
      *
-     * @param  \Docstudio\ClientModel\ScenarioDTO $body (required)
+     * @param  \Docstudio\Client\Model\ScenarioDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -651,7 +651,7 @@ class ScenarioControllerApi
      * @param  string $scenario_uuid Scenario uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -668,7 +668,7 @@ class ScenarioControllerApi
      * @param  string $scenario_uuid Scenario uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -895,9 +895,9 @@ class ScenarioControllerApi
      * @param  string $scenario_uuid Scenario uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\ScenarioDTO
+     * @return \Docstudio\Client\Model\ScenarioDTO
      */
     public function getScenario($scenario_uuid, $mailbox)
     {
@@ -913,13 +913,13 @@ class ScenarioControllerApi
      * @param  string $scenario_uuid Scenario uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\ScenarioDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\ScenarioDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getScenarioWithHttpInfo($scenario_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\ScenarioDTO';
+        $returnType = '\Swagger\Client\Model\ScenarioDTO';
         $request = $this->getScenarioRequest($scenario_uuid, $mailbox);
 
         try {
@@ -971,7 +971,7 @@ class ScenarioControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\ScenarioDTO',
+                        '\Swagger\Client\Model\ScenarioDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1015,7 +1015,7 @@ class ScenarioControllerApi
      */
     public function getScenarioAsyncWithHttpInfo($scenario_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\ScenarioDTO';
+        $returnType = '\Swagger\Client\Model\ScenarioDTO';
         $request = $this->getScenarioRequest($scenario_uuid, $mailbox);
 
         return $this->client
@@ -1176,9 +1176,9 @@ class ScenarioControllerApi
      * @param  string $scenario_uuid Scenario uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SingleUuidDTO
+     * @return \Docstudio\Client\Model\SingleUuidDTO
      */
     public function runScenario($scenario_uuid, $mailbox)
     {
@@ -1194,13 +1194,13 @@ class ScenarioControllerApi
      * @param  string $scenario_uuid Scenario uuid (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function runScenarioWithHttpInfo($scenario_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->runScenarioRequest($scenario_uuid, $mailbox);
 
         try {
@@ -1252,7 +1252,7 @@ class ScenarioControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SingleUuidDTO',
+                        '\Swagger\Client\Model\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1296,7 +1296,7 @@ class ScenarioControllerApi
      */
     public function runScenarioAsyncWithHttpInfo($scenario_uuid, $mailbox)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->runScenarioRequest($scenario_uuid, $mailbox);
 
         return $this->client
@@ -1460,9 +1460,9 @@ class ScenarioControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\PageDTOScenarioShortDTO
+     * @return \Docstudio\Client\Model\PageDTOScenarioShortDTO
      */
     public function searchScenarios($mailbox, $level = 'pub', $keyword = null, $offset = '0', $limit = '25')
     {
@@ -1481,13 +1481,13 @@ class ScenarioControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\PageDTOScenarioShortDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\PageDTOScenarioShortDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchScenariosWithHttpInfo($mailbox, $level = 'pub', $keyword = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOScenarioShortDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOScenarioShortDTO';
         $request = $this->searchScenariosRequest($mailbox, $level, $keyword, $offset, $limit);
 
         try {
@@ -1539,7 +1539,7 @@ class ScenarioControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\PageDTOScenarioShortDTO',
+                        '\Swagger\Client\Model\PageDTOScenarioShortDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1589,7 +1589,7 @@ class ScenarioControllerApi
      */
     public function searchScenariosAsyncWithHttpInfo($mailbox, $level = 'pub', $keyword = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOScenarioShortDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOScenarioShortDTO';
         $request = $this->searchScenariosRequest($mailbox, $level, $keyword, $offset, $limit);
 
         return $this->client
@@ -1752,13 +1752,13 @@ class ScenarioControllerApi
      *
      * Update scenario
      *
-     * @param  \Docstudio\ClientModel\ScenarioDTO $body body (required)
+     * @param  \Docstudio\Client\Model\ScenarioDTO $body body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $scenario_uuid Scenario uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\ScenarioDTO
+     * @return \Docstudio\Client\Model\ScenarioDTO
      */
     public function updateScenario($body, $mailbox, $scenario_uuid)
     {
@@ -1771,17 +1771,17 @@ class ScenarioControllerApi
      *
      * Update scenario
      *
-     * @param  \Docstudio\ClientModel\ScenarioDTO $body (required)
+     * @param  \Docstudio\Client\Model\ScenarioDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $scenario_uuid Scenario uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\ScenarioDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\ScenarioDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateScenarioWithHttpInfo($body, $mailbox, $scenario_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\ScenarioDTO';
+        $returnType = '\Swagger\Client\Model\ScenarioDTO';
         $request = $this->updateScenarioRequest($body, $mailbox, $scenario_uuid);
 
         try {
@@ -1833,7 +1833,7 @@ class ScenarioControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\ScenarioDTO',
+                        '\Swagger\Client\Model\ScenarioDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1848,7 +1848,7 @@ class ScenarioControllerApi
      *
      * Update scenario
      *
-     * @param  \Docstudio\ClientModel\ScenarioDTO $body (required)
+     * @param  \Docstudio\Client\Model\ScenarioDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $scenario_uuid Scenario uuid (required)
      *
@@ -1870,7 +1870,7 @@ class ScenarioControllerApi
      *
      * Update scenario
      *
-     * @param  \Docstudio\ClientModel\ScenarioDTO $body (required)
+     * @param  \Docstudio\Client\Model\ScenarioDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $scenario_uuid Scenario uuid (required)
      *
@@ -1879,7 +1879,7 @@ class ScenarioControllerApi
      */
     public function updateScenarioAsyncWithHttpInfo($body, $mailbox, $scenario_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\ScenarioDTO';
+        $returnType = '\Swagger\Client\Model\ScenarioDTO';
         $request = $this->updateScenarioRequest($body, $mailbox, $scenario_uuid);
 
         return $this->client
@@ -1922,7 +1922,7 @@ class ScenarioControllerApi
     /**
      * Create request for operation 'updateScenario'
      *
-     * @param  \Docstudio\ClientModel\ScenarioDTO $body (required)
+     * @param  \Docstudio\Client\Model\ScenarioDTO $body (required)
      * @param  string $mailbox Mailbox context, HTTP Header with current mailbox UUID (required)
      * @param  string $scenario_uuid Scenario uuid (required)
      *

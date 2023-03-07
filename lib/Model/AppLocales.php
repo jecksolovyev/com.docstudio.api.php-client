@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * AppLocales Class Doc Comment
@@ -60,7 +60,7 @@ class AppLocales implements ModelInterface, ArrayAccess
         'default_as_language' => 'bool',
 'default_country' => 'string',
 'timezone' => 'string',
-'supported' => '\Docstudio\ClientModel\LocaleItemDTO[]',
+'supported' => '\Swagger\Client\Model\LocaleItemDTO[]',
 'default_locale' => 'string'    ];
 
     /**
@@ -296,7 +296,7 @@ class AppLocales implements ModelInterface, ArrayAccess
     /**
      * Gets supported
      *
-     * @return \Docstudio\ClientModel\LocaleItemDTO[]
+     * @return \Docstudio\Client\Model\LocaleItemDTO[]
      */
     public function getSupported()
     {
@@ -306,7 +306,7 @@ class AppLocales implements ModelInterface, ArrayAccess
     /**
      * Sets supported
      *
-     * @param \Docstudio\ClientModel\LocaleItemDTO[] $supported supported
+     * @param \Docstudio\Client\Model\LocaleItemDTO[] $supported supported
      *
      * @return $this
      */

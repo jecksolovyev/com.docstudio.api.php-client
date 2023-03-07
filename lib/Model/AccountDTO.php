@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * AccountDTO Class Doc Comment
@@ -61,8 +61,8 @@ class AccountDTO implements ModelInterface, ArrayAccess
 'inn' => 'string',
 'created_at' => '\DateTime',
 'modified_at' => '\DateTime',
-'mailboxes' => '\Docstudio\ClientModel\MailboxSimpleDTO[]',
-'users' => '\Docstudio\ClientModel\AccountUserDTO[]',
+'mailboxes' => '\Swagger\Client\Model\MailboxSimpleDTO[]',
+'users' => '\Swagger\Client\Model\AccountUserDTO[]',
 'logo' => 'string',
 'brand' => 'string',
 'currency' => 'string',
@@ -388,7 +388,7 @@ class AccountDTO implements ModelInterface, ArrayAccess
     /**
      * Gets mailboxes
      *
-     * @return \Docstudio\ClientModel\MailboxSimpleDTO[]
+     * @return \Docstudio\Client\Model\MailboxSimpleDTO[]
      */
     public function getMailboxes()
     {
@@ -398,7 +398,7 @@ class AccountDTO implements ModelInterface, ArrayAccess
     /**
      * Sets mailboxes
      *
-     * @param \Docstudio\ClientModel\MailboxSimpleDTO[] $mailboxes mailboxes
+     * @param \Docstudio\Client\Model\MailboxSimpleDTO[] $mailboxes mailboxes
      *
      * @return $this
      */
@@ -412,7 +412,7 @@ class AccountDTO implements ModelInterface, ArrayAccess
     /**
      * Gets users
      *
-     * @return \Docstudio\ClientModel\AccountUserDTO[]
+     * @return \Docstudio\Client\Model\AccountUserDTO[]
      */
     public function getUsers()
     {
@@ -422,7 +422,7 @@ class AccountDTO implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \Docstudio\ClientModel\AccountUserDTO[] $users users
+     * @param \Docstudio\Client\Model\AccountUserDTO[] $users users
      *
      * @return $this
      */

@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopeConfirmInviteDTO Class Doc Comment
@@ -58,7 +58,7 @@ class EnvelopeConfirmInviteDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'code' => 'string',
-'roles' => '\Docstudio\ClientModel\EnvelopeConfirmInviteRoleDTO[]'    ];
+'roles' => '\Swagger\Client\Model\EnvelopeConfirmInviteRoleDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -236,7 +236,7 @@ class EnvelopeConfirmInviteDTO implements ModelInterface, ArrayAccess
     /**
      * Gets roles
      *
-     * @return \Docstudio\ClientModel\EnvelopeConfirmInviteRoleDTO[]
+     * @return \Docstudio\Client\Model\EnvelopeConfirmInviteRoleDTO[]
      */
     public function getRoles()
     {
@@ -246,7 +246,7 @@ class EnvelopeConfirmInviteDTO implements ModelInterface, ArrayAccess
     /**
      * Sets roles
      *
-     * @param \Docstudio\ClientModel\EnvelopeConfirmInviteRoleDTO[] $roles Confirmed mailboxes to roles
+     * @param \Docstudio\Client\Model\EnvelopeConfirmInviteRoleDTO[] $roles Confirmed mailboxes to roles
      *
      * @return $this
      */

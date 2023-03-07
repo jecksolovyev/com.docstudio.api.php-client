@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopeWithTemplateDTO Class Doc Comment
@@ -56,9 +56,9 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'envelope' => '\Docstudio\ClientModel\EnvGetDTO',
-'template' => '\Docstudio\ClientModel\FullTemplateResponseDTO',
-'scenario' => '\Docstudio\ClientModel\EnvelopeScenarioDTO'    ];
+        'envelope' => '\Swagger\Client\Model\EnvGetDTO',
+'template' => '\Swagger\Client\Model\FullTemplateResponseDTO',
+'scenario' => '\Swagger\Client\Model\EnvelopeScenarioDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -211,7 +211,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Gets envelope
      *
-     * @return \Docstudio\ClientModel\EnvGetDTO
+     * @return \Docstudio\Client\Model\EnvGetDTO
      */
     public function getEnvelope()
     {
@@ -221,7 +221,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Sets envelope
      *
-     * @param \Docstudio\ClientModel\EnvGetDTO $envelope envelope
+     * @param \Docstudio\Client\Model\EnvGetDTO $envelope envelope
      *
      * @return $this
      */
@@ -235,7 +235,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Gets template
      *
-     * @return \Docstudio\ClientModel\FullTemplateResponseDTO
+     * @return \Docstudio\Client\Model\FullTemplateResponseDTO
      */
     public function getTemplate()
     {
@@ -245,7 +245,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Sets template
      *
-     * @param \Docstudio\ClientModel\FullTemplateResponseDTO $template template
+     * @param \Docstudio\Client\Model\FullTemplateResponseDTO $template template
      *
      * @return $this
      */
@@ -259,7 +259,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Gets scenario
      *
-     * @return \Docstudio\ClientModel\EnvelopeScenarioDTO
+     * @return \Docstudio\Client\Model\EnvelopeScenarioDTO
      */
     public function getScenario()
     {
@@ -269,7 +269,7 @@ class EnvelopeWithTemplateDTO implements ModelInterface, ArrayAccess
     /**
      * Sets scenario
      *
-     * @param \Docstudio\ClientModel\EnvelopeScenarioDTO $scenario scenario
+     * @param \Docstudio\Client\Model\EnvelopeScenarioDTO $scenario scenario
      *
      * @return $this
      */

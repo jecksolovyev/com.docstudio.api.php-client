@@ -91,10 +91,10 @@ class AccountControllerApi
      *
      * Add crypto configs
      *
-     * @param  \Docstudio\ClientModel\CryptoConfigDTO[] $body body (required)
+     * @param  \Docstudio\Client\Model\CryptoConfigDTO[] $body body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -108,10 +108,10 @@ class AccountControllerApi
      *
      * Add crypto configs
      *
-     * @param  \Docstudio\ClientModel\CryptoConfigDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\CryptoConfigDTO[] $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -162,7 +162,7 @@ class AccountControllerApi
      *
      * Add crypto configs
      *
-     * @param  \Docstudio\ClientModel\CryptoConfigDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\CryptoConfigDTO[] $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -183,7 +183,7 @@ class AccountControllerApi
      *
      * Add crypto configs
      *
-     * @param  \Docstudio\ClientModel\CryptoConfigDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\CryptoConfigDTO[] $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -220,7 +220,7 @@ class AccountControllerApi
     /**
      * Create request for operation 'addNewCryptoConfigs'
      *
-     * @param  \Docstudio\ClientModel\CryptoConfigDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\CryptoConfigDTO[] $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -334,11 +334,11 @@ class AccountControllerApi
      *
      * Block/Unblock corporate users
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  bool $flag Block/Unblock flag (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -352,11 +352,11 @@ class AccountControllerApi
      *
      * Block/Unblock corporate users
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  bool $flag Block/Unblock flag (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -407,7 +407,7 @@ class AccountControllerApi
      *
      * Block/Unblock corporate users
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  bool $flag Block/Unblock flag (required)
      *
@@ -429,7 +429,7 @@ class AccountControllerApi
      *
      * Block/Unblock corporate users
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  bool $flag Block/Unblock flag (required)
      *
@@ -467,7 +467,7 @@ class AccountControllerApi
     /**
      * Create request for operation 'blockUsers'
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      * @param  string $account_uuid Account UUID (required)
      * @param  bool $flag Block/Unblock flag (required)
      *
@@ -596,13 +596,13 @@ class AccountControllerApi
      *
      * Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es).
      *
-     * @param  \Docstudio\ClientModel\AccountCreateDTO $body body (required)
+     * @param  \Docstudio\Client\Model\AccountCreateDTO $body body (required)
      * @param  string $code Invitation code from email (optional)
      * @param  string $code_type Type of code (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\User2AccountWithMailboxesDTO
+     * @return \Docstudio\Client\Model\User2AccountWithMailboxesDTO
      */
     public function createAccount($body, $code = null, $code_type = null)
     {
@@ -615,17 +615,17 @@ class AccountControllerApi
      *
      * Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es).
      *
-     * @param  \Docstudio\ClientModel\AccountCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountCreateDTO $body (required)
      * @param  string $code Invitation code from email (optional)
      * @param  string $code_type Type of code (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\User2AccountWithMailboxesDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\User2AccountWithMailboxesDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAccountWithHttpInfo($body, $code = null, $code_type = null)
     {
-        $returnType = '\Docstudio\ClientModel\User2AccountWithMailboxesDTO';
+        $returnType = '\Swagger\Client\Model\User2AccountWithMailboxesDTO';
         $request = $this->createAccountRequest($body, $code, $code_type);
 
         try {
@@ -677,7 +677,7 @@ class AccountControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\User2AccountWithMailboxesDTO',
+                        '\Swagger\Client\Model\User2AccountWithMailboxesDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -692,7 +692,7 @@ class AccountControllerApi
      *
      * Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es).
      *
-     * @param  \Docstudio\ClientModel\AccountCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountCreateDTO $body (required)
      * @param  string $code Invitation code from email (optional)
      * @param  string $code_type Type of code (optional)
      *
@@ -714,7 +714,7 @@ class AccountControllerApi
      *
      * Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es).
      *
-     * @param  \Docstudio\ClientModel\AccountCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountCreateDTO $body (required)
      * @param  string $code Invitation code from email (optional)
      * @param  string $code_type Type of code (optional)
      *
@@ -723,7 +723,7 @@ class AccountControllerApi
      */
     public function createAccountAsyncWithHttpInfo($body, $code = null, $code_type = null)
     {
-        $returnType = '\Docstudio\ClientModel\User2AccountWithMailboxesDTO';
+        $returnType = '\Swagger\Client\Model\User2AccountWithMailboxesDTO';
         $request = $this->createAccountRequest($body, $code, $code_type);
 
         return $this->client
@@ -766,7 +766,7 @@ class AccountControllerApi
     /**
      * Create request for operation 'createAccount'
      *
-     * @param  \Docstudio\ClientModel\AccountCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountCreateDTO $body (required)
      * @param  string $code Invitation code from email (optional)
      * @param  string $code_type Type of code (optional)
      *
@@ -875,12 +875,12 @@ class AccountControllerApi
      *
      * Create corporate user
      *
-     * @param  \Docstudio\ClientModel\CorporateUserCreateDTO $body body (required)
+     * @param  \Docstudio\Client\Model\CorporateUserCreateDTO $body body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\UserDTO
+     * @return \Docstudio\Client\Model\UserDTO
      */
     public function createCorporateUser($body, $account_uuid)
     {
@@ -893,16 +893,16 @@ class AccountControllerApi
      *
      * Create corporate user
      *
-     * @param  \Docstudio\ClientModel\CorporateUserCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\CorporateUserCreateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\UserDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\UserDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCorporateUserWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\UserDTO';
+        $returnType = '\Swagger\Client\Model\UserDTO';
         $request = $this->createCorporateUserRequest($body, $account_uuid);
 
         try {
@@ -954,7 +954,7 @@ class AccountControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\UserDTO',
+                        '\Swagger\Client\Model\UserDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -969,7 +969,7 @@ class AccountControllerApi
      *
      * Create corporate user
      *
-     * @param  \Docstudio\ClientModel\CorporateUserCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\CorporateUserCreateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -990,7 +990,7 @@ class AccountControllerApi
      *
      * Create corporate user
      *
-     * @param  \Docstudio\ClientModel\CorporateUserCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\CorporateUserCreateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -998,7 +998,7 @@ class AccountControllerApi
      */
     public function createCorporateUserAsyncWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\UserDTO';
+        $returnType = '\Swagger\Client\Model\UserDTO';
         $request = $this->createCorporateUserRequest($body, $account_uuid);
 
         return $this->client
@@ -1041,7 +1041,7 @@ class AccountControllerApi
     /**
      * Create request for operation 'createCorporateUser'
      *
-     * @param  \Docstudio\ClientModel\CorporateUserCreateDTO $body (required)
+     * @param  \Docstudio\Client\Model\CorporateUserCreateDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -1158,7 +1158,7 @@ class AccountControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $file file (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1175,7 +1175,7 @@ class AccountControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $file (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1397,7 +1397,7 @@ class AccountControllerApi
      * @param  string $check_message Proof message (required)
      * @param  string $uuid UUID of account to delete (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1414,7 +1414,7 @@ class AccountControllerApi
      * @param  string $check_message Proof message (required)
      * @param  string $uuid UUID of account to delete (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1638,11 +1638,11 @@ class AccountControllerApi
      *
      * Delete corporate users
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body body (required)
      * @param  string $check_message Proof message (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1656,11 +1656,11 @@ class AccountControllerApi
      *
      * Delete corporate users
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      * @param  string $check_message Proof message (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1711,7 +1711,7 @@ class AccountControllerApi
      *
      * Delete corporate users
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      * @param  string $check_message Proof message (required)
      * @param  string $account_uuid Account UUID (required)
      *
@@ -1733,7 +1733,7 @@ class AccountControllerApi
      *
      * Delete corporate users
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      * @param  string $check_message Proof message (required)
      * @param  string $account_uuid Account UUID (required)
      *
@@ -1771,7 +1771,7 @@ class AccountControllerApi
     /**
      * Create request for operation 'deleteCorporateUsers'
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      * @param  string $check_message Proof message (required)
      * @param  string $account_uuid Account UUID (required)
      *
@@ -1899,7 +1899,7 @@ class AccountControllerApi
      * @param  string[] $body body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1916,7 +1916,7 @@ class AccountControllerApi
      * @param  string[] $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2141,9 +2141,9 @@ class AccountControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\AccountAddressDTO
+     * @return \Docstudio\Client\Model\AccountAddressDTO
      */
     public function getAccountBillingAddress($account_uuid)
     {
@@ -2158,13 +2158,13 @@ class AccountControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\AccountAddressDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\AccountAddressDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountBillingAddressWithHttpInfo($account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountAddressDTO';
+        $returnType = '\Swagger\Client\Model\AccountAddressDTO';
         $request = $this->getAccountBillingAddressRequest($account_uuid);
 
         try {
@@ -2216,7 +2216,7 @@ class AccountControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\AccountAddressDTO',
+                        '\Swagger\Client\Model\AccountAddressDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2258,7 +2258,7 @@ class AccountControllerApi
      */
     public function getAccountBillingAddressAsyncWithHttpInfo($account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountAddressDTO';
+        $returnType = '\Swagger\Client\Model\AccountAddressDTO';
         $request = $this->getAccountBillingAddressRequest($account_uuid);
 
         return $this->client
@@ -2408,7 +2408,7 @@ class AccountControllerApi
      * @param  string $account_uuid account_uuid (required)
      * @param  bool $initials Get default avatar (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -2426,7 +2426,7 @@ class AccountControllerApi
      * @param  string $account_uuid (required)
      * @param  bool $initials Get default avatar (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2681,9 +2681,9 @@ class AccountControllerApi
      * @param  string $uuid uuid (required)
      * @param  bool $with_users with_users (optional, default to false)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\AccountDTO
+     * @return \Docstudio\Client\Model\AccountDTO
      */
     public function getAccountDetails($uuid, $with_users = 'false')
     {
@@ -2697,13 +2697,13 @@ class AccountControllerApi
      * @param  string $uuid (required)
      * @param  bool $with_users (optional, default to false)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\AccountDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\AccountDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountDetailsWithHttpInfo($uuid, $with_users = 'false')
     {
-        $returnType = '\Docstudio\ClientModel\AccountDTO';
+        $returnType = '\Swagger\Client\Model\AccountDTO';
         $request = $this->getAccountDetailsRequest($uuid, $with_users);
 
         try {
@@ -2755,7 +2755,7 @@ class AccountControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\AccountDTO',
+                        '\Swagger\Client\Model\AccountDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2799,7 +2799,7 @@ class AccountControllerApi
      */
     public function getAccountDetailsAsyncWithHttpInfo($uuid, $with_users = 'false')
     {
-        $returnType = '\Docstudio\ClientModel\AccountDTO';
+        $returnType = '\Swagger\Client\Model\AccountDTO';
         $request = $this->getAccountDetailsRequest($uuid, $with_users);
 
         return $this->client
@@ -2954,7 +2954,7 @@ class AccountControllerApi
      * @param  string $account_uuid account_uuid (required)
      * @param  bool $initials Get default avatar (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -2972,7 +2972,7 @@ class AccountControllerApi
      * @param  string $account_uuid (required)
      * @param  bool $initials Get default avatar (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3228,7 +3228,7 @@ class AccountControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -3245,7 +3245,7 @@ class AccountControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3494,9 +3494,9 @@ class AccountControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\CryptoConfigDTO[]
+     * @return \Docstudio\Client\Model\CryptoConfigDTO[]
      */
     public function getCryptoConfigs($account_uuid)
     {
@@ -3511,13 +3511,13 @@ class AccountControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\CryptoConfigDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\CryptoConfigDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getCryptoConfigsWithHttpInfo($account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\CryptoConfigDTO[]';
+        $returnType = '\Swagger\Client\Model\CryptoConfigDTO[]';
         $request = $this->getCryptoConfigsRequest($account_uuid);
 
         try {
@@ -3569,7 +3569,7 @@ class AccountControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\CryptoConfigDTO[]',
+                        '\Swagger\Client\Model\CryptoConfigDTO[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3611,7 +3611,7 @@ class AccountControllerApi
      */
     public function getCryptoConfigsAsyncWithHttpInfo($account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\CryptoConfigDTO[]';
+        $returnType = '\Swagger\Client\Model\CryptoConfigDTO[]';
         $request = $this->getCryptoConfigsRequest($account_uuid);
 
         return $this->client
@@ -3760,9 +3760,9 @@ class AccountControllerApi
      *
      * @param  string $uuid uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\MailboxAccountSimpleDTO
+     * @return \Docstudio\Client\Model\MailboxAccountSimpleDTO
      */
     public function getMailbox($uuid)
     {
@@ -3777,13 +3777,13 @@ class AccountControllerApi
      *
      * @param  string $uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\MailboxAccountSimpleDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\MailboxAccountSimpleDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMailboxWithHttpInfo($uuid)
     {
-        $returnType = '\Docstudio\ClientModel\MailboxAccountSimpleDTO';
+        $returnType = '\Swagger\Client\Model\MailboxAccountSimpleDTO';
         $request = $this->getMailboxRequest($uuid);
 
         try {
@@ -3835,7 +3835,7 @@ class AccountControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\MailboxAccountSimpleDTO',
+                        '\Swagger\Client\Model\MailboxAccountSimpleDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3877,7 +3877,7 @@ class AccountControllerApi
      */
     public function getMailboxAsyncWithHttpInfo($uuid)
     {
-        $returnType = '\Docstudio\ClientModel\MailboxAccountSimpleDTO';
+        $returnType = '\Swagger\Client\Model\MailboxAccountSimpleDTO';
         $request = $this->getMailboxRequest($uuid);
 
         return $this->client
@@ -4026,9 +4026,9 @@ class AccountControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\AccountPoliciesDTO
+     * @return \Docstudio\Client\Model\AccountPoliciesDTO
      */
     public function getUserPolicies($account_uuid)
     {
@@ -4043,13 +4043,13 @@ class AccountControllerApi
      *
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\AccountPoliciesDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\AccountPoliciesDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserPoliciesWithHttpInfo($account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountPoliciesDTO';
+        $returnType = '\Swagger\Client\Model\AccountPoliciesDTO';
         $request = $this->getUserPoliciesRequest($account_uuid);
 
         try {
@@ -4101,7 +4101,7 @@ class AccountControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\AccountPoliciesDTO',
+                        '\Swagger\Client\Model\AccountPoliciesDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4143,7 +4143,7 @@ class AccountControllerApi
      */
     public function getUserPoliciesAsyncWithHttpInfo($account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountPoliciesDTO';
+        $returnType = '\Swagger\Client\Model\AccountPoliciesDTO';
         $request = $this->getUserPoliciesRequest($account_uuid);
 
         return $this->client
@@ -4290,14 +4290,14 @@ class AccountControllerApi
      *
      * Get users with permissions per account and mailboxes
      *
-     * @param  \Docstudio\ClientModel\UsersSearchFilterDTO $body body (required)
+     * @param  \Docstudio\Client\Model\UsersSearchFilterDTO $body body (required)
      * @param  string $account_uuid UUID of Account (required)
      * @param  int $offset Offset, how much envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how much envelopes to retrieve (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\PageDTOUserMailboxPermissionsDTO
+     * @return \Docstudio\Client\Model\PageDTOUserMailboxPermissionsDTO
      */
     public function getUsersPermissions($body, $account_uuid, $offset = '0', $limit = '25')
     {
@@ -4310,18 +4310,18 @@ class AccountControllerApi
      *
      * Get users with permissions per account and mailboxes
      *
-     * @param  \Docstudio\ClientModel\UsersSearchFilterDTO $body (required)
+     * @param  \Docstudio\Client\Model\UsersSearchFilterDTO $body (required)
      * @param  string $account_uuid UUID of Account (required)
      * @param  int $offset Offset, how much envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how much envelopes to retrieve (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\PageDTOUserMailboxPermissionsDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\PageDTOUserMailboxPermissionsDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUsersPermissionsWithHttpInfo($body, $account_uuid, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOUserMailboxPermissionsDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOUserMailboxPermissionsDTO';
         $request = $this->getUsersPermissionsRequest($body, $account_uuid, $offset, $limit);
 
         try {
@@ -4373,7 +4373,7 @@ class AccountControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\PageDTOUserMailboxPermissionsDTO',
+                        '\Swagger\Client\Model\PageDTOUserMailboxPermissionsDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4388,7 +4388,7 @@ class AccountControllerApi
      *
      * Get users with permissions per account and mailboxes
      *
-     * @param  \Docstudio\ClientModel\UsersSearchFilterDTO $body (required)
+     * @param  \Docstudio\Client\Model\UsersSearchFilterDTO $body (required)
      * @param  string $account_uuid UUID of Account (required)
      * @param  int $offset Offset, how much envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how much envelopes to retrieve (optional, default to 25)
@@ -4411,7 +4411,7 @@ class AccountControllerApi
      *
      * Get users with permissions per account and mailboxes
      *
-     * @param  \Docstudio\ClientModel\UsersSearchFilterDTO $body (required)
+     * @param  \Docstudio\Client\Model\UsersSearchFilterDTO $body (required)
      * @param  string $account_uuid UUID of Account (required)
      * @param  int $offset Offset, how much envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how much envelopes to retrieve (optional, default to 25)
@@ -4421,7 +4421,7 @@ class AccountControllerApi
      */
     public function getUsersPermissionsAsyncWithHttpInfo($body, $account_uuid, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOUserMailboxPermissionsDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOUserMailboxPermissionsDTO';
         $request = $this->getUsersPermissionsRequest($body, $account_uuid, $offset, $limit);
 
         return $this->client
@@ -4464,7 +4464,7 @@ class AccountControllerApi
     /**
      * Create request for operation 'getUsersPermissions'
      *
-     * @param  \Docstudio\ClientModel\UsersSearchFilterDTO $body (required)
+     * @param  \Docstudio\Client\Model\UsersSearchFilterDTO $body (required)
      * @param  string $account_uuid UUID of Account (required)
      * @param  int $offset Offset, how much envelopes to skip (optional, default to 0)
      * @param  int $limit Limit, how much envelopes to retrieve (optional, default to 25)
@@ -4588,10 +4588,10 @@ class AccountControllerApi
      *
      * Generate account mailboxes report
      *
-     * @param  \Docstudio\ClientModel\ReportMailboxesRequestDTO $body body (required)
+     * @param  \Docstudio\Client\Model\ReportMailboxesRequestDTO $body body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4605,10 +4605,10 @@ class AccountControllerApi
      *
      * Generate account mailboxes report
      *
-     * @param  \Docstudio\ClientModel\ReportMailboxesRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportMailboxesRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4659,7 +4659,7 @@ class AccountControllerApi
      *
      * Generate account mailboxes report
      *
-     * @param  \Docstudio\ClientModel\ReportMailboxesRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportMailboxesRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -4680,7 +4680,7 @@ class AccountControllerApi
      *
      * Generate account mailboxes report
      *
-     * @param  \Docstudio\ClientModel\ReportMailboxesRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportMailboxesRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -4717,7 +4717,7 @@ class AccountControllerApi
     /**
      * Create request for operation 'mailboxesReport'
      *
-     * @param  \Docstudio\ClientModel\ReportMailboxesRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportMailboxesRequestDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -4834,7 +4834,7 @@ class AccountControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $user_uuid User UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4851,7 +4851,7 @@ class AccountControllerApi
      * @param  string $account_uuid Account UUID (required)
      * @param  string $user_uuid User UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5079,10 +5079,10 @@ class AccountControllerApi
      *
      * Save user password/session policies
      *
-     * @param  \Docstudio\ClientModel\AccountPoliciesDTO $body body (required)
+     * @param  \Docstudio\Client\Model\AccountPoliciesDTO $body body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5096,10 +5096,10 @@ class AccountControllerApi
      *
      * Save user password/session policies
      *
-     * @param  \Docstudio\ClientModel\AccountPoliciesDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountPoliciesDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5150,7 +5150,7 @@ class AccountControllerApi
      *
      * Save user password/session policies
      *
-     * @param  \Docstudio\ClientModel\AccountPoliciesDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountPoliciesDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -5171,7 +5171,7 @@ class AccountControllerApi
      *
      * Save user password/session policies
      *
-     * @param  \Docstudio\ClientModel\AccountPoliciesDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountPoliciesDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -5208,7 +5208,7 @@ class AccountControllerApi
     /**
      * Create request for operation 'saveUserPolicies'
      *
-     * @param  \Docstudio\ClientModel\AccountPoliciesDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountPoliciesDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -5327,9 +5327,9 @@ class AccountControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\PageDTOAccountMailboxInfoDTO
+     * @return \Docstudio\Client\Model\PageDTOAccountMailboxInfoDTO
      */
     public function searchMailboxesAccount($account_uuid, $keyword = null, $offset = '0', $limit = '25')
     {
@@ -5347,13 +5347,13 @@ class AccountControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\PageDTOAccountMailboxInfoDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\PageDTOAccountMailboxInfoDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchMailboxesAccountWithHttpInfo($account_uuid, $keyword = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOAccountMailboxInfoDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOAccountMailboxInfoDTO';
         $request = $this->searchMailboxesAccountRequest($account_uuid, $keyword, $offset, $limit);
 
         try {
@@ -5405,7 +5405,7 @@ class AccountControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\PageDTOAccountMailboxInfoDTO',
+                        '\Swagger\Client\Model\PageDTOAccountMailboxInfoDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5453,7 +5453,7 @@ class AccountControllerApi
      */
     public function searchMailboxesAccountAsyncWithHttpInfo($account_uuid, $keyword = null, $offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOAccountMailboxInfoDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOAccountMailboxInfoDTO';
         $request = $this->searchMailboxesAccountRequest($account_uuid, $keyword, $offset, $limit);
 
         return $this->client
@@ -5615,12 +5615,12 @@ class AccountControllerApi
      *
      * Create/update account billing address
      *
-     * @param  \Docstudio\ClientModel\AccountAddressDTO $body body (required)
+     * @param  \Docstudio\Client\Model\AccountAddressDTO $body body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\AccountAddressDTO
+     * @return \Docstudio\Client\Model\AccountAddressDTO
      */
     public function updateAccountBillingAddress($body, $account_uuid)
     {
@@ -5633,16 +5633,16 @@ class AccountControllerApi
      *
      * Create/update account billing address
      *
-     * @param  \Docstudio\ClientModel\AccountAddressDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountAddressDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\AccountAddressDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\AccountAddressDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAccountBillingAddressWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountAddressDTO';
+        $returnType = '\Swagger\Client\Model\AccountAddressDTO';
         $request = $this->updateAccountBillingAddressRequest($body, $account_uuid);
 
         try {
@@ -5694,7 +5694,7 @@ class AccountControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\AccountAddressDTO',
+                        '\Swagger\Client\Model\AccountAddressDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5709,7 +5709,7 @@ class AccountControllerApi
      *
      * Create/update account billing address
      *
-     * @param  \Docstudio\ClientModel\AccountAddressDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountAddressDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -5730,7 +5730,7 @@ class AccountControllerApi
      *
      * Create/update account billing address
      *
-     * @param  \Docstudio\ClientModel\AccountAddressDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountAddressDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -5738,7 +5738,7 @@ class AccountControllerApi
      */
     public function updateAccountBillingAddressAsyncWithHttpInfo($body, $account_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountAddressDTO';
+        $returnType = '\Swagger\Client\Model\AccountAddressDTO';
         $request = $this->updateAccountBillingAddressRequest($body, $account_uuid);
 
         return $this->client
@@ -5781,7 +5781,7 @@ class AccountControllerApi
     /**
      * Create request for operation 'updateAccountBillingAddress'
      *
-     * @param  \Docstudio\ClientModel\AccountAddressDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountAddressDTO $body (required)
      * @param  string $account_uuid Account UUID (required)
      *
      * @throws \InvalidArgumentException
@@ -5893,12 +5893,12 @@ class AccountControllerApi
     /**
      * Operation updateAccountDetails
      *
-     * @param  \Docstudio\ClientModel\AccountDTO $body body (required)
+     * @param  \Docstudio\Client\Model\AccountDTO $body body (required)
      * @param  string $uuid uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\AccountDTO
+     * @return \Docstudio\Client\Model\AccountDTO
      */
     public function updateAccountDetails($body, $uuid)
     {
@@ -5909,16 +5909,16 @@ class AccountControllerApi
     /**
      * Operation updateAccountDetailsWithHttpInfo
      *
-     * @param  \Docstudio\ClientModel\AccountDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountDTO $body (required)
      * @param  string $uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\AccountDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\AccountDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAccountDetailsWithHttpInfo($body, $uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountDTO';
+        $returnType = '\Swagger\Client\Model\AccountDTO';
         $request = $this->updateAccountDetailsRequest($body, $uuid);
 
         try {
@@ -5970,7 +5970,7 @@ class AccountControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\AccountDTO',
+                        '\Swagger\Client\Model\AccountDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5985,7 +5985,7 @@ class AccountControllerApi
      *
      * 
      *
-     * @param  \Docstudio\ClientModel\AccountDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountDTO $body (required)
      * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -6006,7 +6006,7 @@ class AccountControllerApi
      *
      * 
      *
-     * @param  \Docstudio\ClientModel\AccountDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountDTO $body (required)
      * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -6014,7 +6014,7 @@ class AccountControllerApi
      */
     public function updateAccountDetailsAsyncWithHttpInfo($body, $uuid)
     {
-        $returnType = '\Docstudio\ClientModel\AccountDTO';
+        $returnType = '\Swagger\Client\Model\AccountDTO';
         $request = $this->updateAccountDetailsRequest($body, $uuid);
 
         return $this->client
@@ -6057,7 +6057,7 @@ class AccountControllerApi
     /**
      * Create request for operation 'updateAccountDetails'
      *
-     * @param  \Docstudio\ClientModel\AccountDTO $body (required)
+     * @param  \Docstudio\Client\Model\AccountDTO $body (required)
      * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -6171,10 +6171,10 @@ class AccountControllerApi
      *
      * Generate account users report
      *
-     * @param  \Docstudio\ClientModel\ReportUsersRequestDTO $body body (required)
+     * @param  \Docstudio\Client\Model\ReportUsersRequestDTO $body body (required)
      * @param  string $account_uuid UUID of Account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6188,10 +6188,10 @@ class AccountControllerApi
      *
      * Generate account users report
      *
-     * @param  \Docstudio\ClientModel\ReportUsersRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportUsersRequestDTO $body (required)
      * @param  string $account_uuid UUID of Account (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6242,7 +6242,7 @@ class AccountControllerApi
      *
      * Generate account users report
      *
-     * @param  \Docstudio\ClientModel\ReportUsersRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportUsersRequestDTO $body (required)
      * @param  string $account_uuid UUID of Account (required)
      *
      * @throws \InvalidArgumentException
@@ -6263,7 +6263,7 @@ class AccountControllerApi
      *
      * Generate account users report
      *
-     * @param  \Docstudio\ClientModel\ReportUsersRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportUsersRequestDTO $body (required)
      * @param  string $account_uuid UUID of Account (required)
      *
      * @throws \InvalidArgumentException
@@ -6300,7 +6300,7 @@ class AccountControllerApi
     /**
      * Create request for operation 'usersReport'
      *
-     * @param  \Docstudio\ClientModel\ReportUsersRequestDTO $body (required)
+     * @param  \Docstudio\Client\Model\ReportUsersRequestDTO $body (required)
      * @param  string $account_uuid UUID of Account (required)
      *
      * @throws \InvalidArgumentException

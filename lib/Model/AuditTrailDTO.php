@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * AuditTrailDTO Class Doc Comment
@@ -66,7 +66,7 @@ class AuditTrailDTO implements ModelInterface, ArrayAccess
 'ip' => 'string',
 'browser' => 'string',
 'os' => 'string',
-'geolocation' => '\Docstudio\ClientModel\GeolocationInfoDTO',
+'geolocation' => '\Swagger\Client\Model\GeolocationInfoDTO',
 'description' => 'string',
 'latitude' => 'float',
 'longitude' => 'float'    ];
@@ -575,7 +575,7 @@ self::OPERATION_DOC_STAMP,        ];
     /**
      * Gets geolocation
      *
-     * @return \Docstudio\ClientModel\GeolocationInfoDTO
+     * @return \Docstudio\Client\Model\GeolocationInfoDTO
      */
     public function getGeolocation()
     {
@@ -585,7 +585,7 @@ self::OPERATION_DOC_STAMP,        ];
     /**
      * Sets geolocation
      *
-     * @param \Docstudio\ClientModel\GeolocationInfoDTO $geolocation geolocation
+     * @param \Docstudio\Client\Model\GeolocationInfoDTO $geolocation geolocation
      *
      * @return $this
      */

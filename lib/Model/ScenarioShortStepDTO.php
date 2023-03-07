@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * ScenarioShortStepDTO Class Doc Comment
@@ -59,8 +59,8 @@ class ScenarioShortStepDTO implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
 'name' => 'string',
-'source' => '\Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO',
-'destination' => '\Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO',
+'source' => '\Swagger\Client\Model\ScenarioShortStepTemplateInfoDTO',
+'destination' => '\Swagger\Client\Model\ScenarioShortStepTemplateInfoDTO',
 'send_after_creation' => 'bool'    ];
 
     /**
@@ -278,7 +278,7 @@ class ScenarioShortStepDTO implements ModelInterface, ArrayAccess
     /**
      * Gets source
      *
-     * @return \Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO
+     * @return \Docstudio\Client\Model\ScenarioShortStepTemplateInfoDTO
      */
     public function getSource()
     {
@@ -288,7 +288,7 @@ class ScenarioShortStepDTO implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param \Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO $source source
+     * @param \Docstudio\Client\Model\ScenarioShortStepTemplateInfoDTO $source source
      *
      * @return $this
      */
@@ -302,7 +302,7 @@ class ScenarioShortStepDTO implements ModelInterface, ArrayAccess
     /**
      * Gets destination
      *
-     * @return \Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO
+     * @return \Docstudio\Client\Model\ScenarioShortStepTemplateInfoDTO
      */
     public function getDestination()
     {
@@ -312,7 +312,7 @@ class ScenarioShortStepDTO implements ModelInterface, ArrayAccess
     /**
      * Sets destination
      *
-     * @param \Docstudio\ClientModel\ScenarioShortStepTemplateInfoDTO $destination destination
+     * @param \Docstudio\Client\Model\ScenarioShortStepTemplateInfoDTO $destination destination
      *
      * @return $this
      */

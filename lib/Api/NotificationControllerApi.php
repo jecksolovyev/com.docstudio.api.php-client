@@ -92,7 +92,7 @@ class NotificationControllerApi
      * Get account related notification preferences
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return map[string,int[]]
      */
@@ -108,7 +108,7 @@ class NotificationControllerApi
      * Get account related notification preferences
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of map[string,int[]], HTTP status code, HTTP response headers (array of strings)
      */
@@ -340,7 +340,7 @@ class NotificationControllerApi
      *
      * @param  string $mailbox mailbox (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return map[string,int[]]
      */
@@ -357,7 +357,7 @@ class NotificationControllerApi
      *
      * @param  string $mailbox (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of map[string,int[]], HTTP status code, HTTP response headers (array of strings)
      */
@@ -597,9 +597,9 @@ class NotificationControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\PageDTOUserNotificationResponseDTO
+     * @return \Docstudio\Client\Model\PageDTOUserNotificationResponseDTO
      */
     public function getUnreadNotifications($offset = '0', $limit = '25')
     {
@@ -615,13 +615,13 @@ class NotificationControllerApi
      * @param  int $offset Offset records (optional, default to 0)
      * @param  int $limit Limit records, max is 1000 (optional, default to 25)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\PageDTOUserNotificationResponseDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\PageDTOUserNotificationResponseDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUnreadNotificationsWithHttpInfo($offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOUserNotificationResponseDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOUserNotificationResponseDTO';
         $request = $this->getUnreadNotificationsRequest($offset, $limit);
 
         try {
@@ -673,7 +673,7 @@ class NotificationControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\PageDTOUserNotificationResponseDTO',
+                        '\Swagger\Client\Model\PageDTOUserNotificationResponseDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -717,7 +717,7 @@ class NotificationControllerApi
      */
     public function getUnreadNotificationsAsyncWithHttpInfo($offset = '0', $limit = '25')
     {
-        $returnType = '\Docstudio\ClientModel\PageDTOUserNotificationResponseDTO';
+        $returnType = '\Swagger\Client\Model\PageDTOUserNotificationResponseDTO';
         $request = $this->getUnreadNotificationsRequest($offset, $limit);
 
         return $this->client
@@ -860,7 +860,7 @@ class NotificationControllerApi
      * Mark notifications as read
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -875,7 +875,7 @@ class NotificationControllerApi
      * Mark notifications as read
      *
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1069,9 +1069,9 @@ class NotificationControllerApi
      *
      * Mark notifications as read
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body body (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1085,9 +1085,9 @@ class NotificationControllerApi
      *
      * Mark notifications as read
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1138,7 +1138,7 @@ class NotificationControllerApi
      *
      * Mark notifications as read
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1158,7 +1158,7 @@ class NotificationControllerApi
      *
      * Mark notifications as read
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1194,7 +1194,7 @@ class NotificationControllerApi
     /**
      * Create request for operation 'markNotificationRead'
      *
-     * @param  \Docstudio\ClientModel\SingleUuidDTO[] $body (required)
+     * @param  \Docstudio\Client\Model\SingleUuidDTO[] $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1295,7 +1295,7 @@ class NotificationControllerApi
      *
      * @param  map[string,int[]] $body body (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1311,7 +1311,7 @@ class NotificationControllerApi
      *
      * @param  map[string,int[]] $body (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1520,7 +1520,7 @@ class NotificationControllerApi
      * @param  map[string,int[]] $body body (required)
      * @param  string $mailbox mailbox (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1537,7 +1537,7 @@ class NotificationControllerApi
      * @param  map[string,int[]] $body (required)
      * @param  string $mailbox (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

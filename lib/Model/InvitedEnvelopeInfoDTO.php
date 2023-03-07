@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * InvitedEnvelopeInfoDTO Class Doc Comment
@@ -60,11 +60,11 @@ class InvitedEnvelopeInfoDTO implements ModelInterface, ArrayAccess
 'subject' => 'string',
 'expire_after' => '\DateTime',
 'created_at' => '\DateTime',
-'sender' => '\Docstudio\ClientModel\EnvelopeSenderDTO',
+'sender' => '\Swagger\Client\Model\EnvelopeSenderDTO',
 'template_name' => 'string',
 'total' => 'int',
 'completed' => 'int',
-'flow' => '\Docstudio\ClientModel\EnvelopeFlowInfoDTO[]'    ];
+'flow' => '\Swagger\Client\Model\EnvelopeFlowInfoDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -343,7 +343,7 @@ class InvitedEnvelopeInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets sender
      *
-     * @return \Docstudio\ClientModel\EnvelopeSenderDTO
+     * @return \Docstudio\Client\Model\EnvelopeSenderDTO
      */
     public function getSender()
     {
@@ -353,7 +353,7 @@ class InvitedEnvelopeInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets sender
      *
-     * @param \Docstudio\ClientModel\EnvelopeSenderDTO $sender sender
+     * @param \Docstudio\Client\Model\EnvelopeSenderDTO $sender sender
      *
      * @return $this
      */
@@ -439,7 +439,7 @@ class InvitedEnvelopeInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets flow
      *
-     * @return \Docstudio\ClientModel\EnvelopeFlowInfoDTO[]
+     * @return \Docstudio\Client\Model\EnvelopeFlowInfoDTO[]
      */
     public function getFlow()
     {
@@ -449,7 +449,7 @@ class InvitedEnvelopeInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets flow
      *
-     * @param \Docstudio\ClientModel\EnvelopeFlowInfoDTO[] $flow Detailed information about every role
+     * @param \Docstudio\Client\Model\EnvelopeFlowInfoDTO[] $flow Detailed information about every role
      *
      * @return $this
      */

@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * AccountMailboxInfoDTO Class Doc Comment
@@ -60,7 +60,7 @@ class AccountMailboxInfoDTO implements ModelInterface, ArrayAccess
 'name' => 'string',
 'hide_name_for_accounts' => 'bool',
 'users_count' => 'int',
-'aliases' => '\Docstudio\ClientModel\AliasNameDTO[]',
+'aliases' => '\Swagger\Client\Model\AliasNameDTO[]',
 'system' => 'bool'    ];
 
     /**
@@ -331,7 +331,7 @@ class AccountMailboxInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Gets aliases
      *
-     * @return \Docstudio\ClientModel\AliasNameDTO[]
+     * @return \Docstudio\Client\Model\AliasNameDTO[]
      */
     public function getAliases()
     {
@@ -341,7 +341,7 @@ class AccountMailboxInfoDTO implements ModelInterface, ArrayAccess
     /**
      * Sets aliases
      *
-     * @param \Docstudio\ClientModel\AliasNameDTO[] $aliases Mailbox aliases
+     * @param \Docstudio\Client\Model\AliasNameDTO[] $aliases Mailbox aliases
      *
      * @return $this
      */

@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopeApprovalHistoryDTO Class Doc Comment
@@ -60,7 +60,7 @@ class EnvelopeApprovalHistoryDTO implements ModelInterface, ArrayAccess
 'urgent' => 'bool',
 'completed' => 'bool',
 'mailbox_uuid' => 'string',
-'approvers' => '\Docstudio\ClientModel\ApproverDetailsDTO[]'    ];
+'approvers' => '\Swagger\Client\Model\ApproverDetailsDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -319,7 +319,7 @@ class EnvelopeApprovalHistoryDTO implements ModelInterface, ArrayAccess
     /**
      * Gets approvers
      *
-     * @return \Docstudio\ClientModel\ApproverDetailsDTO[]
+     * @return \Docstudio\Client\Model\ApproverDetailsDTO[]
      */
     public function getApprovers()
     {
@@ -329,7 +329,7 @@ class EnvelopeApprovalHistoryDTO implements ModelInterface, ArrayAccess
     /**
      * Sets approvers
      *
-     * @param \Docstudio\ClientModel\ApproverDetailsDTO[] $approvers approvers
+     * @param \Docstudio\Client\Model\ApproverDetailsDTO[] $approvers approvers
      *
      * @return $this
      */

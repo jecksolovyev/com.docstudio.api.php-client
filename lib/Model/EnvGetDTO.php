@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvGetDTO Class Doc Comment
@@ -67,7 +67,7 @@ class EnvGetDTO implements ModelInterface, ArrayAccess
 'chained_by_me' => 'bool',
 'approval_flow_uuid' => 'string',
 'status' => 'string',
-'sender' => '\Docstudio\ClientModel\EnvelopeSenderDTO'    ];
+'sender' => '\Swagger\Client\Model\EnvelopeSenderDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -540,7 +540,7 @@ self::STATUS_ON_APPROVAL,        ];
     /**
      * Gets sender
      *
-     * @return \Docstudio\ClientModel\EnvelopeSenderDTO
+     * @return \Docstudio\Client\Model\EnvelopeSenderDTO
      */
     public function getSender()
     {
@@ -550,7 +550,7 @@ self::STATUS_ON_APPROVAL,        ];
     /**
      * Sets sender
      *
-     * @param \Docstudio\ClientModel\EnvelopeSenderDTO $sender sender
+     * @param \Docstudio\Client\Model\EnvelopeSenderDTO $sender sender
      *
      * @return $this
      */

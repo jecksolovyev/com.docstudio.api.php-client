@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopeApprovalRequestDTO Class Doc Comment
@@ -60,7 +60,7 @@ class EnvelopeApprovalRequestDTO implements ModelInterface, ArrayAccess
         'uuids' => 'string[]',
 'urgent' => 'bool',
 'flow_uuid' => 'string',
-'approvers' => '\Docstudio\ClientModel\EnvelopeApproverDTO[]'    ];
+'approvers' => '\Swagger\Client\Model\EnvelopeApproverDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -293,7 +293,7 @@ class EnvelopeApprovalRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Gets approvers
      *
-     * @return \Docstudio\ClientModel\EnvelopeApproverDTO[]
+     * @return \Docstudio\Client\Model\EnvelopeApproverDTO[]
      */
     public function getApprovers()
     {
@@ -303,7 +303,7 @@ class EnvelopeApprovalRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Sets approvers
      *
-     * @param \Docstudio\ClientModel\EnvelopeApproverDTO[] $approvers Set of approvers (Flow UUID must not be set)
+     * @param \Docstudio\Client\Model\EnvelopeApproverDTO[] $approvers Set of approvers (Flow UUID must not be set)
      *
      * @return $this
      */

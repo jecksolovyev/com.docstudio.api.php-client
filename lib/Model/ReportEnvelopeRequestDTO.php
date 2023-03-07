@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * ReportEnvelopeRequestDTO Class Doc Comment
@@ -58,7 +58,7 @@ class ReportEnvelopeRequestDTO implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'uuids' => 'string[]',
-'search_params' => '\Docstudio\ClientModel\SearchEnvelopesDTO'    ];
+'search_params' => '\Swagger\Client\Model\SearchEnvelopesDTO'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -230,7 +230,7 @@ class ReportEnvelopeRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Gets search_params
      *
-     * @return \Docstudio\ClientModel\SearchEnvelopesDTO
+     * @return \Docstudio\Client\Model\SearchEnvelopesDTO
      */
     public function getSearchParams()
     {
@@ -240,7 +240,7 @@ class ReportEnvelopeRequestDTO implements ModelInterface, ArrayAccess
     /**
      * Sets search_params
      *
-     * @param \Docstudio\ClientModel\SearchEnvelopesDTO $search_params search_params
+     * @param \Docstudio\Client\Model\SearchEnvelopesDTO $search_params search_params
      *
      * @return $this
      */

@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * EnvelopeScenarioDTO Class Doc Comment
@@ -60,7 +60,7 @@ class EnvelopeScenarioDTO implements ModelInterface, ArrayAccess
         'uuid' => 'string',
 'name' => 'string',
 'description' => 'string',
-'next_steps' => '\Docstudio\ClientModel\ScenarioShortStepDTO[]'    ];
+'next_steps' => '\Swagger\Client\Model\ScenarioShortStepDTO[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -290,7 +290,7 @@ class EnvelopeScenarioDTO implements ModelInterface, ArrayAccess
     /**
      * Gets next_steps
      *
-     * @return \Docstudio\ClientModel\ScenarioShortStepDTO[]
+     * @return \Docstudio\Client\Model\ScenarioShortStepDTO[]
      */
     public function getNextSteps()
     {
@@ -300,7 +300,7 @@ class EnvelopeScenarioDTO implements ModelInterface, ArrayAccess
     /**
      * Sets next_steps
      *
-     * @param \Docstudio\ClientModel\ScenarioShortStepDTO[] $next_steps Scenario next steps
+     * @param \Docstudio\Client\Model\ScenarioShortStepDTO[] $next_steps Scenario next steps
      *
      * @return $this
      */

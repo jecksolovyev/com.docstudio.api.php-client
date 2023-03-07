@@ -29,7 +29,7 @@
 namespace Docstudio\Client\Model;
 
 use \ArrayAccess;
-use \Docstudio\ClientObjectSerializer;
+use \Docstudio\Client\ObjectSerializer;
 
 /**
  * CreateEnvelopeCallbackDTO Class Doc Comment
@@ -57,7 +57,7 @@ class CreateEnvelopeCallbackDTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'filter' => '\Docstudio\ClientModel\CallbackEnvelopeFilterDTO',
+        'filter' => '\Swagger\Client\Model\CallbackEnvelopeFilterDTO',
 'url' => 'string',
 'retries' => 'int',
 'timeout' => 'int',
@@ -248,7 +248,7 @@ class CreateEnvelopeCallbackDTO implements ModelInterface, ArrayAccess
     /**
      * Gets filter
      *
-     * @return \Docstudio\ClientModel\CallbackEnvelopeFilterDTO
+     * @return \Docstudio\Client\Model\CallbackEnvelopeFilterDTO
      */
     public function getFilter()
     {
@@ -258,7 +258,7 @@ class CreateEnvelopeCallbackDTO implements ModelInterface, ArrayAccess
     /**
      * Sets filter
      *
-     * @param \Docstudio\ClientModel\CallbackEnvelopeFilterDTO $filter filter
+     * @param \Docstudio\Client\Model\CallbackEnvelopeFilterDTO $filter filter
      *
      * @return $this
      */

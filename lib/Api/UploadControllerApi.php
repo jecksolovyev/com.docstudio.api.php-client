@@ -93,7 +93,7 @@ class UploadControllerApi
      *
      * @param  string $upload_uuid upload_uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -109,7 +109,7 @@ class UploadControllerApi
      *
      * @param  string $upload_uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -320,10 +320,10 @@ class UploadControllerApi
      *
      * Approve import process
      *
-     * @param  \Docstudio\ClientModel\ConfirmUploadDTO $body body (required)
+     * @param  \Docstudio\Client\Model\ConfirmUploadDTO $body body (required)
      * @param  string $upload_uuid upload_uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -337,10 +337,10 @@ class UploadControllerApi
      *
      * Approve import process
      *
-     * @param  \Docstudio\ClientModel\ConfirmUploadDTO $body (required)
+     * @param  \Docstudio\Client\Model\ConfirmUploadDTO $body (required)
      * @param  string $upload_uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -391,7 +391,7 @@ class UploadControllerApi
      *
      * Approve import process
      *
-     * @param  \Docstudio\ClientModel\ConfirmUploadDTO $body (required)
+     * @param  \Docstudio\Client\Model\ConfirmUploadDTO $body (required)
      * @param  string $upload_uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -412,7 +412,7 @@ class UploadControllerApi
      *
      * Approve import process
      *
-     * @param  \Docstudio\ClientModel\ConfirmUploadDTO $body (required)
+     * @param  \Docstudio\Client\Model\ConfirmUploadDTO $body (required)
      * @param  string $upload_uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -449,7 +449,7 @@ class UploadControllerApi
     /**
      * Create request for operation 'confirm'
      *
-     * @param  \Docstudio\ClientModel\ConfirmUploadDTO $body (required)
+     * @param  \Docstudio\Client\Model\ConfirmUploadDTO $body (required)
      * @param  string $upload_uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -565,9 +565,9 @@ class UploadControllerApi
      *
      * @param  string $upload_uuid upload_uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\ImportTaskDTO
+     * @return \Docstudio\Client\Model\ImportTaskDTO
      */
     public function getImportTask($upload_uuid)
     {
@@ -582,13 +582,13 @@ class UploadControllerApi
      *
      * @param  string $upload_uuid (required)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\ImportTaskDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\ImportTaskDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getImportTaskWithHttpInfo($upload_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\ImportTaskDTO';
+        $returnType = '\Swagger\Client\Model\ImportTaskDTO';
         $request = $this->getImportTaskRequest($upload_uuid);
 
         try {
@@ -640,7 +640,7 @@ class UploadControllerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\ImportTaskDTO',
+                        '\Swagger\Client\Model\ImportTaskDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -682,7 +682,7 @@ class UploadControllerApi
      */
     public function getImportTaskAsyncWithHttpInfo($upload_uuid)
     {
-        $returnType = '\Docstudio\ClientModel\ImportTaskDTO';
+        $returnType = '\Swagger\Client\Model\ImportTaskDTO';
         $request = $this->getImportTaskRequest($upload_uuid);
 
         return $this->client
@@ -833,9 +833,9 @@ class UploadControllerApi
      * @param  string $dictionary_uuid dictionary_uuid (required)
      * @param  string $file file (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Docstudio\ClientModel\SingleUuidDTO
+     * @return \Docstudio\Client\Model\SingleUuidDTO
      */
     public function uploadDictionary($mailbox, $dictionary_uuid, $file = null)
     {
@@ -852,13 +852,13 @@ class UploadControllerApi
      * @param  string $dictionary_uuid (required)
      * @param  string $file (optional)
      *
-     * @throws \Docstudio\ClientApiException on non-2xx response
+     * @throws \Docstudio\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Docstudio\ClientModel\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Docstudio\Client\Model\SingleUuidDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadDictionaryWithHttpInfo($mailbox, $dictionary_uuid, $file = null)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->uploadDictionaryRequest($mailbox, $dictionary_uuid, $file);
 
         try {
@@ -910,7 +910,7 @@ class UploadControllerApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Docstudio\ClientModel\SingleUuidDTO',
+                        '\Swagger\Client\Model\SingleUuidDTO',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -956,7 +956,7 @@ class UploadControllerApi
      */
     public function uploadDictionaryAsyncWithHttpInfo($mailbox, $dictionary_uuid, $file = null)
     {
-        $returnType = '\Docstudio\ClientModel\SingleUuidDTO';
+        $returnType = '\Swagger\Client\Model\SingleUuidDTO';
         $request = $this->uploadDictionaryRequest($mailbox, $dictionary_uuid, $file);
 
         return $this->client
