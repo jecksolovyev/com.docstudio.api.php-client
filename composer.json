@@ -7,6 +7,7 @@
             "name": "Developers Team"
         }
     ],
+    "license": "MIT",
     "require": {
         "php": ">=5.5",
         "ext-curl": "*",
