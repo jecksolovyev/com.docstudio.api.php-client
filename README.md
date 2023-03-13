@@ -14,7 +14,7 @@ PHP 5.5 and later
 To install the bindings via [Composer](http://getcomposer.org/), do the following:
 
 ```
-comsposer require composer require yuramozol/com.docstudio.api.php-client
+comsposer require yuramozol/com.docstudio.api.php-client
 ```
 
 ## Tests
@@ -62,7 +62,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
     $configuration = new Configuration();
     $configuration->setUserAgent('Demo integration')->setAccessToken($token);
     
-    $mailboxController = new Docstudio\Client\Api\MailboxControllerApi($httpClient, $configuration);
+    $mailboxController = new DocStudio\Client\Api\MailboxControllerApi($httpClient, $configuration);
     $mailboxUuid = $mailboxController->getAllForUser()[0]->getMailboxUuid();
     $envelopeController = new EnvelopeControllerApi($httpClient, $configuration);
     
