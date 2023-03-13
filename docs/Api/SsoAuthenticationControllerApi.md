@@ -1,4 +1,4 @@
-# Docstudio\Client\SsoAuthenticationControllerApi
+# DocStudio\Client\SsoAuthenticationControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**logout**](SsoAuthenticationControllerApi.md#logout) | **POST** /saml/logout | Logout
 
 # **idpByDomain**
-> \Docstudio\ClientModel\SsoEntityDTO idpByDomain($domain)
+> \DocStudio\Client\Model\SsoEntityDTO idpByDomain($domain)
 
 Returns EntityID by domain
 
@@ -19,7 +19,7 @@ Returns EntityID by domain
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\SsoAuthenticationControllerApi(
+$apiInstance = new DocStudio\Client\Api\SsoAuthenticationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\SsoEntityDTO**](../Model/SsoEntityDTO.md)
+[**\DocStudio\Client\Model\SsoEntityDTO**](../Model/SsoEntityDTO.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Login with SSO, redirect to UI after login
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\SsoAuthenticationControllerApi(
+$apiInstance = new DocStudio\Client\Api\SsoAuthenticationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **loginPostSso**
-> \Docstudio\ClientModel\LoginResponseDTO loginPostSso()
+> \DocStudio\Client\Model\LoginResponseDTO loginPostSso()
 
 Login with SSO, token is in response
 
@@ -112,7 +112,7 @@ Login with SSO, token is in response
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\SsoAuthenticationControllerApi(
+$apiInstance = new DocStudio\Client\Api\SsoAuthenticationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -132,7 +132,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Docstudio\ClientModel\LoginResponseDTO**](../Model/LoginResponseDTO.md)
+[**\DocStudio\Client\Model\LoginResponseDTO**](../Model/LoginResponseDTO.md)
 
 ### Authorization
 
@@ -155,7 +155,7 @@ Logout
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\SsoAuthenticationControllerApi(
+$apiInstance = new DocStudio\Client\Api\SsoAuthenticationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

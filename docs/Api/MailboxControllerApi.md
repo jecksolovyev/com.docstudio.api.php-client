@@ -1,4 +1,4 @@
-# Docstudio\Client\MailboxControllerApi
+# DocStudio\Client\MailboxControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 [**updateMailbox**](MailboxControllerApi.md#updatemailbox) | **PUT** /api/v1/mailbox/{mailboxUuid} | Update mailbox
 
 # **createMailbox**
-> \Docstudio\ClientModel\User2MailboxDTO createMailbox($body, $uuid, $code, $code_type)
+> \DocStudio\Client\Model\User2MailboxDTO createMailbox($body, $uuid, $code, $code_type)
 
 Create mailbox
 
@@ -28,17 +28,17 @@ Create mailbox
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\MailboxCreateDTO(); // \Docstudio\ClientModel\MailboxCreateDTO | 
+$body = new \DocStudio\Client\Model\MailboxCreateDTO(); // \DocStudio\Client\Model\MailboxCreateDTO | 
 $uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of account for which to create a mailbox
 $code = "code_example"; // string | Invitation code from email
 $code_type = "code_type_example"; // string | Type of code
@@ -56,14 +56,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\MailboxCreateDTO**](../Model/MailboxCreateDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\MailboxCreateDTO**](../Model/MailboxCreateDTO.md)|  |
  **uuid** | [**string**](../Model/.md)| UUID of account for which to create a mailbox |
  **code** | **string**| Invitation code from email | [optional]
  **code_type** | **string**| Type of code | [optional]
 
 ### Return type
 
-[**\Docstudio\ClientModel\User2MailboxDTO**](../Model/User2MailboxDTO.md)
+[**\DocStudio\Client\Model\User2MailboxDTO**](../Model/User2MailboxDTO.md)
 
 ### Authorization
 
@@ -86,11 +86,11 @@ Delete mailbox by UUID in the header.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -139,11 +139,11 @@ Delete mailbox users except requester
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -190,11 +190,11 @@ Retrieve mailbox account logo
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getActivityLog**
-> \Docstudio\ClientModel\PageDTOActivityLogRecordDTO getActivityLog($mailbox, $from, $to, $offset, $limit)
+> \DocStudio\Client\Model\PageDTOActivityLogRecordDTO getActivityLog($mailbox, $from, $to, $offset, $limit)
 
 Audit trail feed for mailbox
 
@@ -244,11 +244,11 @@ Records sorted by date in descending order
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\PageDTOActivityLogRecordDTO**](../Model/PageDTOActivityLogRecordDTO.md)
+[**\DocStudio\Client\Model\PageDTOActivityLogRecordDTO**](../Model/PageDTOActivityLogRecordDTO.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAllForUser**
-> \Docstudio\ClientModel\User2MailboxDTO[] getAllForUser()
+> \DocStudio\Client\Model\User2MailboxDTO[] getAllForUser()
 
 Retrieve user's mailboxes list
 
@@ -304,11 +304,11 @@ Retrieve user's mailboxes list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -329,7 +329,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Docstudio\ClientModel\User2MailboxDTO[]**](../Model/User2MailboxDTO.md)
+[**\DocStudio\Client\Model\User2MailboxDTO[]**](../Model/User2MailboxDTO.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMailboxesByAccount**
-> \Docstudio\ClientModel\MailboxNameUuidDTO[] getMailboxesByAccount($uuid)
+> \DocStudio\Client\Model\MailboxNameUuidDTO[] getMailboxesByAccount($uuid)
 
 Read list of mailboxes
 
@@ -352,11 +352,11 @@ Read list of mailboxes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\MailboxNameUuidDTO[]**](../Model/MailboxNameUuidDTO.md)
+[**\DocStudio\Client\Model\MailboxNameUuidDTO[]**](../Model/MailboxNameUuidDTO.md)
 
 ### Authorization
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMailboxesInfoMailbox**
-> map[string,\Docstudio\ClientModel\MailboxInfoDTO] getMailboxesInfoMailbox($body, $account_name, $account_itn)
+> map[string,\DocStudio\Client\Model\MailboxInfoDTO] getMailboxesInfoMailbox($body, $account_name, $account_itn)
 
 Retrieve mailboxes info
 
@@ -404,11 +404,11 @@ Retrieve mailboxes info
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -437,7 +437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**map[string,\Docstudio\ClientModel\MailboxInfoDTO]**](../Model/MailboxInfoDTO.md)
+[**map[string,\DocStudio\Client\Model\MailboxInfoDTO]**](../Model/MailboxInfoDTO.md)
 
 ### Authorization
 
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStat**
-> \Docstudio\ClientModel\StatDTO getStat($mailbox)
+> \DocStudio\Client\Model\StatDTO getStat($mailbox)
 
 Get number of unread envelopes in every scope
 
@@ -460,11 +460,11 @@ Get number of unread envelopes in every scope
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\StatDTO**](../Model/StatDTO.md)
+[**\DocStudio\Client\Model\StatDTO**](../Model/StatDTO.md)
 
 ### Authorization
 
@@ -503,7 +503,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsedTemplates**
-> \Docstudio\ClientModel\PageDTOUsedTemplateDTO getUsedTemplates($mailbox, $name, $offset, $limit)
+> \DocStudio\Client\Model\PageDTOUsedTemplateDTO getUsedTemplates($mailbox, $name, $offset, $limit)
 
 List of used templates
 
@@ -512,11 +512,11 @@ List of used templates
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -547,7 +547,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\PageDTOUsedTemplateDTO**](../Model/PageDTOUsedTemplateDTO.md)
+[**\DocStudio\Client\Model\PageDTOUsedTemplateDTO**](../Model/PageDTOUsedTemplateDTO.md)
 
 ### Authorization
 
@@ -561,7 +561,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchMailbox**
-> \Docstudio\ClientModel\AccountMailboxInfoDTO patchMailbox($body, $mailbox_uuid)
+> \DocStudio\Client\Model\AccountMailboxInfoDTO patchMailbox($body, $mailbox_uuid)
 
 Patch mailbox, return patched mailbox w/o users count
 
@@ -570,17 +570,17 @@ Patch mailbox, return patched mailbox w/o users count
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\MailboxPatchRequestDTO(); // \Docstudio\ClientModel\MailboxPatchRequestDTO | 
+$body = new \DocStudio\Client\Model\MailboxPatchRequestDTO(); // \DocStudio\Client\Model\MailboxPatchRequestDTO | 
 $mailbox_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of mailbox
 
 try {
@@ -596,12 +596,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\MailboxPatchRequestDTO**](../Model/MailboxPatchRequestDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\MailboxPatchRequestDTO**](../Model/MailboxPatchRequestDTO.md)|  |
  **mailbox_uuid** | [**string**](../Model/.md)| UUID of mailbox |
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountMailboxInfoDTO**](../Model/AccountMailboxInfoDTO.md)
+[**\DocStudio\Client\Model\AccountMailboxInfoDTO**](../Model/AccountMailboxInfoDTO.md)
 
 ### Authorization
 
@@ -615,7 +615,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchMailboxes**
-> \Docstudio\ClientModel\MailboxSearchResultDTO[] searchMailboxes($mailbox, $q)
+> \DocStudio\Client\Model\MailboxSearchResultDTO[] searchMailboxes($mailbox, $q)
 
 Search mailboxes by name, contact, alias, user
 
@@ -624,11 +624,11 @@ Search mailboxes by name, contact, alias, user
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -655,7 +655,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\MailboxSearchResultDTO[]**](../Model/MailboxSearchResultDTO.md)
+[**\DocStudio\Client\Model\MailboxSearchResultDTO[]**](../Model/MailboxSearchResultDTO.md)
 
 ### Authorization
 
@@ -669,7 +669,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateMailbox**
-> \Docstudio\ClientModel\AccountMailboxInfoDTO updateMailbox($body, $mailbox_uuid)
+> \DocStudio\Client\Model\AccountMailboxInfoDTO updateMailbox($body, $mailbox_uuid)
 
 Update mailbox
 
@@ -678,17 +678,17 @@ Update mailbox
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\MailboxUpdateRequestDTO(); // \Docstudio\ClientModel\MailboxUpdateRequestDTO | 
+$body = new \DocStudio\Client\Model\MailboxUpdateRequestDTO(); // \DocStudio\Client\Model\MailboxUpdateRequestDTO | 
 $mailbox_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of mailbox
 
 try {
@@ -704,12 +704,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\MailboxUpdateRequestDTO**](../Model/MailboxUpdateRequestDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\MailboxUpdateRequestDTO**](../Model/MailboxUpdateRequestDTO.md)|  |
  **mailbox_uuid** | [**string**](../Model/.md)| UUID of mailbox |
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountMailboxInfoDTO**](../Model/AccountMailboxInfoDTO.md)
+[**\DocStudio\Client\Model\AccountMailboxInfoDTO**](../Model/AccountMailboxInfoDTO.md)
 
 ### Authorization
 

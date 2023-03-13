@@ -1,4 +1,4 @@
-# Docstudio\Client\MiscControllerApi
+# DocStudio\Client\MiscControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**recalculateMailboxStat**](MiscControllerApi.md#recalculatemailboxstat) | **GET** /api/v1/recalculate-mailbox-stat | Recalculate all mailbox counters
 
 # **appSettings**
-> \Docstudio\ClientModel\SettingsDTO appSettings()
+> \DocStudio\Client\Model\SettingsDTO appSettings()
 
 
 
@@ -21,11 +21,11 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MiscControllerApi(
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -46,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Docstudio\ClientModel\SettingsDTO**](../Model/SettingsDTO.md)
+[**\DocStudio\Client\Model\SettingsDTO**](../Model/SettingsDTO.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **auditLog**
-> \Docstudio\ClientModel\PageDTOActivityLogRecordDTO auditLog($body, $offset, $limit)
+> \DocStudio\Client\Model\PageDTOActivityLogRecordDTO auditLog($body, $offset, $limit)
 
 Audit log
 
@@ -69,17 +69,17 @@ Audit log
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MiscControllerApi(
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\SearchActivityLogDTO(); // \Docstudio\ClientModel\SearchActivityLogDTO | 
+$body = new \DocStudio\Client\Model\SearchActivityLogDTO(); // \DocStudio\Client\Model\SearchActivityLogDTO | 
 $offset = 0; // int | Offset, how many records to skip
 $limit = 25; // int | Limit, how many records to retrieve
 
@@ -96,13 +96,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\SearchActivityLogDTO**](../Model/SearchActivityLogDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\SearchActivityLogDTO**](../Model/SearchActivityLogDTO.md)|  |
  **offset** | **int**| Offset, how many records to skip | [optional] [default to 0]
  **limit** | **int**| Limit, how many records to retrieve | [optional] [default to 25]
 
 ### Return type
 
-[**\Docstudio\ClientModel\PageDTOActivityLogRecordDTO**](../Model/PageDTOActivityLogRecordDTO.md)
+[**\DocStudio\Client\Model\PageDTOActivityLogRecordDTO**](../Model/PageDTOActivityLogRecordDTO.md)
 
 ### Authorization
 
@@ -125,17 +125,17 @@ Calculate excel formulas for documents
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MiscControllerApi(
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \Docstudio\ClientModel\DocFormulaRequestDTO()); // \Docstudio\ClientModel\DocFormulaRequestDTO[] | 
+$body = array(new \DocStudio\Client\Model\DocFormulaRequestDTO()); // \DocStudio\Client\Model\DocFormulaRequestDTO[] | 
 
 try {
     $result = $apiInstance->calculateFormula($body);
@@ -150,7 +150,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\DocFormulaRequestDTO[]**](../Model/DocFormulaRequestDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\DocFormulaRequestDTO[]**](../Model/DocFormulaRequestDTO.md)|  |
 
 ### Return type
 
@@ -177,17 +177,17 @@ Request audit report
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MiscControllerApi(
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\SearchActivityLogDTO(); // \Docstudio\ClientModel\SearchActivityLogDTO | 
+$body = new \DocStudio\Client\Model\SearchActivityLogDTO(); // \DocStudio\Client\Model\SearchActivityLogDTO | 
 
 try {
     $apiInstance->createAuditReport($body);
@@ -201,7 +201,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\SearchActivityLogDTO**](../Model/SearchActivityLogDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\SearchActivityLogDTO**](../Model/SearchActivityLogDTO.md)|  |
 
 ### Return type
 
@@ -219,7 +219,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **detectCountry**
-> \Docstudio\ClientModel\DetectedCountryDTO detectCountry()
+> \DocStudio\Client\Model\DetectedCountryDTO detectCountry()
 
 
 
@@ -228,11 +228,11 @@ void (empty response body)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MiscControllerApi(
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -253,7 +253,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Docstudio\ClientModel\DetectedCountryDTO**](../Model/DetectedCountryDTO.md)
+[**\DocStudio\Client\Model\DetectedCountryDTO**](../Model/DetectedCountryDTO.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **recalculateMailboxStat**
-> \Docstudio\ClientModel\StatDTO recalculateMailboxStat($mailbox)
+> \DocStudio\Client\Model\StatDTO recalculateMailboxStat($mailbox)
 
 Recalculate all mailbox counters
 
@@ -278,11 +278,11 @@ development use only
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\MiscControllerApi(
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\StatDTO**](../Model/StatDTO.md)
+[**\DocStudio\Client\Model\StatDTO**](../Model/StatDTO.md)
 
 ### Authorization
 

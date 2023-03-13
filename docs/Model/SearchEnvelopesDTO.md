@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **recipient** | **string[]** |  | [optional] 
 **sort_field** | **string** | Field for sorting (&#x27;createdAt&#x27; by default) | [optional] 
 **sort** | **string** | Sort order, asc or desc | [optional] 
-**search_fields** | [**\Docstudio\ClientModel\SearchFieldValueDTO[]**](SearchFieldValueDTO.md) |  | [optional] 
+**search_fields** | [**\DocStudio\Client\Model\SearchFieldValueDTO[]**](SearchFieldValueDTO.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -1,4 +1,4 @@
-# Docstudio\Client\AuthenticationControllerApi
+# DocStudio\Client\AuthenticationControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**userExistsByCode**](AuthenticationControllerApi.md#userexistsbycode) | **GET** /api/login/check-by-code/{code} | Check login ability with the code from email (for non-existing user)
 
 # **login**
-> \Docstudio\ClientModel\LoginResponseDTO login($body)
+> \DocStudio\Client\Model\LoginResponseDTO login($body)
 
 Login with email/password
 
@@ -19,12 +19,12 @@ Login with email/password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\AuthenticationControllerApi(
+$apiInstance = new DocStudio\Client\Api\AuthenticationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Docstudio\ClientModel\LoginDTO(); // \Docstudio\ClientModel\LoginDTO | 
+$body = new \DocStudio\Client\Model\LoginDTO(); // \DocStudio\Client\Model\LoginDTO | 
 
 try {
     $result = $apiInstance->login($body);
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\LoginDTO**](../Model/LoginDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\LoginDTO**](../Model/LoginDTO.md)|  |
 
 ### Return type
 
-[**\Docstudio\ClientModel\LoginResponseDTO**](../Model/LoginResponseDTO.md)
+[**\DocStudio\Client\Model\LoginResponseDTO**](../Model/LoginResponseDTO.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **loginByCode**
-> \Docstudio\ClientModel\LoginEnvelopeResponseDTO loginByCode($body)
+> \DocStudio\Client\Model\LoginEnvelopeResponseDTO loginByCode($body)
 
 Login with the code from email (for non-existing user)
 
@@ -66,12 +66,12 @@ Login with the code from email (for non-existing user)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\AuthenticationControllerApi(
+$apiInstance = new DocStudio\Client\Api\AuthenticationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Docstudio\ClientModel\UserCreateByCodeDTO(); // \Docstudio\ClientModel\UserCreateByCodeDTO | 
+$body = new \DocStudio\Client\Model\UserCreateByCodeDTO(); // \DocStudio\Client\Model\UserCreateByCodeDTO | 
 
 try {
     $result = $apiInstance->loginByCode($body);
@@ -86,11 +86,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\UserCreateByCodeDTO**](../Model/UserCreateByCodeDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\UserCreateByCodeDTO**](../Model/UserCreateByCodeDTO.md)|  |
 
 ### Return type
 
-[**\Docstudio\ClientModel\LoginEnvelopeResponseDTO**](../Model/LoginEnvelopeResponseDTO.md)
+[**\DocStudio\Client\Model\LoginEnvelopeResponseDTO**](../Model/LoginEnvelopeResponseDTO.md)
 
 ### Authorization
 
@@ -113,11 +113,11 @@ Logout
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AuthenticationControllerApi(
+$apiInstance = new DocStudio\Client\Api\AuthenticationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -151,7 +151,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userExistsByCode**
-> \Docstudio\ClientModel\LoginCheckResponseDTO userExistsByCode($the_invitation_code)
+> \DocStudio\Client\Model\LoginCheckResponseDTO userExistsByCode($the_invitation_code)
 
 Check login ability with the code from email (for non-existing user)
 
@@ -160,7 +160,7 @@ Check login ability with the code from email (for non-existing user)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\AuthenticationControllerApi(
+$apiInstance = new DocStudio\Client\Api\AuthenticationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\LoginCheckResponseDTO**](../Model/LoginCheckResponseDTO.md)
+[**\DocStudio\Client\Model\LoginCheckResponseDTO**](../Model/LoginCheckResponseDTO.md)
 
 ### Authorization
 

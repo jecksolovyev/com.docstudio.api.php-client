@@ -1,4 +1,4 @@
-# Docstudio\Client\ScenarioControllerApi
+# DocStudio\Client\ScenarioControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**updateScenario**](ScenarioControllerApi.md#updatescenario) | **PUT** /api/v1/scenario/{scenarioUuid} | Update scenario
 
 # **cloneScenario**
-> \Docstudio\ClientModel\ScenarioDTO cloneScenario($scenario_uuid, $mailbox)
+> \DocStudio\Client\Model\ScenarioDTO cloneScenario($scenario_uuid, $mailbox)
 
 Clone scenario
 
@@ -22,11 +22,11 @@ Clone scenario
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ScenarioControllerApi(
+$apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\ScenarioDTO**](../Model/ScenarioDTO.md)
+[**\DocStudio\Client\Model\ScenarioDTO**](../Model/ScenarioDTO.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createNewScenario**
-> \Docstudio\ClientModel\ScenarioDTO createNewScenario($body, $mailbox)
+> \DocStudio\Client\Model\ScenarioDTO createNewScenario($body, $mailbox)
 
 Create new scenario
 
@@ -76,17 +76,17 @@ Create new scenario
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ScenarioControllerApi(
+$apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\ScenarioDTO(); // \Docstudio\ClientModel\ScenarioDTO | 
+$body = new \DocStudio\Client\Model\ScenarioDTO(); // \DocStudio\Client\Model\ScenarioDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -102,12 +102,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\ScenarioDTO**](../Model/ScenarioDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\ScenarioDTO**](../Model/ScenarioDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
-[**\Docstudio\ClientModel\ScenarioDTO**](../Model/ScenarioDTO.md)
+[**\DocStudio\Client\Model\ScenarioDTO**](../Model/ScenarioDTO.md)
 
 ### Authorization
 
@@ -130,11 +130,11 @@ Delete scenario
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ScenarioControllerApi(
+$apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -174,7 +174,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getScenario**
-> \Docstudio\ClientModel\ScenarioDTO getScenario($scenario_uuid, $mailbox)
+> \DocStudio\Client\Model\ScenarioDTO getScenario($scenario_uuid, $mailbox)
 
 Get scenario
 
@@ -183,11 +183,11 @@ Get scenario
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ScenarioControllerApi(
+$apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\ScenarioDTO**](../Model/ScenarioDTO.md)
+[**\DocStudio\Client\Model\ScenarioDTO**](../Model/ScenarioDTO.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **runScenario**
-> \Docstudio\ClientModel\SingleUuidDTO runScenario($scenario_uuid, $mailbox)
+> \DocStudio\Client\Model\SingleUuidDTO runScenario($scenario_uuid, $mailbox)
 
 Run scenario
 
@@ -237,11 +237,11 @@ Run scenario
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ScenarioControllerApi(
+$apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchScenarios**
-> \Docstudio\ClientModel\PageDTOScenarioShortDTO searchScenarios($mailbox, $level, $keyword, $offset, $limit)
+> \DocStudio\Client\Model\PageDTOScenarioShortDTO searchScenarios($mailbox, $level, $keyword, $offset, $limit)
 
 Get paged scenario list
 
@@ -291,11 +291,11 @@ Get paged scenario list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ScenarioControllerApi(
+$apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\PageDTOScenarioShortDTO**](../Model/PageDTOScenarioShortDTO.md)
+[**\DocStudio\Client\Model\PageDTOScenarioShortDTO**](../Model/PageDTOScenarioShortDTO.md)
 
 ### Authorization
 
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateScenario**
-> \Docstudio\ClientModel\ScenarioDTO updateScenario($body, $mailbox, $scenario_uuid)
+> \DocStudio\Client\Model\ScenarioDTO updateScenario($body, $mailbox, $scenario_uuid)
 
 Update scenario
 
@@ -351,17 +351,17 @@ Update scenario
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ScenarioControllerApi(
+$apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\ScenarioDTO(); // \Docstudio\ClientModel\ScenarioDTO | 
+$body = new \DocStudio\Client\Model\ScenarioDTO(); // \DocStudio\Client\Model\ScenarioDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $scenario_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Scenario uuid
 
@@ -378,13 +378,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\ScenarioDTO**](../Model/ScenarioDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\ScenarioDTO**](../Model/ScenarioDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **scenario_uuid** | [**string**](../Model/.md)| Scenario uuid |
 
 ### Return type
 
-[**\Docstudio\ClientModel\ScenarioDTO**](../Model/ScenarioDTO.md)
+[**\DocStudio\Client\Model\ScenarioDTO**](../Model/ScenarioDTO.md)
 
 ### Authorization
 

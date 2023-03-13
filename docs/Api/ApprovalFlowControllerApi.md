@@ -1,4 +1,4 @@
-# Docstudio\Client\ApprovalFlowControllerApi
+# DocStudio\Client\ApprovalFlowControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**updateApprovalFlow**](ApprovalFlowControllerApi.md#updateapprovalflow) | **PUT** /api/v1/approvalFlow/{flowUuid} | Update approval flow
 
 # **createApprovalFlow**
-> \Docstudio\ClientModel\SingleUuidDTO createApprovalFlow($body, $mailbox)
+> \DocStudio\Client\Model\SingleUuidDTO createApprovalFlow($body, $mailbox)
 
 Create approval flow
 
@@ -20,17 +20,17 @@ Create approval flow
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ApprovalFlowControllerApi(
+$apiInstance = new DocStudio\Client\Api\ApprovalFlowControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\MailboxApprovalFlowDTO(); // \Docstudio\ClientModel\MailboxApprovalFlowDTO | 
+$body = new \DocStudio\Client\Model\MailboxApprovalFlowDTO(); // \DocStudio\Client\Model\MailboxApprovalFlowDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -46,12 +46,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\MailboxApprovalFlowDTO**](../Model/MailboxApprovalFlowDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\MailboxApprovalFlowDTO**](../Model/MailboxApprovalFlowDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
-[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -74,11 +74,11 @@ Delete approval flows
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ApprovalFlowControllerApi(
+$apiInstance = new DocStudio\Client\Api\ApprovalFlowControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieve**
-> \Docstudio\ClientModel\MailboxApprovalFlowGetDTO retrieve($flow_uuid, $mailbox)
+> \DocStudio\Client\Model\MailboxApprovalFlowGetDTO retrieve($flow_uuid, $mailbox)
 
 Retrieve approval flow
 
@@ -127,11 +127,11 @@ Retrieve approval flow
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ApprovalFlowControllerApi(
+$apiInstance = new DocStudio\Client\Api\ApprovalFlowControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\MailboxApprovalFlowGetDTO**](../Model/MailboxApprovalFlowGetDTO.md)
+[**\DocStudio\Client\Model\MailboxApprovalFlowGetDTO**](../Model/MailboxApprovalFlowGetDTO.md)
 
 ### Authorization
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **search**
-> \Docstudio\ClientModel\PageDTOMailboxApprovalFlowGetDTO search($mailbox, $keyword, $offset, $limit)
+> \DocStudio\Client\Model\PageDTOMailboxApprovalFlowGetDTO search($mailbox, $keyword, $offset, $limit)
 
 Retrieve approval flows
 
@@ -181,11 +181,11 @@ Retrieve approval flows
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ApprovalFlowControllerApi(
+$apiInstance = new DocStudio\Client\Api\ApprovalFlowControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\PageDTOMailboxApprovalFlowGetDTO**](../Model/PageDTOMailboxApprovalFlowGetDTO.md)
+[**\DocStudio\Client\Model\PageDTOMailboxApprovalFlowGetDTO**](../Model/PageDTOMailboxApprovalFlowGetDTO.md)
 
 ### Authorization
 
@@ -239,17 +239,17 @@ Update approval flow
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\ApprovalFlowControllerApi(
+$apiInstance = new DocStudio\Client\Api\ApprovalFlowControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\MailboxApprovalFlowDTO(); // \Docstudio\ClientModel\MailboxApprovalFlowDTO | 
+$body = new \DocStudio\Client\Model\MailboxApprovalFlowDTO(); // \DocStudio\Client\Model\MailboxApprovalFlowDTO | 
 $mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 $flow_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of the approval flow
 
@@ -265,7 +265,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\MailboxApprovalFlowDTO**](../Model/MailboxApprovalFlowDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\MailboxApprovalFlowDTO**](../Model/MailboxApprovalFlowDTO.md)|  |
  **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
  **flow_uuid** | [**string**](../Model/.md)| UUID of the approval flow |
 

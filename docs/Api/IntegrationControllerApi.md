@@ -1,4 +1,4 @@
-# Docstudio\Client\IntegrationControllerApi
+# DocStudio\Client\IntegrationControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -26,11 +26,11 @@ Convert incoming file to XML view
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -38,7 +38,7 @@ $apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
 );
 $filename = "filename_example"; // string | filename, for type detection
 $mailbox_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
-$body = new \Docstudio\ClientModel\IntegrationConvertbinaryBody(); // \Docstudio\ClientModel\IntegrationConvertbinaryBody | 
+$body = new \DocStudio\Client\Model\IntegrationConvertbinaryBody(); // \DocStudio\Client\Model\IntegrationConvertbinaryBody | 
 
 try {
     $result = $apiInstance->convertBinaryToXML($filename, $mailbox_uuid, $body);
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filename** | **string**| filename, for type detection |
  **mailbox_uuid** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **body** | [**\Docstudio\ClientModel\IntegrationConvertbinaryBody**](../Model/IntegrationConvertbinaryBody.md)|  | [optional]
+ **body** | [**\DocStudio\Client\Model\IntegrationConvertbinaryBody**](../Model/IntegrationConvertbinaryBody.md)|  | [optional]
 
 ### Return type
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createMailboxIntegrationRule**
-> \Docstudio\ClientModel\IntegrationRuleDTO createMailboxIntegrationRule($body, $mailbox_uuid)
+> \DocStudio\Client\Model\IntegrationRuleDTO createMailboxIntegrationRule($body, $mailbox_uuid)
 
 Create Mailbox integration rule
 
@@ -82,17 +82,17 @@ Create Mailbox integration rule
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\IntegrationRuleDTO(); // \Docstudio\ClientModel\IntegrationRuleDTO | 
+$body = new \DocStudio\Client\Model\IntegrationRuleDTO(); // \DocStudio\Client\Model\IntegrationRuleDTO | 
 $mailbox_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -108,12 +108,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\IntegrationRuleDTO**](../Model/IntegrationRuleDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\IntegrationRuleDTO**](../Model/IntegrationRuleDTO.md)|  |
  **mailbox_uuid** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
 
-[**\Docstudio\ClientModel\IntegrationRuleDTO**](../Model/IntegrationRuleDTO.md)
+[**\DocStudio\Client\Model\IntegrationRuleDTO**](../Model/IntegrationRuleDTO.md)
 
 ### Authorization
 
@@ -136,11 +136,11 @@ Delete Mailbox integration rule
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **execute**
-> \Docstudio\ClientModel\IntegrationRuleResponseDTO execute($body)
+> \DocStudio\Client\Model\IntegrationRuleResponseDTO execute($body)
 
 Execute conversion map and generate file name (if pattern rule defined)
 
@@ -187,17 +187,17 @@ Execute conversion map and generate file name (if pattern rule defined)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\IntegrationRuleRequestDTO(); // \Docstudio\ClientModel\IntegrationRuleRequestDTO | 
+$body = new \DocStudio\Client\Model\IntegrationRuleRequestDTO(); // \DocStudio\Client\Model\IntegrationRuleRequestDTO | 
 
 try {
     $result = $apiInstance->execute($body);
@@ -212,11 +212,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\IntegrationRuleRequestDTO**](../Model/IntegrationRuleRequestDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\IntegrationRuleRequestDTO**](../Model/IntegrationRuleRequestDTO.md)|  |
 
 ### Return type
 
-[**\Docstudio\ClientModel\IntegrationRuleResponseDTO**](../Model/IntegrationRuleResponseDTO.md)
+[**\DocStudio\Client\Model\IntegrationRuleResponseDTO**](../Model/IntegrationRuleResponseDTO.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **generate**
-> \Docstudio\ClientModel\DataMap generate($template_uuid, $mailbox_uuid, $version_uuid)
+> \DocStudio\Client\Model\DataMap generate($template_uuid, $mailbox_uuid, $version_uuid)
 
 Generate envelope XML by template
 
@@ -239,11 +239,11 @@ Generate envelope XML by template
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\DataMap**](../Model/DataMap.md)
+[**\DocStudio\Client\Model\DataMap**](../Model/DataMap.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMailboxIntegration**
-> \Docstudio\ClientModel\IntegrationDTO getMailboxIntegration($mailbox_uuid)
+> \DocStudio\Client\Model\IntegrationDTO getMailboxIntegration($mailbox_uuid)
 
 Get Mailbox integration
 
@@ -295,11 +295,11 @@ Get Mailbox integration
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\IntegrationDTO**](../Model/IntegrationDTO.md)
+[**\DocStudio\Client\Model\IntegrationDTO**](../Model/IntegrationDTO.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMailboxIntegrationRule**
-> \Docstudio\ClientModel\IntegrationRuleDTO getMailboxIntegrationRule($integration_rule_uuid)
+> \DocStudio\Client\Model\IntegrationRuleDTO getMailboxIntegrationRule($integration_rule_uuid)
 
 Get Mailbox integration rule
 
@@ -347,11 +347,11 @@ Get Mailbox integration rule
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\IntegrationRuleDTO**](../Model/IntegrationRuleDTO.md)
+[**\DocStudio\Client\Model\IntegrationRuleDTO**](../Model/IntegrationRuleDTO.md)
 
 ### Authorization
 
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getMailboxIntegrationRules**
-> \Docstudio\ClientModel\IntegrationRuleDTO[] getMailboxIntegrationRules($mailbox_uuid)
+> \DocStudio\Client\Model\IntegrationRuleDTO[] getMailboxIntegrationRules($mailbox_uuid)
 
 Get Mailbox integration rules
 
@@ -399,11 +399,11 @@ Get Mailbox integration rules
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -428,7 +428,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\IntegrationRuleDTO[]**](../Model/IntegrationRuleDTO.md)
+[**\DocStudio\Client\Model\IntegrationRuleDTO[]**](../Model/IntegrationRuleDTO.md)
 
 ### Authorization
 
@@ -451,11 +451,11 @@ Generate and save new password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -503,17 +503,17 @@ Create/update Mailbox integration
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\IntegrationDTO(); // \Docstudio\ClientModel\IntegrationDTO | 
+$body = new \DocStudio\Client\Model\IntegrationDTO(); // \DocStudio\Client\Model\IntegrationDTO | 
 $mailbox_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
@@ -528,7 +528,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\IntegrationDTO**](../Model/IntegrationDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\IntegrationDTO**](../Model/IntegrationDTO.md)|  |
  **mailbox_uuid** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
 
 ### Return type
@@ -547,7 +547,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateMailboxIntegrationRule**
-> \Docstudio\ClientModel\IntegrationRuleDTO updateMailboxIntegrationRule($body, $integration_rule_uuid)
+> \DocStudio\Client\Model\IntegrationRuleDTO updateMailboxIntegrationRule($body, $integration_rule_uuid)
 
 Update Mailbox integration rule
 
@@ -556,17 +556,17 @@ Update Mailbox integration rule
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\IntegrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\IntegrationRuleDTO(); // \Docstudio\ClientModel\IntegrationRuleDTO | 
+$body = new \DocStudio\Client\Model\IntegrationRuleDTO(); // \DocStudio\Client\Model\IntegrationRuleDTO | 
 $integration_rule_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of integration rule
 
 try {
@@ -582,12 +582,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\IntegrationRuleDTO**](../Model/IntegrationRuleDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\IntegrationRuleDTO**](../Model/IntegrationRuleDTO.md)|  |
  **integration_rule_uuid** | [**string**](../Model/.md)| UUID of integration rule |
 
 ### Return type
 
-[**\Docstudio\ClientModel\IntegrationRuleDTO**](../Model/IntegrationRuleDTO.md)
+[**\DocStudio\Client\Model\IntegrationRuleDTO**](../Model/IntegrationRuleDTO.md)
 
 ### Authorization
 

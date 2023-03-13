@@ -1,4 +1,4 @@
-# Docstudio\Client\RegistrationControllerApi
+# DocStudio\Client\RegistrationControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**validation**](RegistrationControllerApi.md#validation) | **GET** /registration/validate | Validate user code from email
 
 # **getUserPasswordPolicy**
-> \Docstudio\ClientModel\PasswordPolicy getUserPasswordPolicy($email)
+> \DocStudio\Client\Model\PasswordPolicy getUserPasswordPolicy($email)
 
 Get user password policy
 
@@ -22,7 +22,7 @@ Get user password policy
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\RegistrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\PasswordPolicy**](../Model/PasswordPolicy.md)
+[**\DocStudio\Client\Model\PasswordPolicy**](../Model/PasswordPolicy.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **register**
-> \Docstudio\ClientModel\LoginResponseDTO register($body, $code, $code_type)
+> \DocStudio\Client\Model\LoginResponseDTO register($body, $code, $code_type)
 
 Register a user with validation code
 
@@ -69,12 +69,12 @@ Register a user with validation code
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\RegistrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Docstudio\ClientModel\UserCreateDTO(); // \Docstudio\ClientModel\UserCreateDTO | 
+$body = new \DocStudio\Client\Model\UserCreateDTO(); // \DocStudio\Client\Model\UserCreateDTO | 
 $code = "code_example"; // string | Validation code
 $code_type = "code_type_example"; // string | Type of code
 
@@ -91,13 +91,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\UserCreateDTO**](../Model/UserCreateDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\UserCreateDTO**](../Model/UserCreateDTO.md)|  |
  **code** | **string**| Validation code |
  **code_type** | **string**| Type of code | [optional]
 
 ### Return type
 
-[**\Docstudio\ClientModel\LoginResponseDTO**](../Model/LoginResponseDTO.md)
+[**\DocStudio\Client\Model\LoginResponseDTO**](../Model/LoginResponseDTO.md)
 
 ### Authorization
 
@@ -120,12 +120,12 @@ Renew user's password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\RegistrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Docstudio\ClientModel\RenewPasswordDTO(); // \Docstudio\ClientModel\RenewPasswordDTO | 
+$body = new \DocStudio\Client\Model\RenewPasswordDTO(); // \DocStudio\Client\Model\RenewPasswordDTO | 
 
 try {
     $apiInstance->renewPassword($body);
@@ -139,7 +139,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\RenewPasswordDTO**](../Model/RenewPasswordDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\RenewPasswordDTO**](../Model/RenewPasswordDTO.md)|  |
 
 ### Return type
 
@@ -166,12 +166,12 @@ Send email validation code
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\RegistrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Docstudio\ClientModel\RequestValCodeDTO(); // \Docstudio\ClientModel\RequestValCodeDTO | 
+$body = new \DocStudio\Client\Model\RequestValCodeDTO(); // \DocStudio\Client\Model\RequestValCodeDTO | 
 
 try {
     $result = $apiInstance->requestResendValidationCode($body);
@@ -186,7 +186,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\RequestValCodeDTO**](../Model/RequestValCodeDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\RequestValCodeDTO**](../Model/RequestValCodeDTO.md)|  |
 
 ### Return type
 
@@ -213,12 +213,12 @@ Request password reset
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\RegistrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Docstudio\ClientModel\RequestValCodeDTO(); // \Docstudio\ClientModel\RequestValCodeDTO | 
+$body = new \DocStudio\Client\Model\RequestValCodeDTO(); // \DocStudio\Client\Model\RequestValCodeDTO | 
 
 try {
     $result = $apiInstance->requestResetPassword($body);
@@ -233,7 +233,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\RequestValCodeDTO**](../Model/RequestValCodeDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\RequestValCodeDTO**](../Model/RequestValCodeDTO.md)|  |
 
 ### Return type
 
@@ -260,12 +260,12 @@ Reset password
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\RegistrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Docstudio\ClientModel\ResetPasswordDTO(); // \Docstudio\ClientModel\ResetPasswordDTO | 
+$body = new \DocStudio\Client\Model\ResetPasswordDTO(); // \DocStudio\Client\Model\ResetPasswordDTO | 
 
 try {
     $apiInstance->resetPassword($body);
@@ -279,7 +279,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\ResetPasswordDTO**](../Model/ResetPasswordDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\ResetPasswordDTO**](../Model/ResetPasswordDTO.md)|  |
 
 ### Return type
 
@@ -306,7 +306,7 @@ Validate user code from email
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\RegistrationControllerApi(
+$apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

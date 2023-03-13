@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **name** | **string** | Scenario name | [optional] 
 **description** | **string** | Scenario description | [optional] 
 **access** | **string** | Scenario access level | [optional] 
-**steps** | [**\Docstudio\ClientModel\ScenarioShortStepDTO[]**](ScenarioShortStepDTO.md) | Scenario steps | [optional] 
+**steps** | [**\DocStudio\Client\Model\ScenarioShortStepDTO[]**](ScenarioShortStepDTO.md) | Scenario steps | [optional] 
 **editable** | **bool** | Scenario editable | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) | Scenario created date | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | Scenario update date | [optional] 

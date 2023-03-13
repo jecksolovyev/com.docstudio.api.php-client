@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **name** | **string** | Mailbox name | 
 **account_uuid** | **string** |  | [optional] 
 **account_name** | **string** |  | [optional] 
-**authorization** | [**\Docstudio\ClientModel\UserAuthorizationDTO**](UserAuthorizationDTO.md) |  | [optional] 
-**roles** | [**\Docstudio\ClientModel\RoleShortDTO[]**](RoleShortDTO.md) |  | [optional] 
+**authorization** | [**\DocStudio\Client\Model\UserAuthorizationDTO**](UserAuthorizationDTO.md) |  | [optional] 
+**roles** | [**\DocStudio\Client\Model\RoleShortDTO[]**](RoleShortDTO.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

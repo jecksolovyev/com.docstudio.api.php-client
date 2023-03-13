@@ -1,4 +1,4 @@
-# Docstudio\Client\AccountBillingControllerApi
+# DocStudio\Client\AccountBillingControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -23,18 +23,18 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
-$type = new \Docstudio\ClientModel\BillingEventType(); // \Docstudio\ClientModel\BillingEventType | 
+$type = new \DocStudio\Client\Model\BillingEventType(); // \DocStudio\Client\Model\BillingEventType | 
 $action = "action_example"; // string | 
 
 try {
@@ -50,7 +50,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_uuid** | [**string**](../Model/.md)|  |
- **type** | [**\Docstudio\ClientModel\BillingEventType**](../Model/.md)|  |
+ **type** | [**\DocStudio\Client\Model\BillingEventType**](../Model/.md)|  |
  **action** | **string**|  |
 
 ### Return type
@@ -80,11 +80,11 @@ Download invoice
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccount**
-> \Docstudio\ClientModel\AccountBillingInfoDTO getAccount($account_uuid)
+> \DocStudio\Client\Model\AccountBillingInfoDTO getAccount($account_uuid)
 
 
 
@@ -136,11 +136,11 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountBillingInfoDTO**](../Model/AccountBillingInfoDTO.md)
+[**\DocStudio\Client\Model\AccountBillingInfoDTO**](../Model/AccountBillingInfoDTO.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInvoiceStatus**
-> \Docstudio\ClientModel\BillingInvoiceStatusDTO getInvoiceStatus($account_uuid, $invoice_id)
+> \DocStudio\Client\Model\BillingInvoiceStatusDTO getInvoiceStatus($account_uuid, $invoice_id)
 
 
 
@@ -188,11 +188,11 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\BillingInvoiceStatusDTO**](../Model/BillingInvoiceStatusDTO.md)
+[**\DocStudio\Client\Model\BillingInvoiceStatusDTO**](../Model/BillingInvoiceStatusDTO.md)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInvoices**
-> \Docstudio\ClientModel\PageDTOObject getInvoices($account_uuid, $offset, $limit)
+> \DocStudio\Client\Model\PageDTOObject getInvoices($account_uuid, $offset, $limit)
 
 
 
@@ -244,11 +244,11 @@ Get invoice list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\PageDTOObject**](../Model/PageDTOObject.md)
+[**\DocStudio\Client\Model\PageDTOObject**](../Model/PageDTOObject.md)
 
 ### Authorization
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTariffs**
-> \Docstudio\ClientModel\DetailedTariffInfoDTO[] getTariffs($account_uuid)
+> \DocStudio\Client\Model\DetailedTariffInfoDTO[] getTariffs($account_uuid)
 
 
 
@@ -300,11 +300,11 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\DetailedTariffInfoDTO[]**](../Model/DetailedTariffInfoDTO.md)
+[**\DocStudio\Client\Model\DetailedTariffInfoDTO[]**](../Model/DetailedTariffInfoDTO.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **makeInvoicePayment**
-> \Docstudio\ClientModel\BillingRedirectDTO makeInvoicePayment($body, $account_uuid)
+> \DocStudio\Client\Model\BillingRedirectDTO makeInvoicePayment($body, $account_uuid)
 
 
 
@@ -352,17 +352,17 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\BillingPaymentDTO(); // \Docstudio\ClientModel\BillingPaymentDTO | 
+$body = new \DocStudio\Client\Model\BillingPaymentDTO(); // \DocStudio\Client\Model\BillingPaymentDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 
 try {
@@ -378,12 +378,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\BillingPaymentDTO**](../Model/BillingPaymentDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\BillingPaymentDTO**](../Model/BillingPaymentDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)|  |
 
 ### Return type
 
-[**\Docstudio\ClientModel\BillingRedirectDTO**](../Model/BillingRedirectDTO.md)
+[**\DocStudio\Client\Model\BillingRedirectDTO**](../Model/BillingRedirectDTO.md)
 
 ### Authorization
 
@@ -406,17 +406,17 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountBillingControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\ReplaceAccountTariffDTO(); // \Docstudio\ClientModel\ReplaceAccountTariffDTO | 
+$body = new \DocStudio\Client\Model\ReplaceAccountTariffDTO(); // \DocStudio\Client\Model\ReplaceAccountTariffDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 
 try {
@@ -431,7 +431,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\ReplaceAccountTariffDTO**](../Model/ReplaceAccountTariffDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\ReplaceAccountTariffDTO**](../Model/ReplaceAccountTariffDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)|  |
 
 ### Return type

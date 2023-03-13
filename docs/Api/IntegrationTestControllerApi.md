@@ -1,4 +1,4 @@
-# Docstudio\Client\IntegrationTestControllerApi
+# DocStudio\Client\IntegrationTestControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Docstudio\Client\Api\IntegrationTestControllerApi(
+$apiInstance = new DocStudio\Client\Api\IntegrationTestControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

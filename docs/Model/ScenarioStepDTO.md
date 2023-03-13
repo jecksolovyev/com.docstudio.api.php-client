@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Scenario step id | 
 **name** | **string** | Scenario step name | 
-**source** | [**\Docstudio\ClientModel\ScenarioStepTemplateInfoDTO**](ScenarioStepTemplateInfoDTO.md) |  | [optional] 
-**destination** | [**\Docstudio\ClientModel\ScenarioStepTemplateInfoDTO**](ScenarioStepTemplateInfoDTO.md) |  | 
+**source** | [**\DocStudio\Client\Model\ScenarioStepTemplateInfoDTO**](ScenarioStepTemplateInfoDTO.md) |  | [optional] 
+**destination** | [**\DocStudio\Client\Model\ScenarioStepTemplateInfoDTO**](ScenarioStepTemplateInfoDTO.md) |  | 
 **xslt** | **string** | Scenario step XSLT map | 
 **condition** | **string** | Scenario condition XSLT map | [optional] 
 **send_after_creation** | **bool** | Send envelope right after creation | [optional] 

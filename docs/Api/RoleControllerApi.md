@@ -1,4 +1,4 @@
-# Docstudio\Client\RoleControllerApi
+# DocStudio\Client\RoleControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**updateRole**](RoleControllerApi.md#updaterole) | **PUT** /api/v1/permission/role/{uuid} | Update role, allow to change name and permissions
 
 # **createRole**
-> \Docstudio\ClientModel\RoleGetDTO createRole($body)
+> \DocStudio\Client\Model\RoleGetDTO createRole($body)
 
 Create a role
 
@@ -21,17 +21,17 @@ Create a role
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\RoleControllerApi(
+$apiInstance = new DocStudio\Client\Api\RoleControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\RoleCreateDTO(); // \Docstudio\ClientModel\RoleCreateDTO | 
+$body = new \DocStudio\Client\Model\RoleCreateDTO(); // \DocStudio\Client\Model\RoleCreateDTO | 
 
 try {
     $result = $apiInstance->createRole($body);
@@ -46,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\RoleCreateDTO**](../Model/RoleCreateDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\RoleCreateDTO**](../Model/RoleCreateDTO.md)|  |
 
 ### Return type
 
-[**\Docstudio\ClientModel\RoleGetDTO**](../Model/RoleGetDTO.md)
+[**\DocStudio\Client\Model\RoleGetDTO**](../Model/RoleGetDTO.md)
 
 ### Authorization
 
@@ -73,11 +73,11 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\RoleControllerApi(
+$apiInstance = new DocStudio\Client\Api\RoleControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **read**
-> \Docstudio\ClientModel\RoleGetDTO read($uuid)
+> \DocStudio\Client\Model\RoleGetDTO read($uuid)
 
 Read role by UUID
 
@@ -124,11 +124,11 @@ Read role by UUID
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\RoleControllerApi(
+$apiInstance = new DocStudio\Client\Api\RoleControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\RoleGetDTO**](../Model/RoleGetDTO.md)
+[**\DocStudio\Client\Model\RoleGetDTO**](../Model/RoleGetDTO.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readAll**
-> \Docstudio\ClientModel\PageDTORoleGetDTO readAll($offset, $limit)
+> \DocStudio\Client\Model\PageDTORoleGetDTO readAll($offset, $limit)
 
 Read all system roles
 
@@ -176,11 +176,11 @@ Read all system roles
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\RoleControllerApi(
+$apiInstance = new DocStudio\Client\Api\RoleControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\PageDTORoleGetDTO**](../Model/PageDTORoleGetDTO.md)
+[**\DocStudio\Client\Model\PageDTORoleGetDTO**](../Model/PageDTORoleGetDTO.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readAllWithAccount**
-> \Docstudio\ClientModel\PageDTORoleGetDTO readAllWithAccount($uuid, $type, $name, $permissions, $offset, $limit)
+> \DocStudio\Client\Model\PageDTORoleGetDTO readAllWithAccount($uuid, $type, $name, $permissions, $offset, $limit)
 
 Read all roles for account including system predefined
 
@@ -230,11 +230,11 @@ Read all roles for account including system predefined
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\RoleControllerApi(
+$apiInstance = new DocStudio\Client\Api\RoleControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\PageDTORoleGetDTO**](../Model/PageDTORoleGetDTO.md)
+[**\DocStudio\Client\Model\PageDTORoleGetDTO**](../Model/PageDTORoleGetDTO.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateRole**
-> \Docstudio\ClientModel\RoleGetDTO updateRole($body, $uuid)
+> \DocStudio\Client\Model\RoleGetDTO updateRole($body, $uuid)
 
 Update role, allow to change name and permissions
 
@@ -292,17 +292,17 @@ Update role, allow to change name and permissions
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\RoleControllerApi(
+$apiInstance = new DocStudio\Client\Api\RoleControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\RoleCreateDTO(); // \Docstudio\ClientModel\RoleCreateDTO | 
+$body = new \DocStudio\Client\Model\RoleCreateDTO(); // \DocStudio\Client\Model\RoleCreateDTO | 
 $uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 
 try {
@@ -318,12 +318,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\RoleCreateDTO**](../Model/RoleCreateDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\RoleCreateDTO**](../Model/RoleCreateDTO.md)|  |
  **uuid** | [**string**](../Model/.md)|  |
 
 ### Return type
 
-[**\Docstudio\ClientModel\RoleGetDTO**](../Model/RoleGetDTO.md)
+[**\DocStudio\Client\Model\RoleGetDTO**](../Model/RoleGetDTO.md)
 
 ### Authorization
 

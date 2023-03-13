@@ -4,7 +4,7 @@
     "type": "library",
     "authors": [
         {
-            "name": "Developers  Team"
+            "name": "Developers Team"
         }
     ],
     "license": "MIT",
@@ -21,9 +21,9 @@
         "friendsofphp/php-cs-fixer": "~1.12"
     },
     "autoload": {
-        "psr-4": { "Docstudio\\Client\\" : "lib/" }
+        "psr-4": { "DocStudio\\Client\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Docstudio\\Client\\" : "test/" }
+        "psr-4": { "DocStudio\\Client\\" : "test/" }
     }
 }

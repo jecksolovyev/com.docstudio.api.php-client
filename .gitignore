@@ -1,4 +1,6 @@
 .idea
 /vendor/
 .gitignore
-README.md
+index.php
+sample.pdf
+sample2.pdf

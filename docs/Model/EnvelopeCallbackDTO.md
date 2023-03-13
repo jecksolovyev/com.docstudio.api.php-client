@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Envelope callback ID | [optional] 
-**filter** | [**\Docstudio\ClientModel\CallbackEnvelopeFilterDTO**](CallbackEnvelopeFilterDTO.md) |  | [optional] 
+**filter** | [**\DocStudio\Client\Model\CallbackEnvelopeFilterDTO**](CallbackEnvelopeFilterDTO.md) |  | [optional] 
 **url** | **string** | Callback url | [optional] 
 **retries** | **int** | Retries count, 0 &lt; X &lt;&#x3D; 10 | [optional] 
 **timeout** | **int** | Request timeout (ms), 100 &lt; X &lt; 60000 | [optional] 

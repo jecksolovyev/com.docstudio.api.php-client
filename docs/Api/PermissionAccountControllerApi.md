@@ -1,4 +1,4 @@
-# Docstudio\Client\PermissionAccountControllerApi
+# DocStudio\Client\PermissionAccountControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -22,11 +22,11 @@ Delete user from account totally
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionAccountControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionAccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -75,11 +75,11 @@ Delete permission for specific 'user-to-account' relation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionAccountControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionAccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -130,11 +130,11 @@ Delete role
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionAccountControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionAccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -176,7 +176,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserAccountPermissions**
-> \Docstudio\ClientModel\AccountPermissionsDTO getUserAccountPermissions($user_uuid, $account_uuid)
+> \DocStudio\Client\Model\AccountPermissionsDTO getUserAccountPermissions($user_uuid, $account_uuid)
 
 Read all user permissions
 
@@ -185,11 +185,11 @@ Read all user permissions
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionAccountControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionAccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountPermissionsDTO**](../Model/AccountPermissionsDTO.md)
+[**\DocStudio\Client\Model\AccountPermissionsDTO**](../Model/AccountPermissionsDTO.md)
 
 ### Authorization
 
@@ -239,17 +239,17 @@ Add exact permission for selected user-to-account relation. Add if absent or ign
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionAccountControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionAccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\PermissionsDTO(); // \Docstudio\ClientModel\PermissionsDTO | 
+$body = new \DocStudio\Client\Model\PermissionsDTO(); // \DocStudio\Client\Model\PermissionsDTO | 
 $user_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of User
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of account
 
@@ -265,7 +265,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\PermissionsDTO**](../Model/PermissionsDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\PermissionsDTO**](../Model/PermissionsDTO.md)|  |
  **user_uuid** | [**string**](../Model/.md)| UUID of User |
  **account_uuid** | [**string**](../Model/.md)| UUID of account |
 
@@ -294,17 +294,17 @@ Replace all permissions for selected user-to-account relation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionAccountControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionAccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\PermissionsDTO(); // \Docstudio\ClientModel\PermissionsDTO | 
+$body = new \DocStudio\Client\Model\PermissionsDTO(); // \DocStudio\Client\Model\PermissionsDTO | 
 $user_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of User
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of account
 
@@ -320,7 +320,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\PermissionsDTO**](../Model/PermissionsDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\PermissionsDTO**](../Model/PermissionsDTO.md)|  |
  **user_uuid** | [**string**](../Model/.md)| UUID of User |
  **account_uuid** | [**string**](../Model/.md)| UUID of account |
 
@@ -349,17 +349,17 @@ Write user permissions
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionAccountControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionAccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\BasePermissionsDTO(); // \Docstudio\ClientModel\BasePermissionsDTO | 
+$body = new \DocStudio\Client\Model\BasePermissionsDTO(); // \DocStudio\Client\Model\BasePermissionsDTO | 
 $user_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of User
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of account
 
@@ -375,7 +375,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\BasePermissionsDTO**](../Model/BasePermissionsDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\BasePermissionsDTO**](../Model/BasePermissionsDTO.md)|  |
  **user_uuid** | [**string**](../Model/.md)| UUID of User |
  **account_uuid** | [**string**](../Model/.md)| UUID of account |
 

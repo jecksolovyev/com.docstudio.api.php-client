@@ -1,4 +1,4 @@
-# Docstudio\Client\PermissionMailboxControllerApi
+# DocStudio\Client\PermissionMailboxControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -20,11 +20,11 @@ Delete all permissions and roles for selected user-to-mailbox relation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionMailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionMailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -73,11 +73,11 @@ Delete permission for specific user-to-mailbox relation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionMailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionMailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -128,11 +128,11 @@ Delete role
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionMailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionMailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -183,17 +183,17 @@ Add exact permissions/roles leaving existing as is. Ignore if already present.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionMailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionMailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\PermissionsDTO(); // \Docstudio\ClientModel\PermissionsDTO | 
+$body = new \DocStudio\Client\Model\PermissionsDTO(); // \DocStudio\Client\Model\PermissionsDTO | 
 $user_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of User
 $mailbox_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of mailbox
 
@@ -209,7 +209,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\PermissionsDTO**](../Model/PermissionsDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\PermissionsDTO**](../Model/PermissionsDTO.md)|  |
  **user_uuid** | [**string**](../Model/.md)| UUID of User |
  **mailbox_uuid** | [**string**](../Model/.md)| UUID of mailbox |
 
@@ -238,17 +238,17 @@ Replace all permissions for selected user-to-mailbox relation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\PermissionMailboxControllerApi(
+$apiInstance = new DocStudio\Client\Api\PermissionMailboxControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\PermissionsDTO(); // \Docstudio\ClientModel\PermissionsDTO | 
+$body = new \DocStudio\Client\Model\PermissionsDTO(); // \DocStudio\Client\Model\PermissionsDTO | 
 $user_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of User
 $mailbox_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of mailbox
 
@@ -264,7 +264,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\PermissionsDTO**](../Model/PermissionsDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\PermissionsDTO**](../Model/PermissionsDTO.md)|  |
  **user_uuid** | [**string**](../Model/.md)| UUID of User |
  **mailbox_uuid** | [**string**](../Model/.md)| UUID of mailbox |
 

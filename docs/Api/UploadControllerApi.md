@@ -1,4 +1,4 @@
-# Docstudio\Client\UploadControllerApi
+# DocStudio\Client\UploadControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -19,11 +19,11 @@ Cancel import process
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\UploadControllerApi(
+$apiInstance = new DocStudio\Client\Api\UploadControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -70,17 +70,17 @@ Approve import process
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\UploadControllerApi(
+$apiInstance = new DocStudio\Client\Api\UploadControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\ConfirmUploadDTO(); // \Docstudio\ClientModel\ConfirmUploadDTO | 
+$body = new \DocStudio\Client\Model\ConfirmUploadDTO(); // \DocStudio\Client\Model\ConfirmUploadDTO | 
 $upload_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
 
 try {
@@ -95,7 +95,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\ConfirmUploadDTO**](../Model/ConfirmUploadDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\ConfirmUploadDTO**](../Model/ConfirmUploadDTO.md)|  |
  **upload_uuid** | [**string**](../Model/.md)|  |
 
 ### Return type
@@ -114,7 +114,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getImportTask**
-> \Docstudio\ClientModel\ImportTaskDTO getImportTask($upload_uuid)
+> \DocStudio\Client\Model\ImportTaskDTO getImportTask($upload_uuid)
 
 Get import processing task
 
@@ -123,11 +123,11 @@ Get import processing task
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\UploadControllerApi(
+$apiInstance = new DocStudio\Client\Api\UploadControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\ImportTaskDTO**](../Model/ImportTaskDTO.md)
+[**\DocStudio\Client\Model\ImportTaskDTO**](../Model/ImportTaskDTO.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uploadDictionary**
-> \Docstudio\ClientModel\SingleUuidDTO uploadDictionary($mailbox, $dictionary_uuid, $file)
+> \DocStudio\Client\Model\SingleUuidDTO uploadDictionary($mailbox, $dictionary_uuid, $file)
 
 Upload dictionary file for importing
 
@@ -175,11 +175,11 @@ Upload dictionary file for importing
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\UploadControllerApi(
+$apiInstance = new DocStudio\Client\Api\UploadControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 

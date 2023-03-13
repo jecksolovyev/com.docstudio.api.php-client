@@ -1,4 +1,4 @@
-# Docstudio\Client\AccountDomainControllerApi
+# DocStudio\Client\AccountDomainControllerApi
 
 All URIs are relative to *https://api.docstudio.com*
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 [**updateAccountSsoIdp**](AccountDomainControllerApi.md#updateaccountssoidp) | **PUT** /api/v1/account/{accountUuid}/idp/{idpUuid} | Update account SSO Identity Provider
 
 # **actionAccountDomain**
-> \Docstudio\ClientModel\AccountDomainDTO actionAccountDomain($account_uuid, $domain_uuid, $action, $body)
+> \DocStudio\Client\Model\AccountDomainDTO actionAccountDomain($account_uuid, $domain_uuid, $action, $body)
 
 Change account domain status
 
@@ -26,11 +26,11 @@ Change account domain status
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -39,7 +39,7 @@ $apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 $domain_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Domain UUID
 $action = "action_example"; // string | Action
-$body = new \Docstudio\ClientModel\ChangeDomainStatusDTO(); // \Docstudio\ClientModel\ChangeDomainStatusDTO | 
+$body = new \DocStudio\Client\Model\ChangeDomainStatusDTO(); // \DocStudio\Client\Model\ChangeDomainStatusDTO | 
 
 try {
     $result = $apiInstance->actionAccountDomain($account_uuid, $domain_uuid, $action, $body);
@@ -57,11 +57,11 @@ Name | Type | Description  | Notes
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
  **domain_uuid** | [**string**](../Model/.md)| Domain UUID |
  **action** | **string**| Action |
- **body** | [**\Docstudio\ClientModel\ChangeDomainStatusDTO**](../Model/ChangeDomainStatusDTO.md)|  | [optional]
+ **body** | [**\DocStudio\Client\Model\ChangeDomainStatusDTO**](../Model/ChangeDomainStatusDTO.md)|  | [optional]
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountDomainDTO**](../Model/AccountDomainDTO.md)
+[**\DocStudio\Client\Model\AccountDomainDTO**](../Model/AccountDomainDTO.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createAccountDomain**
-> \Docstudio\ClientModel\AccountDomainDTO createAccountDomain($body, $account_uuid)
+> \DocStudio\Client\Model\AccountDomainDTO createAccountDomain($body, $account_uuid)
 
 Create account domain
 
@@ -84,17 +84,17 @@ Create account domain
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\AccountDomainCreateDTO(); // \Docstudio\ClientModel\AccountDomainCreateDTO | 
+$body = new \DocStudio\Client\Model\AccountDomainCreateDTO(); // \DocStudio\Client\Model\AccountDomainCreateDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 
 try {
@@ -110,12 +110,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\AccountDomainCreateDTO**](../Model/AccountDomainCreateDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\AccountDomainCreateDTO**](../Model/AccountDomainCreateDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountDomainDTO**](../Model/AccountDomainDTO.md)
+[**\DocStudio\Client\Model\AccountDomainDTO**](../Model/AccountDomainDTO.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createAccountSsoIdp**
-> \Docstudio\ClientModel\AccountSsoIdProviderDTO createAccountSsoIdp($body, $account_uuid)
+> \DocStudio\Client\Model\AccountSsoIdProviderDTO createAccountSsoIdp($body, $account_uuid)
 
 Create account SSO Identity Provider
 
@@ -138,17 +138,17 @@ Create account SSO Identity Provider
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO(); // \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO | 
+$body = new \DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO(); // \DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 
 try {
@@ -164,12 +164,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO**](../Model/AccountSsoIdProviderUpdateDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO**](../Model/AccountSsoIdProviderUpdateDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountSsoIdProviderDTO**](../Model/AccountSsoIdProviderDTO.md)
+[**\DocStudio\Client\Model\AccountSsoIdProviderDTO**](../Model/AccountSsoIdProviderDTO.md)
 
 ### Authorization
 
@@ -192,11 +192,11 @@ Delete account domain
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -245,11 +245,11 @@ Delete account SSO IdP
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -289,7 +289,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccountDomain**
-> \Docstudio\ClientModel\AccountDomainDTO getAccountDomain($account_uuid, $domain_uuid)
+> \DocStudio\Client\Model\AccountDomainDTO getAccountDomain($account_uuid, $domain_uuid)
 
 Get account domain
 
@@ -298,11 +298,11 @@ Get account domain
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountDomainDTO**](../Model/AccountDomainDTO.md)
+[**\DocStudio\Client\Model\AccountDomainDTO**](../Model/AccountDomainDTO.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccountDomains**
-> \Docstudio\ClientModel\PageDTOAccountDomainDTO getAccountDomains($account_uuid, $offset, $limit, $keyword, $status)
+> \DocStudio\Client\Model\PageDTOAccountDomainDTO getAccountDomains($account_uuid, $offset, $limit, $keyword, $status)
 
 Get paged account domains list
 
@@ -352,11 +352,11 @@ Get paged account domains list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\PageDTOAccountDomainDTO**](../Model/PageDTOAccountDomainDTO.md)
+[**\DocStudio\Client\Model\PageDTOAccountDomainDTO**](../Model/PageDTOAccountDomainDTO.md)
 
 ### Authorization
 
@@ -403,7 +403,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccountIdp**
-> \Docstudio\ClientModel\AccountSsoIdProviderDTO getAccountIdp($account_uuid, $idp_uuid)
+> \DocStudio\Client\Model\AccountSsoIdProviderDTO getAccountIdp($account_uuid, $idp_uuid)
 
 Get account SSO IdP
 
@@ -412,11 +412,11 @@ Get account SSO IdP
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -443,7 +443,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountSsoIdProviderDTO**](../Model/AccountSsoIdProviderDTO.md)
+[**\DocStudio\Client\Model\AccountSsoIdProviderDTO**](../Model/AccountSsoIdProviderDTO.md)
 
 ### Authorization
 
@@ -457,7 +457,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAllAccountIdps**
-> \Docstudio\ClientModel\AccountSsoIdProviderShortDTO[] getAllAccountIdps($account_uuid)
+> \DocStudio\Client\Model\AccountSsoIdProviderShortDTO[] getAllAccountIdps($account_uuid)
 
 Get all account SSO IdPs
 
@@ -466,11 +466,11 @@ Get all account SSO IdPs
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountSsoIdProviderShortDTO[]**](../Model/AccountSsoIdProviderShortDTO.md)
+[**\DocStudio\Client\Model\AccountSsoIdProviderShortDTO[]**](../Model/AccountSsoIdProviderShortDTO.md)
 
 ### Authorization
 
@@ -509,7 +509,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAccountDomain**
-> \Docstudio\ClientModel\AccountDomainDTO updateAccountDomain($body, $account_uuid, $domain_uuid)
+> \DocStudio\Client\Model\AccountDomainDTO updateAccountDomain($body, $account_uuid, $domain_uuid)
 
 Update account domain
 
@@ -518,17 +518,17 @@ Update account domain
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\AccountDomainUpdateDTO(); // \Docstudio\ClientModel\AccountDomainUpdateDTO | 
+$body = new \DocStudio\Client\Model\AccountDomainUpdateDTO(); // \DocStudio\Client\Model\AccountDomainUpdateDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 $domain_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Domain UUID
 
@@ -545,13 +545,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\AccountDomainUpdateDTO**](../Model/AccountDomainUpdateDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\AccountDomainUpdateDTO**](../Model/AccountDomainUpdateDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
  **domain_uuid** | [**string**](../Model/.md)| Domain UUID |
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountDomainDTO**](../Model/AccountDomainDTO.md)
+[**\DocStudio\Client\Model\AccountDomainDTO**](../Model/AccountDomainDTO.md)
 
 ### Authorization
 
@@ -565,7 +565,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAccountSsoIdp**
-> \Docstudio\ClientModel\AccountSsoIdProviderDTO updateAccountSsoIdp($body, $account_uuid, $idp_uuid)
+> \DocStudio\Client\Model\AccountSsoIdProviderDTO updateAccountSsoIdp($body, $account_uuid, $idp_uuid)
 
 Update account SSO Identity Provider
 
@@ -574,17 +574,17 @@ Update account SSO Identity Provider
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: Authorization
-    $config = Docstudio\Client\Configuration::getDefaultConfiguration()
+    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Docstudio\Client\Api\AccountDomainControllerApi(
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO(); // \Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO | 
+$body = new \DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO(); // \DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO | 
 $account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
 $idp_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | IdP UUID
 
@@ -601,13 +601,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Docstudio\ClientModel\AccountSsoIdProviderUpdateDTO**](../Model/AccountSsoIdProviderUpdateDTO.md)|  |
+ **body** | [**\DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO**](../Model/AccountSsoIdProviderUpdateDTO.md)|  |
  **account_uuid** | [**string**](../Model/.md)| Account UUID |
  **idp_uuid** | [**string**](../Model/.md)| IdP UUID |
 
 ### Return type
 
-[**\Docstudio\ClientModel\AccountSsoIdProviderDTO**](../Model/AccountSsoIdProviderDTO.md)
+[**\DocStudio\Client\Model\AccountSsoIdProviderDTO**](../Model/AccountSsoIdProviderDTO.md)
 
 ### Authorization
 
