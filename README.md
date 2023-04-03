@@ -14,7 +14,7 @@ PHP 5.5 and later
 To install the bindings via [Composer](http://getcomposer.org/), do the following:
 
 ```
-comsposer require yuramozol/com.docstudio.api.php-client
+composer require yuramozol/com.docstudio.api.php-client
 ```
 
 ## Tests
