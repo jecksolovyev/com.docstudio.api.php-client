@@ -1,12 +1,12 @@
-# FilterSettingsDTO
+# # FilterSettingsDTO
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** |  | [optional] 
-**data** | **string** |  | [optional] 
-**uuid** | **string** |  | [optional] 
-**created_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**name** | **string** |  | [optional]
+**data** | **string** |  | [optional]
+**uuid** | **string** |  | [optional]
+**created_at** | **\DateTime** |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,58 +1,59 @@
 # DocStudio\Client\UserControllerApi
 
-All URIs are relative to *https://api.docstudio.com*
+All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**acceptInvite**](UserControllerApi.md#acceptinvite) | **POST** /api/v1/user/invite/accept/{inviteCode} | Accept invite
-[**changePassword**](UserControllerApi.md#changepassword) | **PUT** /api/v1/user/password | Update user&#x27;s password
-[**changeSignature**](UserControllerApi.md#changesignature) | **PUT** /api/v1/user/signature | Update user&#x27;s eink signature in base64 format
-[**createInvitation**](UserControllerApi.md#createinvitation) | **POST** /api/v1/user/invite | Create invitation to join account or mailbox with defined permissions.
-[**declineInvite**](UserControllerApi.md#declineinvite) | **DELETE** /api/v1/user/invite/decline/{inviteCode} | Decline invite
-[**deleteUser**](UserControllerApi.md#deleteuser) | **DELETE** /api/v1/user | Delete user himself
-[**findUser**](UserControllerApi.md#finduser) | **GET** /api/v1/user/search | Find user
-[**getAvatar**](UserControllerApi.md#getavatar) | **GET** /api/v1/user/avatar/{userUuid} | Retrieve user avatar
-[**getInvites**](UserControllerApi.md#getinvites) | **GET** /api/v1/user/invites | Get paged invites list
-[**getMailboxesInfo**](UserControllerApi.md#getmailboxesinfo) | **POST** /api/v1/user/info | Retrieve users info
-[**getProfile**](UserControllerApi.md#getprofile) | **GET** /api/v1/user/profile | Retrieve user profile
-[**updateInvitation**](UserControllerApi.md#updateinvitation) | **PUT** /api/v1/user/invite/{uuid} | Update invitation by userUuid.
-[**updateProfile**](UserControllerApi.md#updateprofile) | **PUT** /api/v1/user/profile | Update user&#x27;s profile
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**acceptInvite()**](UserControllerApi.md#acceptInvite) | **POST** /api/v1/user/invite/accept/{inviteCode} | Accept invite |
+| [**changePassword()**](UserControllerApi.md#changePassword) | **PUT** /api/v1/user/password | Update user&#39;s password |
+| [**changeSignature()**](UserControllerApi.md#changeSignature) | **PUT** /api/v1/user/signature | Update user&#39;s eink signature in base64 format |
+| [**createInvitation()**](UserControllerApi.md#createInvitation) | **POST** /api/v1/user/invite | Create invitation to join account or mailbox with defined permissions. |
+| [**declineInvite()**](UserControllerApi.md#declineInvite) | **DELETE** /api/v1/user/invite/decline/{inviteCode} | Decline invite |
+| [**deleteUser()**](UserControllerApi.md#deleteUser) | **DELETE** /api/v1/user | Delete user himself |
+| [**findUser()**](UserControllerApi.md#findUser) | **GET** /api/v1/user/search | Find user |
+| [**getAvatar()**](UserControllerApi.md#getAvatar) | **GET** /api/v1/user/avatar/{userUuid} | Retrieve user avatar |
+| [**getInvites()**](UserControllerApi.md#getInvites) | **GET** /api/v1/user/invites | Get paged invites list |
+| [**getMailboxesInfo()**](UserControllerApi.md#getMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info |
+| [**getProfile()**](UserControllerApi.md#getProfile) | **GET** /api/v1/user/profile | Retrieve user profile |
+| [**updateInvitation()**](UserControllerApi.md#updateInvitation) | **PUT** /api/v1/user/invite/{uuid} | Update invitation by userUuid. |
+| [**updateProfile()**](UserControllerApi.md#updateProfile) | **PUT** /api/v1/user/profile | Update user&#39;s profile |
 
-# **acceptInvite**
-> acceptInvite($invite_code)
+
+## `acceptInvite()`
+
+```php
+acceptInvite($invite_code)
+```
 
 Accept invite
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$invite_code = "invite_code_example"; // string | Invite code
+$invite_code = 'invite_code_example'; // string | Invite code
 
 try {
     $apiInstance->acceptInvite($invite_code);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->acceptInvite: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **invite_code** | **string**| Invite code |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **invite_code** | **string**| Invite code | |
 
 ### Return type
 
@@ -60,50 +61,52 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **changePassword**
-> changePassword($body)
+## `changePassword()`
+
+```php
+changePassword($update_password_dto)
+```
 
 Update user's password
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\UpdatePasswordDTO(); // \DocStudio\Client\Model\UpdatePasswordDTO | 
+$update_password_dto = new \DocStudio\Client\Model\UpdatePasswordDTO(); // \DocStudio\Client\Model\UpdatePasswordDTO
 
 try {
-    $apiInstance->changePassword($body);
+    $apiInstance->changePassword($update_password_dto);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->changePassword: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\UpdatePasswordDTO**](../Model/UpdatePasswordDTO.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **update_password_dto** | [**\DocStudio\Client\Model\UpdatePasswordDTO**](../Model/UpdatePasswordDTO.md)|  | |
 
 ### Return type
 
@@ -111,50 +114,52 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **changeSignature**
-> changeSignature($body)
+## `changeSignature()`
+
+```php
+changeSignature($body)
+```
 
 Update user's eink signature in base64 format
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = "body_example"; // string | 
+$body = 'body_example'; // string
 
 try {
     $apiInstance->changeSignature($body);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->changeSignature: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**string**](../Model/string.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | **string**|  | [optional] |
 
 ### Return type
 
@@ -162,51 +167,53 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createInvitation**
-> \DocStudio\Client\Model\SingleUuidDTO createInvitation($body)
+## `createInvitation()`
+
+```php
+createInvitation($invitation_post_dto): \DocStudio\Client\Model\SingleUuidDTO
+```
 
 Create invitation to join account or mailbox with defined permissions.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\InvitationPostDTO(); // \DocStudio\Client\Model\InvitationPostDTO | 
+$invitation_post_dto = new \DocStudio\Client\Model\InvitationPostDTO(); // \DocStudio\Client\Model\InvitationPostDTO
 
 try {
-    $result = $apiInstance->createInvitation($body);
+    $result = $apiInstance->createInvitation($invitation_post_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->createInvitation: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\InvitationPostDTO**](../Model/InvitationPostDTO.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **invitation_post_dto** | [**\DocStudio\Client\Model\InvitationPostDTO**](../Model/InvitationPostDTO.md)|  | |
 
 ### Return type
 
@@ -214,50 +221,52 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **declineInvite**
-> declineInvite($invite_code)
+## `declineInvite()`
+
+```php
+declineInvite($invite_code)
+```
 
 Decline invite
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$invite_code = "invite_code_example"; // string | Invite code
+$invite_code = 'invite_code_example'; // string | Invite code
 
 try {
     $apiInstance->declineInvite($invite_code);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->declineInvite: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **invite_code** | **string**| Invite code |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **invite_code** | **string**| Invite code | |
 
 ### Return type
 
@@ -265,52 +274,54 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteUser**
-> deleteUser($check_message, $leave_existing)
+## `deleteUser()`
+
+```php
+deleteUser($check_message, $leave_existing)
+```
 
 Delete user himself
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$check_message = "check_message_example"; // string | Proof message
-$leave_existing = true; // bool | Leave existing account and mailbox. In this case mailbox and account should have other owners, otherwise error will be returned.
+$check_message = 'check_message_example'; // string | Proof message
+$leave_existing = True; // bool | Leave existing account and mailbox. In this case mailbox and account should have other owners, otherwise error will be returned.
 
 try {
     $apiInstance->deleteUser($check_message, $leave_existing);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->deleteUser: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **check_message** | **string**| Proof message |
- **leave_existing** | **bool**| Leave existing account and mailbox. In this case mailbox and account should have other owners, otherwise error will be returned. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **check_message** | **string**| Proof message | |
+| **leave_existing** | **bool**| Leave existing account and mailbox. In this case mailbox and account should have other owners, otherwise error will be returned. | |
 
 ### Return type
 
@@ -318,37 +329,40 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **findUser**
-> \DocStudio\Client\Model\UserDTO[] findUser($keyword, $exclude)
+## `findUser()`
+
+```php
+findUser($keyword, $exclude): \DocStudio\Client\Model\UserDTO[]
+```
 
 Find user
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$keyword = "keyword_example"; // string | 
-$exclude = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
+$keyword = 'keyword_example'; // string
+$exclude = 'exclude_example'; // string
 
 try {
     $result = $apiInstance->findUser($keyword, $exclude);
@@ -356,15 +370,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->findUser: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **keyword** | **string**|  |
- **exclude** | [**string**](../Model/.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **keyword** | **string**|  | |
+| **exclude** | **string**|  | [optional] |
 
 ### Return type
 
@@ -372,37 +385,40 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getAvatar**
-> string getAvatar($user_uuid, $initials)
+## `getAvatar()`
+
+```php
+getAvatar($user_uuid, $initials): \SplFileObject
+```
 
 Retrieve user avatar
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$user_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
-$initials = true; // bool | Get default avatar
+$user_uuid = 'user_uuid_example'; // string
+$initials = True; // bool | Get default avatar
 
 try {
     $result = $apiInstance->getAvatar($user_uuid, $initials);
@@ -410,50 +426,52 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->getAvatar: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user_uuid** | [**string**](../Model/.md)|  |
- **initials** | **bool**| Get default avatar | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **user_uuid** | **string**|  | |
+| **initials** | **bool**| Get default avatar | [optional] |
 
 ### Return type
 
-**string**
+**\SplFileObject**
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getInvites**
-> \DocStudio\Client\Model\PageDTOUserInvitationDTO getInvites($offset, $limit)
+## `getInvites()`
+
+```php
+getInvites($offset, $limit): \DocStudio\Client\Model\PageDTOUserInvitationDTO
+```
 
 Get paged invites list
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $offset = 0; // int | Offset records
 $limit = 25; // int | Limit records, max is 1000
@@ -464,15 +482,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->getInvites: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **offset** | **int**| Offset records | [optional] [default to 0]
- **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **offset** | **int**| Offset records | [optional] [default to 0] |
+| **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25] |
 
 ### Return type
 
@@ -480,86 +497,91 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getMailboxesInfo**
-> map[string,\DocStudio\Client\Model\UserInfoDTO] getMailboxesInfo($body)
+## `getMailboxesInfo()`
+
+```php
+getMailboxesInfo($request_body): array<string,\DocStudio\Client\Model\UserInfoDTO>
+```
 
 Retrieve users info
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = array("body_example"); // string[] | 
+$request_body = array('request_body_example'); // string[]
 
 try {
-    $result = $apiInstance->getMailboxesInfo($body);
+    $result = $apiInstance->getMailboxesInfo($request_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->getMailboxesInfo: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**string[]**](../Model/string.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **request_body** | [**string[]**](../Model/string.md)|  | |
 
 ### Return type
 
-[**map[string,\DocStudio\Client\Model\UserInfoDTO]**](../Model/UserInfoDTO.md)
+[**array<string,\DocStudio\Client\Model\UserInfoDTO>**](../Model/UserInfoDTO.md)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getProfile**
-> \DocStudio\Client\Model\ProfileDTO getProfile()
+## `getProfile()`
+
+```php
+getProfile(): \DocStudio\Client\Model\ProfileDTO
+```
 
 Retrieve user profile
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 
 try {
@@ -568,10 +590,10 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->getProfile: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -580,52 +602,54 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateInvitation**
-> updateInvitation($body, $uuid)
+## `updateInvitation()`
+
+```php
+updateInvitation($uuid, $invitation_put_dto)
+```
 
 Update invitation by userUuid.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\InvitationPutDTO(); // \DocStudio\Client\Model\InvitationPutDTO | 
-$uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
+$uuid = 'uuid_example'; // string
+$invitation_put_dto = new \DocStudio\Client\Model\InvitationPutDTO(); // \DocStudio\Client\Model\InvitationPutDTO
 
 try {
-    $apiInstance->updateInvitation($body, $uuid);
+    $apiInstance->updateInvitation($uuid, $invitation_put_dto);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->updateInvitation: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\InvitationPutDTO**](../Model/InvitationPutDTO.md)|  |
- **uuid** | [**string**](../Model/.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **uuid** | **string**|  | |
+| **invitation_put_dto** | [**\DocStudio\Client\Model\InvitationPutDTO**](../Model/InvitationPutDTO.md)|  | |
 
 ### Return type
 
@@ -633,51 +657,53 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateProfile**
-> \DocStudio\Client\Model\ProfileDTO updateProfile($body)
+## `updateProfile()`
+
+```php
+updateProfile($update_profile_dto): \DocStudio\Client\Model\ProfileDTO
+```
 
 Update user's profile
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\UpdateProfileDTO(); // \DocStudio\Client\Model\UpdateProfileDTO | 
+$update_profile_dto = new \DocStudio\Client\Model\UpdateProfileDTO(); // \DocStudio\Client\Model\UpdateProfileDTO
 
 try {
-    $result = $apiInstance->updateProfile($body);
+    $result = $apiInstance->updateProfile($update_profile_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->updateProfile: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\UpdateProfileDTO**](../Model/UpdateProfileDTO.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **update_profile_dto** | [**\DocStudio\Client\Model\UpdateProfileDTO**](../Model/UpdateProfileDTO.md)|  | |
 
 ### Return type
 
@@ -685,12 +711,13 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

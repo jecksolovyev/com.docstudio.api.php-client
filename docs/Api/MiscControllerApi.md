@@ -1,28 +1,36 @@
 # DocStudio\Client\MiscControllerApi
 
-All URIs are relative to *https://api.docstudio.com*
+All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**appSettings**](MiscControllerApi.md#appsettings) | **GET** /api/v1/settings | 
-[**auditLog**](MiscControllerApi.md#auditlog) | **POST** /api/v1/audit | Audit log
-[**calculateFormula**](MiscControllerApi.md#calculateformula) | **POST** /api/v1/formula | Calculate excel formulas for documents
-[**createAuditReport**](MiscControllerApi.md#createauditreport) | **POST** /api/v1/audit/report | Request audit report
-[**detectCountry**](MiscControllerApi.md#detectcountry) | **GET** /api/v1/detect-country | 
-[**recalculateMailboxStat**](MiscControllerApi.md#recalculatemailboxstat) | **GET** /api/v1/recalculate-mailbox-stat | Recalculate all mailbox counters
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**appSettings()**](MiscControllerApi.md#appSettings) | **GET** /api/v1/settings |  |
+| [**auditLog()**](MiscControllerApi.md#auditLog) | **POST** /api/v1/audit | Audit log |
+| [**calculateFormula()**](MiscControllerApi.md#calculateFormula) | **POST** /api/v1/formula | Calculate excel formulas for documents |
+| [**createAuditReport()**](MiscControllerApi.md#createAuditReport) | **POST** /api/v1/audit/report | Request audit report |
+| [**detectCountry()**](MiscControllerApi.md#detectCountry) | **GET** /api/v1/detect-country |  |
+| [**getBarcode()**](MiscControllerApi.md#getBarcode) | **GET** /api/v1/barcode |  |
+| [**recalculateMailboxStat()**](MiscControllerApi.md#recalculateMailboxStat) | **GET** /api/v1/recalculate-mailbox-stat | Recalculate all mailbox counters |
+| [**returnNoFavicon()**](MiscControllerApi.md#returnNoFavicon) | **GET** /favicon.ico |  |
 
-# **appSettings**
-> \DocStudio\Client\Model\SettingsDTO appSettings()
+
+## `appSettings()`
+
+```php
+appSettings(): \DocStudio\Client\Model\SettingsDTO
+```
 
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new DocStudio\Client\Api\MiscControllerApi(
@@ -38,10 +46,10 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MiscControllerApi->appSettings: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -54,51 +62,53 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **auditLog**
-> \DocStudio\Client\Model\PageDTOActivityLogRecordDTO auditLog($body, $offset, $limit)
+## `auditLog()`
+
+```php
+auditLog($search_activity_log_dto, $offset, $limit): \DocStudio\Client\Model\PageDTOActivityLogRecordDTO
+```
 
 Audit log
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\MiscControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\SearchActivityLogDTO(); // \DocStudio\Client\Model\SearchActivityLogDTO | 
+$search_activity_log_dto = new \DocStudio\Client\Model\SearchActivityLogDTO(); // \DocStudio\Client\Model\SearchActivityLogDTO
 $offset = 0; // int | Offset, how many records to skip
 $limit = 25; // int | Limit, how many records to retrieve
 
 try {
-    $result = $apiInstance->auditLog($body, $offset, $limit);
+    $result = $apiInstance->auditLog($search_activity_log_dto, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MiscControllerApi->auditLog: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\SearchActivityLogDTO**](../Model/SearchActivityLogDTO.md)|  |
- **offset** | **int**| Offset, how many records to skip | [optional] [default to 0]
- **limit** | **int**| Limit, how many records to retrieve | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **search_activity_log_dto** | [**\DocStudio\Client\Model\SearchActivityLogDTO**](../Model/SearchActivityLogDTO.md)|  | |
+| **offset** | **int**| Offset, how many records to skip | [optional] [default to 0] |
+| **limit** | **int**| Limit, how many records to retrieve | [optional] [default to 25] |
 
 ### Return type
 
@@ -106,27 +116,34 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: `application/json`
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **calculateFormula**
-> map[string,map[string,object]] calculateFormula($body)
+## `calculateFormula()`
+
+```php
+calculateFormula($doc_formula_request_dto): array<string,array<string,object>>
+```
 
 Calculate excel formulas for documents
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new DocStudio\Client\Api\MiscControllerApi(
@@ -135,26 +152,25 @@ $apiInstance = new DocStudio\Client\Api\MiscControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(new \DocStudio\Client\Model\DocFormulaRequestDTO()); // \DocStudio\Client\Model\DocFormulaRequestDTO[] | 
+$doc_formula_request_dto = array(new \DocStudio\Client\Model\DocFormulaRequestDTO()); // \DocStudio\Client\Model\DocFormulaRequestDTO[]
 
 try {
-    $result = $apiInstance->calculateFormula($body);
+    $result = $apiInstance->calculateFormula($doc_formula_request_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MiscControllerApi->calculateFormula: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\DocFormulaRequestDTO[]**](../Model/DocFormulaRequestDTO.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **doc_formula_request_dto** | [**\DocStudio\Client\Model\DocFormulaRequestDTO[]**](../Model/DocFormulaRequestDTO.md)|  | |
 
 ### Return type
 
-[**map[string,map[string,object]]**](../Model/map.md)
+**array<string,array<string,object>>**
 
 ### Authorization
 
@@ -162,46 +178,48 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: `application/json`
+- **Accept**: `*/*`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createAuditReport**
-> createAuditReport($body)
+## `createAuditReport()`
+
+```php
+createAuditReport($search_activity_log_dto)
+```
 
 Request audit report
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\MiscControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\SearchActivityLogDTO(); // \DocStudio\Client\Model\SearchActivityLogDTO | 
+$search_activity_log_dto = new \DocStudio\Client\Model\SearchActivityLogDTO(); // \DocStudio\Client\Model\SearchActivityLogDTO
 
 try {
-    $apiInstance->createAuditReport($body);
+    $apiInstance->createAuditReport($search_activity_log_dto);
 } catch (Exception $e) {
     echo 'Exception when calling MiscControllerApi->createAuditReport: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\SearchActivityLogDTO**](../Model/SearchActivityLogDTO.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **search_activity_log_dto** | [**\DocStudio\Client\Model\SearchActivityLogDTO**](../Model/SearchActivityLogDTO.md)|  | |
 
 ### Return type
 
@@ -209,27 +227,34 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **detectCountry**
-> \DocStudio\Client\Model\DetectedCountryDTO detectCountry()
+## `detectCountry()`
+
+```php
+detectCountry(): \DocStudio\Client\Model\DetectedCountryDTO
+```
 
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new DocStudio\Client\Api\MiscControllerApi(
@@ -245,10 +270,10 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MiscControllerApi->detectCountry: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -261,25 +286,30 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **recalculateMailboxStat**
-> \DocStudio\Client\Model\StatDTO recalculateMailboxStat($mailbox)
+## `getBarcode()`
 
-Recalculate all mailbox counters
+```php
+getBarcode($type, $value): string
+```
 
-development use only
+
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new DocStudio\Client\Api\MiscControllerApi(
@@ -288,26 +318,27 @@ $apiInstance = new DocStudio\Client\Api\MiscControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$type = 'type_example'; // string | Barcode type
+$value = 'value_example'; // string | Barcode value
 
 try {
-    $result = $apiInstance->recalculateMailboxStat($mailbox);
+    $result = $apiInstance->getBarcode($type, $value);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MiscControllerApi->recalculateMailboxStat: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MiscControllerApi->getBarcode: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **type** | **string**| Barcode type | |
+| **value** | **string**| Barcode value | |
 
 ### Return type
 
-[**\DocStudio\Client\Model\StatDTO**](../Model/StatDTO.md)
+**string**
 
 ### Authorization
 
@@ -315,8 +346,119 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: `image/svg+xml`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
+## `recalculateMailboxStat()`
+
+```php
+recalculateMailboxStat($mailbox): \DocStudio\Client\Model\StatDTO
+```
+
+Recalculate all mailbox counters
+
+development use only
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+
+try {
+    $result = $apiInstance->recalculateMailboxStat($mailbox);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MiscControllerApi->recalculateMailboxStat: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+[**\DocStudio\Client\Model\StatDTO**](../Model/StatDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `*/*`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `returnNoFavicon()`
+
+```php
+returnNoFavicon()
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $apiInstance->returnNoFavicon();
+} catch (Exception $e) {
+    echo 'Exception when calling MiscControllerApi->returnNoFavicon: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

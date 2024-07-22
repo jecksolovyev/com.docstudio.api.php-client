@@ -1,66 +1,68 @@
 # DocStudio\Client\DictionaryControllerApi
 
-All URIs are relative to *https://api.docstudio.com*
+All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**archiveDictionary**](DictionaryControllerApi.md#archivedictionary) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/archive | Archive dictionary
-[**checkColumnValues**](DictionaryControllerApi.md#checkcolumnvalues) | **GET** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid}/check | Check dictionary column. Check access, existence, etc.
-[**checkDictionary**](DictionaryControllerApi.md#checkdictionary) | **GET** /api/v1/dictionary/{dictionaryUuid}/check | Check dictionary. Check access, existence, etc.
-[**createColumn**](DictionaryControllerApi.md#createcolumn) | **POST** /api/v1/dictionary/{dictionaryUuid}/column | Create dictionary column
-[**createDictionary**](DictionaryControllerApi.md#createdictionary) | **POST** /api/v1/dictionary | Create empty dictionary
-[**createRecord**](DictionaryControllerApi.md#createrecord) | **POST** /api/v1/dictionary/{dictionaryUuid}/record | Create record(s)
-[**deleteColumnDictionary**](DictionaryControllerApi.md#deletecolumndictionary) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Delete column. Will return deleted column UUID
-[**deleteRecords**](DictionaryControllerApi.md#deleterecords) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/record | Delete record(s). Will return deleted records UUID(s)
-[**download**](DictionaryControllerApi.md#download) | **POST** /api/v1/dictionary/{dictionaryUuid}/download | Download the dictionary
-[**downloadStatus**](DictionaryControllerApi.md#downloadstatus) | **GET** /api/v1/dictionary/{dictionaryUuid}/download/status/{taskUuid} | Download the dictionary
-[**getColumnValue**](DictionaryControllerApi.md#getcolumnvalue) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid}/column/{columnUuid} | Retrieve column value for specific record
-[**getColumnValues**](DictionaryControllerApi.md#getcolumnvalues) | **GET** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Retrieve column values from dictionary
-[**getDictionaryRecord**](DictionaryControllerApi.md#getdictionaryrecord) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Retrieve record
-[**getDictionaryRecords**](DictionaryControllerApi.md#getdictionaryrecords) | **POST** /api/v1/dictionary/{dictionaryUuid}/records | Get dictionary records
-[**patchDictionary**](DictionaryControllerApi.md#patchdictionary) | **PATCH** /api/v1/dictionary/{dictionaryUuid} | Update dictionary
-[**patchRecord**](DictionaryControllerApi.md#patchrecord) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Update record column values
-[**readDictionary**](DictionaryControllerApi.md#readdictionary) | **GET** /api/v1/dictionary/{dictionaryUuid} | Read/get dictionary
-[**searchDictionaries**](DictionaryControllerApi.md#searchdictionaries) | **GET** /api/v1/dictionary | Get paged dictionary list
-[**updateColumnDictionary**](DictionaryControllerApi.md#updatecolumndictionary) | **PUT** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Update dictionary column
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**archiveDictionary()**](DictionaryControllerApi.md#archiveDictionary) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/archive | Archive dictionary |
+| [**checkColumnValues()**](DictionaryControllerApi.md#checkColumnValues) | **GET** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid}/check | Check dictionary column. Check access, existence, etc. |
+| [**checkDictionary()**](DictionaryControllerApi.md#checkDictionary) | **GET** /api/v1/dictionary/{dictionaryUuid}/check | Check dictionary. Check access, existence, etc. |
+| [**createColumn()**](DictionaryControllerApi.md#createColumn) | **POST** /api/v1/dictionary/{dictionaryUuid}/column | Create dictionary column |
+| [**createDictionary()**](DictionaryControllerApi.md#createDictionary) | **POST** /api/v1/dictionary | Create empty dictionary |
+| [**createRecord()**](DictionaryControllerApi.md#createRecord) | **POST** /api/v1/dictionary/{dictionaryUuid}/record | Create record(s) |
+| [**deleteColumnDictionary()**](DictionaryControllerApi.md#deleteColumnDictionary) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Delete column. Will return deleted column UUID |
+| [**deleteRecords()**](DictionaryControllerApi.md#deleteRecords) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/record | Delete record(s). Will return deleted records UUID(s) |
+| [**download()**](DictionaryControllerApi.md#download) | **POST** /api/v1/dictionary/{dictionaryUuid}/download | Download the dictionary |
+| [**downloadStatus()**](DictionaryControllerApi.md#downloadStatus) | **GET** /api/v1/dictionary/{dictionaryUuid}/download/status/{taskUuid} | Download the dictionary |
+| [**getColumnValue()**](DictionaryControllerApi.md#getColumnValue) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid}/column/{columnUuid} | Retrieve column value for specific record |
+| [**getColumnValues()**](DictionaryControllerApi.md#getColumnValues) | **POST** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Retrieve column values from dictionary |
+| [**getDictionaryRecord()**](DictionaryControllerApi.md#getDictionaryRecord) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Retrieve record |
+| [**getDictionaryRecordUuids()**](DictionaryControllerApi.md#getDictionaryRecordUuids) | **POST** /api/v1/dictionary/{dictionaryUuid}/record-uuids | Get dictionary record uuids by values |
+| [**getDictionaryRecords()**](DictionaryControllerApi.md#getDictionaryRecords) | **POST** /api/v1/dictionary/{dictionaryUuid}/records | Get dictionary records |
+| [**patchDictionary()**](DictionaryControllerApi.md#patchDictionary) | **PATCH** /api/v1/dictionary/{dictionaryUuid} | Update dictionary |
+| [**patchRecord()**](DictionaryControllerApi.md#patchRecord) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Update record column values |
+| [**readDictionary()**](DictionaryControllerApi.md#readDictionary) | **GET** /api/v1/dictionary/{dictionaryUuid} | Read/get dictionary |
+| [**searchDictionaries()**](DictionaryControllerApi.md#searchDictionaries) | **GET** /api/v1/dictionary | Get paged dictionary list |
+| [**updateColumnDictionary()**](DictionaryControllerApi.md#updateColumnDictionary) | **PUT** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Update dictionary column |
 
-# **archiveDictionary**
-> archiveDictionary($dictionary_uuid, $mailbox)
+
+## `archiveDictionary()`
+
+```php
+archiveDictionary($dictionary_uuid, $mailbox)
+```
 
 Archive dictionary
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
     $apiInstance->archiveDictionary($dictionary_uuid, $mailbox);
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->archiveDictionary: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| Dictionary UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -68,38 +70,41 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **checkColumnValues**
-> \DocStudio\Client\Model\DictionaryCheckResponseDTO checkColumnValues($dictionary_uuid, $column_uuid, $mailbox)
+## `checkColumnValues()`
+
+```php
+checkColumnValues($dictionary_uuid, $column_uuid, $mailbox): \DocStudio\Client\Model\DictionaryCheckResponseDTO
+```
 
 Check dictionary column. Check access, existence, etc.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
-$column_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Column UUID
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
+$column_uuid = 'column_uuid_example'; // string | Column UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
     $result = $apiInstance->checkColumnValues($dictionary_uuid, $column_uuid, $mailbox);
@@ -107,16 +112,15 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->checkColumnValues: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
- **column_uuid** | [**string**](../Model/.md)| Column UUID |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| Dictionary UUID | |
+| **column_uuid** | **string**| Column UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -124,37 +128,40 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **checkDictionary**
-> \DocStudio\Client\Model\DictionaryCheckResponseDTO checkDictionary($dictionary_uuid, $mailbox)
+## `checkDictionary()`
+
+```php
+checkDictionary($dictionary_uuid, $mailbox): \DocStudio\Client\Model\DictionaryCheckResponseDTO
+```
 
 Check dictionary. Check access, existence, etc.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of dictionary
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | UUID of dictionary
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
     $result = $apiInstance->checkDictionary($dictionary_uuid, $mailbox);
@@ -162,15 +169,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->checkDictionary: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionary_uuid** | [**string**](../Model/.md)| UUID of dictionary |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| UUID of dictionary | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -178,55 +184,57 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createColumn**
-> \DocStudio\Client\Model\SingleUuidDTO createColumn($body, $mailbox, $dictionary_uuid)
+## `createColumn()`
+
+```php
+createColumn($dictionary_uuid, $mailbox, $dictionary_column_request_dto): \DocStudio\Client\Model\SingleUuidDTO
+```
 
 Create dictionary column
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\DictionaryColumnRequestDTO(); // \DocStudio\Client\Model\DictionaryColumnRequestDTO | 
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_column_request_dto = new \DocStudio\Client\Model\DictionaryColumnRequestDTO(); // \DocStudio\Client\Model\DictionaryColumnRequestDTO
 
 try {
-    $result = $apiInstance->createColumn($body, $mailbox, $dictionary_uuid);
+    $result = $apiInstance->createColumn($dictionary_uuid, $mailbox, $dictionary_column_request_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->createColumn: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\DictionaryColumnRequestDTO**](../Model/DictionaryColumnRequestDTO.md)|  |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| Dictionary UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionary_column_request_dto** | [**\DocStudio\Client\Model\DictionaryColumnRequestDTO**](../Model/DictionaryColumnRequestDTO.md)|  | |
 
 ### Return type
 
@@ -234,36 +242,39 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createDictionary**
-> \DocStudio\Client\Model\SingleUuidDTO createDictionary($mailbox)
+## `createDictionary()`
+
+```php
+createDictionary($mailbox): \DocStudio\Client\Model\SingleUuidDTO
+```
 
 Create empty dictionary
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
     $result = $apiInstance->createDictionary($mailbox);
@@ -271,14 +282,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->createDictionary: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -286,55 +296,57 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createRecord**
-> \DocStudio\Client\Model\CreateRecordsResponseDTO createRecord($body, $mailbox, $dictionary_uuid)
+## `createRecord()`
+
+```php
+createRecord($dictionary_uuid, $mailbox, $dictionary_column_value_request_dto): \DocStudio\Client\Model\CreateRecordsResponseDTO
+```
 
 Create record(s)
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = array(new \DocStudio\Client\Model\array()); // \DocStudio\Client\Model\DictionaryColumnValueRequestDTO[][] | 
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_column_value_request_dto = NULL; // \DocStudio\Client\Model\DictionaryColumnValueRequestDTO[][]
 
 try {
-    $result = $apiInstance->createRecord($body, $mailbox, $dictionary_uuid);
+    $result = $apiInstance->createRecord($dictionary_uuid, $mailbox, $dictionary_column_value_request_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->createRecord: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\DictionaryColumnValueRequestDTO[][]**](../Model/array.md)|  |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| Dictionary UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionary_column_value_request_dto** | [**\DocStudio\Client\Model\DictionaryColumnValueRequestDTO[][]**](../Model/array.md)|  | |
 
 ### Return type
 
@@ -342,38 +354,41 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteColumnDictionary**
-> \DocStudio\Client\Model\SingleUuidDTO deleteColumnDictionary($dictionary_uuid, $column_uuid, $mailbox)
+## `deleteColumnDictionary()`
+
+```php
+deleteColumnDictionary($dictionary_uuid, $column_uuid, $mailbox): \DocStudio\Client\Model\SingleUuidDTO
+```
 
 Delete column. Will return deleted column UUID
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
-$column_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Column UUID
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
+$column_uuid = 'column_uuid_example'; // string | Column UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
     $result = $apiInstance->deleteColumnDictionary($dictionary_uuid, $column_uuid, $mailbox);
@@ -381,16 +396,15 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->deleteColumnDictionary: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
- **column_uuid** | [**string**](../Model/.md)| Column UUID |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| Dictionary UUID | |
+| **column_uuid** | **string**| Column UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -398,55 +412,57 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteRecords**
-> \DocStudio\Client\Model\SingleUuidDTO[] deleteRecords($body, $mailbox, $dictionary_uuid)
+## `deleteRecords()`
+
+```php
+deleteRecords($dictionary_uuid, $mailbox, $single_uuid_dto): \DocStudio\Client\Model\SingleUuidDTO[]
+```
 
 Delete record(s). Will return deleted records UUID(s)
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = array(new \DocStudio\Client\Model\SingleUuidDTO()); // \DocStudio\Client\Model\SingleUuidDTO[] | 
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$single_uuid_dto = array(new \DocStudio\Client\Model\SingleUuidDTO()); // \DocStudio\Client\Model\SingleUuidDTO[]
 
 try {
-    $result = $apiInstance->deleteRecords($body, $mailbox, $dictionary_uuid);
+    $result = $apiInstance->deleteRecords($dictionary_uuid, $mailbox, $single_uuid_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->deleteRecords: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| Dictionary UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **single_uuid_dto** | [**\DocStudio\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  | |
 
 ### Return type
 
@@ -454,55 +470,57 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **download**
-> \DocStudio\Client\Model\ExportTaskStatusDTO download($body, $mailbox, $dictionary_uuid)
+## `download()`
+
+```php
+download($dictionary_uuid, $mailbox, $dictionary_download_params_dto): \DocStudio\Client\Model\ExportTaskStatusDTO
+```
 
 Download the dictionary
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\DictionaryDownloadParamsDTO(); // \DocStudio\Client\Model\DictionaryDownloadParamsDTO | 
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of dictionary
+$dictionary_uuid = 'dictionary_uuid_example'; // string | UUID of dictionary
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_download_params_dto = new \DocStudio\Client\Model\DictionaryDownloadParamsDTO(); // \DocStudio\Client\Model\DictionaryDownloadParamsDTO
 
 try {
-    $result = $apiInstance->download($body, $mailbox, $dictionary_uuid);
+    $result = $apiInstance->download($dictionary_uuid, $mailbox, $dictionary_download_params_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->download: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\DictionaryDownloadParamsDTO**](../Model/DictionaryDownloadParamsDTO.md)|  |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionary_uuid** | [**string**](../Model/.md)| UUID of dictionary |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| UUID of dictionary | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionary_download_params_dto** | [**\DocStudio\Client\Model\DictionaryDownloadParamsDTO**](../Model/DictionaryDownloadParamsDTO.md)|  | |
 
 ### Return type
 
@@ -510,38 +528,41 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **downloadStatus**
-> \DocStudio\Client\Model\ExportTaskStatusDTO downloadStatus($dictionary_uuid, $task_uuid, $mailbox)
+## `downloadStatus()`
+
+```php
+downloadStatus($dictionary_uuid, $task_uuid, $mailbox): \DocStudio\Client\Model\ExportTaskStatusDTO
+```
 
 Download the dictionary
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of dictionary
-$task_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of task
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | UUID of dictionary
+$task_uuid = 'task_uuid_example'; // string | UUID of task
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
     $result = $apiInstance->downloadStatus($dictionary_uuid, $task_uuid, $mailbox);
@@ -549,16 +570,15 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->downloadStatus: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionary_uuid** | [**string**](../Model/.md)| UUID of dictionary |
- **task_uuid** | [**string**](../Model/.md)| UUID of task |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| UUID of dictionary | |
+| **task_uuid** | **string**| UUID of task | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -566,27 +586,34 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getColumnValue**
-> \DocStudio\Client\Model\DictionaryColumnValueResponseDTO getColumnValue($dictionary_uuid, $record_uuid, $column_uuid, $mailbox)
+## `getColumnValue()`
+
+```php
+getColumnValue($dictionary_uuid, $record_uuid, $column_uuid, $mailbox): \DocStudio\Client\Model\DictionaryColumnValueResponseDTO
+```
 
 Retrieve column value for specific record
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
@@ -595,10 +622,10 @@ $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
-$record_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Record UUID
-$column_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Column UUID
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
+$record_uuid = 'record_uuid_example'; // string | Record UUID
+$column_uuid = 'column_uuid_example'; // string | Column UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
     $result = $apiInstance->getColumnValue($dictionary_uuid, $record_uuid, $column_uuid, $mailbox);
@@ -606,17 +633,16 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->getColumnValue: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
- **record_uuid** | [**string**](../Model/.md)| Record UUID |
- **column_uuid** | [**string**](../Model/.md)| Column UUID |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| Dictionary UUID | |
+| **record_uuid** | **string**| Record UUID | |
+| **column_uuid** | **string**| Column UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
 
 ### Return type
 
@@ -628,23 +654,30 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getColumnValues**
-> \DocStudio\Client\Model\PageDTODictionaryColumnValueResponseDTO getColumnValues($dictionary_uuid, $column_uuid, $mailbox, $offset, $limit, $keyword)
+## `getColumnValues()`
+
+```php
+getColumnValues($dictionary_uuid, $column_uuid, $dictionary_column_value_search_dto, $offset, $limit, $mailbox): \DocStudio\Client\Model\PageDTODictionaryColumnValueResponseDTO
+```
 
 Retrieve column values from dictionary
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
@@ -653,32 +686,31 @@ $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
-$column_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Column UUID
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
+$column_uuid = 'column_uuid_example'; // string | Column UUID
+$dictionary_column_value_search_dto = new \DocStudio\Client\Model\DictionaryColumnValueSearchDTO(); // \DocStudio\Client\Model\DictionaryColumnValueSearchDTO
 $offset = 0; // int | Offset records
 $limit = 25; // int | Limit records, max is 1000
-$keyword = "keyword_example"; // string | Keyword to search by
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
-    $result = $apiInstance->getColumnValues($dictionary_uuid, $column_uuid, $mailbox, $offset, $limit, $keyword);
+    $result = $apiInstance->getColumnValues($dictionary_uuid, $column_uuid, $dictionary_column_value_search_dto, $offset, $limit, $mailbox);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->getColumnValues: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
- **column_uuid** | [**string**](../Model/.md)| Column UUID |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **offset** | **int**| Offset records | [optional] [default to 0]
- **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25]
- **keyword** | **string**| Keyword to search by | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| Dictionary UUID | |
+| **column_uuid** | **string**| Column UUID | |
+| **dictionary_column_value_search_dto** | [**\DocStudio\Client\Model\DictionaryColumnValueSearchDTO**](../Model/DictionaryColumnValueSearchDTO.md)|  | |
+| **offset** | **int**| Offset records | [optional] [default to 0] |
+| **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25] |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
 
 ### Return type
 
@@ -690,23 +722,30 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getDictionaryRecord**
-> \DocStudio\Client\Model\DictionaryRecordValuesResponseDTO getDictionaryRecord($dictionary_uuid, $record_uuid, $mailbox)
+## `getDictionaryRecord()`
+
+```php
+getDictionaryRecord($dictionary_uuid, $record_uuid, $mailbox): \DocStudio\Client\Model\DictionaryRecordValuesResponseDTO
+```
 
 Retrieve record
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
@@ -715,9 +754,9 @@ $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
-$record_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Record UUID
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
+$record_uuid = 'record_uuid_example'; // string | Record UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
     $result = $apiInstance->getDictionaryRecord($dictionary_uuid, $record_uuid, $mailbox);
@@ -725,16 +764,15 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->getDictionaryRecord: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
- **record_uuid** | [**string**](../Model/.md)| Record UUID |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| Dictionary UUID | |
+| **record_uuid** | **string**| Record UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
 
 ### Return type
 
@@ -746,55 +784,115 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getDictionaryRecords**
-> \DocStudio\Client\Model\PageDTODictionaryRecordValuesResponseDTO getDictionaryRecords($body, $mailbox, $dictionary_uuid, $offset, $limit)
+## `getDictionaryRecordUuids()`
 
-Get dictionary records
+```php
+getDictionaryRecordUuids($dictionary_uuid, $mailbox, $dictionary_records_request_dto): array<string,string>
+```
+
+Get dictionary record uuids by values
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\DictionaryFiltersRequestDTO(); // \DocStudio\Client\Model\DictionaryFiltersRequestDTO | 
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of dictionary
-$offset = 0; // int | Offset records
-$limit = 25; // int | Limit records, max is 1000
+$dictionary_uuid = 'dictionary_uuid_example'; // string | UUID of dictionary
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_records_request_dto = new \DocStudio\Client\Model\DictionaryRecordsRequestDTO(); // \DocStudio\Client\Model\DictionaryRecordsRequestDTO
 
 try {
-    $result = $apiInstance->getDictionaryRecords($body, $mailbox, $dictionary_uuid, $offset, $limit);
+    $result = $apiInstance->getDictionaryRecordUuids($dictionary_uuid, $mailbox, $dictionary_records_request_dto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DictionaryControllerApi->getDictionaryRecords: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DictionaryControllerApi->getDictionaryRecordUuids: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\DictionaryFiltersRequestDTO**](../Model/DictionaryFiltersRequestDTO.md)|  |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionary_uuid** | [**string**](../Model/.md)| UUID of dictionary |
- **offset** | **int**| Offset records | [optional] [default to 0]
- **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| UUID of dictionary | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionary_records_request_dto** | [**\DocStudio\Client\Model\DictionaryRecordsRequestDTO**](../Model/DictionaryRecordsRequestDTO.md)|  | |
+
+### Return type
+
+**array<string,string>**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getDictionaryRecords()`
+
+```php
+getDictionaryRecords($dictionary_uuid, $mailbox, $dictionary_filters_request_dto, $offset, $limit): \DocStudio\Client\Model\PageDTODictionaryRecordValuesResponseDTO
+```
+
+Get dictionary records
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$dictionary_uuid = 'dictionary_uuid_example'; // string | UUID of dictionary
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_filters_request_dto = new \DocStudio\Client\Model\DictionaryFiltersRequestDTO(); // \DocStudio\Client\Model\DictionaryFiltersRequestDTO
+$offset = 0; // int | Offset records
+$limit = 25; // int | Limit records, max is 1000
+
+try {
+    $result = $apiInstance->getDictionaryRecords($dictionary_uuid, $mailbox, $dictionary_filters_request_dto, $offset, $limit);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DictionaryControllerApi->getDictionaryRecords: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| UUID of dictionary | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionary_filters_request_dto** | [**\DocStudio\Client\Model\DictionaryFiltersRequestDTO**](../Model/DictionaryFiltersRequestDTO.md)|  | |
+| **offset** | **int**| Offset records | [optional] [default to 0] |
+| **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25] |
 
 ### Return type
 
@@ -802,55 +900,57 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **patchDictionary**
-> \DocStudio\Client\Model\DictionaryResponseDTO patchDictionary($body, $mailbox, $dictionary_uuid)
+## `patchDictionary()`
+
+```php
+patchDictionary($dictionary_uuid, $mailbox, $dictionary_request_dto): \DocStudio\Client\Model\DictionaryResponseDTO
+```
 
 Update dictionary
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\DictionaryRequestDTO(); // \DocStudio\Client\Model\DictionaryRequestDTO | 
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of dictionary
+$dictionary_uuid = 'dictionary_uuid_example'; // string | UUID of dictionary
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_request_dto = new \DocStudio\Client\Model\DictionaryRequestDTO(); // \DocStudio\Client\Model\DictionaryRequestDTO
 
 try {
-    $result = $apiInstance->patchDictionary($body, $mailbox, $dictionary_uuid);
+    $result = $apiInstance->patchDictionary($dictionary_uuid, $mailbox, $dictionary_request_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->patchDictionary: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\DictionaryRequestDTO**](../Model/DictionaryRequestDTO.md)|  |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionary_uuid** | [**string**](../Model/.md)| UUID of dictionary |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| UUID of dictionary | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionary_request_dto** | [**\DocStudio\Client\Model\DictionaryRequestDTO**](../Model/DictionaryRequestDTO.md)|  | |
 
 ### Return type
 
@@ -858,56 +958,58 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **patchRecord**
-> patchRecord($body, $mailbox, $dictionary_uuid, $record_uuid)
+## `patchRecord()`
+
+```php
+patchRecord($dictionary_uuid, $record_uuid, $mailbox, $dictionary_column_value_request_dto)
+```
 
 Update record column values
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = array(new \DocStudio\Client\Model\DictionaryColumnValueRequestDTO()); // \DocStudio\Client\Model\DictionaryColumnValueRequestDTO[] | 
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
-$record_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Record UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
+$record_uuid = 'record_uuid_example'; // string | Record UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_column_value_request_dto = array(new \DocStudio\Client\Model\DictionaryColumnValueRequestDTO()); // \DocStudio\Client\Model\DictionaryColumnValueRequestDTO[]
 
 try {
-    $apiInstance->patchRecord($body, $mailbox, $dictionary_uuid, $record_uuid);
+    $apiInstance->patchRecord($dictionary_uuid, $record_uuid, $mailbox, $dictionary_column_value_request_dto);
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->patchRecord: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\DictionaryColumnValueRequestDTO[]**](../Model/DictionaryColumnValueRequestDTO.md)|  |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
- **record_uuid** | [**string**](../Model/.md)| Record UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| Dictionary UUID | |
+| **record_uuid** | **string**| Record UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionary_column_value_request_dto** | [**\DocStudio\Client\Model\DictionaryColumnValueRequestDTO[]**](../Model/DictionaryColumnValueRequestDTO.md)|  | |
 
 ### Return type
 
@@ -915,37 +1017,40 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **readDictionary**
-> \DocStudio\Client\Model\DictionaryResponseDTO readDictionary($dictionary_uuid, $mailbox, $with_columns, $with_records_count)
+## `readDictionary()`
+
+```php
+readDictionary($dictionary_uuid, $mailbox, $with_columns, $with_records_count): \DocStudio\Client\Model\DictionaryResponseDTO
+```
 
 Read/get dictionary
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of dictionary
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | UUID of dictionary
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 $with_columns = false; // bool | Add columns description to each dictionary
 $with_records_count = false; // bool | Add records count value to each dictionary
 
@@ -955,17 +1060,16 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->readDictionary: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dictionary_uuid** | [**string**](../Model/.md)| UUID of dictionary |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **with_columns** | **bool**| Add columns description to each dictionary | [optional] [default to false]
- **with_records_count** | **bool**| Add records count value to each dictionary | [optional] [default to false]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| UUID of dictionary | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **with_columns** | **bool**| Add columns description to each dictionary | [optional] [default to false] |
+| **with_records_count** | **bool**| Add records count value to each dictionary | [optional] [default to false] |
 
 ### Return type
 
@@ -973,38 +1077,41 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **searchDictionaries**
-> \DocStudio\Client\Model\PageDTODictionaryResponseDTO searchDictionaries($mailbox, $level, $keyword, $with_columns, $offset, $limit)
+## `searchDictionaries()`
+
+```php
+searchDictionaries($mailbox, $level, $keyword, $with_columns, $offset, $limit): \DocStudio\Client\Model\PageDTODictionaryResponseDTO
+```
 
 Get paged dictionary list
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
-$level = "pub"; // string | Dictionary access level, 'pub' by default.
-$keyword = "keyword_example"; // string | Keyword to search dictionary by or dictionary UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$level = 'pub'; // string | Dictionary access level, 'pub' by default.
+$keyword = 'keyword_example'; // string | Keyword to search dictionary by or dictionary UUID
 $with_columns = false; // bool | Add columns description to each dictionary
 $offset = 0; // int | Offset records
 $limit = 25; // int | Limit records, max is 1000
@@ -1015,19 +1122,18 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->searchDictionaries: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **level** | **string**| Dictionary access level, &#x27;pub&#x27; by default. | [optional] [default to pub]
- **keyword** | **string**| Keyword to search dictionary by or dictionary UUID | [optional]
- **with_columns** | **bool**| Add columns description to each dictionary | [optional] [default to false]
- **offset** | **int**| Offset records | [optional] [default to 0]
- **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **level** | **string**| Dictionary access level, &#39;pub&#39; by default. | [optional] [default to &#39;pub&#39;] |
+| **keyword** | **string**| Keyword to search dictionary by or dictionary UUID | [optional] |
+| **with_columns** | **bool**| Add columns description to each dictionary | [optional] [default to false] |
+| **offset** | **int**| Offset records | [optional] [default to 0] |
+| **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25] |
 
 ### Return type
 
@@ -1035,57 +1141,59 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateColumnDictionary**
-> \DocStudio\Client\Model\DictionaryColumnResponseDTO updateColumnDictionary($body, $mailbox, $dictionary_uuid, $column_uuid)
+## `updateColumnDictionary()`
+
+```php
+updateColumnDictionary($dictionary_uuid, $column_uuid, $mailbox, $dictionary_column_request_dto): \DocStudio\Client\Model\DictionaryColumnResponseDTO
+```
 
 Update dictionary column
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\DictionaryColumnRequestDTO(); // \DocStudio\Client\Model\DictionaryColumnRequestDTO | 
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
-$dictionary_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Dictionary UUID
-$column_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Column UUID
+$dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
+$column_uuid = 'column_uuid_example'; // string | Column UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$dictionary_column_request_dto = new \DocStudio\Client\Model\DictionaryColumnRequestDTO(); // \DocStudio\Client\Model\DictionaryColumnRequestDTO
 
 try {
-    $result = $apiInstance->updateColumnDictionary($body, $mailbox, $dictionary_uuid, $column_uuid);
+    $result = $apiInstance->updateColumnDictionary($dictionary_uuid, $column_uuid, $mailbox, $dictionary_column_request_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DictionaryControllerApi->updateColumnDictionary: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\DictionaryColumnRequestDTO**](../Model/DictionaryColumnRequestDTO.md)|  |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
- **dictionary_uuid** | [**string**](../Model/.md)| Dictionary UUID |
- **column_uuid** | [**string**](../Model/.md)| Column UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dictionary_uuid** | **string**| Dictionary UUID | |
+| **column_uuid** | **string**| Column UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **dictionary_column_request_dto** | [**\DocStudio\Client\Model\DictionaryColumnRequestDTO**](../Model/DictionaryColumnRequestDTO.md)|  | |
 
 ### Return type
 
@@ -1093,12 +1201,13 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

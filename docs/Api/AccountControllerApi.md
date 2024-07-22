@@ -1,71 +1,72 @@
 # DocStudio\Client\AccountControllerApi
 
-All URIs are relative to *https://api.docstudio.com*
+All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**addNewCryptoConfigs**](AccountControllerApi.md#addnewcryptoconfigs) | **PUT** /api/v1/account/{accountUuid}/crypto-configs | Add crypto configs
-[**blockUsers**](AccountControllerApi.md#blockusers) | **PATCH** /api/v1/account/{accountUuid}/block-users/{flag} | Block/Unblock corporate users
-[**createAccount**](AccountControllerApi.md#createaccount) | **POST** /api/v1/account | Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es).
-[**createCorporateUser**](AccountControllerApi.md#createcorporateuser) | **POST** /api/v1/account/{accountUuid}/user | Create corporate user
-[**createMassAccountUsers**](AccountControllerApi.md#createmassaccountusers) | **POST** /api/v1/account/{accountUuid}/create-users | Mass create corporate users
-[**deleteAccount**](AccountControllerApi.md#deleteaccount) | **DELETE** /api/v1/account/{uuid} | Delete account
-[**deleteCorporateUsers**](AccountControllerApi.md#deletecorporateusers) | **DELETE** /api/v1/account/{accountUuid}/user | Delete corporate users
-[**deleteCryptoConfigs**](AccountControllerApi.md#deletecryptoconfigs) | **DELETE** /api/v1/account/{accountUuid}/crypto-configs | Delete crypto configs
-[**getAccountBillingAddress**](AccountControllerApi.md#getaccountbillingaddress) | **GET** /api/v1/account/{accountUuid}/billing/address | Get account billing address
-[**getAccountBrandLogo**](AccountControllerApi.md#getaccountbrandlogo) | **GET** /api/v1/account/brand-logo/{accountUuid} | Retrieve account brand logo
-[**getAccountDetails**](AccountControllerApi.md#getaccountdetails) | **GET** /api/v1/account/{uuid} | 
-[**getAccountLogoAccount**](AccountControllerApi.md#getaccountlogoaccount) | **GET** /api/v1/account/logo/{accountUuid} | Retrieve account logo
-[**getAccountUsersImportFileExample**](AccountControllerApi.md#getaccountusersimportfileexample) | **GET** /api/v1/account/{accountUuid}/users/example | Get account users import file example
-[**getCryptoConfigs**](AccountControllerApi.md#getcryptoconfigs) | **GET** /api/v1/account/{accountUuid}/crypto-configs | Get crypto configs
-[**getMailbox**](AccountControllerApi.md#getmailbox) | **GET** /api/v1/account/mailbox/{uuid} | Users and their permissions by mailbox
-[**getUserPolicies**](AccountControllerApi.md#getuserpolicies) | **GET** /api/v1/account/{accountUuid}/user-policies | Get user password/session policies
-[**getUsersPermissions**](AccountControllerApi.md#getuserspermissions) | **POST** /api/v1/account/{accountUuid}/users | Get users with permissions per account and mailboxes
-[**mailboxesReport**](AccountControllerApi.md#mailboxesreport) | **POST** /api/v1/account/{accountUuid}/mailbox/report | Generate account mailboxes report
-[**resendCorporateUserWelcomeMessage**](AccountControllerApi.md#resendcorporateuserwelcomemessage) | **POST** /api/v1/account/{accountUuid}/user/{userUuid}/welcome | Resend corporate user welcome message
-[**saveUserPolicies**](AccountControllerApi.md#saveuserpolicies) | **POST** /api/v1/account/{accountUuid}/user-policies | Save user password/session policies
-[**searchMailboxesAccount**](AccountControllerApi.md#searchmailboxesaccount) | **GET** /api/v1/account/{accountUuid}/mailbox | Get paged account mailboxes list
-[**updateAccountBillingAddress**](AccountControllerApi.md#updateaccountbillingaddress) | **POST** /api/v1/account/{accountUuid}/billing/address | Create/update account billing address
-[**updateAccountDetails**](AccountControllerApi.md#updateaccountdetails) | **PUT** /api/v1/account/{uuid} | 
-[**usersReport**](AccountControllerApi.md#usersreport) | **POST** /api/v1/account/{accountUuid}/users/report | Generate account users report
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**addNewCryptoConfigs()**](AccountControllerApi.md#addNewCryptoConfigs) | **PUT** /api/v1/account/{accountUuid}/crypto-configs | Add crypto configs |
+| [**blockUsers()**](AccountControllerApi.md#blockUsers) | **PATCH** /api/v1/account/{accountUuid}/block-users/{flag} | Block/Unblock corporate users |
+| [**createAccount()**](AccountControllerApi.md#createAccount) | **POST** /api/v1/account | Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es). |
+| [**createCorporateUser()**](AccountControllerApi.md#createCorporateUser) | **POST** /api/v1/account/{accountUuid}/user | Create corporate user |
+| [**createMassAccountUsers()**](AccountControllerApi.md#createMassAccountUsers) | **POST** /api/v1/account/{accountUuid}/create-users | Mass create corporate users |
+| [**deleteAccount()**](AccountControllerApi.md#deleteAccount) | **DELETE** /api/v1/account/{uuid} | Delete account |
+| [**deleteCorporateUsers()**](AccountControllerApi.md#deleteCorporateUsers) | **DELETE** /api/v1/account/{accountUuid}/user | Delete corporate users |
+| [**deleteCryptoConfigs()**](AccountControllerApi.md#deleteCryptoConfigs) | **DELETE** /api/v1/account/{accountUuid}/crypto-configs | Delete crypto configs |
+| [**getAccountBillingAddress()**](AccountControllerApi.md#getAccountBillingAddress) | **GET** /api/v1/account/{accountUuid}/billing/address | Get account billing address |
+| [**getAccountBrandLogo()**](AccountControllerApi.md#getAccountBrandLogo) | **GET** /api/v1/account/brand-logo/{accountUuid} | Retrieve account brand logo |
+| [**getAccountDetails()**](AccountControllerApi.md#getAccountDetails) | **GET** /api/v1/account/{uuid} |  |
+| [**getAccountLogoAccount()**](AccountControllerApi.md#getAccountLogoAccount) | **GET** /api/v1/account/logo/{accountUuid} | Retrieve account logo |
+| [**getAccountUsersImportFileExample()**](AccountControllerApi.md#getAccountUsersImportFileExample) | **GET** /api/v1/account/{accountUuid}/users/example | Get account users import file example |
+| [**getCryptoConfigs()**](AccountControllerApi.md#getCryptoConfigs) | **GET** /api/v1/account/{accountUuid}/crypto-configs | Get crypto configs |
+| [**getMailbox()**](AccountControllerApi.md#getMailbox) | **GET** /api/v1/account/mailbox/{uuid} | Users and their permissions by mailbox |
+| [**getUserPolicies()**](AccountControllerApi.md#getUserPolicies) | **GET** /api/v1/account/{accountUuid}/user-policies | Get user password/session policies |
+| [**getUsersPermissions()**](AccountControllerApi.md#getUsersPermissions) | **POST** /api/v1/account/{accountUuid}/users | Get users with permissions per account and mailboxes |
+| [**mailboxesReport()**](AccountControllerApi.md#mailboxesReport) | **POST** /api/v1/account/{accountUuid}/mailbox/report | Generate account mailboxes report |
+| [**resendCorporateUserWelcomeMessage()**](AccountControllerApi.md#resendCorporateUserWelcomeMessage) | **POST** /api/v1/account/{accountUuid}/user/{userUuid}/welcome | Resend corporate user welcome message |
+| [**saveUserPolicies()**](AccountControllerApi.md#saveUserPolicies) | **POST** /api/v1/account/{accountUuid}/user-policies | Save user password/session policies |
+| [**searchMailboxesAccount()**](AccountControllerApi.md#searchMailboxesAccount) | **GET** /api/v1/account/{accountUuid}/mailbox | Get paged account mailboxes list |
+| [**updateAccountBillingAddress()**](AccountControllerApi.md#updateAccountBillingAddress) | **POST** /api/v1/account/{accountUuid}/billing/address | Create/update account billing address |
+| [**updateAccountDetails()**](AccountControllerApi.md#updateAccountDetails) | **PUT** /api/v1/account/{uuid} |  |
+| [**usersReport()**](AccountControllerApi.md#usersReport) | **POST** /api/v1/account/{accountUuid}/users/report | Generate account users report |
 
-# **addNewCryptoConfigs**
-> addNewCryptoConfigs($body, $account_uuid)
+
+## `addNewCryptoConfigs()`
+
+```php
+addNewCryptoConfigs($account_uuid, $crypto_config_dto)
+```
 
 Add crypto configs
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = array(new \DocStudio\Client\Model\CryptoConfigDTO()); // \DocStudio\Client\Model\CryptoConfigDTO[] | 
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$crypto_config_dto = array(new \DocStudio\Client\Model\CryptoConfigDTO()); // \DocStudio\Client\Model\CryptoConfigDTO[]
 
 try {
-    $apiInstance->addNewCryptoConfigs($body, $account_uuid);
+    $apiInstance->addNewCryptoConfigs($account_uuid, $crypto_config_dto);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->addNewCryptoConfigs: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\CryptoConfigDTO[]**](../Model/CryptoConfigDTO.md)|  |
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **crypto_config_dto** | [**\DocStudio\Client\Model\CryptoConfigDTO[]**](../Model/CryptoConfigDTO.md)|  | |
 
 ### Return type
 
@@ -73,54 +74,56 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **blockUsers**
-> blockUsers($body, $account_uuid, $flag)
+## `blockUsers()`
+
+```php
+blockUsers($account_uuid, $flag, $single_uuid_dto)
+```
 
 Block/Unblock corporate users
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = array(new \DocStudio\Client\Model\SingleUuidDTO()); // \DocStudio\Client\Model\SingleUuidDTO[] | 
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
-$flag = true; // bool | Block/Unblock flag
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$flag = True; // bool | Block/Unblock flag
+$single_uuid_dto = array(new \DocStudio\Client\Model\SingleUuidDTO()); // \DocStudio\Client\Model\SingleUuidDTO[]
 
 try {
-    $apiInstance->blockUsers($body, $account_uuid, $flag);
+    $apiInstance->blockUsers($account_uuid, $flag, $single_uuid_dto);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->blockUsers: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  |
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
- **flag** | **bool**| Block/Unblock flag |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **flag** | **bool**| Block/Unblock flag | |
+| **single_uuid_dto** | [**\DocStudio\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  | |
 
 ### Return type
 
@@ -128,55 +131,57 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createAccount**
-> \DocStudio\Client\Model\User2AccountWithMailboxesDTO createAccount($body, $code, $code_type)
+## `createAccount()`
+
+```php
+createAccount($account_create_dto, $code, $code_type): \DocStudio\Client\Model\User2AccountWithMailboxesDTO
+```
 
 Create account and mailbox(es) under this account. User will be assigned with default system roles for this account and mailbox(es).
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\AccountCreateDTO(); // \DocStudio\Client\Model\AccountCreateDTO | 
-$code = "code_example"; // string | Invitation code from email
-$code_type = "code_type_example"; // string | Type of code
+$account_create_dto = new \DocStudio\Client\Model\AccountCreateDTO(); // \DocStudio\Client\Model\AccountCreateDTO
+$code = 'code_example'; // string | Invitation code from email
+$code_type = 'code_type_example'; // string | Type of code
 
 try {
-    $result = $apiInstance->createAccount($body, $code, $code_type);
+    $result = $apiInstance->createAccount($account_create_dto, $code, $code_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->createAccount: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\AccountCreateDTO**](../Model/AccountCreateDTO.md)|  |
- **code** | **string**| Invitation code from email | [optional]
- **code_type** | **string**| Type of code | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_create_dto** | [**\DocStudio\Client\Model\AccountCreateDTO**](../Model/AccountCreateDTO.md)|  | |
+| **code** | **string**| Invitation code from email | [optional] |
+| **code_type** | **string**| Type of code | [optional] |
 
 ### Return type
 
@@ -184,53 +189,55 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createCorporateUser**
-> \DocStudio\Client\Model\UserDTO createCorporateUser($body, $account_uuid)
+## `createCorporateUser()`
+
+```php
+createCorporateUser($account_uuid, $corporate_user_create_dto): \DocStudio\Client\Model\UserDTO
+```
 
 Create corporate user
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\CorporateUserCreateDTO(); // \DocStudio\Client\Model\CorporateUserCreateDTO | 
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$corporate_user_create_dto = new \DocStudio\Client\Model\CorporateUserCreateDTO(); // \DocStudio\Client\Model\CorporateUserCreateDTO
 
 try {
-    $result = $apiInstance->createCorporateUser($body, $account_uuid);
+    $result = $apiInstance->createCorporateUser($account_uuid, $corporate_user_create_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->createCorporateUser: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\CorporateUserCreateDTO**](../Model/CorporateUserCreateDTO.md)|  |
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **corporate_user_create_dto** | [**\DocStudio\Client\Model\CorporateUserCreateDTO**](../Model/CorporateUserCreateDTO.md)|  | |
 
 ### Return type
 
@@ -238,105 +245,110 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **createMassAccountUsers**
-> createMassAccountUsers($account_uuid, $file)
+## `createMassAccountUsers()`
+
+```php
+createMassAccountUsers($account_uuid, $file): \DocStudio\Client\Model\SingleUuidDTO
+```
 
 Mass create corporate users
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
-$file = "file_example"; // string | 
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$file = "/path/to/file.txt"; // \SplFileObject
 
 try {
-    $apiInstance->createMassAccountUsers($account_uuid, $file);
+    $result = $apiInstance->createMassAccountUsers($account_uuid, $file);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->createMassAccountUsers: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
- **file** | **string****string**|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **file** | **\SplFileObject****\SplFileObject**|  | |
 
 ### Return type
 
-void (empty response body)
+[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: Not defined
+- **Content-Type**: `multipart/form-data`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteAccount**
-> deleteAccount($check_message, $uuid)
+## `deleteAccount()`
+
+```php
+deleteAccount($check_message, $uuid)
+```
 
 Delete account
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$check_message = "check_message_example"; // string | Proof message
-$uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of account to delete
+$check_message = 'check_message_example'; // string | Proof message
+$uuid = 'uuid_example'; // string | UUID of account to delete
 
 try {
     $apiInstance->deleteAccount($check_message, $uuid);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->deleteAccount: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **check_message** | **string**| Proof message |
- **uuid** | [**string**](../Model/.md)| UUID of account to delete |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **check_message** | **string**| Proof message | |
+| **uuid** | **string**| UUID of account to delete | |
 
 ### Return type
 
@@ -344,54 +356,56 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteCorporateUsers**
-> deleteCorporateUsers($body, $check_message, $account_uuid)
+## `deleteCorporateUsers()`
+
+```php
+deleteCorporateUsers($account_uuid, $check_message, $single_uuid_dto)
+```
 
 Delete corporate users
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = array(new \DocStudio\Client\Model\SingleUuidDTO()); // \DocStudio\Client\Model\SingleUuidDTO[] | 
-$check_message = "check_message_example"; // string | Proof message
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$check_message = 'check_message_example'; // string | Proof message
+$single_uuid_dto = array(new \DocStudio\Client\Model\SingleUuidDTO()); // \DocStudio\Client\Model\SingleUuidDTO[]
 
 try {
-    $apiInstance->deleteCorporateUsers($body, $check_message, $account_uuid);
+    $apiInstance->deleteCorporateUsers($account_uuid, $check_message, $single_uuid_dto);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->deleteCorporateUsers: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  |
- **check_message** | **string**| Proof message |
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **check_message** | **string**| Proof message | |
+| **single_uuid_dto** | [**\DocStudio\Client\Model\SingleUuidDTO[]**](../Model/SingleUuidDTO.md)|  | |
 
 ### Return type
 
@@ -399,52 +413,54 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteCryptoConfigs**
-> deleteCryptoConfigs($body, $account_uuid)
+## `deleteCryptoConfigs()`
+
+```php
+deleteCryptoConfigs($account_uuid, $request_body)
+```
 
 Delete crypto configs
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = array("body_example"); // string[] | 
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$request_body = array('request_body_example'); // string[]
 
 try {
-    $apiInstance->deleteCryptoConfigs($body, $account_uuid);
+    $apiInstance->deleteCryptoConfigs($account_uuid, $request_body);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->deleteCryptoConfigs: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**string[]**](../Model/string.md)|  |
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **request_body** | [**string[]**](../Model/string.md)|  | |
 
 ### Return type
 
@@ -452,36 +468,39 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getAccountBillingAddress**
-> \DocStudio\Client\Model\AccountAddressDTO getAccountBillingAddress($account_uuid)
+## `getAccountBillingAddress()`
+
+```php
+getAccountBillingAddress($account_uuid): \DocStudio\Client\Model\AccountAddressDTO
+```
 
 Get account billing address
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
 
 try {
     $result = $apiInstance->getAccountBillingAddress($account_uuid);
@@ -489,14 +508,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->getAccountBillingAddress: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
 
 ### Return type
 
@@ -504,37 +522,40 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getAccountBrandLogo**
-> string getAccountBrandLogo($account_uuid, $initials)
+## `getAccountBrandLogo()`
+
+```php
+getAccountBrandLogo($account_uuid, $initials): \SplFileObject
+```
 
 Retrieve account brand logo
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
-$initials = true; // bool | Get default avatar
+$account_uuid = 'account_uuid_example'; // string
+$initials = True; // bool | Get default avatar
 
 try {
     $result = $apiInstance->getAccountBrandLogo($account_uuid, $initials);
@@ -542,53 +563,55 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->getAccountBrandLogo: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **account_uuid** | [**string**](../Model/.md)|  |
- **initials** | **bool**| Get default avatar | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**|  | |
+| **initials** | **bool**| Get default avatar | [optional] |
 
 ### Return type
 
-**string**
+**\SplFileObject**
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getAccountDetails**
-> \DocStudio\Client\Model\AccountDTO getAccountDetails($uuid, $with_users)
+## `getAccountDetails()`
+
+```php
+getAccountDetails($uuid, $with_users): \DocStudio\Client\Model\AccountDTO
+```
 
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
-$with_users = false; // bool | 
+$uuid = 'uuid_example'; // string
+$with_users = false; // bool
 
 try {
     $result = $apiInstance->getAccountDetails($uuid, $with_users);
@@ -596,15 +619,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->getAccountDetails: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **uuid** | [**string**](../Model/.md)|  |
- **with_users** | **bool**|  | [optional] [default to false]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **uuid** | **string**|  | |
+| **with_users** | **bool**|  | [optional] [default to false] |
 
 ### Return type
 
@@ -612,37 +634,40 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getAccountLogoAccount**
-> string getAccountLogoAccount($account_uuid, $initials)
+## `getAccountLogoAccount()`
+
+```php
+getAccountLogoAccount($account_uuid, $initials): \SplFileObject
+```
 
 Retrieve account logo
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
-$initials = true; // bool | Get default avatar
+$account_uuid = 'account_uuid_example'; // string
+$initials = True; // bool | Get default avatar
 
 try {
     $result = $apiInstance->getAccountLogoAccount($account_uuid, $initials);
@@ -650,52 +675,54 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->getAccountLogoAccount: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **account_uuid** | [**string**](../Model/.md)|  |
- **initials** | **bool**| Get default avatar | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**|  | |
+| **initials** | **bool**| Get default avatar | [optional] |
 
 ### Return type
 
-**string**
+**\SplFileObject**
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getAccountUsersImportFileExample**
-> string getAccountUsersImportFileExample($account_uuid)
+## `getAccountUsersImportFileExample()`
+
+```php
+getAccountUsersImportFileExample($account_uuid): \SplFileObject
+```
 
 Get account users import file example
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
 
 try {
     $result = $apiInstance->getAccountUsersImportFileExample($account_uuid);
@@ -703,66 +730,69 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->getAccountUsersImportFileExample: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
 
 ### Return type
 
-**string**
+**\SplFileObject**
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/octet-stream
+- **Content-Type**: Not defined
+- **Accept**: `application/octet-stream`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getCryptoConfigs**
-> \DocStudio\Client\Model\CryptoConfigDTO[] getCryptoConfigs($account_uuid)
+## `getCryptoConfigs()`
+
+```php
+getCryptoConfigs($account_uuid, $mailbox): \DocStudio\Client\Model\CryptoConfigDTO[]
+```
 
 Get crypto configs
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
-    $result = $apiInstance->getCryptoConfigs($account_uuid);
+    $result = $apiInstance->getCryptoConfigs($account_uuid, $mailbox);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->getCryptoConfigs: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
 
 ### Return type
 
@@ -770,36 +800,39 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getMailbox**
-> \DocStudio\Client\Model\MailboxAccountSimpleDTO getMailbox($uuid)
+## `getMailbox()`
+
+```php
+getMailbox($uuid): \DocStudio\Client\Model\MailboxAccountSimpleDTO
+```
 
 Users and their permissions by mailbox
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
+$uuid = 'uuid_example'; // string
 
 try {
     $result = $apiInstance->getMailbox($uuid);
@@ -807,14 +840,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->getMailbox: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **uuid** | [**string**](../Model/.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **uuid** | **string**|  | |
 
 ### Return type
 
@@ -822,36 +854,39 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getUserPolicies**
-> \DocStudio\Client\Model\AccountPoliciesDTO getUserPolicies($account_uuid)
+## `getUserPolicies()`
+
+```php
+getUserPolicies($account_uuid): \DocStudio\Client\Model\AccountPoliciesDTO
+```
 
 Get user password/session policies
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
 
 try {
     $result = $apiInstance->getUserPolicies($account_uuid);
@@ -859,14 +894,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->getUserPolicies: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
 
 ### Return type
 
@@ -874,57 +908,59 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getUsersPermissions**
-> \DocStudio\Client\Model\PageDTOUserMailboxPermissionsDTO getUsersPermissions($body, $account_uuid, $offset, $limit)
+## `getUsersPermissions()`
+
+```php
+getUsersPermissions($account_uuid, $users_search_filter_dto, $offset, $limit): \DocStudio\Client\Model\PageDTOUserMailboxPermissionsDTO
+```
 
 Get users with permissions per account and mailboxes
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\UsersSearchFilterDTO(); // \DocStudio\Client\Model\UsersSearchFilterDTO | 
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of Account
+$account_uuid = 'account_uuid_example'; // string | UUID of Account
+$users_search_filter_dto = new \DocStudio\Client\Model\UsersSearchFilterDTO(); // \DocStudio\Client\Model\UsersSearchFilterDTO
 $offset = 0; // int | Offset, how much envelopes to skip
 $limit = 25; // int | Limit, how much envelopes to retrieve
 
 try {
-    $result = $apiInstance->getUsersPermissions($body, $account_uuid, $offset, $limit);
+    $result = $apiInstance->getUsersPermissions($account_uuid, $users_search_filter_dto, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->getUsersPermissions: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\UsersSearchFilterDTO**](../Model/UsersSearchFilterDTO.md)|  |
- **account_uuid** | [**string**](../Model/.md)| UUID of Account |
- **offset** | **int**| Offset, how much envelopes to skip | [optional] [default to 0]
- **limit** | **int**| Limit, how much envelopes to retrieve | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| UUID of Account | |
+| **users_search_filter_dto** | [**\DocStudio\Client\Model\UsersSearchFilterDTO**](../Model/UsersSearchFilterDTO.md)|  | |
+| **offset** | **int**| Offset, how much envelopes to skip | [optional] [default to 0] |
+| **limit** | **int**| Limit, how much envelopes to retrieve | [optional] [default to 25] |
 
 ### Return type
 
@@ -932,52 +968,54 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **mailboxesReport**
-> mailboxesReport($body, $account_uuid)
+## `mailboxesReport()`
+
+```php
+mailboxesReport($account_uuid, $report_mailboxes_request_dto)
+```
 
 Generate account mailboxes report
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\ReportMailboxesRequestDTO(); // \DocStudio\Client\Model\ReportMailboxesRequestDTO | 
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$report_mailboxes_request_dto = new \DocStudio\Client\Model\ReportMailboxesRequestDTO(); // \DocStudio\Client\Model\ReportMailboxesRequestDTO
 
 try {
-    $apiInstance->mailboxesReport($body, $account_uuid);
+    $apiInstance->mailboxesReport($account_uuid, $report_mailboxes_request_dto);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->mailboxesReport: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\ReportMailboxesRequestDTO**](../Model/ReportMailboxesRequestDTO.md)|  |
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **report_mailboxes_request_dto** | [**\DocStudio\Client\Model\ReportMailboxesRequestDTO**](../Model/ReportMailboxesRequestDTO.md)|  | |
 
 ### Return type
 
@@ -985,52 +1023,54 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **resendCorporateUserWelcomeMessage**
-> resendCorporateUserWelcomeMessage($account_uuid, $user_uuid)
+## `resendCorporateUserWelcomeMessage()`
+
+```php
+resendCorporateUserWelcomeMessage($account_uuid, $user_uuid)
+```
 
 Resend corporate user welcome message
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
-$user_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | User UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$user_uuid = 'user_uuid_example'; // string | User UUID
 
 try {
     $apiInstance->resendCorporateUserWelcomeMessage($account_uuid, $user_uuid);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->resendCorporateUserWelcomeMessage: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
- **user_uuid** | [**string**](../Model/.md)| User UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **user_uuid** | **string**| User UUID | |
 
 ### Return type
 
@@ -1038,52 +1078,54 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **saveUserPolicies**
-> saveUserPolicies($body, $account_uuid)
+## `saveUserPolicies()`
+
+```php
+saveUserPolicies($account_uuid, $account_policies_dto)
+```
 
 Save user password/session policies
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\AccountPoliciesDTO(); // \DocStudio\Client\Model\AccountPoliciesDTO | 
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$account_policies_dto = new \DocStudio\Client\Model\AccountPoliciesDTO(); // \DocStudio\Client\Model\AccountPoliciesDTO
 
 try {
-    $apiInstance->saveUserPolicies($body, $account_uuid);
+    $apiInstance->saveUserPolicies($account_uuid, $account_policies_dto);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->saveUserPolicies: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\AccountPoliciesDTO**](../Model/AccountPoliciesDTO.md)|  |
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **account_policies_dto** | [**\DocStudio\Client\Model\AccountPoliciesDTO**](../Model/AccountPoliciesDTO.md)|  | |
 
 ### Return type
 
@@ -1091,57 +1133,63 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **searchMailboxesAccount**
-> \DocStudio\Client\Model\PageDTOAccountMailboxInfoDTO searchMailboxesAccount($account_uuid, $keyword, $offset, $limit)
+## `searchMailboxesAccount()`
+
+```php
+searchMailboxesAccount($account_uuid, $keyword, $with_groups, $group, $offset, $limit): \DocStudio\Client\Model\PageDTOAccountMailboxInfoDTO
+```
 
 Get paged account mailboxes list
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
-$keyword = "keyword_example"; // string | Keyword to search mailbox by or mailbox UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$keyword = 'keyword_example'; // string | Keyword to search mailbox by or mailbox UUID
+$with_groups = True; // bool | Include groups info into response
+$group = array('group_example'); // string[] | Include groups info into response
 $offset = 0; // int | Offset records
 $limit = 25; // int | Limit records, max is 1000
 
 try {
-    $result = $apiInstance->searchMailboxesAccount($account_uuid, $keyword, $offset, $limit);
+    $result = $apiInstance->searchMailboxesAccount($account_uuid, $keyword, $with_groups, $group, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->searchMailboxesAccount: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
- **keyword** | **string**| Keyword to search mailbox by or mailbox UUID | [optional]
- **offset** | **int**| Offset records | [optional] [default to 0]
- **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **keyword** | **string**| Keyword to search mailbox by or mailbox UUID | [optional] |
+| **with_groups** | **bool**| Include groups info into response | [optional] |
+| **group** | [**string[]**](../Model/string.md)| Include groups info into response | [optional] |
+| **offset** | **int**| Offset records | [optional] [default to 0] |
+| **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25] |
 
 ### Return type
 
@@ -1149,53 +1197,55 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateAccountBillingAddress**
-> \DocStudio\Client\Model\AccountAddressDTO updateAccountBillingAddress($body, $account_uuid)
+## `updateAccountBillingAddress()`
+
+```php
+updateAccountBillingAddress($account_uuid, $account_address_dto): \DocStudio\Client\Model\AccountAddressDTO
+```
 
 Create/update account billing address
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\AccountAddressDTO(); // \DocStudio\Client\Model\AccountAddressDTO | 
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Account UUID
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$account_address_dto = new \DocStudio\Client\Model\AccountAddressDTO(); // \DocStudio\Client\Model\AccountAddressDTO
 
 try {
-    $result = $apiInstance->updateAccountBillingAddress($body, $account_uuid);
+    $result = $apiInstance->updateAccountBillingAddress($account_uuid, $account_address_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->updateAccountBillingAddress: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\AccountAddressDTO**](../Model/AccountAddressDTO.md)|  |
- **account_uuid** | [**string**](../Model/.md)| Account UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **account_address_dto** | [**\DocStudio\Client\Model\AccountAddressDTO**](../Model/AccountAddressDTO.md)|  | |
 
 ### Return type
 
@@ -1203,53 +1253,55 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **updateAccountDetails**
-> \DocStudio\Client\Model\AccountDTO updateAccountDetails($body, $uuid)
+## `updateAccountDetails()`
+
+```php
+updateAccountDetails($uuid, $account_dto): \DocStudio\Client\Model\AccountDTO
+```
 
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\AccountDTO(); // \DocStudio\Client\Model\AccountDTO | 
-$uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | 
+$uuid = 'uuid_example'; // string
+$account_dto = new \DocStudio\Client\Model\AccountDTO(); // \DocStudio\Client\Model\AccountDTO
 
 try {
-    $result = $apiInstance->updateAccountDetails($body, $uuid);
+    $result = $apiInstance->updateAccountDetails($uuid, $account_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->updateAccountDetails: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\AccountDTO**](../Model/AccountDTO.md)|  |
- **uuid** | [**string**](../Model/.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **uuid** | **string**|  | |
+| **account_dto** | [**\DocStudio\Client\Model\AccountDTO**](../Model/AccountDTO.md)|  | |
 
 ### Return type
 
@@ -1257,52 +1309,54 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **usersReport**
-> usersReport($body, $account_uuid)
+## `usersReport()`
+
+```php
+usersReport($account_uuid, $report_users_request_dto)
+```
 
 Generate account users report
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\ReportUsersRequestDTO(); // \DocStudio\Client\Model\ReportUsersRequestDTO | 
-$account_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | UUID of Account
+$account_uuid = 'account_uuid_example'; // string | UUID of Account
+$report_users_request_dto = new \DocStudio\Client\Model\ReportUsersRequestDTO(); // \DocStudio\Client\Model\ReportUsersRequestDTO
 
 try {
-    $apiInstance->usersReport($body, $account_uuid);
+    $apiInstance->usersReport($account_uuid, $report_users_request_dto);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->usersReport: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\ReportUsersRequestDTO**](../Model/ReportUsersRequestDTO.md)|  |
- **account_uuid** | [**string**](../Model/.md)| UUID of Account |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| UUID of Account | |
+| **report_users_request_dto** | [**\DocStudio\Client\Model\ReportUsersRequestDTO**](../Model/ReportUsersRequestDTO.md)|  | |
 
 ### Return type
 
@@ -1310,12 +1364,13 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: Not defined
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

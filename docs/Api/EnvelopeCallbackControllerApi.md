@@ -1,51 +1,112 @@
 # DocStudio\Client\EnvelopeCallbackControllerApi
 
-All URIs are relative to *https://api.docstudio.com*
+All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createCallback**](EnvelopeCallbackControllerApi.md#createcallback) | **POST** /api/v1/envelope/callback/add | Add new callback
-[**listCallbacks**](EnvelopeCallbackControllerApi.md#listcallbacks) | **GET** /api/v1/envelope/callback/list | List callbacks
-[**removeCallback**](EnvelopeCallbackControllerApi.md#removecallback) | **DELETE** /api/v1/envelope/callback/{callbackUuid}/remove | Delete callback
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**checkCallback()**](EnvelopeCallbackControllerApi.md#checkCallback) | **GET** /api/v1/envelope/callback/{callbackUuid}/check | Check callback with certain envelope |
+| [**createCallback()**](EnvelopeCallbackControllerApi.md#createCallback) | **POST** /api/v1/envelope/callback/add | Add new callback |
+| [**listCallbacks()**](EnvelopeCallbackControllerApi.md#listCallbacks) | **GET** /api/v1/envelope/callback/list | List callbacks |
+| [**removeCallback()**](EnvelopeCallbackControllerApi.md#removeCallback) | **DELETE** /api/v1/envelope/callback/{callbackUuid}/remove | Delete callback |
+| [**sendCallback()**](EnvelopeCallbackControllerApi.md#sendCallback) | **GET** /api/v1/envelope/callback/{callbackUuid}/send | Send callback with certain envelope |
 
-# **createCallback**
-> \DocStudio\Client\Model\EnvelopeCallbackDTO createCallback($body, $mailbox)
 
-Add new callback
+## `checkCallback()`
+
+```php
+checkCallback($callback_uuid, $envelope_uuid, $mailbox_uuid): \DocStudio\Client\Model\EnvelopeCheckResultDTO
+```
+
+Check callback with certain envelope
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\EnvelopeCallbackControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\CreateEnvelopeCallbackDTO(); // \DocStudio\Client\Model\CreateEnvelopeCallbackDTO | 
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$callback_uuid = 'callback_uuid_example'; // string | Callback id
+$envelope_uuid = 'envelope_uuid_example'; // string | Envelope UUID
+$mailbox_uuid = 'mailbox_uuid_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
-    $result = $apiInstance->createCallback($body, $mailbox);
+    $result = $apiInstance->checkCallback($callback_uuid, $envelope_uuid, $mailbox_uuid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EnvelopeCallbackControllerApi->createCallback: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling EnvelopeCallbackControllerApi->checkCallback: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\CreateEnvelopeCallbackDTO**](../Model/CreateEnvelopeCallbackDTO.md)|  |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **callback_uuid** | **string**| Callback id | |
+| **envelope_uuid** | **string**| Envelope UUID | |
+| **mailbox_uuid** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+[**\DocStudio\Client\Model\EnvelopeCheckResultDTO**](../Model/EnvelopeCheckResultDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `createCallback()`
+
+```php
+createCallback($mailbox, $create_envelope_callback_dto): \DocStudio\Client\Model\EnvelopeCallbackDTO
+```
+
+Add new callback
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new DocStudio\Client\Api\EnvelopeCallbackControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$create_envelope_callback_dto = new \DocStudio\Client\Model\CreateEnvelopeCallbackDTO(); // \DocStudio\Client\Model\CreateEnvelopeCallbackDTO
+
+try {
+    $result = $apiInstance->createCallback($mailbox, $create_envelope_callback_dto);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnvelopeCallbackControllerApi->createCallback: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **create_envelope_callback_dto** | [**\DocStudio\Client\Model\CreateEnvelopeCallbackDTO**](../Model/CreateEnvelopeCallbackDTO.md)|  | |
 
 ### Return type
 
@@ -53,36 +114,39 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **listCallbacks**
-> \DocStudio\Client\Model\EnvelopeCallbackDTO[] listCallbacks($mailbox)
+## `listCallbacks()`
+
+```php
+listCallbacks($mailbox): \DocStudio\Client\Model\EnvelopeCallbackDTO[]
+```
 
 List callbacks
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\EnvelopeCallbackControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
     $result = $apiInstance->listCallbacks($mailbox);
@@ -90,14 +154,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EnvelopeCallbackControllerApi->listCallbacks: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -105,52 +168,54 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **removeCallback**
-> removeCallback($callback_uuid, $mailbox)
+## `removeCallback()`
+
+```php
+removeCallback($callback_uuid, $mailbox)
+```
 
 Delete callback
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\EnvelopeCallbackControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$callback_uuid = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Callback id
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$callback_uuid = 'callback_uuid_example'; // string | Callback id
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
     $apiInstance->removeCallback($callback_uuid, $mailbox);
 } catch (Exception $e) {
     echo 'Exception when calling EnvelopeCallbackControllerApi->removeCallback: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **callback_uuid** | [**string**](../Model/.md)| Callback id |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **callback_uuid** | **string**| Callback id | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -158,12 +223,71 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
+## `sendCallback()`
+
+```php
+sendCallback($callback_uuid, $envelope_uuid, $mailbox_uuid): \DocStudio\Client\Model\EnvelopeSendResultDTO
+```
+
+Send callback with certain envelope
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new DocStudio\Client\Api\EnvelopeCallbackControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$callback_uuid = 'callback_uuid_example'; // string | Callback id
+$envelope_uuid = 'envelope_uuid_example'; // string | Envelope UUID
+$mailbox_uuid = 'mailbox_uuid_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+
+try {
+    $result = $apiInstance->sendCallback($callback_uuid, $envelope_uuid, $mailbox_uuid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnvelopeCallbackControllerApi->sendCallback: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **callback_uuid** | **string**| Callback id | |
+| **envelope_uuid** | **string**| Envelope UUID | |
+| **mailbox_uuid** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+[**\DocStudio\Client\Model\EnvelopeSendResultDTO**](../Model/EnvelopeSendResultDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

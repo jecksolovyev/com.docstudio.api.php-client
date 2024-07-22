@@ -1,51 +1,53 @@
 # DocStudio\Client\AliasControllerApi
 
-All URIs are relative to *https://api.docstudio.com*
+All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createAlias**](AliasControllerApi.md#createalias) | **POST** /api/v1/alias | Save alias to mailbox
-[**deleteAlias**](AliasControllerApi.md#deletealias) | **DELETE** /api/v1/alias | Delete alias
-[**getAllByMailbox**](AliasControllerApi.md#getallbymailbox) | **GET** /api/v1/alias/mailbox | Get aliases by mailbox
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createAlias()**](AliasControllerApi.md#createAlias) | **POST** /api/v1/alias | Save alias to mailbox |
+| [**deleteAlias()**](AliasControllerApi.md#deleteAlias) | **DELETE** /api/v1/alias | Delete alias |
+| [**getAllByMailbox()**](AliasControllerApi.md#getAllByMailbox) | **GET** /api/v1/alias/qualifiedID/{id} | Get mailbox UUID by qualified ID |
+| [**getAllByMailboxAlias()**](AliasControllerApi.md#getAllByMailboxAlias) | **GET** /api/v1/alias/mailbox | Get aliases by mailbox |
 
-# **createAlias**
-> \DocStudio\Client\Model\AliasDTO createAlias($body, $mailbox)
+
+## `createAlias()`
+
+```php
+createAlias($mailbox, $alias_dto): \DocStudio\Client\Model\AliasDTO
+```
 
 Save alias to mailbox
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AliasControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$body = new \DocStudio\Client\Model\AliasDTO(); // \DocStudio\Client\Model\AliasDTO | 
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$alias_dto = new \DocStudio\Client\Model\AliasDTO(); // \DocStudio\Client\Model\AliasDTO
 
 try {
-    $result = $apiInstance->createAlias($body, $mailbox);
+    $result = $apiInstance->createAlias($mailbox, $alias_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AliasControllerApi->createAlias: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\DocStudio\Client\Model\AliasDTO**](../Model/AliasDTO.md)|  |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **alias_dto** | [**\DocStudio\Client\Model\AliasDTO**](../Model/AliasDTO.md)|  | |
 
 ### Return type
 
@@ -53,52 +55,54 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **deleteAlias**
-> deleteAlias($name, $mailbox)
+## `deleteAlias()`
+
+```php
+deleteAlias($name, $mailbox)
+```
 
 Delete alias
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AliasControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$name = "name_example"; // string | 
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$name = 'name_example'; // string
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
     $apiInstance->deleteAlias($name, $mailbox);
 } catch (Exception $e) {
     echo 'Exception when calling AliasControllerApi->deleteAlias: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**|  |
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **name** | **string**|  | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
 
@@ -106,51 +110,109 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **getAllByMailbox**
-> \DocStudio\Client\Model\AliasDTO[] getAllByMailbox($mailbox)
+## `getAllByMailbox()`
 
-Get aliases by mailbox
+```php
+getAllByMailbox($id): \DocStudio\Client\Model\SingleUuidDTO
+```
+
+Get mailbox UUID by qualified ID
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-    // Configure HTTP bearer authorization: Authorization
-    $config = DocStudio\Client\Configuration::getDefaultConfiguration()
-    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 
 $apiInstance = new DocStudio\Client\Api\AliasControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$mailbox = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Mailbox context, HTTP Header with current mailbox UUID
+$id = 'id_example'; // string
 
 try {
-    $result = $apiInstance->getAllByMailbox($mailbox);
+    $result = $apiInstance->getAllByMailbox($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AliasControllerApi->getAllByMailbox: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mailbox** | [**string**](../Model/.md)| Mailbox context, HTTP Header with current mailbox UUID |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getAllByMailboxAlias()`
+
+```php
+getAllByMailboxAlias($mailbox, $qualified): \DocStudio\Client\Model\AliasDTO[]
+```
+
+Get aliases by mailbox
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new DocStudio\Client\Api\AliasControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$qualified = True; // bool
+
+try {
+    $result = $apiInstance->getAllByMailboxAlias($mailbox, $qualified);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AliasControllerApi->getAllByMailboxAlias: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **qualified** | **bool**|  | [optional] |
 
 ### Return type
 
@@ -158,12 +220,13 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
