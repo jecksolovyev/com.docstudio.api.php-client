@@ -14646,9 +14646,11 @@ class EnvelopeControllerApi
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
                         $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ] + (
+                            gettype($formParamValueItem) === 'resource' ? [] : ['headers' => ['Content-Type' => 'application/json']]
+                            );
                     }
                 }
                 // for HTTP post (form)

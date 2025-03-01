@@ -34,52 +34,54 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```php
 <?php
-    require_once(__DIR__ . '/vendor/autoload.php');
-    
-    use DocStudio\Client\ApiException;
-    use DocStudio\Client\Configuration;
-    use DocStudio\Client\Model\LoginDTO;
-    use DocStudio\Client\Model\QuickSendDTO;
-    use DocStudio\Client\Model\QuickSendRecipientDTO;
-    use DocStudio\Client\Api\EnvelopeControllerApi;
-    use DocStudio\Client\Api\AuthenticationControllerApi;
-    
-    
-    $httpClient = new GuzzleHttp\Client([
-            'timeout' => 30,
-            'connect_timeout' => 30,
-            'read_timeout' => 30
-        ]
-    );
-    
-    $username = 'my@email.com';
-    $password = 'password';
-    
-    $loginController = new AuthenticationControllerApi($httpClient);
-    
-    $token = $loginController->login((new LoginDTO())->setLogin($username)->setPassword($password))->getToken();
-    
-    echo 'Token: ' . $token . PHP_EOL;
-    
-    $configuration = new Configuration();
-    $configuration->setUserAgent('Demo integration')->setAccessToken($token);
-    
-    $mailboxController = new DocStudio\Client\Api\MailboxControllerApi($httpClient, $configuration);
-    $mailboxUuid = $mailboxController->getAllForUser()[0]->getMailboxUuid();
-    $envelopeController = new EnvelopeControllerApi($httpClient, $configuration);
-    
-    $quickSendRequest = new QuickSendDTO();
-    $quickSendRequest->setSubject('Test envelope')->setMessage('Test envelope message');
-    $sender = new QuickSendRecipientDTO();
-    $recipients = [];
-    $sender->setRecipient($mailboxUuid)->setSigner(true)->setEInkSignature(true);
-    $recipients[] = $sender;
-    $recipient = new QuickSendRecipientDTO();
-    $recipient->setRecipient('wife@family.com')->setSigner(true)->setEInkSignature(true);
-    $recipients[] = $recipient;
-    $quickSendRequest->setRecipients($recipients);
 
-    $envelopeController->quickSendExternalDocuments(['/app/sample.pdf', '/app/sample2.pdf'], $quickSendRequest, $mailboxUuid);
+  require_once(__DIR__ . '/vendor/autoload.php');
+  
+  use DocStudio\Client\Configuration;
+  use DocStudio\Client\Model\LoginDTO;
+  use DocStudio\Client\Model\QuickSendDTO;
+  use DocStudio\Client\Model\QuickSendRecipientDTO;
+  use DocStudio\Client\Api\EnvelopeControllerApi;
+  use DocStudio\Client\Api\AuthenticationControllerApi;
+  
+  
+  $httpClient = new GuzzleHttp\Client([
+          'timeout' => 30,
+          'connect_timeout' => 30,
+          'read_timeout' => 30
+      ]
+  );
+  
+  $username = 'user@domain.com';
+  $password = 'password';
+  
+  $loginController = new AuthenticationControllerApi($httpClient);
+  $token = $loginController->login((new LoginDTO())->setLogin($username)->setPassword($password))->getToken();
+  
+  echo 'Token: ' . $token . PHP_EOL;
+  
+  $configuration = new Configuration();
+  $configuration->setUserAgent('Demo integration')->setAccessToken($token);
+  $configuration->setDebug(true);
+  $configuration->setDebugFile(__DIR__ . '/debug.log');
+  
+  $mailboxController = new DocStudio\Client\Api\MailboxControllerApi($httpClient, $configuration);
+  $mailboxUuid = $mailboxController->getAllForUser()[0]->getMailboxUuid();
+  $envelopeController = new EnvelopeControllerApi($httpClient, $configuration);
+  
+  $quickSendRequest = new QuickSendDTO();
+  $quickSendRequest->setSubject('Test envelope')->setMessage('Test envelope message');
+  $sender = new QuickSendRecipientDTO();
+  $recipients = [];
+  $sender->setRecipient($mailboxUuid)->setSigner(true)->setEInkSignature(true);
+  $recipients[] = $sender;
+  $recipient = new QuickSendRecipientDTO();
+  $recipient->setRecipient('wife@family.com')->setSigner(true)->setEInkSignature(true);
+  $recipients[] = $recipient;
+  $quickSendRequest->setRecipients($recipients);
+  
+  $uuid = $envelopeController->quickSendExternalDocuments($mailboxUuid, [new SplFileObject(__DIR__ . '/singlepage.pdf')], $quickSendRequest);
+  echo $uuid->getUuid() . PHP_EOL;
 ```
 
 ## API Endpoints
