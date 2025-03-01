@@ -10,6 +10,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**getMailboxFolders()**](EnvelopeSearchControllerApi.md#getMailboxFolders) | **POST** /api/v1/envelope/mailbox-folders | Retrieve all available folders for mailbox |
 | [**getSearchFields()**](EnvelopeSearchControllerApi.md#getSearchFields) | **POST** /api/v1/envelope/fields | Get search fields |
 | [**getTemplateRoles()**](EnvelopeSearchControllerApi.md#getTemplateRoles) | **POST** /api/v1/envelope/search/roles | Retrieve all template roles |
+| [**resetColumnSettings()**](EnvelopeSearchControllerApi.md#resetColumnSettings) | **POST** /api/v1/envelope/column-reset | Reset column settings |
 | [**searchEnvelopes()**](EnvelopeSearchControllerApi.md#searchEnvelopes) | **POST** /api/v1/envelope/search | Search envelopes |
 | [**searchEnvelopesForApproval()**](EnvelopeSearchControllerApi.md#searchEnvelopesForApproval) | **POST** /api/v1/envelope/search-approvals | Search envelopes for approval |
 | [**updateColumn()**](EnvelopeSearchControllerApi.md#updateColumn) | **PUT** /api/v1/envelope/column/{uuid} | Update column to display |
@@ -375,6 +376,64 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `resetColumnSettings()`
+
+```php
+resetColumnSettings($mailbox): \DocStudio\Client\Model\EnvelopeViewColumn[]
+```
+
+Reset column settings
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\EnvelopeSearchControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+
+try {
+    $result = $apiInstance->resetColumnSettings($mailbox);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnvelopeSearchControllerApi->resetColumnSettings: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+[**\DocStudio\Client\Model\EnvelopeViewColumn[]**](../Model/EnvelopeViewColumn.md)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `searchEnvelopes()`
 
 ```php
@@ -444,7 +503,7 @@ try {
 ## `searchEnvelopesForApproval()`
 
 ```php
-searchEnvelopesForApproval($mailbox, $search_approvals_dto, $offset, $limit): \DocStudio\Client\Model\EnvelopeApprovalPageDTO
+searchEnvelopesForApproval($mailbox, $search_approvals_dto, $offset, $limit, $uuid_only): \DocStudio\Client\Model\EnvelopeApprovalPageDTO
 ```
 
 Search envelopes for approval
@@ -470,9 +529,10 @@ $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with curr
 $search_approvals_dto = new \DocStudio\Client\Model\SearchApprovalsDTO(); // \DocStudio\Client\Model\SearchApprovalsDTO
 $offset = 0; // int | Offset, how many envelopes to skip
 $limit = 25; // int | Limit, how many envelopes to retrieve
+$uuid_only = True; // bool | Retrieve only UUID of envelope
 
 try {
-    $result = $apiInstance->searchEnvelopesForApproval($mailbox, $search_approvals_dto, $offset, $limit);
+    $result = $apiInstance->searchEnvelopesForApproval($mailbox, $search_approvals_dto, $offset, $limit, $uuid_only);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EnvelopeSearchControllerApi->searchEnvelopesForApproval: ', $e->getMessage(), PHP_EOL;
@@ -487,6 +547,7 @@ try {
 | **search_approvals_dto** | [**\DocStudio\Client\Model\SearchApprovalsDTO**](../Model/SearchApprovalsDTO.md)|  | |
 | **offset** | **int**| Offset, how many envelopes to skip | [optional] [default to 0] |
 | **limit** | **int**| Limit, how many envelopes to retrieve | [optional] [default to 25] |
+| **uuid_only** | **bool**| Retrieve only UUID of envelope | [optional] |
 
 ### Return type
 

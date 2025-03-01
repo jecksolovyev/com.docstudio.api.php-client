@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **data_modified_at** | **\DateTime** | Template data update date | [optional]
 **access** | **string** | Template access level | [optional]
 **mailbox** | **string** | Template creator&#39;s mailbox | [optional]
+**account** | **string** | Template creator&#39;s account | [optional]
 **archive** | **bool** | Template archived | [optional]
 **new_envelope_can_be_created** | **bool** | Returns a flag whether a new envelope can be created using this template | [optional]
 **default_download_options** | **bool** | Returns a flag whether default download options should appear or only custom one | [optional]

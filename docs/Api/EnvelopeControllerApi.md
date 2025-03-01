@@ -6,6 +6,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | ------------- | ------------- | ------------- |
 | [**acceptUserPendingInvitations()**](EnvelopeControllerApi.md#acceptUserPendingInvitations) | **POST** /api/v1/envelope/invitations | Accept user&#39;s pending invitations |
 | [**addEnvelopesIntoChain()**](EnvelopeControllerApi.md#addEnvelopesIntoChain) | **PUT** /api/v1/envelope/chain/{chainUuid} | Add envelopes into chain |
+| [**approve()**](EnvelopeControllerApi.md#approve) | **POST** /api/v1/envelope/approve | Approve envelope |
 | [**archive()**](EnvelopeControllerApi.md#archive) | **PATCH** /api/v1/envelope/archive/{flag} | Archive envelopes |
 | [**cancelApprovalFlow()**](EnvelopeControllerApi.md#cancelApprovalFlow) | **DELETE** /api/v1/envelope/{envelopeUuid}/approval/{flowUuid} | Cancel envelope approval |
 | [**cancelEnvelopeDelegation()**](EnvelopeControllerApi.md#cancelEnvelopeDelegation) | **DELETE** /api/v1/envelope/delegate | Cancel envelope delegation |
@@ -16,8 +17,8 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**cloneAttachment()**](EnvelopeControllerApi.md#cloneAttachment) | **POST** /api/v1/envelope/clone-attachment | Clone an existing attachment |
 | [**confirmInvite()**](EnvelopeControllerApi.md#confirmInvite) | **POST** /api/v1/envelope/confirm-invite | Accept/confirm invitations |
 | [**continueScenarioStep()**](EnvelopeControllerApi.md#continueScenarioStep) | **POST** /api/v1/envelope/{envelopeUuid}/scenario/{stepId} | Continue scenario flow with step |
+| [**create()**](EnvelopeControllerApi.md#create) | **POST** /api/v1/envelope | Create draft envelope |
 | [**createAttachment()**](EnvelopeControllerApi.md#createAttachment) | **POST** /api/v1/envelope/attachment | Create/upload new attachment |
-| [**createEnvelope()**](EnvelopeControllerApi.md#createEnvelope) | **POST** /api/v1/envelope | Create draft envelope |
 | [**createEnvelopeComment()**](EnvelopeControllerApi.md#createEnvelopeComment) | **POST** /api/v1/envelope/{envelopeUuid}/comment | Create envelope comment thread |
 | [**createPdfAttachment()**](EnvelopeControllerApi.md#createPdfAttachment) | **POST** /api/v1/envelope/pdf-attachment | Create/upload new PDF attachment |
 | [**delegateEnvelopes()**](EnvelopeControllerApi.md#delegateEnvelopes) | **POST** /api/v1/envelope/delegate | Delegate envelopes |
@@ -25,7 +26,8 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**deleteEnvelopeComment()**](EnvelopeControllerApi.md#deleteEnvelopeComment) | **DELETE** /api/v1/envelope/{envelopeUuid}/comment | Delete envelope comment in thread or the whole thread |
 | [**downloadEnvelopeAttachment()**](EnvelopeControllerApi.md#downloadEnvelopeAttachment) | **GET** /api/v1/envelope/attachment | Download attachment with specific type or raw |
 | [**downloadFinalPdf()**](EnvelopeControllerApi.md#downloadFinalPdf) | **GET** /api/v1/envelope/{envelopeUuid}/download-final-pdf | Download final PDF |
-| [**envelopeApproval()**](EnvelopeControllerApi.md#envelopeApproval) | **PUT** /api/v1/envelope/{envelopeUuid}/approval/{flowUuid} | Approve or Reject envelope |
+| [**downloadSharedAttachment()**](EnvelopeControllerApi.md#downloadSharedAttachment) | **GET** /api/v1/envelope/shared-attachment | Download shared attachment for specific provider |
+| [**envelopeApproval()**](EnvelopeControllerApi.md#envelopeApproval) | **PUT** /api/v1/envelope/approval | Approve or Reject envelopes |
 | [**envelopeApprovalHistory()**](EnvelopeControllerApi.md#envelopeApprovalHistory) | **GET** /api/v1/envelope/{envelopeUuid}/approval-history | Get approval history |
 | [**fill()**](EnvelopeControllerApi.md#fill) | **PUT** /api/v1/envelope/fill | Fill envelope |
 | [**generateStamp()**](EnvelopeControllerApi.md#generateStamp) | **POST** /api/v1/envelope/generate-stamp | Generate stamp by certificate |
@@ -43,6 +45,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**getEnvelopeInviteUnauthorized()**](EnvelopeControllerApi.md#getEnvelopeInviteUnauthorized) | **GET** /api/v1/envelope/invite-info | Get information about envelope by the invitation code (by unauthenticated user) |
 | [**getEnvelopeSharedZip()**](EnvelopeControllerApi.md#getEnvelopeSharedZip) | **GET** /api/v1/envelope/download-shared | Get shared zip archive |
 | [**getEnvelopeZip()**](EnvelopeControllerApi.md#getEnvelopeZip) | **GET** /api/v1/envelope/{envelopeUuid}/zip | Get envelope or document zip archive |
+| [**getMassSigningReport()**](EnvelopeControllerApi.md#getMassSigningReport) | **GET** /api/v1/envelope/signing-report/{sessionId} | Get mass signing report |
 | [**getUserPendingInvitations()**](EnvelopeControllerApi.md#getUserPendingInvitations) | **GET** /api/v1/envelope/invitations | Get user&#39;s pending invitations |
 | [**mergeEnvelopesIntoChain()**](EnvelopeControllerApi.md#mergeEnvelopesIntoChain) | **POST** /api/v1/envelope/chain | Merge envelopes into chain |
 | [**oneTimeSend()**](EnvelopeControllerApi.md#oneTimeSend) | **POST** /api/v1/envelope/one-time-send | The envelope will be sent just once (template will be marked as deleted) |
@@ -184,6 +187,66 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `approve()`
+
+```php
+approve($mailbox, $bulk_envelope_action_dto): \DocStudio\Client\Model\SingleUuidDTO
+```
+
+Approve envelope
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$bulk_envelope_action_dto = new \DocStudio\Client\Model\BulkEnvelopeActionDTO(); // \DocStudio\Client\Model\BulkEnvelopeActionDTO
+
+try {
+    $result = $apiInstance->approve($mailbox, $bulk_envelope_action_dto);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnvelopeControllerApi->approve: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **bulk_envelope_action_dto** | [**\DocStudio\Client\Model\BulkEnvelopeActionDTO**](../Model/BulkEnvelopeActionDTO.md)|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `archive()`
 
 ```php
@@ -309,7 +372,7 @@ void (empty response body)
 ## `cancelEnvelopeDelegation()`
 
 ```php
-cancelEnvelopeDelegation($mailbox, $env_cancel_delegation_dto)
+cancelEnvelopeDelegation($mailbox, $envelope_cancel_delegation_dto)
 ```
 
 Cancel envelope delegation
@@ -332,10 +395,10 @@ $apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
     $config
 );
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$env_cancel_delegation_dto = new \DocStudio\Client\Model\EnvCancelDelegationDTO(); // \DocStudio\Client\Model\EnvCancelDelegationDTO
+$envelope_cancel_delegation_dto = new \DocStudio\Client\Model\EnvelopeCancelDelegationDTO(); // \DocStudio\Client\Model\EnvelopeCancelDelegationDTO
 
 try {
-    $apiInstance->cancelEnvelopeDelegation($mailbox, $env_cancel_delegation_dto);
+    $apiInstance->cancelEnvelopeDelegation($mailbox, $envelope_cancel_delegation_dto);
 } catch (Exception $e) {
     echo 'Exception when calling EnvelopeControllerApi->cancelEnvelopeDelegation: ', $e->getMessage(), PHP_EOL;
 }
@@ -346,7 +409,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **env_cancel_delegation_dto** | [**\DocStudio\Client\Model\EnvCancelDelegationDTO**](../Model/EnvCancelDelegationDTO.md)|  | |
+| **envelope_cancel_delegation_dto** | [**\DocStudio\Client\Model\EnvelopeCancelDelegationDTO**](../Model/EnvelopeCancelDelegationDTO.md)|  | |
 
 ### Return type
 
@@ -368,7 +431,7 @@ void (empty response body)
 ## `cancelEnvelopes()`
 
 ```php
-cancelEnvelopes($mailbox, $env_cancellation_request_dto)
+cancelEnvelopes($mailbox, $env_cancellation_request_dto): \DocStudio\Client\Model\SingleUuidDTO
 ```
 
 Cancel envelopes
@@ -394,7 +457,8 @@ $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with curr
 $env_cancellation_request_dto = new \DocStudio\Client\Model\EnvCancellationRequestDTO(); // \DocStudio\Client\Model\EnvCancellationRequestDTO
 
 try {
-    $apiInstance->cancelEnvelopes($mailbox, $env_cancellation_request_dto);
+    $result = $apiInstance->cancelEnvelopes($mailbox, $env_cancellation_request_dto);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EnvelopeControllerApi->cancelEnvelopes: ', $e->getMessage(), PHP_EOL;
 }
@@ -409,7 +473,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -418,7 +482,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -776,6 +840,66 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `create()`
+
+```php
+create($mailbox, $env_post_dto): \DocStudio\Client\Model\SingleUuidDTO
+```
+
+Create draft envelope
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$env_post_dto = new \DocStudio\Client\Model\EnvPostDTO(); // \DocStudio\Client\Model\EnvPostDTO
+
+try {
+    $result = $apiInstance->create($mailbox, $env_post_dto);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnvelopeControllerApi->create: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **env_post_dto** | [**\DocStudio\Client\Model\EnvPostDTO**](../Model/EnvPostDTO.md)|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `createAttachment()`
 
 ```php
@@ -797,7 +921,7 @@ $apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$file = "/path/to/file.txt"; // \SplFileObject
+$file = '/path/to/file.txt'; // \SplFileObject
 $type = 'type_example'; // string
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
@@ -828,66 +952,6 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: `multipart/form-data`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `createEnvelope()`
-
-```php
-createEnvelope($mailbox, $env_post_dto): \DocStudio\Client\Model\SingleUuidDTO
-```
-
-Create draft envelope
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$env_post_dto = new \DocStudio\Client\Model\EnvPostDTO(); // \DocStudio\Client\Model\EnvPostDTO
-
-try {
-    $result = $apiInstance->createEnvelope($mailbox, $env_post_dto);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling EnvelopeControllerApi->createEnvelope: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **env_post_dto** | [**\DocStudio\Client\Model\EnvPostDTO**](../Model/EnvPostDTO.md)|  | |
-
-### Return type
-
-[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
-
-### Authorization
-
-[Authorization](../../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -977,7 +1041,7 @@ $apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$file = "/path/to/file.txt"; // \SplFileObject
+$file = '/path/to/file.txt'; // \SplFileObject
 $action = 'action_example'; // string | Action for fields inside the PDF file
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
@@ -1017,7 +1081,7 @@ No authorization required
 ## `delegateEnvelopes()`
 
 ```php
-delegateEnvelopes($mailbox, $env_delegation_dto)
+delegateEnvelopes($mailbox, $env_delegation_dto): \DocStudio\Client\Model\SingleUuidDTO
 ```
 
 Delegate envelopes
@@ -1043,7 +1107,8 @@ $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with curr
 $env_delegation_dto = new \DocStudio\Client\Model\EnvDelegationDTO(); // \DocStudio\Client\Model\EnvDelegationDTO
 
 try {
-    $apiInstance->delegateEnvelopes($mailbox, $env_delegation_dto);
+    $result = $apiInstance->delegateEnvelopes($mailbox, $env_delegation_dto);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EnvelopeControllerApi->delegateEnvelopes: ', $e->getMessage(), PHP_EOL;
 }
@@ -1058,7 +1123,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -1067,7 +1132,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -1254,7 +1319,7 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`, `*/*`
+- **Accept**: `*/*`, `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -1322,13 +1387,69 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `downloadSharedAttachment()`
+
+```php
+downloadSharedAttachment($provider, $attachment_uuid): \SplFileObject
+```
+
+Download shared attachment for specific provider
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$provider = 'provider_example'; // string | Sharing provider name
+$attachment_uuid = 'attachment_uuid_example'; // string | Attachment UUID
+
+try {
+    $result = $apiInstance->downloadSharedAttachment($provider, $attachment_uuid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnvelopeControllerApi->downloadSharedAttachment: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **provider** | **string**| Sharing provider name | |
+| **attachment_uuid** | **string**| Attachment UUID | |
+
+### Return type
+
+**\SplFileObject**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `*/*`, `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `envelopeApproval()`
 
 ```php
-envelopeApproval($envelope_uuid, $flow_uuid, $mailbox, $approval_status_dto)
+envelopeApproval($mailbox, $approval_status_dto)
 ```
 
-Approve or Reject envelope
+Approve or Reject envelopes
 
 ### Example
 
@@ -1347,13 +1468,11 @@ $apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$envelope_uuid = 'envelope_uuid_example'; // string | Envelope to approve
-$flow_uuid = 'flow_uuid_example'; // string | Flow to approve
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 $approval_status_dto = new \DocStudio\Client\Model\ApprovalStatusDTO(); // \DocStudio\Client\Model\ApprovalStatusDTO
 
 try {
-    $apiInstance->envelopeApproval($envelope_uuid, $flow_uuid, $mailbox, $approval_status_dto);
+    $apiInstance->envelopeApproval($mailbox, $approval_status_dto);
 } catch (Exception $e) {
     echo 'Exception when calling EnvelopeControllerApi->envelopeApproval: ', $e->getMessage(), PHP_EOL;
 }
@@ -1363,8 +1482,6 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **envelope_uuid** | **string**| Envelope to approve | |
-| **flow_uuid** | **string**| Flow to approve | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **approval_status_dto** | [**\DocStudio\Client\Model\ApprovalStatusDTO**](../Model/ApprovalStatusDTO.md)|  | |
 
@@ -1873,7 +1990,7 @@ try {
 ## `getDocumentForSign()`
 
 ```php
-getDocumentForSign($envelope_uuid, $mailbox, $single_doc_for_sign_request_dto): \DocStudio\Client\Model\DocumentForSigningDTO
+getDocumentForSign($envelope_uuid, $mailbox, $single_doc_for_sign_request_dto, $session_id): \DocStudio\Client\Model\DocumentForSigningDTO
 ```
 
 BINARY and XML for signing
@@ -1898,9 +2015,10 @@ $apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
 $envelope_uuid = 'envelope_uuid_example'; // string | Envelope UUID
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 $single_doc_for_sign_request_dto = new \DocStudio\Client\Model\SingleDocForSignRequestDTO(); // \DocStudio\Client\Model\SingleDocForSignRequestDTO
+$session_id = 'session_id_example'; // string | Mass signing session UUID
 
 try {
-    $result = $apiInstance->getDocumentForSign($envelope_uuid, $mailbox, $single_doc_for_sign_request_dto);
+    $result = $apiInstance->getDocumentForSign($envelope_uuid, $mailbox, $single_doc_for_sign_request_dto, $session_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EnvelopeControllerApi->getDocumentForSign: ', $e->getMessage(), PHP_EOL;
@@ -1914,6 +2032,7 @@ try {
 | **envelope_uuid** | **string**| Envelope UUID | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **single_doc_for_sign_request_dto** | [**\DocStudio\Client\Model\SingleDocForSignRequestDTO**](../Model/SingleDocForSignRequestDTO.md)|  | |
+| **session_id** | **string**| Mass signing session UUID | [optional] |
 
 ### Return type
 
@@ -1997,7 +2116,7 @@ try {
 ## `getDocumentsForSign()`
 
 ```php
-getDocumentsForSign($envelope_uuid, $mailbox, $documents_for_sign_request_dto): \DocStudio\Client\Model\DocumentForSigningDTO[]
+getDocumentsForSign($envelope_uuid, $mailbox, $documents_for_sign_request_dto, $session_id): \DocStudio\Client\Model\DocumentForSigningDTO[]
 ```
 
 BINARYs and XMLs for signing
@@ -2022,9 +2141,10 @@ $apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
 $envelope_uuid = 'envelope_uuid_example'; // string | Envelope UUID
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 $documents_for_sign_request_dto = new \DocStudio\Client\Model\DocumentsForSignRequestDTO(); // \DocStudio\Client\Model\DocumentsForSignRequestDTO
+$session_id = 'session_id_example'; // string | Mass signing session UUID
 
 try {
-    $result = $apiInstance->getDocumentsForSign($envelope_uuid, $mailbox, $documents_for_sign_request_dto);
+    $result = $apiInstance->getDocumentsForSign($envelope_uuid, $mailbox, $documents_for_sign_request_dto, $session_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EnvelopeControllerApi->getDocumentsForSign: ', $e->getMessage(), PHP_EOL;
@@ -2038,6 +2158,7 @@ try {
 | **envelope_uuid** | **string**| Envelope UUID | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **documents_for_sign_request_dto** | [**\DocStudio\Client\Model\DocumentsForSignRequestDTO**](../Model/DocumentsForSignRequestDTO.md)|  | |
+| **session_id** | **string**| Mass signing session UUID | [optional] |
 
 ### Return type
 
@@ -2408,6 +2529,66 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getMassSigningReport()`
+
+```php
+getMassSigningReport($session_id, $mailbox): \SplFileObject
+```
+
+Get mass signing report
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$session_id = 'session_id_example'; // string | Mass signing session UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+
+try {
+    $result = $apiInstance->getMassSigningReport($session_id, $mailbox);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnvelopeControllerApi->getMassSigningReport: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **session_id** | **string**| Mass signing session UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+**\SplFileObject**
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/octet-stream`, `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `getUserPendingInvitations()`
 
 ```php
@@ -2614,7 +2795,7 @@ $apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
     $config
 );
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$files = array("/path/to/file.txt"); // \SplFileObject[] | Files for external documents
+$files = array('/path/to/file.txt'); // \SplFileObject[] | Files for external documents
 $data = new \DocStudio\Client\Model\QuickSendDTO(); // \DocStudio\Client\Model\QuickSendDTO
 
 try {
@@ -3066,7 +3247,7 @@ No authorization required
 ## `sendForApproval()`
 
 ```php
-sendForApproval($mailbox, $envelope_approval_request_dto)
+sendForApproval($mailbox, $envelope_approval_request_dto): \DocStudio\Client\Model\SingleUuidDTO
 ```
 
 Send envelope for approval
@@ -3092,7 +3273,8 @@ $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with curr
 $envelope_approval_request_dto = new \DocStudio\Client\Model\EnvelopeApprovalRequestDTO(); // \DocStudio\Client\Model\EnvelopeApprovalRequestDTO
 
 try {
-    $apiInstance->sendForApproval($mailbox, $envelope_approval_request_dto);
+    $result = $apiInstance->sendForApproval($mailbox, $envelope_approval_request_dto);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EnvelopeControllerApi->sendForApproval: ', $e->getMessage(), PHP_EOL;
 }
@@ -3107,7 +3289,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
 
 ### Authorization
 
@@ -3116,7 +3298,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -3243,7 +3425,7 @@ void (empty response body)
 ## `sign()`
 
 ```php
-sign($envelope_uuid, $mailbox, $envelope_document_signatures_dto)
+sign($envelope_uuid, $mailbox, $envelope_document_signatures_dto, $session_id)
 ```
 
 Sign envelope documents
@@ -3268,9 +3450,10 @@ $apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
 $envelope_uuid = 'envelope_uuid_example'; // string | Envelope to update
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 $envelope_document_signatures_dto = array(new \DocStudio\Client\Model\EnvelopeDocumentSignaturesDTO()); // \DocStudio\Client\Model\EnvelopeDocumentSignaturesDTO[]
+$session_id = 'session_id_example'; // string | Mass signing session UUID
 
 try {
-    $apiInstance->sign($envelope_uuid, $mailbox, $envelope_document_signatures_dto);
+    $apiInstance->sign($envelope_uuid, $mailbox, $envelope_document_signatures_dto, $session_id);
 } catch (Exception $e) {
     echo 'Exception when calling EnvelopeControllerApi->sign: ', $e->getMessage(), PHP_EOL;
 }
@@ -3283,6 +3466,7 @@ try {
 | **envelope_uuid** | **string**| Envelope to update | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **envelope_document_signatures_dto** | [**\DocStudio\Client\Model\EnvelopeDocumentSignaturesDTO[]**](../Model/EnvelopeDocumentSignaturesDTO.md)|  | |
+| **session_id** | **string**| Mass signing session UUID | [optional] |
 
 ### Return type
 

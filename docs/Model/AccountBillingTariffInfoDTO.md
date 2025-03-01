@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tariff_id** | **string** | Id | [optional]
+**id** | **string** | Id | [optional]
 **name** | **string** | Name | [optional]
 **display_name** | **string** | Display name | [optional]
 **valid_from** | **\DateTime** | Valid from | [optional]

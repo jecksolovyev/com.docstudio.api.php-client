@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **image** | [**\DocStudio\Client\Model\ImageRestriction**](ImageRestriction.md) |  | [optional]
 **logo** | [**\DocStudio\Client\Model\LogoImageRestriction**](LogoImageRestriction.md) |  | [optional]
 **table** | [**\DocStudio\Client\Model\TemplTableRestriction**](TemplTableRestriction.md) |  | [optional]
+**patterns** | [**\DocStudio\Client\Model\TextFieldPattern[]**](TextFieldPattern.md) |  | [optional]
 **expire_after_days** | **int** |  | [optional]
 **notify_in_days** | **int** |  | [optional]
 **max_external_docs_count** | **int** |  | [optional]

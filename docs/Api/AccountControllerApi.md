@@ -298,7 +298,7 @@ $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     $config
 );
 $account_uuid = 'account_uuid_example'; // string | Account UUID
-$file = "/path/to/file.txt"; // \SplFileObject
+$file = '/path/to/file.txt'; // \SplFileObject
 
 try {
     $result = $apiInstance->createMassAccountUsers($account_uuid, $file);
@@ -1355,7 +1355,7 @@ try {
 ## `updateAccountDetails()`
 
 ```php
-updateAccountDetails($uuid, $account_dto): \DocStudio\Client\Model\AccountDTO
+updateAccountDetails($uuid, $update_account_request): \DocStudio\Client\Model\AccountDTO
 ```
 
 
@@ -1378,10 +1378,10 @@ $apiInstance = new DocStudio\Client\Api\AccountControllerApi(
     $config
 );
 $uuid = 'uuid_example'; // string
-$account_dto = new \DocStudio\Client\Model\AccountDTO(); // \DocStudio\Client\Model\AccountDTO
+$update_account_request = new \DocStudio\Client\Model\UpdateAccountRequest(); // \DocStudio\Client\Model\UpdateAccountRequest
 
 try {
-    $result = $apiInstance->updateAccountDetails($uuid, $account_dto);
+    $result = $apiInstance->updateAccountDetails($uuid, $update_account_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountControllerApi->updateAccountDetails: ', $e->getMessage(), PHP_EOL;
@@ -1393,7 +1393,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **uuid** | **string**|  | |
-| **account_dto** | [**\DocStudio\Client\Model\AccountDTO**](../Model/AccountDTO.md)|  | |
+| **update_account_request** | [**\DocStudio\Client\Model\UpdateAccountRequest**](../Model/UpdateAccountRequest.md)|  | |
 
 ### Return type
 

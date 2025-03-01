@@ -6,6 +6,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | ------------- | ------------- | ------------- |
 | [**checkCallback()**](EnvelopeCallbackControllerApi.md#checkCallback) | **GET** /api/v1/envelope/callback/{callbackUuid}/check | Check callback with certain envelope |
 | [**createCallback()**](EnvelopeCallbackControllerApi.md#createCallback) | **POST** /api/v1/envelope/callback/add | Add new callback |
+| [**getCallbackRequestPayload()**](EnvelopeCallbackControllerApi.md#getCallbackRequestPayload) | **GET** /api/v1/envelope/callback/callbackRequestPayload | Check CallbackEnvelopeDataDTO as an example of callback payload |
 | [**listCallbacks()**](EnvelopeCallbackControllerApi.md#listCallbacks) | **GET** /api/v1/envelope/callback/list | List callbacks |
 | [**removeCallback()**](EnvelopeCallbackControllerApi.md#removeCallback) | **DELETE** /api/v1/envelope/callback/{callbackUuid}/remove | Delete callback |
 | [**sendCallback()**](EnvelopeCallbackControllerApi.md#sendCallback) | **GET** /api/v1/envelope/callback/{callbackUuid}/send | Send callback with certain envelope |
@@ -127,6 +128,61 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getCallbackRequestPayload()`
+
+```php
+getCallbackRequestPayload(): \DocStudio\Client\Model\CallbackEnvelopeDataDTO
+```
+
+Check CallbackEnvelopeDataDTO as an example of callback payload
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\EnvelopeCallbackControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->getCallbackRequestPayload();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnvelopeCallbackControllerApi->getCallbackRequestPayload: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\DocStudio\Client\Model\CallbackEnvelopeDataDTO**](../Model/CallbackEnvelopeDataDTO.md)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

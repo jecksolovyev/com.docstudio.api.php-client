@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **records_count** | **int** | Dictionary records count | [optional]
 **columns** | [**\DocStudio\Client\Model\DictionaryColumnResponseDTO[]**](DictionaryColumnResponseDTO.md) |  | [optional]
 **status** | **string** | Dictionary availability status | [optional]
+**mailbox_uuid** | **string** | Owner of the dictionary | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

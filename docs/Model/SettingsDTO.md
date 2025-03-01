@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **build_version** | **string** | The version of the build | [optional]
 **application_name** | **string** | The name of the platform | [optional]
 **theme** | **string** | The name of the UI theme | [optional]
+**support_chat_provider** | **string** | Support live chat provider name | [optional]
 **hide_unauthorized_functions** | **bool** | Hide or disable unauthorized functions | [optional]
 **pod_name** | **string** | Kubernetes Pod Name | [optional]
 **links** | [**\DocStudio\Client\Model\AppLinks**](AppLinks.md) |  | [optional]
@@ -29,5 +30,6 @@ Name | Type | Description | Notes
 **exchange_protocols** | [**array<string,\DocStudio\Client\Model\ExchangeProps>**](ExchangeProps.md) | Available exchange protocols | [optional]
 **info_links** | [**\DocStudio\Client\Model\ExternalLinkShortResponseDTO[]**](ExternalLinkShortResponseDTO.md) | Info menu links | [optional]
 **supported_barcodes** | [**\DocStudio\Client\Model\SupportedBarcodeDTO[]**](SupportedBarcodeDTO.md) | Supported barcodes | [optional]
+**default_envelope_list_columns** | [**\DocStudio\Client\Model\DefaultEnvelopeListColumns**](DefaultEnvelopeListColumns.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

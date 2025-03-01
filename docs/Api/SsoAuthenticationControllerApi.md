@@ -4,18 +4,19 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**loginGetSso()**](SsoAuthenticationControllerApi.md#loginGetSso) | **GET** /saml2/authenticate/{registrationId} | Login with SSO, redirects to UI after login |
+| [**loginOauth2()**](SsoAuthenticationControllerApi.md#loginOauth2) | **GET** /oauth2/authorization/{registrationId} | Login with oAuth2 |
+| [**loginSaml2()**](SsoAuthenticationControllerApi.md#loginSaml2) | **GET** /saml2/authenticate/{registrationId} | Login with SAML2 |
 | [**samlMetadata()**](SsoAuthenticationControllerApi.md#samlMetadata) | **GET** /saml/metadata | Returns SAML Metadata |
 | [**samlRegistrationIdByDomain()**](SsoAuthenticationControllerApi.md#samlRegistrationIdByDomain) | **GET** /saml/registrationId | Returns EntityID by domain |
 
 
-## `loginGetSso()`
+## `loginOauth2()`
 
 ```php
-loginGetSso($registration_id)
+loginOauth2($registration_id, $redirect_url)
 ```
 
-Login with SSO, redirects to UI after login
+Login with oAuth2
 
 ### Example
 
@@ -24,22 +25,19 @@ Login with SSO, redirects to UI after login
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new DocStudio\Client\Api\SsoAuthenticationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $registration_id = 'registration_id_example'; // string
+$redirect_url = 'redirect_url_example'; // string
 
 try {
-    $apiInstance->loginGetSso($registration_id);
+    $apiInstance->loginOauth2($registration_id, $redirect_url);
 } catch (Exception $e) {
-    echo 'Exception when calling SsoAuthenticationControllerApi->loginGetSso: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SsoAuthenticationControllerApi->loginOauth2: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -48,6 +46,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **registration_id** | **string**|  | |
+| **redirect_url** | **string**|  | [optional] |
 
 ### Return type
 
@@ -55,7 +54,62 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `loginSaml2()`
+
+```php
+loginSaml2($registration_id, $redirect_url)
+```
+
+Login with SAML2
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new DocStudio\Client\Api\SsoAuthenticationControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$registration_id = 'registration_id_example'; // string
+$redirect_url = 'redirect_url_example'; // string
+
+try {
+    $apiInstance->loginSaml2($registration_id, $redirect_url);
+} catch (Exception $e) {
+    echo 'Exception when calling SsoAuthenticationControllerApi->loginSaml2: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **registration_id** | **string**|  | |
+| **redirect_url** | **string**|  | [optional] |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 
@@ -81,15 +135,11 @@ Returns SAML Metadata
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new DocStudio\Client\Api\SsoAuthenticationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 
 try {
@@ -110,7 +160,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -136,15 +186,11 @@ Returns EntityID by domain
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new DocStudio\Client\Api\SsoAuthenticationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
 $domain = 'domain_example'; // string
 
@@ -168,7 +214,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 

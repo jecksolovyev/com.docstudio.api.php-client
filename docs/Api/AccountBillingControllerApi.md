@@ -7,8 +7,12 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**checkEventAbility()**](AccountBillingControllerApi.md#checkEventAbility) | **GET** /api/v1/account/{accountUuid}/check/{type}/{action} |  |
 | [**downloadInvoice()**](AccountBillingControllerApi.md#downloadInvoice) | **GET** /api/v1/account/{accountUuid}/invoice/{invoiceId}/pdf |  |
 | [**getAccount()**](AccountBillingControllerApi.md#getAccount) | **GET** /api/v1/account/{accountUuid}/billing |  |
+| [**getAccountBillingStateHeader()**](AccountBillingControllerApi.md#getAccountBillingStateHeader) | **GET** /api/v1/account/{accountUuid}/billing-state |  |
+| [**getCurrencyRates()**](AccountBillingControllerApi.md#getCurrencyRates) | **GET** /api/v1/account/currency-rates |  |
 | [**getInvoiceStatus()**](AccountBillingControllerApi.md#getInvoiceStatus) | **GET** /api/v1/account/{accountUuid}/invoice-status/{invoiceId} |  |
 | [**getInvoices()**](AccountBillingControllerApi.md#getInvoices) | **GET** /api/v1/account/{accountUuid}/invoice |  |
+| [**getPaymentMethodInfo()**](AccountBillingControllerApi.md#getPaymentMethodInfo) | **GET** /api/v1/account/{accountUuid}/payment-method |  |
+| [**getPaymentMethodInitKey()**](AccountBillingControllerApi.md#getPaymentMethodInitKey) | **GET** /api/v1/account/{accountUuid}/payment-method-init |  |
 | [**getTariffs()**](AccountBillingControllerApi.md#getTariffs) | **GET** /api/v1/account/{accountUuid}/tariff |  |
 | [**makeInvoicePayment()**](AccountBillingControllerApi.md#makeInvoicePayment) | **POST** /api/v1/account/{accountUuid}/billing-payment |  |
 | [**replaceAccountTariff()**](AccountBillingControllerApi.md#replaceAccountTariff) | **POST** /api/v1/account/{accountUuid}/tariff |  |
@@ -40,7 +44,7 @@ $apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
     $config
 );
 $account_uuid = 'account_uuid_example'; // string
-$type = new \DocStudio\Client\Model\BillingEventType(); // BillingEventType
+$type = new \DocStudio\Client\Model\\DocStudio\Client\Model\BillingEventType(); // \DocStudio\Client\Model\BillingEventType
 $action = 'action_example'; // string
 
 try {
@@ -55,7 +59,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_uuid** | **string**|  | |
-| **type** | [**BillingEventType**](../Model/.md)|  | |
+| **type** | [**\DocStudio\Client\Model\BillingEventType**](../Model/.md)|  | |
 | **action** | **string**|  | |
 
 ### Return type
@@ -197,6 +201,119 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getAccountBillingStateHeader()`
+
+```php
+getAccountBillingStateHeader($account_uuid): \DocStudio\Client\Model\BillingHeaderState
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$account_uuid = 'account_uuid_example'; // string
+
+try {
+    $result = $apiInstance->getAccountBillingStateHeader($account_uuid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AccountBillingControllerApi->getAccountBillingStateHeader: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\BillingHeaderState**](../Model/BillingHeaderState.md)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getCurrencyRates()`
+
+```php
+getCurrencyRates(): \DocStudio\Client\Model\CurrencyRateDTO[]
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->getCurrencyRates();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AccountBillingControllerApi->getCurrencyRates: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\DocStudio\Client\Model\CurrencyRateDTO[]**](../Model/CurrencyRateDTO.md)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `getInvoiceStatus()`
 
 ```php
@@ -307,6 +424,122 @@ try {
 ### Return type
 
 [**\DocStudio\Client\Model\PageDTOObject**](../Model/PageDTOObject.md)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getPaymentMethodInfo()`
+
+```php
+getPaymentMethodInfo($account_uuid): \DocStudio\Client\Model\PaymentMethodInfo
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$account_uuid = 'account_uuid_example'; // string
+
+try {
+    $result = $apiInstance->getPaymentMethodInfo($account_uuid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AccountBillingControllerApi->getPaymentMethodInfo: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\PaymentMethodInfo**](../Model/PaymentMethodInfo.md)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getPaymentMethodInitKey()`
+
+```php
+getPaymentMethodInitKey($account_uuid): string
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\AccountBillingControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$account_uuid = 'account_uuid_example'; // string
+
+try {
+    $result = $apiInstance->getPaymentMethodInitKey($account_uuid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AccountBillingControllerApi->getPaymentMethodInitKey: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**|  | |
+
+### Return type
+
+**string**
 
 ### Authorization
 
@@ -442,7 +675,7 @@ try {
 ## `replaceAccountTariff()`
 
 ```php
-replaceAccountTariff($account_uuid, $replace_account_tariff_dto)
+replaceAccountTariff($account_uuid, $replace_account_tariff_dto): \DocStudio\Client\Model\ChangeAccountTariffResponse
 ```
 
 
@@ -468,7 +701,8 @@ $account_uuid = 'account_uuid_example'; // string
 $replace_account_tariff_dto = new \DocStudio\Client\Model\ReplaceAccountTariffDTO(); // \DocStudio\Client\Model\ReplaceAccountTariffDTO
 
 try {
-    $apiInstance->replaceAccountTariff($account_uuid, $replace_account_tariff_dto);
+    $result = $apiInstance->replaceAccountTariff($account_uuid, $replace_account_tariff_dto);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountBillingControllerApi->replaceAccountTariff: ', $e->getMessage(), PHP_EOL;
 }
@@ -483,7 +717,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\DocStudio\Client\Model\ChangeAccountTariffResponse**](../Model/ChangeAccountTariffResponse.md)
 
 ### Authorization
 
@@ -492,7 +726,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

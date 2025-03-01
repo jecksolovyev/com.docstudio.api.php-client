@@ -19,6 +19,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**getMailboxesInfoMailbox()**](MailboxControllerApi.md#getMailboxesInfoMailbox) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info |
 | [**getStat()**](MailboxControllerApi.md#getStat) | **GET** /api/v1/mailbox/stat | Get number of unread envelopes in every scope |
 | [**getUsedTemplates()**](MailboxControllerApi.md#getUsedTemplates) | **GET** /api/v1/mailbox/templates/used | List of used templates |
+| [**leaveMailbox()**](MailboxControllerApi.md#leaveMailbox) | **DELETE** /api/v1/mailbox/{mailboxUuid}/leave | Leave mailbox if possible |
 | [**patchMailbox()**](MailboxControllerApi.md#patchMailbox) | **PATCH** /api/v1/mailbox/{mailboxUuid} | Patch mailbox, return patched mailbox w/o users count |
 | [**searchMailboxes()**](MailboxControllerApi.md#searchMailboxes) | **GET** /api/v1/mailbox/search | Search mailboxes by name, contact, alias, user |
 | [**searchMailboxesAsParticipants()**](MailboxControllerApi.md#searchMailboxesAsParticipants) | **GET** /api/v1/mailbox/search-participants | Search mailboxes by name, contact, alias, user |
@@ -152,7 +153,7 @@ void (empty response body)
 ## `deleteMailbox()`
 
 ```php
-deleteMailbox($check_message, $mailbox)
+deleteMailbox($check_message, $mailbox, $move_entities_to_mailbox)
 ```
 
 Delete mailbox by UUID in the header.
@@ -176,9 +177,10 @@ $apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
 );
 $check_message = 'check_message_example'; // string | Proof message
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$move_entities_to_mailbox = 'move_entities_to_mailbox_example'; // string | Move entities to chosen mailbox
 
 try {
-    $apiInstance->deleteMailbox($check_message, $mailbox);
+    $apiInstance->deleteMailbox($check_message, $mailbox, $move_entities_to_mailbox);
 } catch (Exception $e) {
     echo 'Exception when calling MailboxControllerApi->deleteMailbox: ', $e->getMessage(), PHP_EOL;
 }
@@ -190,6 +192,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **check_message** | **string**| Proof message | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **move_entities_to_mailbox** | **string**| Move entities to chosen mailbox | [optional] |
 
 ### Return type
 
@@ -915,6 +918,63 @@ try {
 
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `leaveMailbox()`
+
+```php
+leaveMailbox($mailbox_uuid)
+```
+
+Leave mailbox if possible
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$mailbox_uuid = 'mailbox_uuid_example'; // string
+
+try {
+    $apiInstance->leaveMailbox($mailbox_uuid);
+} catch (Exception $e) {
+    echo 'Exception when calling MailboxControllerApi->leaveMailbox: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox_uuid** | **string**|  | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

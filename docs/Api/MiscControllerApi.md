@@ -10,8 +10,11 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**createAuditReport()**](MiscControllerApi.md#createAuditReport) | **POST** /api/v1/audit/report | Request audit report |
 | [**detectCountry()**](MiscControllerApi.md#detectCountry) | **GET** /api/v1/detect-country |  |
 | [**getBarcode()**](MiscControllerApi.md#getBarcode) | **GET** /api/v1/barcode |  |
+| [**getProcessStatus()**](MiscControllerApi.md#getProcessStatus) | **GET** /api/v1/process-status/{id} | Process status |
+| [**parseCsv()**](MiscControllerApi.md#parseCsv) | **POST** /api/v1/csv-parser | Parse CSV text (5 rows max) |
 | [**recalculateMailboxStat()**](MiscControllerApi.md#recalculateMailboxStat) | **GET** /api/v1/recalculate-mailbox-stat | Recalculate all mailbox counters |
 | [**returnNoFavicon()**](MiscControllerApi.md#returnNoFavicon) | **GET** /favicon.ico |  |
+| [**webhook()**](MiscControllerApi.md#webhook) | **POST** /api/v1/account/webhook |  |
 
 
 ## `appSettings()`
@@ -345,6 +348,126 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getProcessStatus()`
+
+```php
+getProcessStatus($id, $details): \DocStudio\Client\Model\ProcessStatus
+```
+
+Process status
+
+Getting async bulk process status details by id
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | Process id
+$details = True; // bool | Return details
+
+try {
+    $result = $apiInstance->getProcessStatus($id, $details);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MiscControllerApi->getProcessStatus: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Process id | |
+| **details** | **bool**| Return details | [optional] |
+
+### Return type
+
+[**\DocStudio\Client\Model\ProcessStatus**](../Model/ProcessStatus.md)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `*/*`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `parseCsv()`
+
+```php
+parseCsv($csv_data): string[][]
+```
+
+Parse CSV text (5 rows max)
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$csv_data = new \DocStudio\Client\Model\CsvData(); // \DocStudio\Client\Model\CsvData
+
+try {
+    $result = $apiInstance->parseCsv($csv_data);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MiscControllerApi->parseCsv: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **csv_data** | [**\DocStudio\Client\Model\CsvData**](../Model/CsvData.md)|  | |
+
+### Return type
+
+**string[][]**
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `recalculateMailboxStat()`
 
 ```php
@@ -449,6 +572,65 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `webhook()`
+
+```php
+webhook($authorization, $account_key, $type, $body)
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$authorization = 'authorization_example'; // string
+$account_key = 'account_key_example'; // string
+$type = 'type_example'; // string
+$body = 'body_example'; // string
+
+try {
+    $apiInstance->webhook($authorization, $account_key, $type, $body);
+} catch (Exception $e) {
+    echo 'Exception when calling MiscControllerApi->webhook: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **authorization** | **string**|  | |
+| **account_key** | **string**|  | |
+| **type** | **string**|  | |
+| **body** | **string**|  | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

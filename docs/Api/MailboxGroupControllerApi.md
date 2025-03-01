@@ -10,8 +10,8 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**getMailboxGroupsNames()**](MailboxGroupControllerApi.md#getMailboxGroupsNames) | **POST** /api/v1/account/{accountUuid}/mailbox-group/info | Get groups names |
 | [**removeMailboxesFromGroup()**](MailboxGroupControllerApi.md#removeMailboxesFromGroup) | **DELETE** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid}/mailbox | Remove mailboxes from group |
 | [**searchGroups()**](MailboxGroupControllerApi.md#searchGroups) | **GET** /api/v1/account/{accountUuid}/mailbox-group | List/search groups |
-| [**updateMailboxGroup()**](MailboxGroupControllerApi.md#updateMailboxGroup) | **PATCH** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Update mailbox group |
-| [**updateMailboxGroupMailboxGroup()**](MailboxGroupControllerApi.md#updateMailboxGroupMailboxGroup) | **DELETE** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Delete mailbox group |
+| [**updateMailboxGroup()**](MailboxGroupControllerApi.md#updateMailboxGroup) | **DELETE** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Delete mailbox group |
+| [**updateMailboxGroupMailboxGroup()**](MailboxGroupControllerApi.md#updateMailboxGroupMailboxGroup) | **PATCH** /api/v1/account/{accountUuid}/mailbox-group/{groupUuid} | Update mailbox group |
 
 
 ## `addMailboxesToGroup()`
@@ -393,7 +393,66 @@ try {
 ## `updateMailboxGroup()`
 
 ```php
-updateMailboxGroup($account_uuid, $group_uuid, $update_group_dto): \DocStudio\Client\Model\GroupInfoDTO
+updateMailboxGroup($account_uuid, $group_uuid)
+```
+
+Delete mailbox group
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: Authorization
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\MailboxGroupControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$account_uuid = 'account_uuid_example'; // string | Account UUID
+$group_uuid = 'group_uuid_example'; // string | Group UUID
+
+try {
+    $apiInstance->updateMailboxGroup($account_uuid, $group_uuid);
+} catch (Exception $e) {
+    echo 'Exception when calling MailboxGroupControllerApi->updateMailboxGroup: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_uuid** | **string**| Account UUID | |
+| **group_uuid** | **string**| Group UUID | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Authorization](../../README.md#Authorization)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateMailboxGroupMailboxGroup()`
+
+```php
+updateMailboxGroupMailboxGroup($account_uuid, $group_uuid, $update_group_dto): \DocStudio\Client\Model\GroupInfoDTO
 ```
 
 Update mailbox group
@@ -420,10 +479,10 @@ $group_uuid = 'group_uuid_example'; // string | Group UUID
 $update_group_dto = new \DocStudio\Client\Model\UpdateGroupDTO(); // \DocStudio\Client\Model\UpdateGroupDTO
 
 try {
-    $result = $apiInstance->updateMailboxGroup($account_uuid, $group_uuid, $update_group_dto);
+    $result = $apiInstance->updateMailboxGroupMailboxGroup($account_uuid, $group_uuid, $update_group_dto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MailboxGroupControllerApi->updateMailboxGroup: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MailboxGroupControllerApi->updateMailboxGroupMailboxGroup: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -447,65 +506,6 @@ try {
 
 - **Content-Type**: `application/json`
 - **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `updateMailboxGroupMailboxGroup()`
-
-```php
-updateMailboxGroupMailboxGroup($account_uuid, $group_uuid)
-```
-
-Delete mailbox group
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new DocStudio\Client\Api\MailboxGroupControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$account_uuid = 'account_uuid_example'; // string | Account UUID
-$group_uuid = 'group_uuid_example'; // string | Group UUID
-
-try {
-    $apiInstance->updateMailboxGroupMailboxGroup($account_uuid, $group_uuid);
-} catch (Exception $e) {
-    echo 'Exception when calling MailboxGroupControllerApi->updateMailboxGroupMailboxGroup: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **account_uuid** | **string**| Account UUID | |
-| **group_uuid** | **string**| Group UUID | |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Authorization](../../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

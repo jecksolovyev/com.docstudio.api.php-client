@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional]
 **name** | **string** |  | [optional]
-**tariff_price** | **int** |  | [optional]
+**price** | **int** |  | [optional]
 **display_name** | **string** |  | [optional]
 **attributes** | [**\DocStudio\Client\Model\AttributeInfoDTO[]**](AttributeInfoDTO.md) |  | [optional]
 **counters** | [**\DocStudio\Client\Model\CounterInfoDTO[]**](CounterInfoDTO.md) |  | [optional]

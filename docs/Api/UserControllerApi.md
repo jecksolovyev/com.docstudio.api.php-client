@@ -4,28 +4,27 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**acceptInvite()**](UserControllerApi.md#acceptInvite) | **POST** /api/v1/user/invite/accept/{inviteCode} | Accept invite |
+| [**changeInitials()**](UserControllerApi.md#changeInitials) | **PUT** /api/v1/user/initials | Update user&#39;s initials in base64 format |
 | [**changePassword()**](UserControllerApi.md#changePassword) | **PUT** /api/v1/user/password | Update user&#39;s password |
 | [**changeSignature()**](UserControllerApi.md#changeSignature) | **PUT** /api/v1/user/signature | Update user&#39;s eink signature in base64 format |
-| [**createInvitation()**](UserControllerApi.md#createInvitation) | **POST** /api/v1/user/invite | Create invitation to join account or mailbox with defined permissions. |
-| [**declineInvite()**](UserControllerApi.md#declineInvite) | **DELETE** /api/v1/user/invite/decline/{inviteCode} | Decline invite |
+| [**confirmOauthEmailAndGetToken()**](UserControllerApi.md#confirmOauthEmailAndGetToken) | **GET** /api/v1/user/confirm-oauth-email-get-token | Confirm email from OAuth2 Identity Provider |
 | [**deleteUser()**](UserControllerApi.md#deleteUser) | **DELETE** /api/v1/user | Delete user himself |
 | [**findUser()**](UserControllerApi.md#findUser) | **GET** /api/v1/user/search | Find user |
-| [**getAvatar()**](UserControllerApi.md#getAvatar) | **GET** /api/v1/user/avatar/{userUuid} | Retrieve user avatar |
-| [**getInvites()**](UserControllerApi.md#getInvites) | **GET** /api/v1/user/invites | Get paged invites list |
+| [**getAvatar()**](UserControllerApi.md#getAvatar) | **GET** /api/v1/user/avatar/{uuid} | Retrieve user avatar |
+| [**getCorporateUserProfile()**](UserControllerApi.md#getCorporateUserProfile) | **GET** /api/v1/user/profile/{uuid}/account/{accountUuid} | Retrieve corporate user profile |
 | [**getMailboxesInfo()**](UserControllerApi.md#getMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info |
-| [**getProfile()**](UserControllerApi.md#getProfile) | **GET** /api/v1/user/profile | Retrieve user profile |
-| [**updateInvitation()**](UserControllerApi.md#updateInvitation) | **PUT** /api/v1/user/invite/{uuid} | Update invitation by userUuid. |
-| [**updateProfile()**](UserControllerApi.md#updateProfile) | **PUT** /api/v1/user/profile | Update user&#39;s profile |
+| [**getProfile()**](UserControllerApi.md#getProfile) | **GET** /api/v1/user/profile | Retrieve self profile |
+| [**updateCorporateUserProfile()**](UserControllerApi.md#updateCorporateUserProfile) | **PUT** /api/v1/user/profile/{uuid}/account/{accountUuid} | Update corporate user&#39;s profile |
+| [**updateProfile()**](UserControllerApi.md#updateProfile) | **PUT** /api/v1/user/profile | Update self profile |
 
 
-## `acceptInvite()`
+## `changeInitials()`
 
 ```php
-acceptInvite($invite_code)
+changeInitials($body)
 ```
 
-Accept invite
+Update user's initials in base64 format
 
 ### Example
 
@@ -44,12 +43,12 @@ $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$invite_code = 'invite_code_example'; // string | Invite code
+$body = 'body_example'; // string
 
 try {
-    $apiInstance->acceptInvite($invite_code);
+    $apiInstance->changeInitials($body);
 } catch (Exception $e) {
-    echo 'Exception when calling UserControllerApi->acceptInvite: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserControllerApi->changeInitials: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -57,7 +56,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **invite_code** | **string**| Invite code | |
+| **body** | **string**|  | [optional] |
 
 ### Return type
 
@@ -69,7 +68,7 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: `application/json`
 - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -190,13 +189,13 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `createInvitation()`
+## `confirmOauthEmailAndGetToken()`
 
 ```php
-createInvitation($invitation_post_dto): \DocStudio\Client\Model\SingleUuidDTO
+confirmOauthEmailAndGetToken($code, $email_to_match): \DocStudio\Client\Model\LoginResponseDTO
 ```
 
-Create invitation to join account or mailbox with defined permissions.
+Confirm email from OAuth2 Identity Provider
 
 ### Example
 
@@ -205,23 +204,20 @@ Create invitation to join account or mailbox with defined permissions.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$invitation_post_dto = new \DocStudio\Client\Model\InvitationPostDTO(); // \DocStudio\Client\Model\InvitationPostDTO
+$code = 'code_example'; // string | Verification code
+$email_to_match = 'email_to_match_example'; // string | Check email matches
 
 try {
-    $result = $apiInstance->createInvitation($invitation_post_dto);
+    $result = $apiInstance->confirmOauthEmailAndGetToken($code, $email_to_match);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserControllerApi->createInvitation: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserControllerApi->confirmOauthEmailAndGetToken: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -229,77 +225,21 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **invitation_post_dto** | [**\DocStudio\Client\Model\InvitationPostDTO**](../Model/InvitationPostDTO.md)|  | |
+| **code** | **string**| Verification code | |
+| **email_to_match** | **string**| Check email matches | [optional] |
 
 ### Return type
 
-[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+[**\DocStudio\Client\Model\LoginResponseDTO**](../Model/LoginResponseDTO.md)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `declineInvite()`
-
-```php
-declineInvite($invite_code)
-```
-
-Decline invite
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new DocStudio\Client\Api\UserControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$invite_code = 'invite_code_example'; // string | Invite code
-
-try {
-    $apiInstance->declineInvite($invite_code);
-} catch (Exception $e) {
-    echo 'Exception when calling UserControllerApi->declineInvite: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **invite_code** | **string**| Invite code | |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Authorization](../../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -427,7 +367,7 @@ try {
 ## `getAvatar()`
 
 ```php
-getAvatar($user_uuid, $initials): \SplFileObject
+getAvatar($uuid, $initials): \SplFileObject
 ```
 
 Retrieve user avatar
@@ -449,11 +389,11 @@ $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_uuid = 'user_uuid_example'; // string
+$uuid = 'uuid_example'; // string
 $initials = True; // bool | Get default avatar
 
 try {
-    $result = $apiInstance->getAvatar($user_uuid, $initials);
+    $result = $apiInstance->getAvatar($uuid, $initials);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->getAvatar: ', $e->getMessage(), PHP_EOL;
@@ -464,7 +404,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_uuid** | **string**|  | |
+| **uuid** | **string**|  | |
 | **initials** | **bool**| Get default avatar | [optional] |
 
 ### Return type
@@ -484,13 +424,13 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getInvites()`
+## `getCorporateUserProfile()`
 
 ```php
-getInvites($offset, $limit): \DocStudio\Client\Model\PageDTOUserInvitationDTO
+getCorporateUserProfile($uuid, $account_uuid): \DocStudio\Client\Model\CorporateProfileDTO
 ```
 
-Get paged invites list
+Retrieve corporate user profile
 
 ### Example
 
@@ -509,14 +449,14 @@ $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$offset = 0; // int | Offset records
-$limit = 25; // int | Limit records, max is 1000
+$uuid = 'uuid_example'; // string
+$account_uuid = 'account_uuid_example'; // string
 
 try {
-    $result = $apiInstance->getInvites($offset, $limit);
+    $result = $apiInstance->getCorporateUserProfile($uuid, $account_uuid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserControllerApi->getInvites: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserControllerApi->getCorporateUserProfile: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -524,12 +464,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **offset** | **int**| Offset records | [optional] [default to 0] |
-| **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25] |
+| **uuid** | **string**|  | |
+| **account_uuid** | **string**|  | |
 
 ### Return type
 
-[**\DocStudio\Client\Model\PageDTOUserInvitationDTO**](../Model/PageDTOUserInvitationDTO.md)
+[**\DocStudio\Client\Model\CorporateProfileDTO**](../Model/CorporateProfileDTO.md)
 
 ### Authorization
 
@@ -608,7 +548,7 @@ try {
 getProfile(): \DocStudio\Client\Model\ProfileDTO
 ```
 
-Retrieve user profile
+Retrieve self profile
 
 ### Example
 
@@ -657,13 +597,13 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `updateInvitation()`
+## `updateCorporateUserProfile()`
 
 ```php
-updateInvitation($uuid, $invitation_put_dto)
+updateCorporateUserProfile($uuid, $account_uuid, $update_profile_dto): \DocStudio\Client\Model\CorporateProfileDTO
 ```
 
-Update invitation by userUuid.
+Update corporate user's profile
 
 ### Example
 
@@ -683,12 +623,14 @@ $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     $config
 );
 $uuid = 'uuid_example'; // string
-$invitation_put_dto = new \DocStudio\Client\Model\InvitationPutDTO(); // \DocStudio\Client\Model\InvitationPutDTO
+$account_uuid = 'account_uuid_example'; // string
+$update_profile_dto = new \DocStudio\Client\Model\UpdateProfileDTO(); // \DocStudio\Client\Model\UpdateProfileDTO
 
 try {
-    $apiInstance->updateInvitation($uuid, $invitation_put_dto);
+    $result = $apiInstance->updateCorporateUserProfile($uuid, $account_uuid, $update_profile_dto);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserControllerApi->updateInvitation: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserControllerApi->updateCorporateUserProfile: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -697,11 +639,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **uuid** | **string**|  | |
-| **invitation_put_dto** | [**\DocStudio\Client\Model\InvitationPutDTO**](../Model/InvitationPutDTO.md)|  | |
+| **account_uuid** | **string**|  | |
+| **update_profile_dto** | [**\DocStudio\Client\Model\UpdateProfileDTO**](../Model/UpdateProfileDTO.md)|  | |
 
 ### Return type
 
-void (empty response body)
+[**\DocStudio\Client\Model\CorporateProfileDTO**](../Model/CorporateProfileDTO.md)
 
 ### Authorization
 
@@ -710,7 +653,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -722,7 +665,7 @@ void (empty response body)
 updateProfile($update_profile_dto): \DocStudio\Client\Model\ProfileDTO
 ```
 
-Update user's profile
+Update self profile
 
 ### Example
 

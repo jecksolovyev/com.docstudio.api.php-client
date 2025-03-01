@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** | Role name | [optional]
 **mailbox_name** | **string** | Name of the mailbox role assigned to | [optional]
-**delegated_to** | **string** | Email of delegate | [optional]
+**delegated_to** | **string** | Email of delegate (for invitation) | [optional]
 **type** | **string** | Role type | [optional]
 **completed** | **bool** | Role completion status | [optional]
 **order** | **int** | Role order as defined in template | [optional]

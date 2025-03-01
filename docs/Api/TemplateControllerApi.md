@@ -508,7 +508,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`, `*/*`
+- **Accept**: `*/*`, `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -570,7 +570,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`, `*/*`
+- **Accept**: `*/*`, `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -929,7 +929,7 @@ No authorization required
 ## `getTemplateByUuid()`
 
 ```php
-getTemplateByUuid($uuid, $mailbox, $template_version): \DocStudio\Client\Model\FullTemplateResponseDTO
+getTemplateByUuid($uuid, $mailbox, $template_version, $check_envelope_creation): \DocStudio\Client\Model\FullTemplateResponseDTO
 ```
 
 Retrieve template by UUID
@@ -954,9 +954,10 @@ $apiInstance = new DocStudio\Client\Api\TemplateControllerApi(
 $uuid = 'uuid_example'; // string | UUID of template to retrieve
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 $template_version = 'template_version_example'; // string | UUID of version
+$check_envelope_creation = True; // bool | Check if envelope can be created using this template
 
 try {
-    $result = $apiInstance->getTemplateByUuid($uuid, $mailbox, $template_version);
+    $result = $apiInstance->getTemplateByUuid($uuid, $mailbox, $template_version, $check_envelope_creation);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TemplateControllerApi->getTemplateByUuid: ', $e->getMessage(), PHP_EOL;
@@ -970,6 +971,7 @@ try {
 | **uuid** | **string**| UUID of template to retrieve | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **template_version** | **string**| UUID of version | [optional] |
+| **check_envelope_creation** | **bool**| Check if envelope can be created using this template | [optional] |
 
 ### Return type
 
@@ -1398,7 +1400,7 @@ $apiInstance = new DocStudio\Client\Api\TemplateControllerApi(
     $config
 );
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$file = "/path/to/file.txt"; // \SplFileObject
+$file = '/path/to/file.txt'; // \SplFileObject
 
 try {
     $result = $apiInstance->uploadImage($mailbox, $file);
@@ -1458,7 +1460,7 @@ $apiInstance = new DocStudio\Client\Api\TemplateControllerApi(
     $config
 );
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$file = "/path/to/file.txt"; // \SplFileObject
+$file = '/path/to/file.txt'; // \SplFileObject
 $action = 'action_example'; // string | Action for fields inside the PDF file
 $clear_fields = True; // bool | Clear non-readonly fields in response PDF (only for PARSE action)
 

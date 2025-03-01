@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **phone** | **string** | User phone | [optional]
 **display_exact_date** | **bool** | Display exact date instead of relative | [optional]
 **signature** | **string** | Saved eInk signature | [optional]
+**initials** | **string** | Saved initials | [optional]
 **accounts** | [**\DocStudio\Client\Model\User2AccountWithMailboxesDTO[]**](User2AccountWithMailboxesDTO.md) | User accounts belongs to | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

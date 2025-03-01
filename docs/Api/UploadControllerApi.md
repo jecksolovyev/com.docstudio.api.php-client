@@ -211,7 +211,7 @@ $apiInstance = new DocStudio\Client\Api\UploadControllerApi(
 );
 $dictionary_uuid = 'dictionary_uuid_example'; // string
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$file = "/path/to/file.txt"; // \SplFileObject
+$file = '/path/to/file.txt'; // \SplFileObject
 
 try {
     $result = $apiInstance->uploadDictionary($dictionary_uuid, $mailbox, $file);
