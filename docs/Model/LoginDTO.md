@@ -1,4 +1,4 @@
-# # LoginDTO
+# LoginDTO
 
 ## Properties
 

@@ -1,5 +1,7 @@
 # DocStudio\Client\EnvelopeCallbackControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -27,7 +29,7 @@ Check callback with certain envelope
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -39,7 +41,7 @@ $apiInstance = new DocStudio\Client\Api\EnvelopeCallbackControllerApi(
 );
 $callback_uuid = 'callback_uuid_example'; // string | Callback id
 $envelope_uuid = 'envelope_uuid_example'; // string | Envelope UUID
-$mailbox_uuid = 'mailbox_uuid_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$mailbox_uuid = 'mailbox_uuid_example'; // string | Mailbox UUID
 
 try {
     $result = $apiInstance->checkCallback($callback_uuid, $envelope_uuid, $mailbox_uuid);
@@ -55,7 +57,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **callback_uuid** | **string**| Callback id | |
 | **envelope_uuid** | **string**| Envelope UUID | |
-| **mailbox_uuid** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **mailbox_uuid** | **string**| Mailbox UUID | |
 
 ### Return type
 
@@ -63,7 +65,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -89,7 +91,7 @@ Add new callback
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -123,7 +125,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -149,7 +151,7 @@ Check CallbackEnvelopeDataDTO as an example of callback payload
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -178,7 +180,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -204,7 +206,7 @@ List callbacks
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -236,7 +238,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -262,7 +264,7 @@ Delete callback
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -295,7 +297,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -321,7 +323,7 @@ Send callback with certain envelope
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -333,7 +335,7 @@ $apiInstance = new DocStudio\Client\Api\EnvelopeCallbackControllerApi(
 );
 $callback_uuid = 'callback_uuid_example'; // string | Callback id
 $envelope_uuid = 'envelope_uuid_example'; // string | Envelope UUID
-$mailbox_uuid = 'mailbox_uuid_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$mailbox_uuid = 'mailbox_uuid_example'; // string | Mailbox UUID
 
 try {
     $result = $apiInstance->sendCallback($callback_uuid, $envelope_uuid, $mailbox_uuid);
@@ -349,7 +351,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **callback_uuid** | **string**| Callback id | |
 | **envelope_uuid** | **string**| Envelope UUID | |
-| **mailbox_uuid** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **mailbox_uuid** | **string**| Mailbox UUID | |
 
 ### Return type
 
@@ -357,7 +359,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

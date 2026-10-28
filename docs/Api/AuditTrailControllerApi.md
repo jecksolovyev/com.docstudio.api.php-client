@@ -1,5 +1,7 @@
 # DocStudio\Client\AuditTrailControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -24,7 +26,7 @@ addAuditTrailRecord($uuid, $mailbox, $audit_trail_info_record_dto)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -59,7 +61,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -85,7 +87,7 @@ Download audit trail pdf for envelope
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -119,12 +121,12 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/octet-stream`, `application/json`
+- **Accept**: `application/octet-stream`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -145,7 +147,7 @@ getAuditTrailByEnvelope($uuid, $mailbox): \DocStudio\Client\Model\AuditTrailDTO[
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -179,7 +181,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

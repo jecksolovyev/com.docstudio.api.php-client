@@ -1,4 +1,4 @@
-# # ValidationResponseDTO
+# ValidationResponseDTO
 
 ## Properties
 

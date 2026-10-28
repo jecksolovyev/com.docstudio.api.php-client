@@ -1,4 +1,4 @@
-# # CreateRecordsResponseDTO
+# CreateRecordsResponseDTO
 
 ## Properties
 

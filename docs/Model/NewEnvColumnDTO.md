@@ -1,12 +1,12 @@
-# # NewEnvColumnDTO
+# NewEnvColumnDTO
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **field_name** | **string** |  |
-**type** | **string** |  |
 **order** | **int** |  | [optional]
+**type** | **string** |  |
 **visible** | **bool** |  | [optional]
 **width** | **int** |  | [optional]
 

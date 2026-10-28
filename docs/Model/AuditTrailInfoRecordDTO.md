@@ -1,4 +1,4 @@
-# # AuditTrailInfoRecordDTO
+# AuditTrailInfoRecordDTO
 
 ## Properties
 

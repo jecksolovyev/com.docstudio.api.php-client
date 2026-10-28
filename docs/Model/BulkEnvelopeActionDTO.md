@@ -1,4 +1,4 @@
-# # BulkEnvelopeActionDTO
+# BulkEnvelopeActionDTO
 
 ## Properties
 

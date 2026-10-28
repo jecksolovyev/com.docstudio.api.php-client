@@ -1,13 +1,15 @@
 # DocStudio\Client\AliasControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createAlias()**](AliasControllerApi.md#createAlias) | **POST** /api/v1/alias | Save alias to mailbox |
 | [**deleteAlias()**](AliasControllerApi.md#deleteAlias) | **DELETE** /api/v1/alias | Delete alias |
-| [**getAllByMailbox()**](AliasControllerApi.md#getAllByMailbox) | **GET** /api/v1/alias/qualifiedID/{id} | Get mailbox UUID by qualified ID |
-| [**getAllByMailboxAlias()**](AliasControllerApi.md#getAllByMailboxAlias) | **GET** /api/v1/alias/mailbox | Get aliases by mailbox |
+| [**getAliasesByMailbox()**](AliasControllerApi.md#getAliasesByMailbox) | **GET** /api/v1/alias/mailbox | Get aliases by mailbox |
+| [**getAliasesByQualifiedId()**](AliasControllerApi.md#getAliasesByQualifiedId) | **GET** /api/v1/alias/qualifiedID/{id} | Get mailbox UUID by qualified ID |
 
 
 ## `createAlias()`
@@ -25,7 +27,7 @@ Save alias to mailbox
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -59,7 +61,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -85,7 +87,7 @@ Delete alias
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -118,7 +120,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -129,68 +131,10 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getAllByMailbox()`
+## `getAliasesByMailbox()`
 
 ```php
-getAllByMailbox($id): \DocStudio\Client\Model\SingleUuidDTO
-```
-
-Get mailbox UUID by qualified ID
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new DocStudio\Client\Api\AliasControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 'id_example'; // string
-
-try {
-    $result = $apiInstance->getAllByMailbox($id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AliasControllerApi->getAllByMailbox: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**|  | |
-
-### Return type
-
-[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
-
-### Authorization
-
-[Authorization](../../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `getAllByMailboxAlias()`
-
-```php
-getAllByMailboxAlias($mailbox, $qualified): \DocStudio\Client\Model\AliasDTO[]
+getAliasesByMailbox($mailbox, $qualified): \DocStudio\Client\Model\AliasDTO[]
 ```
 
 Get aliases by mailbox
@@ -202,7 +146,7 @@ Get aliases by mailbox
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -216,10 +160,10 @@ $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with curr
 $qualified = True; // bool
 
 try {
-    $result = $apiInstance->getAllByMailboxAlias($mailbox, $qualified);
+    $result = $apiInstance->getAliasesByMailbox($mailbox, $qualified);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AliasControllerApi->getAllByMailboxAlias: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AliasControllerApi->getAliasesByMailbox: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -236,7 +180,65 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getAliasesByQualifiedId()`
+
+```php
+getAliasesByQualifiedId($id): \DocStudio\Client\Model\SingleUuidDTO
+```
+
+Get mailbox UUID by qualified ID
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\AliasControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string
+
+try {
+    $result = $apiInstance->getAliasesByQualifiedId($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AliasControllerApi->getAliasesByQualifiedId: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\SingleUuidDTO**](../Model/SingleUuidDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

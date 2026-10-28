@@ -1,13 +1,15 @@
 # DocStudio\Client\ContactControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createContact()**](ContactControllerApi.md#createContact) | **POST** /api/v1/contact | Save a contact in DB |
-| [**deleteContact()**](ContactControllerApi.md#deleteContact) | **DELETE** /api/v1/contact/{uuid} | Delete contact by Id |
+| [**createContact()**](ContactControllerApi.md#createContact) | **POST** /api/v1/contact | Save a contact |
+| [**deleteContact()**](ContactControllerApi.md#deleteContact) | **DELETE** /api/v1/contact/{id} | Delete contact by Id |
 | [**searchOrList()**](ContactControllerApi.md#searchOrList) | **GET** /api/v1/contact/list | Retrieve all contacts by id of specified &#39;access&#39; type and name |
-| [**updateContact()**](ContactControllerApi.md#updateContact) | **PUT** /api/v1/contact/{uuid} | Update the contact in DB |
+| [**updateContact()**](ContactControllerApi.md#updateContact) | **PUT** /api/v1/contact/{id} | Update the contact |
 
 
 ## `createContact()`
@@ -16,7 +18,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 createContact($mailbox, $contact_dto): \DocStudio\Client\Model\ContactResponseDTO
 ```
 
-Save a contact in DB
+Save a contact
 
 ### Example
 
@@ -25,7 +27,7 @@ Save a contact in DB
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -59,7 +61,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -73,7 +75,7 @@ try {
 ## `deleteContact()`
 
 ```php
-deleteContact($uuid, $mailbox)
+deleteContact($id, $mailbox)
 ```
 
 Delete contact by Id
@@ -85,7 +87,7 @@ Delete contact by Id
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -95,11 +97,11 @@ $apiInstance = new DocStudio\Client\Api\ContactControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string | Contact UUID
+$id = 'id_example'; // string | Contact UUID
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
-    $apiInstance->deleteContact($uuid, $mailbox);
+    $apiInstance->deleteContact($id, $mailbox);
 } catch (Exception $e) {
     echo 'Exception when calling ContactControllerApi->deleteContact: ', $e->getMessage(), PHP_EOL;
 }
@@ -109,7 +111,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **uuid** | **string**| Contact UUID | |
+| **id** | **string**| Contact UUID | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
@@ -118,7 +120,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -144,7 +146,7 @@ Retrieve all contacts by id of specified 'access' type and name
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -182,7 +184,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -196,10 +198,10 @@ try {
 ## `updateContact()`
 
 ```php
-updateContact($uuid, $mailbox, $contact_dto): \DocStudio\Client\Model\ContactResponseDTO
+updateContact($id, $mailbox, $contact_dto): \DocStudio\Client\Model\ContactResponseDTO
 ```
 
-Update the contact in DB
+Update the contact
 
 ### Example
 
@@ -208,7 +210,7 @@ Update the contact in DB
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -218,12 +220,12 @@ $apiInstance = new DocStudio\Client\Api\ContactControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string | Contact UUID
+$id = 'id_example'; // string | Contact UUID
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 $contact_dto = new \DocStudio\Client\Model\ContactDTO(); // \DocStudio\Client\Model\ContactDTO
 
 try {
-    $result = $apiInstance->updateContact($uuid, $mailbox, $contact_dto);
+    $result = $apiInstance->updateContact($id, $mailbox, $contact_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactControllerApi->updateContact: ', $e->getMessage(), PHP_EOL;
@@ -234,7 +236,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **uuid** | **string**| Contact UUID | |
+| **id** | **string**| Contact UUID | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **contact_dto** | [**\DocStudio\Client\Model\ContactDTO**](../Model/ContactDTO.md)|  | |
 
@@ -244,7 +246,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

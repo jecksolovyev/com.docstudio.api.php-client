@@ -1,4 +1,4 @@
-# # OperationSource
+# OperationSource
 
 ## Properties
 

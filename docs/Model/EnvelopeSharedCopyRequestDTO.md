@@ -1,4 +1,4 @@
-# # EnvelopeSharedCopyRequestDTO
+# EnvelopeSharedCopyRequestDTO
 
 ## Properties
 

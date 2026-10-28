@@ -1,4 +1,4 @@
-# # ExternalLinkShortResponseDTO
+# ExternalLinkShortResponseDTO
 
 ## Properties
 

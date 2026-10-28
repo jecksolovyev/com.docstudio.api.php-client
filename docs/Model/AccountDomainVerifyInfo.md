@@ -1,4 +1,4 @@
-# # AccountDomainVerifyInfo
+# AccountDomainVerifyInfo
 
 ## Properties
 

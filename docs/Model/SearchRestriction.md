@@ -1,4 +1,4 @@
-# # SearchRestriction
+# SearchRestriction
 
 ## Properties
 

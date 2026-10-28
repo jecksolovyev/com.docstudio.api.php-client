@@ -1,5 +1,7 @@
 # DocStudio\Client\ApplicationTokenControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -24,7 +26,7 @@ Create application token
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -56,7 +58,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -82,7 +84,7 @@ List application tokens
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -111,7 +113,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -137,7 +139,7 @@ Revoke application token
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -168,7 +170,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

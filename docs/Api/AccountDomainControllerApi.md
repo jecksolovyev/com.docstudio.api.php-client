@@ -1,20 +1,27 @@
 # DocStudio\Client\AccountDomainControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**actionAccountDomain()**](AccountDomainControllerApi.md#actionAccountDomain) | **PATCH** /api/v1/account/{accountUuid}/domain/{domainUuid}/{action} | Change account domain status |
 | [**createAccountDomain()**](AccountDomainControllerApi.md#createAccountDomain) | **POST** /api/v1/account/{accountUuid}/domain | Create account domain |
-| [**createAccountSsoIdp()**](AccountDomainControllerApi.md#createAccountSsoIdp) | **POST** /api/v1/account/{accountUuid}/idp | Create account SSO Identity Provider |
+| [**createAccountOauthProvider()**](AccountDomainControllerApi.md#createAccountOauthProvider) | **POST** /api/v1/account/{accountId}/oauth-provider | Create account OAuth2 Provider |
+| [**createAccountSsoIdp()**](AccountDomainControllerApi.md#createAccountSsoIdp) | **POST** /api/v1/account/{accountId}/saml-provider | Create account SAML2 Identity Provider |
 | [**deleteAccountDomain()**](AccountDomainControllerApi.md#deleteAccountDomain) | **DELETE** /api/v1/account/{accountUuid}/domain/{domainUuid} | Delete account domain |
-| [**deleteAccountIdp()**](AccountDomainControllerApi.md#deleteAccountIdp) | **DELETE** /api/v1/account/{accountUuid}/idp/{idpUuid} | Delete account SSO IdP |
+| [**deleteAccountIdp()**](AccountDomainControllerApi.md#deleteAccountIdp) | **DELETE** /api/v1/account/{accountId}/saml-provider/{id} | Delete account SAML2 IdP |
+| [**deleteAccountOauthProvider()**](AccountDomainControllerApi.md#deleteAccountOauthProvider) | **DELETE** /api/v1/account/{accountId}/oauth-provider/{id} | Delete account OAuth2 Provider |
 | [**getAccountDomain()**](AccountDomainControllerApi.md#getAccountDomain) | **GET** /api/v1/account/{accountUuid}/domain/{domainUuid} | Get account domain |
 | [**getAccountDomains()**](AccountDomainControllerApi.md#getAccountDomains) | **GET** /api/v1/account/{accountUuid}/domain | Get paged account domains list |
-| [**getAccountIdp()**](AccountDomainControllerApi.md#getAccountIdp) | **GET** /api/v1/account/{accountUuid}/idp/{idpUuid} | Get account SSO IdP |
-| [**getAllAccountIdps()**](AccountDomainControllerApi.md#getAllAccountIdps) | **GET** /api/v1/account/{accountUuid}/idp | Get all account SSO IdPs |
+| [**getAccountIdp()**](AccountDomainControllerApi.md#getAccountIdp) | **GET** /api/v1/account/{accountId}/saml-provider/{id} | Get account SAML2 IdP |
+| [**getAccountOauthProvider()**](AccountDomainControllerApi.md#getAccountOauthProvider) | **GET** /api/v1/account/{accountId}/oauth-provider/{id} | Get account OAuth2 Provider |
+| [**getAllAccountIdps()**](AccountDomainControllerApi.md#getAllAccountIdps) | **GET** /api/v1/account/{accountId}/saml-provider | Get all account SAML2 IdPs |
+| [**getAllAccountOauthProviders()**](AccountDomainControllerApi.md#getAllAccountOauthProviders) | **GET** /api/v1/account/{accountId}/oauth-provider | Get all account OAuth2 Providers |
 | [**updateAccountDomain()**](AccountDomainControllerApi.md#updateAccountDomain) | **PUT** /api/v1/account/{accountUuid}/domain/{domainUuid} | Update account domain |
-| [**updateAccountSsoIdp()**](AccountDomainControllerApi.md#updateAccountSsoIdp) | **PUT** /api/v1/account/{accountUuid}/idp/{idpUuid} | Update account SSO Identity Provider |
+| [**updateAccountOauthProvider()**](AccountDomainControllerApi.md#updateAccountOauthProvider) | **PUT** /api/v1/account/{accountId}/oauth-provider/{id} | Update account OAuth2 Provider |
+| [**updateAccountSsoIdp()**](AccountDomainControllerApi.md#updateAccountSsoIdp) | **PUT** /api/v1/account/{accountId}/saml-provider/{id} | Update account SAML2 Identity Provider |
 
 
 ## `actionAccountDomain()`
@@ -32,7 +39,7 @@ Change account domain status
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -70,7 +77,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -84,7 +91,7 @@ try {
 ## `createAccountDomain()`
 
 ```php
-createAccountDomain($account_uuid, $account_domain_create_dto): \DocStudio\Client\Model\AccountDomainDTO
+createAccountDomain($account_uuid, $account_domain_create): \DocStudio\Client\Model\AccountDomainDTO
 ```
 
 Create account domain
@@ -96,7 +103,7 @@ Create account domain
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -107,10 +114,10 @@ $apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     $config
 );
 $account_uuid = 'account_uuid_example'; // string | Account UUID
-$account_domain_create_dto = new \DocStudio\Client\Model\AccountDomainCreateDTO(); // \DocStudio\Client\Model\AccountDomainCreateDTO
+$account_domain_create = new \DocStudio\Client\Model\AccountDomainCreate(); // \DocStudio\Client\Model\AccountDomainCreate
 
 try {
-    $result = $apiInstance->createAccountDomain($account_uuid, $account_domain_create_dto);
+    $result = $apiInstance->createAccountDomain($account_uuid, $account_domain_create);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountDomainControllerApi->createAccountDomain: ', $e->getMessage(), PHP_EOL;
@@ -122,7 +129,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_uuid** | **string**| Account UUID | |
-| **account_domain_create_dto** | [**\DocStudio\Client\Model\AccountDomainCreateDTO**](../Model/AccountDomainCreateDTO.md)|  | |
+| **account_domain_create** | [**\DocStudio\Client\Model\AccountDomainCreate**](../Model/AccountDomainCreate.md)|  | |
 
 ### Return type
 
@@ -130,7 +137,67 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `createAccountOauthProvider()`
+
+```php
+createAccountOauthProvider($account_id, $account_oauth_provider_update_dto): \DocStudio\Client\Model\AccountOauthProviderDTO
+```
+
+Create account OAuth2 Provider
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$account_id = 'account_id_example'; // string | Account UUID
+$account_oauth_provider_update_dto = new \DocStudio\Client\Model\AccountOauthProviderUpdateDTO(); // \DocStudio\Client\Model\AccountOauthProviderUpdateDTO
+
+try {
+    $result = $apiInstance->createAccountOauthProvider($account_id, $account_oauth_provider_update_dto);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AccountDomainControllerApi->createAccountOauthProvider: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_id** | **string**| Account UUID | |
+| **account_oauth_provider_update_dto** | [**\DocStudio\Client\Model\AccountOauthProviderUpdateDTO**](../Model/AccountOauthProviderUpdateDTO.md)|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\AccountOauthProviderDTO**](../Model/AccountOauthProviderDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -144,10 +211,10 @@ try {
 ## `createAccountSsoIdp()`
 
 ```php
-createAccountSsoIdp($account_uuid, $account_sso_id_provider_update_dto): \DocStudio\Client\Model\AccountSsoIdProviderDTO
+createAccountSsoIdp($account_id, $account_saml_provider_update_dto): \DocStudio\Client\Model\AccountSamlProviderDTO
 ```
 
-Create account SSO Identity Provider
+Create account SAML2 Identity Provider
 
 ### Example
 
@@ -156,7 +223,7 @@ Create account SSO Identity Provider
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -166,11 +233,11 @@ $apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_uuid = 'account_uuid_example'; // string | Account UUID
-$account_sso_id_provider_update_dto = new \DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO(); // \DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO
+$account_id = 'account_id_example'; // string | Account UUID
+$account_saml_provider_update_dto = new \DocStudio\Client\Model\AccountSamlProviderUpdateDTO(); // \DocStudio\Client\Model\AccountSamlProviderUpdateDTO
 
 try {
-    $result = $apiInstance->createAccountSsoIdp($account_uuid, $account_sso_id_provider_update_dto);
+    $result = $apiInstance->createAccountSsoIdp($account_id, $account_saml_provider_update_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountDomainControllerApi->createAccountSsoIdp: ', $e->getMessage(), PHP_EOL;
@@ -181,16 +248,16 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **account_uuid** | **string**| Account UUID | |
-| **account_sso_id_provider_update_dto** | [**\DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO**](../Model/AccountSsoIdProviderUpdateDTO.md)|  | |
+| **account_id** | **string**| Account UUID | |
+| **account_saml_provider_update_dto** | [**\DocStudio\Client\Model\AccountSamlProviderUpdateDTO**](../Model/AccountSamlProviderUpdateDTO.md)|  | |
 
 ### Return type
 
-[**\DocStudio\Client\Model\AccountSsoIdProviderDTO**](../Model/AccountSsoIdProviderDTO.md)
+[**\DocStudio\Client\Model\AccountSamlProviderDTO**](../Model/AccountSamlProviderDTO.md)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -216,7 +283,7 @@ Delete account domain
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -249,7 +316,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -263,10 +330,10 @@ void (empty response body)
 ## `deleteAccountIdp()`
 
 ```php
-deleteAccountIdp($account_uuid, $idp_uuid)
+deleteAccountIdp($account_id, $id)
 ```
 
-Delete account SSO IdP
+Delete account SAML2 IdP
 
 ### Example
 
@@ -275,7 +342,7 @@ Delete account SSO IdP
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -285,11 +352,11 @@ $apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_uuid = 'account_uuid_example'; // string | Account UUID
-$idp_uuid = 'idp_uuid_example'; // string | IdP UUID
+$account_id = 'account_id_example'; // string | Account UUID
+$id = 'id_example'; // string | IdP UUID
 
 try {
-    $apiInstance->deleteAccountIdp($account_uuid, $idp_uuid);
+    $apiInstance->deleteAccountIdp($account_id, $id);
 } catch (Exception $e) {
     echo 'Exception when calling AccountDomainControllerApi->deleteAccountIdp: ', $e->getMessage(), PHP_EOL;
 }
@@ -299,8 +366,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **account_uuid** | **string**| Account UUID | |
-| **idp_uuid** | **string**| IdP UUID | |
+| **account_id** | **string**| Account UUID | |
+| **id** | **string**| IdP UUID | |
 
 ### Return type
 
@@ -308,7 +375,66 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteAccountOauthProvider()`
+
+```php
+deleteAccountOauthProvider($account_id, $id)
+```
+
+Delete account OAuth2 Provider
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$account_id = 'account_id_example'; // string | Account UUID
+$id = 'id_example'; // string | OAuth2 Provider UUID
+
+try {
+    $apiInstance->deleteAccountOauthProvider($account_id, $id);
+} catch (Exception $e) {
+    echo 'Exception when calling AccountDomainControllerApi->deleteAccountOauthProvider: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_id** | **string**| Account UUID | |
+| **id** | **string**| OAuth2 Provider UUID | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -334,7 +460,7 @@ Get account domain
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -368,7 +494,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -394,7 +520,7 @@ Get paged account domains list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -434,7 +560,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -448,10 +574,10 @@ try {
 ## `getAccountIdp()`
 
 ```php
-getAccountIdp($account_uuid, $idp_uuid): \DocStudio\Client\Model\AccountSsoIdProviderDTO
+getAccountIdp($account_id, $id): \DocStudio\Client\Model\AccountSamlProviderDTO
 ```
 
-Get account SSO IdP
+Get account SAML2 IdP
 
 ### Example
 
@@ -460,7 +586,7 @@ Get account SSO IdP
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -470,11 +596,11 @@ $apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_uuid = 'account_uuid_example'; // string | Account UUID
-$idp_uuid = 'idp_uuid_example'; // string | IdP UUID
+$account_id = 'account_id_example'; // string | Account UUID
+$id = 'id_example'; // string | IdP UUID
 
 try {
-    $result = $apiInstance->getAccountIdp($account_uuid, $idp_uuid);
+    $result = $apiInstance->getAccountIdp($account_id, $id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountDomainControllerApi->getAccountIdp: ', $e->getMessage(), PHP_EOL;
@@ -485,16 +611,76 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **account_uuid** | **string**| Account UUID | |
-| **idp_uuid** | **string**| IdP UUID | |
+| **account_id** | **string**| Account UUID | |
+| **id** | **string**| IdP UUID | |
 
 ### Return type
 
-[**\DocStudio\Client\Model\AccountSsoIdProviderDTO**](../Model/AccountSsoIdProviderDTO.md)
+[**\DocStudio\Client\Model\AccountSamlProviderDTO**](../Model/AccountSamlProviderDTO.md)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getAccountOauthProvider()`
+
+```php
+getAccountOauthProvider($account_id, $id): \DocStudio\Client\Model\AccountOauthProviderDTO
+```
+
+Get account OAuth2 Provider
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$account_id = 'account_id_example'; // string | Account UUID
+$id = 'id_example'; // string | OAuth2 Provider UUID
+
+try {
+    $result = $apiInstance->getAccountOauthProvider($account_id, $id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AccountDomainControllerApi->getAccountOauthProvider: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_id** | **string**| Account UUID | |
+| **id** | **string**| OAuth2 Provider UUID | |
+
+### Return type
+
+[**\DocStudio\Client\Model\AccountOauthProviderDTO**](../Model/AccountOauthProviderDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -508,10 +694,10 @@ try {
 ## `getAllAccountIdps()`
 
 ```php
-getAllAccountIdps($account_uuid): \DocStudio\Client\Model\AccountSsoIdProviderShortDTO[]
+getAllAccountIdps($account_id): \DocStudio\Client\Model\AccountSsoIdProviderShortDTO[]
 ```
 
-Get all account SSO IdPs
+Get all account SAML2 IdPs
 
 ### Example
 
@@ -520,7 +706,7 @@ Get all account SSO IdPs
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -530,10 +716,10 @@ $apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_uuid = 'account_uuid_example'; // string | Account UUID
+$account_id = 'account_id_example'; // string | Account UUID
 
 try {
-    $result = $apiInstance->getAllAccountIdps($account_uuid);
+    $result = $apiInstance->getAllAccountIdps($account_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountDomainControllerApi->getAllAccountIdps: ', $e->getMessage(), PHP_EOL;
@@ -544,7 +730,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **account_uuid** | **string**| Account UUID | |
+| **account_id** | **string**| Account UUID | |
 
 ### Return type
 
@@ -552,7 +738,65 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getAllAccountOauthProviders()`
+
+```php
+getAllAccountOauthProviders($account_id): \DocStudio\Client\Model\AccountSsoIdProviderShortDTO[]
+```
+
+Get all account OAuth2 Providers
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$account_id = 'account_id_example'; // string | Account ID
+
+try {
+    $result = $apiInstance->getAllAccountOauthProviders($account_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AccountDomainControllerApi->getAllAccountOauthProviders: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_id** | **string**| Account ID | |
+
+### Return type
+
+[**\DocStudio\Client\Model\AccountSsoIdProviderShortDTO[]**](../Model/AccountSsoIdProviderShortDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -566,7 +810,7 @@ try {
 ## `updateAccountDomain()`
 
 ```php
-updateAccountDomain($account_uuid, $domain_uuid, $account_domain_update_dto): \DocStudio\Client\Model\AccountDomainDTO
+updateAccountDomain($account_uuid, $domain_uuid, $account_domain_update): \DocStudio\Client\Model\AccountDomainDTO
 ```
 
 Update account domain
@@ -578,7 +822,7 @@ Update account domain
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -590,10 +834,10 @@ $apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
 );
 $account_uuid = 'account_uuid_example'; // string | Account UUID
 $domain_uuid = 'domain_uuid_example'; // string | Domain UUID
-$account_domain_update_dto = new \DocStudio\Client\Model\AccountDomainUpdateDTO(); // \DocStudio\Client\Model\AccountDomainUpdateDTO
+$account_domain_update = new \DocStudio\Client\Model\AccountDomainUpdate(); // \DocStudio\Client\Model\AccountDomainUpdate
 
 try {
-    $result = $apiInstance->updateAccountDomain($account_uuid, $domain_uuid, $account_domain_update_dto);
+    $result = $apiInstance->updateAccountDomain($account_uuid, $domain_uuid, $account_domain_update);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountDomainControllerApi->updateAccountDomain: ', $e->getMessage(), PHP_EOL;
@@ -606,7 +850,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **account_uuid** | **string**| Account UUID | |
 | **domain_uuid** | **string**| Domain UUID | |
-| **account_domain_update_dto** | [**\DocStudio\Client\Model\AccountDomainUpdateDTO**](../Model/AccountDomainUpdateDTO.md)|  | |
+| **account_domain_update** | [**\DocStudio\Client\Model\AccountDomainUpdate**](../Model/AccountDomainUpdate.md)|  | |
 
 ### Return type
 
@@ -614,7 +858,69 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateAccountOauthProvider()`
+
+```php
+updateAccountOauthProvider($account_id, $id, $account_oauth_provider_update_dto): \DocStudio\Client\Model\AccountOauthProviderDTO
+```
+
+Update account OAuth2 Provider
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$account_id = 'account_id_example'; // string | Account UUID
+$id = 'id_example'; // string | OAuth2 Provider UUID
+$account_oauth_provider_update_dto = new \DocStudio\Client\Model\AccountOauthProviderUpdateDTO(); // \DocStudio\Client\Model\AccountOauthProviderUpdateDTO
+
+try {
+    $result = $apiInstance->updateAccountOauthProvider($account_id, $id, $account_oauth_provider_update_dto);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AccountDomainControllerApi->updateAccountOauthProvider: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **account_id** | **string**| Account UUID | |
+| **id** | **string**| OAuth2 Provider UUID | |
+| **account_oauth_provider_update_dto** | [**\DocStudio\Client\Model\AccountOauthProviderUpdateDTO**](../Model/AccountOauthProviderUpdateDTO.md)|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\AccountOauthProviderDTO**](../Model/AccountOauthProviderDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -628,10 +934,10 @@ try {
 ## `updateAccountSsoIdp()`
 
 ```php
-updateAccountSsoIdp($account_uuid, $idp_uuid, $account_sso_id_provider_update_dto): \DocStudio\Client\Model\AccountSsoIdProviderDTO
+updateAccountSsoIdp($account_id, $id, $account_saml_provider_update_dto): \DocStudio\Client\Model\AccountSamlProviderDTO
 ```
 
-Update account SSO Identity Provider
+Update account SAML2 Identity Provider
 
 ### Example
 
@@ -640,7 +946,7 @@ Update account SSO Identity Provider
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -650,12 +956,12 @@ $apiInstance = new DocStudio\Client\Api\AccountDomainControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_uuid = 'account_uuid_example'; // string | Account UUID
-$idp_uuid = 'idp_uuid_example'; // string | IdP UUID
-$account_sso_id_provider_update_dto = new \DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO(); // \DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO
+$account_id = 'account_id_example'; // string | Account UUID
+$id = 'id_example'; // string | IdP UUID
+$account_saml_provider_update_dto = new \DocStudio\Client\Model\AccountSamlProviderUpdateDTO(); // \DocStudio\Client\Model\AccountSamlProviderUpdateDTO
 
 try {
-    $result = $apiInstance->updateAccountSsoIdp($account_uuid, $idp_uuid, $account_sso_id_provider_update_dto);
+    $result = $apiInstance->updateAccountSsoIdp($account_id, $id, $account_saml_provider_update_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountDomainControllerApi->updateAccountSsoIdp: ', $e->getMessage(), PHP_EOL;
@@ -666,17 +972,17 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **account_uuid** | **string**| Account UUID | |
-| **idp_uuid** | **string**| IdP UUID | |
-| **account_sso_id_provider_update_dto** | [**\DocStudio\Client\Model\AccountSsoIdProviderUpdateDTO**](../Model/AccountSsoIdProviderUpdateDTO.md)|  | |
+| **account_id** | **string**| Account UUID | |
+| **id** | **string**| IdP UUID | |
+| **account_saml_provider_update_dto** | [**\DocStudio\Client\Model\AccountSamlProviderUpdateDTO**](../Model/AccountSamlProviderUpdateDTO.md)|  | |
 
 ### Return type
 
-[**\DocStudio\Client\Model\AccountSsoIdProviderDTO**](../Model/AccountSsoIdProviderDTO.md)
+[**\DocStudio\Client\Model\AccountSamlProviderDTO**](../Model/AccountSamlProviderDTO.md)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

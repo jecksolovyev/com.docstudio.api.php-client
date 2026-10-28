@@ -1,5 +1,7 @@
 # DocStudio\Client\TemplateControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -8,7 +10,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**archiveTemplate()**](TemplateControllerApi.md#archiveTemplate) | **PATCH** /api/v1/template/{uuid}/archive | Make template archived |
 | [**callClone()**](TemplateControllerApi.md#callClone) | **POST** /api/v1/template/{uuid}/clone | Clone template |
 | [**checkTemplateExistsByUuid()**](TemplateControllerApi.md#checkTemplateExistsByUuid) | **HEAD** /api/v1/template/{uuid} | Check template exists by UUID |
-| [**create()**](TemplateControllerApi.md#create) | **POST** /api/v1/template | Create new template |
+| [**createTemplate()**](TemplateControllerApi.md#createTemplate) | **POST** /api/v1/template | Create new template |
 | [**deleteShareCode()**](TemplateControllerApi.md#deleteShareCode) | **DELETE** /api/v1/template/{uuid}/share-code | Delete share code for template |
 | [**deleteZipStructure()**](TemplateControllerApi.md#deleteZipStructure) | **DELETE** /api/v1/template/{uuid}/zip-structure/{title} | Delete structure for zip archive |
 | [**downloadTemplateImage()**](TemplateControllerApi.md#downloadTemplateImage) | **GET** /api/v1/template/{uuid}/image | Download template image |
@@ -22,10 +24,12 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**getTemplateByUuid()**](TemplateControllerApi.md#getTemplateByUuid) | **GET** /api/v1/template/{uuid} | Retrieve template by UUID |
 | [**getTemplateVersionsByUuid()**](TemplateControllerApi.md#getTemplateVersionsByUuid) | **GET** /api/v1/template/{uuid}/versions | Retrieve template versions by UUID |
 | [**getZipStructure()**](TemplateControllerApi.md#getZipStructure) | **GET** /api/v1/template/{uuid}/zip-structure | Get structure with all files for zip archive |
+| [**removeTemplateFavoriteFlag()**](TemplateControllerApi.md#removeTemplateFavoriteFlag) | **DELETE** /api/v1/template/{uuid}/favorite | Remove favorite flag |
 | [**searchTemplates()**](TemplateControllerApi.md#searchTemplates) | **GET** /api/v1/template | Get paged templates list |
-| [**update()**](TemplateControllerApi.md#update) | **PUT** /api/v1/template/{uuid} | Update template in DB. Category in template could be null. |
-| [**updateCategories()**](TemplateControllerApi.md#updateCategories) | **PATCH** /api/v1/template/{uuid}/categories | Update categories in template. |
-| [**updateName()**](TemplateControllerApi.md#updateName) | **PATCH** /api/v1/template/{uuid}/name | Update name in template. |
+| [**setTemplateFavoriteFlag()**](TemplateControllerApi.md#setTemplateFavoriteFlag) | **PUT** /api/v1/template/{uuid}/favorite | Mark template as favorite |
+| [**updateName()**](TemplateControllerApi.md#updateName) | **PATCH** /api/v1/template/{uuid}/name | Update name in template |
+| [**updateTemplate()**](TemplateControllerApi.md#updateTemplate) | **PUT** /api/v1/template/{uuid} | Update template. Category in template could be null |
+| [**updateTemplateCategories()**](TemplateControllerApi.md#updateTemplateCategories) | **PATCH** /api/v1/template/{uuid}/categories | Update categories in template |
 | [**uploadImage()**](TemplateControllerApi.md#uploadImage) | **POST** /api/v1/template/image | Upload new image |
 | [**uploadPdf()**](TemplateControllerApi.md#uploadPdf) | **POST** /api/v1/template/pdf | Upload new PDF |
 | [**validateTemplate()**](TemplateControllerApi.md#validateTemplate) | **GET** /api/v1/template/validate | Validate template by UUID or version |
@@ -46,7 +50,7 @@ Add new files structure for zip archive
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -83,7 +87,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -109,7 +113,7 @@ Make template archived
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -142,7 +146,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -168,7 +172,7 @@ Clone template
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -202,7 +206,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -228,7 +232,7 @@ Check template exists by UUID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -261,7 +265,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -272,10 +276,10 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `create()`
+## `createTemplate()`
 
 ```php
-create($mailbox, $template_create_dto): \DocStudio\Client\Model\FullTemplateResponseDTO
+createTemplate($mailbox, $template_create_dto): \DocStudio\Client\Model\FullTemplateResponseDTO
 ```
 
 Create new template
@@ -287,7 +291,7 @@ Create new template
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -301,10 +305,10 @@ $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with curr
 $template_create_dto = new \DocStudio\Client\Model\TemplateCreateDTO(); // \DocStudio\Client\Model\TemplateCreateDTO
 
 try {
-    $result = $apiInstance->create($mailbox, $template_create_dto);
+    $result = $apiInstance->createTemplate($mailbox, $template_create_dto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TemplateControllerApi->create: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TemplateControllerApi->createTemplate: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -321,7 +325,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -347,7 +351,7 @@ Delete share code for template
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -380,7 +384,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -406,7 +410,7 @@ Delete structure for zip archive
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -443,7 +447,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -457,7 +461,7 @@ void (empty response body)
 ## `downloadTemplateImage()`
 
 ```php
-downloadTemplateImage($uuid, $image_uuid, $envelope_uuid, $mailbox): string
+downloadTemplateImage($uuid, $image_uuid): string
 ```
 
 Download template image
@@ -477,11 +481,9 @@ $apiInstance = new DocStudio\Client\Api\TemplateControllerApi(
 );
 $uuid = 'uuid_example'; // string | Template UUID
 $image_uuid = 'image_uuid_example'; // string | Image UUID
-$envelope_uuid = 'envelope_uuid_example'; // string | Envelope UUID
-$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
-    $result = $apiInstance->downloadTemplateImage($uuid, $image_uuid, $envelope_uuid, $mailbox);
+    $result = $apiInstance->downloadTemplateImage($uuid, $image_uuid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TemplateControllerApi->downloadTemplateImage: ', $e->getMessage(), PHP_EOL;
@@ -494,8 +496,6 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **uuid** | **string**| Template UUID | |
 | **image_uuid** | **string**| Image UUID | |
-| **envelope_uuid** | **string**| Envelope UUID | [optional] |
-| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | [optional] |
 
 ### Return type
 
@@ -508,7 +508,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `*/*`, `application/json`
+- **Accept**: `*/*`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -529,11 +529,20 @@ Download template PDF
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+// Configure API key authorization: formAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 
 $apiInstance = new DocStudio\Client\Api\TemplateControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $uuid = 'uuid_example'; // string | Template UUID
 $pdf_uuid = 'pdf_uuid_example'; // string | Pdf UUID
@@ -565,12 +574,12 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth), [formAuth](../../README.md#formAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `*/*`, `application/json`
+- **Accept**: `*/*`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -647,7 +656,7 @@ Get up to 10 recently used templates
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -679,7 +688,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -705,7 +714,7 @@ Get up to 4 recommended templates
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -737,7 +746,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -763,7 +772,7 @@ Get saved structure titles for zip archive
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -799,7 +808,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -825,7 +834,7 @@ Retrieve share code for template
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -861,7 +870,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -941,7 +950,7 @@ Retrieve template by UUID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -979,7 +988,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1005,7 +1014,7 @@ Retrieve template versions by UUID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1045,7 +1054,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1071,7 +1080,7 @@ Get structure with all files for zip archive
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1109,7 +1118,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1120,10 +1129,69 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `removeTemplateFavoriteFlag()`
+
+```php
+removeTemplateFavoriteFlag($uuid, $mailbox)
+```
+
+Remove favorite flag
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\TemplateControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$uuid = 'uuid_example'; // string | UUID of template
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+
+try {
+    $apiInstance->removeTemplateFavoriteFlag($uuid, $mailbox);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateControllerApi->removeTemplateFavoriteFlag: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **uuid** | **string**| UUID of template | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `searchTemplates()`
 
 ```php
-searchTemplates($mailbox, $level, $keyword, $category, $extended, $offset, $limit): \DocStudio\Client\Model\PageDTOSearchTemplateDTO
+searchTemplates($mailbox, $level, $keyword, $category, $extended, $favorite, $exclude_categorized, $offset, $limit): \DocStudio\Client\Model\PageDTOSearchTemplateDTO
 ```
 
 Get paged templates list
@@ -1135,7 +1203,7 @@ Get paged templates list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1146,15 +1214,17 @@ $apiInstance = new DocStudio\Client\Api\TemplateControllerApi(
     $config
 );
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$level = 'pub'; // string | Template access level, 'pub' by default.
+$level = 'level_example'; // string | Template access level
 $keyword = 'keyword_example'; // string | Keyword to search template by or template UUID
 $category = 'category_example'; // string | Category id to search template in
 $extended = false; // bool | Add extended info to each template (access, account, categories)
+$favorite = True; // bool | Filter only favorite or not favorite templates
+$exclude_categorized = True; // bool | Exclude templates if they are located in any other category, except categoryId, within same access level
 $offset = 0; // int | Offset records
 $limit = 25; // int | Limit records, max is 1000
 
 try {
-    $result = $apiInstance->searchTemplates($mailbox, $level, $keyword, $category, $extended, $offset, $limit);
+    $result = $apiInstance->searchTemplates($mailbox, $level, $keyword, $category, $extended, $favorite, $exclude_categorized, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TemplateControllerApi->searchTemplates: ', $e->getMessage(), PHP_EOL;
@@ -1166,10 +1236,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **level** | **string**| Template access level, &#39;pub&#39; by default. | [optional] [default to &#39;pub&#39;] |
+| **level** | **string**| Template access level | [optional] |
 | **keyword** | **string**| Keyword to search template by or template UUID | [optional] |
 | **category** | **string**| Category id to search template in | [optional] |
 | **extended** | **bool**| Add extended info to each template (access, account, categories) | [optional] [default to false] |
+| **favorite** | **bool**| Filter only favorite or not favorite templates | [optional] |
+| **exclude_categorized** | **bool**| Exclude templates if they are located in any other category, except categoryId, within same access level | [optional] |
 | **offset** | **int**| Offset records | [optional] [default to 0] |
 | **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25] |
 
@@ -1179,7 +1251,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1190,13 +1262,13 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `update()`
+## `setTemplateFavoriteFlag()`
 
 ```php
-update($uuid, $mailbox, $template_create_dto): \DocStudio\Client\Model\FullTemplateResponseDTO
+setTemplateFavoriteFlag($uuid, $mailbox)
 ```
 
-Update template in DB. Category in template could be null.
+Mark template as favorite
 
 ### Example
 
@@ -1205,7 +1277,7 @@ Update template in DB. Category in template could be null.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1215,15 +1287,13 @@ $apiInstance = new DocStudio\Client\Api\TemplateControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string | Template uuid
+$uuid = 'uuid_example'; // string | UUID of template
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$template_create_dto = new \DocStudio\Client\Model\TemplateCreateDTO(); // \DocStudio\Client\Model\TemplateCreateDTO
 
 try {
-    $result = $apiInstance->update($uuid, $mailbox, $template_create_dto);
-    print_r($result);
+    $apiInstance->setTemplateFavoriteFlag($uuid, $mailbox);
 } catch (Exception $e) {
-    echo 'Exception when calling TemplateControllerApi->update: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TemplateControllerApi->setTemplateFavoriteFlag: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1231,70 +1301,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **uuid** | **string**| Template uuid | |
+| **uuid** | **string**| UUID of template | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **template_create_dto** | [**\DocStudio\Client\Model\TemplateCreateDTO**](../Model/TemplateCreateDTO.md)|  | |
-
-### Return type
-
-[**\DocStudio\Client\Model\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
-
-### Authorization
-
-[Authorization](../../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `updateCategories()`
-
-```php
-updateCategories($uuid, $mailbox, $request_body)
-```
-
-Update categories in template.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new DocStudio\Client\Api\TemplateControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$uuid = 'uuid_example'; // string | Template UUID
-$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$request_body = array('request_body_example'); // string[]
-
-try {
-    $apiInstance->updateCategories($uuid, $mailbox, $request_body);
-} catch (Exception $e) {
-    echo 'Exception when calling TemplateControllerApi->updateCategories: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **uuid** | **string**| Template UUID | |
-| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **request_body** | [**string[]**](../Model/string.md)|  | |
 
 ### Return type
 
@@ -1302,11 +1310,11 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
-- **Content-Type**: `application/json`
+- **Content-Type**: Not defined
 - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -1319,7 +1327,7 @@ void (empty response body)
 updateName($uuid, $mailbox, $body)
 ```
 
-Update name in template.
+Update name in template
 
 ### Example
 
@@ -1328,7 +1336,7 @@ Update name in template.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1363,7 +1371,130 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateTemplate()`
+
+```php
+updateTemplate($uuid, $mailbox, $template_create_dto): \DocStudio\Client\Model\FullTemplateResponseDTO
+```
+
+Update template. Category in template could be null
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\TemplateControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$uuid = 'uuid_example'; // string | Template uuid
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$template_create_dto = new \DocStudio\Client\Model\TemplateCreateDTO(); // \DocStudio\Client\Model\TemplateCreateDTO
+
+try {
+    $result = $apiInstance->updateTemplate($uuid, $mailbox, $template_create_dto);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateControllerApi->updateTemplate: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **uuid** | **string**| Template uuid | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **template_create_dto** | [**\DocStudio\Client\Model\TemplateCreateDTO**](../Model/TemplateCreateDTO.md)|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\FullTemplateResponseDTO**](../Model/FullTemplateResponseDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateTemplateCategories()`
+
+```php
+updateTemplateCategories($uuid, $mailbox, $request_body)
+```
+
+Update categories in template
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\TemplateControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$uuid = 'uuid_example'; // string | Template UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$request_body = array('request_body_example'); // string[]
+
+try {
+    $apiInstance->updateTemplateCategories($uuid, $mailbox, $request_body);
+} catch (Exception $e) {
+    echo 'Exception when calling TemplateControllerApi->updateTemplateCategories: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **uuid** | **string**| Template UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **request_body** | [**string[]**](../Model/string.md)|  | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1389,7 +1520,7 @@ Upload new image
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1423,7 +1554,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1449,7 +1580,7 @@ Upload new PDF
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1487,7 +1618,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1513,7 +1644,7 @@ Validate template by UUID or version
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1549,7 +1680,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

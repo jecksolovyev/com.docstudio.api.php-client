@@ -1,4 +1,4 @@
-# # EnvelopeDocumentSignaturesDTO
+# EnvelopeDocumentSignaturesDTO
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # FieldRestriction
+# FieldRestriction
 
 ## Properties
 

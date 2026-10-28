@@ -1,4 +1,4 @@
-# # EnvelopeCancelDelegationDTO
+# EnvelopeCancelDelegationDTO
 
 ## Properties
 

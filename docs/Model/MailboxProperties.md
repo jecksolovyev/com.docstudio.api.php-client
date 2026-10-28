@@ -1,4 +1,4 @@
-# # MailboxProperties
+# MailboxProperties
 
 ## Properties
 

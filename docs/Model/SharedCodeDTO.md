@@ -1,4 +1,4 @@
-# # SharedCodeDTO
+# SharedCodeDTO
 
 ## Properties
 

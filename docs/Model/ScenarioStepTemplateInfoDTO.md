@@ -1,4 +1,4 @@
-# # ScenarioStepTemplateInfoDTO
+# ScenarioStepTemplateInfoDTO
 
 ## Properties
 

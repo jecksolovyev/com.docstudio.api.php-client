@@ -1,11 +1,14 @@
 # DocStudio\Client\ValidationControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**getEnvelopeInvite()**](ValidationControllerApi.md#getEnvelopeInvite) | **GET** /api/v1/validation/envelope-authorized-invite | Get invitation info by already registered user |
 | [**getEnvelopeInviteNotRegistered()**](ValidationControllerApi.md#getEnvelopeInviteNotRegistered) | **GET** /api/v1/validation/envelope-invite | Get invitation info by not authenticated user |
+| [**getUserInvitationStatus()**](ValidationControllerApi.md#getUserInvitationStatus) | **GET** /api/v1/validation/account-invite | Get user status by account invitation code |
 
 
 ## `getEnvelopeInvite()`
@@ -23,7 +26,7 @@ Get invitation info by already registered user
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -55,7 +58,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -69,7 +72,7 @@ try {
 ## `getEnvelopeInviteNotRegistered()`
 
 ```php
-getEnvelopeInviteNotRegistered($code): \DocStudio\Client\Model\GetEnvelopeInviteInfoDTO
+getEnvelopeInviteNotRegistered($code, $email): \DocStudio\Client\Model\GetEnvelopeInviteInfoDTO
 ```
 
 Get invitation info by not authenticated user
@@ -81,16 +84,21 @@ Get invitation info by not authenticated user
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\ValidationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $code = 'code_example'; // string
+$email = 'email_example'; // string
 
 try {
-    $result = $apiInstance->getEnvelopeInviteNotRegistered($code);
+    $result = $apiInstance->getEnvelopeInviteNotRegistered($code, $email);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ValidationControllerApi->getEnvelopeInviteNotRegistered: ', $e->getMessage(), PHP_EOL;
@@ -102,6 +110,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **code** | **string**|  | |
+| **email** | **string**|  | |
 
 ### Return type
 
@@ -109,7 +118,67 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getUserInvitationStatus()`
+
+```php
+getUserInvitationStatus($code, $email): \DocStudio\Client\Model\UserStatusInfo
+```
+
+Get user status by account invitation code
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\ValidationControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$code = 'code_example'; // string
+$email = 'email_example'; // string
+
+try {
+    $result = $apiInstance->getUserInvitationStatus($code, $email);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ValidationControllerApi->getUserInvitationStatus: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **code** | **string**|  | |
+| **email** | **string**|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\UserStatusInfo**](../Model/UserStatusInfo.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

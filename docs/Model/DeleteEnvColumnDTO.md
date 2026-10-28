@@ -1,4 +1,4 @@
-# # DeleteEnvColumnDTO
+# DeleteEnvColumnDTO
 
 ## Properties
 

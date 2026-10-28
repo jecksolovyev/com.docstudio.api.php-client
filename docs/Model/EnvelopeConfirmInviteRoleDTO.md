@@ -1,4 +1,4 @@
-# # EnvelopeConfirmInviteRoleDTO
+# EnvelopeConfirmInviteRoleDTO
 
 ## Properties
 

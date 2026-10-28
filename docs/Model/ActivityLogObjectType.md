@@ -1,4 +1,4 @@
-# # ActivityLogObjectType
+# ActivityLogObjectType
 
 ## Properties
 

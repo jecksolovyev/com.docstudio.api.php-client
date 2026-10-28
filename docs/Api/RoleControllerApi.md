@@ -1,11 +1,13 @@
 # DocStudio\Client\RoleControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createRole()**](RoleControllerApi.md#createRole) | **POST** /api/v1/permission/role | Create a role |
-| [**delete()**](RoleControllerApi.md#delete) | **DELETE** /api/v1/permission/role/{uuid} |  |
+| [**deleteRole()**](RoleControllerApi.md#deleteRole) | **DELETE** /api/v1/permission/role/{uuid} |  |
 | [**read()**](RoleControllerApi.md#read) | **GET** /api/v1/permission/role/{uuid} | Read role by UUID |
 | [**readAll()**](RoleControllerApi.md#readAll) | **GET** /api/v1/permission/role | Read all system roles |
 | [**readAllWithAccount()**](RoleControllerApi.md#readAllWithAccount) | **GET** /api/v1/permission/role/account/{uuid} | Read all roles for account including system predefined |
@@ -27,7 +29,7 @@ Create a role
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -59,7 +61,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -70,10 +72,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `delete()`
+## `deleteRole()`
 
 ```php
-delete($uuid)
+deleteRole($uuid)
 ```
 
 
@@ -85,7 +87,7 @@ delete($uuid)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -98,9 +100,9 @@ $apiInstance = new DocStudio\Client\Api\RoleControllerApi(
 $uuid = 'uuid_example'; // string
 
 try {
-    $apiInstance->delete($uuid);
+    $apiInstance->deleteRole($uuid);
 } catch (Exception $e) {
-    echo 'Exception when calling RoleControllerApi->delete: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling RoleControllerApi->deleteRole: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -116,7 +118,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -142,7 +144,7 @@ Read role by UUID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -174,7 +176,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -200,7 +202,7 @@ Read all system roles
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -234,7 +236,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -260,7 +262,7 @@ Read all roles for account including system predefined
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -302,7 +304,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -328,7 +330,7 @@ Update role, allow to change name and permissions
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -362,7 +364,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

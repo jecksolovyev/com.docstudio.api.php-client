@@ -1,4 +1,4 @@
-# # TemplTableRestriction
+# TemplTableRestriction
 
 ## Properties
 

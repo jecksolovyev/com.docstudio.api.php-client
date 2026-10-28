@@ -1,13 +1,15 @@
 # DocStudio\Client\NotificationControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**getAccountPreferences()**](NotificationControllerApi.md#getAccountPreferences) | **GET** /api/v1/notification/account-preferences | Get account related notification preferences |
 | [**getCorporateUserAccountPreferences()**](NotificationControllerApi.md#getCorporateUserAccountPreferences) | **GET** /api/v1/notification/user/{userUuid}/account/{accountUuid}/account-preferences | Get corporate user account related notification preferences |
-| [**getMailboxPreferences()**](NotificationControllerApi.md#getMailboxPreferences) | **GET** /api/v1/notification/user/{userUuid}/account/{accountUuid}/mailbox-preferences | Get corporate user mailbox related notification preferences |
-| [**getMailboxPreferences1()**](NotificationControllerApi.md#getMailboxPreferences1) | **GET** /api/v1/notification/mailbox-preferences | Get mailbox related notification preferences |
+| [**getMailboxPreferences()**](NotificationControllerApi.md#getMailboxPreferences) | **GET** /api/v1/notification/mailbox-preferences | Get mailbox related notification preferences |
+| [**getMailboxPreferencesForUser()**](NotificationControllerApi.md#getMailboxPreferencesForUser) | **GET** /api/v1/notification/user/{userUuid}/account/{accountUuid}/mailbox-preferences | Get corporate user mailbox related notification preferences |
 | [**getUnreadNotifications()**](NotificationControllerApi.md#getUnreadNotifications) | **GET** /api/v1/notification | Get unread notifications |
 | [**markAllNotificationRead()**](NotificationControllerApi.md#markAllNotificationRead) | **POST** /api/v1/notification/read-all | Mark notifications as read |
 | [**markNotificationRead()**](NotificationControllerApi.md#markNotificationRead) | **POST** /api/v1/notification/read | Mark notifications as read |
@@ -32,7 +34,7 @@ Get account related notification preferences
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -61,7 +63,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -87,7 +89,7 @@ Get corporate user account related notification preferences
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -121,7 +123,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -135,7 +137,65 @@ try {
 ## `getMailboxPreferences()`
 
 ```php
-getMailboxPreferences($user_uuid, $account_uuid, $mailbox): array<string,int[]>
+getMailboxPreferences($mailbox): \DocStudio\Client\Model\MailboxNotificationPreferences
+```
+
+Get mailbox related notification preferences
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\NotificationControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$mailbox = 'mailbox_example'; // string
+
+try {
+    $result = $apiInstance->getMailboxPreferences($mailbox);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling NotificationControllerApi->getMailboxPreferences: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**|  | [optional] |
+
+### Return type
+
+[**\DocStudio\Client\Model\MailboxNotificationPreferences**](../Model/MailboxNotificationPreferences.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getMailboxPreferencesForUser()`
+
+```php
+getMailboxPreferencesForUser($user_uuid, $account_uuid, $mailbox): \DocStudio\Client\Model\MailboxNotificationPreferences
 ```
 
 Get corporate user mailbox related notification preferences
@@ -147,7 +207,7 @@ Get corporate user mailbox related notification preferences
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -162,10 +222,10 @@ $account_uuid = 'account_uuid_example'; // string | Account uuid
 $mailbox = 'mailbox_example'; // string
 
 try {
-    $result = $apiInstance->getMailboxPreferences($user_uuid, $account_uuid, $mailbox);
+    $result = $apiInstance->getMailboxPreferencesForUser($user_uuid, $account_uuid, $mailbox);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling NotificationControllerApi->getMailboxPreferences: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling NotificationControllerApi->getMailboxPreferencesForUser: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -179,69 +239,11 @@ try {
 
 ### Return type
 
-**array<string,int[]>**
+[**\DocStudio\Client\Model\MailboxNotificationPreferences**](../Model/MailboxNotificationPreferences.md)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `getMailboxPreferences1()`
-
-```php
-getMailboxPreferences1($mailbox): array<string,int[]>
-```
-
-Get mailbox related notification preferences
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new DocStudio\Client\Api\NotificationControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$mailbox = 'mailbox_example'; // string
-
-try {
-    $result = $apiInstance->getMailboxPreferences1($mailbox);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling NotificationControllerApi->getMailboxPreferences1: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **mailbox** | **string**|  | [optional] |
-
-### Return type
-
-**array<string,int[]>**
-
-### Authorization
-
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -267,7 +269,7 @@ Get unread notifications
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -301,7 +303,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -327,7 +329,7 @@ Mark notifications as read
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -355,7 +357,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -381,7 +383,7 @@ Mark notifications as read
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -412,7 +414,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -438,7 +440,7 @@ Update account related notification preferences
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -469,7 +471,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -483,7 +485,7 @@ void (empty response body)
 ## `saveMailboxPreferences()`
 
 ```php
-saveMailboxPreferences($request_body, $mailbox)
+saveMailboxPreferences($mailbox_notification_preferences, $mailbox)
 ```
 
 Update mailbox related notification preferences
@@ -495,7 +497,7 @@ Update mailbox related notification preferences
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -505,11 +507,11 @@ $apiInstance = new DocStudio\Client\Api\NotificationControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$request_body = NULL; // array<string,int[]>
+$mailbox_notification_preferences = new \DocStudio\Client\Model\MailboxNotificationPreferences(); // \DocStudio\Client\Model\MailboxNotificationPreferences
 $mailbox = 'mailbox_example'; // string
 
 try {
-    $apiInstance->saveMailboxPreferences($request_body, $mailbox);
+    $apiInstance->saveMailboxPreferences($mailbox_notification_preferences, $mailbox);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationControllerApi->saveMailboxPreferences: ', $e->getMessage(), PHP_EOL;
 }
@@ -519,7 +521,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **request_body** | [**array<string,int[]>**](../Model/array.md)|  | |
+| **mailbox_notification_preferences** | [**\DocStudio\Client\Model\MailboxNotificationPreferences**](../Model/MailboxNotificationPreferences.md)|  | |
 | **mailbox** | **string**|  | [optional] |
 
 ### Return type
@@ -528,7 +530,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -554,7 +556,7 @@ Update corporate user account related notification preferences
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -589,7 +591,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -603,7 +605,7 @@ void (empty response body)
 ## `setMailboxPreferences()`
 
 ```php
-setMailboxPreferences($user_uuid, $account_uuid, $request_body, $mailbox)
+setMailboxPreferences($user_uuid, $account_uuid, $mailbox_notification_preferences, $mailbox)
 ```
 
 Update corporate user mailbox related notification preferences
@@ -615,7 +617,7 @@ Update corporate user mailbox related notification preferences
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -627,11 +629,11 @@ $apiInstance = new DocStudio\Client\Api\NotificationControllerApi(
 );
 $user_uuid = 'user_uuid_example'; // string | User uuid
 $account_uuid = 'account_uuid_example'; // string | Account uuid
-$request_body = NULL; // array<string,int[]>
+$mailbox_notification_preferences = new \DocStudio\Client\Model\MailboxNotificationPreferences(); // \DocStudio\Client\Model\MailboxNotificationPreferences
 $mailbox = 'mailbox_example'; // string
 
 try {
-    $apiInstance->setMailboxPreferences($user_uuid, $account_uuid, $request_body, $mailbox);
+    $apiInstance->setMailboxPreferences($user_uuid, $account_uuid, $mailbox_notification_preferences, $mailbox);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationControllerApi->setMailboxPreferences: ', $e->getMessage(), PHP_EOL;
 }
@@ -643,7 +645,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **user_uuid** | **string**| User uuid | |
 | **account_uuid** | **string**| Account uuid | |
-| **request_body** | [**array<string,int[]>**](../Model/array.md)|  | |
+| **mailbox_notification_preferences** | [**\DocStudio\Client\Model\MailboxNotificationPreferences**](../Model/MailboxNotificationPreferences.md)|  | |
 | **mailbox** | **string**|  | [optional] |
 
 ### Return type
@@ -652,7 +654,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

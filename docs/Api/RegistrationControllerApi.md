@@ -1,5 +1,7 @@
 # DocStudio\Client\RegistrationControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -28,11 +30,15 @@ Get user password policy
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $email = 'email_example'; // string | Email of user
 
@@ -56,7 +62,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -70,7 +76,7 @@ No authorization required
 ## `register()`
 
 ```php
-register($code, $user_create_dto, $code_type): \DocStudio\Client\Model\LoginResponseDTO
+register($code, $user_create_dto, $code_type, $refresh_token): \DocStudio\Client\Model\LoginResponseDTO
 ```
 
 Register a user with validation code
@@ -82,18 +88,23 @@ Register a user with validation code
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $code = 'code_example'; // string | Validation code
 $user_create_dto = new \DocStudio\Client\Model\UserCreateDTO(); // \DocStudio\Client\Model\UserCreateDTO
 $code_type = 'code_type_example'; // string | Type of code
+$refresh_token = True; // bool | Is refresh token needed
 
 try {
-    $result = $apiInstance->register($code, $user_create_dto, $code_type);
+    $result = $apiInstance->register($code, $user_create_dto, $code_type, $refresh_token);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RegistrationControllerApi->register: ', $e->getMessage(), PHP_EOL;
@@ -107,6 +118,7 @@ try {
 | **code** | **string**| Validation code | |
 | **user_create_dto** | [**\DocStudio\Client\Model\UserCreateDTO**](../Model/UserCreateDTO.md)|  | |
 | **code_type** | **string**| Type of code | [optional] |
+| **refresh_token** | **bool**| Is refresh token needed | [optional] |
 
 ### Return type
 
@@ -114,7 +126,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -140,11 +152,15 @@ Renew user's password
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $renew_password_dto = new \DocStudio\Client\Model\RenewPasswordDTO(); // \DocStudio\Client\Model\RenewPasswordDTO
 
@@ -167,7 +183,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -181,7 +197,7 @@ No authorization required
 ## `requestResendValidationCode()`
 
 ```php
-requestResendValidationCode($request_val_code_dto): object
+requestResendValidationCode($request_val_code_dto, $initiation): object
 ```
 
 Send email validation code
@@ -193,16 +209,21 @@ Send email validation code
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $request_val_code_dto = new \DocStudio\Client\Model\RequestValCodeDTO(); // \DocStudio\Client\Model\RequestValCodeDTO
+$initiation = True; // bool | Code for envelope initiation purpose
 
 try {
-    $result = $apiInstance->requestResendValidationCode($request_val_code_dto);
+    $result = $apiInstance->requestResendValidationCode($request_val_code_dto, $initiation);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RegistrationControllerApi->requestResendValidationCode: ', $e->getMessage(), PHP_EOL;
@@ -214,6 +235,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **request_val_code_dto** | [**\DocStudio\Client\Model\RequestValCodeDTO**](../Model/RequestValCodeDTO.md)|  | |
+| **initiation** | **bool**| Code for envelope initiation purpose | [optional] |
 
 ### Return type
 
@@ -221,7 +243,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -247,11 +269,15 @@ Request password reset
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $request_val_code_dto = new \DocStudio\Client\Model\RequestValCodeDTO(); // \DocStudio\Client\Model\RequestValCodeDTO
 
@@ -275,7 +301,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -289,7 +315,7 @@ No authorization required
 ## `resetPassword()`
 
 ```php
-resetPassword($reset_password_dto)
+resetPassword($reset_password_dto): \DocStudio\Client\Model\LoginResponseDTO
 ```
 
 Reset password
@@ -301,16 +327,21 @@ Reset password
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $reset_password_dto = new \DocStudio\Client\Model\ResetPasswordDTO(); // \DocStudio\Client\Model\ResetPasswordDTO
 
 try {
-    $apiInstance->resetPassword($reset_password_dto);
+    $result = $apiInstance->resetPassword($reset_password_dto);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RegistrationControllerApi->resetPassword: ', $e->getMessage(), PHP_EOL;
 }
@@ -324,16 +355,16 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\DocStudio\Client\Model\LoginResponseDTO**](../Model/LoginResponseDTO.md)
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -354,11 +385,15 @@ Validate user code from email
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\RegistrationControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $code = 'code_example'; // string | Validation code from email
 $type = 'type_example'; // string | Verification type
@@ -384,7 +419,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

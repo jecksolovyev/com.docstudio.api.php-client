@@ -1,4 +1,4 @@
-# # ReplaceAccountTariffDTO
+# ReplaceAccountTariffDTO
 
 ## Properties
 

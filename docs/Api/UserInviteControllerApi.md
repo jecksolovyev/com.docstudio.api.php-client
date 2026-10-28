@@ -1,5 +1,7 @@
 # DocStudio\Client\UserInviteControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -8,7 +10,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**createInvitation()**](UserInviteControllerApi.md#createInvitation) | **POST** /api/v1/user/invite | Create invitation to join account or mailbox with defined permissions |
 | [**declineInvite()**](UserInviteControllerApi.md#declineInvite) | **DELETE** /api/v1/user/invite/decline/{inviteCode} | Decline invite |
 | [**getInvites()**](UserInviteControllerApi.md#getInvites) | **GET** /api/v1/user/invites | Get paged invites list |
-| [**updateInvitation()**](UserInviteControllerApi.md#updateInvitation) | **PUT** /api/v1/user/invite/{uuid} | Update invitation by userUuid |
+| [**updateInvitation()**](UserInviteControllerApi.md#updateInvitation) | **PUT** /api/v1/user/invite/{id} | Update invitation by userUuid |
 
 
 ## `acceptInvite()`
@@ -26,7 +28,7 @@ Accept invite
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -57,7 +59,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -83,7 +85,7 @@ Create invitation to join account or mailbox with defined permissions
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -115,7 +117,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -141,7 +143,7 @@ Decline invite
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -172,7 +174,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -198,7 +200,7 @@ Get paged invites list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -232,7 +234,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -246,7 +248,7 @@ try {
 ## `updateInvitation()`
 
 ```php
-updateInvitation($uuid, $invitation_put_dto)
+updateInvitation($id, $invitation_put_dto)
 ```
 
 Update invitation by userUuid
@@ -258,7 +260,7 @@ Update invitation by userUuid
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -268,11 +270,11 @@ $apiInstance = new DocStudio\Client\Api\UserInviteControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string
+$id = 'id_example'; // string
 $invitation_put_dto = new \DocStudio\Client\Model\InvitationPutDTO(); // \DocStudio\Client\Model\InvitationPutDTO
 
 try {
-    $apiInstance->updateInvitation($uuid, $invitation_put_dto);
+    $apiInstance->updateInvitation($id, $invitation_put_dto);
 } catch (Exception $e) {
     echo 'Exception when calling UserInviteControllerApi->updateInvitation: ', $e->getMessage(), PHP_EOL;
 }
@@ -282,7 +284,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **uuid** | **string**|  | |
+| **id** | **string**|  | |
 | **invitation_put_dto** | [**\DocStudio\Client\Model\InvitationPutDTO**](../Model/InvitationPutDTO.md)|  | |
 
 ### Return type
@@ -291,7 +293,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

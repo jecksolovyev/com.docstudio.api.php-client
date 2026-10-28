@@ -1,5 +1,7 @@
 # DocStudio\Client\DictionaryControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -10,9 +12,9 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**createColumn()**](DictionaryControllerApi.md#createColumn) | **POST** /api/v1/dictionary/{dictionaryUuid}/column | Create dictionary column |
 | [**createDictionary()**](DictionaryControllerApi.md#createDictionary) | **POST** /api/v1/dictionary | Create empty dictionary |
 | [**createRecord()**](DictionaryControllerApi.md#createRecord) | **POST** /api/v1/dictionary/{dictionaryUuid}/record | Create record(s) |
-| [**deleteColumnDictionary()**](DictionaryControllerApi.md#deleteColumnDictionary) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Delete column. Will return deleted column UUID |
+| [**deleteDictionaryColumn()**](DictionaryControllerApi.md#deleteDictionaryColumn) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Delete column. Will return deleted column UUID |
 | [**deleteRecords()**](DictionaryControllerApi.md#deleteRecords) | **DELETE** /api/v1/dictionary/{dictionaryUuid}/record | Delete record(s). Will return deleted records UUID(s) |
-| [**download()**](DictionaryControllerApi.md#download) | **POST** /api/v1/dictionary/{dictionaryUuid}/download | Download the dictionary |
+| [**downloadDictionary()**](DictionaryControllerApi.md#downloadDictionary) | **POST** /api/v1/dictionary/{dictionaryUuid}/download | Download the dictionary |
 | [**downloadStatus()**](DictionaryControllerApi.md#downloadStatus) | **GET** /api/v1/dictionary/{dictionaryUuid}/download/status/{taskUuid} | Download the dictionary |
 | [**getColumnValue()**](DictionaryControllerApi.md#getColumnValue) | **GET** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid}/column/{columnUuid} | Retrieve column value for specific record |
 | [**getColumnValues()**](DictionaryControllerApi.md#getColumnValues) | **POST** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Retrieve column values from dictionary |
@@ -23,7 +25,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**patchRecord()**](DictionaryControllerApi.md#patchRecord) | **PATCH** /api/v1/dictionary/{dictionaryUuid}/record/{recordUuid} | Update record column values |
 | [**readDictionary()**](DictionaryControllerApi.md#readDictionary) | **GET** /api/v1/dictionary/{dictionaryUuid} | Read/get dictionary |
 | [**searchDictionaries()**](DictionaryControllerApi.md#searchDictionaries) | **GET** /api/v1/dictionary | Get paged dictionary list |
-| [**updateColumnDictionary()**](DictionaryControllerApi.md#updateColumnDictionary) | **PUT** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Update dictionary column |
+| [**updateDictionaryColumn()**](DictionaryControllerApi.md#updateDictionaryColumn) | **PUT** /api/v1/dictionary/{dictionaryUuid}/column/{columnUuid} | Update dictionary column |
 
 
 ## `archiveDictionary()`
@@ -41,7 +43,7 @@ Archive dictionary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -74,7 +76,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -100,7 +102,7 @@ Check dictionary column. Check access, existence, etc.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -136,7 +138,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -162,7 +164,7 @@ Check dictionary. Check access, existence, etc.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -196,7 +198,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -222,7 +224,7 @@ Create dictionary column
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -258,7 +260,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -284,7 +286,7 @@ Create empty dictionary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -316,7 +318,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -342,7 +344,7 @@ Create record(s)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -378,7 +380,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -389,10 +391,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `deleteColumnDictionary()`
+## `deleteDictionaryColumn()`
 
 ```php
-deleteColumnDictionary($dictionary_uuid, $column_uuid, $mailbox): \DocStudio\Client\Model\SingleUuidDTO
+deleteDictionaryColumn($dictionary_uuid, $column_uuid, $mailbox): \DocStudio\Client\Model\SingleUuidDTO
 ```
 
 Delete column. Will return deleted column UUID
@@ -404,7 +406,7 @@ Delete column. Will return deleted column UUID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -419,10 +421,10 @@ $column_uuid = 'column_uuid_example'; // string | Column UUID
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
-    $result = $apiInstance->deleteColumnDictionary($dictionary_uuid, $column_uuid, $mailbox);
+    $result = $apiInstance->deleteDictionaryColumn($dictionary_uuid, $column_uuid, $mailbox);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DictionaryControllerApi->deleteColumnDictionary: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DictionaryControllerApi->deleteDictionaryColumn: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -440,7 +442,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -466,7 +468,7 @@ Delete record(s). Will return deleted records UUID(s)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -502,7 +504,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -513,10 +515,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `download()`
+## `downloadDictionary()`
 
 ```php
-download($dictionary_uuid, $mailbox, $dictionary_download_params_dto): \DocStudio\Client\Model\ExportTaskStatusDTO
+downloadDictionary($dictionary_uuid, $mailbox, $dictionary_download_params_dto): \DocStudio\Client\Model\ExportTaskStatusDTO
 ```
 
 Download the dictionary
@@ -528,7 +530,7 @@ Download the dictionary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -543,10 +545,10 @@ $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with curr
 $dictionary_download_params_dto = new \DocStudio\Client\Model\DictionaryDownloadParamsDTO(); // \DocStudio\Client\Model\DictionaryDownloadParamsDTO
 
 try {
-    $result = $apiInstance->download($dictionary_uuid, $mailbox, $dictionary_download_params_dto);
+    $result = $apiInstance->downloadDictionary($dictionary_uuid, $mailbox, $dictionary_download_params_dto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DictionaryControllerApi->download: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DictionaryControllerApi->downloadDictionary: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -564,7 +566,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -590,7 +592,7 @@ Download the dictionary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -626,7 +628,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -712,11 +714,20 @@ Retrieve column values from dictionary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+// Configure API key authorization: formAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
 $column_uuid = 'column_uuid_example'; // string | Column UUID
@@ -750,7 +761,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth), [formAuth](../../README.md#formAuth)
 
 ### HTTP request headers
 
@@ -776,11 +787,20 @@ Retrieve record
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+// Configure API key authorization: formAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 
 $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $dictionary_uuid = 'dictionary_uuid_example'; // string | Dictionary UUID
 $record_uuid = 'record_uuid_example'; // string | Record UUID
@@ -808,7 +828,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth), [formAuth](../../README.md#formAuth)
 
 ### HTTP request headers
 
@@ -834,7 +854,7 @@ Get dictionary record uuids by values
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -870,7 +890,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -896,7 +916,7 @@ Get dictionary records
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -936,7 +956,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -962,7 +982,7 @@ Update dictionary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -998,7 +1018,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1024,7 +1044,7 @@ Update record column values
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1061,7 +1081,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1087,7 +1107,7 @@ Read/get dictionary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1125,7 +1145,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1151,7 +1171,7 @@ Get paged dictionary list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1162,7 +1182,7 @@ $apiInstance = new DocStudio\Client\Api\DictionaryControllerApi(
     $config
 );
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$level = 'pub'; // string | Dictionary access level, 'pub' by default.
+$level = 'level_example'; // string | Dictionary access level
 $keyword = 'keyword_example'; // string | Keyword to search dictionary by or dictionary UUID
 $with_columns = false; // bool | Add columns description to each dictionary
 $offset = 0; // int | Offset records
@@ -1181,7 +1201,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **level** | **string**| Dictionary access level, &#39;pub&#39; by default. | [optional] [default to &#39;pub&#39;] |
+| **level** | **string**| Dictionary access level | [optional] |
 | **keyword** | **string**| Keyword to search dictionary by or dictionary UUID | [optional] |
 | **with_columns** | **bool**| Add columns description to each dictionary | [optional] [default to false] |
 | **offset** | **int**| Offset records | [optional] [default to 0] |
@@ -1193,7 +1213,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1204,10 +1224,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `updateColumnDictionary()`
+## `updateDictionaryColumn()`
 
 ```php
-updateColumnDictionary($dictionary_uuid, $column_uuid, $mailbox, $dictionary_column_request_dto): \DocStudio\Client\Model\DictionaryColumnResponseDTO
+updateDictionaryColumn($dictionary_uuid, $column_uuid, $mailbox, $dictionary_column_request_dto): \DocStudio\Client\Model\DictionaryColumnResponseDTO
 ```
 
 Update dictionary column
@@ -1219,7 +1239,7 @@ Update dictionary column
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -1235,10 +1255,10 @@ $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with curr
 $dictionary_column_request_dto = new \DocStudio\Client\Model\DictionaryColumnRequestDTO(); // \DocStudio\Client\Model\DictionaryColumnRequestDTO
 
 try {
-    $result = $apiInstance->updateColumnDictionary($dictionary_uuid, $column_uuid, $mailbox, $dictionary_column_request_dto);
+    $result = $apiInstance->updateDictionaryColumn($dictionary_uuid, $column_uuid, $mailbox, $dictionary_column_request_dto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DictionaryControllerApi->updateColumnDictionary: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DictionaryControllerApi->updateDictionaryColumn: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1257,7 +1277,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

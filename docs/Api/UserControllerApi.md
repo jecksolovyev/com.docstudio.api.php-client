@@ -1,5 +1,7 @@
 # DocStudio\Client\UserControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -7,14 +9,17 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**changeInitials()**](UserControllerApi.md#changeInitials) | **PUT** /api/v1/user/initials | Update user&#39;s initials in base64 format |
 | [**changePassword()**](UserControllerApi.md#changePassword) | **PUT** /api/v1/user/password | Update user&#39;s password |
 | [**changeSignature()**](UserControllerApi.md#changeSignature) | **PUT** /api/v1/user/signature | Update user&#39;s eink signature in base64 format |
-| [**confirmOauthEmailAndGetToken()**](UserControllerApi.md#confirmOauthEmailAndGetToken) | **GET** /api/v1/user/confirm-oauth-email-get-token | Confirm email from OAuth2 Identity Provider |
 | [**deleteUser()**](UserControllerApi.md#deleteUser) | **DELETE** /api/v1/user | Delete user himself |
 | [**findUser()**](UserControllerApi.md#findUser) | **GET** /api/v1/user/search | Find user |
-| [**getAvatar()**](UserControllerApi.md#getAvatar) | **GET** /api/v1/user/avatar/{uuid} | Retrieve user avatar |
-| [**getCorporateUserProfile()**](UserControllerApi.md#getCorporateUserProfile) | **GET** /api/v1/user/profile/{uuid}/account/{accountUuid} | Retrieve corporate user profile |
-| [**getMailboxesInfo()**](UserControllerApi.md#getMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info |
+| [**getAvatar()**](UserControllerApi.md#getAvatar) | **GET** /api/v1/user/avatar/{id} | Retrieve user avatar |
+| [**getCorporateUserProfile()**](UserControllerApi.md#getCorporateUserProfile) | **GET** /api/v1/user/profile/{id}/account/{accountUuid} | Retrieve corporate user profile |
 | [**getProfile()**](UserControllerApi.md#getProfile) | **GET** /api/v1/user/profile | Retrieve self profile |
-| [**updateCorporateUserProfile()**](UserControllerApi.md#updateCorporateUserProfile) | **PUT** /api/v1/user/profile/{uuid}/account/{accountUuid} | Update corporate user&#39;s profile |
+| [**getUserMailboxesInfo()**](UserControllerApi.md#getUserMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info |
+| [**patchCorporateUserProfile()**](UserControllerApi.md#patchCorporateUserProfile) | **PATCH** /api/v1/user/profile/{userId}/account/{accountId} | Partial update corporate user&#39;s profile |
+| [**patchPreferences()**](UserControllerApi.md#patchPreferences) | **PATCH** /api/v1/user/preferences | Patch user preferences |
+| [**patchProfile()**](UserControllerApi.md#patchProfile) | **PATCH** /api/v1/user/profile | Patch user profile |
+| [**setPreferences()**](UserControllerApi.md#setPreferences) | **POST** /api/v1/user/preferences | Set user preferences |
+| [**updateCorporateUserProfile()**](UserControllerApi.md#updateCorporateUserProfile) | **PUT** /api/v1/user/profile/{id}/account/{accountUuid} | Update corporate user&#39;s profile |
 | [**updateProfile()**](UserControllerApi.md#updateProfile) | **PUT** /api/v1/user/profile | Update self profile |
 
 
@@ -33,7 +38,7 @@ Update user's initials in base64 format
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -64,7 +69,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -90,7 +95,7 @@ Update user's password
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -121,7 +126,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -147,7 +152,7 @@ Update user's eink signature in base64 format
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -178,68 +183,12 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
 - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `confirmOauthEmailAndGetToken()`
-
-```php
-confirmOauthEmailAndGetToken($code, $email_to_match): \DocStudio\Client\Model\LoginResponseDTO
-```
-
-Confirm email from OAuth2 Identity Provider
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new DocStudio\Client\Api\UserControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$code = 'code_example'; // string | Verification code
-$email_to_match = 'email_to_match_example'; // string | Check email matches
-
-try {
-    $result = $apiInstance->confirmOauthEmailAndGetToken($code, $email_to_match);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling UserControllerApi->confirmOauthEmailAndGetToken: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **code** | **string**| Verification code | |
-| **email_to_match** | **string**| Check email matches | [optional] |
-
-### Return type
-
-[**\DocStudio\Client\Model\LoginResponseDTO**](../Model/LoginResponseDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -260,7 +209,7 @@ Delete user himself
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -293,7 +242,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -319,7 +268,7 @@ Find user
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -353,7 +302,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -367,7 +316,7 @@ try {
 ## `getAvatar()`
 
 ```php
-getAvatar($uuid, $initials): \SplFileObject
+getAvatar($id, $initials): \SplFileObject
 ```
 
 Retrieve user avatar
@@ -379,7 +328,7 @@ Retrieve user avatar
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -389,11 +338,11 @@ $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string
+$id = 'id_example'; // string
 $initials = True; // bool | Get default avatar
 
 try {
-    $result = $apiInstance->getAvatar($uuid, $initials);
+    $result = $apiInstance->getAvatar($id, $initials);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->getAvatar: ', $e->getMessage(), PHP_EOL;
@@ -404,7 +353,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **uuid** | **string**|  | |
+| **id** | **string**|  | |
 | **initials** | **bool**| Get default avatar | [optional] |
 
 ### Return type
@@ -413,7 +362,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -427,7 +376,7 @@ try {
 ## `getCorporateUserProfile()`
 
 ```php
-getCorporateUserProfile($uuid, $account_uuid): \DocStudio\Client\Model\CorporateProfileDTO
+getCorporateUserProfile($id, $account_uuid): \DocStudio\Client\Model\CorporateProfileDTO
 ```
 
 Retrieve corporate user profile
@@ -439,7 +388,7 @@ Retrieve corporate user profile
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -449,11 +398,11 @@ $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string
+$id = 'id_example'; // string
 $account_uuid = 'account_uuid_example'; // string
 
 try {
-    $result = $apiInstance->getCorporateUserProfile($uuid, $account_uuid);
+    $result = $apiInstance->getCorporateUserProfile($id, $account_uuid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->getCorporateUserProfile: ', $e->getMessage(), PHP_EOL;
@@ -464,7 +413,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **uuid** | **string**|  | |
+| **id** | **string**|  | |
 | **account_uuid** | **string**|  | |
 
 ### Return type
@@ -473,69 +422,11 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `getMailboxesInfo()`
-
-```php
-getMailboxesInfo($request_body): array<string,\DocStudio\Client\Model\UserInfoDTO>
-```
-
-Retrieve users info
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new DocStudio\Client\Api\UserControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$request_body = array('request_body_example'); // string[]
-
-try {
-    $result = $apiInstance->getMailboxesInfo($request_body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling UserControllerApi->getMailboxesInfo: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **request_body** | [**string[]**](../Model/string.md)|  | |
-
-### Return type
-
-[**array<string,\DocStudio\Client\Model\UserInfoDTO>**](../Model/UserInfoDTO.md)
-
-### Authorization
-
-[Authorization](../../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -557,7 +448,7 @@ Retrieve self profile
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -586,7 +477,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -597,10 +488,302 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getUserMailboxesInfo()`
+
+```php
+getUserMailboxesInfo($request_body): array<string,\DocStudio\Client\Model\UserInfoDTO>
+```
+
+Retrieve users info
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\UserControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$request_body = array('request_body_example'); // string[]
+
+try {
+    $result = $apiInstance->getUserMailboxesInfo($request_body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserControllerApi->getUserMailboxesInfo: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **request_body** | [**string[]**](../Model/string.md)|  | |
+
+### Return type
+
+[**array<string,\DocStudio\Client\Model\UserInfoDTO>**](../Model/UserInfoDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `patchCorporateUserProfile()`
+
+```php
+patchCorporateUserProfile($user_id, $account_id, $patch_profile): \DocStudio\Client\Model\CorporateProfileDTO
+```
+
+Partial update corporate user's profile
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\UserControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$user_id = 'user_id_example'; // string
+$account_id = 'account_id_example'; // string
+$patch_profile = new \DocStudio\Client\Model\PatchProfile(); // \DocStudio\Client\Model\PatchProfile
+
+try {
+    $result = $apiInstance->patchCorporateUserProfile($user_id, $account_id, $patch_profile);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserControllerApi->patchCorporateUserProfile: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **user_id** | **string**|  | |
+| **account_id** | **string**|  | |
+| **patch_profile** | [**\DocStudio\Client\Model\PatchProfile**](../Model/PatchProfile.md)|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\CorporateProfileDTO**](../Model/CorporateProfileDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `patchPreferences()`
+
+```php
+patchPreferences($user_preferences)
+```
+
+Patch user preferences
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\UserControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$user_preferences = new \DocStudio\Client\Model\UserPreferences(); // \DocStudio\Client\Model\UserPreferences
+
+try {
+    $apiInstance->patchPreferences($user_preferences);
+} catch (Exception $e) {
+    echo 'Exception when calling UserControllerApi->patchPreferences: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **user_preferences** | [**\DocStudio\Client\Model\UserPreferences**](../Model/UserPreferences.md)|  | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `patchProfile()`
+
+```php
+patchProfile($patch_profile): \DocStudio\Client\Model\ProfileDTO
+```
+
+Patch user profile
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\UserControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$patch_profile = new \DocStudio\Client\Model\PatchProfile(); // \DocStudio\Client\Model\PatchProfile
+
+try {
+    $result = $apiInstance->patchProfile($patch_profile);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserControllerApi->patchProfile: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **patch_profile** | [**\DocStudio\Client\Model\PatchProfile**](../Model/PatchProfile.md)|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\ProfileDTO**](../Model/ProfileDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `setPreferences()`
+
+```php
+setPreferences($user_preferences)
+```
+
+Set user preferences
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\UserControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$user_preferences = new \DocStudio\Client\Model\UserPreferences(); // \DocStudio\Client\Model\UserPreferences
+
+try {
+    $apiInstance->setPreferences($user_preferences);
+} catch (Exception $e) {
+    echo 'Exception when calling UserControllerApi->setPreferences: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **user_preferences** | [**\DocStudio\Client\Model\UserPreferences**](../Model/UserPreferences.md)|  | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `updateCorporateUserProfile()`
 
 ```php
-updateCorporateUserProfile($uuid, $account_uuid, $update_profile_dto): \DocStudio\Client\Model\CorporateProfileDTO
+updateCorporateUserProfile($id, $account_uuid, $update_profile_dto): \DocStudio\Client\Model\CorporateProfileDTO
 ```
 
 Update corporate user's profile
@@ -612,7 +795,7 @@ Update corporate user's profile
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -622,12 +805,12 @@ $apiInstance = new DocStudio\Client\Api\UserControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string
+$id = 'id_example'; // string
 $account_uuid = 'account_uuid_example'; // string
 $update_profile_dto = new \DocStudio\Client\Model\UpdateProfileDTO(); // \DocStudio\Client\Model\UpdateProfileDTO
 
 try {
-    $result = $apiInstance->updateCorporateUserProfile($uuid, $account_uuid, $update_profile_dto);
+    $result = $apiInstance->updateCorporateUserProfile($id, $account_uuid, $update_profile_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserControllerApi->updateCorporateUserProfile: ', $e->getMessage(), PHP_EOL;
@@ -638,7 +821,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **uuid** | **string**|  | |
+| **id** | **string**|  | |
 | **account_uuid** | **string**|  | |
 | **update_profile_dto** | [**\DocStudio\Client\Model\UpdateProfileDTO**](../Model/UpdateProfileDTO.md)|  | |
 
@@ -648,7 +831,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -674,7 +857,7 @@ Update self profile
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -706,7 +889,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

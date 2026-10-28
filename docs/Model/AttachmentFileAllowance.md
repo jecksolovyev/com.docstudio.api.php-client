@@ -1,4 +1,4 @@
-# # AttachmentFileAllowance
+# AttachmentFileAllowance
 
 ## Properties
 

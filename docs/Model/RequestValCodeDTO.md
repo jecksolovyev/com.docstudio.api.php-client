@@ -1,4 +1,4 @@
-# # RequestValCodeDTO
+# RequestValCodeDTO
 
 ## Properties
 

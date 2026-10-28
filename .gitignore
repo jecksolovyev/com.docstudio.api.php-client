@@ -1,6 +1,16 @@
 .idea
 /vendor/
-.gitignore
 index.php
 sample.pdf
 sample2.pdf
+
+# release tooling lives in com.docstudio.api.tooling
+/scripts/
+/spec/
+/config.json
+/openapitools.json
+/generate.sh
+/.generated/
+/.openapi-generator/
+/.openapi-generator-ignore
+/clients.local.json

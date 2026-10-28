@@ -1,4 +1,4 @@
-# # TextFieldPattern
+# TextFieldPattern
 
 ## Properties
 

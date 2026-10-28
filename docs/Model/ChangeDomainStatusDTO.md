@@ -1,4 +1,4 @@
-# # ChangeDomainStatusDTO
+# ChangeDomainStatusDTO
 
 ## Properties
 

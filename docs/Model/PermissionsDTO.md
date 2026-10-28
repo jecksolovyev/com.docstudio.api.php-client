@@ -1,4 +1,4 @@
-# # PermissionsDTO
+# PermissionsDTO
 
 ## Properties
 

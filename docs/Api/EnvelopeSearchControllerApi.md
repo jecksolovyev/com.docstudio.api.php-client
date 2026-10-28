@@ -1,19 +1,22 @@
 # DocStudio\Client\EnvelopeSearchControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**addNewColumn()**](EnvelopeSearchControllerApi.md#addNewColumn) | **POST** /api/v1/envelope/column | Add a new column to display |
 | [**createReport()**](EnvelopeSearchControllerApi.md#createReport) | **POST** /api/v1/envelope/report | Request envelopes report |
-| [**deleteColumn()**](EnvelopeSearchControllerApi.md#deleteColumn) | **DELETE** /api/v1/envelope/column | Delete columns from displaying |
-| [**getMailboxFolders()**](EnvelopeSearchControllerApi.md#getMailboxFolders) | **POST** /api/v1/envelope/mailbox-folders | Retrieve all available folders for mailbox |
+| [**deleteEnvelopeColumn()**](EnvelopeSearchControllerApi.md#deleteEnvelopeColumn) | **DELETE** /api/v1/envelope/column | Delete columns from displaying |
 | [**getSearchFields()**](EnvelopeSearchControllerApi.md#getSearchFields) | **POST** /api/v1/envelope/fields | Get search fields |
 | [**getTemplateRoles()**](EnvelopeSearchControllerApi.md#getTemplateRoles) | **POST** /api/v1/envelope/search/roles | Retrieve all template roles |
 | [**resetColumnSettings()**](EnvelopeSearchControllerApi.md#resetColumnSettings) | **POST** /api/v1/envelope/column-reset | Reset column settings |
 | [**searchEnvelopes()**](EnvelopeSearchControllerApi.md#searchEnvelopes) | **POST** /api/v1/envelope/search | Search envelopes |
+| [**searchEnvelopesByRequest()**](EnvelopeSearchControllerApi.md#searchEnvelopesByRequest) | **POST** /api/v1/envelope/search/ai | Search envelopes by a natural language request |
 | [**searchEnvelopesForApproval()**](EnvelopeSearchControllerApi.md#searchEnvelopesForApproval) | **POST** /api/v1/envelope/search-approvals | Search envelopes for approval |
-| [**updateColumn()**](EnvelopeSearchControllerApi.md#updateColumn) | **PUT** /api/v1/envelope/column/{uuid} | Update column to display |
+| [**searchEnvelopesForReview()**](EnvelopeSearchControllerApi.md#searchEnvelopesForReview) | **POST** /api/v1/envelope/search-reviews | Search envelopes for review |
+| [**updateEnvelopeColumn()**](EnvelopeSearchControllerApi.md#updateEnvelopeColumn) | **PUT** /api/v1/envelope/column/{id} | Update column to display |
 
 
 ## `addNewColumn()`
@@ -31,7 +34,7 @@ Add a new column to display
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -65,7 +68,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -91,7 +94,7 @@ Request envelopes report
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -124,7 +127,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -135,10 +138,10 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `deleteColumn()`
+## `deleteEnvelopeColumn()`
 
 ```php
-deleteColumn($mailbox, $delete_env_column_dto)
+deleteEnvelopeColumn($mailbox, $delete_env_column_dto)
 ```
 
 Delete columns from displaying
@@ -150,7 +153,7 @@ Delete columns from displaying
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -164,9 +167,9 @@ $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with curr
 $delete_env_column_dto = new \DocStudio\Client\Model\DeleteEnvColumnDTO(); // \DocStudio\Client\Model\DeleteEnvColumnDTO
 
 try {
-    $apiInstance->deleteColumn($mailbox, $delete_env_column_dto);
+    $apiInstance->deleteEnvelopeColumn($mailbox, $delete_env_column_dto);
 } catch (Exception $e) {
-    echo 'Exception when calling EnvelopeSearchControllerApi->deleteColumn: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling EnvelopeSearchControllerApi->deleteEnvelopeColumn: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -183,72 +186,12 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
 - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `getMailboxFolders()`
-
-```php
-getMailboxFolders($mailbox, $request_body): string[]
-```
-
-Retrieve all available folders for mailbox
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new DocStudio\Client\Api\EnvelopeSearchControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$request_body = array('request_body_example'); // string[]
-
-try {
-    $result = $apiInstance->getMailboxFolders($mailbox, $request_body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling EnvelopeSearchControllerApi->getMailboxFolders: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **request_body** | [**string[]**](../Model/string.md)|  | [optional] |
-
-### Return type
-
-**string[]**
-
-### Authorization
-
-[Authorization](../../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -269,7 +212,7 @@ Get search fields
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -305,7 +248,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -331,7 +274,7 @@ Retrieve all template roles
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -365,7 +308,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -391,7 +334,7 @@ Reset column settings
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -423,7 +366,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -449,7 +392,7 @@ Search envelopes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -489,7 +432,69 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `searchEnvelopesByRequest()`
+
+```php
+searchEnvelopesByRequest($mailbox, $ai_envelope_search_request): \DocStudio\Client\Model\SearchEnvelopesDTO
+```
+
+Search envelopes by a natural language request
+
+Interprets the request as a search filter. Apply the returned filter to the filter panel and run it with the regular search endpoint.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\EnvelopeSearchControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$ai_envelope_search_request = new \DocStudio\Client\Model\AiEnvelopeSearchRequest(); // \DocStudio\Client\Model\AiEnvelopeSearchRequest
+
+try {
+    $result = $apiInstance->searchEnvelopesByRequest($mailbox, $ai_envelope_search_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnvelopeSearchControllerApi->searchEnvelopesByRequest: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **ai_envelope_search_request** | [**\DocStudio\Client\Model\AiEnvelopeSearchRequest**](../Model/AiEnvelopeSearchRequest.md)|  | |
+
+### Return type
+
+[**\DocStudio\Client\Model\SearchEnvelopesDTO**](../Model/SearchEnvelopesDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -515,7 +520,7 @@ Search envelopes for approval
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -555,7 +560,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -566,10 +571,76 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `updateColumn()`
+## `searchEnvelopesForReview()`
 
 ```php
-updateColumn($uuid, $mailbox, $update_env_column_dto)
+searchEnvelopesForReview($mailbox, $search_review_request, $offset, $limit, $uuid_only): \DocStudio\Client\Model\EnvelopeApprovalPageDTO
+```
+
+Search envelopes for review
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\EnvelopeSearchControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$search_review_request = new \DocStudio\Client\Model\SearchReviewRequest(); // \DocStudio\Client\Model\SearchReviewRequest
+$offset = 0; // int | Offset, how many envelopes to skip
+$limit = 25; // int | Limit, how many envelopes to retrieve
+$uuid_only = True; // bool | Retrieve only UUID of envelope
+
+try {
+    $result = $apiInstance->searchEnvelopesForReview($mailbox, $search_review_request, $offset, $limit, $uuid_only);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnvelopeSearchControllerApi->searchEnvelopesForReview: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **search_review_request** | [**\DocStudio\Client\Model\SearchReviewRequest**](../Model/SearchReviewRequest.md)|  | |
+| **offset** | **int**| Offset, how many envelopes to skip | [optional] [default to 0] |
+| **limit** | **int**| Limit, how many envelopes to retrieve | [optional] [default to 25] |
+| **uuid_only** | **bool**| Retrieve only UUID of envelope | [optional] |
+
+### Return type
+
+[**\DocStudio\Client\Model\EnvelopeApprovalPageDTO**](../Model/EnvelopeApprovalPageDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateEnvelopeColumn()`
+
+```php
+updateEnvelopeColumn($id, $mailbox, $update_env_column_dto)
 ```
 
 Update column to display
@@ -581,7 +652,7 @@ Update column to display
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -591,14 +662,14 @@ $apiInstance = new DocStudio\Client\Api\EnvelopeSearchControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string
+$id = 'id_example'; // string
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 $update_env_column_dto = new \DocStudio\Client\Model\UpdateEnvColumnDTO(); // \DocStudio\Client\Model\UpdateEnvColumnDTO
 
 try {
-    $apiInstance->updateColumn($uuid, $mailbox, $update_env_column_dto);
+    $apiInstance->updateEnvelopeColumn($id, $mailbox, $update_env_column_dto);
 } catch (Exception $e) {
-    echo 'Exception when calling EnvelopeSearchControllerApi->updateColumn: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling EnvelopeSearchControllerApi->updateEnvelopeColumn: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -606,7 +677,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **uuid** | **string**|  | |
+| **id** | **string**|  | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **update_env_column_dto** | [**\DocStudio\Client\Model\UpdateEnvColumnDTO**](../Model/UpdateEnvColumnDTO.md)|  | |
 
@@ -616,7 +687,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

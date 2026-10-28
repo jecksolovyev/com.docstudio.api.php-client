@@ -1,4 +1,4 @@
-# # TemplateRolesDTO
+# TemplateRolesDTO
 
 ## Properties
 

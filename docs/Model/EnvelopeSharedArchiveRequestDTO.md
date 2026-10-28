@@ -1,4 +1,4 @@
-# # EnvelopeSharedArchiveRequestDTO
+# EnvelopeSharedArchiveRequestDTO
 
 ## Properties
 

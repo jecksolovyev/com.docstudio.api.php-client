@@ -1,4 +1,4 @@
-# # BillingRedirectDTO
+# BillingRedirectDTO
 
 ## Properties
 

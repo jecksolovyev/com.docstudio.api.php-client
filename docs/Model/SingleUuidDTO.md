@@ -1,4 +1,4 @@
-# # SingleUuidDTO
+# SingleUuidDTO
 
 ## Properties
 

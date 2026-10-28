@@ -1,5 +1,7 @@
 # DocStudio\Client\LabelControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -8,8 +10,8 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**createLabel()**](LabelControllerApi.md#createLabel) | **POST** /api/v1/label | Save label to DB |
 | [**deAssignments()**](LabelControllerApi.md#deAssignments) | **DELETE** /api/v1/label/assignments | Unassign label from envelopes |
 | [**deleteLabel()**](LabelControllerApi.md#deleteLabel) | **DELETE** /api/v1/label/{uuid} | Delete label |
-| [**getAll()**](LabelControllerApi.md#getAll) | **GET** /api/v1/label | Retrieve all labels for mailbox for authorized user |
-| [**updateLabel()**](LabelControllerApi.md#updateLabel) | **PUT** /api/v1/label/{uuid} | Update label |
+| [**getAllLabels()**](LabelControllerApi.md#getAllLabels) | **GET** /api/v1/label | Retrieve all labels for mailbox for authorized user |
+| [**updateLabel()**](LabelControllerApi.md#updateLabel) | **PUT** /api/v1/label/{id} | Update label |
 
 
 ## `assignments()`
@@ -27,7 +29,7 @@ Assign label to envelopes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -60,7 +62,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -86,7 +88,7 @@ Save label to DB
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -120,7 +122,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -146,7 +148,7 @@ Unassign label from envelopes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -179,7 +181,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -205,7 +207,7 @@ Delete label
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -238,7 +240,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -249,10 +251,10 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getAll()`
+## `getAllLabels()`
 
 ```php
-getAll($mailbox): \DocStudio\Client\Model\LabelDTO[]
+getAllLabels($mailbox): \DocStudio\Client\Model\LabelDTO[]
 ```
 
 Retrieve all labels for mailbox for authorized user
@@ -264,7 +266,7 @@ Retrieve all labels for mailbox for authorized user
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -277,10 +279,10 @@ $apiInstance = new DocStudio\Client\Api\LabelControllerApi(
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
-    $result = $apiInstance->getAll($mailbox);
+    $result = $apiInstance->getAllLabels($mailbox);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LabelControllerApi->getAll: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LabelControllerApi->getAllLabels: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -296,7 +298,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -310,7 +312,7 @@ try {
 ## `updateLabel()`
 
 ```php
-updateLabel($uuid, $mailbox, $label_dto): \DocStudio\Client\Model\LabelDTO
+updateLabel($id, $mailbox, $label_dto): \DocStudio\Client\Model\LabelDTO
 ```
 
 Update label
@@ -322,7 +324,7 @@ Update label
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -332,12 +334,12 @@ $apiInstance = new DocStudio\Client\Api\LabelControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string | UUID of label to update
+$id = 'id_example'; // string | UUID of label to update
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 $label_dto = new \DocStudio\Client\Model\LabelDTO(); // \DocStudio\Client\Model\LabelDTO
 
 try {
-    $result = $apiInstance->updateLabel($uuid, $mailbox, $label_dto);
+    $result = $apiInstance->updateLabel($id, $mailbox, $label_dto);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LabelControllerApi->updateLabel: ', $e->getMessage(), PHP_EOL;
@@ -348,7 +350,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **uuid** | **string**| UUID of label to update | |
+| **id** | **string**| UUID of label to update | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 | **label_dto** | [**\DocStudio\Client\Model\LabelDTO**](../Model/LabelDTO.md)|  | |
 
@@ -358,7 +360,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

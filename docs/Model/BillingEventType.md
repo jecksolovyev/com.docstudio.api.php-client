@@ -1,4 +1,4 @@
-# # BillingEventType
+# BillingEventType
 
 ## Properties
 

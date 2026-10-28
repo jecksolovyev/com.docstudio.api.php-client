@@ -1,15 +1,17 @@
-# # User2MailboxDTO
+# User2MailboxDTO
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mailbox_uuid** | **string** |  | [optional]
-**user_uuid** | **string** |  | [optional]
-**name** | **string** | Mailbox name |
-**account_uuid** | **string** |  | [optional]
 **account_name** | **string** |  | [optional]
-**authorization** | [**\DocStudio\Client\Model\UserAuthorizationDTO**](UserAuthorizationDTO.md) |  | [optional]
+**account_uuid** | **string** |  | [optional]
 **invited** | **bool** |  | [optional]
+**mailbox_uuid** | **string** |  | [optional]
+**name** | **string** | Mailbox name | [optional]
+**permissions** | **int[]** | Permissions for current user to mailbox relation | [optional]
+**pinned** | **bool** |  | [optional]
+**system** | **bool** |  | [optional]
+**user_uuid** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

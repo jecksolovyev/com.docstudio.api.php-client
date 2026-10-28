@@ -1,4 +1,4 @@
-# # DictionaryColumnValueRequestDTO
+# DictionaryColumnValueRequestDTO
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # AliasDTO
+# AliasDTO
 
 ## Properties
 

@@ -1,5 +1,7 @@
 # DocStudio\Client\ScenarioControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -7,10 +9,14 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**cloneScenario()**](ScenarioControllerApi.md#cloneScenario) | **PUT** /api/v1/scenario/{scenarioUuid}/clone | Clone scenario |
 | [**createNewScenario()**](ScenarioControllerApi.md#createNewScenario) | **POST** /api/v1/scenario | Create new scenario |
 | [**deleteScenario()**](ScenarioControllerApi.md#deleteScenario) | **DELETE** /api/v1/scenario/{scenarioUuid} | Delete scenario |
+| [**getRecommendations()**](ScenarioControllerApi.md#getRecommendations) | **GET** /api/v1/scenario/recommendations | Get up to 6 recommended folders and scenarios per access level |
 | [**getScenario()**](ScenarioControllerApi.md#getScenario) | **GET** /api/v1/scenario/{scenarioUuid} | Get scenario |
+| [**removeScenarioFavoriteFlag()**](ScenarioControllerApi.md#removeScenarioFavoriteFlag) | **DELETE** /api/v1/scenario/{id}/favorite | Remove favorite flag |
 | [**runScenario()**](ScenarioControllerApi.md#runScenario) | **POST** /api/v1/scenario/{scenarioUuid} | Run scenario |
 | [**searchScenarios()**](ScenarioControllerApi.md#searchScenarios) | **GET** /api/v1/scenario | Get paged scenario list |
+| [**setScenarioFavoriteFlag()**](ScenarioControllerApi.md#setScenarioFavoriteFlag) | **PUT** /api/v1/scenario/{id}/favorite | Mark scenario as favorite |
 | [**updateScenario()**](ScenarioControllerApi.md#updateScenario) | **PUT** /api/v1/scenario/{scenarioUuid} | Update scenario |
+| [**updateScenarioCategories()**](ScenarioControllerApi.md#updateScenarioCategories) | **PATCH** /api/v1/scenario/{id}/categories | Update categories in scenario |
 
 
 ## `cloneScenario()`
@@ -28,7 +34,7 @@ Clone scenario
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -62,7 +68,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -88,7 +94,7 @@ Create new scenario
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -122,7 +128,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -148,7 +154,7 @@ Delete scenario
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -181,12 +187,70 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getRecommendations()`
+
+```php
+getRecommendations($mailbox): \DocStudio\Client\Model\ScenarioRecommendationsResponse
+```
+
+Get up to 6 recommended folders and scenarios per access level
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+
+try {
+    $result = $apiInstance->getRecommendations($mailbox);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ScenarioControllerApi->getRecommendations: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+[**\DocStudio\Client\Model\ScenarioRecommendationsResponse**](../Model/ScenarioRecommendationsResponse.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -207,7 +271,7 @@ Get scenario
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -241,12 +305,71 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `removeScenarioFavoriteFlag()`
+
+```php
+removeScenarioFavoriteFlag($id, $mailbox)
+```
+
+Remove favorite flag
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | UUID of scenario
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+
+try {
+    $apiInstance->removeScenarioFavoriteFlag($id, $mailbox);
+} catch (Exception $e) {
+    echo 'Exception when calling ScenarioControllerApi->removeScenarioFavoriteFlag: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| UUID of scenario | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -267,7 +390,7 @@ Run scenario
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -301,7 +424,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -315,7 +438,7 @@ try {
 ## `searchScenarios()`
 
 ```php
-searchScenarios($mailbox, $level, $keyword, $offset, $limit): \DocStudio\Client\Model\PageDTOScenarioShortDTO
+searchScenarios($mailbox, $level, $category, $favorite, $exclude_categorized, $keyword, $offset, $limit): \DocStudio\Client\Model\PageDTOScenarioShortDTO
 ```
 
 Get paged scenario list
@@ -327,7 +450,7 @@ Get paged scenario list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -338,13 +461,16 @@ $apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
     $config
 );
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$level = 'pub'; // string | Scenario access level, 'pub' by default.
+$level = 'level_example'; // string | Scenario access level
+$category = 'category_example'; // string | Category id to search scenario in
+$favorite = True; // bool | Filter only favorite or not favorite scenarios
+$exclude_categorized = True; // bool | Exclude scenarios if they are located in any other category, except categoryId, within same access level
 $keyword = 'keyword_example'; // string | Keyword to search scenario by or scenario UUID
 $offset = 0; // int | Offset records
 $limit = 25; // int | Limit records, max is 1000
 
 try {
-    $result = $apiInstance->searchScenarios($mailbox, $level, $keyword, $offset, $limit);
+    $result = $apiInstance->searchScenarios($mailbox, $level, $category, $favorite, $exclude_categorized, $keyword, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScenarioControllerApi->searchScenarios: ', $e->getMessage(), PHP_EOL;
@@ -356,7 +482,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **level** | **string**| Scenario access level, &#39;pub&#39; by default. | [optional] [default to &#39;pub&#39;] |
+| **level** | **string**| Scenario access level | [optional] |
+| **category** | **string**| Category id to search scenario in | [optional] |
+| **favorite** | **bool**| Filter only favorite or not favorite scenarios | [optional] |
+| **exclude_categorized** | **bool**| Exclude scenarios if they are located in any other category, except categoryId, within same access level | [optional] |
 | **keyword** | **string**| Keyword to search scenario by or scenario UUID | [optional] |
 | **offset** | **int**| Offset records | [optional] [default to 0] |
 | **limit** | **int**| Limit records, max is 1000 | [optional] [default to 25] |
@@ -367,12 +496,71 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `setScenarioFavoriteFlag()`
+
+```php
+setScenarioFavoriteFlag($id, $mailbox)
+```
+
+Mark scenario as favorite
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | UUID of scenario
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+
+try {
+    $apiInstance->setScenarioFavoriteFlag($id, $mailbox);
+} catch (Exception $e) {
+    echo 'Exception when calling ScenarioControllerApi->setScenarioFavoriteFlag: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| UUID of scenario | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -393,7 +581,7 @@ Update scenario
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -429,12 +617,73 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
 - **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateScenarioCategories()`
+
+```php
+updateScenarioCategories($id, $mailbox, $request_body)
+```
+
+Update categories in scenario
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\ScenarioControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | Scenario UUID
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$request_body = array('request_body_example'); // string[]
+
+try {
+    $apiInstance->updateScenarioCategories($id, $mailbox, $request_body);
+} catch (Exception $e) {
+    echo 'Exception when calling ScenarioControllerApi->updateScenarioCategories: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Scenario UUID | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **request_body** | [**string[]**](../Model/string.md)|  | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

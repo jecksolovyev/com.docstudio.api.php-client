@@ -1,4 +1,4 @@
-# # PaymentProviderInfo
+# PaymentProviderInfo
 
 ## Properties
 

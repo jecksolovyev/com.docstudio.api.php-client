@@ -1,4 +1,4 @@
-# # DictionaryFiltersRequestDTO
+# DictionaryFiltersRequestDTO
 
 ## Properties
 

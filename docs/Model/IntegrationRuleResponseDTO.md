@@ -1,4 +1,4 @@
-# # IntegrationRuleResponseDTO
+# IntegrationRuleResponseDTO
 
 ## Properties
 

@@ -1,13 +1,13 @@
-# # EnvelopeViewColumn
+# EnvelopeViewColumn
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uuid** | **string** |  |
 **name** | **string** |  |
-**type** | **string** |  |
 **order** | **int** |  | [optional]
+**type** | **string** |  |
+**uuid** | **string** |  |
 **visible** | **bool** |  | [optional]
 **width** | **int** |  | [optional]
 

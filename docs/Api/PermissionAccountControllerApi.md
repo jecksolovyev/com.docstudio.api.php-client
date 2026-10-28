@@ -1,5 +1,7 @@
 # DocStudio\Client\PermissionAccountControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -8,9 +10,8 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**deleteAccPermission()**](PermissionAccountControllerApi.md#deleteAccPermission) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/{permissionId} | Delete permission for specific &#39;user-to-account&#39; relation |
 | [**deleteAccRole()**](PermissionAccountControllerApi.md#deleteAccRole) | **DELETE** /api/v1/permission/{userUuid}/account/{accountUuid}/role/{roleUuid} | Delete role |
 | [**getUserAccountPermissions()**](PermissionAccountControllerApi.md#getUserAccountPermissions) | **GET** /api/v1/permission/{userUuid}/account/{accountUuid} | Read all user permissions |
-| [**patchMbPermissionsPermissionAccount()**](PermissionAccountControllerApi.md#patchMbPermissionsPermissionAccount) | **PATCH** /api/v1/permission/{userUuid}/account/{accountUuid} | Add exact permission for selected user-to-account relation. Add if absent or ignore if already present. |
-| [**replaceAllPermissionsPermissionAccount()**](PermissionAccountControllerApi.md#replaceAllPermissionsPermissionAccount) | **PUT** /api/v1/permission/{userUuid}/account/{accountUuid} | Replace all permissions for selected user-to-account relation |
-| [**setUserAccountPermissions()**](PermissionAccountControllerApi.md#setUserAccountPermissions) | **POST** /api/v1/permission/{userUuid}/account/{accountUuid} | Write user permissions |
+| [**patchAccountPermissions()**](PermissionAccountControllerApi.md#patchAccountPermissions) | **PATCH** /api/v1/permission/{userUuid}/account/{accountUuid} | Add exact permission for selected user-to-account relation. Add if absent or ignore if already present. |
+| [**replaceAllAccountPermissions()**](PermissionAccountControllerApi.md#replaceAllAccountPermissions) | **PUT** /api/v1/permission/{userUuid}/account/{accountUuid} | Replace all permissions for selected user-to-account relation |
 
 
 ## `deleteAccAllPermissions()`
@@ -28,7 +29,7 @@ Delete user from account totally
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -61,7 +62,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -87,7 +88,7 @@ Delete permission for specific 'user-to-account' relation
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -122,7 +123,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -148,7 +149,7 @@ Delete role
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -183,7 +184,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -209,7 +210,7 @@ Read all user permissions
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -243,7 +244,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -254,10 +255,10 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `patchMbPermissionsPermissionAccount()`
+## `patchAccountPermissions()`
 
 ```php
-patchMbPermissionsPermissionAccount($user_uuid, $account_uuid, $permissions_dto)
+patchAccountPermissions($user_uuid, $account_uuid, $permissions_dto)
 ```
 
 Add exact permission for selected user-to-account relation. Add if absent or ignore if already present.
@@ -269,7 +270,7 @@ Add exact permission for selected user-to-account relation. Add if absent or ign
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -284,9 +285,9 @@ $account_uuid = 'account_uuid_example'; // string | UUID of account
 $permissions_dto = new \DocStudio\Client\Model\PermissionsDTO(); // \DocStudio\Client\Model\PermissionsDTO
 
 try {
-    $apiInstance->patchMbPermissionsPermissionAccount($user_uuid, $account_uuid, $permissions_dto);
+    $apiInstance->patchAccountPermissions($user_uuid, $account_uuid, $permissions_dto);
 } catch (Exception $e) {
-    echo 'Exception when calling PermissionAccountControllerApi->patchMbPermissionsPermissionAccount: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PermissionAccountControllerApi->patchAccountPermissions: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -304,7 +305,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -315,10 +316,10 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `replaceAllPermissionsPermissionAccount()`
+## `replaceAllAccountPermissions()`
 
 ```php
-replaceAllPermissionsPermissionAccount($user_uuid, $account_uuid, $permissions_dto)
+replaceAllAccountPermissions($user_uuid, $account_uuid, $permissions_dto)
 ```
 
 Replace all permissions for selected user-to-account relation
@@ -330,7 +331,7 @@ Replace all permissions for selected user-to-account relation
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -345,9 +346,9 @@ $account_uuid = 'account_uuid_example'; // string | UUID of account
 $permissions_dto = new \DocStudio\Client\Model\PermissionsDTO(); // \DocStudio\Client\Model\PermissionsDTO
 
 try {
-    $apiInstance->replaceAllPermissionsPermissionAccount($user_uuid, $account_uuid, $permissions_dto);
+    $apiInstance->replaceAllAccountPermissions($user_uuid, $account_uuid, $permissions_dto);
 } catch (Exception $e) {
-    echo 'Exception when calling PermissionAccountControllerApi->replaceAllPermissionsPermissionAccount: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PermissionAccountControllerApi->replaceAllAccountPermissions: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -365,68 +366,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `setUserAccountPermissions()`
-
-```php
-setUserAccountPermissions($user_uuid, $account_uuid, $base_permissions_dto)
-```
-
-Write user permissions
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: Authorization
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new DocStudio\Client\Api\PermissionAccountControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$user_uuid = 'user_uuid_example'; // string | UUID of User
-$account_uuid = 'account_uuid_example'; // string | UUID of account
-$base_permissions_dto = new \DocStudio\Client\Model\BasePermissionsDTO(); // \DocStudio\Client\Model\BasePermissionsDTO
-
-try {
-    $apiInstance->setUserAccountPermissions($user_uuid, $account_uuid, $base_permissions_dto);
-} catch (Exception $e) {
-    echo 'Exception when calling PermissionAccountControllerApi->setUserAccountPermissions: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **user_uuid** | **string**| UUID of User | |
-| **account_uuid** | **string**| UUID of account | |
-| **base_permissions_dto** | [**\DocStudio\Client\Model\BasePermissionsDTO**](../Model/BasePermissionsDTO.md)|  | |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

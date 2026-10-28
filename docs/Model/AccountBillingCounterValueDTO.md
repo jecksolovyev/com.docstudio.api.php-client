@@ -1,4 +1,4 @@
-# # AccountBillingCounterValueDTO
+# AccountBillingCounterValueDTO
 
 ## Properties
 

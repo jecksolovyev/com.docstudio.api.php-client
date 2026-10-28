@@ -1,4 +1,4 @@
-# # GeolocationProperties
+# GeolocationProperties
 
 ## Properties
 

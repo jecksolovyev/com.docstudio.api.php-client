@@ -1,4 +1,4 @@
-# # StatDTO
+# StatDTO
 
 ## Properties
 

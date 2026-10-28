@@ -24,6 +24,6 @@
         "psr-4": { "DocStudio\\Client\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "DocStudio\\Client\\" : "test/" }
+        "psr-4": { "DocStudio\\Client\\Test\\" : "test/" }
     }
 }

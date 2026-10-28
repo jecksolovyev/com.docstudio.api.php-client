@@ -1,4 +1,4 @@
-# # StampRequestDTO
+# StampRequestDTO
 
 ## Properties
 

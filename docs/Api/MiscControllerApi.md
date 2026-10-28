@@ -1,5 +1,7 @@
 # DocStudio\Client\MiscControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -9,11 +11,11 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**calculateFormula()**](MiscControllerApi.md#calculateFormula) | **POST** /api/v1/formula | Calculate excel formulas for documents |
 | [**createAuditReport()**](MiscControllerApi.md#createAuditReport) | **POST** /api/v1/audit/report | Request audit report |
 | [**detectCountry()**](MiscControllerApi.md#detectCountry) | **GET** /api/v1/detect-country |  |
+| [**detectLanguage()**](MiscControllerApi.md#detectLanguage) | **GET** /api/v1/detect-language |  |
 | [**getBarcode()**](MiscControllerApi.md#getBarcode) | **GET** /api/v1/barcode |  |
 | [**getProcessStatus()**](MiscControllerApi.md#getProcessStatus) | **GET** /api/v1/process-status/{id} | Process status |
 | [**parseCsv()**](MiscControllerApi.md#parseCsv) | **POST** /api/v1/csv-parser | Parse CSV text (5 rows max) |
 | [**recalculateMailboxStat()**](MiscControllerApi.md#recalculateMailboxStat) | **GET** /api/v1/recalculate-mailbox-stat | Recalculate all mailbox counters |
-| [**returnNoFavicon()**](MiscControllerApi.md#returnNoFavicon) | **GET** /favicon.ico |  |
 | [**webhook()**](MiscControllerApi.md#webhook) | **POST** /api/v1/account/webhook |  |
 
 
@@ -83,7 +85,7 @@ Audit log
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -119,7 +121,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -133,7 +135,7 @@ try {
 ## `calculateFormula()`
 
 ```php
-calculateFormula($doc_formula_request_dto): array<string,array<string,object>>
+calculateFormula($doc_formula_request_dto): array<string,array<string,mixed>>
 ```
 
 Calculate excel formulas for documents
@@ -169,7 +171,7 @@ try {
 
 ### Return type
 
-**array<string,array<string,object>>**
+**array<string,array<string,mixed>>**
 
 ### Authorization
 
@@ -199,7 +201,7 @@ Request audit report
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -230,7 +232,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -292,10 +294,61 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `detectLanguage()`
+
+```php
+detectLanguage(): string
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->detectLanguage();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MiscControllerApi->detectLanguage: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+**string**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `getBarcode()`
 
 ```php
-getBarcode($type, $value): string
+getBarcode($type, $value, $qr_only): string
 ```
 
 
@@ -315,9 +368,10 @@ $apiInstance = new DocStudio\Client\Api\MiscControllerApi(
 );
 $type = 'type_example'; // string | Barcode type
 $value = 'value_example'; // string | Barcode value
+$qr_only = True; // bool | Generate bare QR code without frames, texts etc
 
 try {
-    $result = $apiInstance->getBarcode($type, $value);
+    $result = $apiInstance->getBarcode($type, $value, $qr_only);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MiscControllerApi->getBarcode: ', $e->getMessage(), PHP_EOL;
@@ -329,7 +383,8 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **type** | **string**| Barcode type | |
-| **value** | **string**| Barcode value | |
+| **value** | **string**| Barcode value | [optional] |
+| **qr_only** | **bool**| Generate bare QR code without frames, texts etc | [optional] |
 
 ### Return type
 
@@ -365,7 +420,7 @@ Getting async bulk process status details by id
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -399,7 +454,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -425,7 +480,7 @@ Parse CSV text (5 rows max)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -457,7 +512,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -485,7 +540,7 @@ development use only
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -517,62 +572,12 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
 - **Accept**: `*/*`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `returnNoFavicon()`
-
-```php
-returnNoFavicon()
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new DocStudio\Client\Api\MiscControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-
-try {
-    $apiInstance->returnNoFavicon();
-} catch (Exception $e) {
-    echo 'Exception when calling MiscControllerApi->returnNoFavicon: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -593,11 +598,15 @@ webhook($authorization, $account_key, $type, $body)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\MiscControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $authorization = 'authorization_example'; // string
 $account_key = 'account_key_example'; // string
@@ -626,7 +635,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 

@@ -1,4 +1,4 @@
-# # DataMap
+# DataMap
 
 ## Properties
 

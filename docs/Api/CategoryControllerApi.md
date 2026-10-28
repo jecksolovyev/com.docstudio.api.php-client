@@ -1,22 +1,24 @@
 # DocStudio\Client\CategoryControllerApi
 
+
+
 All URIs are relative to https://api.docstudio.com, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createCategory()**](CategoryControllerApi.md#createCategory) | **POST** /api/v1/category | Save a category in DB |
+| [**createCategory()**](CategoryControllerApi.md#createCategory) | **POST** /api/v1/category | Save a category |
 | [**deleteCategory()**](CategoryControllerApi.md#deleteCategory) | **DELETE** /api/v1/category/{id} | Delete category by Id |
-| [**getAllByType()**](CategoryControllerApi.md#getAllByType) | **GET** /api/v1/category/{access} | Retrieve all categories by id of specified &#39;access&#39; type |
-| [**updateCategory()**](CategoryControllerApi.md#updateCategory) | **PUT** /api/v1/category/{id} | Update the category in DB |
+| [**getAllByAccessAndType()**](CategoryControllerApi.md#getAllByAccessAndType) | **GET** /api/v1/category/{type}/{access} | Retrieve all categories by id of specified &#39;access&#39; type |
+| [**updateCategory()**](CategoryControllerApi.md#updateCategory) | **PUT** /api/v1/category/{id} | Update the category |
 
 
 ## `createCategory()`
 
 ```php
-createCategory($mailbox, $category_dto): \DocStudio\Client\Model\CategoryDTO
+createCategory($mailbox, $category_update_request): \DocStudio\Client\Model\CategoryDTO
 ```
 
-Save a category in DB
+Save a category
 
 ### Example
 
@@ -25,7 +27,7 @@ Save a category in DB
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -36,10 +38,10 @@ $apiInstance = new DocStudio\Client\Api\CategoryControllerApi(
     $config
 );
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$category_dto = new \DocStudio\Client\Model\CategoryDTO(); // \DocStudio\Client\Model\CategoryDTO
+$category_update_request = new \DocStudio\Client\Model\CategoryUpdateRequest(); // \DocStudio\Client\Model\CategoryUpdateRequest
 
 try {
-    $result = $apiInstance->createCategory($mailbox, $category_dto);
+    $result = $apiInstance->createCategory($mailbox, $category_update_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoryControllerApi->createCategory: ', $e->getMessage(), PHP_EOL;
@@ -51,7 +53,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **category_dto** | [**\DocStudio\Client\Model\CategoryDTO**](../Model/CategoryDTO.md)|  | |
+| **category_update_request** | [**\DocStudio\Client\Model\CategoryUpdateRequest**](../Model/CategoryUpdateRequest.md)|  | |
 
 ### Return type
 
@@ -59,7 +61,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -85,7 +87,7 @@ Delete category by Id
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -122,7 +124,7 @@ void (empty response body)
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -133,10 +135,10 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getAllByType()`
+## `getAllByAccessAndType()`
 
 ```php
-getAllByType($access, $mailbox): \DocStudio\Client\Model\CategoryDTO[]
+getAllByAccessAndType($type, $access, $mailbox): \DocStudio\Client\Model\CategoryDTO[]
 ```
 
 Retrieve all categories by id of specified 'access' type
@@ -148,7 +150,7 @@ Retrieve all categories by id of specified 'access' type
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -158,14 +160,15 @@ $apiInstance = new DocStudio\Client\Api\CategoryControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$access = 'access_example'; // string | Type of level to retrieve categories by
+$type = 'type_example'; // string | Type of categories
+$access = 'access_example'; // string | Access level to retrieve categories by
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
 
 try {
-    $result = $apiInstance->getAllByType($access, $mailbox);
+    $result = $apiInstance->getAllByAccessAndType($type, $access, $mailbox);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CategoryControllerApi->getAllByType: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CategoryControllerApi->getAllByAccessAndType: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -173,7 +176,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **access** | **string**| Type of level to retrieve categories by | |
+| **type** | **string**| Type of categories | |
+| **access** | **string**| Access level to retrieve categories by | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
 
 ### Return type
@@ -182,7 +186,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -196,10 +200,10 @@ try {
 ## `updateCategory()`
 
 ```php
-updateCategory($id, $mailbox, $category_dto): \DocStudio\Client\Model\CategoryDTO
+updateCategory($id, $mailbox, $category_update_request): \DocStudio\Client\Model\CategoryDTO
 ```
 
-Update the category in DB
+Update the category
 
 ### Example
 
@@ -208,7 +212,7 @@ Update the category in DB
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure Bearer authorization: Authorization
+// Configure Bearer authorization: bearerAuth
 $config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
@@ -220,10 +224,10 @@ $apiInstance = new DocStudio\Client\Api\CategoryControllerApi(
 );
 $id = 'id_example'; // string | Category Id
 $mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
-$category_dto = new \DocStudio\Client\Model\CategoryDTO(); // \DocStudio\Client\Model\CategoryDTO
+$category_update_request = new \DocStudio\Client\Model\CategoryUpdateRequest(); // \DocStudio\Client\Model\CategoryUpdateRequest
 
 try {
-    $result = $apiInstance->updateCategory($id, $mailbox, $category_dto);
+    $result = $apiInstance->updateCategory($id, $mailbox, $category_update_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CategoryControllerApi->updateCategory: ', $e->getMessage(), PHP_EOL;
@@ -236,7 +240,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Category Id | |
 | **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
-| **category_dto** | [**\DocStudio\Client\Model\CategoryDTO**](../Model/CategoryDTO.md)|  | |
+| **category_update_request** | [**\DocStudio\Client\Model\CategoryUpdateRequest**](../Model/CategoryUpdateRequest.md)|  | |
 
 ### Return type
 
@@ -244,7 +248,7 @@ try {
 
 ### Authorization
 
-[Authorization](../../README.md#Authorization)
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
