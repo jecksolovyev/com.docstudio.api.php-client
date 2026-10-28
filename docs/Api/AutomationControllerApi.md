@@ -527,7 +527,7 @@ try {
 ## `getAutomations()`
 
 ```php
-getAutomations($account_id, $name, $status): \DocStudio\Client\Model\AutomationGetList[]
+getAutomations($account_id, $name, $status, $hidden): \DocStudio\Client\Model\AutomationGetList[]
 ```
 
 Get account automations
@@ -552,9 +552,10 @@ $apiInstance = new DocStudio\Client\Api\AutomationControllerApi(
 $account_id = 'account_id_example'; // string | Account UUID
 $name = 'name_example'; // string | Filter by name
 $status = True; // bool | Filter by active status
+$hidden = True; // bool | Filter by hidden status
 
 try {
-    $result = $apiInstance->getAutomations($account_id, $name, $status);
+    $result = $apiInstance->getAutomations($account_id, $name, $status, $hidden);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AutomationControllerApi->getAutomations: ', $e->getMessage(), PHP_EOL;
@@ -568,6 +569,7 @@ try {
 | **account_id** | **string**| Account UUID | |
 | **name** | **string**| Filter by name | [optional] |
 | **status** | **bool**| Filter by active status | [optional] |
+| **hidden** | **bool**| Filter by hidden status | [optional] |
 
 ### Return type
 
