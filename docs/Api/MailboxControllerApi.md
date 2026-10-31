@@ -13,12 +13,12 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**deleteViewPreferences()**](MailboxControllerApi.md#deleteViewPreferences) | **DELETE** /api/v1/mailbox/view-preferences | Delete mailbox view preferences |
 | [**getAccountLogoByMailbox()**](MailboxControllerApi.md#getAccountLogoByMailbox) | **GET** /api/v1/mailbox/{mailboxUuid}/logo | Retrieve mailbox account logo |
 | [**getActivityLog()**](MailboxControllerApi.md#getActivityLog) | **GET** /api/v1/mailbox/activity-log | Audit trail feed for mailbox |
-| [**getAllForUser()**](MailboxControllerApi.md#getAllForUser) | **GET** /api/v1/mailbox/user-view | Retrieve user&#39;s mailbox list |
 | [**getAllForUserWithPagination()**](MailboxControllerApi.md#getAllForUserWithPagination) | **GET** /api/v1/mailbox | Retrieve user&#39;s mailbox list with pagination |
 | [**getAutoDelegation()**](MailboxControllerApi.md#getAutoDelegation) | **GET** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Get auto delegation settings |
 | [**getCustomizedDashboard()**](MailboxControllerApi.md#getCustomizedDashboard) | **GET** /api/v1/mailbox/{mailboxUuid}/dashboard | Get mailbox dashboard |
 | [**getCustomizedDashboardHtml()**](MailboxControllerApi.md#getCustomizedDashboardHtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html |
 | [**getMailboxEssentials()**](MailboxControllerApi.md#getMailboxEssentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials |
+| [**getMailboxesForUserView()**](MailboxControllerApi.md#getMailboxesForUserView) | **GET** /api/v1/mailbox/user-view | Retrieve the mailboxes of the user&#39;s sidebar view |
 | [**getMailboxesInfo()**](MailboxControllerApi.md#getMailboxesInfo) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info |
 | [**getStat()**](MailboxControllerApi.md#getStat) | **GET** /api/v1/mailbox/stat | Get number of unread envelopes in every scope |
 | [**getUsedTemplates()**](MailboxControllerApi.md#getUsedTemplates) | **GET** /api/v1/mailbox/templates/used | List of used templates |
@@ -461,68 +461,6 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getAllForUser()`
-
-```php
-getAllForUser($pinned, $mailboxes_for_account, $required_mailbox_id): \DocStudio\Client\Model\User2MailboxDTO[]
-```
-
-Retrieve user's mailbox list
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: bearerAuth
-$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$pinned = True; // bool | Return all pinned mailboxes
-$mailboxes_for_account = 56; // int | Return mailboxes for each account (max 5)
-$required_mailbox_id = 'required_mailbox_id_example'; // string | Required mailbox in the response
-
-try {
-    $result = $apiInstance->getAllForUser($pinned, $mailboxes_for_account, $required_mailbox_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling MailboxControllerApi->getAllForUser: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pinned** | **bool**| Return all pinned mailboxes | [optional] |
-| **mailboxes_for_account** | **int**| Return mailboxes for each account (max 5) | [optional] |
-| **required_mailbox_id** | **string**| Required mailbox in the response | [optional] |
-
-### Return type
-
-[**\DocStudio\Client\Model\User2MailboxDTO[]**](../Model/User2MailboxDTO.md)
-
-### Authorization
-
-[bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
 ## `getAllForUserWithPagination()`
 
 ```php
@@ -809,6 +747,70 @@ try {
 ### Return type
 
 [**\DocStudio\Client\Model\MailboxEssentialsDTO**](../Model/MailboxEssentialsDTO.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getMailboxesForUserView()`
+
+```php
+getMailboxesForUserView($pinned, $mailboxes_for_account, $required_mailbox_id): \DocStudio\Client\Model\User2MailboxDTO[]
+```
+
+Retrieve the mailboxes of the user's sidebar view
+
+Returns only the mailboxes the selectors below ask for; GET /api/v1/mailbox lists every mailbox the user can reach.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$pinned = True; // bool | Return all pinned mailboxes
+$mailboxes_for_account = 56; // int | Return mailboxes for each account (max 5)
+$required_mailbox_id = 'required_mailbox_id_example'; // string | Required mailbox in the response
+
+try {
+    $result = $apiInstance->getMailboxesForUserView($pinned, $mailboxes_for_account, $required_mailbox_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MailboxControllerApi->getMailboxesForUserView: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pinned** | **bool**| Return all pinned mailboxes | [optional] |
+| **mailboxes_for_account** | **int**| Return mailboxes for each account (max 5) | [optional] |
+| **required_mailbox_id** | **string**| Required mailbox in the response | [optional] |
+
+### Return type
+
+[**\DocStudio\Client\Model\User2MailboxDTO[]**](../Model/User2MailboxDTO.md)
 
 ### Authorization
 

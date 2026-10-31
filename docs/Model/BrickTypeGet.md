@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **config_schema** | **string** |  | [optional]
 **group** | **string** |  | [optional]
-**multiple_input** | **bool** |  | [optional]
 **output_params** | **string[]** |  | [optional]
 **type** | **string** |  | [optional]
 

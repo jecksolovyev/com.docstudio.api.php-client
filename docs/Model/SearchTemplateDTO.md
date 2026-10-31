@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **access** | **string** | Template access level | [optional]
 **categories** | **string[]** | Template categories | [optional]
 **created_at** | **\DateTime** | Date of Template creation | [optional]
-**description** | **string** | Template description |
+**description** | **string** | Template description | [optional]
 **favorite** | **bool** | Template marked as favorite | [optional]
 **logo_image_uuid** | **string** | UUID of the template logo image | [optional]
 **mailbox_uuid** | **string** | Template owner mailbox UUID |

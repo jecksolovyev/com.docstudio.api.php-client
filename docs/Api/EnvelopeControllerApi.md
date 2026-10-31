@@ -272,6 +272,8 @@ approve($mailbox, $bulk_envelope_action_dto): \DocStudio\Client\Model\SingleUuid
 
 Approve envelope
 
+One envelope is processed synchronously and the response carries that envelope's uuid; several are handed to a background process and the response carries the process uuid.
+
 ### Example
 
 ```php
@@ -512,6 +514,8 @@ cancelEnvelopes($mailbox, $env_cancellation_request_dto): \DocStudio\Client\Mode
 ```
 
 Cancel envelopes
+
+One envelope is processed synchronously and the response carries that envelope's uuid; several are handed to a background process and the response carries the process uuid.
 
 ### Example
 
@@ -932,11 +936,15 @@ Create/upload new attachment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $file = '/path/to/file.txt'; // \SplFileObject
 $type = 'type_example'; // string
@@ -964,7 +972,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1112,11 +1120,15 @@ Create/upload new PDF attachment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $file = '/path/to/file.txt'; // \SplFileObject
 $action = 'action_example'; // string | Action for fields inside the PDF file
@@ -1144,7 +1156,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1162,6 +1174,8 @@ delegateEnvelopes($mailbox, $env_delegation_dto): \DocStudio\Client\Model\Single
 ```
 
 Delegate envelopes
+
+One envelope is processed synchronously and the response carries that envelope's uuid; several are handed to a background process and the response carries the process uuid.
 
 ### Example
 
@@ -2667,11 +2681,15 @@ Anonymous users download it with the access code of a payment link; files visibl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = 'id_example'; // string | Envelope UUID
 $document_id = 'document_id_example'; // string | Document ID
@@ -2707,7 +2725,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -3857,6 +3875,8 @@ sendForApproval($mailbox, $envelope_approval_request_dto): \DocStudio\Client\Mod
 ```
 
 Send envelope for approval
+
+One envelope is processed synchronously and the response carries that envelope's uuid; several are handed to a background process and the response carries the process uuid.
 
 ### Example
 
