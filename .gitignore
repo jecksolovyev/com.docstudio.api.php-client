@@ -14,3 +14,4 @@ sample2.pdf
 /.openapi-generator/
 /.openapi-generator-ignore
 /clients.local.json
+/examples/
