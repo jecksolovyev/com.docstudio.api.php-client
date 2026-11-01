@@ -69,7 +69,17 @@ class FormDataProcessor
                 continue;
             }
 
-            $result[$k] = $this->makeFormSafe($v);
+            $safe = $this->makeFormSafe($v);
+
+            // A model travels as one JSON part under its own name; files, and lists
+            // of files, keep the generated handling.
+            $isDocument = ($v instanceof ModelInterface || is_array($v) || is_object($v))
+                && !$v instanceof \DateTimeInterface
+                && !self::holdsFile($safe);
+
+            $result[$k] = $isDocument
+                ? json_encode(ObjectSerializer::sanitizeForSerialization($v))
+                : $safe;
         }
 
         return $result;
@@ -84,6 +94,11 @@ class FormDataProcessor
      */
     public static function flatten(array $source, string $start = ''): array
     {
+        // prepare() has already shaped the top level into the parts the API binds,
+        // so the bracket notation below would only rename them out of recognition.
+        if ($start === '') {
+            return $source; // parts are named by prepare()
+        }
         $opt = [
             'prefix'          => '[',
             'suffix'          => ']',
@@ -237,6 +252,24 @@ class FormDataProcessor
         }
 
         return $result;
+    }
+
+    /** Whether a prepared value holds an upload, directly or inside an array. */
+    private static function holdsFile($value): bool
+    {
+        if (is_resource($value) || $value instanceof StreamInterface) {
+            return true;
+        }
+
+        if (is_array($value)) {
+            foreach ($value as $item) {
+                if (self::holdsFile($item)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     private function tryFopen(SplFileObject $file)

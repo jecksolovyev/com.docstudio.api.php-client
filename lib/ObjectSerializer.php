@@ -42,7 +42,7 @@ use DocStudio\Client\Model\ModelInterface;
 class ObjectSerializer
 {
     /** @var string */
-    private static $dateTimeFormat = \DateTime::ATOM;
+    private static $dateTimeFormat = 'Y-m-d\TH:i:s.vP';
 
     /**
      * Change the date format

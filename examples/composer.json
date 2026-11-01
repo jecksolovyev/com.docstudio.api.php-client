@@ -1,0 +1,13 @@
+{
+    "name": "docstudio/api-client-examples",
+    "description": "Runnable examples for the DocStudio PHP API client",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "yuramozol/com.docstudio.api.php-client": "^168.21"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
