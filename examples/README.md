@@ -81,23 +81,6 @@ quick-send recipient marked `signer` is refused with `422 No signature provider 
 signing`. What a signer there draws is an eInk signature, `eInkSignature`. Example 04 reads
 `appSettings()` and picks the role the region supports.
 
-**Date-times must carry milliseconds.** The API parses them with
-`yyyy-MM-dd'T'HH:mm:ss.SSSXXX`, so a timestamp without a fractional part is answered
-`400 ... not a valid representation`. The client serializes a `DateTime` as
-`DateTime::ATOM`, which has no milliseconds, so every request body carrying one was
-rejected until `bootstrap.php` set the format once with
-`ObjectSerializer::setDateTimeFormat('Y-m-d\\TH:i:s.vP')`. From the release after
-168.21 the generated client carries that default itself and this line becomes redundant.
-
-**`quickSendExternalDocuments` needs its arguments pre-serialized.** The server binds two
-multipart parts named exactly `data` and `files`. Handing the generated method a
-`QuickSendDTO` and an array of files makes its form handling emit `data[subject]`,
-`data[recipients][0][recipient]` and `files[0]` instead, and the server answers
-`400 Required part 'files' is not present`. Example 04 passes a JSON string and a single
-`SplFileObject`, which produces the two parts the server actually binds. That also means
-168.21 cannot attach more than one file to a quick-send. The release after it names the
-parts correctly, and then the typed call — the model and an array of files — works.
-
 **An empty 200 body raises `ApiException` with the HTTP status as its code.** Any
 operation that declares a JSON body and returns none fails decoding after the call has
 already succeeded. `cancelEnvelopes` did exactly that for a single envelope until R168.21

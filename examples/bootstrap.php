@@ -11,13 +11,6 @@ use DocStudio\Client\Api\MailboxControllerApi;
 use DocStudio\Client\ApiException;
 use DocStudio\Client\Configuration;
 use DocStudio\Client\Model\LoginDTO;
-use DocStudio\Client\ObjectSerializer;
-
-// The API parses dates with yyyy-MM-dd'T'HH:mm:ss.SSSXXX and so insists on milliseconds.
-// The client serializes a DateTime as DateTime::ATOM, which has none, so any request body
-// carrying a date-time is answered 400 "not a valid representation". Set the format once
-// here; from the release after 168.21 the generated client sets it itself.
-ObjectSerializer::setDateTimeFormat('Y-m-d\\TH:i:s.vP');
 
 const DEFAULT_BASE_PATH = 'https://api.docstudio.com';
 

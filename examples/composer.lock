@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5357c17c329c64975afb66447a33f58",
+    "content-hash": "c50d334e1faff0a7dcd278d83f560433",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -698,16 +698,16 @@
         },
         {
             "name": "yuramozol/com.docstudio.api.php-client",
-            "version": "v168.21",
+            "version": "v168.21.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jecksolovyev/com.docstudio.api.php-client.git",
-                "reference": "5f18095943386550899c54bd6b9af2d242b83dd9"
+                "reference": "7d780ad5908bccc1e8e0fee66f66a5f7cef76549"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jecksolovyev/com.docstudio.api.php-client/zipball/5f18095943386550899c54bd6b9af2d242b83dd9",
-                "reference": "5f18095943386550899c54bd6b9af2d242b83dd9",
+                "url": "https://api.github.com/repos/jecksolovyev/com.docstudio.api.php-client/zipball/7d780ad5908bccc1e8e0fee66f66a5f7cef76549",
+                "reference": "7d780ad5908bccc1e8e0fee66f66a5f7cef76549",
                 "shasum": ""
             },
             "require": {
@@ -739,9 +739,9 @@
             ],
             "description": "DocStudio API Client",
             "support": {
-                "source": "https://github.com/jecksolovyev/com.docstudio.api.php-client/tree/v168.21"
+                "source": "https://github.com/jecksolovyev/com.docstudio.api.php-client/tree/v168.21.1"
             },
-            "time": "2026-10-31T23:48:05+00:00"
+            "time": "2026-11-01T02:06:21+00:00"
         }
     ],
     "packages-dev": [],

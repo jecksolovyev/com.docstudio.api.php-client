@@ -26,7 +26,6 @@ use DocStudio\Client\Model\BulkEnvelopeActionDTO;
 use DocStudio\Client\Model\EnvCancellationRequestDTO;
 use DocStudio\Client\Model\QuickSendDTO;
 use DocStudio\Client\Model\QuickSendRecipientDTO;
-use DocStudio\Client\ObjectSerializer;
 
 const POLL_ATTEMPTS = 5;
 const POLL_INTERVAL_SECONDS = 2;
@@ -65,18 +64,12 @@ run(function (): void {
         ->setMessage('Sent by the DocStudio API client example. No action needed.')
         ->setRecipients([$recipient]);
 
-    // The server wants two multipart parts, named exactly "data" (a JSON blob) and
-    // "files". The generated form handling does not produce those names: it flattens a
-    // model into data[subject], data[recipients][0][recipient], ... and an array of
-    // files into files[0]. Both are rejected with 400 "Required part 'files' is not
-    // present". Passing a pre-serialized JSON string and a single SplFileObject makes
-    // the generated code emit the two parts the server actually binds. From the release
-    // after 168.21 the generated client names the parts correctly and this call can take
-    // the QuickSendDTO and an array of files directly.
-    $created = $envelopes->quickSendExternalDocuments(
-        $mailbox,
-        json_encode(ObjectSerializer::sanitizeForSerialization($data)),
-        new SplFileObject(__DIR__ . '/example-document.pdf'));
+    // The server binds two multipart parts, named exactly "data" - the JSON above - and
+    // "files". From 168.21.1 the client names them that way, so the typed call carries
+    // the model and an array of files; before it, both had to be pre-serialized by hand.
+    $created = $envelopes->quickSendExternalDocuments($mailbox, $data, [
+        new SplFileObject(__DIR__ . '/example-document.pdf'),
+    ]);
 
     $envelopeUuid = $created->getUuid();
     printf("sent %s to %s\n", $envelopeUuid, $signer);

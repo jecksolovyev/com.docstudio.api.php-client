@@ -5,7 +5,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
-        "yuramozol/com.docstudio.api.php-client": "^168.21"
+        "yuramozol/com.docstudio.api.php-client": "^168.21.1"
     },
     "config": {
         "sort-packages": true
