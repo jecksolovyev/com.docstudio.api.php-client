@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **labels** | **string[]** |  | [optional]
 **metadata** | **array<string,string>** | Envelope metadata | [optional]
 **received_at** | **\DateTime** | Date of receiving the envelope by the mailbox | [optional]
+**review** | [**\DocStudio\Client\Model\ReviewInfo**](ReviewInfo.md) | Current review round state (editorial review only) | [optional]
 **saved_doc_signatures** | [**\DocStudio\Client\Model\ExtEnvelopeDocumentSignaturesDTO[]**](ExtEnvelopeDocumentSignaturesDTO.md) |  | [optional]
 **sender** | [**\DocStudio\Client\Model\EnvelopeSenderDTO**](EnvelopeSenderDTO.md) | Envelope sender info | [optional]
 **sent_at** | **\DateTime** | Envelope sending date | [optional]

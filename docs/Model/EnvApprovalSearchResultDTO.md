@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **mailbox_name** | **string** | Mailbox name of approval initiator | [optional]
 **mailbox_uuid** | **string** | Mailbox UUID of approval initiator | [optional]
 **message** | **string** | The envelope message | [optional]
+**review** | [**\DocStudio\Client\Model\ReviewInfo**](ReviewInfo.md) | Current review round state | [optional]
 **seen_at** | **\DateTime** | Date-time it was seen by approver | [optional]
 **status** | **string** | Status of approval | [optional]
 **subject** | **string** | The envelope subject | [optional]

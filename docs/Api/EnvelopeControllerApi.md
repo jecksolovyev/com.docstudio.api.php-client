@@ -35,6 +35,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**envelopeApprovalHistory()**](EnvelopeControllerApi.md#envelopeApprovalHistory) | **GET** /api/v1/envelope/{id}/approval-history | Get approval history |
 | [**fill()**](EnvelopeControllerApi.md#fill) | **PUT** /api/v1/envelope/fill | Fill envelope |
 | [**generateStamp()**](EnvelopeControllerApi.md#generateStamp) | **POST** /api/v1/envelope/generate-stamp | Generate stamp by certificate |
+| [**getActionLinkForUser()**](EnvelopeControllerApi.md#getActionLinkForUser) | **GET** /api/v1/envelope/{id}/action-link |  |
 | [**getActiveRoles()**](EnvelopeControllerApi.md#getActiveRoles) | **GET** /api/v1/envelope/{id}/activeRoles | Get active roles by Envelope UUID |
 | [**getApprovalFlow()**](EnvelopeControllerApi.md#getApprovalFlow) | **GET** /api/v1/envelope/{id}/approval/{flowUuid} | Get envelope approval |
 | [**getArchiveInfo()**](EnvelopeControllerApi.md#getArchiveInfo) | **GET** /api/v1/envelope/attachment/archive-info | Get attachment archive info (p7s, asice, pdf) |
@@ -1845,6 +1846,68 @@ try {
 
 - **Content-Type**: `application/json`
 - **Accept**: `image/png`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getActionLinkForUser()`
+
+```php
+getActionLinkForUser($id, $email, $mailbox): \DocStudio\Client\Model\ActionLinkResponse
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\EnvelopeControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | UUID of envelope
+$email = 'email_example'; // string | Email of user assigned to a role
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+
+try {
+    $result = $apiInstance->getActionLinkForUser($id, $email, $mailbox);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EnvelopeControllerApi->getActionLinkForUser: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| UUID of envelope | |
+| **email** | **string**| Email of user assigned to a role | |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+[**\DocStudio\Client\Model\ActionLinkResponse**](../Model/ActionLinkResponse.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
