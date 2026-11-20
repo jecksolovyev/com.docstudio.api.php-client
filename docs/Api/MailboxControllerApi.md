@@ -8,6 +8,8 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | ------------- | ------------- | ------------- |
 | [**createMailbox()**](MailboxControllerApi.md#createMailbox) | **POST** /api/v1/mailbox/account/{uuid} | Create mailbox |
 | [**customizeDashboard()**](MailboxControllerApi.md#customizeDashboard) | **PUT** /api/v1/mailbox/{mailboxUuid}/dashboard | Customize mailbox dashboard |
+| [**customizeDashboardWidgets()**](MailboxControllerApi.md#customizeDashboardWidgets) | **PUT** /api/v1/mailbox/dashboard-widgets | Customize mailbox dashboard widgets |
+| [**deleteCustomizedDashboardWidgets()**](MailboxControllerApi.md#deleteCustomizedDashboardWidgets) | **DELETE** /api/v1/mailbox/dashboard-widgets | Delete mailbox dashboard widgets |
 | [**deleteMailbox()**](MailboxControllerApi.md#deleteMailbox) | **DELETE** /api/v1/mailbox | Delete mailbox by UUID in the header. |
 | [**deleteMailboxUsers()**](MailboxControllerApi.md#deleteMailboxUsers) | **DELETE** /api/v1/mailbox/{mailboxUuid}/users | Delete mailbox users except requester |
 | [**deleteViewPreferences()**](MailboxControllerApi.md#deleteViewPreferences) | **DELETE** /api/v1/mailbox/view-preferences | Delete mailbox view preferences |
@@ -17,6 +19,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**getAutoDelegation()**](MailboxControllerApi.md#getAutoDelegation) | **GET** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Get auto delegation settings |
 | [**getCustomizedDashboard()**](MailboxControllerApi.md#getCustomizedDashboard) | **GET** /api/v1/mailbox/{mailboxUuid}/dashboard | Get mailbox dashboard |
 | [**getCustomizedDashboardHtml()**](MailboxControllerApi.md#getCustomizedDashboardHtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html |
+| [**getCustomizedDashboardWidgets()**](MailboxControllerApi.md#getCustomizedDashboardWidgets) | **GET** /api/v1/mailbox/dashboard-widgets | Get mailbox dashboard widgets |
 | [**getMailboxEssentials()**](MailboxControllerApi.md#getMailboxEssentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials |
 | [**getMailboxesForUserView()**](MailboxControllerApi.md#getMailboxesForUserView) | **GET** /api/v1/mailbox/user-view | Retrieve the mailboxes of the user&#39;s sidebar view |
 | [**getMailboxesInfo()**](MailboxControllerApi.md#getMailboxesInfo) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info |
@@ -150,6 +153,122 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `customizeDashboardWidgets()`
+
+```php
+customizeDashboardWidgets($mailbox, $body)
+```
+
+Customize mailbox dashboard widgets
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+$body = 'body_example'; // string
+
+try {
+    $apiInstance->customizeDashboardWidgets($mailbox, $body);
+} catch (Exception $e) {
+    echo 'Exception when calling MailboxControllerApi->customizeDashboardWidgets: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+| **body** | **string**|  | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteCustomizedDashboardWidgets()`
+
+```php
+deleteCustomizedDashboardWidgets($mailbox)
+```
+
+Delete mailbox dashboard widgets
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+
+try {
+    $apiInstance->deleteCustomizedDashboardWidgets($mailbox);
+} catch (Exception $e) {
+    echo 'Exception when calling MailboxControllerApi->deleteCustomizedDashboardWidgets: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -698,6 +817,64 @@ try {
 
 - **Content-Type**: Not defined
 - **Accept**: `text/html`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getCustomizedDashboardWidgets()`
+
+```php
+getCustomizedDashboardWidgets($mailbox): string
+```
+
+Get mailbox dashboard widgets
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\MailboxControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$mailbox = 'mailbox_example'; // string | Mailbox context, HTTP Header with current mailbox UUID
+
+try {
+    $result = $apiInstance->getCustomizedDashboardWidgets($mailbox);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MailboxControllerApi->getCustomizedDashboardWidgets: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **mailbox** | **string**| Mailbox context, HTTP Header with current mailbox UUID | |
+
+### Return type
+
+**string**
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

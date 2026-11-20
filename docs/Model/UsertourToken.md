@@ -1,10 +1,9 @@
-# CreateAppTokenDTO
+# UsertourToken
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**expire_at** | **\DateTime** | Token expiration date |
-**name** | **string** | Token name |
+**token** | **string** | JWT (HS256) signed with the Usertour environment signing secret, subject is the user id | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

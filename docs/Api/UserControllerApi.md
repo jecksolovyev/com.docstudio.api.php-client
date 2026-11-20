@@ -15,6 +15,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 | [**getCorporateUserProfile()**](UserControllerApi.md#getCorporateUserProfile) | **GET** /api/v1/user/profile/{id}/account/{accountUuid} | Retrieve corporate user profile |
 | [**getProfile()**](UserControllerApi.md#getProfile) | **GET** /api/v1/user/profile | Retrieve self profile |
 | [**getUserMailboxesInfo()**](UserControllerApi.md#getUserMailboxesInfo) | **POST** /api/v1/user/info | Retrieve users info |
+| [**getUsertourToken()**](UserControllerApi.md#getUsertourToken) | **GET** /api/v1/user/usertour-token | Get Usertour identity verification token |
 | [**patchCorporateUserProfile()**](UserControllerApi.md#patchCorporateUserProfile) | **PATCH** /api/v1/user/profile/{userId}/account/{accountId} | Partial update corporate user&#39;s profile |
 | [**patchPreferences()**](UserControllerApi.md#patchPreferences) | **PATCH** /api/v1/user/preferences | Patch user preferences |
 | [**patchProfile()**](UserControllerApi.md#patchProfile) | **PATCH** /api/v1/user/profile | Patch user profile |
@@ -540,6 +541,61 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getUsertourToken()`
+
+```php
+getUsertourToken(): \DocStudio\Client\Model\UsertourToken
+```
+
+Get Usertour identity verification token
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = DocStudio\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new DocStudio\Client\Api\UserControllerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->getUsertourToken();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserControllerApi->getUsertourToken: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\DocStudio\Client\Model\UsertourToken**](../Model/UsertourToken.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

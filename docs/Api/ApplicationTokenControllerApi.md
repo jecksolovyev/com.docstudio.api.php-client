@@ -14,7 +14,7 @@ All URIs are relative to https://api.docstudio.com, except if the operation defi
 ## `createToken()`
 
 ```php
-createToken($create_app_token_dto): \DocStudio\Client\Model\AppTokenDTO
+createToken($create_app_token): \DocStudio\Client\Model\AppTokenDTO
 ```
 
 Create application token
@@ -36,10 +36,10 @@ $apiInstance = new DocStudio\Client\Api\ApplicationTokenControllerApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_app_token_dto = new \DocStudio\Client\Model\CreateAppTokenDTO(); // \DocStudio\Client\Model\CreateAppTokenDTO
+$create_app_token = new \DocStudio\Client\Model\CreateAppToken(); // \DocStudio\Client\Model\CreateAppToken
 
 try {
-    $result = $apiInstance->createToken($create_app_token_dto);
+    $result = $apiInstance->createToken($create_app_token);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApplicationTokenControllerApi->createToken: ', $e->getMessage(), PHP_EOL;
@@ -50,7 +50,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_app_token_dto** | [**\DocStudio\Client\Model\CreateAppTokenDTO**](../Model/CreateAppTokenDTO.md)|  | |
+| **create_app_token** | [**\DocStudio\Client\Model\CreateAppToken**](../Model/CreateAppToken.md)|  | |
 
 ### Return type
 

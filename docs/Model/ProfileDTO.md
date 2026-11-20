@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accounts** | [**\DocStudio\Client\Model\User2AccountWithMailboxesDTO[]**](User2AccountWithMailboxesDTO.md) | User accounts belongs to | [optional]
+**activated_at** | **\DateTime** | Date when the user completed registration (first became active) | [optional]
 **auto_deposit_mailbox_uuid** | **string** | Auto Deposit Mailbox UUID | [optional]
 **corporate_account_id** | **string** | Corporate account UUID | [optional]
 **corporate_user** | **bool** |  | [optional]
